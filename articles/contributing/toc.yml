@@ -1,0 +1,10 @@
+- name: Melden von Fehlern
+  href: reporting-bugs.md
+- name: Mitwirken an der Dokumentation
+  href: docs.md
+- name: Öffnen von Pull Requests
+  href: pull-requests.md
+- name: Mitwirken am Code
+  href: code.md
+- name: Styleguide
+  href: style-guide.md
