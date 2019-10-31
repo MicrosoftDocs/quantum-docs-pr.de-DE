@@ -1,0 +1,11 @@
+- name: Klassische Computer und Treiber
+  href: index.md
+- name: Quantensimulator
+  href: full-state-simulator.md
+- name: Ressourcenschätzung
+  href: resources-estimator.md
+- name: Ablaufverfolgungssimulator für Quantencomputer
+  topicHref: qc-trace-simulator/index.md
+  href: qc-trace-simulator/toc.yml
+- name: Toffoli-Simulator
+  href: toffoli-simulator.md
