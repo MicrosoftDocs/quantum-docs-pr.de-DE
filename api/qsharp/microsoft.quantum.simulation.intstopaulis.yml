@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.intstopaulis
+name: Intstopaulis
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Konvertiert ein Array von ganzen Zahlen in ein Array von Single-Qubit-Pauli-Operatoren.
+syntax: 'function IntsToPaulis (ints : Int[]) : Pauli[]'
+input:
+  content: '(int: int [])'
+  types:
+  - name: Quint
+    summary: Ein Array von ganzen Zahlen im Bereich, `0..3` in die Pauli-Operatoren konvertiert werden sollen.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+output:
+  content: Pauli []
+  types:
+  - summary: Ein Array `paulis` von Pauli-Operatoren `Pauli[]` dieselbe Länge wie `ints`, sodass `paulis[idxPauli]` gleich dem Element von `[PauliI, PauliX, PauliY, PauliZ]` ist, das von `ints[idxPauli]`angegeben wird.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+ms.openlocfilehash: 407ad1481c220f390fffb5f1b59f0968d6d6570c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066981"
