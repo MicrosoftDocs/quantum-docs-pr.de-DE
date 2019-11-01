@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.measurement.multim
+name: MultiM
+type: operation
+namespace: Microsoft.Quantum.Measurement
+summary: Misst jedes Qubit in einem angegebenen Array standardmäßig.
+syntax: 'operation MultiM (targets : Qubit[]) : Result[]'
+input:
+  content: '(targets : Qubit[])'
+  types:
+  - name: targets
+    summary: Ein Array von zu messenden Qubits.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result[]
+  types:
+  - summary: Ein Array von Messergebnissen.
+    isArray: true
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 647957702c124f0acafa76c155a71796b0c56f25
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231145"

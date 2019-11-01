@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.applyxorinplace
+name: ApplyXorInPlace
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Wendet `X` Vorgänge auf Qubits in einem Little-in-Register-Register auf der Grundlage von 1 Bits in einer ganzen Zahl an.
+
+
+  Wir bezeichnen `value` von a und lassen y eine Ganzzahl ohne Vorzeichen sein, die in `target`codiert ist. dann führt `InPlaceXorLE` einen Vorgang aus, der von der folgenden Zuordnung bereitgestellt wird: $ \ket{y}\rightarrow \ket{y\oplus a} $, wobei $ \oplus $ der bitweise exklusive OR-Operator ist.
+syntax: 'operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: value
+    summary: Eine Ganzzahl, bei der angenommen wird, dass Sie nicht negativ ist.
+    isPrimitive: true
+    uid: Int
+  - name: target
+    summary: Ein Quantum-Register, das verwendet wird, um `value` in Little-in-ddian-Codierung zu speichern.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: b37de7ed7e838089fe0c3bce00c8a0e9b222c43f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221642"

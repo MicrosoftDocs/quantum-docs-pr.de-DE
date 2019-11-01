@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.dumpmachine
+name: DumpMachine
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: Sichert den Status des aktuellen Ziel Computers.
+remarks: >-
+  Diese Methode ermöglicht es Ihnen, Informationen über den aktuellen Status des Ziel Computers in einer Datei oder an einem anderen Speicherort zu speichern.
+
+  Die tatsächlich generierten Informationen und die Semantik `location` sind für jeden Zielcomputer spezifisch. Wenn jedoch ein leeres Tupel als Speicherort (`()`) bereitgestellt wird oder nur der `location` Parameter weggelassen wird, bedeutet dies in der Regel, dass die Ausgabe in der Konsole generiert wird.
+
+
+  Für den lokalen vollständigen Zustands Simulator, der als Teil des Quantum Development Kit verteilt wird, erwartet diese Methode eine Zeichenfolge mit dem Pfad zu einer Datei, in der die Wave-Funktion als eindimensionales Array komplexer Zahlen geschrieben wird, wobei jedes Element das Verstärkung der Wahrscheinlichkeit, dass der entsprechende Zustand gemessen wird.
+syntax: "function DumpMachine (location : 'T) : Unit"
+input:
+  content: "(location : 'T)"
+  types:
+  - name: location
+    summary: Stellt Informationen dazu bereit, wo das Abbild des Computers generiert werden soll.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - summary: 'None (Keine):'
+    isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 7d268127c56dc5554e7c99494ae90b2bc14b336c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227065"

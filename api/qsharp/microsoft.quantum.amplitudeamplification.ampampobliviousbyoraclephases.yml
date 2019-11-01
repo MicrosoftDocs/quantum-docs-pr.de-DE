@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyoraclephases
+name: AmpAmpObliviousByOraclePhases
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Pervirone Amplitude-Verstärkung durch Oracles für partielle Reflektionen.
+remarks: >-
+  Dies erzwingt strengere Bedingungen in Form der Ausgangs-und Ziel Zustände von Ancilla als in `AmpAmpObliviousByReflectionPhases`.
+
+  Es wird davon ausgegangen, dass $A \ket{0}\_{0}"\_A = \ket{\text{Start}}\_{FA} $" den Wert für den "Ancilla Start State $ \ket{\text{Start}}\_{FA} $" aus der Berechnungsbasis "$ \ket{0}\_@no__t_" 8_ $.
+
+  Es wird davon ausgegangen, dass der Ziel Status durch $ \ket{1}\_f $ gekennzeichnet ist.
+
+  Es wird davon ausgegangen, dass \begin{align} o\ket {\ Text {Start}}\_{FA} \ket{\psi}\_s = \lambda\ket{1}\_"f \ Ket {\ Text {Anything}}\_a\ket {\ Text {Target}}\_s U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_"f \ cdots", "\end{align}" für einige einheitliche $U "$".
+syntax: 'function AmpAmpObliviousByOraclePhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
+input:
+  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int)'
+  types:
+  - name: phases
+    summary: Phasen von partiellen Reflektionen
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+  - name: ancillaOracle
+    summary: Einheitlicher Oracle-$A $, der den Startstatus von Ancilla vorbereitet
+    uid: microsoft.quantum.oracles.deterministicstateoracle
+  - name: signalOracle
+    summary: Einheitlicher Oracle-$O $ vom Typ "`ObliviousOracle`", der zusammen mit dem "Ancilla" und dem System Register agiert
+    uid: microsoft.quantum.oracles.obliviousoracle
+  - name: idxFlagQubit
+    summary: Index für Single-Qubit-Flag-Register
+    isPrimitive: true
+    uid: Int
+output:
+  content: ((Qubit[], Qubit[]) => Unit is Adj + Ctl)
+  types:
+  - summary: Ein Vorgang, der die pervirone Amplitude-Verstärkung basierend auf partiellen Reflektionen implementiert.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+ms.openlocfilehash: ff75e09bf106ccc351aa9c6fa1b6bc6ee776ffad
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215760"

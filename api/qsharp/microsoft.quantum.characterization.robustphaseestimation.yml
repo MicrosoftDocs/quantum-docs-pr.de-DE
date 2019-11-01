@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.robustphaseestimation
+name: RobustPhaseEstimation
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Führt den robusten, nicht iterativen Quantum-Phasen-Schätz Algorithmus für eine angegebene Oracle-`U` und den eigen Zustand aus und bietet eine einzelne, in Echtzeit angegebene Schätzung der Phase mit Varianz Skalierung am Heisenberg-Limit.
+remarks: Der Grenzwert für eine große Anzahl von Abfragen liegt bei "Cramer-Rao" bei der Standardabweichung der Schätzung von "$ \phi $" auf "$ \sigma \ge 2 \pi/\text{# of Queries} $".
+syntax: 'operation RobustPhaseEstimation (bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[]) : Double'
+references: '- Robuste Kalibrierung eines universellen Single-Qubit-Gate-Satzes über die robuste Phasen Schätzung Shelby Kimmel, Guang Hao Low, Theodore J. yum https://arxiv.org/abs/1502.02677'
+input:
+  content: '(bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[])'
+  types:
+  - name: bitsPrecision
+    summary: Dies bietet eine Schätzung von $ \phi $ mit der Standardabweichung $ \sigma \le 2 \ Pi/2 ^ \text{bitspcision} $, wobei eine Reihe von Abfragen skaliert wird, wie z. b. $ \sigma \le 10,7 \pi/\text{# of queries} $.
+    isPrimitive: true
+    uid: Int
+  - name: oracle
+    summary: Ein Vorgang, der $U ^ m $ für angegebene ganzzahlige $m $ implementiert.
+    uid: microsoft.quantum.oracles.discreteoracle
+  - name: targetState
+    summary: Ein Quantum-Register, für das $U $ agiert. Wenn ein eigen Status $ \ket{\phi} $ von $U $ gespeichert wird, $U \ket{\phi} = e ^ {i\phi} \ket{\phi} $ für $ \phi\in (-\pi, \pi] $ eine unbekannte Phase.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 169a828036fbe84f49e5d87399319d14a9584051
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229054"

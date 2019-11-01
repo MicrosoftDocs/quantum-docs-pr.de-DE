@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.allequalityfactb
+name: AllEqualityFactB
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: Bestätigt, dass zwei Arrays von booleschen Werten gleich sind.
+syntax: 'function AllEqualityFactB (actual : Bool[], expected : Bool[], message : String) : Unit'
+input:
+  content: '(actual : Bool[], expected : Bool[], message : String)'
+  types:
+  - name: actual
+    summary: Das Array, das von einem interessanten Testfall erzeugt wird.
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+  - name: expected
+    summary: Das Array, das von einem interessanten Testfall erwartet wird.
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+  - name: message
+    summary: Eine Meldung, die gedruckt werden soll, wenn die Arrays nicht gleich sind.
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: ebda74cfe793c2c5ec8411f893aa852f9e091728
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227150"

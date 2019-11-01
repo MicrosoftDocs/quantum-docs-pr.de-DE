@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.restrictedtosubregisterca
+name: RestrictedToSubregisterCA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Schränkt einen Vorgang auf ein Array von Indizes eines Registers ein, d. h. ein unter Register.
+
+  Der Modifizierer `CA` gibt an, dass der Vorgang steuerbar und adjointable ist.
+syntax: 'function RestrictedToSubregisterCA (op : (Qubit[] => Unit is Adj + Ctl), idxs : Int[]) : (Qubit[] => Unit is Adj + Ctl)'
+input:
+  content: '(op : (Qubit[] => Unit is Adj + Ctl), idxs : Int[])'
+  types:
+  - name: op
+    summary: Der Vorgang, der auf ein unter Register beschränkt werden soll.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: idxs
+    summary: Ein Array von Indizes, das angibt, auf welche Qubits der Vorgang beschränkt wird.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+output:
+  content: (Qubit[] => Unit is Adj + Ctl)
+  types:
+  - isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+seeAlso:
+- microsoft.quantum.canon.restrictedtosubregister
+ms.openlocfilehash: 699126640d5afaebac8a6276458ffc5a497fe61a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222509"

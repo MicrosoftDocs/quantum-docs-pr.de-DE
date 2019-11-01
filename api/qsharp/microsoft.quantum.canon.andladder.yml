@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.andladder
+name: AndLadder
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Führt in den Ziel-Qubits eine gesteuerte "and"-und-Leiter aus.
+
+
+  Dies wendet eine einheitliche von der folgenden Karte auf Berechnungsbasis Vektoren an: $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1 , \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}} , \end{align} $ $, wobei $ \ket{x\_1, \dots, x\_n} $ auf die Berechnungsbasis Zustände von `controls`verweist, und WHERE $ \ket{y\_1, \dots, y\_{n-1}} $ bezieht sich auf die Berechnungsbasis Zustände der `targets`.
+remarks: >-
+  - Wird als Teil von <xref:microsoft.quantum.canon.applymulticontrolledc> und <xref:microsoft.quantum.canon.applymulticontrolledca>verwendet.
+
+  - Eine Erläuterung und ein Leitungs Diagramm finden Sie in Abbildung 4,10, Abschnitt 4,3 in Nielsen & Chuang.
+syntax: 'operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
+references: '- [*Michael A. Nielsen, ISAL. Chuang*, Quantum-Berechnung und Quantum-Informationen](http://doi.org/10.1017/CBO9780511976667)'
+input:
+  content: '(ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[])'
+  types:
+  - name: ccnot
+    summary: Das ccnot-Gate, das für die Konstruktion verwendet werden soll.
+    uid: microsoft.quantum.canon.ccnotop
+  - name: controls
+    summary: >-
+      Ein Register von Qubits, das als Steuerelemente für die-und-Leiter verwendet werden soll.
+
+      Mit diesem Vorgang bleiben die Berechnungsbasis Zustände `controls` invariant.
+
+      Die Länge `controls` muss mindestens 2 betragen und muss gleich 1 und der Länge `targets`sein.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targets
+    summary: Die Länge `targets` muss mindestens 1 betragen und gleich der Länge `controls` minus 1 sein.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+ms.openlocfilehash: 2970f9c783ea233f2f1ceb4089802320efe82602
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217715"

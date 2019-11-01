@@ -1,0 +1,69 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.statepreparationcomplexcoefficients
+name: StatePreparationComplexCoefficients
+type: function
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  Gibt einen Vorgang zurück, der einen bestimmten Quantum-Zustand vorbereitet.
+
+
+  Der zurückgegebene Vorgang $U $ bereitet einen beliebigen Quantum-Status $ \ket{\psi} $ mit komplexen Koeffizienten $r _J e ^ {i t_j} $ aus dem $n $-Qubit-Berechnungsbasis Status $ \ket{0...0} $.
+
+
+  Die Aktion von U für ein neu zugeordneter Register wird durch $ $ \begin{align} u\ket {0... 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | r_j | ^ 2}} angegeben.
+
+  \end{align} $ $
+remarks: Negative Eingabe Koeffizienten $r _J < $0 werden als positiv mit dem Wert $ | r_j | $ behandelt. `coefficients` wird mit den Elementen $ (r_j, t_j) = (0,0, 0,0) $ aufgefüllt, wenn weniger als $2 ^ n $ angegeben werden.
+examples: >-
+  Der folgende Code Ausschnitt bereitet den Quantum-Status $ \ket{\psi} = e ^ {i 0,1} \ sqrt {1/8} \ Ket{0}+ \ sqrt {7/8} \ Ket{2}$ im Qubit-Register `qubitsLE`vor.
+
+
+  ```qsharp
+
+  let amplitudes = [Sqrt(0.125), 0.0, Sqrt(0.875), 0.0];
+
+  let phases = [0.1, 0.0, 0.0, 0.0];
+
+  mutable complexNumbers = new ComplexPolar[4];
+
+  for (idx in 0..3) {
+      set complexNumbers[idx] = ComplexPolar(amplitudes[idx], phases[idx]);
+  }
+
+  let op = StatePreparationComplexCoefficients(complexNumbers);
+
+  using (qubits = Qubit[2]) {
+      let qubitsLE = LittleEndian(qubits);
+      op(qubitsLE);
+  }
+
+  ```
+syntax: 'function StatePreparationComplexCoefficients (coefficients : Microsoft.Quantum.Math.ComplexPolar[]) : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl)'
+input:
+  content: '(coefficients : Microsoft.Quantum.Math.ComplexPolar[])'
+  types:
+  - name: coefficients
+    summary: Array von bis zu $2 ^ n $ komplexen Koeffizienten, die durch ihren absoluten Wert und Phase $ (r_j, t_j) $ dargestellt werden. Der $j $ Th-Koeffizienten indiziert den im Little-Endian-Format codierten Zahlen Status $ \ket{j} $.
+    isArray: true
+    uid: microsoft.quantum.math.complexpolar
+output:
+  content: (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl)
+  types:
+  - summary: Eine einheitliche Zustands Vorbereitungs Operation $U $.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.littleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+ms.openlocfilehash: 42049c1ef8c1210bf31a9979a2a6d4d9223a9c85
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226402"

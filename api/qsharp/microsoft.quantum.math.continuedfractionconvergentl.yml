@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.continuedfractionconvergentl
+name: ContinuedFractionConvergentL
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Sucht den fortgesetzten Bruchteil konvergent, der sich am nächsten `fraction` befindet, wobei der Nenner kleiner oder gleich `denominatorBound`
+syntax: 'function ContinuedFractionConvergentL (fraction : Microsoft.Quantum.Math.BigFraction, denominatorBound : BigInt) : Microsoft.Quantum.Math.BigFraction'
+input:
+  content: '(fraction : Microsoft.Quantum.Math.BigFraction, denominatorBound : BigInt)'
+  types:
+  - name: fraction
+    uid: microsoft.quantum.math.bigfraction
+  - name: denominatorBound
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: Microsoft.Quantum.Math.BigFraction
+  types:
+  - summary: Fortgesetzter Bruchteil, der dem `fraction` am nächsten liegt, wobei der Nenner kleiner oder gleich `denominatorBound`
+    uid: microsoft.quantum.math.bigfraction
+ms.openlocfilehash: 33092dc94b5af0693a019ad2ba19586d8e46c412
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229836"

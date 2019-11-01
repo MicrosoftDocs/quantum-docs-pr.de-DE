@@ -1,0 +1,72 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.transformedoperationca
+name: TransformedOperationCA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Gibt bei Angabe einer Funktion und eines Vorgangs einen neuen Vorgang zurück, dessen Eingabe von der angegebenen Funktion transformiert wird.
+examples: >-
+  Der folgende-Befehl verwendet @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian", um einen für @"Microsoft.Quantum.Arithmetic.BigEndian" Eingaben entworfenen Vorgang in einen Vorgang umzuwandeln, der Eingaben vom Typ @"Microsoft.Quantum.Arithmetic.LittleEndian"akzeptiert:
+
+
+  ```qsharp
+
+  let leOp = TransformedOperation(LittleEndianAsBigEndian, ApplyXorInPlaceBE);
+
+  ```
+syntax: "function TransformedOperationCA (fn : ('U -> 'T), op : ('T => Unit is Adj + Ctl)) : ('U => Unit is Adj + Ctl)"
+input:
+  content: "(fn : ('U -> 'T), op : ('T => Unit is Adj + Ctl))"
+  types:
+  - name: fn
+    summary: Eine Funktion, die die angegebene Eingabe in ein vom Vorgang erwartetes Formular umwandelt.
+    isFunction: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - uid: "'T"
+        isLocal: true
+  - name: op
+    summary: Der Vorgang, der transformiert werden soll.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+output:
+  content: ('U => Unit is Adj + Ctl)
+  types:
+  - summary: Ein neuer Vorgangs-tbat ruft `fn` mit seiner Eingabe auf und übergibt dann die resultierende Ausgabe an `op`.
+    isOperation: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+seeAlso:
+- transformedoperation
+- transformedoperationa
+- transformedoperationca
+- applywithinputtransformation
+- compose
+ms.openlocfilehash: 4383a28fa6cae8e36438b6c4ba8262f60edbf025
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217035"

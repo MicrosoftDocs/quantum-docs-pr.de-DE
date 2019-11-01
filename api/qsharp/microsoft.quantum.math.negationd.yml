@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.negationd
+name: NegationD
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Gibt die unäre Negation einer Eingabe zurück.
+syntax: 'function NegationD (input : Double) : Double'
+input:
+  content: '(input : Double)'
+  types:
+  - name: input
+    summary: Ein Wert, dessen Negations Wert zurückgegeben werden soll.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double
+  types:
+  - summary: Die unäre Negation der `input`.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: e20bae5e2d482f5bad346764ccfecc8a1d77ca7b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232386"

@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.bitwise.and
+name: And
+type: function
+namespace: Microsoft.Quantum.Bitwise
+summary: >-
+  Gibt das bitweise and von zwei Ganzzahlen zurück.
+
+  Dies führt die gleiche Berechnung durch wie der integrierte `&&&`-Operator.
+remarks: Weitere Informationen finden Sie unter [ C# &amp;-Operator](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/and-operator) (binär).
+examples: >-
+  ```qsharp
+
+  let a = 248;       //                11111000₂
+
+  let b = 63;        //                00111111₂
+
+  let x = And(a, b); // x : Int = 56 = 00111000₂.
+
+  ```
+syntax: 'function And (a : Int, b : Int) : Int'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    isPrimitive: true
+    uid: Int
+  - name: b
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 4565a281e8d33e266beda5a8bb34c669988f9cb6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214145"

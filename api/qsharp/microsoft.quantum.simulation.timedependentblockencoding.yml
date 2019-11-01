@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.timedependentblockencoding
+name: TimeDependentBlockEncoding
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Stellt eine `BlockEncoding` dar, die von einem Uhren Register gesteuert wird.
+
+
+  Das heißt, ein `TimeDependentBlockEncoding` ist ein einheitlicher $U $, der durch den Status $ \ket{k}_D $ in der Uhr registriert wird `d` so, dass ein beliebiger Operator $H _K $, der für das System Register `s` ist, in dem Block oben links codiert ist, der dem hilfstatus $ \ket entspricht @No __t_3_ _A $. Das heißt
+
+
+  $ $ \begin{align} (\bra{0}\_a\otimes I_ {DS}) U (\ket{0}\_a\otimes I_ {DS}) = \sum_{k}\ket{k}\bra{k}\_d\otimes H_k.
+
+  \end{align} $ $.
+syntax: newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: 1f41d7592e7f031085430a42edaa341874724851
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211017"

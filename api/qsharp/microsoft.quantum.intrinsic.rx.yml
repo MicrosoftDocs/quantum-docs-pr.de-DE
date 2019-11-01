@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.rx
+name: Rx
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Wendet eine Drehung zum $x $-Achse um einen angegebenen Winkel an.
+
+
+  \begin{align} R_x (\orta) \mathrel{: =} e ^ {-i \theita \sigma_x/2} = \begin{bmatrix} \cos \bruchteil {\thta}{2} &-i\sin \bruchteil {\thta}{2}\\\\-i\sin \bruchteil {\thta}{2} & \cos \bruchteil {\thta}{2} \end{bmatrix}.
+
+  \end{align}
+remarks: >-
+  Äquivalent zu:
+
+
+  ```qsharp
+
+  R(PauliX, theta, qubit);
+
+  ```
+syntax: 'operation Rx (theta : Double, qubit : Qubit) : Unit'
+input:
+  content: '(theta : Double, qubit : Qubit)'
+  types:
+  - name: theta
+    summary: Der Winkel, um den das Qubit gedreht werden soll.
+    isPrimitive: true
+    uid: Double
+  - name: qubit
+    summary: Das Qubit, auf das das Gate angewendet werden soll.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: f34879cef60d33bbf260031c1b39572081027f2f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216440"

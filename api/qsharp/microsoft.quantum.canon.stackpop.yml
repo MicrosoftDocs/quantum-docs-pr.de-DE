@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.stackpop
+name: StackPop
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Entfernt das oberste Element aus einem <xref:microsoft.quantum.canon.resultstack>.
+syntax: 'function StackPop (stack : Microsoft.Quantum.Canon.ResultStack) : Microsoft.Quantum.Canon.ResultStack'
+input:
+  content: '(stack : Microsoft.Quantum.Canon.ResultStack)'
+  types:
+  - name: stack
+    summary: Der Stapel, der per Pop entfernt werden soll.
+    uid: microsoft.quantum.canon.resultstack
+output:
+  content: Microsoft.Quantum.Canon.ResultStack
+  types:
+  - summary: Die `stack`, bei der das oberste Element entfernt wurde. Der neue Stapel hat dieselbe Kapazität wie der alte, aber seine Länge wird um 1 reduziert.
+    uid: microsoft.quantum.canon.resultstack
+ms.openlocfilehash: 371952e68e9c06fc11d9e8c309a4d388b80a9556
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219364"

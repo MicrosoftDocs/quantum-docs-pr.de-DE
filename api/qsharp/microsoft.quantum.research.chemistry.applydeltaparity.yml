@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.research.chemistry.applydeltaparity
+name: ApplyDeltaParity
+type: operation
+namespace: Microsoft.Quantum.Research.Chemistry
+summary: Berechnet den Unterschied in der Parität zwischen einem vorherigen pqrs... Begriffe und die nächsten pqrs... zeitig. Dieser Unterschied wird für ein zusätzliches Qubit berechnet.
+remarks: Dabei wird davon ausgegangen, dass die Indizes von P < Q < R < S <... für prevpq und nextpq.
+syntax: 'operation ApplyDeltaParity (prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[]) : Unit'
+input:
+  content: '(prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[])'
+  types:
+  - name: prevFermionicTerm
+    summary: Liste der Indizes für vorherige pqrs... Bedingungen.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: nextFermionicTerm
+    summary: Liste der Indizes für die nächsten pqrs... Bedingungen.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: aux
+    summary: Ein zusätzliches Qubit, auf das die Ergebnisse der Paritäts Berechnung gespeichert werden.
+    isPrimitive: true
+    uid: Qubit
+  - name: qubits
+    summary: Qubit wurde von allen pqrs bearbeitet... Bedingungen.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 35ca6ae9ff6ac6db0d0a61cff9c89c7abf862f66
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228051"

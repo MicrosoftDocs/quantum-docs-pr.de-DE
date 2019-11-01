@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.zip3
+name: Zip3
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Bei drei Arrays gibt ein neues Array von 3-Tupeln zurück, sodass jedes 3-Tupel ein Element aus jedem ursprünglichen Array enthält.
+syntax: "function Zip3 (first : 'T1[], second : 'T2[], third : 'T3[]) : ('T1, 'T2, 'T3)[]"
+input:
+  content: "(first : 'T1[], second : 'T2[], third : 'T3[])"
+  types:
+  - name: first
+    summary: Ein Array, das Werte für das erste Element jedes Tupels enthält.
+    isArray: true
+    uid: "'T1"
+    isLocal: true
+  - name: second
+    summary: Ein Array, das Werte für das zweite Element jedes Tupels enthält.
+    isArray: true
+    uid: "'T2"
+    isLocal: true
+  - name: third
+    summary: Ein Array, das Werte für das dritte Element jedes Tupels enthält.
+    isArray: true
+    uid: "'T3"
+    isLocal: true
+output:
+  content: ('T1, 'T2, 'T3)[]
+  types:
+  - summary: Ein Array, das 3 Tupel der Formular `(first[idx], second[idx], third[idx])` für jede `idx`enthält. Wenn die drei Arrays nicht die gleiche Länge aufweisen, ist die Ausgabe so lang wie die kürzere der Eingaben.
+    isArray: true
+    types:
+    - uid: "'T1"
+      isLocal: true
+    - uid: "'T2"
+      isLocal: true
+    - uid: "'T3"
+      isLocal: true
+typeParameters:
+- uid: "'T1"
+  summary: Der Typ der ersten Array Elemente.
+- uid: "'T2"
+  summary: Der Typ der zweiten Array Elemente.
+- uid: "'T3"
+  summary: Der Typ der dritten Array Elemente.
+seeAlso:
+- zip
+- zip4
+ms.openlocfilehash: 1a4f3a533178e089d975d5a510d202afe004d999
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214179"

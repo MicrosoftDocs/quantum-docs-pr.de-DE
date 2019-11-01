@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.bitwise.zbits
+name: ZBits
+type: function
+namespace: Microsoft.Quantum.Bitwise
+summary: Gibt eine ganze Zahl zurück, die die Z-Bits eines Arrays von Pauli-Operatoren darstellt.
+remarks: Die Funktion löst aus, wenn die Länge `paulis` Arrays größer als 63 ist.
+syntax: 'function ZBits (paulis : Pauli[]) : Int'
+input:
+  content: '(paulis : Pauli[])'
+  types:
+  - name: paulis
+    summary: Ein Array von Pauli-Operatoren, das als ganze Zahl dargestellt werden soll.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+output:
+  content: Int
+  types:
+  - summary: Eine ganze Zahl $x $ mit binärer Darstellung $ (P_{62}\,P_{61}\,\dots\,p_0) $, wobei $p _I = $0, wenn `paulis[i]` `PauliI` oder `PauliX` ist und $p _I = $1, wenn `paulis[i]` `PauliY` ist. oder `PauliZ`.
+    isPrimitive: true
+    uid: Int
+seeAlso:
+- xbits
+ms.openlocfilehash: 21d3da075cb4b98e5604f72b8432536bb9d51753
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217698"

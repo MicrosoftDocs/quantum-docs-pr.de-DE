@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.minuscp
+name: MinusCP
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Gibt die Differenz zwischen zwei Eingaben zurück.
+syntax: 'function MinusCP (a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar) : Microsoft.Quantum.Math.ComplexPolar'
+input:
+  content: '(a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar)'
+  types:
+  - name: a
+    summary: Die erste Eingabe $a $, die subtrahiert werden soll.
+    uid: microsoft.quantum.math.complexpolar
+  - name: b
+    summary: Die zweite Eingabe $b $, die subtrahiert werden soll.
+    uid: microsoft.quantum.math.complexpolar
+output:
+  content: Microsoft.Quantum.Math.ComplexPolar
+  types:
+  - summary: Der Unterschied $a-b $.
+    uid: microsoft.quantum.math.complexpolar
+ms.openlocfilehash: 57e0a74e5fc68e94dd53fd44523756338c8abbbe
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233882"

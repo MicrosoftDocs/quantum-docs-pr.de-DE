@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.reflectionphases
+name: ReflectionPhases
+type: newtype
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Phasen für eine Sequenz von partiellen Reflektionen bei der Amplitude-Verstärkung.
+remarks: >-
+  Der erste Parameter ist ein Array von Phasen für die Reflektion über den Startzustand. Der zweite Parameter ist ein Array von Phasen für die Reflektion über den Ziel Status.
+
+  Beide Arrays müssen die gleiche Länge aufweisen. Beachten Sie, dass in vielen Fällen in der ersten Phase für den Startstatus und die letzte Phase zum Ziel Status eine globale Phasenverschiebung eingeführt und möglicherweise auf $0 $ festgelegt wird.
+syntax: newtype ReflectionPhases = (Double[], Double[]);
+ms.openlocfilehash: ce9bab0540f70ac0115d5b7780437410e019a09b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215556"

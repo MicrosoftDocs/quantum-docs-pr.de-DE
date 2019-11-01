@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.htermstogensys
+name: HTermsToGenSys
+type: function
+namespace: Microsoft.Quantum.Chemistry
+summary: Konvertiert ein hamiltonan in `HTerm[]` Datenformat in ein Generatorsystem.
+syntax: 'function HTermsToGenSys (data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[]) : Microsoft.Quantum.Simulation.GeneratorSystem'
+input:
+  content: '(data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[])'
+  types:
+  - name: data
+    summary: Eingabedaten in `HTerm[]` Format.
+    isArray: true
+    uid: microsoft.quantum.chemistry.hterm
+  - name: termType
+    summary: Zusätzliche Informationen, die generatorindex hinzugefügt werden.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft.Quantum.Simulation.GeneratorSystem
+  types:
+  - summary: Ein Generatorsystem, das eine vom Eingabe `data`dargestellte hamiltona darstellt.
+    uid: microsoft.quantum.simulation.generatorsystem
+ms.openlocfilehash: 00ecf3fe97526621d596b4dff17e5fd937a21d7b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228884"

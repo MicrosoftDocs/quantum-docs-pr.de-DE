@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.conditioned
+name: Conditioned
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Gibt je nach dem Wert einer booleschen Bedingung einen von zwei Werten zurück.
+remarks: >-
+  Anders als der `?|`-Operator ist diese Funktion nicht kurz, sodass beide Eingaben vollständig ausgewertet werden.
+
+
+  Bis zu einem kurzen Schluss Verhalten sind die folgenden äquivalent:
+
+
+  ```Q#
+
+  let x = condition ? ifTrue | ifFalse;
+
+  let x = Conditioned(condition, ifTrue, ifFalse);
+
+  ```
+syntax: "function Conditioned (condition : Bool, ifTrue : 'T, ifFalse : 'T) : 'T"
+input:
+  content: "(condition : Bool, ifTrue : 'T, ifFalse : 'T)"
+  types:
+  - name: condition
+    summary: Eine Bedingung, mit der gesteuert wird, welche Eingaben zurückgegeben werden.
+    isPrimitive: true
+    uid: Bool
+  - name: ifTrue
+    summary: Der Wert, der zurückgegeben werden soll, wenn `condition` `true`ist.
+    uid: "'T"
+    isLocal: true
+  - name: ifFalse
+    summary: Der Wert, der zurückgegeben werden soll, wenn `condition` `false`ist.
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T"
+  types:
+  - summary: '`ifTrue`, wenn `condition` `true`ist, andernfalls `ifFalse`.'
+    uid: "'T"
+    isLocal: true
+ms.openlocfilehash: f26e540b181ce405125dbf80cd97c3e177ad9531
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233338"

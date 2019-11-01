@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.vqe.expandedcoefficients
+name: ExpandedCoefficients
+type: function
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+summary: Erweitert die kompakte Darstellung der Jordanien-Wigner-Koeffizienten, um zwischen diesen und den Pauli-Begriffen eine eins-zu-Eins-Zuordnung zu erhalten.
+syntax: 'function ExpandedCoefficients (coeff : Double[], termType : Int) : Double[]'
+input:
+  content: '(coeff : Double[], termType : Int)'
+  types:
+  - name: coeff
+    summary: Ein Array von Koeffizienten, das aus der Datenstruktur "Jordan-Wigner hamiltonan" gelesen wird.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: termType
+    summary: Der Typ des Jordan-Wigner-Begriffs.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double[]
+  types:
+  - summary: Erweiterte Arrays von Koeffizienten, 1 pro Pauli-Begriff.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 1eb141b0410e8d4cccaef0001bfec67fecf12831
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227507"

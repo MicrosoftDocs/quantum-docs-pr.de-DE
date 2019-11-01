@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.pi
+name: PI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Stellt das Verhältnis des Umfangs eines Kreises zu seinem Durchschnitt, angegeben durch die Konstante, fest.
+remarks: Weitere Informationen finden Sie unter [System. Math. PI](https://docs.microsoft.com/dotnet/api/system.math.pi) .
+syntax: 'function PI () : Double'
+input:
+  content: ()
+  types: []
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+ms.openlocfilehash: c7b0985cfe132351f9bee9e70d1fcfafd40b757d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211374"

@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.preparequbit
+name: PrepareQubit
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  Bereitet ein Qubit im + 1 (`Zero`)-eigen Zustand des angegebenen Pauli-Operators vor.
+
+  Wenn der Identity-Operator angegeben ist, wird das Qubit im Status "in maximalgemischter Form" vorbereitet.
+
+
+  Wenn sich das Qubit anfänglich im $ \ket{0}$ State befand, bereitet dieser Vorgang das Qubit im $ + $1-eigen Zustand eines angegebenen Pauli-Operators oder, für `PauliI`, stattdessen im Status "maximisch Mixed" (siehe <xref:microsoft.quantum.preparation.preparesinglequbitidentity>) vor.
+
+
+  Wenn sich das Qubit in einem anderen Zustand als $ \ket{0}$ befunden hat, wendet dieser Vorgang die folgenden Gates an: $H $ for `PauliX`, $HS $ for `PauliY`, $I $ for `PauliZ` und <xref:microsoft.quantum.preparation.preparesinglequbitidentity> for `PauliI`.
+syntax: 'operation PrepareQubit (basis : Pauli, qubit : Qubit) : Unit'
+input:
+  content: '(basis : Pauli, qubit : Qubit)'
+  types:
+  - name: basis
+    summary: Ein Pauli-Operator $P $.
+    isPrimitive: true
+    uid: Pauli
+  - name: qubit
+    summary: Ein Qubit, das vorbereitet werden soll.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: be4eb730bebd00531aaa49302578b23f4a52237b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226538"

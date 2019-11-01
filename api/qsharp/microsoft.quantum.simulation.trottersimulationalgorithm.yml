@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.trottersimulationalgorithm
+name: TrotterSimulationAlgorithm
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: '`SimulationAlgorithm` Funktion, die eine Trotter – Suzuki-Zerlegung verwendet, um den Time-Evolution Operator _Exp (-IHT)_ zu annähern.'
+syntax: 'function TrotterSimulationAlgorithm (trotterStepSize : Double, trotterOrder : Int) : Microsoft.Quantum.Simulation.SimulationAlgorithm'
+input:
+  content: '(trotterStepSize : Double, trotterOrder : Int)'
+  types:
+  - name: trotterStepSize
+    summary: Dauer der simulierten Zeitentwicklung in einem einzelnen trockschritt.
+    isPrimitive: true
+    uid: Double
+  - name: trotterOrder
+    summary: Reihenfolge des trockintegrator. Dies muss entweder 1 oder eine gerade Zahl sein.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft.Quantum.Simulation.SimulationAlgorithm
+  types:
+  - summary: Ein `SimulationAlgorithm` Typ.
+    uid: microsoft.quantum.simulation.simulationalgorithm
+ms.openlocfilehash: 2daaeb3be5d73351797cb9f4efacb6e276b18e10
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231995"

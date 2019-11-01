@@ -1,0 +1,16 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.jwoptimizedhterms
+name: JWOptimizedHTerms
+type: newtype
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: >-
+  Format der Daten, die C# von an Q # übermittelt werden, um die Begriffe der hamiltonan darzustellen.
+
+  Die Bedeutung der dargestellten Daten wird durch den Algorithmus bestimmt, der Sie empfängt.
+syntax: newtype JWOptimizedHTerms = (Microsoft.Quantum.Chemistry.HTerm[], Microsoft.Quantum.Chemistry.HTerm[], Microsoft.Quantum.Chemistry.HTerm[], Microsoft.Quantum.Chemistry.HTerm[]);
+ms.openlocfilehash: 24db6a67c0450606bf43388bb460dfd4018bb580
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228493"

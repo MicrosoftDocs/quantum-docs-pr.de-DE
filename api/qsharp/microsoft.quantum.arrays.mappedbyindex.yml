@@ -1,0 +1,67 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.mappedbyindex
+name: MappedByIndex
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Gibt ein neues Array zurück, das aus den Bildern des ursprünglichen Arrays unter der Funktion besteht, wenn ein Array und eine Funktion für die indizierten Elemente des Arrays definiert sind.
+examples: >-
+  Die folgenden beiden Zeilen sind äquivalent:
+
+
+  ```qsharp
+
+  let arr = MapIndex(f, [x0, x1, x2]);
+
+  ```
+
+
+  und der
+
+
+  ```qsharp
+
+  let arr = [f(0, x0), f(1, x1), f(2, x2)];
+
+  ```
+syntax: "function MappedByIndex (mapper : ((Int, 'T) -> 'U), array : 'T[]) : 'U[]"
+input:
+  content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"
+  types:
+  - name: mapper
+    summary: Eine Funktion von `(Int, 'T)` zu `'U`, die zum Zuordnen von Elementen und deren Indizes verwendet wird.
+    isFunction: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Int
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+  - name: array
+    summary: Ein Array von-Elementen über `'T`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'U[]"
+  types:
+  - summary: Ein Array `'U[]` von Elementen, die von der `mapper`-Funktion zugeordnet werden.
+    isArray: true
+    uid: "'U"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Der Typ der `array` Elemente.
+- uid: "'U"
+  summary: Der Ergebnistyp der `mapper` Funktion.
+seeAlso:
+- mapped
+ms.openlocfilehash: 08dacd9b53b151d5cadcef16db8b460d4326d746
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214281"

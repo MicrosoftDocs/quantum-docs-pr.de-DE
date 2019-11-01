@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.delay
+name: Delay
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Wendet einen angegebenen Vorgang mit einer Verzögerung an.
+
+
+  Wenn ein Vorgang und eine Eingabe für diesen Vorgang vorhanden sind, wendet den Vorgang an, sobald eine zusätzliche Eingabe bereitgestellt wird.
+
+  Insbesondere der Ausdruck `Delay(op, arg, _)` ist ein Vorgang, der `op` auf `arg` anwendet, wenn er aufgerufen wird.
+
+  Ausdruck `Delay(op,arg,_)` die die Anwendung von `op`verzögern kann.
+syntax: "operation Delay (op : ('T => 'U), arg : 'T, aux : Unit) : 'U"
+input:
+  content: "(op : ('T => 'U), arg : 'T, aux : Unit)"
+  types:
+  - name: op
+    summary: Ein anzuwendende Vorgang.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+  - name: arg
+    summary: Die Eingabe, auf die der Vorgang angewendet wird.
+    uid: "'T"
+    isLocal: true
+  - name: aux
+    summary: Argument, das verwendet wird, um die Anwendung des Vorgangs mithilfe der partiellen Anwendung zu verzögern.
+    isPrimitive: true
+    uid: Unit
+output:
+  content: "'U"
+  types:
+  - uid: "'U"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Der Eingabetyp des Vorgangs, der verzögert werden soll.
+- uid: "'U"
+  summary: Der Rückgabetyp des Vorgangs, der verzögert werden soll.
+seeAlso:
+- microsoft.quantum.canon.delayc
+- microsoft.quantum.canon.delaya
+- microsoft.quantum.canon.delayca
+- microsoft.quantum.canon.delayed
+ms.openlocfilehash: 1759670182cff1153859c62e9c95d1be1f998674
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226113"

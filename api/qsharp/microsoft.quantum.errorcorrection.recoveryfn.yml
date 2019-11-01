@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.recoveryfn
+name: RecoveryFn
+type: newtype
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: Der Typ für die Funktion, die einer Sequenz von `Pauli[]` Vorgängen, die den erkannten Fehler beheben, ein Fehler-Syndrom zuordnet.
+syntax: newtype RecoveryFn = (Microsoft.Quantum.ErrorCorrection.Syndrome -> Pauli[]);
+ms.openlocfilehash: 86d0c6444a3e822525f605f2c15978323b9e1caf
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220316"

@@ -1,0 +1,76 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifelserc
+name: ApplyIfElseRC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Wendet je nach dem Wert eines klassischen Ergebnisses einen von zwei kontrollierbaren Vorgängen an.
+
+
+  Wendet bei einem Ergebnis `result`den Vorgang `zeroOp` mit `zeroInput` als Eingabe an, wenn `result` gleich `Zero`ist, und wendet `oneOp(oneInput)` beim `result == One`an.
+syntax: "operation ApplyIfElseRC (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit"
+input:
+  content: "(result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U))"
+  types:
+  - name: result
+    summary: Das Messergebnis, mit dem bestimmt wird, ob `zeroOp` oder `oneOp` angewendet werden.
+    isPrimitive: true
+    uid: Result
+  - name: zeroOp
+    summary: Der beim `result == Zero`anzuwendende steuerbare Vorgang.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: zeroInput
+    summary: Die Eingabe, die für `zeroOp` bereitgestellt werden soll, wenn `result == Zero`.
+    uid: "'T"
+    isLocal: true
+  - name: oneOp
+    summary: Der beim `result == One`anzuwendende steuerbare Vorgang.
+    isOperation: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: oneInput
+    summary: Die Eingabe, die für `oneOp` bereitgestellt werden soll, wenn `result == One`.
+    uid: "'U"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Der Eingabetyp des Vorgangs `zeroOp` bedingt angewendet werden.
+- uid: "'U"
+  summary: Der Eingabetyp des Vorgangs `oneOp` bedingt angewendet werden.
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyifzero
+- microsoft.quantum.canon.applyifone
+- microsoft.quantum.canon.applyifelserc
+- microsoft.quantum.canon.applyifelsera
+- microsoft.quantum.canon.applyifelserca
+ms.openlocfilehash: e2dd871aa42ed22ba088e6eaad9d9705dfb26254
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220928"

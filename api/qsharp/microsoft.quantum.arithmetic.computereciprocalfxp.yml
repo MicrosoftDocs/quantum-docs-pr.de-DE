@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.computereciprocalfxp
+name: ComputeReciprocalFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Berechnet $1/x $ für eine Festkomma Zahl $x $.
+syntax: 'operation ComputeReciprocalFxP (x : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(x : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: x
+    summary: Die Festkomma Zahl, die invertiert werden soll.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: result
+    summary: Die fest Komma Zahl, die das Ergebnis enthält. Muss mit "$ \ket{0.0} $" initialisiert werden.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 258a3386b21286e7a6a7b9a1fc716f69f1a48682
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221013"

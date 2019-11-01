@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.sequencel
+name: SequenceL
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Ein Array von ganzen Zahlen in einem angegebenen Intervall erhalten.
+remarks: Der Unterschied zwischen `from` und `to` muss in einen `Int` Wert passen.
+examples: >-
+  ```qsharp
+
+  let arr1 = SequenceL(0L, 3L); // [0L, 1L, 2L, 3L]
+
+  let arr2 = SequenceL(23L, 29L); // [23L, 24L, 25L, 26L, 27L, 28L, 29L]
+
+  let arr3 = SequenceL(-5L, -2L); // [-5L, -4L, -3L, -2L]
+
+  ```
+syntax: 'function SequenceL (from : BigInt, to : BigInt) : BigInt[]'
+input:
+  content: '(from : BigInt, to : BigInt)'
+  types:
+  - name: from
+    summary: Ein inklusiver Start Index des Intervalls.
+    isPrimitive: true
+    uid: BigInt
+  - name: to
+    summary: Ein inklusiver Endindex des Intervalls, das nicht kleiner als `from`ist.
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: BigInt[]
+  types:
+  - summary: Ein Array, das die Sequenz von Zahlen `from`, `from + 1``to`.
+    isArray: true
+    isPrimitive: true
+    uid: BigInt
+ms.openlocfilehash: 09d5798b0311285e671bc5ed1f9358c557a74946
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217987"

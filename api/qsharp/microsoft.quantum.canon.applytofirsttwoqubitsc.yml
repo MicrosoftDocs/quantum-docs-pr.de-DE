@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytofirsttwoqubitsc
+name: ApplyToFirstTwoQubitsC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Wendet einen Vorgang auf die ersten beiden Qubits im Register an.
+
+  Der-Modifizierer `C` gibt an, dass der Vorgang steuerbar ist.
+remarks: >-
+  Dies entspricht:
+
+
+  ```qsharp
+
+  op(register[0], register[1]);
+
+  ```
+syntax: 'operation ApplyToFirstTwoQubitsC (op : ((Qubit, Qubit) => Unit is Ctl), register : Qubit[]) : Unit'
+input:
+  content: '(op : ((Qubit, Qubit) => Unit is Ctl), register : Qubit[])'
+  types:
+  - name: op
+    summary: Ein Vorgang, der auf die ersten beiden Qubits angewendet werden soll.
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Qubit
+      - isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: register
+    summary: Qubit-Array zu den ersten zwei Qubits, auf die der Vorgang angewendet wird.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applytofirsttwoqubits
+ms.openlocfilehash: def9af6b641d5f4a3301c77319dfbf55e348f142
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73225518"

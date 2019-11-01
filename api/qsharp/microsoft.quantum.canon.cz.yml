@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.cz
+name: CZ
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Wendet das Tor der kontrollierten-Z (CZ) auf ein paar von Qubits an.
+
+
+  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{align} , $ $, wobei Zeilen und Spalten im Quantum-Konzept Handbuch organisiert werden.
+remarks: >-
+  Äquivalent zu:
+
+
+  ```qsharp
+
+  Controlled Z([control], target);
+
+  ```
+syntax: 'operation CZ (control : Qubit, target : Qubit) : Unit'
+input:
+  content: '(control : Qubit, target : Qubit)'
+  types:
+  - name: control
+    summary: Steuerelement-Qubit für das CZ-Gate.
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: Ziel-Qubit für das CZ-Gate.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 000bcb896589343372e415e5a7e628a0665bbc7d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226164"
