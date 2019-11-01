@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.embedpauli
+name: EmbedPauli
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Gibt bei einem Single-Qubit-Pauli-Operator und dem Index eines Qubit einen multiqubit-Pauli-Operator mit dem angegebenen Single-Qubit-Operator an diesem Index zurück und `PauliI` an jedem anderen Index.
+examples: >-
+  So rufen Sie das Array `[PauliI, PauliI, PauliX, PauliI]`ab:
+
+
+  ```qsharp
+
+  EmbedPauli(PauliX, 2, 3);
+
+  ```
+syntax: 'function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]'
+input:
+  content: '(pauli : Pauli, location : Int, n : Int)'
+  types:
+  - name: pauli
+    summary: Ein Single-Qubit-Pauli-Operator, der an der angegebenen Position platziert werden soll.
+    isPrimitive: true
+    uid: Pauli
+  - name: location
+    summary: Ein Index, der `output[location] == pauli`, wobei `output` die Ausgabe dieser Funktion ist.
+    isPrimitive: true
+    uid: Int
+  - name: n
+    summary: Länge des Arrays, das zurückgegeben werden soll.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Pauli[]
+  types:
+  - isArray: true
+    isPrimitive: true
+    uid: Pauli
+ms.openlocfilehash: 1e852781f6dd85e5432f5613184f028db0e84b87
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219381"

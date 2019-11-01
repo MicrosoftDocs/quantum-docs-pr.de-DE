@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.weightonepaulis
+name: WeightOnePaulis
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Gibt ein Array aller Gewichtungs-1-Pauli-Operatoren für eine angegebene Anzahl von Qubits zurück.
+syntax: 'function WeightOnePaulis (nQubits : Int) : Pauli[][]'
+input:
+  content: '(nQubits : Int)'
+  types:
+  - name: nQubits
+    summary: Die Anzahl der Qubits, für die die zurückgegebenen Pauli-Operatoren definiert sind.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Pauli[][]
+  types:
+  - summary: Ein Array von multiqubit-Pauli-Operatoren, die jeweils als ein Array mit Längen `nQubits`dargestellt werden.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+ms.openlocfilehash: 80c17b0c895f39c1548d3fd0535d6e731c6f9615
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216695"

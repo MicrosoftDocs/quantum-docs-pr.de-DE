@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.rz
+name: Rz
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Wendet eine Drehung zum $z $-Achse um einen angegebenen Winkel an.
+
+
+  \begin{align} R_z (\orta) \mathrel{: =} e ^ {-i \an \sigma_z/2} = \begin{bmatrix} e ^ {-i \Der Ta/2} & 0 \\\\ 0 & e ^ {i \Der Ta/2} \end{bmatrix}.
+
+  \end{align}
+remarks: >-
+  Äquivalent zu:
+
+
+  ```qsharp
+
+  R(PauliZ, theta, qubit);
+
+  ```
+syntax: 'operation Rz (theta : Double, qubit : Qubit) : Unit'
+input:
+  content: '(theta : Double, qubit : Qubit)'
+  types:
+  - name: theta
+    summary: Der Winkel, um den das Qubit gedreht werden soll.
+    isPrimitive: true
+    uid: Double
+  - name: qubit
+    summary: Das Qubit, auf das das Gate angewendet werden soll.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 3a1655e226a1f7ac9dafc2b7928de87ee2bd1173
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216372"

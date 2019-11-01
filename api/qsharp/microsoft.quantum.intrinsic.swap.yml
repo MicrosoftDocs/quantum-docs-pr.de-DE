@@ -1,0 +1,52 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.swap
+name: SWAP
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Wendet das Auslagerungs Gate auf ein paar von Qubits an.
+
+
+  \begin{align} \operatschmue{gatap} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix} , \end{align}
+
+
+  Dabei werden Zeilen und Spalten im Quantum-Konzept Handbuch als geordnet angezeigt.
+remarks: >-
+  Äquivalent zu:
+
+
+  ```qsharp
+
+  CNOT(qubit1, qubit2);
+
+  CNOT(qubit2, qubit1);
+
+  CNOT(qubit1, qubit2);
+
+  ```
+syntax: 'operation SWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit'
+input:
+  content: '(qubit1 : Qubit, qubit2 : Qubit)'
+  types:
+  - name: qubit1
+    summary: Das erste Qubit, das ausgetauscht werden soll.
+    isPrimitive: true
+    uid: Qubit
+  - name: qubit2
+    summary: Zweites Qubit, das ausgetauscht werden soll.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 32a379b784d0be0084b00a80edf8607ccf760f9e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216355"

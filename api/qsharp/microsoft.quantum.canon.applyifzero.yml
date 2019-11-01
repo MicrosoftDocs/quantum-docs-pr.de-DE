@@ -1,0 +1,51 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifzero
+name: ApplyIfZero
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Wendet einen Vorgang an, der von einem klassischen Ergebniswert von 0 (null) abhängt.
+
+
+  Wendet bei einem Vorgang `op` und einem Ergebniswert `result``op` auf das `target` an, wenn `result` `Zero`ist. Wenn `One`, geschieht nichts mit dem `target`.
+syntax: "operation ApplyIfZero (result : Result, (op : ('T => Unit), target : 'T)) : Unit"
+input:
+  content: "(result : Result, (op : ('T => Unit), target : 'T))"
+  types:
+  - name: result
+    summary: Ein Messergebnis, das steuert, ob op angewendet wird.
+    isPrimitive: true
+    uid: Result
+  - name: op
+    summary: Ein Vorgang, der bedingt angewendet werden soll.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: target
+    summary: Die Eingabe, auf die der Vorgang angewendet wird.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Der Eingabetyp des Vorgangs, der bedingt angewendet werden soll.
+seeAlso:
+- microsoft.quantum.canon.applyifzeroc
+- microsoft.quantum.canon.applyifzeroa
+- microsoft.quantum.canon.applyifzeroca
+ms.openlocfilehash: c9d524a4be9c3ce6179f59d59c8a83819a611966
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213635"

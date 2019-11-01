@@ -1,0 +1,69 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.decomposeintotimestepsca
+name: "\"Debug\"-timestepsca"
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Gibt einen Vorgang zurück, der den Trotter – Suzuki Integrator für einen angegebenen Vorgang implementiert.
+syntax: "function DecomposeIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
+references: >-
+  We use the implementation in
+
+
+  - [ *D. W. Berry, G. Ahokas, R. Cleve, B. C. Sanders* ](https://arxiv.org/abs/quant-ph/0508139)
+input:
+  content: '((nsteps: int, op: ((int, Double, t) = > Unit ist ADJ + CTL)), trotterorder: int)'
+  types:
+  - name: nsteps
+    isPrimitive: true
+    uid: Int
+  - name: schel
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Int
+      - isPrimitive: true
+        uid: Double
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: trotterorder
+    summary: >-
+      Wählt die Reihenfolge des zu verwendenden Trotter – Suzuki Integrator aus.
+
+      Die Reihenfolge 1 und 2 werden zurzeit unterstützt.
+    isPrimitive: true
+    uid: Int
+output:
+  content: ((Double, 't) = > Einheit ist ADJ + CTL)
+  types:
+  - summary: Gibt eine einheitliche-Klasse zurück, die den Trotter – Suzuki Integrator implementiert, wobei der erste Parameter `Double` die Größe der Integrationsschritte ist und der zweite Parameter das Ziel ist.
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Double
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+typeParameters:
+- uid: "'T"
+  summary: Der Typ, auf den jeder Zeit Schritt reagieren soll. in der Regel werden entweder `Qubit[]` oder `Qubit`.
+ms.openlocfilehash: 328db9b314320c724cf03adb19ee59d63a33e56e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067831"
