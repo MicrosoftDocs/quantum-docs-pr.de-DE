@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.ccnot
+name: Ccnot
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: Wendet das (doppelt kontrollierte – not)-Gate auf drei Qubits an.
+remarks: >-
+  Äquivalent zu:
+
+
+  ```qsharp
+
+  Controlled X([control1, control2], target);
+
+  ```
+syntax: 'operation CCNOT (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
+input:
+  content: '(Control1: Qubit, control2: Qubit, target: Qubit)'
+  types:
+  - name: control1
+    summary: Das erste Steuerelement-Qubit für das ccnot-Gate.
+    isPrimitive: true
+    uid: Qubit
+  - name: control2
+    summary: Das zweite Steuerelement-Qubit für das ccnot-Gate.
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: Ziel-Qubit für das ccnot-Gate.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Einheit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: cf3731ba41dde045fb5b7509d7d33801f8e3cee6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067355"

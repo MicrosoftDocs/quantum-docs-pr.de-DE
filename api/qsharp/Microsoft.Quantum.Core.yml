@@ -1,0 +1,21 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.core
+name: Microsoft. Quantum. Core
+summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält Q # Core-Funktionen und-Vorgänge.\n\n # <a name=\"remarks\"></a>Hinweise\n Dieser Namespace wird automatisch vom f #-Compiler geöffnet, sodass alle Elemente dieses Namespace stets verfügbar sind."
+functions:
+- uid: microsoft.quantum.core.length
+  summary: Gibt die Anzahl der Elemente in einem Array zurück.
+- uid: microsoft.quantum.core.rangeend
+  summary: Gibt den definierten Endwert des angegebenen Bereichs zurück, der nicht notwendigerweise das letzte Element in der Sequenz ist.
+- uid: microsoft.quantum.core.rangereverse
+  summary: Gibt einen neuen Bereich zurück, bei dem es sich um den umgekehrten Bereich des Eingabe Bereichs handelt.
+- uid: microsoft.quantum.core.rangestart
+  summary: Gibt den definierten Startwert des angegebenen Bereichs zurück.
+- uid: microsoft.quantum.core.rangestep
+  summary: Gibt die ganze Zahl zurück, die angibt, wie der nächste Wert eines Bereichs berechnet wird.
+ms.openlocfilehash: 41c28f8e8e11990ec1cf9b315478996a1e0811f4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056889"

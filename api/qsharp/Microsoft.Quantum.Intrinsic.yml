@@ -1,0 +1,188 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.intrinsic
+name: Microsoft. Quantum. intrinsisch
+functions:
+- uid: microsoft.quantum.intrinsic.message
+  summary: Protokolliert eine Meldung.
+operations:
+- uid: microsoft.quantum.intrinsic.assert
+  summary: Bestätigt, dass das Messen der angegebenen Qubits in der angegebenen Pauli-Basis immer das angegebene Ergebnis hat.
+- uid: microsoft.quantum.intrinsic.assertprob
+  summary: Bestätigt, dass das Messen der angegebenen Qubits in der angegebenen Pauli-Basis das angegebene Ergebnis mit der angegebenen Wahrscheinlichkeit innerhalb einiger Toleranz hat.
+- uid: microsoft.quantum.intrinsic.ccnot
+  summary: Wendet das (doppelt kontrollierte – not)-Gate auf drei Qubits an.
+- uid: microsoft.quantum.intrinsic.cnot
+  summary: >-
+    Wendet das CNOT-Gate (Controlled-not) auf ein paar von Qubits an.
+
+
+    \begin{align} \operatschmue{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{bmatrix} , \end{align}
+
+
+    Dabei werden Zeilen und Spalten im Quantum-Konzept Handbuch als geordnet angezeigt.
+- uid: microsoft.quantum.intrinsic.exp
+  summary: >-
+    Wendet den Exponentialwert eines multiqubit-Pauli-Operators an.
+
+
+    \begin{align} e ^ {i \orta [P_0 \otimes P_1 \cdots P_ {N-1}]}, \end{align}, wobei $P _I $ das $i $ th-Element von `paulis`und WHERE $N = $`Length(paulis)`ist.
+- uid: microsoft.quantum.intrinsic.expfrac
+  summary: >-
+    Wendet den Exponentialwert eines multiqubit-Pauli-Operators mit einem Argument an, das von einem dyadic-Bruchteil angegeben wird.
+
+
+    \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}, \end{align}, wobei $P _I $ das $i $ th-Element von `paulis`und WHERE $N = $`Length(paulis)`ist.
+- uid: microsoft.quantum.intrinsic.h
+  summary: >-
+    Wendet die Hadamard-Transformation auf ein einzelnes Qubit an.
+
+
+    \begin{align} H \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ 1 &-1 \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.i
+  summary: Führt den Identitäts Vorgang (No-OP) für ein einzelnes Qubit aus.
+- uid: microsoft.quantum.intrinsic.m
+  summary: >-
+    Führt eine Messung eines einzelnen Qubit in der Pauli-$Z $ aus.
+
+
+    Das Ausgabe Ergebnis wird durch die Distribution \begin{align} \pr (\texttt{Zero} | \ket{\psi}) = \braket{\psi | 0} \braket{0 | \psi}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.measure
+  summary: >-
+    Führt eine gemeinsame Messung von einem oder mehreren Qubits in den angegebenen Pauli-Basen aus.
+
+
+    Das Ausgabe Ergebnis wird durch die Verteilung angegeben: \begin{align} \pr (\texttt{Zero} | \ket{\psi}) = \bruch12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align}, wobei $P _I $ das $i $ th-Element von @no__ t_0_ und WHERE $N = \texttt{verlän} (\texttt{Bases}) $.
+
+    Das heißt, die Messung gibt eine `Result` $d $ zurück, sodass der Eigen Wert des beobachteten Mess Effekts $ (-1) ^ d $ ist.
+- uid: microsoft.quantum.intrinsic.r
+  summary: >-
+    Wendet eine Drehung auf die angegebene Pauli-Achse an.
+
+
+    \begin{align} R_ {\mu} (\orta) \mathrel{: =} e ^ {-i \Der Ta \sigma_{\mu}/2}, \end{align} WHERE $ \mu \in \{i, X, Y, Z\}$.
+- uid: microsoft.quantum.intrinsic.r1
+  summary: >-
+    Wendet eine Drehung zum $ \ket{1}$ State um einen angegebenen Winkel an.
+
+
+    \begin{align} R_1 (\orta) \mathrel{: =} \operatschmue{Diag} (1, e ^ {i\der TA}).
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.r1frac
+  summary: >-
+    Wendet eine Drehung zum $ \ket{1}$ State durch einen als dyadic-Bruchteil angegebenen Winkel an.
+
+
+    \begin{align} R_1 (n, k) \mathrel{: =} \operatschmue{Diag} (1, e ^ {i \pi k/2 ^ n}).
+
+    \end{align}
+
+
+    > [!WARNING]
+
+    > Bei diesem Vorgang wird die **umgekehrte** Vorzeichen Konvention aus @"microsoft.quantum.intrinsic.r"verwendet, und der von @"microsoft.quantum.intrinsic.r1"enthaltene Faktor von $1/2 $ ist nicht enthalten.
+- uid: microsoft.quantum.intrinsic.random
+  summary: >-
+    Der zufällige Vorgang nimmt ein Array von Double-Vorgängen als Eingabe an und gibt einen zufällig ausgewählten Index als `Int`in das Array zurück.
+
+    Die Wahrscheinlichkeit für die Auswahl eines bestimmten Indexes ist proportional zum Wert des Array Elements an diesem Index.
+
+    Array Elemente, die gleich 0 (null) sind, werden ignoriert, und ihre Indizes werden nie zurückgegeben. Wenn ein Array Element kleiner als 0 (null) ist, oder wenn kein Array Element größer als 0 (null) ist, schlägt der Vorgang fehl.
+- uid: microsoft.quantum.intrinsic.reset
+  summary: Wenn ein einzelnes Qubit angegeben ist, wird es gemessen und sichergestellt, dass es sich im | 0 ⟩-Zustand befindet, sodass es sicher freigegeben werden kann.
+- uid: microsoft.quantum.intrinsic.resetall
+  summary: Messen Sie bei einem Array von Qubits diese, und stellen Sie sicher, dass Sie sich im Zustand | 0 ⟩ befinden, sodass Sie sicher freigegeben werden können.
+- uid: microsoft.quantum.intrinsic.rfrac
+  summary: >-
+    Wendet eine Drehung um die angegebene Pauli-Achse um einen als dyadic-Bruchteil angegebenen Winkel an.
+
+
+    \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \sigma_{\mu}/2 ^ k}, \end{align} WHERE $ \mu \in \{i, X, Y, Z\}$.
+
+
+    > [!WARNING]
+
+    > Bei diesem Vorgang wird die **umgekehrte** Vorzeichen Konvention aus @"microsoft.quantum.intrinsic.r"verwendet.
+- uid: microsoft.quantum.intrinsic.rx
+  summary: >-
+    Wendet eine Drehung zum $x $-Achse um einen angegebenen Winkel an.
+
+
+    \begin{align} R_x (\orta) \mathrel{: =} e ^ {-i \theita \sigma_x/2} = \begin{bmatrix} \cos \bruchteil {\thta}{2} &-i\sin \bruchteil {\thta}{2}\\\\-i\sin \bruchteil {\thta}{2} & \cos \bruchteil {\thta}{2} \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.ry
+  summary: >-
+    Wendet eine Drehung zum $y $-Achse um einen angegebenen Winkel an.
+
+
+    \begin{align} R_y (\orta) \mathrel{: =} e ^ {-i \-Ta \sigma_y/2} = \begin{bmatrix} \cos \bruchteil {\thta}{2} &-\sin \bruchteil {\Der Ta}{2}\\\\ \sin \bruchteil {\thta}{2} & \cos \bruchteil {\thta}{2} \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.rz
+  summary: >-
+    Wendet eine Drehung zum $z $-Achse um einen angegebenen Winkel an.
+
+
+    \begin{align} R_z (\orta) \mathrel{: =} e ^ {-i \an \sigma_z/2} = \begin{bmatrix} e ^ {-i \Der Ta/2} & 0 \\\\ 0 & e ^ {i \Der Ta/2} \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.s
+  summary: >-
+    Wendet das Einfüge/4-Phasen Gate auf ein einzelnes Qubit an.
+
+
+    \begin{align} S \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 & i \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.swap
+  summary: >-
+    Wendet das Auslagerungs Gate auf ein paar von Qubits an.
+
+
+    \begin{align} \operatschmue{gatap} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix} , \end{align}
+
+
+    Dabei werden Zeilen und Spalten im Quantum-Konzept Handbuch als geordnet angezeigt.
+- uid: microsoft.quantum.intrinsic.t
+  summary: >-
+    Wendet das-/8-Gate auf ein einzelnes Qubit an.
+
+
+    \begin{ALIGN} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 & e ^ {i \pi/4} \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.x
+  summary: >-
+    Wendet die Pauli-$X $ Gate an.
+
+
+    \begin{align} \sigma_x \mathrel{: =} \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.y
+  summary: >-
+    Wendet die Pauli-$Y $ Gate an.
+
+
+    \begin{align} \sigma_y \mathrel{: =} \begin{bmatrix} 0 &-i \\\\ i & 0 \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.z
+  summary: >-
+    Wendet die Pauli-$Z $ Gate an.
+
+
+    \begin{align} \sigma_z \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 &-1 \end{bmatrix}.
+
+    \end{align}
+ms.openlocfilehash: a2f80ca98d86e5a1457efb6dad34c60d6ef75a2e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73056342"

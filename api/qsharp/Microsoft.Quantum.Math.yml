@@ -1,0 +1,260 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.math
+name: Microsoft. Quantum. math
+functions:
+- uid: microsoft.quantum.math.abscomplex
+  summary: Gibt den absoluten Wert einer komplexen Zahl vom Typ `Complex`zurück.
+- uid: microsoft.quantum.math.abscomplexpolar
+  summary: Gibt den absoluten Wert einer komplexen Zahl vom Typ `ComplexPolar`zurück.
+- uid: microsoft.quantum.math.absd
+  summary: Gibt den absoluten Wert einer Gleit Komma Zahl mit doppelter Genauigkeit zurück.
+- uid: microsoft.quantum.math.absi
+  summary: Gibt den absoluten Wert einer ganzen Zahl zurück.
+- uid: microsoft.quantum.math.absl
+  summary: Gibt den absoluten Wert einer großen Ganzzahl zurück.
+- uid: microsoft.quantum.math.abssquaredcomplex
+  summary: Gibt den absoluten quadrierten Wert einer komplexen Zahl vom Typ `Complex`zurück.
+- uid: microsoft.quantum.math.abssquaredcomplexpolar
+  summary: Gibt den absoluten quadrierten Wert einer komplexen Zahl vom Typ `ComplexPolar`zurück.
+- uid: microsoft.quantum.math.arccos
+  summary: Gibt den Winkel zurück, dessen Kosinus die angegebene Zahl ist.
+- uid: microsoft.quantum.math.arccosh
+  summary: Berechnet den umgekehrten hyperbolischen Kosinus einer Zahl.
+- uid: microsoft.quantum.math.arcsin
+  summary: Gibt den Winkel zurück, dessen Sinus die angegebene Zahl ist.
+- uid: microsoft.quantum.math.arcsinh
+  summary: Berechnet den umgekehrten hyperbolischen Sinus einer Zahl.
+- uid: microsoft.quantum.math.arctan
+  summary: Gibt den Winkel zurück, dessen Tangens die angegebene Zahl ist.
+- uid: microsoft.quantum.math.arctan2
+  summary: Gibt den Winkel zurück, dessen Tangens der Quotienten zweier angegebener Zahlen ist.
+- uid: microsoft.quantum.math.arctanh
+  summary: Berechnet den umgekehrten hyperbolischen Tangens einer Zahl.
+- uid: microsoft.quantum.math.argcomplex
+  summary: Gibt die Phase einer komplexen Zahl vom Typ `Complex`zurück.
+- uid: microsoft.quantum.math.argcomplexpolar
+  summary: Gibt die Phase einer komplexen Zahl vom Typ `ComplexPolar`zurück.
+- uid: microsoft.quantum.math.bitsizei
+  summary: >-
+    Bei einer nicht negativen ganzzahligen `a`wird die Anzahl der Bits zurückgegeben, die für die Darstellung `a`erforderlich sind.
+
+
+    Das heißt, die kleinste $n $ wird so zurückgegeben, dass $a < 2 ^ n $.
+- uid: microsoft.quantum.math.bitsizel
+  summary: >-
+    Bei einer nicht negativen ganzzahligen `a`wird die Anzahl der Bits zurückgegeben, die für die Darstellung `a`erforderlich sind.
+
+
+    Das heißt, die kleinste $n $ wird so zurückgegeben, dass $a < 2 ^ n $.
+- uid: microsoft.quantum.math.ceiling
+  summary: Gibt die kleinste ganze Zahl zurück, die größer oder gleich der angegebenen Zahl ist.
+- uid: microsoft.quantum.math.complexascomplexpolar
+  summary: Konvertiert eine komplexe Zahl vom Typ `Complex` in eine komplexe Zahl vom Typ `ComplexPolar`.
+- uid: microsoft.quantum.math.complexpolarascomplex
+  summary: Konvertiert eine komplexe Zahl vom Typ `ComplexPolar` in eine komplexe Zahl vom Typ `Complex`.
+- uid: microsoft.quantum.math.complexpolartocomplex
+  summary: ''
+- uid: microsoft.quantum.math.complextocomplexpolar
+  summary: ''
+- uid: microsoft.quantum.math.continuedfractionconvergenti
+  summary: Sucht den fortgesetzten Bruchteil konvergent, der sich am nächsten `fraction` befindet, wobei der Nenner kleiner oder gleich `denominatorBound`
+- uid: microsoft.quantum.math.continuedfractionconvergentl
+  summary: Sucht den fortgesetzten Bruchteil konvergent, der sich am nächsten `fraction` befindet, wobei der Nenner kleiner oder gleich `denominatorBound`
+- uid: microsoft.quantum.math.cos
+  summary: Gibt den Kosinus des angegebenen Winkels zurück.
+- uid: microsoft.quantum.math.cosh
+  summary: Gibt den hyperbolischen Kosinus des angegebenen Winkels zurück.
+- uid: microsoft.quantum.math.dividedbyc
+  summary: Gibt den Quotienten von zwei Eingaben zurück.
+- uid: microsoft.quantum.math.dividedbycp
+  summary: Gibt den Quotienten von zwei Eingaben zurück.
+- uid: microsoft.quantum.math.dividedbyd
+  summary: Gibt den Quotienten von zwei Eingaben zurück.
+- uid: microsoft.quantum.math.dividedbyi
+  summary: Gibt den Quotienten von zwei Eingaben zurück.
+- uid: microsoft.quantum.math.dividedbyl
+  summary: Gibt den Quotienten von zwei Eingaben zurück.
+- uid: microsoft.quantum.math.divreml
+  summary: Dividiert einen BigInteger-Wert durch einen anderen, gibt das Ergebnis und den Rest als Tupel zurück.
+- uid: microsoft.quantum.math.e
+  summary: Gibt die natürliche logarithmische Basis $e $ zurück.
+- uid: microsoft.quantum.math.expd
+  summary: Gibt $e $ in der angegebenen Potenz zurück.
+- uid: microsoft.quantum.math.expmodi
+  summary: Gibt eine ganze Zahl zurück, die in Bezug auf einen angegebenen Modulus zu einer gegebenen Potenz ausgelöst wird.
+- uid: microsoft.quantum.math.expmodl
+  summary: Gibt eine ganze Zahl zurück, die in Bezug auf einen angegebenen Modulus zu einer gegebenen Potenz ausgelöst wird.
+- uid: microsoft.quantum.math.extendedgreatestcommondivisori
+  summary: Berechnet ein Tupel $ (u, v) $, sodass $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $, wobei $ \operatschmue{GCD} $ $a $ Greatest common divisor von $a $ und $b $ ist. Die GCD ist immer positiv.
+- uid: microsoft.quantum.math.extendedgreatestcommondivisorl
+  summary: Berechnet ein Tupel $ (u, v) $, sodass $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $, wobei $ \operatschmue{GCD} $ $a $ Greatest common divisor von $a $ und $b $ ist. Die GCD ist immer positiv.
+- uid: microsoft.quantum.math.floor
+  summary: Gibt den größten ganzzahligen Wert zurück, der im Vergleich zur angegebenen Zahl kleiner oder gleich groß ist.
+- uid: microsoft.quantum.math.greatestcommondivisori
+  summary: Berechnet den größten gemeinsamen Divisor von $a $ und $b $. Die GCD ist immer positiv.
+- uid: microsoft.quantum.math.greatestcommondivisorl
+  summary: Berechnet den größten gemeinsamen Divisor von $a $ und $b $. Die GCD ist immer positiv.
+- uid: microsoft.quantum.math.ieeeremainder
+  summary: Gibt den Rest zurück, der sich aus der Division einer angegebenen Zahl durch eine andere angegebene Zahl ergibt.
+- uid: microsoft.quantum.math.inversemodi
+  summary: Gibt $b $ zurück, sodass $a \cdot b = 1 (\operatschmue{mod} \texttt{Modulus}) $.
+- uid: microsoft.quantum.math.inversemodl
+  summary: Gibt $b $ zurück, sodass $a \cdot b = 1 (\operatschmue{mod} \texttt{Modulus}) $.
+- uid: microsoft.quantum.math.iscoprimei
+  summary: Gibt true zurück, wenn $a $ und $b $ eine Co-Primzahl sind, andernfalls false.
+- uid: microsoft.quantum.math.iscoprimel
+  summary: Gibt true zurück, wenn $a $ und $b $ eine Co-Primzahl sind, andernfalls false.
+- uid: microsoft.quantum.math.lg
+  summary: Berechnet den Logarithmus einer Zahl zur Basis 2.
+- uid: microsoft.quantum.math.log
+  summary: Gibt den natürlichen Logarithmus (Basis $e $) einer angegebenen Zahl zurück.
+- uid: microsoft.quantum.math.log10
+  summary: Gibt den Logarithmus einer angegebenen Zahl zur Basis 10 zurück.
+- uid: microsoft.quantum.math.logof2
+  summary: Gibt den natürlichen Logarithmus von 2 zurück.
+- uid: microsoft.quantum.math.max
+  summary: Gibt bei einem Array von ganzen Zahlen das größte Element zurück.
+- uid: microsoft.quantum.math.maxd
+  summary: Gibt die größere von zwei angegebenen Zahlen zurück.
+- uid: microsoft.quantum.math.maxi
+  summary: Gibt die größere von zwei angegebenen Zahlen zurück.
+- uid: microsoft.quantum.math.maxl
+  summary: Gibt die größere von zwei angegebenen Zahlen zurück.
+- uid: microsoft.quantum.math.min
+  summary: Gibt bei einem Array von ganzen Zahlen das kleinste Element zurück.
+- uid: microsoft.quantum.math.mind
+  summary: Gibt die kleinere von zwei angegebenen Zahlen zurück.
+- uid: microsoft.quantum.math.mini
+  summary: Gibt die kleinere von zwei angegebenen Zahlen zurück.
+- uid: microsoft.quantum.math.minl
+  summary: Gibt die kleinere von zwei angegebenen Zahlen zurück.
+- uid: microsoft.quantum.math.minusc
+  summary: Gibt die Differenz zwischen zwei Eingaben zurück.
+- uid: microsoft.quantum.math.minuscp
+  summary: Gibt die Differenz zwischen zwei Eingaben zurück.
+- uid: microsoft.quantum.math.minusd
+  summary: Gibt die Differenz zwischen zwei Eingaben zurück.
+- uid: microsoft.quantum.math.minusi
+  summary: Gibt die Differenz zwischen zwei Eingaben zurück.
+- uid: microsoft.quantum.math.minusl
+  summary: Gibt die Differenz zwischen zwei Eingaben zurück.
+- uid: microsoft.quantum.math.modi
+  summary: Gibt den Modulo einer Zahl in Bezug auf eine andere Zahl zurück.
+- uid: microsoft.quantum.math.modl
+  summary: Gibt den Modulo einer Zahl in Bezug auf eine andere Zahl zurück.
+- uid: microsoft.quantum.math.modpowl
+  summary: Führt eine modulare Division für eine Zahl aus, die mit einer anderen Zahl ausgelöst wird.
+- uid: microsoft.quantum.math.modulusi
+  summary: Berechnet den kanonischen Rückstand von `value` Modulo `modulus`.
+- uid: microsoft.quantum.math.modulusl
+  summary: Berechnet den kanonischen Rückstand von `value` Modulo `modulus`.
+- uid: microsoft.quantum.math.negationc
+  summary: Gibt die unäre Negation einer Eingabe zurück.
+- uid: microsoft.quantum.math.negationcp
+  summary: Gibt die unäre Negation einer Eingabe zurück.
+- uid: microsoft.quantum.math.negationd
+  summary: Gibt die unäre Negation einer Eingabe zurück.
+- uid: microsoft.quantum.math.negationi
+  summary: Gibt die unäre Negation einer Eingabe zurück.
+- uid: microsoft.quantum.math.negationl
+  summary: Gibt die unäre Negation einer Eingabe zurück.
+- uid: microsoft.quantum.math.pi
+  summary: Stellt das Verhältnis des Umfangs eines Kreises zu seinem Durchschnitt, angegeben durch die Konstante, fest.
+- uid: microsoft.quantum.math.plusa
+  summary: Gibt die Summe (Verkettung) von zwei Eingaben zurück.
+- uid: microsoft.quantum.math.plusc
+  summary: Gibt die Summe von zwei Eingaben zurück.
+- uid: microsoft.quantum.math.pluscp
+  summary: Gibt die Summe von zwei Eingaben zurück.
+- uid: microsoft.quantum.math.plusd
+  summary: Gibt die Summe von zwei Eingaben zurück.
+- uid: microsoft.quantum.math.plusi
+  summary: Gibt die Summe von zwei Eingaben zurück.
+- uid: microsoft.quantum.math.plusl
+  summary: Gibt die Summe von zwei Eingaben zurück.
+- uid: microsoft.quantum.math.pnorm
+  summary: >-
+    Gibt die `L(p)` Norm eines Vektors `Double`s zurück.
+
+
+    Das heißt, wenn ein Array $x $ vom Typ `Double[]`ist, wird die $p $-Norm $\|x\|\_p = (\sum_{j} | x_j | ^ {p}) ^ {1/p} $ zurückgegeben.
+- uid: microsoft.quantum.math.pnormalized
+  summary: >-
+    Normalisiert einen Vektor von `Double`s in der `L(p)` Norm.
+
+
+    Das heißt, wenn ein Array $x $ vom Typ `Double[]`ist, wird ein Array zurückgegeben, in dem alle Elemente durch den $p $-Norm $\|x\|_P $ dividiert werden.
+- uid: microsoft.quantum.math.powc
+  summary: Gibt eine Zahl zurück, die zu einer angegebenen Potenz ausgelöst wird.
+- uid: microsoft.quantum.math.powcp
+  summary: Gibt eine Zahl zurück, die zu einer angegebenen Potenz ausgelöst wird.
+- uid: microsoft.quantum.math.powd
+  summary: Gibt die Zahl x, die für die Potenz y ausgelöst wird, zurück.
+- uid: microsoft.quantum.math.powi
+  summary: Gibt eine Zahl zurück, die zu einer angegebenen Potenz ausgelöst wird.
+- uid: microsoft.quantum.math.powl
+  summary: Gibt eine Zahl zurück, die zu einer angegebenen Potenz ausgelöst wird.
+- uid: microsoft.quantum.math.realmod
+  summary: Berechnet den Modulo zwischen zwei reellen Zahlen.
+- uid: microsoft.quantum.math.round
+  summary: Rundet einen Wert auf die nächste ganze Zahl oder auf die angegebene Anzahl von Bruch Ziffern.
+- uid: microsoft.quantum.math.signd
+  summary: Gibt eine ganze Zahl zurück, die das Vorzeichen einer Zahl angibt.
+- uid: microsoft.quantum.math.signi
+  summary: Gibt eine ganze Zahl zurück, die das Vorzeichen einer Zahl angibt.
+- uid: microsoft.quantum.math.signl
+  summary: Gibt eine ganze Zahl zurück, die das Vorzeichen einer Zahl angibt.
+- uid: microsoft.quantum.math.sin
+  summary: Gibt den Sinus des angegebenen Winkels zurück.
+- uid: microsoft.quantum.math.sinh
+  summary: Gibt den hyperbolischen Sinus des angegebenen Winkels zurück.
+- uid: microsoft.quantum.math.sqrt
+  summary: Gibt die Quadratwurzel einer angegebenen Zahl zurück.
+- uid: microsoft.quantum.math.tan
+  summary: Gibt den Tangens des angegebenen Winkels zurück.
+- uid: microsoft.quantum.math.tanh
+  summary: Gibt den hyperbolischen Tangens des angegebenen Winkels zurück.
+- uid: microsoft.quantum.math.timesc
+  summary: Gibt das Produkt von zwei Eingaben zurück.
+- uid: microsoft.quantum.math.timescp
+  summary: Gibt das Produkt von zwei Eingaben zurück.
+- uid: microsoft.quantum.math.timesd
+  summary: Gibt das Produkt von zwei Eingaben zurück.
+- uid: microsoft.quantum.math.timesi
+  summary: Gibt das Produkt von zwei Eingaben zurück.
+- uid: microsoft.quantum.math.timesl
+  summary: Gibt das Produkt von zwei Eingaben zurück.
+- uid: microsoft.quantum.math.truncate
+  summary: Berechnet den ganzzahligen Teil einer Zahl.
+newtypes:
+- uid: microsoft.quantum.math.bigfraction
+  summary: Stellt eine rationale Zahl der Formular `p/q`dar. Die ganzzahlige `p` ist das erste Element des Tupels, und `q` ist das zweite Element des Tupels.
+- uid: microsoft.quantum.math.complex
+  summary: >-
+    Stellt eine komplexe Zahl durch seine reellen und imaginären Komponenten dar.
+
+    Das erste Element des Tupels ist die echte Komponente, die zweite, die imaginäre Komponente.
+- uid: microsoft.quantum.math.complexpolar
+  summary: >-
+    Stellt eine komplexe Zahl in Polar Form dar.
+
+
+    Die Polar Darstellung einer komplexen Zahl ist $c = r e ^ {i t} $.
+- uid: microsoft.quantum.math.fraction
+  summary: Stellt eine rationale Zahl der Formular `p/q`dar. Die ganzzahlige `p` ist das erste Element des Tupels, und `q` ist das zweite Element des Tupels.
+summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält klassische mathematische Funktionen und Datentypen."
+operations:
+- uid: microsoft.quantum.math.randomint
+  summary: Generiert eine ganzzahlige Zufalls Ganzzahl, die größer oder gleich 0 (null) und kleiner als eine angegebene obere Grenze ist.
+- uid: microsoft.quantum.math.randomintpow2
+  summary: Generiert eine Zufallszahl, die einheitlich von allen ganzen Zahlen entnommen wird, die in einer bestimmten Anzahl von Bits dargestellt werden können.
+- uid: microsoft.quantum.math.randomreal
+  summary: Gibt eine Zufallszahl zurück, die größer oder gleich 0 (null) und kleiner als 1 ist.
+- uid: microsoft.quantum.math.randomsinglequbitpauli
+  summary: Gibt einen der Single-Qubit-Pauli-Operatoren gleichmäßig nach dem Zufallsprinzip zurück.
+ms.openlocfilehash: 7f30ee26a1155b64946e8fb16f5692ec602aa602
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73056300"

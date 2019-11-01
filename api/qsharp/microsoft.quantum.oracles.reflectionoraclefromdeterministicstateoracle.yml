@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
+name: Reflectionoraclefromdeterministicstateoracle
+type: function
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  Erstellt Reflektion über einen angegebenen Zustand aus einem Oracle.
+
+
+  Bei Verwendung der Oracle-$O $ vom Typ <xref:microsoft.quantum.oracles.deterministicstateoracle>ist das Ergebnis dieser Funktion eine Reflektion um den Status $ \ket{\psi} $ WHERE $O \ket{0} = \ket{\psi} $.
+syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.ReflectionOracle'
+input:
+  content: '(Oracle: Microsoft. Quantum. Oracles. deterministicstateoracle)'
+  types:
+  - name: Orakel
+    summary: Oracle vom Typ "deterministicstateoracle"
+    uid: microsoft.quantum.oracles.deterministicstateoracle
+output:
+  content: Microsoft. Quantum. Oracles. reflectionoracle
+  types:
+  - summary: Eine `ReflectionOracle`, die den Status $ \ket{\psi} $ widerspiegelt.
+    uid: microsoft.quantum.oracles.reflectionoracle
+seeAlso:
+- deterministicstateoracle
+- reflectionoracle
+ms.openlocfilehash: c48c9259b4b3c122a8d7551db6d326ea523dd2a0
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73050325"

@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.rangeend
+name: RangeEnd
+type: function
+namespace: Microsoft.Quantum.Core
+summary: Gibt den definierten Endwert des angegebenen Bereichs zurück, der nicht notwendigerweise das letzte Element in der Sequenz ist.
+remarks: >-
+  Das erste Element eines Bereichs Ausdrucks ist `start`, sein zweites Element `start+step`, das dritte Element `start+step+step`usw., bis `end` weitergegeben wird.
+
+
+  Beachten Sie, dass sich der definierte Endwert eines Bereichs von dem letzten Element in der Sequenz unterscheiden kann, die durch den Bereich angegeben wird. beispielsweise in einem Bereich von 0. 2.. 5 das letzte Element ist 4, der Endwert ist jedoch 5.
+syntax: 'function RangeEnd (range : Range) : Int'
+input:
+  content: '(Bereich: Bereich)'
+  types:
+  - name: range
+    isPrimitive: true
+    uid: Range
+output:
+  content: Int
+  types:
+  - summary: Der definierte Endwert des angegebenen Bereichs.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066641"

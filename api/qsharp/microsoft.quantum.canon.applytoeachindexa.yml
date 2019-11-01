@@ -1,0 +1,51 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoeachindexa
+name: Applyzu eachindexa
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Wendet einen Single-Qubit-Vorgang auf jedes indizierte Element in einem Register an.
+
+  Der Modifizierer `A` gibt an, dass der Single-Qubit-Vorgang adjointable ist.
+syntax: "operation ApplyToEachIndexA (singleElementOperation : ((Int, 'T) => Unit is Adj), register : 'T[]) : Unit"
+input:
+  content: "(singleelementoperation: ((int, t) = > Einheit ist adj), Register: 't [])"
+  types:
+  - name: singleelementoperation
+    summary: Der auf die einzelnen Qubits anzuwendende Vorgang.
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Int
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: Registrieren
+    summary: Ein Array von Qubits, auf das der angegebene Vorgang angewendet werden soll.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Einheit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Das Ziel, für das jeder der Vorgänge fungiert.
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applytoeachindex
+ms.openlocfilehash: 6b99e977120a417780875475b35094a44d1c4e08
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73068477"

@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.delaya
+name: Delaya
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Wendet einen angegebenen Vorgang mit einer Verzögerung an.
+
+
+  Wenn ein Vorgang und eine Eingabe für diesen Vorgang vorhanden sind, wendet den Vorgang an, sobald eine zusätzliche Eingabe bereitgestellt wird.
+
+  Insbesondere der Ausdruck `Delay(op, arg, _)` ist ein Vorgang, der `op` auf `arg` anwendet, wenn er aufgerufen wird.
+
+  Ausdruck `Delay(op,arg,_)` die die Anwendung von `op`verzögern kann.
+syntax: "operation DelayA (op : ('T => Unit is Adj), arg : 'T, aux : Unit) : Unit"
+input:
+  content: "(op: ('t = > Unit ist adj), Arg: 't, AUX: Unit)"
+  types:
+  - name: schel
+    summary: Ein anzuwendende Vorgang.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: gebeut
+    summary: Die Eingabe, auf die der Vorgang angewendet wird.
+    uid: "'T"
+    isLocal: true
+  - name: Boda
+    summary: Argument, das verwendet wird, um die Anwendung des Vorgangs mithilfe der partiellen Anwendung zu verzögern.
+    isPrimitive: true
+    uid: Unit
+output:
+  content: Einheit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Der Eingabetyp des Vorgangs, der verzögert werden soll.
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.delay
+- microsoft.quantum.canon.delayed
+ms.openlocfilehash: f36930faacf0aa4a1ea87a09fc3018e06e62d7ac
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067797"
