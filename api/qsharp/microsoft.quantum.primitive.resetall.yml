@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.resetall
+name: ResetAll
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >-
+  > [!WARNING]
+
+  > Veraltet
+
+
+  Verwenden Sie @"microsoft.quantum.intrinsic.resetall".
+syntax: 'operation ResetAll (qubits : Qubit[]) : Unit'
+input:
+  content: '(Qubits: Qubit [])'
+  types:
+  - name: Qubits
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Einheit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: abd8e8f8af35044846860d4f4405eb37bf2a25fa
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066403"

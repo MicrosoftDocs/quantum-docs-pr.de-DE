@@ -1,0 +1,106 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.preparation
+name: Microsoft.Quantum.Preparation
+summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält Funktionen und Vorgänge zum Vorbereiten von Qubits in beliebige anfängliche Zustände."
+functions:
+- uid: microsoft.quantum.preparation.blochspherecoordinates
+  summary: >-
+    Berechnet die Bloch-Kugel Koordinaten für einen Single-Qubit-Zustand.
+
+
+    Wenn zwei komplexe Zahlen $a 0 sind, a1 $, die den Qubit-Status darstellen, berechnet Koordinaten auf der Bloch-Kugel, sodass $a 0 \ket{0} + a1 \ket{1} = r e ^ {IT} (e ^ {-i \phi/2}\cos{(\ der TA/2)} \ket{0}+ e ^ {i \phi/2}\sin{(\-Ta/2)} \ket{1}) $.
+- uid: microsoft.quantum.preparation.quantumrom
+  summary: >-
+    Verwendet die Quantum-Rom-Technik, um eine angegebene Dichte Matrix darzustellen.
+
+
+    Bei einer Liste mit $N $ Koeffizienten $ \alpha_j $ wird ein einheitlicher $U $ zurückgegeben, der die Quantum-Rom-Technik verwendet, um einen Näherungswert von $ \tilde\rho\sum_{j = 0} ^ {N-1} p_j\ket {j} \ Bra {j} $ der Reinigung der Dichte Matrix $ \rho = \sum_{j = 0} ^ {N-1} \bruchteil {| alpha_j |} {\sum_k | \alpha_k |} \ket{j}\bra{j} $. In dieser Näherung lautet der Fehler $ \epsilon $, dass $ | p_j-\bruch{| alpha_j |} {\sum_k | \alpha_k |} | \le \epsilon/N $ und $\|\tilde \rho-\rho\| \le \epsilon $. Anders ausgedrückt: $ $ \begin{align} u\ket{0}^ {\lceil\log_2 n\rceil} \ Ket{0}^ {m} = \sum_{j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\text{Garbage}_J}.
+
+    \end{align} $ $
+- uid: microsoft.quantum.preparation.quantumromqubitcount
+  summary: Gibt die Gesamtanzahl der Qubits zurück, die dem von `QuantumROM`zurückgegebenen Vorgang zugeordnet werden müssen.
+- uid: microsoft.quantum.preparation.statepreparationcomplexcoefficients
+  summary: >-
+    Gibt einen Vorgang zurück, der einen bestimmten Quantum-Zustand vorbereitet.
+
+
+    Der zurückgegebene Vorgang $U $ bereitet einen beliebigen Quantum-Status $ \ket{\psi} $ mit komplexen Koeffizienten $r _J e ^ {i t_j} $ aus dem $n $-Qubit-Berechnungsbasis Status $ \ket{0...0} $.
+
+
+    Die Aktion von U für ein neu zugeordneter Register wird durch $ $ \begin{align} u\ket {0... 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | r_j | ^ 2}} angegeben.
+
+    \end{align} $ $
+- uid: microsoft.quantum.preparation.statepreparationpositivecoefficients
+  summary: >-
+    Gibt einen Vorgang zurück, der den gegebenen Quantum-Zustand vorbereitet.
+
+
+    Der zurückgegebene Vorgang $U $ bereitet einen beliebigen Quantum-Status $ \ket{\psi} $ mit positiven Koeffizienten $ \alpha_j\ge $0 aus dem $n $-Qubit-Berechnungsbasis Status $ \ket{0...0} $ vor.
+
+
+    Die Aktion "U" für ein neu zugeordneter Register wird durch "$ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} \alpha_j \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | \alpha_j | ^ 2}}" angegeben.
+
+    \end{align} $ $
+operations:
+- uid: microsoft.quantum.preparation.preparearbitrarystate
+  summary: >-
+    Gibt einen Vorgang zurück, der einen gegebenen Quantum-Zustand vorbereitet.
+
+
+    Der zurückgegebene Vorgang $U $ bereitet einen beliebigen Quantum-Status $ \ket{\psi} $ mit komplexen Koeffizienten $r _J e ^ {i t_j} $ aus dem $n $-Qubit-Berechnungsbasis Status $ \ket{0...0} $.
+
+
+    $ $ \begin{align} u\ket {0... 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
+
+    \end{align} $ $
+- uid: microsoft.quantum.preparation.preparechoistate
+  summary: Bereitet den Status "Choi – jamiłkowski" für einen bestimmten Vorgang auf angegebene Verweis-und Ziel Register vor.
+- uid: microsoft.quantum.preparation.preparechoistatea
+  summary: Bereitet den Status "Choi – jamiłkowski" für einen bestimmten Vorgang mit einer Adjoint-Variante auf angegebene Verweis-und Ziel Register vor.
+- uid: microsoft.quantum.preparation.preparechoistatec
+  summary: Bereitet den Status "Choi – jamiłkowski" für einen bestimmten Vorgang mit einer kontrollierten Variante auf angegebene Verweis-und Ziel Register vor.
+- uid: microsoft.quantum.preparation.preparechoistateca
+  summary: Bereitet den Status "Choi – jamiłkowski" für einen bestimmten Vorgang mit sowohl kontrollierten als auch Adjoint-Varianten auf angegebene Verweis-und Ziel Register vor.
+- uid: microsoft.quantum.preparation.prepareentangledstate
+  summary: >-
+    Paar Weise entwinkel zwei Qubit-Register.
+
+
+    Das heißt, wenn zwei Register vorhanden sind, wird der vollständig entkoppelt Status $ \frac{1}{\sqrt{2}} \left (\ket{00} + \ket{11} \right) $ zwischen jedem Paar von Qubits in den entsprechenden Registern vorbereitet. dabei wird davon ausgegangen, dass jedes Register in "$ \ket{0\" beginnt. cdots 0} $ State.
+- uid: microsoft.quantum.preparation.prepareidentity
+  summary: >-
+    Bereitet bei einem Register das registrieren im Status "maximisch" vor.
+
+
+    Das Register wird im Zustand $ \boldone/2 ^ N $ vorbereitet, indem der gesamte depolarisierungschannel auf die einzelnen Qubits angewendet wird, wobei $N $ die Länge des Registers ist.
+- uid: microsoft.quantum.preparation.preparequbit
+  summary: >-
+    Bereitet ein Qubit im + 1 (`Zero`)-eigen Zustand des angegebenen Pauli-Operators vor.
+
+    Wenn der Identity-Operator angegeben ist, wird das Qubit im Status "in maximalgemischter Form" vorbereitet.
+
+
+    Wenn sich das Qubit anfänglich im $ \ket{0}$ State befand, bereitet dieser Vorgang das Qubit im $ + $1-eigen Zustand eines angegebenen Pauli-Operators oder, für `PauliI`, stattdessen im Status "maximisch Mixed" (siehe <xref:microsoft.quantum.preparation.preparesinglequbitidentity>) vor.
+
+
+    Wenn sich das Qubit in einem anderen Zustand als $ \ket{0}$ befunden hat, wendet dieser Vorgang die folgenden Gates an: $H $ for `PauliX`, $HS $ for `PauliY`, $I $ for `PauliZ` und <xref:microsoft.quantum.preparation.preparesinglequbitidentity> for `PauliI`.
+- uid: microsoft.quantum.preparation.preparesinglequbitidentity
+  summary: >-
+    Bereitet ein Qubit im maximale gemischten Zustand vor.
+
+
+    Sie bereitet das angegebene Qubit im Zustand "$ \boldone/$2" vor, indem der%% amp; quot;%% amp; quot; {0} \omega (\rho) \mathrel{: =} \frac{1}{4} \sum_{\mu \in \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\ Dagger}, \end{align} $ $, wobei $ \sigma\_i $ der $i $ th-Pauli-Operator ist und $ \rho $ ein Dichte Operator ist, der einen gemischten Zustand darstellt.
+- uid: microsoft.quantum.preparation.prepareuniformsuperposition
+  summary: >-
+    Erstellt eine einheitliche Superposition gegenüber Zuständen, die 0 (null) bis `nIndices`codieren.
+
+
+    Das heißt, dieser einheitliche $U $ erstellt eine einheitliche Superposition für alle Zahl Zustände $0 $ bis $M-$1, wenn ein Eingabe Status $ \ket{0\cdots 0} $ angegeben wird. Anders ausgedrückt: $ $ \begin{align} u\ket{0}= \frac{1}{\sqrt{M}}\sum_{j = 0} ^ {M-1} \ket{j}.
+
+    \end{align} $ $.
+ms.openlocfilehash: 2b9e3b89a29eb73b9b7417210628fce046c91209
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216015"

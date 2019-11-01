@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytofirstqubitca
+name: ApplyToFirstQubitCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Wendet Operation op auf das erste Qubit im Register an.
+
+  Der Modifizierer `CA` gibt an, dass der Vorgang steuerbar und adjointable ist.
+syntax: 'operation ApplyToFirstQubitCA (op : (Qubit => Unit is Adj + Ctl), register : Qubit[]) : Unit'
+input:
+  content: '(op : (Qubit => Unit is Adj + Ctl), register : Qubit[])'
+  types:
+  - name: op
+    summary: Ein Vorgang, der auf das erste Qubit angewendet werden soll.
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: register
+    summary: Qubit-Array bis zum ersten Qubit, auf das der Vorgang angewendet wird.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applytofirstqubit
+ms.openlocfilehash: 82720bee8d8317423db639ff40da68c576979dd2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213363"

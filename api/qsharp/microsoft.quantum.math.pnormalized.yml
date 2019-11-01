@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.pnormalized
+name: Pnormalisiert
+type: function
+namespace: Microsoft.Quantum.Math
+summary: >-
+  Normalisiert einen Vektor von `Double`s in der `L(p)` Norm.
+
+
+  Das heißt, wenn ein Array $x $ vom Typ `Double[]`ist, wird ein Array zurückgegeben, in dem alle Elemente durch den $p $-Norm $\|x\|_P $ dividiert werden.
+syntax: 'function PNormalized (p : Double, array : Double[]) : Double[]'
+input:
+  content: '(p: Double, Array: Double [])'
+  types:
+  - name: p
+    summary: Der Exponent $p $ in der $p $-Norm.
+    isPrimitive: true
+    uid: Double
+  - name: Array
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double []
+  types:
+  - summary: Das Array $x $ normalisiert durch die $p $-Norm $\|x\|_P $.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+seeAlso:
+- pnorm
+ms.openlocfilehash: 5fd219b866b14d3d6faf58cdf4f1ce2b9fbadf9d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067287"

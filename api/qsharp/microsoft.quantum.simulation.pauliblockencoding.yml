@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.pauliblockencoding
+name: PauliBlockEncoding
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Erstellt eine einheitliche Block Codierung für ein hamiltonan.
+
+
+  Die hamiltonan $H = \sum_{j}\alpha_j P_j $ wird durch eine Summe von Pauli-Begriffen $P _J $ beschrieben, die jeweils den tatsächlichen Koeffizienten $ \alpha_j $ haben.
+remarks: Dies wird durch vorbereiten und deren Vorbereitung des Zustands $ \ sum_ {j} \ sqrt {\ alpha_j/\ Alpha} \ Ket {j} $ und das Erstellen eines multiplizierten einheitlichen <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> und <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>erreicht.
+syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
+input:
+  content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
+  types:
+  - name: generatorSystem
+    summary: Eine `GeneratorSystem`, die $H $ als Summe von Pauli-Begriffen beschreibt.
+    uid: microsoft.quantum.simulation.generatorsystem
+output:
+  content: (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)
+  types:
+  - summary: >-
+      ## <a name="first-parameter"></a>Erster Parameter
+
+
+      Die einnorm der Koeffizienten $ \alpha = \sum_{j} | \alpha_j | $.
+
+
+      ## <a name="second-parameter"></a>Zweiter Parameter
+
+
+      Ein `BlockEncodingReflection` einheitlicher $U $ der hamiltonan $H $. Da diese einheitliche $U ^ 2 = I $ erfüllt, ist Sie auch eine Reflektion.
+    types:
+    - isPrimitive: true
+      uid: Double
+    - uid: microsoft.quantum.simulation.blockencodingreflection
+ms.openlocfilehash: 352ab71457601c38b22e93f706cb59f50bf24151
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216134"
