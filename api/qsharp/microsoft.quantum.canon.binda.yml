@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.binda
+name: Binda
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  > [!WARNING]
+
+  > Veraltet
+
+
+  Verwenden Sie @"microsoft.quantum.canon.bounda".
+syntax: "function BindA (operations : ('T => Unit is Adj)[]) : ('T => Unit is Adj)"
+input:
+  content: "(Vorgänge: ('t = > Einheit ist adj) [])"
+  types:
+  - name: Vorgänge
+    isArray: true
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+output:
+  content: ('T = > Einheit ist adj)
+  types:
+  - isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+ms.openlocfilehash: 8b53db59bdb8b2e8d86977a2ed55c3a7b7346aee
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73068375"

@@ -1,0 +1,74 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.boundc
+name: Boundc
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Bei einem Array von Vorgängen, die für eine einzelne Eingabe agieren, erzeugt einen neuen Vorgang, der jeden gegebenen Vorgang nacheinander ausführt.
+
+  Der Modifizierer `C` gibt an, dass alle Vorgänge im Array steuerbar sind.
+examples: >-
+  The following are equivalent:
+
+
+  ```qsharp
+
+  let bound = BoundC([U, V]);
+
+  bound(x);
+
+  ```
+
+
+  and
+
+
+  ```qsharp
+
+  U(x); V(x);
+
+  ```
+syntax: "function BoundC (operations : ('T => Unit is Ctl)[]) : ('T => Unit is Ctl)"
+input:
+  content: "(Vorgänge: ('t = > Unit ist CTL) [])"
+  types:
+  - name: Vorgänge
+    summary: Eine Sequenz von Vorgängen, die für eine angegebene Eingabe ausgeführt werden soll.
+    isArray: true
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+output:
+  content: ('T = > Einheit ist CTL)
+  types:
+  - summary: Ein neuer Vorgang, der jeden gegebenen Vorgang nacheinander für seine Eingabe ausführt.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+typeParameters:
+- uid: "'T"
+  summary: Das Ziel, auf dem die einzelnen Vorgänge im Array agieren.
+seeAlso:
+- microsoft.quantum.canon.bound
+ms.openlocfilehash: 46a82065b3a236ad0e0a02894d6b1b3e2a1ceba1
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73068171"

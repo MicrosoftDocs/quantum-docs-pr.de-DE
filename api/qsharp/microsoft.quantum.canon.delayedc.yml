@@ -1,0 +1,54 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.delayedc
+name: DelayedC
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Gibt einen Vorgang zurück, der den angegebenen Vorgang mit dem angegebenen Argument anwendet.
+syntax: "function DelayedC (op : ('T => Unit is Ctl), arg : 'T) : (Unit => Unit is Ctl)"
+input:
+  content: "(op : ('T => Unit is Ctl), arg : 'T)"
+  types:
+  - name: op
+    summary: Ein Vorgang, der als Ergebnis der Anwendung eines Rückgabewerts angewendet werden soll.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: arg
+    summary: Die Eingabe, auf die der Vorgang `op` angewendet wird.
+    uid: "'T"
+    isLocal: true
+output:
+  content: (Unit => Unit is Ctl)
+  types:
+  - summary: Ein neuer Vorgang, der `op` mit Eingaben anwendet `arg`
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+typeParameters:
+- uid: "'T"
+  summary: Der Eingabetyp des Vorgangs, der verzögert werden soll.
+seeAlso:
+- microsoft.quantum.canon.delayed
+- microsoft.quantum.canon.delay
+ms.openlocfilehash: 99a85abc78a28a939f67278458069b46a8c36324
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219415"

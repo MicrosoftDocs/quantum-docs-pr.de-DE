@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.applyreversedopbec
+name: Applyrevereindopbec
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Wendet einen Vorgang an, der eine Big-Endian-Eingabe an eine Register Codierung einer Ganzzahl ohne Vorzeichen unter Verwendung des Little-Endian-Formats nimmt.
+syntax: 'operation ApplyReversedOpBEC (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(op: (Microsoft. Quantum. Arithmetik. bigEndian = > Unit ist CTL), Register: Microsoft. Quantum. Arithmetik. littleEndian)'
+  types:
+  - name: schel
+    summary: Der Vorgang, der auf ein Big-in-Register-Register angewendet wird.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.bigendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: Registrieren
+    summary: Ein zu transformierende Little--zu-Ende-Registrierung.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Einheit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Controlled
+seeAlso:
+- applyreversedopbe
+- applyreversedopbea
+- applyreversedopbeca
+ms.openlocfilehash: fcf4110845e43426b7f2e1ec882bce75159ef789
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057173"

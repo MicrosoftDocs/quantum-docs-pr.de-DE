@@ -1,0 +1,190 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.math
+name: Microsoft. Quantum. Extensions. math
+functions:
+- uid: microsoft.quantum.extensions.math.absb
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.absl".
+- uid: microsoft.quantum.extensions.math.absd
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.absd".
+- uid: microsoft.quantum.extensions.math.absi
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.absi".
+- uid: microsoft.quantum.extensions.math.arccos
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.arccos".
+- uid: microsoft.quantum.extensions.math.arcsin
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.arcsin".
+- uid: microsoft.quantum.extensions.math.arctan
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.arctan".
+- uid: microsoft.quantum.extensions.math.arctan2
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.arctan2".
+- uid: microsoft.quantum.extensions.math.ceiling
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.ceiling".
+- uid: microsoft.quantum.extensions.math.cos
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.cos".
+- uid: microsoft.quantum.extensions.math.cosh
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.cosh".
+- uid: microsoft.quantum.extensions.math.divremb
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.divreml".
+- uid: microsoft.quantum.extensions.math.e
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.e".
+- uid: microsoft.quantum.extensions.math.expd
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.expd".
+- uid: microsoft.quantum.extensions.math.floor
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.floor".
+- uid: microsoft.quantum.extensions.math.ieeeremainder
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.ieeeremainder".
+- uid: microsoft.quantum.extensions.math.log
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.log".
+- uid: microsoft.quantum.extensions.math.log10
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.log10".
+- uid: microsoft.quantum.extensions.math.maxb
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.maxl".
+- uid: microsoft.quantum.extensions.math.maxd
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.maxd".
+- uid: microsoft.quantum.extensions.math.maxi
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.maxi".
+- uid: microsoft.quantum.extensions.math.minb
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.minl".
+- uid: microsoft.quantum.extensions.math.mind
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.mind".
+- uid: microsoft.quantum.extensions.math.mini
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.mini".
+- uid: microsoft.quantum.extensions.math.modpowb
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.modpowl".
+- uid: microsoft.quantum.extensions.math.pi
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.pi".
+- uid: microsoft.quantum.extensions.math.powd
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.powd".
+- uid: microsoft.quantum.extensions.math.round
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.round".
+- uid: microsoft.quantum.extensions.math.signb
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.signl".
+- uid: microsoft.quantum.extensions.math.signd
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.signd".
+- uid: microsoft.quantum.extensions.math.signi
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.signi".
+- uid: microsoft.quantum.extensions.math.sin
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.sin".
+- uid: microsoft.quantum.extensions.math.sinh
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.sinh".
+- uid: microsoft.quantum.extensions.math.sqrt
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.sqrt".
+- uid: microsoft.quantum.extensions.math.tan
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.tan".
+- uid: microsoft.quantum.extensions.math.tanh
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.tanh".
+- uid: microsoft.quantum.extensions.math.truncate
+  summary: >-
+    > [!WARNING]
+
+    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.truncate".
+ms.openlocfilehash: a1a8cda192f7e95141eb2e34baa37ddaae4cb8c9
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73056333"

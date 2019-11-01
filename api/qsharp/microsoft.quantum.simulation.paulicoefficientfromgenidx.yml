@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.paulicoefficientfromgenidx
+name: Paulikoefficientfromgenidx
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Extrahiert den Koeffizient eines Pauli-Begriffs, der von einem `GeneratorIndex`beschrieben wird.
+syntax: 'function PauliCoefficientFromGenIdx (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : Double'
+input:
+  content: '(generatorindex: Microsoft. Quantum. Simulation. generatorindex)'
+  types:
+  - name: Generatorindex
+    summary: '`GeneratorIndex` Typ, der einen Pauli-Begriff codiert.'
+    uid: microsoft.quantum.simulation.generatorindex
+output:
+  content: Double
+  types:
+  - summary: Der Koeffizient des Begriffs, der von einem `GeneratorIndex`beschrieben wird.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: f4e3412028f11758e5e4dbf50616ede1ed6f294a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065417"

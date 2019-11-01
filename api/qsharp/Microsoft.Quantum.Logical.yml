@@ -1,0 +1,73 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.logical
+name: Microsoft. Quantum. Logical
+summary: " # <a name=\"summary\"></a>Zusammenfassung\n Enthält Funktionen zum Arbeiten mit logischen Ausdrücken und booleschen Logik."
+functions:
+- uid: microsoft.quantum.logical.and
+  summary: Gibt die boolesche Verbindung von zwei Werten zurück.
+- uid: microsoft.quantum.logical.conditioned
+  summary: Gibt je nach dem Wert einer booleschen Bedingung einen von zwei Werten zurück.
+- uid: microsoft.quantum.logical.equalb
+  summary: Gibt nur dann true zurück, wenn zwei Eingaben gleich sind.
+- uid: microsoft.quantum.logical.equalc
+  summary: Gibt nur dann true zurück, wenn zwei Eingaben gleich sind.
+- uid: microsoft.quantum.logical.equalcp
+  summary: Gibt nur dann true zurück, wenn zwei Eingaben gleich sind.
+- uid: microsoft.quantum.logical.equald
+  summary: Gibt nur dann true zurück, wenn zwei Eingaben gleich sind.
+- uid: microsoft.quantum.logical.equali
+  summary: Gibt nur dann true zurück, wenn zwei Eingaben gleich sind.
+- uid: microsoft.quantum.logical.equall
+  summary: Gibt nur dann true zurück, wenn zwei Eingaben gleich sind.
+- uid: microsoft.quantum.logical.equalr
+  summary: Gibt nur dann true zurück, wenn zwei Eingaben gleich sind.
+- uid: microsoft.quantum.logical.greaterthand
+  summary: Gibt nur dann true zurück, wenn eine Zahl größer als eine andere Zahl ist.
+- uid: microsoft.quantum.logical.greaterthani
+  summary: Gibt nur dann true zurück, wenn eine Zahl größer als eine andere Zahl ist.
+- uid: microsoft.quantum.logical.greaterthanl
+  summary: Gibt nur dann true zurück, wenn eine Zahl größer als eine andere Zahl ist.
+- uid: microsoft.quantum.logical.greaterthanorequald
+  summary: Gibt nur dann true zurück, wenn eine Zahl größer als eine andere Zahl oder gleich einer anderen Zahl ist.
+- uid: microsoft.quantum.logical.greaterthanorequali
+  summary: Gibt nur dann true zurück, wenn eine Zahl größer als eine andere Zahl oder gleich einer anderen Zahl ist.
+- uid: microsoft.quantum.logical.greaterthanorequall
+  summary: Gibt nur dann true zurück, wenn eine Zahl größer als eine andere Zahl oder gleich einer anderen Zahl ist.
+- uid: microsoft.quantum.logical.lessthand
+  summary: Gibt nur dann true zurück, wenn eine Zahl kleiner als eine andere Zahl ist.
+- uid: microsoft.quantum.logical.lessthani
+  summary: Gibt nur dann true zurück, wenn eine Zahl kleiner als eine andere Zahl ist.
+- uid: microsoft.quantum.logical.lessthanl
+  summary: Gibt nur dann true zurück, wenn eine Zahl kleiner als eine andere Zahl ist.
+- uid: microsoft.quantum.logical.lessthanorequald
+  summary: Gibt nur dann true zurück, wenn eine Zahl kleiner oder gleich einer anderen Zahl ist.
+- uid: microsoft.quantum.logical.lessthanorequali
+  summary: Gibt nur dann true zurück, wenn eine Zahl kleiner oder gleich einer anderen Zahl ist.
+- uid: microsoft.quantum.logical.lessthanorequall
+  summary: Gibt nur dann true zurück, wenn eine Zahl kleiner oder gleich einer anderen Zahl ist.
+- uid: microsoft.quantum.logical.not
+  summary: Gibt die boolesche Negation eines Werts zurück.
+- uid: microsoft.quantum.logical.notequalb
+  summary: Gibt nur dann true zurück, wenn zwei Eingaben nicht gleich sind.
+- uid: microsoft.quantum.logical.notequalc
+  summary: Gibt nur dann true zurück, wenn zwei Eingaben nicht gleich sind.
+- uid: microsoft.quantum.logical.notequalcp
+  summary: Gibt nur dann true zurück, wenn zwei Eingaben nicht gleich sind.
+- uid: microsoft.quantum.logical.notequald
+  summary: Gibt nur dann true zurück, wenn zwei Eingaben nicht gleich sind.
+- uid: microsoft.quantum.logical.notequali
+  summary: Gibt nur dann true zurück, wenn zwei Eingaben nicht gleich sind.
+- uid: microsoft.quantum.logical.notequall
+  summary: Gibt nur dann true zurück, wenn zwei Eingaben nicht gleich sind.
+- uid: microsoft.quantum.logical.notequalr
+  summary: Gibt nur dann true zurück, wenn zwei Eingaben nicht gleich sind.
+- uid: microsoft.quantum.logical.or
+  summary: Gibt die boolesche Disjunktion von zwei Werten zurück.
+- uid: microsoft.quantum.logical.xor
+  summary: Gibt die boolesche exklusive Disjunktion von zwei Werten zurück.
+ms.openlocfilehash: 12f462356dfe7ae4bf7c60110e71a9928bc8c178
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73056274"

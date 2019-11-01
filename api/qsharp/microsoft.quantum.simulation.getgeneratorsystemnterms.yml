@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.getgeneratorsystemnterms
+name: Getgeneratorsystemnterms
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Ruft die Anzahl der Begriffe in einem `GeneratorSystem`ab.
+syntax: 'function GetGeneratorSystemNTerms (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : Int'
+input:
+  content: '(Generatorsystem: Microsoft. Quantum. Simulation. Generatorsystem)'
+  types:
+  - name: Generatorsystem
+    summary: Der `GeneratorSystem`, der von Interesse ist.
+    uid: microsoft.quantum.simulation.generatorsystem
+output:
+  content: Int
+  types:
+  - summary: Die Anzahl der Begriffe in einem `GeneratorSystem`.
+    isPrimitive: true
+    uid: Int
+seeAlso:
+- microsoft.quantum.canon.generatorsystem
+ms.openlocfilehash: 007ef219bee6184197dde34f4594c2534c33ba6a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067457"

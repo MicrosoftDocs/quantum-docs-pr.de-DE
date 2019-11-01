@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.compose
+name: Compose
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Generiert die Komposition zweier Funktionen.
+
+
+  Das heißt, wenn zwei Funktionen $f $ und $g $, gibt eine neue Funktion zurück, die $f \circ g $ darstellt.
+syntax: "function Compose (outer : ('U -> 'V), inner : ('T -> 'U)) : ('T -> 'V)"
+input:
+  content: "(outer : ('U -> 'V), inner : ('T -> 'U))"
+  types:
+  - name: outer
+    summary: Die zweite Funktion, die angewendet werden soll.
+    isFunction: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - uid: "'V"
+        isLocal: true
+  - name: inner
+    summary: Die erste Funktion, die angewendet werden soll.
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+output:
+  content: ('T -> 'V)
+  types:
+  - summary: Eine neue Funktion $h $, sodass für alle Eingaben $x $, $f (g (x)) = h (x) $.
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'V"
+        isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Der Eingabetyp der ersten Funktion, die angewendet werden soll.
+- uid: "'U"
+  summary: Der Ausgabetyp der ersten Funktion, die angewendet werden soll, und der Eingabetyp der zweiten Funktion, die angewendet werden soll.
+- uid: "'V"
+  summary: Der Ausgabetyp der zweiten Funktion, die angewendet werden soll.
+ms.openlocfilehash: 69fbd6a4fafbc61a63e41257b7100303fd48d4d4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73223070"

@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.rangestep
+name: Rangestep
+type: function
+namespace: Microsoft.Quantum.Core
+summary: Gibt die ganze Zahl zurück, die angibt, wie der nächste Wert eines Bereichs berechnet wird.
+remarks: Das erste Element eines Bereichs Ausdrucks ist `start`, sein zweites Element `start+step`, das dritte Element `start+step+step`usw., bis `end` weitergegeben wird.
+syntax: 'function RangeStep (range : Range) : Int'
+input:
+  content: '(Bereich: Bereich)'
+  types:
+  - name: range
+    isPrimitive: true
+    uid: Range
+output:
+  content: Int
+  types:
+  - summary: Der definierte Schrittwert des angegebenen Bereichs.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 0195f0f2eb03c163ae08cc789867627286a44097
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066607"

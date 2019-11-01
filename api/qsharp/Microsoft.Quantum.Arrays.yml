@@ -1,0 +1,64 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.arrays
+name: Microsoft. Quantum. Arrays
+summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält Funktionen zum Erstellen und Bearbeiten von Daten Arrays."
+functions:
+- uid: microsoft.quantum.arrays.all
+  summary: Bei Angabe eines Arrays und eines Prädikats, das für die Elemente des Arrays definiert ist, und überprüft, ob alle Elemente des Arrays dem Prädikat entsprechen.
+- uid: microsoft.quantum.arrays.any
+  summary: Bei Angabe eines Arrays und eines Prädikats, das für die Elemente des Arrays definiert ist, wird von überprüft, ob mindestens ein Element des Arrays dem Prädikat entspricht.
+- uid: microsoft.quantum.arrays.constantarray
+  summary: Erstellt ein Array mit der angegebenen Länge, wobei alle Elemente gleich dem angegebenen Wert sind.
+- uid: microsoft.quantum.arrays.enumerated
+  summary: Gibt bei Angabe eines Arrays ein neues Array zurück, das die Elemente des ursprünglichen Arrays zusammen mit den Indizes der einzelnen Elemente enthält.
+- uid: microsoft.quantum.arrays.exclude
+  summary: Gibt ein Array mit den Elementen eines anderen Arrays zurück, wobei Elemente in einer angegebenen Liste von Indizes ausgeschlossen werden.
+- uid: microsoft.quantum.arrays.filtered
+  summary: Bei Angabe eines Arrays und eines Prädikats, das für die Elemente des Arrays definiert ist, wird ein Array zurückgegeben, das aus den Elementen besteht, die das Prädikat erfüllen.
+- uid: microsoft.quantum.arrays.fold
+  summary: Iteriert eine Funktion, die durch ein Array `array``f`, wobei `f(f(f(initialState, array[0]), array[1]), ...)`zurückgegeben wird.
+- uid: microsoft.quantum.arrays.head
+  summary: Gibt das erste Element des Arrays zurück.
+- uid: microsoft.quantum.arrays.indexof
+  summary: Gibt den ersten Index des ersten Elements in einem Array zurück, das ein angegebenes Prädikat erfüllt. Wenn kein solches Element vorhanden ist, wird-1 zurückgegeben.
+- uid: microsoft.quantum.arrays.indexrange
+  summary: Gibt bei Angabe eines Arrays einen Bereich über die Indizes dieses Arrays zurück, der für die Verwendung in einer for-Schleife geeignet ist.
+- uid: microsoft.quantum.arrays.lookupfunction
+  summary: Gibt bei Angabe eines Arrays eine Funktion zurück, die Elemente dieses Arrays zurückgibt.
+- uid: microsoft.quantum.arrays.mapped
+  summary: Bei Angabe eines Arrays und einer Funktion, die für die Elemente des Arrays definiert ist, wird ein neues Array zurückgegeben, das aus den Bildern des ursprünglichen Arrays unter der Funktion besteht.
+- uid: microsoft.quantum.arrays.mappedbyindex
+  summary: Gibt ein neues Array zurück, das aus den Bildern des ursprünglichen Arrays unter der Funktion besteht, wenn ein Array und eine Funktion für die indizierten Elemente des Arrays definiert sind.
+- uid: microsoft.quantum.arrays.most
+  summary: Erstellt ein Array, das gleich einem Eingabe Array ist, mit dem Unterschied, dass das letzte Array Element gelöscht wird.
+- uid: microsoft.quantum.arrays.padded
+  summary: Gibt ein Array zurück, das bei mit angegebenen Werten bis zu einer angegebenen Länge aufgefüllt wird.
+- uid: microsoft.quantum.arrays.partitioned
+  summary: Teilt ein Array in mehrere Teile auf.
+- uid: microsoft.quantum.arrays.rest
+  summary: Erstellt ein Array, das gleich einem Eingabe Array ist, außer dass das erste Array Element gelöscht wird.
+- uid: microsoft.quantum.arrays.reversed
+  summary: Erstellen Sie ein Array, das dieselben Elemente wie ein Eingabe Array, jedoch in umgekehrter Reihenfolge enthält.
+- uid: microsoft.quantum.arrays.sequencei
+  summary: Ein Array von ganzen Zahlen in einem angegebenen Intervall erhalten.
+- uid: microsoft.quantum.arrays.sequencel
+  summary: Ein Array von ganzen Zahlen in einem angegebenen Intervall erhalten.
+- uid: microsoft.quantum.arrays.subarray
+  summary: Nimmt ein Array und eine Liste von Speicherorten an und erstellt ein neues Array, das aus den Elementen des ursprünglichen Arrays gebildet wird, die den angegebenen Speicherorten entsprechen.
+- uid: microsoft.quantum.arrays.tail
+  summary: Gibt das letzte Element des Arrays zurück.
+- uid: microsoft.quantum.arrays.zip
+  summary: Bei zwei Arrays wird ein neues Array von Paaren zurückgegeben, sodass jedes Paar ein Element aus jedem ursprünglichen Array enthält.
+- uid: microsoft.quantum.arrays.zip3
+  summary: Bei drei Arrays gibt ein neues Array von 3-Tupeln zurück, sodass jedes 3-Tupel ein Element aus jedem ursprünglichen Array enthält.
+- uid: microsoft.quantum.arrays.zip4
+  summary: Bei Angabe von vier Arrays wird ein neues Array von 4-Tupeln zurückgegeben, sodass jedes 4-Tupel ein Element aus jedem ursprünglichen Array enthält.
+operations:
+- uid: microsoft.quantum.arrays.foreach
+  summary: Gibt ein neues Array zurück, das aus den Bildern des ursprünglichen Arrays unter dem Vorgang besteht, wenn ein Array und ein Vorgang angegeben sind, der für die Elemente des Arrays definiert ist.
+ms.openlocfilehash: 7c377d5df0e32be0da75f133b08c778ec94c6a39
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056974"

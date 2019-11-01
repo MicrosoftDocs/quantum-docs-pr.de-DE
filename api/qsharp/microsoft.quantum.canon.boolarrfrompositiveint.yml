@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.boolarrfrompositiveint
+name: Boolarrfrompositiveint
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  > [!WARNING]
+
+  > Veraltet
+
+
+  Verwenden Sie @"microsoft.quantum.convert.intasboolarray".
+syntax: 'function BoolArrFromPositiveInt (number : Int, bits : Int) : Bool[]'
+input:
+  content: '(Zahl: int, Bits: int)'
+  types:
+  - name: number
+    isPrimitive: true
+    uid: Int
+  - name: Bohrer
+    isPrimitive: true
+    uid: Int
+output:
+  content: Bool []
+  types:
+  - isArray: true
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 8fc084b899976ca83a04e85443e37858007ea7cf
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73068239"

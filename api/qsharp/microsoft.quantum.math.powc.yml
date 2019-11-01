@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.powc
+name: Powc
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Gibt eine Zahl zurück, die zu einer angegebenen Potenz ausgelöst wird.
+syntax: 'function PowC (base_ : Microsoft.Quantum.Math.Complex, power : Microsoft.Quantum.Math.Complex) : Microsoft.Quantum.Math.Complex'
+input:
+  content: '(base_: Microsoft. Quantum. Math. Complex, Power: Microsoft. Quantum. Math. Complex)'
+  types:
+  - name: sock
+    uid: microsoft.quantum.math.complex
+  - name: Kraftwerke
+    summary: Der Leistungs $b $, in den $a $ ausgelöst werden soll.
+    uid: microsoft.quantum.math.complex
+output:
+  content: Microsoft. Quantum. Math. Complex
+  types:
+  - summary: Der Power $a ^ b $
+    uid: microsoft.quantum.math.complex
+ms.openlocfilehash: 77a3f8fdc769947e50b35b31547a98017e6e2529
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067253"

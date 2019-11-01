@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.randomreal
+name: RandomReal
+type: operation
+namespace: Microsoft.Quantum.Math
+summary: Gibt eine Zufallszahl zurück, die größer oder gleich 0 (null) und kleiner als 1 ist.
+remarks: Diese Funktion ruft <xref:microsoft.quantum.intrinsic.random>auf, sodass Ihre Zufälligkeit von der Implementierung von `Random`abhängt.
+syntax: 'operation RandomReal (bitsRandom : Int) : Double'
+input:
+  content: '(bitsRandom : Int)'
+  types:
+  - name: bitsRandom
+    summary: >-
+      Die Anzahl der Genauigkeits Bits, mit denen die Zufallszahl Stichproben berechnet werden soll.
+
+          # Output
+
+      Eine reelle Zahl $x = k/2 ^ {\texttt{bitsRandom}} $ für eine ganze Zahl $k $ Sampling aus dem Intervall $ [0, 2 ^ {\texttt{bitsRandom}}) $ mit der Wahrscheinlichkeit $ \pr (k) = 1/2 ^ {\texttt{bitsRandom}} $.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+ms.openlocfilehash: c0780e0b8771c74a04145d5dce70d47dfefafa0e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219959"

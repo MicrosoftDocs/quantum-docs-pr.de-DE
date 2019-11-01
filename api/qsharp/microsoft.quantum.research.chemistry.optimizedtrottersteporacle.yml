@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.research.chemistry.optimizedtrottersteporacle
+name: Optimizedtrottersteporacle
+type: function
+namespace: Microsoft.Quantum.Research.Chemistry
+summary: Gibt den optimierten Vorgang für den Schritt und die für die Ausführung erforderlichen Parameter zurück.
+syntax: 'function OptimizedTrotterStepOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, trotterStepSize : Double, trotterOrder : Int) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
+input:
+  content: '(qsharpdata: Microsoft. Quantum. Chemistry. jordanwigner. jordanwignerencodingdata, trotterstepsize: Double, trotterorder: int)'
+  types:
+  - name: qsharpdata
+    summary: Hamiltona wird im `JordanWignerEncodingData`-Format beschrieben.
+    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
+  - name: trotterstepsize
+    summary: Schrittgröße des trotterintegrator.
+    isPrimitive: true
+    uid: Double
+  - name: trotterorder
+    summary: Reihenfolge des trockintegrator.
+    isPrimitive: true
+    uid: Int
+output:
+  content: (Int, (Double, (Qubit [] = > Einheit ist ADJ + CTL)))
+  types:
+  - summary: 'Ein Tupel, wobei: `Int` die Anzahl der zugeordneten Qubits ist, `Double` `1.0/trotterStepSize`ist, und der Vorgang ist der trockschritt.'
+    types:
+    - isPrimitive: true
+      uid: Int
+    - types:
+      - isPrimitive: true
+        uid: Double
+      - isOperation: true
+        input:
+          types:
+          - isArray: true
+            isPrimitive: true
+            uid: Qubit
+        output:
+          types:
+          - isPrimitive: true
+            uid: Unit
+        functors:
+        - Adjoint
+        - Controlled
+ms.openlocfilehash: f8fe25db9eac627649601b1526e4c81eb13d9b99
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066131"
