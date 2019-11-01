@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.modulusl
+name: ModulusL
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Berechnet den kanonischen Rückstand von `value` Modulo `modulus`.
+remarks: 'Diese Funktion verhält sich anders, als sich der Operator `%` C# verhält, und f # As im Ergebnis ist immer eine positive Ganzzahl zwischen 0 und `modulus - 1`, auch wenn der Wert negativ ist.'
+syntax: 'function ModulusL (value : BigInt, modulus : BigInt) : BigInt'
+input:
+  content: '(value : BigInt, modulus : BigInt)'
+  types:
+  - name: value
+    summary: Der Wert, von dem die Rückstände berechnet werden.
+    isPrimitive: true
+    uid: BigInt
+  - name: modulus
+    summary: Der Modulo, nach dem die Rückstände übernommen werden, muss positiv sein.
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: BigInt
+  types:
+  - summary: Ganzzahliger $r $ zwischen 0 und `modulus - 1`, sodass `value - r` durch Modulo teilbar ist.
+    isPrimitive: true
+    uid: BigInt
+ms.openlocfilehash: 14ef3669e4c59912129c9ffac6ecbf1a2ed25534
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232454"

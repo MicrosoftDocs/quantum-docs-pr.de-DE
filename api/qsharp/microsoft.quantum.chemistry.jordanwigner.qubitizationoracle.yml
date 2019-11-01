@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.qubitizationoracle
+name: QubitizationOracle
+type: function
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: Gibt den qubisierungsvorgang und die für die Ausführung erforderlichen Parameter zurück.
+syntax: 'function QubitizationOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
+input:
+  content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData)'
+  types:
+  - name: qSharpData
+    summary: Hamiltona wird im `JordanWignerEncodingData`-Format beschrieben.
+    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
+output:
+  content: (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))
+  types:
+  - summary: 'Ein Tupel, bei dem: `Int` die Anzahl der zugeordneten Qubits ist, `Double` die eine Norm von hamiltonkoeffizienten ist, und der Vorgang ist der durch die qubisierung erstellte Quantum Walk.'
+    types:
+    - isPrimitive: true
+      uid: Int
+    - types:
+      - isPrimitive: true
+        uid: Double
+      - isOperation: true
+        input:
+          types:
+          - isArray: true
+            isPrimitive: true
+            uid: Qubit
+        output:
+          types:
+          - isPrimitive: true
+            uid: Unit
+        functors:
+        - Adjoint
+        - Controlled
+ms.openlocfilehash: 4890f95631a5d99720fc5da307707ad040f0b391
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233508"

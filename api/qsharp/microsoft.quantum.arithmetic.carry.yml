@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.carry
+name: Carry
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Implementiert ein umkehrbares durchführen. Wenn ein in qu`carryIn` Bit codiertes und zwei Summen in `summand1` und `summand2`codiert sind, berechnet das bitweise XOR der `carryIn`, `summand1` und `summand2` im Qubit-`summand2` und die Überführung ist für die Qubit-`carryOut`auf XoReD fest.
+syntax: 'operation Carry (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit) : Unit'
+input:
+  content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit)'
+  types:
+  - name: carryIn
+    summary: Ein-in-Qubit.
+    isPrimitive: true
+    uid: Qubit
+  - name: summand1
+    summary: Erstes Summen-und Qubit-Wert.
+    isPrimitive: true
+    uid: Qubit
+  - name: summand2
+    summary: Zweites Summen-und Qubit-Wert, wird durch das untere Bit der Summe aus `summand1` und `summand2`ersetzt.
+    isPrimitive: true
+    uid: Qubit
+  - name: carryOut
+    summary: "\"Qubit ausführen\" ist ein XoReD mit dem höheren Bit der Summe."
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 6736bc62db7d8ac1952bf74617bd8764702bd8b3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221336"

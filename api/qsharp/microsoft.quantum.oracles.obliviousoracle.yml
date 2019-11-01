@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.obliviousoracle
+name: ObliviousOracle
+type: newtype
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  Stellt ein Oracle für die pervirone Amplitude-Verstärkung dar.
+
+
+  Die Eingaben in den Oracle-$O $ lauten:
+
+
+  - Der Wert von "Ancilla" wird $a $ registriert, für den $O $ agiert.
+
+  - Das System registriert $s $, auf dem der gewünschte einheitliche $U $ angewendet wird, nach der Auswahl für Register $a $ befindet sich im Status $ \ket{t}\_a $.
+remarks: >-
+  Dieses durch $ $ o\ket {s} definierte Oracle-\_a\ket {\ PSI}\_s = \lambda\ket{t}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ agiert für den Ancilla-Status $ \ket{s}\_a $ bis Implementieren Sie den einheitlichen $U $ in jedem Systemstatus $ \ket{\psi}\_s $ mit Amplitude $ \lambda $ in der durch $ \ket{t} markierten\_a $.
+
+  Der erste Parameter ist das Qubit-Register von "$ \ket{s}"\_"$". Der zweite Parameter ist das Qubit-Register von $ \ket{\psi}\_s $.
+syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: f06527701dfad61843df66faca5dd265525b6aa6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231060"

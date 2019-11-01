@@ -1,0 +1,45 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.bitwise
+name: Microsoft.Quantum.Bitwise
+functions:
+- uid: microsoft.quantum.bitwise.and
+  summary: >-
+    Gibt das bitweise and von zwei Ganzzahlen zurück.
+
+    Dies führt die gleiche Berechnung durch wie der integrierte `&&&`-Operator.
+- uid: microsoft.quantum.bitwise.leftshiftedi
+  summary: Verschiebt die bitweise Darstellung einer Zahl nach links um eine angegebene Anzahl von Bits.
+- uid: microsoft.quantum.bitwise.leftshiftedl
+  summary: Verschiebt die bitweise Darstellung einer Zahl nach links um eine angegebene Anzahl von Bits.
+- uid: microsoft.quantum.bitwise.not
+  summary: >-
+    Gibt das bitweise NOT einer Ganzzahl zurück.
+
+    Dies führt die gleiche Berechnung durch wie der integrierte `~~~`-Operator.
+- uid: microsoft.quantum.bitwise.or
+  summary: >-
+    Gibt das bitweise OR von zwei Ganzzahlen zurück.
+
+    Dies führt die gleiche Berechnung durch wie der integrierte `|||`-Operator.
+- uid: microsoft.quantum.bitwise.parity
+  summary: Gibt die bitweise Parität einer Ganzzahl zurück (1, wenn die binäre Darstellung eine ungerade Anzahl von Elementen enthält, andernfalls 0).
+- uid: microsoft.quantum.bitwise.rightshiftedi
+  summary: Verschiebt die bitweise Darstellung einer Zahl um eine angegebene Anzahl von Bits nach rechts.
+- uid: microsoft.quantum.bitwise.rightshiftedl
+  summary: Verschiebt die bitweise Darstellung einer Zahl um eine angegebene Anzahl von Bits nach rechts.
+- uid: microsoft.quantum.bitwise.xbits
+  summary: Gibt eine ganze Zahl zurück, die die X-Bits eines Arrays von Pauli-Operatoren darstellt.
+- uid: microsoft.quantum.bitwise.xor
+  summary: >-
+    Gibt das bitweise exklusive OR (XOR) zweier ganzer Zahlen zurück.
+
+    Dies führt die gleiche Berechnung durch wie der integrierte `^^^`-Operator.
+- uid: microsoft.quantum.bitwise.zbits
+  summary: Gibt eine ganze Zahl zurück, die die Z-Bits eines Arrays von Pauli-Operatoren darstellt.
+summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält Funktionen zum agieren der bitweisen Darstellung klassischer Datentypen."
+ms.openlocfilehash: c474d92e7a40f5491b21d80e00294fbdff96a62a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210949"

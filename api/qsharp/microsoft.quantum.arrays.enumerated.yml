@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.enumerated
+name: Enumerated
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Gibt bei Angabe eines Arrays ein neues Array zurück, das die Elemente des ursprünglichen Arrays zusammen mit den Indizes der einzelnen Elemente enthält.
+examples: >-
+  Die folgenden `for` Schleifen sind gleichwertig:
+
+
+  ```Q#
+
+  for (idx in IndexRange(array)) {
+      let element = array[idx];
+      ...
+  }
+
+  for ((idx, element) in Enumerated(array)) { ... }
+
+  ```
+syntax: "function Enumerated (array : 'TElement[]) : (Int, 'TElement)[]"
+input:
+  content: "(array : 'TElement[])"
+  types:
+  - name: array
+    summary: Ein Array, dessen Elemente aufgelistet werden sollen.
+    isArray: true
+    uid: "'TElement"
+    isLocal: true
+output:
+  content: (Int, 'TElement)[]
+  types:
+  - summary: Ein neues Array, das Elemente des ursprünglichen Arrays zusammen mit ihren Indizes enthält.
+    isArray: true
+    types:
+    - isPrimitive: true
+      uid: Int
+    - uid: "'TElement"
+      isLocal: true
+typeParameters:
+- uid: "'TElement"
+  summary: Der Typ der Elemente des Arrays.
+ms.openlocfilehash: 471b62b28ef2014584de637d41158fb8ac7c629d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220962"

@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.operationpowc
+name: OperationPowC
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Löst einen Vorgang für eine Stromversorgung aus.
+
+  Der-Modifizierer `C` gibt an, dass der Vorgang steuerbar ist.
+
+
+  Das heißt, wenn ein Vorgang, der ein Gate $U $ darstellt, einen neuen Vorgang $U ^ m $ für eine Power $m $ zurückgibt.
+syntax: "function OperationPowC (oracle : ('T => Unit is Ctl), power : Int) : ('T => Unit is Ctl)"
+input:
+  content: "(oracle : ('T => Unit is Ctl), power : Int)"
+  types:
+  - name: oracle
+    summary: Ein Vorgang $U $, der das Gate darstellt, das wiederholt werden soll.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: power
+    summary: Gibt an, wie oft $U $ wiederholt werden soll.
+    isPrimitive: true
+    uid: Int
+output:
+  content: ('T => Unit is Ctl)
+  types:
+  - summary: Ein neuer Vorgang, der $U ^ m $ darstellt, wobei $m = \texttt{Power} $ ist.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+typeParameters:
+- uid: "'T"
+  summary: Der Typ des Vorgangs, der eingeschaltet werden soll.
+seeAlso:
+- microsoft.quantum.canon.operationpow
+ms.openlocfilehash: 5bc317597ef660bf92291b690fdb2d255eaaa616
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230805"

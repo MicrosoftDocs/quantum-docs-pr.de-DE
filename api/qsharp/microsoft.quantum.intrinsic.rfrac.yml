@@ -1,0 +1,60 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.rfrac
+name: RFrac
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Wendet eine Drehung um die angegebene Pauli-Achse um einen als dyadic-Bruchteil angegebenen Winkel an.
+
+
+  \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \sigma_{\mu}/2 ^ k}, \end{align} WHERE $ \mu \in \{i, X, Y, Z\}$.
+
+
+  > [!WARNING]
+
+  > Bei diesem Vorgang wird die **umgekehrte** Vorzeichen Konvention aus @"microsoft.quantum.intrinsic.r"verwendet.
+remarks: >-
+  Äquivalent zu:
+
+
+  ```qsharp
+
+  // PI() is a Q# function that returns an approximation of π.
+
+  R(pauli, -PI() * IntAsDouble(numerator) / IntAsDouble(2 ^ (power - 1)), qubit);
+
+  ```
+syntax: 'operation RFrac (pauli : Pauli, numerator : Int, power : Int, qubit : Qubit) : Unit'
+input:
+  content: '(pauli : Pauli, numerator : Int, power : Int, qubit : Qubit)'
+  types:
+  - name: pauli
+    summary: Der Pauli-Operator, der zum bilden der Drehung exponentiell gebildet werden soll.
+    isPrimitive: true
+    uid: Pauli
+  - name: numerator
+    summary: Der Zähler in der dyadic-Bruch Darstellung des Winkels, um den das Qubit gedreht werden soll.
+    isPrimitive: true
+    uid: Int
+  - name: power
+    summary: Potenz von zwei, die den Nenner des Winkels angibt, um den das Qubit gedreht werden soll.
+    isPrimitive: true
+    uid: Int
+  - name: qubit
+    summary: Das Qubit, auf das das Gate angewendet werden soll.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 10795932b7057ccf58d2219208af2750eff0e363
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216491"

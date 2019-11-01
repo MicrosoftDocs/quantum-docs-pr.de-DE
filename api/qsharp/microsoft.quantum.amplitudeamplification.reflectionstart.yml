@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.reflectionstart
+name: ReflectionStart
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Erstellt eine Reflektion über die Zeichenfolge "All-NULL" | 0... 0 〉, was der typische Eingabe Zustand der Amplitude-Verstärkung ist.
+syntax: 'function ReflectionStart () : Microsoft.Quantum.Oracles.ReflectionOracle'
+input:
+  content: ()
+  types: []
+output:
+  content: Microsoft.Quantum.Oracles.ReflectionOracle
+  types:
+  - summary: Eine `ReflectionOracle`, die den Status $ \ket{0\cdots 0} $ widerspiegelt.
+    uid: microsoft.quantum.oracles.reflectionoracle
+seeAlso:
+- microsoft.quantum.canon.reflectionoracle
+ms.openlocfilehash: 6598a01c19f25ee444f785a6688738f382fc94e6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215488"

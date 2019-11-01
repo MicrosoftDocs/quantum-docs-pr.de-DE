@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.assertprob
+name: AssertProb
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: Bestätigt, dass das Messen der angegebenen Qubits in der angegebenen Pauli-Basis das angegebene Ergebnis mit der angegebenen Wahrscheinlichkeit innerhalb einiger Toleranz hat.
+remarks: Beachten Sie, dass die unter-und kontrollierten Versionen dieses Vorgangs die Bedingung nicht überprüfen.
+examples: >-
+  ```qsharp
+
+  using (register = Qubit()) {
+      H(register);
+      AssertProb([PauliZ], [register], One, 0.5,
+          "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
+  }
+
+  ```
+syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
+  types:
+  - name: bases
+    summary: Ein Maßeffekt zur Bestätigung der Wahrscheinlichkeit von, ausgedrückt als Multi-Qubit-Pauli-Operator.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: qubits
+    summary: Ein Register, für das die-Assertion durchführen werden soll.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: result
+    summary: Erwartetes Ergebnis `Measure(bases, qubits)`.
+    isPrimitive: true
+    uid: Result
+  - name: prob
+    summary: Die Wahrscheinlichkeit, mit der das angegebene Ergebnis erwartet wird.
+    isPrimitive: true
+    uid: Double
+  - name: msg
+    summary: Eine Meldung, die gemeldet werden soll, wenn die Übersetzung fehlschlägt.
+    isPrimitive: true
+    uid: String
+  - name: tol
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- assert
+ms.openlocfilehash: 74260a7e80199049e2854a5cdb7988e5321adf83
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216644"

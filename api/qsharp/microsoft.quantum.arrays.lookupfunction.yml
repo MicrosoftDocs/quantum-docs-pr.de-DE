@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.lookupfunction
+name: LookupFunction
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Gibt bei Angabe eines Arrays eine Funktion zurück, die Elemente dieses Arrays zurückgibt.
+remarks: Diese Funktion ist besonders nützlich für die Interaktion mit Funktionen und Vorgängen, die `Int -> 'T` Funktionen als Argumente annehmen. Dies ist beispielsweise in der Generator-Darstellungs Bibliothek üblich, in der Funktionen verwendet werden, um zu vermeiden, dass ein gesamtes Array im Arbeitsspeicher aufgezeichnet werden muss.
+syntax: "function LookupFunction (array : 'T[]) : (Int -> 'T)"
+input:
+  content: "(array : 'T[])"
+  types:
+  - name: array
+    summary: Das Array, das als Suchfunktion dargestellt werden soll.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: (Int -> 'T)
+  types:
+  - summary: Eine Funktions `f`, die `f(idx) == f[idx]`.
+    isFunction: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Int
+    output:
+      types:
+      - uid: "'T"
+        isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Der Typ der Elemente des Arrays, das als Suchfunktion dargestellt wird.
+ms.openlocfilehash: b4f509de7137377465f1e76e59a04abfd9a22fd1
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218106"

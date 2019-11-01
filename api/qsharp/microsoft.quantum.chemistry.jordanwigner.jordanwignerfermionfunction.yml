@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerfermionfunction
+name: JordanWignerFermionFunction
+type: function
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: Stellt einen dynamischen Generator als Satz von simulier baren Gates und eine Erweiterung in der jordanwigner-Basis dar.
+syntax: 'function JordanWignerFermionFunction (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : Microsoft.Quantum.Simulation.EvolutionUnitary'
+input:
+  content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
+  types:
+  - name: generatorIndex
+    summary: Ein Generator Index, der als einheitliche Evolution in der jordanwigner dargestellt werden soll.
+    uid: microsoft.quantum.simulation.generatorindex
+output:
+  content: Microsoft.Quantum.Simulation.EvolutionUnitary
+  types:
+  - summary: Eine `EvolutionUnitary` die die Zeitentwicklung durch den in ' generatorindex ' referenzierten Begriff darstellt.
+    uid: microsoft.quantum.simulation.evolutionunitary
+ms.openlocfilehash: d8d0bd7f396e7a096f6ddecfbf115f10704e824e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228629"

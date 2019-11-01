@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.htermtogenidx
+name: HTermToGenIdx
+type: function
+namespace: Microsoft.Quantum.Chemistry
+summary: Konvertiert einen hamiltona-Begriff in `HTerm` Datenformat in einen generatorindex.
+syntax: 'function HTermToGenIdx (term : Microsoft.Quantum.Chemistry.HTerm, termType : Int[]) : Microsoft.Quantum.Simulation.GeneratorIndex'
+input:
+  content: '(term : Microsoft.Quantum.Chemistry.HTerm, termType : Int[])'
+  types:
+  - name: term
+    summary: Eingabedaten in `HTerm` Format.
+    uid: microsoft.quantum.chemistry.hterm
+  - name: termType
+    summary: Zusätzliche Informationen, die generatorindex hinzugefügt werden.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft.Quantum.Simulation.GeneratorIndex
+  types:
+  - summary: Ein generatorindex, der einen durch `term`dargestellten hamiltontyp darstellt, sowie zusätzliche Informationen, die von `termType`hinzugefügt werden.
+    uid: microsoft.quantum.simulation.generatorindex
+ms.openlocfilehash: edfd08b1e9f80a0f468d50a10a7ad3ff0187511c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228867"

@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifzeroa
+name: ApplyIfZeroA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Wendet einen adjointable-Vorgang an, der von einem klassischen Ergebniswert von 0 (null) abhängt.
+
+
+  Wendet bei einem Vorgang `op` und einem Ergebniswert `result``op` auf das `target` an, wenn `result` `Zero`ist. Wenn `One`, geschieht nichts mit dem `target`.
+
+  Das Suffix `A` gibt an, dass der anzuwendende Vorgang adjointable ist.
+syntax: "operation ApplyIfZeroA (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit"
+input:
+  content: "(result : Result, (op : ('T => Unit is Adj), target : 'T))"
+  types:
+  - name: result
+    summary: Ein Messergebnis, das steuert, ob op angewendet wird.
+    isPrimitive: true
+    uid: Result
+  - name: op
+    summary: Ein Vorgang, der bedingt angewendet werden soll.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: target
+    summary: Die Eingabe, auf die der Vorgang angewendet wird.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Der Eingabetyp des Vorgangs, der bedingt angewendet werden soll.
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applyifzeroc
+- microsoft.quantum.canon.applyifzeroa
+- microsoft.quantum.canon.applyifzeroca
+ms.openlocfilehash: 626bb5bbd18cceb409632ec0d27b48c6ea98fbbe
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220724"

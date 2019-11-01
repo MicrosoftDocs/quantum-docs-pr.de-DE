@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.reversed
+name: Reversed
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Erstellen Sie ein Array, das dieselben Elemente wie ein Eingabe Array, jedoch in umgekehrter Reihenfolge enthält.
+syntax: "function Reversed (array : 'T[]) : 'T[]"
+input:
+  content: "(array : 'T[])"
+  types:
+  - name: array
+    summary: Ein Array, dessen Elemente in umgekehrter Reihenfolge kopiert werden sollen.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Ein Array, das die Elemente `array[Length(array) - 1]` enthält. `array[0]`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Der Typ der Array Elemente.
+ms.openlocfilehash: 946d1f06619a4533a2c32cf58266815d7a510434
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218021"

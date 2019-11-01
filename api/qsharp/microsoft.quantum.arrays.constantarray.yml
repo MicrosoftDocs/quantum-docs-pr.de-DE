@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.constantarray
+name: ConstantArray
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Erstellt ein Array mit der angegebenen Länge, wobei alle Elemente gleich dem angegebenen Wert sind.
+syntax: "function ConstantArray (length : Int, value : 'T) : 'T[]"
+input:
+  content: "(length : Int, value : 'T)"
+  types:
+  - name: length
+    summary: Länge des neuen Arrays.
+    isPrimitive: true
+    uid: Int
+  - name: value
+    summary: Ein-Wert, der in jedem Index des neuen Arrays enthalten sein wird.
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Ein neues Array von length-`length`, sodass jedes Element `value`ist.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+ms.openlocfilehash: 7b641f4e037b760ac036abfc23ac197d7008bc0e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214434"

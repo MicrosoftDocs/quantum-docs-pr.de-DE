@@ -1,0 +1,69 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bound
+name: Bound
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Bei einem Array von Vorgängen, die für eine einzelne Eingabe agieren, erzeugt einen neuen Vorgang, der jeden gegebenen Vorgang nacheinander ausführt.
+examples: >-
+  Die folgenden sind gleichwertig:
+
+
+  ```qsharp
+
+  let bound = Bound([U, V]);
+
+  bound(x);
+
+  ```
+
+
+  und der
+
+
+  ```qsharp
+
+  U(x); V(x);
+
+  ```
+syntax: "function Bound (operations : ('T => Unit)[]) : ('T => Unit)"
+input:
+  content: "(operations : ('T => Unit)[])"
+  types:
+  - name: operations
+    summary: Eine Sequenz von Vorgängen, die für eine angegebene Eingabe ausgeführt werden soll.
+    isArray: true
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+output:
+  content: ('T => Unit)
+  types:
+  - summary: Ein neuer Vorgang, der jeden gegebenen Vorgang nacheinander für seine Eingabe ausführt.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Das Ziel, auf dem die einzelnen Vorgänge im Array agieren.
+seeAlso:
+- microsoft.quantum.canon.boundc
+- microsoft.quantum.canon.bounda
+- microsoft.quantum.canon.boundca
+ms.openlocfilehash: 67cb4cb93c5d306491bfce83caf1c112194991be
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220639"

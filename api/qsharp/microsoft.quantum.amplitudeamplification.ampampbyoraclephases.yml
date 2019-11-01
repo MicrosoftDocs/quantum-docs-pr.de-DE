@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.ampampbyoraclephases
+name: AmpAmpByOraclePhases
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Amplitude-Verstärkung durch Oracles für partielle Reflektionen.
+remarks: >-
+  Dies erzwingt strengere Bedingungen in Form von Start-und Ziel Zuständen als in `AmpAmpByReflectionPhases`.
+
+  Es wird davon ausgegangen, dass der Ziel Status durch $ \ket{1}\_f $ gekennzeichnet ist.
+
+  Es wird davon ausgegangen, dass \begin{align} a\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_\_f \ket {\ Text {Target}}{0}s + \sqrt{1-| \lambda | ^ 2} \ket \_von \cdots , \end{align} in den meisten Fällen `flagQubit` und `ancillaRegister` im Status $ \ket{0}\_{f} \ket{0}\_s $ initialisiert.
+syntax: 'function AmpAmpByOraclePhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
+input:
+  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'
+  types:
+  - name: phases
+    summary: Phasen von partiellen Reflektionen
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+  - name: stateOracle
+    summary: Einheitlicher Oracle-$A $, der den Startstatus vorbereitet
+    uid: microsoft.quantum.oracles.stateoracle
+  - name: idxFlagQubit
+    summary: Index zum Markieren von Qubit
+    isPrimitive: true
+    uid: Int
+output:
+  content: (Qubit[] => Unit is Adj + Ctl)
+  types:
+  - summary: Ein Vorgang, der die Amplitude-Verstärkung durch Oracles implementiert, die von partiellen Reflektionen implementiert werden.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+ms.openlocfilehash: cacd3b34fae01697ee5bba414d9a7422b3260e2f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215828"

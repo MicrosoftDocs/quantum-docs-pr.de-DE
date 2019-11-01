@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.equald
+name: EqualD
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Gibt nur dann true zurück, wenn zwei Eingaben gleich sind.
+remarks: >-
+  Die folgenden sind gleichwertig:
+
+
+  ```Q#
+
+  let cond = a == b;
+
+  let cond = EqualD(a, b);
+
+  ```
+syntax: 'function EqualD (a : Double, b : Double) : Bool'
+input:
+  content: '(a : Double, b : Double)'
+  types:
+  - name: a
+    summary: Der erste zu vergleichende Wert.
+    isPrimitive: true
+    uid: Double
+  - name: b
+    summary: Der zweite zu vergleichende Wert.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Bool
+  types:
+  - summary: '`true` nur dann, wenn `a` gleich `b`ist.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: b8b9b8e73295f9dc9d5943dcf7b68719aa71817d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233168"

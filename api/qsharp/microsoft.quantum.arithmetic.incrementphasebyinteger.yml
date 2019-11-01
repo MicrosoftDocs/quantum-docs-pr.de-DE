@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.incrementphasebyinteger
+name: IncrementPhaseByInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Erhöht mithilfe von Phasen Drehungen ein unsigniertes Quantum-Register durch eine klassische Ganzzahl.
+
+
+  Nehmen wir an, dass `target` eine Ganzzahl ohne Vorzeichen $x $ in einer Little-in-Codierung codiert und `increment` gleich $a $ ist.
+
+  Anschließend implementiert dieser Vorgang die einheitliche $ \ket{x} \mapsto \ket{x + a} $, wobei die Addition Modulo $2 ^ n $ ist, wobei $n = \texttt{length (Target!)} $.
+remarks: >-
+  Beachten Sie, dass wir die Verbindung vereinfacht haben, da das Inkrement eine klassische Konstante und kein Quantum-Register ist.
+
+
+  Ein Leitungs Diagramm und eine Erläuterung finden Sie in der Abbildung auf der [Seite 6 von arXiv: quant-ph/0008033v1](https://arxiv.org/pdf/quant-ph/0008033.pdf#page=6) .
+syntax: 'operation IncrementPhaseByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
+references: '- [*Thomas G. Draper*, arXiv: quant-ph/0008033](https://arxiv.org/pdf/quant-ph/0008033v1.pdf)'
+input:
+  content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
+  types:
+  - name: increment
+    summary: Die ganze Zahl, um die die `target` inkrementiert wird.
+    isPrimitive: true
+    uid: Int
+  - name: target
+    summary: Ein Quantum-Register codiert eine Ganzzahl ohne Vorzeichen unter Verwendung der Little-d-Codierung in der Dual (QFT)-Basis.
+    uid: microsoft.quantum.arithmetic.phaselittleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- incrementbyintegerbe
+- incrementbyintegerle
+ms.openlocfilehash: 379e643826ca54e123c8b855f4bba48a9d79a137
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219041"

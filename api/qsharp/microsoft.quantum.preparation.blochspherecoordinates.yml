@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.blochspherecoordinates
+name: BlochSphereCoordinates
+type: function
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  Berechnet die Bloch-Kugel Koordinaten für einen Single-Qubit-Zustand.
+
+
+  Wenn zwei komplexe Zahlen $a 0 sind, a1 $, die den Qubit-Status darstellen, berechnet Koordinaten auf der Bloch-Kugel, sodass $a 0 \ket{0} + a1 \ket{1} = r e ^ {IT} (e ^ {-i \phi/2}\cos{(\ der TA/2)} \ket{0}+ e ^ {i \phi/2}\sin{(\-Ta/2)} \ket{1}) $.
+syntax: 'function BlochSphereCoordinates (a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar) : (Microsoft.Quantum.Math.ComplexPolar, Double, Double)'
+input:
+  content: '(a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar)'
+  types:
+  - name: a0
+    summary: Komplexer Koeffizient des Zustands $ \ket{0}$.
+    uid: microsoft.quantum.math.complexpolar
+  - name: a1
+    summary: Komplexer Koeffizient des Zustands $ \ket{1}$.
+    uid: microsoft.quantum.math.complexpolar
+output:
+  content: (Microsoft.Quantum.Math.ComplexPolar, Double, Double)
+  types:
+  - summary: Ein Tupel, das `(ComplexPolar(r, t), phi, theta)`enthält.
+    types:
+    - uid: microsoft.quantum.math.complexpolar
+    - isPrimitive: true
+      uid: Double
+    - isPrimitive: true
+      uid: Double
+ms.openlocfilehash: fc9dbef764c9d95de2183b9b093e00f20dfb0697
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228136"

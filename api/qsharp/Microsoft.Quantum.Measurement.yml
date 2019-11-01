@@ -1,0 +1,22 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.measurement
+name: Microsoft.Quantum.Measurement
+operations:
+- uid: microsoft.quantum.measurement.measurepaulis
+  summary: Wenn ein Array von Multi-Qubit-Pauli-Operatoren verwendet wird, werden die einzelnen Measures mit einem angegebenen Mess Gadget versehen und dann das Array der Ergebnisse zurückgegeben.
+- uid: microsoft.quantum.measurement.measurewithscratch
+  summary: Misst den angegebenen Pauli-Operator mithilfe eines expliziten Scratch-Qubit, um die Messung auszuführen.
+- uid: microsoft.quantum.measurement.mresetx
+  summary: Misst ein einzelnes Qubit in der X-Basis und setzt es auf den standardmäßigen Basiszustand | 0 〉 nach der Messung zurück.
+- uid: microsoft.quantum.measurement.mresety
+  summary: Misst ein einzelnes Qubit auf Y-Basis und setzt es auf den standardmäßigen Basiszustand | 0 〉 nach der Messung zurück.
+- uid: microsoft.quantum.measurement.mresetz
+  summary: Misst ein einzelnes Qubit auf `Z` Basis und setzt es auf den standardmäßigen Basiszustand | 0 〉 nach der Messung zurück.
+- uid: microsoft.quantum.measurement.multim
+  summary: Misst jedes Qubit in einem angegebenen Array standardmäßig.
+ms.openlocfilehash: 872031f8a6ebd77e72cd74e1c98e7347c09ca14a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210983"

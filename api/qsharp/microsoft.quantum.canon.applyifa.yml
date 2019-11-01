@@ -1,0 +1,72 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifa
+name: ApplyIfA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Wendet einen adjointable-Vorgang an, der auf einem klassischen Bit bedingt ist.
+
+
+  Wendet bei einem Vorgang `op` und einem Bitwert `bit``op` auf das `target` an, wenn `bit` `true`ist. Wenn `false`, geschieht nichts mit dem `target`.
+
+  Das Suffix `A` gibt an, dass der anzuwendende Vorgang adjointable ist.
+examples: >-
+  Im folgenden wird ein Register von Qubits auf einen Berechnungs Status vorbereitet, der durch eine klassische Bitzeichenfolge dargestellt wird, die als Array von `Bool` Werten angegeben ist:
+
+
+  ```Q#
+
+  let bitstring = [true, false, true];
+
+  using (register = Qubit(3)) {
+      ApplyToEach(ApplyIf(X, _, _), Zip(bitstring, register));
+      // register should now be in the state |101⟩.
+      ...
+  }
+
+  ```
+syntax: "operation ApplyIfA (op : ('T => Unit is Adj), bit : Bool, target : 'T) : Unit"
+input:
+  content: "(op : ('T => Unit is Adj), bit : Bool, target : 'T)"
+  types:
+  - name: op
+    summary: Ein Vorgang, der bedingt angewendet werden soll.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: bit
+    summary: ein boolescher Wert, der steuert, ob op angewendet wird.
+    isPrimitive: true
+    uid: Bool
+  - name: target
+    summary: Die Eingabe, auf die der Vorgang angewendet wird.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Der Eingabetyp des Vorgangs, der bedingt angewendet werden soll.
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applyifc
+- microsoft.quantum.canon.applyifa
+- microsoft.quantum.canon.applyifca
+ms.openlocfilehash: 2c62617251d7795f19fa67f7de01859679c94313
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213873"

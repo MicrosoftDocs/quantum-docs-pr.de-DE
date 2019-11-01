@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.preparesparsemulticonfigurationalstate
+name: PrepareSparseMultiConfigurationalState
+type: operation
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: Durch das Hinzufügen von Erregung zum anfänglichen Testzustand wird der Zustand der multikonfigurationsestatusvorbereitung des Test Zustands erhöht.
+syntax: 'operation PrepareSparseMultiConfigurationalState (initialStatePreparation : (Qubit[] => Unit), excitations : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], qubits : Qubit[]) : Unit'
+input:
+  content: '(initialStatePreparation : (Qubit[] => Unit), excitations : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], qubits : Qubit[])'
+  types:
+  - name: initialStatePreparation
+    summary: Einheitlich zum Vorbereiten des anfänglichen Test Zustands.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: excitations
+    summary: Erregung des anfänglichen Test Zustands, der durch die Amplitude der Erregung und die Qubit-Indizes dargestellt wird, für die die Erregung durchgesetzt wird.
+    isArray: true
+    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerinputstate
+  - name: qubits
+    summary: Qubits von hamiltonan.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: c97f5e7ec8a4cc26b4fb173414526363db424293
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231808"

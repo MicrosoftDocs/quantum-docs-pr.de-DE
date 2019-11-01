@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.ripplecarryaddercdkm
+name: RippleCarryAdderCDKM
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Umkehrbarer, direkter Ripple-Carry-Wert: Addition von zwei Ganzzahlen.
+
+  Wenn zwei $n in "littleEndian" codierte ganzzahlige ganzzahlige Zahlen `xs` und `ys`und ein Qubit-Commit sind, berechnet der Vorgang die Summe der beiden Ganzzahlen, bei denen die $n minimal signifikanten Bits des Ergebnisses in `ys` enthalten sind und der Wert für das Ausführen von XoReD zum Qubit-`carry`.
+remarks: Dieser Vorgang verfügt über die gleiche Funktionalität wie "ripplecarryadderd", verwendet jedoch nur ein "Ancilla Qubit" anstelle von "$n $".
+syntax: 'operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
+references: >-
+  - Steven a. Cuccaro, Thomas G. Draper, Samuel A. KUTIN, David Petrie Moulton: "A New Quantum Ripple-Carry Additions Circuit", 2004.
+    https://arxiv.org/abs/quant-ph/0410184v1
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit)'
+  types:
+  - name: xs
+    summary: Der littleEndian-Qubit-Register Codierung der ersten ganzzahligen Summe.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: ys
+    summary: Bei der littleEndian-Qubit-Codierung wird die zweite Ganzzahl summiert, und die n-Bit-Summe der Summe wird geändert.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: carry
+    summary: Carry Qubit, ist XoReD mit dem signifikantesten Bit der Summe.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 2d973659a9457c301ba65a282e4fd4b627c93671
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218480"

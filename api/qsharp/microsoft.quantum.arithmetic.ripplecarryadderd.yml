@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.ripplecarryadderd
+name: RippleCarryAdderD
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Umkehrbarer, direkter Ripple-Carry-Wert: Addition von zwei Ganzzahlen.
+
+  Wenn zwei $n in "littleEndian" codierte ganzzahlige ganzzahlige Zahlen `xs` und `ys`und ein Qubit-Commit sind, berechnet der Vorgang die Summe der beiden Ganzzahlen, bei denen die $n minimal signifikanten Bits des Ergebnisses in `ys` enthalten sind und der Wert für das Ausführen von XoReD zum Qubit-`carry`.
+remarks: Der angegebene kontrollierte Vorgang verwendet die Symmetrie und den gegenseitigen Abbruch von Vorgängen, um die Standard Implementierung zu verbessern, mit der jedem Vorgang ein Steuerelement hinzugefügt wird.
+syntax: 'operation RippleCarryAdderD (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
+references: >-
+  - Thomas G. Draper: "Addition auf einem Quantum-Computer", 2000.
+    https://arxiv.org/abs/quant-ph/0008033
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit)'
+  types:
+  - name: xs
+    summary: Der littleEndian-Qubit-Register Codierung der ersten ganzzahligen Summe.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: ys
+    summary: Der littleEndian-Qubit-Registrierungs Codierungs Wert für die zweite Ganzzahl sumund wird so geändert, dass die $n minimalen signifikanten Bits der Summe enthalten ist.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: carry
+    summary: Carry Qubit, ist XoReD mit dem signifikantesten Bit der Summe.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: ef8f5ec89d0a1bf32e401385f21a6dcf1ec24db7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214570"

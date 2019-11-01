@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.fivequbitcoderecoveryfn
+name: FiveQubitCodeRecoveryFn
+type: function
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: Gibt eine Funktion zurück, die Fehler-Syndrom-Messungen den entsprechenden Fehler Behebungs-Pauli-Operatoren durch die Tabellen Suche für den ⟦ 5, 1, 3 ⟧ Quantum-Code zuordnet.
+remarks: >-
+  Durch das Durchlaufen aller Fehler der Gewichtung $1 $ erhalten wir eine Summe von insgesamt $3 \ mal 5 = 15 $ möglichen nicht trivialen syndromes.
+
+  In Verbindung mit der Identität wird eine Fehler Tabelle und ein entsprechendes-Syndrom erstellt. Für den 5-Qubit-Code, der für diese Tabelle angegeben ist: $X\_1: (0, 0, 0, 1); X\_2: (1, 0, 0, 0); X\_3: (1, 1, 0, 0); X\_4: (0, 1, 1, 0); X\_5: (0,0, 1, 1) $, $Z\_1: (1, 0, 1, 0); Z\_2: (0, 1, 0, 1); Z\_3: (0, 0, 1, 0); Z\_4: (1, 0, 0, 1); Z\_5: (0, 1, 0, 0) $ mit $Y _I $, das durch Hinzufügen der $X _I $ und $Z _I $-Syndrome erreicht wird. Beachten Sie, dass die Reihenfolge in der Wiederherstellung der Tabellen Suche angegeben wird, indem die bitvektoren in ganze Zahlen (mit Little Endian) umgerechnet werden.
+syntax: 'function FiveQubitCodeRecoveryFn () : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
+input:
+  content: ()
+  types: []
+output:
+  content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
+  types:
+  - summary: Eine Funktion vom Typ `RecoveryFn`, die eine Messungs Messung `Result[]` und die `Pauli[]` Operatoren zurückgibt, die den erkannten Fehler behebt.
+    uid: microsoft.quantum.errorcorrection.recoveryfn
+seeAlso:
+- recoveryfn
+ms.openlocfilehash: efeabbeb6595d1440882eef73f152610a3ac74c5
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211629"

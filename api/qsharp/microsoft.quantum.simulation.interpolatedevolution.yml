@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.interpolatedevolution
+name: InterpolatedEvolution
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Interpoliert zwischen zwei Generatoren mit einem einheitlichen Zeitplan und gibt einen Vorgang zurück, der die simulierte Weiterentwicklung unter dem resultierenden zeitabhängigen Generator auf ein Qubit-Register anwendet.
+remarks: Wenn die Interpolations Zeit ausgewählt ist, um die adiabatischen Bedingungen zu erfüllen, gibt diese Funktion einen Vorgang zurück, der die adiabatische Zustands Vorbereitung für den endgültigen Dynamical-Generator ausführt.
+syntax: 'function InterpolatedEvolution (inerpolationTime : Double, evolutionGeneratorStart : Microsoft.Quantum.Simulation.EvolutionGenerator, evolutionGeneratorEnd : Microsoft.Quantum.Simulation.EvolutionGenerator, timeDependentSimulationAlgorithm : Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm) : (Qubit[] => Unit is Adj + Ctl)'
+input:
+  content: '(inerpolationTime : Double, evolutionGeneratorStart : Microsoft.Quantum.Simulation.EvolutionGenerator, evolutionGeneratorEnd : Microsoft.Quantum.Simulation.EvolutionGenerator, timeDependentSimulationAlgorithm : Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm)'
+  types:
+  - name: inerpolationTime
+    isPrimitive: true
+    uid: Double
+  - name: evolutionGeneratorStart
+    summary: Ursprünglicher Generator, unter dem die Entwicklung simuliert werden soll.
+    uid: microsoft.quantum.simulation.evolutiongenerator
+  - name: evolutionGeneratorEnd
+    summary: Der endgültige Generator, unter dem die Entwicklung simuliert werden soll.
+    uid: microsoft.quantum.simulation.evolutiongenerator
+  - name: timeDependentSimulationAlgorithm
+    summary: Ein zeitabhängiger Simulations Algorithmus, der verwendet wird, um die Evolution während des einheitlichen Interpolations Zeitplans zu simulieren.
+    uid: microsoft.quantum.simulation.timedependentsimulationalgorithm
+output:
+  content: (Qubit[] => Unit is Adj + Ctl)
+  types:
+  - isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+ms.openlocfilehash: c457417e28d9de392af5efdee101fc107f37a913
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211051"

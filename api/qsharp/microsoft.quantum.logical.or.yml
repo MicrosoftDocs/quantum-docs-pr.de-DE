@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.or
+name: Or
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Gibt die boolesche Disjunktion von zwei Werten zurück.
+remarks: >-
+  Anders als der `or`-Operator ist diese Funktion nicht kurz, sodass beide Eingaben vollständig ausgewertet werden.
+
+
+  Bis zu einem kurzen Schluss Verhalten sind die folgenden äquivalent:
+
+
+  ```Q#
+
+  let x = a or b;
+
+  let x = Or(a, b);
+
+  ```
+syntax: 'function Or (a : Bool, b : Bool) : Bool'
+input:
+  content: '(a : Bool, b : Bool)'
+  types:
+  - name: a
+    summary: Der erste zu berücksichtigende Wert.
+    isPrimitive: true
+    uid: Bool
+  - name: b
+    summary: Der zweite zu berücksichtigende Wert.
+    isPrimitive: true
+    uid: Bool
+output:
+  content: Bool
+  types:
+  - summary: '`true` nur dann, wenn entweder `a` oder `b` `true`sind.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 7324679482e300b868902e9bf1c17cc9cc0da10d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235157"

@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
+name: RippleCarryAdderNoCarryTTK
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Umkehrbar, direkte Ripple-Durchführung von zwei Ganzzahlen ohne Ausführung. Wenn zwei $n in "littleEndian" codierte $-Bit-Ganzzahlen `xs` und `ys`registriert sind, berechnet der Vorgang die Summe der beiden Ganzzahlen Modulo $2 ^ n $, wobei $n $ die bitgröße der Eingaben `xs` und `ys`ist. Das Bit wird nicht berechnet.
+remarks: Dieser Vorgang verfügt über die gleiche Funktionalität wie ripplecarryadderttk, gibt jedoch nicht das "Carry"-Bit zurück.
+syntax: 'operation RippleCarryAdderNoCarryTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+references: >-
+  - Yasuhiro Takahashi, Seiichiro Tani, Noboru Kunihiro: "Quantum Additions-und ungebundene Fan-Out", Quantum-Informationen und-Berechnung, Vol. 10, 2010.
+    https://arxiv.org/abs/0910.2530
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: xs
+    summary: Der littleEndian-Qubit-Register Codierung der ersten ganzzahligen Summe.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: ys
+    summary: Der littleEndian-Qubit-Registrierungs Codierungs Wert für die zweite Ganzzahl sumund wird so geändert, dass die $n minimalen signifikanten Bits der Summe enthalten ist.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 9aa955764b16806df1ea6205b92483f4747463f5
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214519"

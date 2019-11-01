@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.timedependenttrottersimulationalgorithm
+name: Timedependenttrottersimulationalgorithmus
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: '`TimeDependentSimulationAlgorithm` Funktion, die eine Trotter – Suzuki-Zerlegung verwendet, um einen einheitlichen Operator zu nähern, der die zeitabhängige Schrodinger-Gleichung löst.'
+syntax: 'function TimeDependentTrotterSimulationAlgorithm (trotterStepSize : Double, trotterOrder : Int) : Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm'
+input:
+  content: '(trotterstepsize: Double, trotterorder: int)'
+  types:
+  - name: trotterstepsize
+    summary: Dauer der simulierten Zeitentwicklung in einem einzelnen trockschritt.
+    isPrimitive: true
+    uid: Double
+  - name: trotterorder
+    summary: Reihenfolge des trockintegrator. Dies muss entweder 1 oder eine gerade Zahl sein.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft. Quantum. Simulation. timedependentsimulationalgorithmus
+  types:
+  - summary: Ein `TimeDependentSimulationAlgorithm` Typ.
+    uid: microsoft.quantum.simulation.timedependentsimulationalgorithm
+ms.openlocfilehash: dbac8ac91d7145216f9594f26e443f3a2660831e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065247"

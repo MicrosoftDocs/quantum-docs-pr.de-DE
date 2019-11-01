@@ -1,0 +1,82 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.adiabaticstateenergyunitary
+name: AdiabaticStateEnergyUnitary
+type: operation
+namespace: Microsoft.Quantum.Simulation
+summary: Führt die Zustands Vorbereitung durch Anwenden einer `statePrepUnitary` auf den Eingabe Zustand, gefolgt von der Vorbereitung des adiabatischen Zustands mithilfe eines `adiabaticUnitary`und schließlich der Phasen Schätzung in Bezug auf `qpeUnitary`auf dem resultierenden Zustand mithilfe eines `phaseEstAlgorithm`aus.
+syntax: 'operation AdiabaticStateEnergyUnitary (statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double), qubits : Qubit[]) : Double'
+input:
+  content: '(statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double), qubits : Qubit[])'
+  types:
+  - name: statePrepUnitary
+    summary: Ein Oracle, das die Zustands Vorbereitung für den ursprünglichen Dynamical-Generator darstellt.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: adiabaticUnitary
+    summary: Ein Oracle, das den Adiabatic Evolution-Algorithmus darstellt, der verwendet wird, um die Sweep-bis zum Endzustand des Algorithmus zu implementieren.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: qpeUnitary
+    summary: Ein Oracle, das einen einheitlichen Operator $U $ darstellt, der die Entwicklung für "Time $ \delta t $" unter einem Dynamical Generator mit dem "Ground State $ \ket{\phi} $" und "State State Energy $E = \phi\\, \delta t $" darstellt.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: phaseEstAlgorithm
+    summary: >-
+      Ein Vorgang, der die Phasen Schätzung für einen angegebenen einheitlichen Vorgang ausführt.
+
+      Weitere Informationen finden Sie unter [iterative Phasen Schätzung](/quantum/libraries/characterization#iterative-phase-estimation) .
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.oracles.discreteoracle
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Double
+  - name: qubits
+    summary: Ein Register von Qubits, das zum Ausführen der Simulation verwendet werden soll.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Double
+  types:
+  - summary: Eine Schätzung von $ \hat{\phi} $ der Erde State Energy $ \phi $ des durch $U $ dargestellten Generators.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 747e9f6d926863ce1add86d183ca2ed1dc43c8a4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232029"

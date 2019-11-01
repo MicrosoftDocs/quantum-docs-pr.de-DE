@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.evaluatepolynomialfxp
+name: EvaluatePolynomialFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Wertet ein Polynoms in einer Fixed-Point-Darstellung aus.
+syntax: 'operation EvaluatePolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: coefficients
+    summary: Koeffizienten des polynomds als doppeltes Array, d. h. das Array $ [a_0, A_1,..., a_d] $ für die Polynom$P (x) = a_0 + A_1 x + \cdots + a_d x ^ d $.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: fpx
+    summary: Eingabe-fest Komma Zahl, für die der polynomwert ausgewertet werden soll.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: result
+    summary: Ausgabe feste Punkt Zahl, die $P (x) $ enthält. Muss zunächst den Status $ \ket{0}$ aufweisen.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 8a3531860001c09fa3dadd5ba4db276f0a20d06a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220996"

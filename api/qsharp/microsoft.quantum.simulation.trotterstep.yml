@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.trotterstep
+name: Trotterstep
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Implementiert einen einzelnen Zeitraum der Zeit Weiterentwicklung durch das System, das in einem `EvolutionGenerator` mithilfe einer Trotter – Suzuki-Zerlegung beschrieben wird.
+remarks: Weitere Informationen zur Trotter – Suzuki-Zerlegung finden Sie unter [Zeit geordnete Komposition](/quantum/libraries/control-flow#time-ordered-composition).
+syntax: 'function TrotterStep (evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, trotterOrder : Int, trotterStepSize : Double) : (Qubit[] => Unit is Adj + Ctl)'
+input:
+  content: '(evolutiongenerator: Microsoft. Quantum. Simulation. evolutiongenerator, trotterorder: int, trotterstepsize: Double)'
+  types:
+  - name: Evolutiongenerator
+    summary: Eine umfassende Beschreibung des Systems, das simuliert werden soll.
+    uid: microsoft.quantum.simulation.evolutiongenerator
+  - name: trotterorder
+    summary: Reihenfolge des trockintegrator. Dies muss entweder 1 oder eine gerade Zahl sein.
+    isPrimitive: true
+    uid: Int
+  - name: trotterstepsize
+    summary: Dauer der simulierten Zeitentwicklung in einem einzelnen trockschritt.
+    isPrimitive: true
+    uid: Double
+output:
+  content: (Qubit [] = > Einheit ist ADJ + CTL)
+  types:
+  - summary: Ein einheitlicher Vorgang, der für die Dauer `trotterStepSize`einen einzelnen Schritt der Zeitentwicklung angleicht.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+ms.openlocfilehash: 0605c7de832286b8b7a11b82af50b528d233d18c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065213"

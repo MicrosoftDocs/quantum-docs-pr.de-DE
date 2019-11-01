@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.padded
+name: Padded
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Gibt ein Array zurück, das bei mit angegebenen Werten bis zu einer angegebenen Länge aufgefüllt wird.
+examples: >-
+  ```qsharp
+
+  let array = [10, 11, 12];
+
+  // The following line returns [10, 12, 15, 2, 2, 2].
+
+  let output = Padded(-6, array, 2);
+
+  // The following line returns [2, 2, 2, 10, 12, 15].
+
+  let output = Padded(6, array, 2);
+
+  ```
+syntax: "function Padded (nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[]) : 'T[]"
+input:
+  content: "(nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[])"
+  types:
+  - name: nElementsTotal
+    summary: Die Länge des aufgefüllten Arrays. Wenn dies positiv ist, wird `inputArray` am Kopf aufgefüllt. Wenn dies negativ ist, wird `inputArray` am Ende aufgefüllt.
+    isPrimitive: true
+    uid: Int
+  - name: defaultElement
+    summary: Der Standardwert, der für Auffüll Elemente verwendet werden soll.
+    uid: "'T"
+    isLocal: true
+  - name: inputArray
+    summary: Array, dessen Werte sich an der Spitze des Ausgabe Arrays befinden.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Ein Array `output` das `inputArray` am Anfang mit `defaultElement`s aufgefüllt ist, bis `output` eine Länge aufweist `nElementsTotal`
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Der Typ der Array Elemente.
+ms.openlocfilehash: 3fb999af73e68de9143ddc051b8a43247f5282f0
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218055"

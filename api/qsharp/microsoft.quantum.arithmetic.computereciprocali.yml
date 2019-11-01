@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.computereciprocali
+name: ComputeReciprocalI
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Berechnet die gegenseitige 1/x-Datei für eine Ganzzahl x ohne Vorzeichen unter Verwendung der ganzzahligen Division. Das als ganze Zahl interpretierte Ergebnis wird `floor(2^(2*n-1) / x)`.
+remarks: Bei der Eingabe x = 0 ist die Ausgabe alle.
+syntax: 'operation ComputeReciprocalI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: xs
+    summary: n-Bit-Ganzzahl ohne Vorzeichen
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: result
+    summary: die 2N-Bit-Ausgabe muss zunächst in "$ \ket{0}$" vorliegen.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 91999bd0be10e1e77fb5d1daa88e34373eb83b9f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221047"

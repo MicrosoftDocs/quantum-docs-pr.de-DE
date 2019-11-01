@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.equalityfactc
+name: EqualityFactC
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: Bestätigt, dass eine komplexe Zahl über den erwarteten Wert verfügt.
+syntax: 'function EqualityFactC (actual : Microsoft.Quantum.Math.Complex, expected : Microsoft.Quantum.Math.Complex, message : String) : Unit'
+input:
+  content: '(actual : Microsoft.Quantum.Math.Complex, expected : Microsoft.Quantum.Math.Complex, message : String)'
+  types:
+  - name: actual
+    summary: Der zu überprüfende Wert.
+    uid: microsoft.quantum.math.complex
+  - name: expected
+    summary: Der erwartete Wert.
+    uid: microsoft.quantum.math.complex
+  - name: message
+    summary: Fehlermeldungs Zeichenfolge, die verwendet wird, wenn die-Assertion ausgelöst wird
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 7d9b6dc97fe76565b422792e1d8debb00c1bdaff
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226963"

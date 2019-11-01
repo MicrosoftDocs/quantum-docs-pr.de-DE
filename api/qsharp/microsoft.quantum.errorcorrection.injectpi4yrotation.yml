@@ -1,0 +1,63 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.injectpi4yrotation
+name: InjectPi4YRotation
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: >-
+  Führt eine Drehung/4-Drehung zu `Y`aus.
+
+
+  Die Drehung erfolgt durch die Verwendung eines magischen Zustands. Das heißt, eine Kopie des Zustands $ $ \begin{align} \cos\bruchteil {\pi}{8} \ket{0} + \sin \bruchteil {\pi}{8} \ket{1}.
+
+  \end{align} $ $
+remarks: >-
+  Die folgenden sind gleichwertig:
+
+
+  ```qsharp
+
+  Ry(PI() / 4.0, data);
+
+  ```
+
+
+  und der
+
+
+  ```qsharp
+
+  using (magic = Qubit()) {
+      Ry(PI() / 4.0, magic);
+      InjectPi4YRotation(data, magic);
+      Reset(magic);
+  }
+
+  ```
+
+
+  Dieser Vorgang unterstützt das `Adjoint`-Funktor. in diesem Fall wird derselbe magische Zustand verwendet, aber die Auswirkung auf das Daten-Qubit ist eine $-\ pi/4 $ $Y $-Rotation.
+syntax: 'operation InjectPi4YRotation (data : Qubit, magic : Qubit) : Unit'
+input:
+  content: '(data : Qubit, magic : Qubit)'
+  types:
+  - name: data
+    summary: Ein Qubit, das um $Y $ um $ \pi/$4 gedreht werden soll.
+    isPrimitive: true
+    uid: Qubit
+  - name: magic
+    summary: Ein Qubit, das sich anfänglich im Magic-Zustand befindet. Nach der Anwendung dieses Vorgangs wird `magic` an den Status "$ \ket{0}$" zurückgegeben.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+ms.openlocfilehash: fa0b69740e94247aa9f31d03715464be1b29a0a6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211425"

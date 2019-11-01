@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.tablelookuprecovery
+name: TableLookupRecovery
+type: function
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: Für eine gegebene Tabelle von Pauli-Vorgängen für ein bestimmtes Register von Qubits gibt diese Funktion ein Objekt vom Typ zurück `RecoveryFn` das alle Informationen enthält, die erforderlich sind, um eine Table-Lookup-Decodierung in Bezug auf das angegebene Array von Pauli-Vorgängen auszuführen.
+syntax: 'function TableLookupRecovery (table : Pauli[][]) : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
+input:
+  content: '(table : Pauli[][])'
+  types:
+  - name: table
+    summary: Tabelle von Pauli-Vorgängen, die für ein bestimmtes Qubit-Register ausgeführt werden
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+output:
+  content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
+  types:
+  - summary: Ein Objekt vom Typ `RecoveryFn`, d. h. ein Karten `Syndrome -> Pauli[]`, das einem angegebenen-Syndrom-Array einen entsprechenden Pauli-Korrektur Vorgang zuordnet.
+    uid: microsoft.quantum.errorcorrection.recoveryfn
+ms.openlocfilehash: cd84c24f5a50574a9bc2ab189832ada6516f12a8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232216"

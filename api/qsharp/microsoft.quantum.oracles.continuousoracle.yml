@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.continuousoracle
+name: ContinuousOracle
+type: newtype
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  Stellt ein kontinuierliches Oracle dar.
+
+
+  Dies ist ein Oracle, das $U (\delta t): \ket{\psi (t)} \mapsto \ket{\psi (t + \delta t)} $ für alle Male $t $ implementiert, wobei $U $ ein fester Vorgang ist und $ \delta t $ eine nicht negative reelle Zahl ist.
+syntax: newtype ContinuousOracle = ((Double, Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: b412c93583a68f71c232d2f7e11fd3d506e5f817
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231162"

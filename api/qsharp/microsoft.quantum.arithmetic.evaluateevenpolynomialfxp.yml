@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.evaluateevenpolynomialfxp
+name: EvaluateEvenPolynomialFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Wertet ein sogar polynomal in einer Fixed-Point-Darstellung aus.
+syntax: 'operation EvaluateEvenPolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: coefficients
+    summary: Koeffizienten der geraden Polynomen als Double-Array, d. h. das Array $ [a_0, A_1,..., a_k] $ für die gerade Polynom$P (x) = a_0 + A_1 x ^ 2 + \cdots + a_k x ^ {2K} $.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: fpx
+    summary: Eingabe-fest Komma Zahl, für die der polynomwert ausgewertet werden soll.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: result
+    summary: Ausgabe feste Punkt Zahl, die $P (x) $ enthält. Muss zunächst den Status $ \ket{0}$ aufweisen.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 4b0979dd2a0758bbefbb4b0456051a38e040ab5a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221030"

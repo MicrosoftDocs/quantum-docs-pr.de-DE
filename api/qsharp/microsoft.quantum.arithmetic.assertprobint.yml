@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.assertprobint
+name: AssertProbInt
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Bestätigt, dass die Wahrscheinlichkeit eines bestimmten Zustands eines Quantum-Register über den erwarteten Wert verfügt.
+
+
+  Bei Angabe einer $n $-Qubit-Quantum State $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \alpha_j \ket{j} $ bestätigt, dass die Wahrscheinlichkeit $ | \alpha_j | ^ 2 $ des durch $j $ indizierten Zustands $ \ket{j} $ den erwarteten Wert hat.
+examples: >-
+  Angenommen, das `qubits` Register codiert einen 3-Qubit-Quantum-Status $ \ket{\psi} = \ sqrt {1/8} \ Ket{0}+ \ sqrt {7/8} \ Ket{6}$ im Little-Endian-Format.
+
+  Dies bedeutet, dass die Zahl "$ \ket{0}\equiv\ket{0}\ket{0}\ket{0}$ und $ \ket{6}\equiv\ket{0}\ket{1}\ket{1}$" lautet. Die folgenden Bestätigungen werden erfolgreich ausgeführt:
+
+
+  - `AssertProbInt(0,0.125,qubits,10e-10);`
+
+  - `AssertProbInt(6,0.875,qubits,10e-10);`
+syntax: 'operation AssertProbInt (stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double) : Unit'
+input:
+  content: '(stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double)'
+  types:
+  - name: stateIndex
+    summary: Der Index $j $ des Zustands $ \ket{j} $, der durch ein `LittleEndian` Register dargestellt wird.
+    isPrimitive: true
+    uid: Int
+  - name: expected
+    summary: Der erwartete Wert von $ | \alpha_j | ^ 2 $.
+    isPrimitive: true
+    uid: Double
+  - name: qubits
+    summary: Das Qubit-Register, das $ \ket{\psi} $ im Little-Endian-Format speichert.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: tolerance
+    summary: Absolute Toleranz für den Unterschied zwischen tatsächlichem und erwartetem Verhalten.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 183f1252ba555c10e7011eea98a5cc98fae4495a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221438"

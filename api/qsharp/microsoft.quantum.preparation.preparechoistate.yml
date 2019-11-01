@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.preparechoistate
+name: PrepareChoiState
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: Bereitet den Status "Choi – jamiłkowski" für einen bestimmten Vorgang auf angegebene Verweis-und Ziel Register vor.
+remarks: 'Der Bundesstaat Choi – jamiłkowski $J (\lambda) $ eines Quantum-Prozesses ist als $ $ \begin{align} J (\lambda) \mathrel{: =} (\boldone \otimes \lambda) (| \boldone\rangle\!\rangle\langle\!\langle\boldone |), \end{align} $ $ WHERE $ | X\rangle\!\rangle $ ist die *Vektorisierung* einer Matrix $X $ in der spaltenstapel Konvention. Das Erlernen einer klassischen Beschreibung dieses Zustands enthält vollständige Informationen zu den Auswirkungen von $ \lambda $, die auf beliebige Eingabe Zustände reagieren, und bildet die Grundlage der *Quantum-Prozess Tomographie*.'
+syntax: 'operation PrepareChoiState (op : (Qubit[] => Unit), reference : Qubit[], target : Qubit[]) : Unit'
+input:
+  content: '(op : (Qubit[] => Unit), reference : Qubit[], target : Qubit[])'
+  types:
+  - name: op
+    summary: Der Vorgang $ \lambda $, dessen Metadaten– jamiłkowski State $J (\lambda)/2 ^ N $ vorbereitet werden soll, wobei $N $ die Anzahl der Qubits ist, auf der `op` agiert.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: reference
+    summary: Ein Register von Qubits, beginnend mit dem Status $ \ket{00\cdots 0} $, der als Verweis für die Aktion von `op`verwendet werden soll.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: Ein Register von Qubits, das anfänglich im $ \ket{00\cdots 0} $-Zustand ist, in dem `op` angewendet werden soll.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- preparechoistatea
+- preparechoistatec
+- preparechoistateca
+ms.openlocfilehash: f1f0ea6233d13ce1850b3b8dfb210ab6b0e378f8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228119"

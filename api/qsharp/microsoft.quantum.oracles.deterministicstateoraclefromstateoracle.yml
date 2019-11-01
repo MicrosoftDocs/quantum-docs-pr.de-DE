@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
+name: DeterministicStateOracleFromStateOracle
+type: function
+namespace: Microsoft.Quantum.Oracles
+summary: Konvertiert ein Oracle vom Typ `StateOracle` in `DeterministicStateOracle`.
+syntax: 'function DeterministicStateOracleFromStateOracle (idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle) : Microsoft.Quantum.Oracles.DeterministicStateOracle'
+input:
+  content: '(idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle)'
+  types:
+  - name: idxFlagQubit
+    summary: 'Der Index für das Flag-Qubit des `stateOracle` $A $, der explizit für zwei Register agiert: das Flag $f $ und das System $s $, z. b. $A \ket{0}\_f\ket {\ PSI}\_s $.'
+    isPrimitive: true
+    uid: Int
+  - name: stateOracle
+    summary: Ein Status Vorbereitungs-Oracle $A $ vom Typ `StateOracle`.
+    uid: microsoft.quantum.oracles.stateoracle
+output:
+  content: Microsoft.Quantum.Oracles.DeterministicStateOracle
+  types:
+  - summary: Die gleiche Zustands Vorbereitung ist Oracle $A $, aber jetzt vom Typ `DeterministicStateOracle`, sodass Sie auf ein Register angewendet wird, bei dem $a, s $ nicht mehr explizit getrennt sind, z. b.  $A \ket{0\psi}\_{as} $.
+    uid: microsoft.quantum.oracles.deterministicstateoracle
+seeAlso:
+- microsoft.quantum.canon.stateoracle
+- microsoft.quantum.canon.deterministicstateoracle
+ms.openlocfilehash: 5eda40115d4d4ca7b4187f76b5e0807695913407
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231094"

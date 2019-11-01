@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.modpowl
+name: ModPowL
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Führt eine modulare Division für eine Zahl aus, die mit einer anderen Zahl ausgelöst wird.
+remarks: Weitere Informationen finden Sie unter [System. Numerics. BigInteger. ModPow](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.modpow) .
+syntax: 'function ModPowL (value : BigInt, exponent : BigInt, modulus : BigInt) : BigInt'
+input:
+  content: '(value : BigInt, exponent : BigInt, modulus : BigInt)'
+  types:
+  - name: value
+    isPrimitive: true
+    uid: BigInt
+  - name: exponent
+    isPrimitive: true
+    uid: BigInt
+  - name: modulus
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: BigInt
+  types:
+  - isPrimitive: true
+    uid: BigInt
+ms.openlocfilehash: dff1a84cb5651857174f55b9561cd585672b9475
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233695"

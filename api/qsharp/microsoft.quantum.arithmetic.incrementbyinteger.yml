@@ -1,0 +1,39 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.incrementbyinteger
+name: IncrementByInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Erhöht mithilfe von Phasen Drehungen ein unsigniertes Quantum-Register durch eine klassische Ganzzahl.
+
+
+  Nehmen wir an, dass `target` eine Ganzzahl ohne Vorzeichen $x $ in einer Little-in-Codierung codiert und `increment` gleich $a $ ist.
+
+  Anschließend implementiert dieser Vorgang die einheitliche $ \ket{x} \mapsto \ket{x + a} $, wobei die Addition Modulo $2 ^ n $ ist, wobei $n = \texttt{length (Target!)} $.
+syntax: 'operation IncrementByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: increment
+    summary: Die ganze Zahl, um die die `target` inkrementiert wird.
+    isPrimitive: true
+    uid: Int
+  - name: target
+    summary: Ein Quantum-Register codiert eine Ganzzahl ohne Vorzeichen unter Verwendung der Little-d-Codierung.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- incrementbyintegerphasele
+ms.openlocfilehash: 3eafc268377e36301d511b77feb4db352a075d5d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215012"

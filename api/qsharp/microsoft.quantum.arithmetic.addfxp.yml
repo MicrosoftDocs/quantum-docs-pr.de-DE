@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.addfxp
+name: AddFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Addiert zwei in quantenregistern gespeicherte Fixed-Point-Nummern.
+
+
+  Bei zwei fest Komma Registern in den Zuständen $ \ket{f_1} $ und $ \ket{f_2} $ führt den Vorgang $ \ket{f_1} \ket{f_2} \mapsto \ket{f_1} \ket{f_1 + f_2} $ aus.
+remarks: Die aktuelle-Implementierung erfordert, dass die zwei fest Komma Zahlen dieselbe Punktposition aufweisen, die vom unwichtigsten Bit gezählt wird, d. h. $n _I $ und $p _I $ muss gleich sein.
+syntax: 'operation AddFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: fp1
+    summary: Erste festpunktzahl
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: fp2
+    summary: Die zweite festpunktzahl wird aktualisiert und enthält nun die Summe der beiden Eingaben.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 142c7927519e59fb3df1661b3beadd32cda0d2c8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215420"

@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.stackpush
+name: StackPush
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Überträgt ein neues Element auf einen <xref:microsoft.quantum.canon.resultstack>.
+syntax: 'function StackPush (stack : Microsoft.Quantum.Canon.ResultStack, datum : Result) : Microsoft.Quantum.Canon.ResultStack'
+input:
+  content: '(stack : Microsoft.Quantum.Canon.ResultStack, datum : Result)'
+  types:
+  - name: stack
+    summary: Der Stapel, der vergrößert werden soll.
+    uid: microsoft.quantum.canon.resultstack
+  - name: datum
+    summary: Der `Result` Wert, der auf `stack`gesetzt werden soll.
+    isPrimitive: true
+    uid: Result
+output:
+  content: Microsoft.Quantum.Canon.ResultStack
+  types:
+  - summary: Die `stack`, bei der `datum` als neues Top-Element hinzugefügt wurde. Die Länge des neuen Stapels wird um eins angehoben.
+    uid: microsoft.quantum.canon.resultstack
+ms.openlocfilehash: 63191d8f9a7649f8b229d1288cb244dfe4fd7293
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219347"

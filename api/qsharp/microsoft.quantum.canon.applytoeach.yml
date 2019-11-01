@@ -1,0 +1,55 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoeach
+name: ApplyToEach
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Wendet für jedes Element in einem Register einen Single-Qubit-Vorgang an.
+examples: >-
+  Bereiten Sie einen "3-Qubit $ \ket{+} $"-Status vor:
+
+
+  ```qsharp
+
+  using (register = Qubit[3]) {
+      ApplyToEach(H, register);
+  }
+
+  ```
+syntax: "operation ApplyToEach (singleElementOperation : ('T => Unit), register : 'T[]) : Unit"
+input:
+  content: "(singleElementOperation : ('T => Unit), register : 'T[])"
+  types:
+  - name: singleElementOperation
+    summary: Der auf die einzelnen Qubits anzuwendende Vorgang.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: register
+    summary: Ein Array von Qubits, auf das der angegebene Vorgang angewendet werden soll.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Das Ziel, für das der Vorgang fungiert.
+seeAlso:
+- microsoft.quantum.canon.applytoeachc
+- microsoft.quantum.canon.applytoeacha
+- microsoft.quantum.canon.applytoeachca
+ms.openlocfilehash: a8f58bc8f3bf1d460a5b1f4ffbeba95185d09a1a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210539"

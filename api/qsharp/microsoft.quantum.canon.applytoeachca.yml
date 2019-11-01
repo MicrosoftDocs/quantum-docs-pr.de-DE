@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoeachca
+name: ApplyToEachCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Wendet für jedes Element in einem Register einen Single-Qubit-Vorgang an.
+
+  Der-Modifizierer `CA` gibt an, dass der Single-Qubit-Vorgang steuerbar und adjointable ist.
+examples: >-
+  Bereiten Sie einen "3-Qubit $ \ket{+} $"-Status vor:
+
+
+  ```qsharp
+
+  using (register = Qubit[3]) {
+      ApplyToEach(H, register);
+  }
+
+  ```
+syntax: "operation ApplyToEachCA (singleElementOperation : ('T => Unit is Adj + Ctl), register : 'T[]) : Unit"
+input:
+  content: "(singleElementOperation : ('T => Unit is Adj + Ctl), register : 'T[])"
+  types:
+  - name: singleElementOperation
+    summary: Der auf die einzelnen Qubits anzuwendende Vorgang.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: register
+    summary: Ein Array von Qubits, auf das der angegebene Vorgang angewendet werden soll.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Das Ziel, für das der Vorgang fungiert.
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applytoeach
+ms.openlocfilehash: dfc43c0293a1c056ff773d7bd6b1c3fe13c2d78d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210286"

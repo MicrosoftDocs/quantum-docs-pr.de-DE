@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.swapreverseregister
+name: SwapReverseRegister
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Verwendet Swap-Gates zum Umkehren der Reihenfolge der Qubits in einem Register.
+syntax: 'operation SwapReverseRegister (register : Qubit[]) : Unit'
+input:
+  content: '(register : Qubit[])'
+  types:
+  - name: register
+    summary: Die Qubits-Reihenfolge, die mithilfe von Swap-Gates umgekehrt werden soll.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 4c1061d67d89ee813202114879f04a94bbd39b59
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217137"

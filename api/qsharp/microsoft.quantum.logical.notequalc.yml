@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.notequalc
+name: NotEqualC
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Gibt nur dann true zurück, wenn zwei Eingaben nicht gleich sind.
+syntax: 'function NotEqualC (a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex) : Bool'
+input:
+  content: '(a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex)'
+  types:
+  - name: a
+    summary: Der erste zu vergleichende Wert.
+    uid: microsoft.quantum.math.complex
+  - name: b
+    summary: Der zweite zu vergleichende Wert.
+    uid: microsoft.quantum.math.complex
+output:
+  content: Bool
+  types:
+  - summary: '`true` nur dann, wenn `a` nicht gleich `b`ist.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: eb4032ba6ac9beab677fbe20621856a5d6928ceb
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235361"

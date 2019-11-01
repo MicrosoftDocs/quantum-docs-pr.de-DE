@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applydiagonalunitary
+name: ApplyDiagonalUnitary
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Wendet ein Array komplexer Phasen auf numerische Basiszustände eines Register von Qubits an.
+
+
+  Das heißt, dies implementiert die Diagonale einheitliche Operation $U $, die eine komplexe Phase $e ^ {i \theta_j} $ auf dem $n $-Qubit-Number State $ \ket{j} $ anwendet.
+
+
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i\theta_j} \ Ket {j} \ Bra {j} $.
+remarks: '`coefficients` werden mit den Elementen $ \theta_j = $0,0 aufgefüllt, wenn weniger als $2 ^ n $ angegeben werden.'
+syntax: 'operation ApplyDiagonalUnitary (coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+references: '- Synthese von Quantum Logic-Leitungen Vivek V. Shende, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176'
+input:
+  content: '(coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: coefficients
+    summary: Array von bis zu $2 ^ n $ Koeffizienten $ \theta_j $. Der $j $ Th-Koeffizienten indiziert den im Little-Endian-Format codierten Zahlen Status $ \ket{j} $.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: qubits
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 80247438297c9d3a4f7d582f659a50f5d48c1335
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217681"

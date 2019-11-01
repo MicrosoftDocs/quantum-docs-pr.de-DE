@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.rest
+name: Rest
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Erstellt ein Array, das gleich einem Eingabe Array ist, außer dass das erste Array Element gelöscht wird.
+syntax: "function Rest (array : 'T[]) : 'T[]"
+input:
+  content: "(array : 'T[])"
+  types:
+  - name: array
+    summary: Ein Array, dessen zweites bis letztes Element das Ausgabe Array bilden soll.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Ein Array, das die Elemente `array[1..Length(array) - 1]`enthält.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Der Typ der Array Elemente.
+ms.openlocfilehash: 96779f32f93d2d045502b5e7264de1af39affd9f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218038"

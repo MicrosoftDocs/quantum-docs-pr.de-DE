@@ -1,0 +1,54 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.zip
+name: Zip
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Bei zwei Arrays wird ein neues Array von Paaren zurückgegeben, sodass jedes Paar ein Element aus jedem ursprünglichen Array enthält.
+examples: >-
+  ```qsharp
+
+  let left = [1, 3, 71];
+
+  let right = [false, true];
+
+  let pairs = Zip(left, right); // [(1, false), (3, true)]
+
+  ```
+syntax: "function Zip (left : 'T[], right : 'U[]) : ('T, 'U)[]"
+input:
+  content: "(left : 'T[], right : 'U[])"
+  types:
+  - name: left
+    summary: Ein Array, das Werte für das erste Element jedes Tupels enthält.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+  - name: right
+    summary: Ein Array, das Werte für das zweite Element jedes Tupels enthält.
+    isArray: true
+    uid: "'U"
+    isLocal: true
+output:
+  content: ('T, 'U)[]
+  types:
+  - summary: Ein Array, das Paare der Formular `(left[idx], right[idx])` für jede `idx`enthält. Wenn die beiden Arrays nicht die gleiche Länge aufweisen, ist die Ausgabe so lang wie die kürzere der Eingaben.
+    isArray: true
+    types:
+    - uid: "'T"
+      isLocal: true
+    - uid: "'U"
+      isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Der Typ der linken Array Elemente.
+- uid: "'U"
+  summary: Der Typ der rechten Array Elemente.
+seeAlso:
+- zip3
+- zip4
+ms.openlocfilehash: 9af79a617722ead8102ea4631d96934bf253beda
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217817"

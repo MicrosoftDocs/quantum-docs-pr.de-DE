@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.r1frac
+name: R1Frac
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Wendet eine Drehung zum $ \ket{1}$ State durch einen als dyadic-Bruchteil angegebenen Winkel an.
+
+
+  \begin{align} R_1 (n, k) \mathrel{: =} \operatschmue{Diag} (1, e ^ {i \pi k/2 ^ n}).
+
+  \end{align}
+
+
+  > [!WARNING]
+
+  > Bei diesem Vorgang wird die **umgekehrte** Vorzeichen Konvention aus @"microsoft.quantum.intrinsic.r"verwendet, und der von @"microsoft.quantum.intrinsic.r1"enthaltene Faktor von $1/2 $ ist nicht enthalten.
+remarks: >-
+  Äquivalent zu:
+
+
+  ```qsharp
+
+  RFrac(PauliZ, -numerator, denominator + 1, qubit);
+
+  RFrac(PauliI, numerator, denominator + 1, qubit);
+
+  ```
+syntax: 'operation R1Frac (numerator : Int, power : Int, qubit : Qubit) : Unit'
+input:
+  content: '(numerator : Int, power : Int, qubit : Qubit)'
+  types:
+  - name: numerator
+    summary: Der Zähler in der dyadic-Bruch Darstellung des Winkels, um den das Qubit gedreht werden soll.
+    isPrimitive: true
+    uid: Int
+  - name: power
+    summary: Potenz von zwei, die den Nenner des Winkels angibt, um den das Qubit gedreht werden soll.
+    isPrimitive: true
+    uid: Int
+  - name: qubit
+    summary: Das Qubit, auf das das Gate angewendet werden soll.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: c91aa9424abd038fa3a5a22fd23ac92cce171414
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233984"

@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.reversedopbec
+name: ReversedOpBEC
+type: function
+namespace: Microsoft.Quantum.Arithmetic
+summary: Gibt bei einem Vorgang, der eine Big-Endian-Eingabe annimmt, einen neuen Vorgang zurück, der eine Little-Endian-Eingabe annimmt.
+syntax: 'function ReversedOpBEC (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl)) : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Ctl)'
+input:
+  content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl))'
+  types:
+  - name: op
+    summary: Der Vorgang, dessen Eingabe umgekehrt werden soll.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.bigendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+output:
+  content: (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Ctl)
+  types:
+  - summary: Ein neuer Vorgang, der seine Eingabe als Little-in-der-Register-Registrierung akzeptiert.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.littleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+seeAlso:
+- applyreversedopbec
+- reversedopbe
+- reversedopbea
+- reversedopbeca
+ms.openlocfilehash: bf9b4e26fc3a11bd9d68f6b49117ebdb8eecc66f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218667"

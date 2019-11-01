@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.nearequalityfactc
+name: NearEqualityFactC
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: Bestätigt, dass eine klassische komplexe Zahl den erwarteten Wert bis zu einer kleinen Toleranz von 1 e-10 aufweist.
+syntax: 'function NearEqualityFactC (actual : Microsoft.Quantum.Math.Complex, expected : Microsoft.Quantum.Math.Complex) : Unit'
+input:
+  content: '(actual : Microsoft.Quantum.Math.Complex, expected : Microsoft.Quantum.Math.Complex)'
+  types:
+  - name: actual
+    summary: Die Zahl, die geprüft werden soll.
+    uid: microsoft.quantum.math.complex
+  - name: expected
+    summary: Der erwartete Wert.
+    uid: microsoft.quantum.math.complex
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 38bad9b13e74ddaa816213b006566b35616ccbbb
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230567"

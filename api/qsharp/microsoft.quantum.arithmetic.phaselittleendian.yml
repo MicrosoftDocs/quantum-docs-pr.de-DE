@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.phaselittleendian
+name: PhaseLittleEndian
+type: newtype
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Little-in-tdian-Ganzzahlen ohne Vorzeichen in QFT.
+
+
+  Wenn z. b. $ \ket{x} $ die Little-Endian-Codierung der Ganzzahl $x $ auf Berechnungsbasis ist, dann ist $ \operatschmue{qftle} \ket{x} $ die Codierung von $x $ in der QFT-Basis.
+remarks: Wir kürzen `PhaseLittleEndian` als `PhaseLE` in der-Dokumentation.
+syntax: newtype PhaseLittleEndian = Qubit[];
+seeAlso:
+- qft
+- qftle
+ms.openlocfilehash: 8efb8b58ff7ee5c0530abfb81792366f6990997e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218718"

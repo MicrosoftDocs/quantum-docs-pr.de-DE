@@ -1,0 +1,65 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.convert
+name: Microsoft.Quantum.Convert
+summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält Funktionen für die Konvertierung zwischen verschiedenen Q #-Datentypen."
+functions:
+- uid: microsoft.quantum.convert.bigintasboolarray
+  summary: >-
+    Konvertiert eine angegebene große Ganzzahl in ein Array von booleschen Werten.
+
+    Das 0-Element des Arrays ist das am wenigsten bedeutende Bit der großen Ganzzahl.
+- uid: microsoft.quantum.convert.boolarrayasbigint
+  summary: >-
+    Konvertiert ein angegebenes Array von booleschen Werten in eine entsprechende große Ganzzahl.
+
+    Das 0-Element des Arrays ist das am wenigsten bedeutende Bit der großen Ganzzahl.
+- uid: microsoft.quantum.convert.boolarrayasint
+  summary: Erzeugt eine positive ganze Zahl aus einer Bits-Zeichenfolge in Little-Endian-Format.
+- uid: microsoft.quantum.convert.boolarrayaspauli
+  summary: Gibt bei Angabe einer Bitzeichenfolge einen multiqubit-Pauli-Operator zurück, der als Array von Single-Qubit-Pauli-Operatoren dargestellt wird.
+- uid: microsoft.quantum.convert.boolarrayasresultarray
+  summary: Konvertiert einen `Bool[]`-Typ in einen `Result[]` Typ, wobei `true` `One` zugeordnet und `false` `Zero`zugeordnet wird.
+- uid: microsoft.quantum.convert.boolasresult
+  summary: Konvertiert einen `Bool`-Typ in einen `Result` Typ, wobei `true` `One` zugeordnet und `false` `Zero`zugeordnet wird.
+- uid: microsoft.quantum.convert.boolasstring
+  summary: Konvertiert einen angegebenen booleschen Wert in eine entsprechende Zeichen folgen Darstellung.
+- uid: microsoft.quantum.convert.doubleasstring
+  summary: Konvertiert eine angegebene Gleit Komma Zahl mit doppelter Genauigkeit in eine entsprechende Zeichen folgen Darstellung.
+- uid: microsoft.quantum.convert.doubleasstringwithformat
+  summary: Konvertiert eine angegebene Gleit Komma Zahl mit doppelter Genauigkeit unter Verwendung des angegebenen Formats in eine entsprechende Zeichen folgen Darstellung.
+- uid: microsoft.quantum.convert.functionasoperation
+  summary: Konvertiert Funktionen in Vorgänge.
+- uid: microsoft.quantum.convert.intasbigint
+  summary: Konvertiert eine angegebene Ganzzahl in eine entsprechende große ganze Zahl.
+- uid: microsoft.quantum.convert.intasboolarray
+  summary: Erzeugt eine binäre Darstellung einer positiven ganzen Zahl unter Verwendung der Little-dendian-Darstellung für das zurückgegebene Array.
+- uid: microsoft.quantum.convert.intasdouble
+  summary: Konvertiert eine angegebene Ganzzahl in eine entsprechende Gleit Komma Zahl mit doppelter Genauigkeit.
+- uid: microsoft.quantum.convert.intasstring
+  summary: Konvertiert eine angegebene ganzzahlige Zahl in eine entsprechende Zeichen folgen Darstellung.
+- uid: microsoft.quantum.convert.intasstringwithformat
+  summary: Konvertiert eine angegebene ganzzahlige Zahl unter Verwendung des angegebenen Formats in eine entsprechende Zeichen folgen Darstellung.
+- uid: microsoft.quantum.convert.maybebigintasint
+  summary: >-
+    Konvertiert eine angegebene große Ganzzahl, sofern möglich, in eine entsprechende Ganzzahl.
+
+    Die-Funktion gibt ein paar der resultierenden Ganzzahl und ein boolesches Flag zurück, das true ist, wenn die Konvertierung möglich war.
+- uid: microsoft.quantum.convert.pauliarrayasint
+  summary: Codiert einen multiqubit-Pauli-Operator, der als Array von Single-Qubit-Pauli-Operatoren dargestellt wird, in eine ganze Zahl.
+- uid: microsoft.quantum.convert.rangeasintarray
+  summary: Erstellt ein Array `arr` von ganzen Zahlen, die nach Start. aufgelistet sind. Schritt. Schließlich.
+- uid: microsoft.quantum.convert.resultarrayasboolarray
+  summary: Konvertiert einen `Result[]`-Typ in einen `Bool[]` Typ, wobei `One` `true` zugeordnet und `Zero` `false`zugeordnet wird.
+- uid: microsoft.quantum.convert.resultarrayasint
+  summary: Erzeugt eine positive ganze Zahl aus einer Zeichenfolge, die im Little-Endian-Format vorliegt.
+- uid: microsoft.quantum.convert.resultasbool
+  summary: Konvertiert einen `Result`-Typ in einen `Bool` Typ, wobei `One` `true` zugeordnet und `Zero` `false`zugeordnet wird.
+operations:
+- uid: microsoft.quantum.convert.call
+  summary: Ruft eine Funktion mit einer angegebenen Eingabe auf.
+ms.openlocfilehash: a0c347d8004b8f8bd35fc1b7f7eaf52e6230cee0
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210966"

@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
+name: EstimateTermExpectation
+type: operation
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+summary: >-
+  Berechnet die Energie, die einem bestimmten Jordan-Wigner-hamiltonbegriff zugeordnet ist.
+
+
+  Mit diesem Vorgang wird der Erwartungswert geschätzt, der jedem Mess Operator zugeordnet ist, und der Wert wird mithilfe von Sampling mit dem entsprechenden Koeffizienten multipliziert.
+
+  Die Ergebnisse werden in einer Variablen aggregiert, die die Energie des Jordanien-Wigner-Begriffs enthält.
+syntax: 'operation EstimateTermExpectation (inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int) : Double'
+input:
+  content: '(inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int)'
+  types:
+  - name: inputStateUnitary
+    summary: Der für die Zustands Vorbereitung verwendete einheitliche.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: ops
+    summary: Die maßoperatoren des "Jordan-Wigner"-Begriffs.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+  - name: coeffs
+    summary: Die Koeffizienten der "Jordan-Wigner"-Laufzeit.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: nQubits
+    summary: Die Anzahl der zum Simulieren des molekularen Systems erforderlichen Qubits.
+    isPrimitive: true
+    uid: Int
+  - name: nSamples
+    summary: Die Anzahl der Samplings, die für die Schätzung der Begriffs Erwartung verwendet werden sollen.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: Die dem Jordan-Wigner-Begriff zugeordnete Energie.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 9efa1c2aaa66d4b35e3266f785f837cb5e4dba27
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228442"

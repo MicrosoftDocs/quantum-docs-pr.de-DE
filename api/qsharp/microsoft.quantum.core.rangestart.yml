@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.rangestart
+name: RangeStart
+type: function
+namespace: Microsoft.Quantum.Core
+summary: Gibt den definierten Startwert des angegebenen Bereichs zurück.
+remarks: >-
+  Das erste Element eines Bereichs Ausdrucks ist `start`, sein zweites Element `start+step`, das dritte Element `start+step+step`usw., bis `end` weitergegeben wird.
+
+
+  Beachten Sie, dass der definierte Startwert eines Bereichs mit dem ersten Element der Sequenz übereinstimmt, es sei denn, der Bereich gibt eine leere Sequenz an (z. b. 2.). 1).
+syntax: 'function RangeStart (range : Range) : Int'
+input:
+  content: '(range : Range)'
+  types:
+  - name: range
+    isPrimitive: true
+    uid: Range
+output:
+  content: Int
+  types:
+  - summary: Der definierte Startwert des angegebenen Bereichs.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 0d618a26d71a5b41e6ea6b73503e9f099b18f129
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231757"
