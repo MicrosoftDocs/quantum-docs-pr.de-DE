@@ -6,12 +6,12 @@ ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: e202c527e7e26751361e0c46355ffcefa9c95091
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: ae0c0ec2e677be03dc8dc1497dc62ad9034295a4
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184915"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442415"
 ---
 # <a name="width-counter"></a>Breiten-Counter
 
@@ -29,7 +29,7 @@ operation MultiControlledXDriver( numberOfQubits : Int ) : Unit {
 }
 ```
 
-# <a name="using-width-counter-within-a-c-program"></a>Verwenden des Width-Zählers innerhalb eines C# Programms
+## <a name="using-width-counter-within-a-c-program"></a>Verwenden des Width-Zählers innerhalb eines C# Programms
 
 Bei der multiplizierten `X`, die auf insgesamt 5 Qubits wirkt, werden zwei hilfskbits und die Eingabe Breite 5 verwendet. Um zu überprüfen, ob dies der Fall ist, können wir C# Folgendes Programm verwenden:
 

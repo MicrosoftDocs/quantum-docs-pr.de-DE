@@ -1,21 +1,18 @@
 ---
-title: Microsoft Quantum Development Kit Lizenz | Microsoft-Dokumentation
+title: Microsoft Quantum Development Kit Lizenz
 description: Microsoft Quantum Development Kit Lizenz
-services: service-name-with-dashes-AZURE-ONLY
-keywords: Vermeiden Sie es, Schlüsselwörter hinzuzufügen oder zu bearbeiten, ohne Ihren SEO-Experten zurate zu ziehen.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
-ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
-ms.openlocfilehash: e14720143144d4890358a1c6167541a0ea5a8362
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.author: cpalmer
+ms.date: 11/04/2019
+ms.openlocfilehash: d864c3e4ecefa6f998b9a893ecc4a3995d67dac4
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184932"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463366"
 ---
 # <a name="microsoft-software-license-terms"></a>MICROSOFT-SOFTWARE-LIZENZBEDINGUNGEN 
-# <a name="microsoft-quantum-development-kit-preview"></a>Microsoft Quantum Development Kit (Vorschau)
+## <a name="microsoft-quantum-development-kit-preview"></a>Microsoft Quantum Development Kit (Vorschau)
 
 
 * * *
@@ -61,13 +58,13 @@ SOLANGE SIE DIESE LIZENZBEDINGUNGEN EINHALTEN, STEHEN IHNEN DIE NACHFOLGEND AUFG
     
     e. freigeben, veröffentlichen, verteilen oder verleihen der Software, Bereitstellen der Software als eigenständige gehostete Lösung, die von anderen Benutzern verwendet werden soll, oder übertragen der Software oder dieses Vertrags an Dritte.
 
-1. **Export Einschränkungen**. Sie sind verpflichtet, alle nationalen und internationalen Exportgesetze und -bestimmungen einzuhalten, die für die Software gelten, u.a. Einschränkungen im Hinblick auf Bestimmungsorte, Endbenutzer und Endverwendung. Weitere Informationen zu Exporteinschränkungen finden Sie unter http://aka.ms/exporting.
+1. **Export Einschränkungen**. Sie sind verpflichtet, alle nationalen und internationalen Exportgesetze und -bestimmungen einzuhalten, die für die Software gelten, u.a. Einschränkungen im Hinblick auf Bestimmungsorte, Endbenutzer und Endverwendung. Weitere Informationen zu Exporteinschränkungen finden Sie unter https://aka.ms/exporting.
 
 1. **Support Dienste**. Microsoft ist gemäß dieser Vereinbarung nicht verpflichtet, Supportleistungen für die Software bereitzustellen. Supportleistungen werden „wie besehen“, „mit allen möglichen Mängeln“ und ohne jegliche Gewährleistung bereitgestellt.
 
 1. **Updates**. Die Software kann in regelmäßigen Abständen nach Updates suchen und diese für Sie herunterladen und installieren. Sie dürfen nur Updates von Microsoft oder autorisierten Quellen beziehen. Microsoft muss Ihr System für die Bereitstellung von Updates eventuell aktualisieren. Sie erklären sich mit dem Empfang derartiger automatischer Updates ohne zusätzliche Benachrichtigung einverstanden. Updates beinhalten bzw. unterstützen möglicherweise nicht alle vorhandenen Softwarefunktionen, Dienste oder Peripheriegeräte.
 
-1. **Bindungs-und Klassen Aktions Verzicht. Dieser Abschnitt gilt, wenn Sie in (oder, wenn ein Unternehmen in einem Unternehmen tätig ist) die USA**.  Besteht zwischen Ihnen und Microsoft eine Streitigkeit, stimmen Sie und Microsoft zu, sich für einen Zeitraum von 60 Tagen um eine informelle Beilegung zu bemühen. Wenn Sie und Microsoft dies nicht tun können, erklären Sie und Microsoft sich damit einverstanden, einzelne Einordnungen **vor der American** -Schiedsgerichts Zuordnung unter dem Federal-Schiedsgerichts ungsact ("FAA") zu binden und vor **einem Richter oder einer Jury nicht zu verklagen**. In diesem Fall wird stattdessen ein neutraler Mediator entscheiden. **Klassen Aktions Gerichtsverfahren, Klassen weite arbitionen, private Anwälte-allgemeine Aktionen**und alle anderen Aktionen, bei denen jemand in einer repräsentativen Kapazität agiert, **ist nicht zulässig**. und kombiniert keine einzelnen Verfahren ohne die Zustimmung aller Parteien. Die vollständige Schiedsvereinbarung, die weitere Bedingungen enthält, finden Sie unter http://aka.ms/arb-agreement-1. Sie und Microsoft erklären sich mit diesen Bedingungen einverstanden.
+1. **Bindungs-und Klassen Aktions Verzicht. Dieser Abschnitt gilt, wenn Sie in (oder, wenn ein Unternehmen in einem Unternehmen tätig ist) die USA**.  Besteht zwischen Ihnen und Microsoft eine Streitigkeit, stimmen Sie und Microsoft zu, sich für einen Zeitraum von 60 Tagen um eine informelle Beilegung zu bemühen. Wenn Sie und Microsoft dies nicht tun können, erklären Sie und Microsoft sich damit einverstanden, einzelne Einordnungen **vor der American** -Schiedsgerichts Zuordnung unter dem Federal-Schiedsgerichts ungsact ("FAA") zu binden und vor **einem Richter oder einer Jury nicht zu verklagen**. In diesem Fall wird stattdessen ein neutraler Mediator entscheiden. **Klassen Aktions Gerichtsverfahren, Klassen weite arbitionen, private Anwälte-allgemeine Aktionen**und alle anderen Aktionen, bei denen jemand in einer repräsentativen Kapazität agiert, **ist nicht zulässig**. und kombiniert keine einzelnen Verfahren ohne die Zustimmung aller Parteien. Die vollständige Schiedsvereinbarung, die weitere Bedingungen enthält, finden Sie unter https://aka.ms/arb-agreement-1. Sie und Microsoft erklären sich mit diesen Bedingungen einverstanden.
 
 1. **gesamte Vereinbarung**. Diese Vereinbarung und sonstige Bedingungen, die Microsoft für Erweiterungen, Updates oder Drittanbieteranwendungen zur Verfügung stellt, stellen die gesamte Vereinbarung für die Software dar.
 

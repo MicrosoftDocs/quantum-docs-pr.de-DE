@@ -1,18 +1,20 @@
 ---
-title: Glossar | Microsoft-Dokumentation
+title: Quantum Computing-Glossar | Microsoft-Dokumentation
 description: Glossar mit Quantum-Begriffen
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: bfa275b3330ea2c2a541b08f137893b63b6213aa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: ce15fee2be68d41f0b806be50320b562a749c3b7
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183623"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442540"
 ---
+# <a name="quantum-computing-glossary"></a>Quantum Computing-Glossar
+
 |Laufzeit|Definition|
 |-------------|----------|
 |Adjoint|Die komplexe konjugierte, die den Vorgang übertragen hat. Bei Vorgängen, die einen einheitlichen Operator implementieren, ist das Adjoint das Gegenteil des Vorgangs.|
@@ -29,7 +31,7 @@ ms.locfileid: "73183623"
 |Messung|Abrufen eines klassischen Bits aus einem Qubit (oder einem Satz von Qubits). Weitere Informationen finden Sie im Abschnitt mit den [Qubit-Konzepten](xref:microsoft.quantum.concepts.qubit) .|
 |Veränderlich|Eine Variable, deren Wert geändert werden kann, nachdem Sie erstellt wurde.|
 |Namespace|Eine Bezeichnung für eine Auflistung verwandter Namen (in der Regel Vorgänge, Funktionen und Typen). Beispielsweise benennt der Namespace [`Microsoft.Quantum.Preparation`](xref:microsoft.quantum.preparation) alle Symbole, die in der Standardbibliothek definiert sind und bei der Vorbereitung von anfänglichen Zuständen helfen.|
-|Vorgang|Die grundlegende Einheit der Quantum-Ausführung in Q #. Dies entspricht ungefähr einer Funktion in C oder C++ oder python oder einer statischen Methode in C# oder Java.|
+|Vorgang|Die grundlegende Einheit der Quantum-Ausführung in Q #. Sie entspricht ungefähr einer Funktion in C, C++ oder Python oder einer statischen Methode in C# oder Java.|
 |Operator Anwendung|Ausführen eines Quantum-Vorgangs. Dadurch wird in der Regel eine einheitliche Matrix auf den aktuellen Status Vektor angewendet. Weitere Details finden [Sie unter Einführung in Quantum Concepts](xref:microsoft.quantum.concepts.intro) .|
 |Oracle|Eine Unterroutine, die zur Laufzeit Daten abhängige Informationen für einen Quantum-Algorithmus bereitstellt. In der Regel besteht das Ziel darin, eine Superposition der Ausgaben bereitzustellen, die den Eingaben in der superposition entsprechen.   |
 |Partielle Anwendung|Aufrufen einer Funktion oder eines Vorgangs ohne alle erforderlichen Parameter. Der gibt eine neue Aufruf Bare zurück, die nur die fehlenden Parameter benötigt, die während einer zukünftigen Anwendung bereitgestellt werden.|

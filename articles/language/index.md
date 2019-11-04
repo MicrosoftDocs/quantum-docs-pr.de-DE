@@ -6,16 +6,16 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.intro
-ms.openlocfilehash: d8759b9f043d2e13f4b0c97d54bd824c7e87d6de
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 560926f6f3e05c32a935f01ca5107a614e743ee2
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035276"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442484"
 ---
 # <a name="the-q-programming-language"></a>Programmiersprache Q#
 
-# <a name="introduction"></a>Einführung
+## <a name="introduction"></a>Einführung
 
 Eine gängige Vorgehensweise beim Quantencomputing ist die Behandlung des Quantencomputers als Coprozessor, ähnlich wie bei GPUs, FPGAs und anderen ergänzenden Prozessoren.
 Von der Hauptsteuerlogik wird klassischer Code auf einem klassischen „Hostcomputer“ ausgeführt.
@@ -36,7 +36,7 @@ In den folgenden Abschnitten finden Sie hilfreiche Informationen:
 - [Anweisungen](xref:microsoft.quantum.language.statements)
 - [Dateistruktur](xref:microsoft.quantum.language.file-structure)
 
-# <a name="conventions"></a>Konventionen
+## <a name="conventions"></a>Konventionen
 
 Derzeit arbeiten wir auf das Ziel hin, dass in allen Fällen eine einheitliche allgemeine Interpunktion verwendet wird.
 Dahinter steht die Erwartung, dass Q# so einfacher zu erlernen und zu lesen ist. Der Grund ist, dass die Interpunktion dann immer die gleiche Bedeutung hat und ein Konzept immer auf die gleiche Weise dargestellt wird.

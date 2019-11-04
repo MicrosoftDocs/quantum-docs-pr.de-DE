@@ -6,14 +6,14 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: 32f18ea479a2c65eee2b0e16788dc9f0fabd5372
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 0fd457b152083af364d924502c18bc0813e34b83
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185544"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442586"
 ---
-## <a name="obtaining-energy-level-estimates"></a>Abrufen von Energie Stufen Schätzungen
+# <a name="obtaining-energy-level-estimates"></a>Abrufen von Energiestandschätzungen
 Das Einschätzen der Werte von Energie Stufen ist eine der Hauptanwendungen der Quantum-Chemie. Hier wird erläutert, wie dies für das kanonische Beispiel für den molekularen Wasserstoff ausgeführt werden kann. Das in diesem Abschnitt referenzierte Beispiel ist `MolecularHydrogen` im Repository "Chemistry Samples". Ein visuelles Beispiel, in dem die Ausgabe dargestellt wird, ist die `MolecularHydrogenGUI` Demo.
 
 Der erste Schritt ist das Erstellen der hamiltona, die den molekularen Wasserstoff darstellt. Obwohl dies über das nwchem-Tool erstellt werden kann, fügen wir der in diesem Beispiel hinzu.

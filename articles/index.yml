@@ -3,55 +3,91 @@ title: Microsoft Quantum-Dokumentation
 summary: Erfahren Sie, wie Sie das Microsoft Quantum Development Kit und Q#, eine Sprache für Quantenalgorithmen, verwenden. Lernen Sie wichtige Konzepte kennen, und schreiben Sie Ihr erstes Quantenprogramm.
 metadata:
   title: 'Microsoft Quantum-Dokumentation: Q#-API-Referenz'
-  description: Erfahren Sie, wie Sie das Microsoft Quantum Development Kit und Q#, eine Sprache für Quantenalgorithmen, verwenden. Lernen Sie wichtige Konzepte kennen, und schreiben Sie Ihr erstes Quantenprogramm.
+  description: Hier erfahren Sie, wie Sie das Microsoft Quantum Development Kit und Q#, eine Sprache für Quantenprogrammierung, verwenden. Lernen Sie wichtige Konzepte kennen, und schreiben Sie Ihr erstes Quantenprogramm.  Erkunden Sie die umfangreichen Tools und Bibliotheken des QDK.
   ms.prod: quantum
   ms.topic: landing-page
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
-  ms.date: 09/30/2019
-  ms.openlocfilehash: 692456cb6b117b206d202b01967202b7ac89e59d
-  ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+  ms.date: 10/21/2019
+  ms.openlocfilehash: f757c99b1f5b1a821c9c341c442e1080378949a8
+  ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 10/30/2019
-  ms.locfileid: "73065060"
+  ms.lasthandoff: 11/02/2019
+  ms.locfileid: "73442508"
 landingContent:
 - title: Erste Schritte mit Microsoft Quantum
   linkLists:
   - linkListType: overview
     links:
-    - text: Willkommen beim Microsoft Quantum Development Kit!
+    - text: Fünf Fragen zu Quantencomputing
       url: welcome.md
   - linkListType: get-started
     links:
-    - text: Installieren des QDK
-      url: install-guide/index.md
-    - text: Aktualisieren des QDK
-      url: install-guide/update.md
-  - linkListType: quickstart
-    links:
-    - text: Schreiben eines Quantenprogramms
+    - text: Erstellen eines Quanten-Zufallszahlengenerators
+      url: quickstarts/qrng.md
+    - text: Quantengrundlagen mit Q#
       url: quickstart.md
-- title: Informationen zu Quantencomputing
-  linkLists:
-  - linkListType: concept
+    - text: Informationen zu einflussreichen Quantenprogrammen mit Q#
+      url: quickstarts/search.md
+    - text: Informationen zum Lösen der größten Herausforderungen in der Chemie
+      url: https://cloudblogs.microsoft.com/quantum/2018/12/04/simulating-nature-with-the-new-microsoft-quantum-development-kit-chemistry-library/
+  - linkListType: learn
     links:
-    - text: Was ist Quantencomputing?
-      url: concepts/index.md
-    - text: Vektoren und Matrizen
-      url: concepts/vectors-and-matrices.md
-    - text: Erweiterte Matrixkonzepte
-      url: concepts/advanced-matrices.md
-    - text: Das Qubit
-      url: concepts/the-qubit.md
-    - text: Softwarestapel
-      url: concepts/software-stack.md
-- title: Methoden zur Quantenentwicklung
+    - text: Lernen mit den Quanten-Katas
+      url: intro-to-katas.md
+    - text: Durchsuchen von Q#-Beispielen
+      url: https://docs.microsoft.com/samples/browse/?languages=qsharp
+- title: Entwickeln mit Q# und Python oder Jupyter-Notebooks
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Was ist Q#?
+    - text: Python-Installation
+      url: install-guide/index.md#develop-with-python
+    - text: Jupyter-Installation
+      url: install-guide/index.md#develop-with-jupyter-notebooks
+  - linkListType: how-to-guide
+    links:
+    - text: Q#-Beispiele mit Python
+      url: https://docs.microsoft.com/samples/browse/?languages=python&products=qdk
+    - text: Teleportieren einer Q#-Jupyter Notebook-Instanz
+      url: https://docs.microsoft.com/samples/microsoft/quantum/quantum-teleportation/
+    - text: Erstellen von Q#-Jupyter Notebook-Instanzen
+      url: https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/
+- title: Q#-Entwicklungsumgebungen
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Installieren von Visual Studio
+      url: install-guide/index.md#develop-with-c-on-windows-using-visual-studio
+    - text: Installieren von Visual Studio Code
+      url: install-guide/index.md#develop-with-c-using-visual-studio-code
+- title: Q#-Beispiele
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Drei einfache Algorithmen
+      url: https://docs.microsoft.com/samples/microsoft/quantum/simple-quantum-algorithms
+    - text: Suchen mit dem Grover-Algorithmus
+      url: https://docs.microsoft.com/samples/microsoft/quantum/searching-with-grovers-algorithm
+    - text: Quantenteleportation
+      url: https://docs.microsoft.com/samples/microsoft/quantum/quantum-teleportation/
+    - text: Alle Beispiele
+      url: https://docs.microsoft.com/samples/browse/?languages=qsharp
+- title: 'Q#: Sprache und Entwicklungstechniken'
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: Einführung in die Q#-Sprache
+      url: language/index.md
+  - linkListType: how-to-guide
+    links:
+    - text: Quantensimulatoren und Hostanwendungen
+      url: machines/index.md
+  - linkListType: how-to-guide
+    links:
+    - text: Q#-Programmübersicht
       url: techniques/file-structure.md
     - text: Vorgänge und Funktionen
       url: techniques/operations-and-functions.md
@@ -61,39 +97,51 @@ landingContent:
       url: techniques/working-with-qubits.md
     - text: 'Alles zusammen: Teleportation'
       url: techniques/putting-it-all-together.md
-- title: Verwalten von Computern und Treibern
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Klassische Treiber und Computer
-      url: machines/index.md
-    - text: QDK-Simulator für vollständig ausgelasteten Zustand
-      url: machines/full-state-simulator.md
-    - text: Ressourcenschätzung
-      url: machines/resources-estimator.md
-    - text: Simulator für Quantenablaufverfolgung
-      url: machines/qc-trace-simulator/index.md
-    - text: QDK-Toffoli-Simulator
-      url: machines/toffoli-simulator.md
-- title: Q#-Sprache und -Bibliotheken
+- title: Quantencomputingkonzepte
   linkLists:
   - linkListType: concept
     links:
-    - text: Einführung in die Q#-Sprache
-      url: language/index.md
-    - text: Versionshinweise
-      url: relnotes/index.md
+    - text: Quantencomputingkonzepte
+      url: concepts/index.md
+    - text: Glossar
+      url: Glossary.md
+- title: Q#-Algorithmen und -Anwendungen
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Amplitudenverstärkung
+      url: libraries/standard/algorithms.md
+    - text: Quantenphasenschätzung
+      url: libraries/standard/algorithms.md#quantum-phase-estimation
+    - text: Shor-Algorithmus
+      url: libraries/standard/applications.md#shors-algorithm
+    - text: Hamilton-Simulation
+      url: libraries/standard/applications.md
+- title: Q#-Bibliotheken
+  linkLists:
   - linkListType: reference
     links:
     - text: Standardbibliotheken
       url: libraries/standard/index.md
-    - text: Chemiebibliothek
-      url: libraries/chemistry/index.md
     - text: Numerische Bibliothek
       url: libraries/numerics/index.md
-  - linkListType: reference
+    - text: Chemiebibliothek
+      url: libraries/chemistry/index.md
+    - text: Chemiekonzepte
+      url: libraries/chemistry/concepts/quantum-dynamics.md
+  - linkListType: how-to-guide
     links:
-    - text: Q#-Referenz
-      url: https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.bitwise?view=qsharp-preview
-    - text: C#-Komponenten
-      url: https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators?view=quantum-dotnet-latest
+    - text: Numerische Q#-Beispiele
+      url: libraries/numerics/numerics.md
+    - text: Q#-Chemiebeispiele
+      url: libraries/chemistry/samples/index.md
+    - text: End-to-End mit NWChem
+      url: libraries/chemistry/samples/end-to-end.md
+- title: Community und Mitwirkung
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Am QDK mitwirken
+      url: contributing/index.md
+    - text: Das Microsoft Quantum-Blog lesen
+      url: https://cloudblogs.microsoft.com/quantum

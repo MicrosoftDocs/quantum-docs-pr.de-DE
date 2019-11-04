@@ -6,27 +6,23 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 56455e9d5cd452b8620ee794f40563d1d3040193
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 4050e2ee9e516aed7a8ba1398792562926808ee0
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183844"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463324"
 ---
 # <a name="q-style-guide"></a>F #-Stil Handbuch #
 ## <a name="general-conventions"></a>Allgemeine Konventionen ##
 
 Die in diesem Handbuch empfohlenen Konventionen dienen dazu, Programme und Bibliotheken, die in Q # geschrieben wurden, einfacher zu lesen und zu verstehen.
 
-# <a name="guidancetabguidance"></a>[Leitfaden](#tab/guidance)
+## <a name="guidance"></a>Leitfaden
 
 Wir empfehlen Folgendes:
 
 - Ignorieren Sie niemals eine Konvention, wenn Sie dies nicht absichtlich tun, um für Ihre Benutzer besser lesbaren und verständlichen Code bereitzustellen.
-
-# <a name="examplestabexamples"></a>[Beispiele](#tab/examples)
-
-***
 
 ## <a name="naming-conventions"></a>Namenskonventionen ##
 
@@ -67,7 +63,7 @@ Andere Verben können auch in diesem Fall nützlich sein, wie in `IterateThrough
 | Verb | Erwarteter Effekt |
 | ---- | ------ |
 | Anwenden | Ein als Eingabe bereitgestellter Vorgang wird aufgerufen. |
-| Machung | Eine Hypothese über das Ergebnis einer möglichen Quantum-Messung wird von einem Simulator geprüft. |
+| Assert | Eine Hypothese über das Ergebnis einer möglichen Quantum-Messung wird von einem Simulator geprüft. |
 | Schätzung | Ein klassischer Wert wird zurückgegeben, der eine Schätzung darstellt, die aus einer oder mehreren Messungen gezeichnet wird. |
 | "Measure" | Eine Quantum-Messung wird ausgeführt, und das Ergebnis wird an den Benutzer zurückgegeben. |
 | Vorbereiten | Ein bestimmtes Register von Qubits wird in einem bestimmten Zustand initialisiert. |
