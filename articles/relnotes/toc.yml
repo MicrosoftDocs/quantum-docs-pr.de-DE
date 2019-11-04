@@ -1,0 +1,4 @@
+name: Versionshinweise
+items:
+  - name: 0.3 Migrationsleitfaden
+    href: 0.3-migration.md

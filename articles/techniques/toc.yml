@@ -1,0 +1,14 @@
+- name: 'Q#- und Dateistrukturen'
+  href: file-structure.md
+- name: Vorgänge und Funktionen
+  href: operations-and-functions.md
+- name: Lokale Variablen
+  href: local-variables.md
+- name: Arbeiten mit Qubits
+  href: working-with-qubits.md
+- name: Zusammenfügen des Gesamtbilds
+  href: putting-it-all-together.md
+- name: Weitere Informationen
+  href: going-further.md
+- name: Testen und Debuggen
+  href: testing-and-debugging.md
