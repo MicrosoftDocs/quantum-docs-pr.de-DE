@@ -1,4 +1,4 @@
-- name: Was ist Quantencomputing?
+- name: 'Quantencomputing: Geschichte und Hintergrund'
   href: index.md
 - name: Vektoren und Matrizen
   href: vectors-and-matrices.md
