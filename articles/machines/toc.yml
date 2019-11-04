@@ -1,4 +1,4 @@
-- name: Klassische Computer und Treiber
+- name: Übersicht
   href: index.md
 - name: Quantensimulator
   href: full-state-simulator.md

@@ -1,0 +1,12 @@
+- name: Verweis
+  items:
+    - name: 'Q#-Bibliotheken'
+      href: qsharp/toc.yml
+    - name: .NET-Bibliotheken
+      items:
+        - name: Ablaufverfolgungssimulator
+          href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators'
+        - name: Quantenchemie
+          href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry'
+    - name: Python-Bibliotheken
+      href: 'https://docs.microsoft.com/python/qsharp'
