@@ -1,19 +1,19 @@
 ---
-title: Quantensimulatoren und klassische Treiber | Microsoft-Dokumentation
+title: Quantensimulatoren und Hostanwendungen | Microsoft-Dokumentation
 description: Es wird beschrieben, wie Sie Quantensimulatoren mit einer klassischen .NET-Computingsprache (normalerweise C# oder Q#) betreiben.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines
-ms.openlocfilehash: 5ac79280669ae0acfe993a1c2ae1c069b0c01848
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 14aed75ed0ed192f88699b1c7dbacfae23f74642
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035114"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442213"
 ---
-# <a name="classical-drivers-and-machines"></a>Klassische Treiber und Computer
+# <a name="quantum-simulators-and-host-applications"></a>Quantensimulatoren und Hostanwendungen
 
 ## <a name="what-youll-learn"></a>Sie lernen Folgendes
 
@@ -52,7 +52,7 @@ Diese sind im Namespace `Microsoft.Quantum.Simulation.Simulators` definiert.
 * Eine [auf der Ablaufverfolgung basierende Ressourcenschätzung](xref:microsoft.quantum.machines.qc-trace-simulator.intro) (die `QCTraceSimulator`-Klasse). Sie ermöglicht eine erweiterte Analyse des Ressourcenverbrauchs für das gesamte Aufrufdiagramm des Algorithmus.
 * Ein [Toffoli-Simulator](xref:microsoft.quantum.machines.toffoli-simulator) (die `ToffoliSimulator`-Klasse).
 
-## <a name="writing-a-classical-driver-program"></a>Schreiben eines klassischen Treiberprogramms
+## <a name="writing-a-host-application"></a>Schreiben einer Hostanwendung
 
 Unter [Schreiben eines Quantenprogramms](xref:microsoft.quantum.write-program) haben wir einen einfachen C#-Treiber für unseren Teleportalgorithmus geschrieben. Ein C#-Treiber hat vier Hauptaufgaben:
 
@@ -94,7 +94,7 @@ Beim Übergeben von Argumenten an eine `Run`-Methode sind einige Besonderheiten 
 * Arrays müssen mit einem `Microsoft.Quantum.Simulation.Core.QArray<T>`-Objekt umschlossen sein.
     Eine `QArray`-Klasse verfügt über einen Konstruktor, für den eine beliebige sortierte Sammlung (`IEnumerable<T>`) mit geeigneten Objekten verwendet werden kann.
 * Das leere Tupel (`()` in Q#) wird in C# mit `QVoid.Instance` dargestellt.
-* Tupel, die nicht leer sind, werden als `ValueType`-.NET-Instanzen dargestellt.
+* Tupel, die nicht leer sind, werden als `ValueTuple`-.NET-Instanzen dargestellt.
 * Benutzerdefinierte Q#-Typen werden als Basistyp übergeben.
 * Zum Übergeben eines Vorgangs oder einer Funktion an eine `Run`-Methode müssen Sie eine Instanz der Vorgangs- oder Funktionsklasse abrufen, indem Sie die `Get<>`-Methode des Simulators verwenden.
 
