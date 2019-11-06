@@ -21,9 +21,10 @@ output:
   types:
   - summary: Ein Vorgang, der Phasen implementiert, die als Teil Spiegelungen angegeben werden.
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
-ms.openlocfilehash: 2e4e447fd7ceef02249aa6577ff0274db046b9f2
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73215607"
+metadata:
+  ms.openlocfilehash: 2e4e447fd7ceef02249aa6577ff0274db046b9f2
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73215607"

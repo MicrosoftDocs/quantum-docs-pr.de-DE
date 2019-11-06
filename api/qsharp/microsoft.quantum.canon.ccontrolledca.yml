@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.canon.ccontrolledca
-name: Ccontrolledca
+name: CControlledCA
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
@@ -9,9 +9,9 @@ summary: >-
   Der Modifizierer `CA` gibt an, dass der Vorgang steuerbar und adjointable ist.
 syntax: "function CControlledCA (op : ('T => Unit is Ctl + Adj)) : ((Bool, 'T) => Unit is Ctl + Adj)"
 input:
-  content: "(op: ('t = > Unit ist CTL + adj))"
+  content: "(op : ('T => Unit is Ctl + Adj))"
   types:
-  - name: schel
+  - name: op
     summary: Ein Vorgang, der bedingt angewendet werden soll.
     isOperation: true
     input:
@@ -26,7 +26,7 @@ input:
     - Adjoint
     - Controlled
 output:
-  content: ((Bool, 't) = > Einheit ist CTL + adj)
+  content: ((Bool, 'T) => Unit is Ctl + Adj)
   types:
   - summary: Ein neuer Vorgang, bei dem es sich um einen op-Vorgang handelt, wenn das klassische Steuerelement
     isOperation: true
@@ -48,9 +48,10 @@ typeParameters:
   summary: Der Eingabetyp des Vorgangs, der bedingt angewendet werden soll.
 seeAlso:
 - microsoft.quantum.canon.ccontrolled
-ms.openlocfilehash: 918146c6f167050490d3a9047cf75dc66236b004
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068069"
+metadata:
+  ms.openlocfilehash: 918146c6f167050490d3a9047cf75dc66236b004
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068069"

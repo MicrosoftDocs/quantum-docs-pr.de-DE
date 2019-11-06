@@ -61,9 +61,10 @@ output:
   - summary: Eine Schätzung von $ \hat{\phi} $ der Erde State Energy $ \phi $ der Boden Zustands Energie des Generators, der durch $U $ dargestellt wird.
     isPrimitive: true
     uid: Double
-ms.openlocfilehash: aff8ac5575b6a5e08dc80263a7a8d4bfec59fa12
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73223325"
+metadata:
+  ms.openlocfilehash: aff8ac5575b6a5e08dc80263a7a8d4bfec59fa12
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73223325"

@@ -1,25 +1,26 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.convert.intasstring
-name: Intasstring
+name: IntAsString
 type: function
 namespace: Microsoft.Quantum.Convert
 summary: Konvertiert eine angegebene ganzzahlige Zahl in eine entsprechende Zeichen folgen Darstellung.
 remarks: Weitere [ C# ](https://docs.microsoft.com/dotnet/api/system.convert.tostring?view=netframework-4.7.1#System_Convert_ToString_System_Int64_) Informationen finden Sie unter Convert. $ String.
 syntax: 'function IntAsString (a : Int) : String'
 input:
-  content: '(a: int)'
+  content: '(a : Int)'
   types:
   - name: a
     isPrimitive: true
     uid: Int
 output:
-  content: string
+  content: String
   types:
   - isPrimitive: true
     uid: String
-ms.openlocfilehash: 0a4b5418194bfd45b904f2469cac3bd020e838a7
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066522"
+metadata:
+  ms.openlocfilehash: 0a4b5418194bfd45b904f2469cac3bd020e838a7
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066522"

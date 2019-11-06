@@ -17,9 +17,10 @@ output:
   - summary: Der absolute Wert $ | c | ^ 2 = x ^ 2 + y ^ 2 $ wird quadriert.
     isPrimitive: true
     uid: Double
-ms.openlocfilehash: f7458a808feb968f1a3251d2e28b443a5ae53d55
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73235854"
+metadata:
+  ms.openlocfilehash: f7458a808feb968f1a3251d2e28b443a5ae53d55
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73235854"

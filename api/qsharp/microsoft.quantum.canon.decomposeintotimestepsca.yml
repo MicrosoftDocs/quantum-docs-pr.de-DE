@@ -1,22 +1,22 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.canon.decomposeintotimestepsca
-name: "\"Debug\"-timestepsca"
+name: DecomposeIntoTimeStepsCA
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: Gibt einen Vorgang zurück, der den Trotter – Suzuki Integrator für einen angegebenen Vorgang implementiert.
 syntax: "function DecomposeIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
 references: >-
-  We use the implementation in
+  Wir verwenden die Implementierung in
 
 
-  - [ *D. W. Berry, G. Ahokas, R. Cleve, B. C. Sanders* ](https://arxiv.org/abs/quant-ph/0508139)
+  - [*D. W. Beeren, G. ahukas, R. Cleve, B. C. Sanders*](https://arxiv.org/abs/quant-ph/0508139)
 input:
-  content: '((nsteps: int, op: ((int, Double, t) = > Unit ist ADJ + CTL)), trotterorder: int)'
+  content: "((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int)"
   types:
-  - name: nsteps
+  - name: nSteps
     isPrimitive: true
     uid: Int
-  - name: schel
+  - name: op
     isOperation: true
     input:
       types:
@@ -33,7 +33,7 @@ input:
     functors:
     - Adjoint
     - Controlled
-  - name: trotterorder
+  - name: trotterOrder
     summary: >-
       Wählt die Reihenfolge des zu verwendenden Trotter – Suzuki Integrator aus.
 
@@ -41,7 +41,7 @@ input:
     isPrimitive: true
     uid: Int
 output:
-  content: ((Double, 't) = > Einheit ist ADJ + CTL)
+  content: ((Double, 'T) => Unit is Adj + Ctl)
   types:
   - summary: Gibt eine einheitliche-Klasse zurück, die den Trotter – Suzuki Integrator implementiert, wobei der erste Parameter `Double` die Größe der Integrationsschritte ist und der zweite Parameter das Ziel ist.
     isOperation: true
@@ -61,9 +61,10 @@ output:
 typeParameters:
 - uid: "'T"
   summary: Der Typ, auf den jeder Zeit Schritt reagieren soll. in der Regel werden entweder `Qubit[]` oder `Qubit`.
-ms.openlocfilehash: 328db9b314320c724cf03adb19ee59d63a33e56e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067831"
+metadata:
+  ms.openlocfilehash: 328db9b314320c724cf03adb19ee59d63a33e56e
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067831"

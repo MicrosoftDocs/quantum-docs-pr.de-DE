@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.chemistry.jordanwigner.vqe
-name: Microsoft. Quantum. Chemistry. jordanwigner. vqe
+name: Microsoft.Quantum.Chemistry.JordanWigner.VQE
 functions:
 - uid: microsoft.quantum.chemistry.jordanwigner.vqe.expandedcoefficients
   summary: Erweitert die kompakte Darstellung der Jordanien-Wigner-Koeffizienten, um zwischen diesen und den Pauli-Begriffen eine eins-zu-Eins-Zuordnung zu erhalten.
@@ -11,9 +11,10 @@ operations:
   summary: Schätzt die Energie des Moleküls, indem die von den einzelnen Jordanien-Wigner-Begriffen beigetragene Energie summiert wird.
 - uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
   summary: Berechnet die Energie, die einem bestimmten Jordan-Wigner-hamiltonbegriff zugeordnet ist.
-ms.openlocfilehash: 5c56599c1926f2a11631c74cc03545c43a724eeb
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73057242"
+metadata:
+  ms.openlocfilehash: 5c56599c1926f2a11631c74cc03545c43a724eeb
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73057242"
