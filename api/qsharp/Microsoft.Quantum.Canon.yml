@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.canon
-name: Microsoft. Quantum. Canon
+name: Microsoft.Quantum.Canon
 functions:
 - uid: microsoft.quantum.canon.asqubitarray
   summary: >-
@@ -936,9 +936,10 @@ newtypes:
     Ein Last-in-First-Out-Stapel von `Result`-Variablen.
 
     Der Stapel besteht aus einer ganzzahligen Kapazität, einem Stapelzeiger und einem `Result` Array.
-ms.openlocfilehash: 8767d438adcecd7ccbd539d7c123ac42cfb8c295
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065162"
+metadata:
+  ms.openlocfilehash: 8767d438adcecd7ccbd539d7c123ac42cfb8c295
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065162"

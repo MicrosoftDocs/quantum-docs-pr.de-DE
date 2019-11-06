@@ -1,12 +1,12 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.math.argcomplexpolar
-name: Argcomplexpolar
+name: ArgComplexPolar
 type: function
 namespace: Microsoft.Quantum.Math
 summary: Gibt die Phase einer komplexen Zahl vom Typ `ComplexPolar`zurück.
 syntax: 'function ArgComplexPolar (input : Microsoft.Quantum.Math.ComplexPolar) : Double'
 input:
-  content: '(Eingabe: Microsoft. Quantum. Math. complexpolar)'
+  content: '(input : Microsoft.Quantum.Math.ComplexPolar)'
   types:
   - name: input
     summary: Komplexe Zahl $c = r e ^ {i t} $.
@@ -17,9 +17,10 @@ output:
   - summary: Phase $ \text{Arg} [c] = t $.
     isPrimitive: true
     uid: Double
-ms.openlocfilehash: 4988eccbf920b766a4cfc4304015749eeb19dc84
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067491"
+metadata:
+  ms.openlocfilehash: 4988eccbf920b766a4cfc4304015749eeb19dc84
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067491"

@@ -1,15 +1,15 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.canon.conjugatedbyc
-name: Konkanter
+name: ConjugatedByC
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: Bei den äußeren und inneren Vorgängen wird ein neuer Vorgang zurückgegeben, der den inneren Vorgang durch den äußeren Vorgang konjugiert.
 remarks: Der äußere Vorgang wird immer als adjointable angenommen, er muss jedoch nicht steuerbar sein, damit der kombinierte Vorgang steuerbar ist.
 syntax: "function ConjugatedByC (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Ctl)) : ('T => Unit is Ctl)"
 input:
-  content: "(outeroperation: ('t = > Unit ist adj), inneroperation: ('t = > Unit ist CTL))"
+  content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Ctl))"
   types:
-  - name: outeroperation
+  - name: outerOperation
     summary: Der Vorgang $U $, der für die konjugierte $V $ verwendet werden soll. Beachten Sie, dass der äußere Vorgang $U $ adjointable sein muss, aber nicht steuerbar sein muss.
     isOperation: true
     input:
@@ -22,7 +22,7 @@ input:
         uid: Unit
     functors:
     - Adjoint
-  - name: inneroperation
+  - name: innerOperation
     summary: Der Vorgang $V $ konjugated.
     isOperation: true
     input:
@@ -36,7 +36,7 @@ input:
     functors:
     - Controlled
 output:
-  content: ('T = > Einheit ist CTL)
+  content: ('T => Unit is Ctl)
   types:
   - summary: Ein neuer Vorgang, dessen Aktion durch die einheitliche $U ^ {\dagger} V U $ dargestellt wird.
     isOperation: true
@@ -58,9 +58,10 @@ seeAlso:
 - conjugatedbya
 - conjugatedbyca
 - applywith
-ms.openlocfilehash: 64b754d98164ea9d7ef5fcdc17141a5b1ef008d4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067967"
+metadata:
+  ms.openlocfilehash: 64b754d98164ea9d7ef5fcdc17141a5b1ef008d4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067967"

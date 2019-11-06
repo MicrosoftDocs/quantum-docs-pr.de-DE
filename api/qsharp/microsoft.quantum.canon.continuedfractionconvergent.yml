@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.canon.continuedfractionconvergent
-name: Continuedfractionconvergent
+name: ContinuedFractionConvergent
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
@@ -12,20 +12,21 @@ summary: >-
   Verwenden Sie @"microsoft.quantum.math.continuedfractionconvergenti".
 syntax: 'function ContinuedFractionConvergent (fraction : Microsoft.Quantum.Math.Fraction, denominatorBound : Int) : Microsoft.Quantum.Math.Fraction'
 input:
-  content: '(Bruchteil: Microsoft. Quantum. Math. Bruchteil, Nenner-gebunden: int)'
+  content: '(fraction : Microsoft.Quantum.Math.Fraction, denominatorBound : Int)'
   types:
   - name: fraction
     uid: microsoft.quantum.math.fraction
-  - name: Nenner
+  - name: denominatorBound
     isPrimitive: true
     uid: Int
 output:
-  content: Microsoft. Quantum. Math. Bruchteil
+  content: Microsoft.Quantum.Math.Fraction
   types:
   - uid: microsoft.quantum.math.fraction
-ms.openlocfilehash: b419dd1232944f1837c8899a9d0222cf5e7c9732
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067933"
+metadata:
+  ms.openlocfilehash: b419dd1232944f1837c8899a9d0222cf5e7c9732
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067933"

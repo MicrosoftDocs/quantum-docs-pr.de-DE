@@ -161,9 +161,10 @@ newtypes:
     zur einheitlichen Zeit-Evolution für einige Zeitintervalle.
 - uid: microsoft.quantum.simulation.unitary
   summary: Stellt die Weiterentwicklung unter einem einheitlichen Operator dar.
-ms.openlocfilehash: 05db213d04304a635e4e86e0f6c40f15bb81441a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73215879"
+metadata:
+  ms.openlocfilehash: 05db213d04304a635e4e86e0f6c40f15bb81441a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73215879"

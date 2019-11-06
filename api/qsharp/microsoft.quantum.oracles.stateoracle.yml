@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.oracles.stateoracle
-name: Stateoracle
+name: StateOracle
 type: newtype
 namespace: Microsoft.Quantum.Oracles
 summary: >-
@@ -18,9 +18,10 @@ remarks: >-
 
   Der erste Parameter ist ein Index für das Qubit-Register von $ \ket{0}\_f $. Der zweite Parameter umfasste beide Register.
 syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
-ms.openlocfilehash: 1faa47c21e43355ed036498adf4e823ff3f8a0e4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067219"
+metadata:
+  ms.openlocfilehash: 1faa47c21e43355ed036498adf4e823ff3f8a0e4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067219"

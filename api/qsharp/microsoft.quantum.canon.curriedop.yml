@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.canon.curriedop
-name: Curriedop
+name: CurriedOp
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
@@ -26,9 +26,9 @@ remarks: >-
   ```
 syntax: "function CurriedOp (op : (('T, 'U) => Unit)) : ('T -> ('U => Unit))"
 input:
-  content: "(op: (('t, ' U) = > Unit))"
+  content: "(op : (('T, 'U) => Unit))"
   types:
-  - name: schel
+  - name: op
     summary: Ein Vorgang, dessen Eingabe ein paar ist.
     isOperation: true
     input:
@@ -42,7 +42,7 @@ input:
       - isPrimitive: true
         uid: Unit
 output:
-  content: ('T-> (' U = > Unit))
+  content: ('T -> ('U => Unit))
   types:
   - summary: Ein Vorgang, der das erste Element eines Paars akzeptiert und einen Vorgang zurückgibt, der als Eingabe das zweite Element der ursprünglichen Vorgangs Eingabe akzeptiert.
     isFunction: true
@@ -66,9 +66,10 @@ typeParameters:
   summary: Der Typ der ersten Komponente einer Funktion, die für Paare definiert ist.
 - uid: "'U"
   summary: Der Typ der zweiten Komponente einer Funktion, die für Paare definiert ist.
-ms.openlocfilehash: 788648d24ba536926504caba92e768ecb34e001a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067899"
+metadata:
+  ms.openlocfilehash: 788648d24ba536926504caba92e768ecb34e001a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067899"

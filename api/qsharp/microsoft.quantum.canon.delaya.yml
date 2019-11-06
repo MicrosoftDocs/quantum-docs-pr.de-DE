@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.canon.delaya
-name: Delaya
+name: DelayA
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
@@ -14,9 +14,9 @@ summary: >-
   Ausdruck `Delay(op,arg,_)` die die Anwendung von `op`verzögern kann.
 syntax: "operation DelayA (op : ('T => Unit is Adj), arg : 'T, aux : Unit) : Unit"
 input:
-  content: "(op: ('t = > Unit ist adj), Arg: 't, AUX: Unit)"
+  content: "(op : ('T => Unit is Adj), arg : 'T, aux : Unit)"
   types:
-  - name: schel
+  - name: op
     summary: Ein anzuwendende Vorgang.
     isOperation: true
     input:
@@ -29,16 +29,16 @@ input:
         uid: Unit
     functors:
     - Adjoint
-  - name: gebeut
+  - name: arg
     summary: Die Eingabe, auf die der Vorgang angewendet wird.
     uid: "'T"
     isLocal: true
-  - name: Boda
+  - name: aux
     summary: Argument, das verwendet wird, um die Anwendung des Vorgangs mithilfe der partiellen Anwendung zu verzögern.
     isPrimitive: true
     uid: Unit
 output:
-  content: Einheit
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
@@ -50,9 +50,10 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.delay
 - microsoft.quantum.canon.delayed
-ms.openlocfilehash: f36930faacf0aa4a1ea87a09fc3018e06e62d7ac
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067797"
+metadata:
+  ms.openlocfilehash: f36930faacf0aa4a1ea87a09fc3018e06e62d7ac
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067797"
