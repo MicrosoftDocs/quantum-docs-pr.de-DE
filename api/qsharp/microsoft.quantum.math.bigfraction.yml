@@ -5,9 +5,10 @@ type: newtype
 namespace: Microsoft.Quantum.Math
 summary: Stellt eine rationale Zahl der Formular `p/q`dar. Die ganzzahlige `p` ist das erste Element des Tupels, und `q` ist das zweite Element des Tupels.
 syntax: newtype BigFraction = (BigInt, BigInt);
-ms.openlocfilehash: 641939304a0846c6de4b200f87c28546278005e6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73230210"
+metadata:
+  ms.openlocfilehash: 641939304a0846c6de4b200f87c28546278005e6
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73230210"

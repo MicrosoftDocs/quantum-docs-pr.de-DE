@@ -41,9 +41,10 @@ output:
   - summary: Entweder der kleinste Index `idx`, dass `predicate(arr[idx])` true ist, oder-1, wenn kein solches Element vorhanden ist.
     isPrimitive: true
     uid: Int
-ms.openlocfilehash: 6f7fee40a558e7bb17b94c9dd58656c6f34ceac8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73218191"
+metadata:
+  ms.openlocfilehash: 6f7fee40a558e7bb17b94c9dd58656c6f34ceac8
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73218191"

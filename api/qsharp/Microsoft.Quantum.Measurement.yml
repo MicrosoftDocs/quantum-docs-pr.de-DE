@@ -14,9 +14,10 @@ operations:
   summary: Misst ein einzelnes Qubit auf `Z` Basis und setzt es auf den standardmäßigen Basiszustand | 0 〉 nach der Messung zurück.
 - uid: microsoft.quantum.measurement.multim
   summary: Misst jedes Qubit in einem angegebenen Array standardmäßig.
-ms.openlocfilehash: 872031f8a6ebd77e72cd74e1c98e7347c09ca14a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210983"
+metadata:
+  ms.openlocfilehash: 872031f8a6ebd77e72cd74e1c98e7347c09ca14a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73210983"

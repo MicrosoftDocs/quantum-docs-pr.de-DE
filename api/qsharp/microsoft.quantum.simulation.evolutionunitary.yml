@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.simulation.evolutionunitary
-name: Evolutioneinheitlich
+name: EvolutionUnitary
 type: newtype
 namespace: Microsoft.Quantum.Simulation
 summary: >-
@@ -9,9 +9,10 @@ summary: >-
 
   Der erste Parameter ist die Dauer der Zeit-Evolution, und der zweite Parameter ist das Qubit-Register, auf das durch die einheitliche-Aktion reagiert wird.
 syntax: newtype EvolutionUnitary = ((Double, Qubit[]) => Unit is Adj + Ctl);
-ms.openlocfilehash: 185e621920a7800fd2c78ccbfb7b4ca12d51e8ba
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067083"
+metadata:
+  ms.openlocfilehash: 185e621920a7800fd2c78ccbfb7b4ca12d51e8ba
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067083"

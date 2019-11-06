@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.canon.cnotchaintarget
-name: Cnotchaintarget
+name: CNOTChainTarget
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
@@ -29,28 +29,29 @@ remarks: >-
   ```
 syntax: 'operation CNOTChainTarget (qubits : Qubit[], targetQubit : Qubit) : Unit'
 input:
-  content: '(Qubits: Qubit [], targetqubit: Qubit)'
+  content: '(qubits : Qubit[], targetQubit : Qubit)'
   types:
-  - name: Qubits
+  - name: qubits
     summary: Array von Qubits, für das die Parität berechnet wird.
     isArray: true
     isPrimitive: true
     uid: Qubit
-  - name: targetqubit
+  - name: targetQubit
     summary: Endgültiges Qubit, in das die Parität von ' Qubits ' XoReD ist.
     isPrimitive: true
     uid: Qubit
 output:
-  content: Einheit
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
 functors:
 - Adjoint
 - Controlled
-ms.openlocfilehash: 26893296ec8fe7ec8d8cc5309e2bd5066f315849
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068035"
+metadata:
+  ms.openlocfilehash: 26893296ec8fe7ec8d8cc5309e2bd5066f315849
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068035"

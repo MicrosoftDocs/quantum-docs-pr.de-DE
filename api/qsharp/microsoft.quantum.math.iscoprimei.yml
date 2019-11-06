@@ -22,9 +22,10 @@ output:
   - summary: True, wenn $a $ und $b $ eine Co-Primzahl sind (z. b. der größte gemeinsame Divisor ist 1), andernfalls false.
     isPrimitive: true
     uid: Bool
-ms.openlocfilehash: 3071dc6481c1bbf3fb5544e9de84ee6e944ad4ba
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73232726"
+metadata:
+  ms.openlocfilehash: 3071dc6481c1bbf3fb5544e9de84ee6e944ad4ba
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73232726"

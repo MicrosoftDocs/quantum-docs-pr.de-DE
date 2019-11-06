@@ -8,9 +8,10 @@ operations:
   summary: ''
 - uid: microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation
   summary: Führt eine iterative Phasen Schätzung mithilfe eines zufälligen Durchlaufs aus, um einen ungefähren bayesschen Rückschluss auf die klassischen Messergebnisse eines bestimmten Oracle-und eigen Zustands festzustellen.
-ms.openlocfilehash: 3512f53bc5f29a634ea61e3a2d0c8a9f3fcc01f5
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73215913"
+metadata:
+  ms.openlocfilehash: 3512f53bc5f29a634ea61e3a2d0c8a9f3fcc01f5
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73215913"

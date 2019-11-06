@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.canon.assertprobintbe
-name: Assertprobintbe
+name: AssertProbIntBE
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
@@ -12,27 +12,28 @@ summary: >-
   Dieser Vorgang wurde entfernt.
 syntax: 'operation AssertProbIntBE (stateIndex : Int, prob : Double, qubits : Microsoft.Quantum.Arithmetic.BigEndian, tolerance : Double) : Unit'
 input:
-  content: '(Status Index: int, prob: Double, Qubits: Microsoft. Quantum. Arithmetik. bigEndian, Tolerance: Double)'
+  content: '(stateIndex : Int, prob : Double, qubits : Microsoft.Quantum.Arithmetic.BigEndian, tolerance : Double)'
   types:
-  - name: Status Index
+  - name: stateIndex
     isPrimitive: true
     uid: Int
   - name: prob
     isPrimitive: true
     uid: Double
-  - name: Qubits
+  - name: qubits
     uid: microsoft.quantum.arithmetic.bigendian
-  - name: toleriert
+  - name: tolerance
     isPrimitive: true
     uid: Double
 output:
-  content: Einheit
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
-ms.openlocfilehash: 687e30ca8468329cc4b491ec124156a46d954282
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068409"
+metadata:
+  ms.openlocfilehash: 687e30ca8468329cc4b491ec124156a46d954282
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068409"

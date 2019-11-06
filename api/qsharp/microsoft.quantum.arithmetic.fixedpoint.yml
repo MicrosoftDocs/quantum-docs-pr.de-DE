@@ -5,9 +5,10 @@ type: newtype
 namespace: Microsoft.Quantum.Arithmetic
 summary: Stellt ein Register der Qubits-Codierung einer Festkomma Zahl dar. Besteht aus einer ganzen Zahl, die gleich der Anzahl der Qubits Links vom binären Punkt ist, d. h., Qubits mit Gewichtung größer oder gleich 1 und einem Quantum-Register.
 syntax: newtype FixedPoint = (Int, Qubit[]);
-ms.openlocfilehash: 4ab209ab14486893ea3b23b32e14e6c8a05da514
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73219075"
+metadata:
+  ms.openlocfilehash: 4ab209ab14486893ea3b23b32e14e6c8a05da514
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73219075"

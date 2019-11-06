@@ -18,9 +18,10 @@ output:
   - summary: Das Ergebnis der Messung `target` in der Pauli-$Z $.
     isPrimitive: true
     uid: Result
-ms.openlocfilehash: a0a07ec90e36b06640ff66340b7a3d979251b0ff
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73231179"
+metadata:
+  ms.openlocfilehash: a0a07ec90e36b06640ff66340b7a3d979251b0ff
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73231179"

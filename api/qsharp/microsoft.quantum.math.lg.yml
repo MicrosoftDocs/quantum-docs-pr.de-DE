@@ -18,9 +18,10 @@ output:
   - summary: Der Logarithmus zur Basis 2 $y = \log_2 (x) $, sodass $x = 2 ^ y $ ist.
     isPrimitive: true
     uid: Double
-ms.openlocfilehash: b96476effbf0e854a79f3f0e61ca96fcd33db0fc
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73232675"
+metadata:
+  ms.openlocfilehash: b96476effbf0e854a79f3f0e61ca96fcd33db0fc
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73232675"

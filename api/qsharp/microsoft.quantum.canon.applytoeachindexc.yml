@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.canon.applytoeachindexc
-name: Applyteachindexc
+name: ApplyToEachIndexC
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
@@ -9,9 +9,9 @@ summary: >-
   Der-Modifizierer `C` gibt an, dass der Single-Qubit-Vorgang steuerbar ist.
 syntax: "operation ApplyToEachIndexC (singleElementOperation : ((Int, 'T) => Unit is Ctl), register : 'T[]) : Unit"
 input:
-  content: "(singleelementoperation: ((int, t) = > Unit ist CTL), Register: 't [])"
+  content: "(singleElementOperation : ((Int, 'T) => Unit is Ctl), register : 'T[])"
   types:
-  - name: singleelementoperation
+  - name: singleElementOperation
     summary: Der auf die einzelnen Qubits anzuwendende Vorgang.
     isOperation: true
     input:
@@ -26,13 +26,13 @@ input:
         uid: Unit
     functors:
     - Controlled
-  - name: Registrieren
+  - name: register
     summary: Ein Array von Qubits, auf das der angegebene Vorgang angewendet werden soll.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
-  content: Einheit
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
@@ -43,9 +43,10 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.canon.applytoeachindex
-ms.openlocfilehash: ca5ba68229968b43d28535e3bf728b2b8a8ef4fb
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068443"
+metadata:
+  ms.openlocfilehash: ca5ba68229968b43d28535e3bf728b2b8a8ef4fb
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068443"

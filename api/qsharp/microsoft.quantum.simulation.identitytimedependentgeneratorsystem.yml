@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.simulation.identitytimedependentgeneratorsystem
-name: Identitytimedependentgeneratorsystem
+name: IdentityTimeDependentGeneratorSystem
 type: function
 namespace: Microsoft.Quantum.Simulation
 summary: Gibt ein Zeit abhängiges Generator System zurück, das mit der hamiltona-`H(s) = 0`konsistent ist.
@@ -9,13 +9,14 @@ input:
   content: ()
   types: []
 output:
-  content: Microsoft. Quantum. Simulation. timedependentgeneratorsystem
+  content: Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem
   types:
   - summary: Ein Zeit abhängiges Generator System, das die Evolution unter den hamiltonan $H (s) = $0 für alle $s $ darstellt.
     uid: microsoft.quantum.simulation.timedependentgeneratorsystem
-ms.openlocfilehash: 348b97223c63422bf7ab9ea08e5a1e0ee3e31738
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065553"
+metadata:
+  ms.openlocfilehash: 348b97223c63422bf7ab9ea08e5a1e0ee3e31738
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065553"
