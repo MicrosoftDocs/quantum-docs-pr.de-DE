@@ -1,15 +1,15 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.arithmetic.applyleoperationonphasele
-name: Applyleoperationonphasele
+name: ApplyLEOperationOnPhaseLE
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
 summary: Wendet einen Vorgang an, bei dem ein <xref:microsoft.quantum.arithmetic.phaselittleendian> registrieren als Eingabe für ein Ziel Register des Typs <xref:microsoft.quantum.arithmetic.littleendian>erfolgt.
 remarks: Das Register wird durch die Verwendung von <xref:microsoft.quantum.canon.qftle> in `LittleEndian` transformiert und dann nach der Anwendung von `op`an seine ursprüngliche Darstellung zurückgegeben.
 syntax: 'operation ApplyLEOperationOnPhaseLE (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
-  content: '(op: (Microsoft. Quantum. Arithmetik. littleredian = > Unit), Ziel: Microsoft. Quantum. Arithmetik. phaselittleddian)'
+  content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
-  - name: schel
+  - name: op
     summary: Der anzuwendende Vorgang.
     isOperation: true
     input:
@@ -23,7 +23,7 @@ input:
     summary: Das Register, auf das der Vorgang angewendet wird.
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
-  content: Einheit
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
@@ -31,9 +31,10 @@ seeAlso:
 - microsoft.quantum.canon.applyleoperationonphaselea
 - microsoft.quantum.canon.applyleoperationonphaselea
 - microsoft.quantum.canon.applyleoperationonphaseleca
-ms.openlocfilehash: 9364435896dc43710eb37238b00f8139f9e6b62d
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056719"
+metadata:
+  ms.openlocfilehash: 9364435896dc43710eb37238b00f8139f9e6b62d
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056719"

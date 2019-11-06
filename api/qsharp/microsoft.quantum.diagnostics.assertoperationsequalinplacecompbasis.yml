@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
-name: Assertoperationsequalinplacecompbasis
+name: AssertOperationsEqualInPlaceCompBasis
 type: operation
 namespace: Microsoft.Quantum.Diagnostics
 summary: >-
@@ -9,13 +9,13 @@ summary: >-
   Dies ist eine erforderliche, aber nicht ausreichende Bedingung für die Gleichheit von zwei uniflüssen.
 syntax: 'operation AssertOperationsEqualInPlaceCompBasis (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
 input:
-  content: '(nqubits: int, givenu: (Qubit [] = > Unit), expectedu: (Qubit [] = > Unit ist adj))'
+  content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
   types:
-  - name: nqubits
+  - name: nQubits
     summary: Die Anzahl der Qubits $n $, an denen die Vorgänge `givenU` und `expectedU` arbeiten.
     isPrimitive: true
     uid: Int
-  - name: givenu
+  - name: givenU
     summary: Der Vorgang auf $n $ Qubits, der geprüft werden soll.
     isOperation: true
     input:
@@ -27,7 +27,7 @@ input:
       types:
       - isPrimitive: true
         uid: Unit
-  - name: expectedu
+  - name: expectedU
     summary: Verweis Vorgang auf $n $ Qubits, mit dem `givenU` verglichen werden soll.
     isOperation: true
     input:
@@ -42,13 +42,14 @@ input:
     functors:
     - Adjoint
 output:
-  content: Einheit
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
-ms.openlocfilehash: 5841b6dc60047c051b38305c177f54d3eb84e087
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066556"
+metadata:
+  ms.openlocfilehash: 5841b6dc60047c051b38305c177f54d3eb84e087
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066556"

@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.canon.witha
-name: Bour
+name: WithA
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
@@ -12,9 +12,9 @@ summary: >-
   Verwenden Sie @"Microsoft.Quantum.Canon.ApplyWithA".
 syntax: "operation WithA (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj), target : 'T) : Unit"
 input:
-  content: "(outeroperation: ('t = > Unit ist adj), inneroperation: ('t = > Unit ist adj), target: 't)"
+  content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj), target : 'T)"
   types:
-  - name: outeroperation
+  - name: outerOperation
     isOperation: true
     input:
       types:
@@ -26,7 +26,7 @@ input:
         uid: Unit
     functors:
     - Adjoint
-  - name: inneroperation
+  - name: innerOperation
     isOperation: true
     input:
       types:
@@ -42,15 +42,16 @@ input:
     uid: "'T"
     isLocal: true
 output:
-  content: Einheit
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
 functors:
 - Adjoint
-ms.openlocfilehash: 7a5ce1211201d32091bf3e88aff030508a53f7d8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067695"
+metadata:
+  ms.openlocfilehash: 7a5ce1211201d32091bf3e88aff030508a53f7d8
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067695"

@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
-name: Assertoperationsequalreferenziert
+name: AssertOperationsEqualReferenced
 type: operation
 namespace: Microsoft.Quantum.Diagnostics
 summary: >-
@@ -18,13 +18,13 @@ remarks: >-
   Formal kann ein Vorgang zum Austauschen angegeben werden, der diese Anforderung lockert, aber der Vorgang zum Austauschen ist nicht im allgemeinen physisch für beliebige Quantum-Vorgänge physisch realisierbar und daher hier nicht als Option enthalten.
 syntax: 'operation AssertOperationsEqualReferenced (nQubits : Int, actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj)) : Unit'
 input:
-  content: '(nqubits: int, tatsächlich: (Qubit [] = > Unit), erwartet: (Qubit [] = > Einheit ist adj))'
+  content: '(nQubits : Int, actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj))'
   types:
-  - name: nqubits
+  - name: nQubits
     summary: Anzahl von Qubits, die an jeden Vorgang übergeben werden sollen.
     isPrimitive: true
     uid: Int
-  - name: reale
+  - name: actual
     summary: Zu testender Vorgang.
     isOperation: true
     input:
@@ -36,7 +36,7 @@ input:
       types:
       - isPrimitive: true
         uid: Unit
-  - name: erwartet
+  - name: expected
     summary: Vorgang, der das erwartete Verhalten für den zu testenden Vorgang definiert.
     isOperation: true
     input:
@@ -51,13 +51,14 @@ input:
     functors:
     - Adjoint
 output:
-  content: Einheit
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
-ms.openlocfilehash: 0dfadb6be785c7ba4eaa517c725b79955e037a32
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066573"
+metadata:
+  ms.openlocfilehash: 0dfadb6be785c7ba4eaa517c725b79955e037a32
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066573"

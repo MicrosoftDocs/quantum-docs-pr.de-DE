@@ -16,9 +16,10 @@ output:
   types:
   - summary: Die `stack`, bei der das oberste Element entfernt wurde. Der neue Stapel hat dieselbe Kapazität wie der alte, aber seine Länge wird um 1 reduziert.
     uid: microsoft.quantum.canon.resultstack
-ms.openlocfilehash: 371952e68e9c06fc11d9e8c309a4d388b80a9556
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73219364"
+metadata:
+  ms.openlocfilehash: 371952e68e9c06fc11d9e8c309a4d388b80a9556
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73219364"

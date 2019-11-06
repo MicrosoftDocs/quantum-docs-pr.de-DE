@@ -1,27 +1,28 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.core.rangereverse
-name: Rangereverse
+name: RangeReverse
 type: function
 namespace: Microsoft.Quantum.Core
 summary: Gibt einen neuen Bereich zurück, bei dem es sich um den umgekehrten Bereich des Eingabe Bereichs handelt.
 remarks: Beachten Sie, dass der umgekehrte Bereich eines Bereichs nicht einfach `end`.`-step`..`start`, da das tatsächliche letzte Element eines Bereichs möglicherweise nicht mit `end`übereinstimmen.
 syntax: 'function RangeReverse (r : Range) : Range'
 input:
-  content: '(r: Bereich)'
+  content: '(r : Range)'
   types:
   - name: r
     summary: Eingabebereich.
     isPrimitive: true
     uid: Range
 output:
-  content: Bereich
+  content: Range
   types:
   - summary: Ein neuer Bereich, der das Gegenteil des angegebenen Bereichs ist.
     isPrimitive: true
     uid: Range
-ms.openlocfilehash: 978a476556d01f48533540333b5951f83da3d6dc
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066624"
+metadata:
+  ms.openlocfilehash: 978a476556d01f48533540333b5951f83da3d6dc
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066624"
