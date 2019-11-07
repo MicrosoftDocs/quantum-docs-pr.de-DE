@@ -26,7 +26,7 @@ Je nach ausgewählter Entwicklungsumgebung müssen unterschiedliche Installation
 
 ## <a name="develop-with-python"></a>Entwickeln mit Python
 
-Das qsharp-Paket für Python vereinfacht das Simulieren von Q#-Vorgängen und -Funktionen in Python. IQ# (ausgesprochen „i-q-sharp“) ist eine hauptsächlich von Jupyter und Python genutzte Erweiterung, die die Kernfunktionen für das Kompilieren und Simulieren von Q#-Vorgängen bereitstellt.
+Das qsharp-Paket für Python vereinfacht das Simulieren von Q#-Vorgängen und -Funktionen in Python. IQ# (ausgesprochen „aɪ-kjuː-ʃɑrp“) ist eine hauptsächlich von Jupyter und Python genutzte Erweiterung, die die Kernfunktionen für das Kompilieren und Simulieren von Q#-Vorgängen bereitstellt.
 
 1. Voraussetzungen
 
