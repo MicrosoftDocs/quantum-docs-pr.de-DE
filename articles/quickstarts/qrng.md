@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: a7c077eda3e46430cbe6598cb899adb460451f75
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: c3039b92c4b3235a397d5cf31280ac2673706e9d
+ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443918"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73462838"
 ---
 # <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>Schnellstart: Implementieren eines Quanten-Zufallszahlengenerators in Q#
 Ein einfaches Beispiel für einen Quantenalgorithmus, der in Q# geschrieben ist, ist ein Quanten-Zufallszahlengenerator. Für diesen Algorithmus wird das Prinzip der Quantenmechanik genutzt, um eine Zufallszahl zu generieren. 
@@ -69,4 +69,4 @@ Wir können diese Darstellung verwenden, um die Aktivitäten des Codes zu visual
 
 <img src="./Measurement2.svg" width="450">
 
-Da das Ergebnis der Messung völlig zufällig ist, erhalten wir ein zufälliges Bit. Wir können diese Funktion mehrmals aufrufen, um ganze Zahlen zu erstellen. Wenn wir die Funktion beispielsweise dreimal aufrufen, um drei zufällige Bits zu erhalten, können wir zufällige 3-Bit-Zahlen erstellen (also eine Zufallszahl zwischen 0 und 7).
+Da das Ergebnis der Messung völlig zufällig ist, erhalten wir ein zufälliges Bit. Wir können diesen Vorgang mehrmals aufrufen, um ganze Zahlen zu erstellen. Wenn wir den Vorgang beispielsweise dreimal aufrufen, um drei zufällige Bits zu erhalten, können wir zufällige 3-Bit-Zahlen erstellen (also eine Zufallszahl zwischen 0 und 7).

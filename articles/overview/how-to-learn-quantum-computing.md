@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.learn
-ms.openlocfilehash: 8967fee11931c6cef4b2d98084b2e319cea55284
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 53682ae8ab9cb31fa0de68832cb3574aa4e30216
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444105"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529960"
 ---
 # <a name="how-to-learn-quantum-computing"></a>Wie erlerne ich das Quantencomputing?
 
@@ -29,7 +29,7 @@ Mit diesen Konzepten erhalten Sie eine gute Einführung in das Grundwissen, das 
 
 * [Grundlegende Quantenmechanik](xref:microsoft.quantum.concepts.intro): Wir sagten eben, dass Sie kein Meister der Quantenphysik sein müssen, um mit dem Schreiben von Code zu beginnen (und das stimmt!). Einige grundlegende Konzepte der Quantenmechanik und ihre mathematische Notation sind aber beim Verstehen der Quantenprogrammierung hilfreich.
 
-* **Lineare Algebra (Vektoren und Matrizen)** : Beim Quantencomputing werden Quantenzustände durch Vektoren dargestellt, und Quantenoperationen stellen lineare Transformationen dar, die auf diese Vektoren angewendet werden.  [Hier finden Sie ein Jupyter-Notebook-Tutorial zu linearer Algebra](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra).  Weitere Informationen hierzu finden Sie in unserem Konzeptleitfaden zu [Vektoren und Matrizen](xref:microsoft.quantum.concepts.vectors).
+* **Lineare Algebra (Vektoren und Matrizen)** : Beim Quantencomputing werden Quantenzustände durch Vektoren dargestellt, und Quantenoperationen stellen lineare Transformationen dar, die auf diese Vektoren angewendet werden.  [Hier finden Sie ein Jupyter-Notebook-Tutorial zu linearer Algebra](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra).  Weitere Informationen zu linearer Algebra finden Sie in unserem Konzeptleitfaden zu [Vektoren und Matrizen](xref:microsoft.quantum.concepts.vectors).
 
 * **Komplexe Arithmetik**: Die Koeffizienten von Quantenzustandsvektoren sind komplexe Zahlen. Sie können einige grundlegende Konzepte des Quantencomputings ohne sie verstehen, aber Sie kommen nicht sehr weit, ohne sie in Ihren Quantenwerkzeugkoffer aufzunehmen.  [Hier finden Sie ein Jupyter-Notebook-Tutorial zu komplexer Arithmetik](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic), in dem auf einen Teil der mathematischen Grundlagen eingegangen wird, die für das Quantencomputing erforderlich sind. 
 
@@ -45,8 +45,8 @@ Vielleicht möchten Sie einen tieferen Einblick in die Theorie von Quantenmechan
 
 * Beginnen Sie mit unserem Leitfaden zu [Konzepten des Quantencomputings](xref:microsoft.quantum.concepts.intro), einer Kompilation von grundlegenden Konzepten für Quantencomputing.
 * _Learn Quantum Computing with Python and Q#_ (Sarah C. Kaiser und Christopher E. Granade) bietet eine hervorragende Einführung für Personen, die wenig oder gar keine Erfahrung mit Quantenmechanik, aber einen gewissen Programmierhintergrund haben.
-* _Quantum Computation and Quantum Information_ (Michael A. Nielsen, Isaac L. Chuang) ist der meistzitierte Test auf dem Gebiet des Quantencomputings. Er wird als der Standardtext zum Thema angesehen. Das Buch setzt nur minimale Vorkenntnisse in Quantenmechanik und Informatik voraus. Es ist eine exzellente Wahl für Leser, die eine gründliche Einführung in das Thema wünschen, aber ebenso für solche, die nach Verweisen auf fortgeschrittene Konzepte suchen.
-* MIT OpenCourseWare bietet einen hervorragenden [Onlinekurs](https://www.youtube.com/watch?v=lZ3bPUKo5zc&list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr) für das Erlernen der Grundlagen der Quantenmechanik, präsentiert von Allan Adams. Perfekt für alle, die sich ein besseres Verständnis der zugrundeliegenden Physik wünschen.
+* _Quantum Computation and Quantum Information_ (Michael A. Nielsen, Isaac L. Chuang) ist der meistzitierte Test auf dem Gebiet des Quantencomputings und wird als Standardwerk zu diesem Thema betrachtet. Das Buch setzt nur minimale Vorkenntnisse in Quantenmechanik und Informatik voraus. Es ist eine exzellente Wahl für Leser, die eine gründliche Einführung in das Thema wünschen, aber ebenso für solche, die nach Verweisen auf fortgeschrittene Konzepte suchen.
+* MIT OpenCourseWare bietet einen hervorragenden [Onlinekurs](https://www.youtube.com/watch?v=lZ3bPUKo5zc&list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr) für das Erlernen der Grundlagen der Quantenmechanik, präsentiert von Allan Adams. Perfekt für Entwickler, die sich ein besseres Verständnis der zugrundeliegenden Physik wünschen.
 
 ## <a name="join-the-quantum-community"></a>Treten Sie der Quantencommunity bei
 

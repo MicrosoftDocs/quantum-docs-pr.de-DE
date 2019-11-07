@@ -6,31 +6,33 @@ ms.author: nakersha
 ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.qsharp
-ms.openlocfilehash: e04228ff62092a15c529297bd56b9ee48399f4a5
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 3fd288439c7db7f939240b4388c9cdb114b6535c
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443952"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529984"
 ---
 # <a name="what-is-q"></a>Was ist Q#?
 
-Q# ist eine Programmiersprache mit Features, die sich speziell auf Quantencomputing beziehen. Q# bietet Quantenprogrammierern ein Framework, das es Ihnen erlaubt, sich auf die Algorithmen zu konzentrieren, ohne sich um technische Details wie die Optimierung von Gattersequenzen oder die physische Implementierung eines Quantencomputers kümmern zu müssen.
+Q# ist eine Programmiersprache mit Features, die sich speziell auf Quantencomputing beziehen.
 
-Die Programmiersprache Q# bietet Ihnen eine intuitive Menge von Typen, Operationen und logischen Ausdrücken zum Entwickeln von Algorithmen, ohne sich mit der internen Logik des Quantencomputers befassen zu müssen.
+Q# bietet Quantenprogrammierern ein Framework, das es Ihnen erlaubt, sich auf die Algorithmen zu konzentrieren, ohne sich um technische Details wie die Optimierung von Gattersequenzen oder die physische Implementierung eines Quantencomputers kümmern zu müssen.
+
+Die Programmiersprache Q# bietet Ihnen intuitive Typen, Operationen und logische Ausdrücke zum Entwickeln von Algorithmen, ohne sich mit der internen Logik des Quantencomputers befassen zu müssen.
 
 ## <a name="code-algorithms"></a>Codealgorithmen
 
-In den Anfängen des Quantencomputings wurden Algorithmen in Form von Diagrammen visualisiert, die den Schaltplänen aus dem klassischen Computing ähnelten.  Zwar hat sich das Schaltungsmodell über viele Jahre als sehr nützlich in der Forschung an Quantencomputing erwiesen, wir bei Microsoft glauben aber, dass Entwickler Quantenschaltungen hinter sich lassen und Quantenalgorithmen und -anwendungen mithilfe von Q# entwickeln können. Die Sprache Q# wurde entwickelt, um unsere Lehren aus jahrzehntelanger Erfahrung in der klassischen Softwareentwicklung zu nutzen und Quantenentwicklern die Funktionalität höherer Sprachen mit spezieller Ausrichtung auf Quantencomputing an die Hand zu geben.
+In den Anfängen des Quantencomputings wurden Algorithmen in Form von Diagrammen visualisiert, die den Schaltplänen aus dem klassischen Computing ähnelten.  Zwar hat sich das Schaltungsmodell über viele Jahre als nützlich in der Forschung an Quantencomputing erwiesen, wir bei Microsoft glauben aber, dass Entwickler Quantenschaltungen hinter sich lassen und Quantenalgorithmen und -anwendungen mithilfe von Q# entwickeln können. Die Sprache Q# wurde entwickelt, um unsere Lehren aus jahrzehntelanger Erfahrung in der klassischen Softwareentwicklung zu nutzen und Quantenentwicklern die Funktionalität höherer Sprachen mit spezieller Ausrichtung auf Quantencomputing an die Hand zu geben.
 
 
 ## <a name="how-does-q-work"></a>Wie funktioniert Q#?
 
 Einer der fundamentalen Bausteine von Q# ist der Typ `Qubit`, der nicht kopiert und auf den nicht direkt zugegriffen werden kann, ganz wie ein reales Qubit. Stattdessen können wir ihn messen und das Ergebnis der Messung in einer `Result`-Variable speichern, einem Q#-Typ, der zwei mögliche Werte annehmen kann: `Zero` und `One`. Konstrukte wie dieses stellen sicher, dass Algorithmen jederzeit die Gesetze der Quantenphysik beachten und auf Quantencomputern oder Simulatoren ordnungsgemäß ausgeführt werden können.
 
-Q# schließt darüber hinaus Funktionen der klassischen Logik wie Bedingungen oder Schleifen mit einer Reihe von Feinheiten ein, um sicherzustellen, dass alle Quantenregeln beachtet werden. Beispielsweise müssen Quantenoperationen reversibel sein. Dies bringt einige Einschränkungen für die Ausführung von Schleifen mit sich.
+Q# schließt darüber hinaus Funktionen der klassischen Logik wie Bedingungen oder Schleifen mit einer Reihe von Feinheiten ein, um sicherzustellen, dass alle Quantenregeln beachtet werden. Beispiel: Einschränkung der Art, wie Schleifen ausgeführt werden, um sicherzustellen, dass Quantenvorgänge ausgeführt werden.
 
-Q#-Programme sind häufig mit einem in C# oder Python geschriebenen Hostprogramm gekoppelt, das eine komfortable Organisation von klassischem und Quantencode bieten kann. Über die Unterstützung von .NET-Sprachen wie C# und Python hinaus bietet das QDK mit dem IQ#-Jupyter-Kernel Unterstützung für Jupyter-Notebooks.
+Q#-Programme sind häufig mit einem in C# oder Python geschriebenen Hostprogramm gekoppelt, das eine komfortable Organisation von klassischem und Quantencode bieten kann. Über die Unterstützung von Sprachen wie C# und Python hinaus bietet das QDK mit dem IQ#-Jupyter-Kernel Unterstützung für Jupyter Notebook.
 
 ## <a name="use-q-to-learn-quantum-computing"></a>Verwenden von Q# zum Erlernen von Quantencomputing
 
@@ -42,7 +44,7 @@ Q# verfügt über eine wachsende Zahl von Bibliotheken und benutzerdefinierten T
 
 ## <a name="use-q-to-estimate-quantum-resources"></a>Verwenden von Q# zum Schätzen von Quantenressourcen
 
-Sie können die Ausführung Ihres Q#-Programms simulieren, indem Sie den Quantensimulator für Zustände verwenden, der im Quantum Development Kit (QDK) enthalten ist.  Darüber hinaus verfügt das QDK auch über Funktionen für Ressourcenschätzungen, die Erkenntnisse zur Leistung von Q#-Programmen liefern, deren Größe eine Ausführung mit dem Simulator verhindert.  Dies ist sehr nützlich für Algorithmusdesigner, weil sie ihre Programme für die Nutzung von weniger Ressourcen auslegen können (z. B. geringere Anzahl von Qubits für eine geringere Anzahl von Vorgängen), damit die Ausführung auf älterer Quantenhardware in kleinerem Umfang möglich ist.   
+Sie können die Ausführung Ihres Q#-Programms simulieren, indem Sie den Quantensimulator für Zustände verwenden, der im Quantum Development Kit (QDK) enthalten ist.  Darüber hinaus verfügt das QDK auch über Funktionen für Ressourcenschätzungen, die Erkenntnisse zur Leistung von Q#-Programmen liefern, die zu groß für die Ausführung mit dem Simulator sind.  Dies ist sehr nützlich für Algorithmusdesigner, weil sie ihre Programme für die Nutzung von weniger Ressourcen auslegen können (z. B. geringere Anzahl von Qubits für eine geringere Anzahl von Vorgängen), damit die Ausführung auf älterer Quantenhardware in kleinerem Umfang möglich ist.
 
 ## <a name="use-q-to-validate-hardware-performance"></a>Verwenden von Q# zum Überprüfen der Hardwareleistung
 

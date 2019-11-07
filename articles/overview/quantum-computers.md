@@ -6,18 +6,20 @@ ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.computers
-ms.openlocfilehash: d4be970c635ca090e8dcb1b58d5c840eebd4d110
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 9d8ba90a504f298f9465ebf564c43625a4d43168
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443833"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529950"
 ---
 # <a name="what-can-a-quantum-computer-do"></a>Was kann ein Quantencomputer?
 
 Was können wir mit einem Quantencomputer tun, das sich mit einem klassischen Computer nicht erledigen lässt?
 
-Die Lösung einiger der schwierigsten Probleme der Welt, zu der aktuelle Computer Milliarden Jahre Rechenzeit benötigen, könnte von einem Quantencomputer in Tagen, Stunden oder sogar Minuten erledigt werden. Quantencomputer werden es Forschern ermöglichen, neue Katalysatoren und Materialien zu entwickeln, Medikamente zu verbessern, den Fortschritt in der künstlichen Intelligenz zu beschleunigen und grundlegende Fragen zum Ursprung des Universums zu beantworten.
+Die Lösung einiger der schwierigsten Probleme der Welt, zu der aktuelle Computer Milliarden Jahre Rechenzeit benötigen, könnte von einem Quantencomputer in Tagen, Stunden oder sogar Minuten erledigt werden.
+
+Quantencomputer werden es Forschern ermöglichen, neue Katalysatoren und Materialien zu entwickeln, Medikamente zu verbessern, den Fortschritt in der künstlichen Intelligenz zu beschleunigen und grundlegende Fragen zum Ursprung des Universums zu beantworten.
 
 ## <a name="quantum-simulation"></a>Quantensimulation
 
@@ -29,19 +31,25 @@ Chemische Moleküle sind Quantensysteme und können daher auf diese Weise analys
 
 ## <a name="cryptography"></a>Kryptografie
 
-Der vielleicht bekannteste Anwendungsbereich von Quantencomputern ist die Kryptografie. Peter Shor hat 1994 gezeigt, dass mit einem skalierbaren Quantencomputer alle gängigen Verschlüsselungsverfahren geknackt werden können.  Die klassische Kryptografie basiert auf der „Widerspenstigkeit“ von Vorgängen mit hohen Zahlen, z. B. der Faktorisierung großer Zahlen in zwei Primzahlen.  Quantencomputer machen diese Vorgänge theoretisch lenkbar (per Shor-Algorithmus). Zwar ist die Implementierung dieses Algorithmus beim aktuellen Maßstab von Quantenhardware physisch nicht möglich, er hat aber die Entwicklung quantenresistenter Algorithmen in Gang gebracht, um Datensicherheit zukunftssicher zu gestalten, einschließlich neuartiger Quantenalgorithmen für die Verschlüsselung und die Verteilung von Kryptografieschlüsseln.  Bei Microsoft verfügen wir über das weltweit führende Team im Bereich Post-Quantenkryptografie und -sicherheit, das an der Entwicklung von quantenresistenten Algorithmen arbeitet. 
+Der vielleicht bekannteste Anwendungsbereich von Quantencomputern ist die Kryptografie. Peter Shor hat 1994 gezeigt, dass mit einem skalierbaren Quantencomputer alle gängigen Verschlüsselungsverfahren geknackt werden können.  Die klassische Kryptografie basiert auf der „Widerspenstigkeit“ von Vorgängen mit hohen Zahlen, z. B. der Faktorisierung großer Zahlen in zwei Primzahlen.
+
+Quantencomputer machen diese Vorgänge theoretisch lenkbar (per Shor-Algorithmus). Zwar ist die Implementierung dieses Algorithmus beim aktuellen Maßstab von Quantenhardware physisch nicht möglich, er hat aber die Entwicklung quantenresistenter Algorithmen in Gang gebracht, um Datensicherheit zukunftssicher zu gestalten, einschließlich neuartiger Quantenalgorithmen für die Verschlüsselung und die Verteilung von Kryptografieschlüsseln.
+
+Bei Microsoft verfügen wir über das weltweit führende Team im Bereich Post-Quantenkryptografie und -sicherheit, das an der Entwicklung von quantenresistenten Algorithmen arbeitet.
 
 ## <a name="optimization"></a>Optimierung
 
-Bei der Optimierung geht es darum, eine umfangreiche Suche in einem hochdimensionalen Bereich zur Erzielung einer hervorragenden Lösung durchzuführen, mit der eine bestimmte Kostenfunktion minimiert wird.   Auf einem Quantencomputer können wir Optimierungsalgorithmen beschleunigen, um Lösungen zu finden, die auf andere Weise nicht möglich wären. Beispiele für Anwendungsbereiche sind Transport/Logistik, Gesundheitswesen, Diagnostik und Materialwissenschaft. Dies kann erhebliche Auswirkungen auf die Effizienz der Branche haben. 
+Bei der Optimierung geht es darum, eine umfangreiche Suche in einem hochdimensionalen Bereich zur Erzielung einer Lösung durchzuführen, mit der eine bestimmte Kostenfunktion minimiert wird.   Auf einem Quantencomputer können wir Optimierungsalgorithmen beschleunigen, um Lösungen zu finden, die auf andere Weise nicht möglich wären. Beispiele für Anwendungsbereiche sind Transport/Logistik, Gesundheitswesen, Diagnostik und Materialwissenschaft. Dies kann erhebliche Auswirkungen auf die Effizienz der Branche haben.
 
-Die Optimierung per Quantencomputing ermöglicht uns Innovationen im Bereich Transport/Logistik, die mit den heutigen klassischen Systemen nicht möglich sind. Per Optimierung des Datenverkehrsflusses können Staus reduziert werden.  Weitere Bereiche neben der Routenplanung sind die Gatezuweisung für den Luftverkehr, die Paketzustellung, die Auftragsplanung und mehr.  Wenn in der Materialwirtschaft weitere Durchbrüche erzielt werden, entstehen neue Energieformen, Akkus mit höherer Kapazität und leichtere, besser haltbare Materialien. 
+Die Optimierung per Quantencomputing ermöglicht uns Innovationen im Bereich Transport/Logistik, die mit den heutigen klassischen Systemen nicht möglich sind.
+
+Per Optimierung des Datenverkehrsflusses können Staus reduziert werden.  Weitere Bereiche neben der Routenplanung sind die Gatezuweisung für den Luftverkehr, die Paketzustellung, die Auftragsplanung und mehr. Wenn in der Materialwirtschaft weitere Durchbrüche erzielt werden, entstehen neue Energieformen, Akkus mit höherer Kapazität und leichtere, besser haltbare Materialien.
 
 ## <a name="machine-learning"></a>Machine Learning
 
-Ein großer Teil der numerischen Berechnungen auf klassischen Computern besteht im Lösen linearer Gleichungssysteme. Dies gilt insbesondere für den Bereich Machine Learning, bei dem der größte Teil des Rechenaufwands in das Berechnen der Umkehrung riesiger Matrizen fließt.
+Ein großer Teil der numerischen Berechnungen auf klassischen Computern besteht im Lösen linearer Gleichungssysteme. Dies gilt insbesondere für maschinelles Lernen, bei dem der größte Teil des Rechenaufwands in die Berechnung der Umkehrung riesiger Matrizen fließt.
 
-Glücklicherweise gibt es einen Quantenalgorithmus, der es uns ermöglicht, das System exponentiell schneller als mit einem klassischen Computer zu lösen. Dies öffnet den Weg zu großer Beschleunigung bei jedem Problem, für das die Lösung linearer Gleichungssysteme erforderlich ist.
+Glücklicherweise gibt es einen Quantenalgorithmus, der es uns ermöglicht, das System exponentiell schneller als mit einem klassischen Computer zu lösen. Dies ebnet den Weg für die hohe Beschleunigung bei jedem Problem, für das die Lösung linearer Gleichungssysteme erforderlich ist.
 
 Lösungen von Problemen in diesen Bereichen sind hilfreich für die Energiekrise, den Klimawandel, die Nahrungsmittelknappheit und persönliche und präzise medizinische Diagnosen.
 
