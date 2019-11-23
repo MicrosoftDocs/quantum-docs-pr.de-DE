@@ -1,6 +1,6 @@
 ---
 title: 'F #-Typmodell | Microsoft-Dokumentation'
-description: 'Q #-Typmodell'
+description: Q#-Typmodell
 author: QuantumWriter
 uid: microsoft.quantum.language.type-model
 ms.author: Alan.Geller@microsoft.com
@@ -227,7 +227,7 @@ Auf diese Weise haben benutzerdefinierte Typen eine ähnliche Rolle wie Datensä
 ## <a name="operation-and-function-types"></a>Vorgangs-und Funktionstypen
 
 Ein f #- _Vorgang_ ist eine Quantum-Unterroutine.
-Das heißt, es handelt sich um eine Aufruf Bare Routine, die Quantum-Vorgänge enthält.
+Dies bedeutet, dass es sich um eine aufrufbare Routine handelt, die Quantenvorgänge enthält.
 
 Eine Q #- _Funktion_ ist eine klassische Unterroutine, die innerhalb eines Quantum-Algorithmus verwendet wird.
 Sie kann klassischen Code, aber keine Quantum-Vorgänge enthalten.

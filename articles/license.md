@@ -86,7 +86,7 @@ SOLANGE SIE DIESE LIZENZBEDINGUNGEN EINHALTEN, STEHEN IHNEN DIE NACHFOLGEND AUFG
 
 <p>15. <strong>Einschränkung und Ausschluss von Schäden. Wenn Sie trotz des vorstehenden Garantieausschluss eine Grundlage für die Wiederherstellung von Schäden haben, können Sie von Microsoft und seinen Zulieferern nur direkte Schäden von bis zu US-US-amerikanischen $5,00 wiederherstellen. Sie können keine anderen Schäden, einschließlich Folgeschäden, verloren gegangener Gewinne, spezieller, indirekter oder zufälliger Schäden, wiederherstellen.</strong>
 
-**Diese Einschränkung gilt für (a) alle Elemente, die mit der Software, Diensten, Inhalten (einschließlich Code) auf Internet Sites von Drittanbietern oder Anwendungen von Drittanbietern verknüpft sind, und (b) Ansprüche zur Verletzung des Vertrags, der Garantie, der Garantie oder der Bedingung; strikte Haftung, Fahrlässigkeit oder anderer Tort; oder ein beliebiger anderer Anspruch; in jedem Fall im durch das anwendbare Recht zugelassenen Umfang**.
+**Diese Einschränkung gilt für (a), was mit der Software, Diensten, Inhalten (einschließlich Code) auf Internet Sites von Drittanbietern oder Anwendungen von Drittanbietern in Zusammenhang steht, und (b) Ansprüche zur Verletzung des Vertrags, der Garantie, der Garantie oder der Bedingung, der strengen Haftung, Fahrlässigkeit oder anderer Tort oder eines anderen Anspruchs, in jedem Fall nach dem geltenden Recht**.
 
 **Dies gilt auch, wenn Microsoft von der Möglichkeit der Schäden wusste oder hätte wissen müssen. Die oben beschriebene Einschränkung oder der obige Ausschluss gilt möglicherweise nicht für Sie, weil Ihr Bundesstaat, Ihre Provinz oder Ihr Land den Ausschluss oder die Beschränkung von zufälligen, Folge-oder anderen Schäden nicht zulässt**.
 </blockquote>

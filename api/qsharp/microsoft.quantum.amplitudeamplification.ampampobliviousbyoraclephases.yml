@@ -7,11 +7,11 @@ summary: Pervirone Amplitude-Verstärkung durch Oracles für partielle Reflektio
 remarks: >-
   Dies erzwingt strengere Bedingungen in Form der Ausgangs-und Ziel Zustände von Ancilla als in `AmpAmpObliviousByReflectionPhases`.
 
-  Es wird davon ausgegangen, dass $A \ket{0}\_{0}"\_A = \ket{\text{Start}}\_{FA} $" den Wert für den "Ancilla Start State $ \ket{\text{Start}}\_{FA} $" aus der Berechnungsbasis "$ \ket{0}\_@no__t_" 8_ $.
+  Es wird davon ausgegangen, dass $A \ket{0}{0}\_"\_A = \ket{\text{Start}}\_{FA} $" den Ancilla-Startstatus $ \ket{\text{Start}}\_{FA} $ von der Berechnungsbasis $ \ket{0}\_{0}f \ket $ vorbereitet.
 
   Es wird davon ausgegangen, dass der Ziel Status durch $ \ket{1}\_f $ gekennzeichnet ist.
 
-  Es wird davon ausgegangen, dass \begin{align} o\ket {\ Text {Start}}\_{FA} \ket{\psi}\_s = \lambda\ket{1}\_"f \ Ket {\ Text {Anything}}\_a\ket {\ Text {Target}}\_s U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_"f \ cdots", "\end{align}" für einige einheitliche $U "$".
+  Es wird davon ausgegangen, dass \begin{align} o\ket {\ Text {Start}}\_{FA} \ket{\psi}\_s = \lambda\ket{1}\_fi\ket {\ Text {Anything}}\_a\ket {\ Text {Target}}\_s U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_fi\cdots, \end{align} für einige einheitliche $U $.
 syntax: 'function AmpAmpObliviousByOraclePhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int)'
