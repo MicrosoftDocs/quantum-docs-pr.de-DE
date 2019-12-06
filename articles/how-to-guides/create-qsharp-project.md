@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: b4bec5e7a174b7e2d588331dd2093c7b23a728b0
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 10b1048501c2de055f5711fc0fdbc4bac76e8f77
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444173"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864405"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Erstellen eines Q #-Projekts in Ihrer Entwicklungsumgebung
 
@@ -28,7 +28,7 @@ Wählen Sie in den folgenden Abschnitten Ihre Entwicklungsumgebung und Sprache a
 * [C#mit vs Code](#create-a-c-project-using-vs-code)
 * [C#mit der Befehlszeile](#create-a-c-project-using-the-dotnet-command-line-tool)
 
-## <a name="create-a-python-project"></a>Erstellen eines python-Projekts
+## <a name="create-a-python-project"></a>Erstellen eines Python-Projekts
 
 1. Voraussetzungen
 
@@ -81,7 +81,7 @@ Sie können nun mit der Entwicklung des Quantums Programm fortfahren.
 
     * Das [Quantum Development Kit für jupyter-Notebooks](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
 
-1. Führen Sie den folgenden Befehl aus, um den Notebook-Server zu starten:
+1. Führen Sie den folgenden Befehl aus, um den Notebookserver zu starten:
 
     ```bash
     jupyter notebook
@@ -99,15 +99,15 @@ Sie können nun mit der Entwicklung des Quantums Programm fortfahren.
 
 1. Wählen Sie **Cell** > **Zellen ausführen** aus, um das Notebook auszuführen. `SayHello` wird in Kürze in der Zellen Ausgabe angezeigt:
 
-    ![Jupyter Notebook-Zelle mit Q #-Code](~/media/install-guide-jupyter.png)
+    ![Zelle im Jupyter-Notebook mit Q#-Code](~/media/install-guide-jupyter.png)
 
     Bei der Ausführung in jupyter-Notebooks wird der Q #-Code kompiliert, und das Notebook gibt den Namen der gefundenen Vorgänge aus.
 
-1. Simulieren Sie in einer neuen Zelle die Ausführung auf einem Quantum-Computer des gerade erstellten Vorgangs mithilfe der `%simulate` Magic:
+1. Simulieren Sie auf einem Quantencomputer in einer neuen Zelle die Ausführung des gerade erstellten Vorgangs mithilfe der `%simulate`-Magic:
 
-    ![Jupyter Notebook-Zelle mit "% simulieren" Magic](~/media/install-guide-jupyter-simulate.png)
+    ![Zelle im Jupyter-Notebook mit %simulate-Magic](~/media/install-guide-jupyter-simulate.png)
 
-    Es sollte angezeigt werden, dass die Meldung auf dem Bildschirm angezeigt wird, und das Ergebnis des Vorgangs, den Sie aufgerufen haben (in diesem Fall leer).
+    Auf dem Bildschirm sollte die Nachricht zusammen mit dem Ergebnis des von Ihnen aufgerufenen Vorgangs angezeigt werden (in diesem Fall: leer).
 
 Sie können jetzt weitere Q #-Vorgänge hinzufügen, um die Quantum-Entwicklung fortzusetzen.
 
@@ -117,28 +117,28 @@ Sie können jetzt weitere Q #-Vorgänge hinzufügen, um die Quantum-Entwicklung 
 
     * Das [Quantum Development Kit für Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
 
-1. Erstellen einer neuen f #-Anwendung
+1. Erstellen einer neuen Q#-Anwendung
 
-    * Gehe zu **Datei** -> **Neues** -> **Projekt**
-    * Geben Sie `Q#` in das Suchfeld ein.
-    * **F #-Anwendung** auswählen
+    * Klicken Sie auf **Datei** -> **Neu** -> **Projekt**.
+    * Geben Sie im Suchfeld als Suchbegriff `Q#` ein.
+    * Wählen Sie **Q#-Anwendung** aus.
     * Wählen Sie **Weiter** aus
-    * Auswählen eines Namens und eines Speicher Orts für die Anwendung
+    * Wählen Sie einen Namen und Speicherort für Ihre Anwendung aus.
     * Klicken Sie auf **Erstellen**
 
-1. Überprüfen des Projekts
+1. Untersuchen des Projekts
 
-    Sie sollten sehen, dass zwei Dateien erstellt wurden: `Driver.cs`, die die C# Host Anwendung ist. und `Operation.qs`. dabei handelt es sich um ein Q #-Programm, das einen einfachen Vorgang zum Drucken einer Meldung an die Konsole definiert.
+    Es sollten zwei Dateien erstellt worden sein: `Driver.cs` (C#-Hostanwendung) und `Operation.qs` (Q#-Programm, mit dem ein einfacher Vorgang zum Ausgeben einer Meldung auf der Konsole definiert wird).
 
 1. Ausführen der Anwendung
 
-    * Wählen Sie **Debuggen** -> **Starten ohne Debugging**
-    * Sie sollten sehen, dass der Text in einem Konsolenfenster gedruckt `Hello quantum world!`.
+    * Wählen Sie **Debuggen** -> **Ohne Debuggen starten** aus.
+    * Der Text `Hello quantum world!` sollte in einem Konsolenfenster ausgegeben werden.
 
 Sie können jetzt die Quantum-Entwicklung mit Visual Studio fortsetzen.
 
 > [!NOTE]
-> * Wenn Sie mehrere Projekte in einer Visual Studio-Projekt Mappe haben, müssen sich alle in der Projekt Mappe enthaltenen Projekte im selben Ordner wie die Projekt Mappe oder in einem ihrer Unterordner befinden.  
+> * Falls Sie über mehrere Projekte innerhalb einer Visual Studio-Projektmappe verfügen, müssen sich alle darin enthaltenen Projekte in demselben Ordner wie die Projektmappe oder in einem ihrer Unterordner befinden.  
 
 ## <a name="create-a-c-project-using-vs-code"></a>Erstellen eines C# Projekts mit vs Code
 
@@ -148,20 +148,22 @@ Sie können jetzt die Quantum-Entwicklung mit Visual Studio fortsetzen.
 
 1. Erstellen eines neuen Projekts:
 
-    * Gehe zu **Ansicht** -> **Befehls Palette**
+    * Navigieren Sie zu **Ansicht** -> **Befehlspalette**.
     * Wählen Sie **Q #: Neues Projekt erstellen** aus.
-    * Navigieren Sie zu dem Speicherort im Dateisystem, in dem Sie die Anwendung erstellen möchten.
-    * Klicken Sie auf die Schaltfläche **Neues Projekt öffnen...** , nachdem das Projekt erstellt wurde.
+    * **Eigenständige Konsolenanwendung** auswählen
+    * Navigieren Sie im Dateisystem zu dem Speicherort, an dem Sie die Anwendung erstellen möchten.
+    * Klicken Sie nach Abschluss der Projekterstellung auf die Schaltfläche **Open new project...** (Neues Projekt öffnen).
 
 1. Führen Sie die Anwendung aus.
 
-    * Gehe zu **Debuggen** -> **Starten ohne Debugging**
-    * Der folgende Text sollte im Ausgabefenster angezeigt werden `Hello quantum world!`
+    * Zum **Terminal** -> **neuen Terminal** wechseln
+    * Geben Sie `dotnet run` ein.
+    * Im Ausgabefenster sollte der folgende Text angezeigt werden: `Hello quantum world!`.
 
 Nun können Sie die Quantum-Entwicklung mit Visual Studio Code fortsetzen.
 
 > [!NOTE]
-> * Arbeitsbereiche mit mehreren Stamm Ordnern werden zurzeit von der Visual Studio Code Erweiterung nicht unterstützt. Wenn Sie über mehrere Projekte in einem vs Code Arbeitsbereich verfügen, müssen alle Projekte im selben Stamm Ordner enthalten sein.
+> * Arbeitsbereiche mit mehreren Stammordnern werden von der Visual Studio Code-Erweiterung derzeit nicht unterstützt. Wenn Sie innerhalb eines VS Code-Arbeitsbereichs über mehrere Projekte verfügen, müssen alle Projekte in demselben Stammordner enthalten sein.
 
 ## <a name="create-a-c-project-using-the-dotnet-command-line-tool"></a>Erstellen eines C# Projekts mit dem Befehlszeilen Tool "`dotnet`"
 
@@ -181,7 +183,7 @@ Nun können Sie die Quantum-Entwicklung mit Visual Studio Code fortsetzen.
     cd <project name>
     ```
 
-    Sie sollten sehen, dass zwei Dateien erstellt wurden, zusammen mit den Projektdateien der Anwendung: eine Q #-Datei (`Operation.qs`) und eine C# Hostdatei (`Driver.cs`).
+    Es sollten zwei Dateien und die Projektdateien der Anwendung erstellt worden sein: eine Q#-Datei (`Operation.qs`) und eine C#-Hostdatei (`Driver.cs`).
 
 1. Ausführen der Anwendung
 
@@ -189,7 +191,7 @@ Nun können Sie die Quantum-Entwicklung mit Visual Studio Code fortsetzen.
     dotnet run
     ```
 
-    Die folgende Ausgabe sollte angezeigt werden: `Hello quantum world!`
+    Die folgende Ausgabe sollte angezeigt werden: `Hello quantum world!`.
 
 Mit Befehlszeilen Tools können Sie nun die Quantum-Entwicklung fortsetzen.
 

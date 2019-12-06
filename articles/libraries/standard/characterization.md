@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: d77085aa8aa83c18858056bab1858d990efdb36e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1eb48da9d4ae2a730019e2707dcb2c69b998491e
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185561"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864371"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum-Charakterisierung und-Statistiken #
 
@@ -30,7 +30,7 @@ Diese Bibliotheken müssen daher sowohl die klassische als auch die Quantum-Info
 ## <a name="iterative-phase-estimation"></a>Iterative Phasen Schätzung ##
 
 Das Anzeigen der Quantum-Programmierung in Bezug auf die Quantum-Darstellung schlägt eine sinnvolle Alternative zur Quantum-Phasen Schätzung vor.
-Das heißt, anstelle einer $n $-Qubit-Registrierung, die eine binäre Darstellung der Phase wie in der Quantum-Phasen-Schätzung enthalten soll, können wir die Phasen Schätzung als den Prozess anzeigen, mit dem ein *klassischer* Agent die Eigenschaften eines Quantum-Systems erfährt. Messungen.
+Das heißt, anstelle einer $n $-Qubit-Registrierung, die eine binäre Darstellung der Phase wie in der Quantum-Phasen-Schätzung enthalten soll, können wir die Phasen Schätzung als den Prozess anzeigen, mit dem ein *klassischer* Agent mithilfe von Messungen Eigenschaften eines Quantum-Systems erfährt.
 Wir gehen wie im Quantum-Fall vor, indem wir den Phasen-Kickback verwenden, um die Anwendungen eines Blackbox-Vorgangs in Drehung um einen unbekannten Winkel umzuwandeln. Sie messen jedoch das Ancilla-Qubit, das bei jedem Schritt unmittelbar nach der Drehung gedreht wird.
 Dies hat den Vorteil, dass wir nur ein einzelnes zusätzliches Qubit benötigen, um das in der Quantum-Fall beschriebene Phasen Rückschreiben auszuführen, da wir dann die Phase der Messergebnisse bei jedem Schritt iterativ erlernen.  
 Jede der unten vorgeschlagenen Methoden verwendet eine andere Strategie für das Entwerfen von Experimenten und verschiedene Datenverarbeitungsmethoden, um die Phase zu erlernen.  Sie verfügen jeweils über einen einzigartigen Vorteil, der von strengen Fehler Grenzen bis hin zu den Möglichkeiten zum einbeziehen vorheriger Informationen, zum tolerieren von Fehlern oder zur Verwendung von klassischen Computern mit Arbeitsspeicher verfügt.
@@ -39,7 +39,7 @@ Bei der Erörterung der iterativen Phasen Schätzung wird ein einheitlicher $U $
 Wie im Abschnitt zu Oracles in [Datenstrukturen](xref:microsoft.quantum.libraries.data-structures)beschrieben, modelliert das Q #-Canon solche Vorgänge durch den <xref:microsoft.quantum.oracles.discreteoracle> benutzerdefinierten Typ, der durch den tupeltyp `((Int, Qubit[]) => Unit : Adjoint, Controlled)`definiert wird.
 Wenn `U : DiscreteOracle`, wird `U(m)` $U ^ m $ für `m : Int`implementiert.
 
-Wenn diese Definition vorhanden ist, jeder Schritt der iterativen Phasen Schätzung verläuft durch Vorbereiten eines "hilfsinstanz"-Qubit im "$ \ket{+} $"-Status zusammen mit dem anfänglichen Zustand "$ \ket{\phi} $", bei dem es sich um einen [eigen Vektor](xref:microsoft.quantum.concepts.matrix-advanced) $U (m) $ handelt, d. h. $U (m) \ket{\phi} = e ^ \ket{\phi} $.  
+Wenn diese Definition vorhanden ist, wird jeder Schritt der iterativen Phasen Schätzung fortgesetzt, indem ein ":illary Qubit" im "$ \ket{+} $"-Status zusammen mit dem anfänglichen Zustand "$ \ket{\phi} $" vorbereitet wird, der angenommen wird, dass es sich um einen [eigen Vektor](xref:microsoft.quantum.concepts.matrix-advanced) von $U (m) $, d. h. $U (m) \ket{\phi} = e ^ {im\phi} \ Ket {\ Phi} $.  
 Anschließend wird eine kontrollierte Anwendung von `U(m)` verwendet, mit der der Status $ \left (R\_1 (m \phi) \ket{+} \right) \ket{\phi} $ vorbereitet wird.
 Wie im Quantum-Fall ist die Auswirkung einer kontrollierten Anwendung des Oracle-`U(m)` exakt mit der Auswirkung der Anwendung von $R _1 $ für die unbekannte Phase auf $ \ket{+} $ identisch, sodass wir die Auswirkungen von $U $ in dieser einfacheren Weise beschreiben können.
 Optional dreht der Algorithmus das Steuerelement Qubit durch Anwenden von $R _1 (-m\erta) $, um den Status $ \ket{\psi} = \left (R\_1 (m [\phi-\erta]) \ket{+} \right) \ket{\phi} $ $ abzurufen.
@@ -47,17 +47,17 @@ Das als Steuerelement für `U(m)` verwendete hilfsqubit wird dann in $X $ gemess
 
 An diesem Punkt ist das erneute Erstellen der Phase aus den `Result` Werten, die durch die iterative Phasen Schätzung abgerufen werden, ein klassisches Statistisches Typrückschluss-Problem.
 Das Auffinden des Werts $m $, der die gesammelten Informationen mit einer festgelegten Rückschluss Methode maximiert, ist einfach ein Problem in den Statistiken.
-Wir betonen dies, indem wir die iterative Phasen Schätzung auf einer theoretischen Ebene im bayesschen Parameter schätzungsformalität kurz beschreiben, bevor wir mit der Beschreibung der statistischen Algorithmen in Q # Canon zum lösen dieses klassischen Typrückschluss fortfahren. m.
+Wir betonen dies, indem wir die iterative Phasen Schätzung auf der theoretischen Ebene im bayyesian-parameterschätzungsformalismus kurz beschreiben, bevor wir mit der Beschreibung der statistischen Algorithmen in Q # Canon zum lösen dieses klassischen Inferenz Problems fortfahren.
 
 ### <a name="iterative-phase-estimation-without-eigenstates"></a>Iterative Phasen Schätzung ohne eigen Status ###
 
 Wenn ein Eingabe Status angegeben wird, der kein eigen Zustand ist, d. h., wenn $U (m) \ket{\phi\_j} = e ^ {im\phi\_j} $, führt der Prozess der Phasen Schätzung nicht deterministisch zu einem einzelnen Energiezustand.  Der eigenständige Zustand, mit dem er letztendlich konvergiert, ist der Status "eigen", der höchstwahrscheinlich den beobachteten `Result`erzeugt.
 
-Insbesondere ein einziger Schritt von PE führt die folgende nicht einheitliche Transformation auf dem Status "\begin{align} \sum_j \sqrt{\pr (\phi\_j)} \ket{\phi\_j" aus.} \mapsto \sum\_j\frac {\ sqrt {\ PR (\phi\_j)} \sqrt{\pr (\text{result} | \ Phi\_j)} \ket{\phi\_j}} {\sqrt{\pr (\phi\_j) \sum\_j \pr (\text{result} | \phi\_j)}}.
-\end{align} wenn dieser Prozess über mehrere `Result` Werte durchlaufen wird, werden eigen Zustände, die keine maximalen Werte von $ \prod_k\Pr (\text{result}\_k | \phi\_j) $ aufweisen, exponentiell unterdrückt.
+Vor allem führt ein einziger PE-Schritt die folgende nicht einheitliche Transformation auf dem Status "\begin{align} \ sum_j \sqrt{\pr (\phi\_j)} \ket{\phi\_j} \mapsto \sum\_j\frac {\ sqrt {\ PR (\phi\_j)} \sqrt{\pr (\text{result} | \phi\_j)} \ket{\phi\_j}} {\sqrt{\pr (\phi\_j) \sum\_j \pr (\text{result} | \phi\_j)}}.
+\end{align} wenn dieser Prozess über mehrere `Result` Werte durchlaufen wird, werden eigen Zustände, die keine maximalen Werte von $ \ prod_k \pr (\text{result}\_k | \phi\_j) $ aufweisen, exponentiell unterdrückt.
 Folglich wird der Rückschluss Prozess in der Regel mit einem einzelnen eigen Wert zusammengeführt, wenn die Experimente ordnungsgemäß ausgewählt werden.
 
-Bayes ' Theorem gibt weiter an, dass der Zustand, der sich aus der Phasen Schätzung ergibt, in der Form \begin{align} \bruchteil {\sqrt{\pr (\phi\_j)} \sqrt{\pr (\text{result} | \phi\_j)} \ket{\phi\_j}} {\sqrt{\pr (\phi\_j) \sum\_j \pr (\text{result} | \phi\_j)}} = \sum_j \sqrt{\pr (\phi\_j | \text{result})} \ket{\phi\_j}.
+Bayes ' Theorem gibt weiter an, dass der Zustand, der sich aus der Phasen Schätzung ergibt, in der Form \begin{align} \bruchteil {\sqrt{\pr (\phi\_j)} \sqrt{\pr (\text{result} | \phi\_j)} \ket{\phi\_j} geschrieben wird.} {\sqrt{\pr (\phi\_j) \sum\_j \pr (\text{result} | \phi\_j)}} = \ sum_j \sqrt{\pr (\phi\_j | \text{result})} \ket{\phi\_j}.
 \end{align} hier $ \pr (\phi\_j | \text{result}) kann als die Wahrscheinlichkeit interpretiert werden, die für jede Hypothese über die angegebenen Eigenwerte festgestellt wird:
 
 1. Kenntnis des Quanten Zustands vor der Messung
@@ -71,7 +71,7 @@ Die Phasen Schätzung wird für diesen Grund innerhalb einer Reihe von Quantum-A
 ### <a name="bayesian-phase-estimation"></a>Schätzung der bayesschen Phase ###
 
 > [!TIP]
-> Ausführlichere Informationen zur bayesschen Phasen Schätzung in der Praxis finden Sie im Beispiel für eine [**phaseschätzungsschätzung**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation) .
+> Ausführlichere Informationen zur bayesschen Phasen Schätzung in der Praxis finden Sie im Beispiel für eine [**phaseschätzungsschätzung**](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) .
 
 Die Idee der bayesschen Phasen Schätzung ist einfach.
 Sie erfassen Mess Statistiken aus dem Phasen Schätz Protokoll und verarbeiten dann die Ergebnisse mit bayesschen Inferenz und geben eine Schätzung des Parameters an.
@@ -87,10 +87,10 @@ Die Wahrscheinlichkeit, `Zero` für eine [`PauliX` Messung](xref:microsoft.quant
 Nach der herkömmlichen klassischen Terminologie wird $ \eqref{EQ: Phase-EST-Wahrscheinlichkeit} $ die *Wahrscheinlichkeitsfunktion* für die iterative Phasen Schätzung aufgerufen.
 
 Nachdem Sie eine `Result` mit der Wahrscheinlichkeits Wahrscheinlichkeitsfunktion für iterative Phasen beobachtet haben, können wir die Bayes-Regel verwenden, um vorzuschreiben, was in der Phase der Betrachtung folgen soll.
-Konkret: \begin{Equation} \pr (\phi | d) = \bruchteil {\pr (d | \phi) \pr (\phi)} {\int \pr (d | \phi) \pr (\phi) {\mathrm d} \phi} \pr (\phi), \end{Equation} WHERE $d \in \\{\texttt{Zero}, \texttt{One}\\} $ ist ein `Result`und WHERE $ \pr (\phi) $ beschreibt unsere früheren Überzeugungen zu $ \phi $.
+Konkret: \begin{Equation} \pr (\phi | d) = \bruchteil {\pr (d | \phi) \pr (\phi)} {\int \pr (d | \phi) \pr (\phi) {\mathrm d} \phi} \pr (\phi), \end{Equation} WHERE $d \in \\{\texttt{Zero}, \texttt{One}\\} $ ist ein `Result`, und WHERE $ \pr (\phi) $ beschreibt unsere früheren Überzeugungen zu $ \phi $.
 Dadurch wird die iterative Phasen Schätzung explizit durchlaufen, da der Wert der nachfolgenden Distribution $ \pr (\phi | d) die Überzeugungen unmittelbar vor der Betrachtung der nächsten `Result`beschreibt.
 
-Zu einem beliebigen Zeitpunkt während dieses Verfahrens können wir die Phase $ \hat{\phi} $, die vom klassischen Controller abgeleitet wurde, als "\begin{Equation} \hat{\phi} \mathrel{" melden: =} \erwartet [\phi | \text{Data}] = \int \phi \pr (\phi | \text{Data}) {\mathrm d} \phi, \end{Equation} WHERE $ \ der Text {Data} $ steht für den gesamten Datensatz aller `Result` Werte, die abgerufen wurden.
+Zu einem beliebigen Zeitpunkt während dieses Verfahrens können wir die Phase $ \hat{\phi} $, die vom klassischen Controller abgeleitet wurde, als "\begin{Equation} \hat{\phi} \mathrel{" melden: =} \erwartet [\phi | \text{Data}] = \int \phi \pr (\phi | \text{Data}) {\mathrm d} \phi, \end{Equation} WHERE $ \text{Data} $ steht für den gesamten Datensatz aller `Result` Werte, die abgerufen wurden.
 
 Der genaue Bayessche Rückschluss ist in der Praxis unlösbar.
 Um dies zu sehen, möchten wir eine $n $-Bit-Variable $x $ erlernen.
@@ -104,12 +104,12 @@ Während einige Anwendungen, wie z. b. die Quantum-Simulation, die erforderliche
 
 Ein Beispiel mit einem effizienten klassischen Nachbearbeitungsschritt ist der [robuste Phasen Schätz Algorithmus](https://arxiv.org/abs/1502.02677)mit der oben erwähnten Signatur und den oben erwähnten Eingaben. Dabei wird davon ausgegangen, dass Eingabe-einheitliche schwarze Felder $U $ als `DiscreteOracle` Typ verpackt werden. Daher werden nur ganz Zahl Kräfte von kontrollierten $U $ abgefragt. Wenn der Eingabe Status im `Qubit[]` Register ein eigen Status $U \ket{\psi} = e ^ {i\phi} \ Ket {\ PSI} $ ist, gibt der robuste Algorithmus der Phasen Schätzung eine Schätzung $ \hat{\phi}\in [-\pi, \pi) $ von $ \phi $ als `Double`zurück.
 
-Das wichtigste Feature der robusten Phasen Schätzung, das gemeinsam mit den meisten anderen nützlichen Varianten verwendet wird, besteht darin, dass die Erfolgs Qualität von $ \hat{\phi} $ in gewisser Weise Heisenberg-Limited ist. Dies bedeutet Folgendes: Wenn die Abweichung von $ \hat{\phi} $ von dem Wert "true" den Wert $ \sigma $ hat, wird "$ \sigma $" umgekehrt proportional zur Gesamtanzahl der Abfragen $Q $ an "kontrolliert-$U $" durchgeführt, d. h. $ \sigma = \mathcal{o} (1/Q) $. Nun variiert die Definition der Abweichung zwischen unterschiedlichen Schätz Algorithmen. In einigen Fällen kann dies bedeuten, dass bei mindestens $ \mathcal{o} (1) $ Wahrscheinlichkeit der Schätz Fehler $ | \hat{\phi}-\phi |\_\circ\le \sigma $ bei einem Zirkel Measure $ \circ $. Bei einer robusten Phasen Schätzung ist die Abweichung genau die Varianz $ \sigma ^ 2 = \mathbb{e}\_\hat{\phi} [(\Mod\_{2 \ PI} (\hat{\phi}-\phi + \pi)-\pi) ^ 2] $, wenn wir die Umbruch Phasen in einem einzelnen begrenzten Intervall $ (-\pi, \pi] $) entpacken Genauer betrachtet entspricht die Standardabweichung bei der robusten Phasen Schätzung den Ungleichheiten $ $ \begin{align} 2,0 \pi/Q \le \sigma \le 2 \ Pi/2 ^ {n} \le 10.7 \ Pi/Q, \end{align} $ $, wobei die untere Grenze im Limit von asymptuarg Large $Q $ und der obere Grenze erreicht wird. gebunden ist auch bei kleinen Stichprobengrößen garantiert.  Beachten Sie, dass $n $ von der `bitsPrecision` Eingabe ausgewählt wurde, die implizit $Q $ definiert.
+Das wichtigste Feature der robusten Phasen Schätzung, das gemeinsam mit den meisten anderen nützlichen Varianten verwendet wird, besteht darin, dass die Erfolgs Qualität von $ \hat{\phi} $ in gewisser Weise Heisenberg-Limited ist. Dies bedeutet Folgendes: Wenn die Abweichung von $ \hat{\phi} $ von dem Wert "true" den Wert $ \sigma $ hat, wird "$ \sigma $" umgekehrt proportional zur Gesamtanzahl der Abfragen $Q $ an "kontrolliert-$U $" durchgeführt, d. h. $ \sigma = \mathcal{o} (1/Q) $. Nun variiert die Definition der Abweichung zwischen unterschiedlichen Schätz Algorithmen. In einigen Fällen kann dies bedeuten, dass bei mindestens $ \mathcal{o} (1) $ Wahrscheinlichkeit der Schätz Fehler $ | \hat{\phi}-\phi |\_\circ\le \sigma $ bei einem Zirkel Measure $ \circ $. Bei einer robusten Phasen Schätzung ist die Abweichung genau die Varianz $ \sigma ^ 2 = \mathbb{e}\_\hat{\phi} [(\Mod\_{2 \ PI} (\hat{\phi}-\phi + \pi)-\pi) ^ 2] $, wenn wir die Umbruch Phasen in einem einzelnen begrenzten Intervall $ (-\pi, \pi] $) entpacken Genauer: die Standardabweichung in der robusten Phasen Schätzung erfüllt die Ungleichheiten $ $ \begin{align} 2,0 \pi/q \le \sigma \le 2 \ Pi/2 ^ {n} \le 10.7 \ Pi/q, \end{align} $ $, wobei die untere Grenze im Limit von asympmearg Large $Q $ erreicht wird, und die obere Grenze ist auch bei kleinen Stichprobengrößen garantiert.  Beachten Sie, dass $n $ von der `bitsPrecision` Eingabe ausgewählt wurde, die implizit $Q $ definiert.
 
 Weitere relevante Details sind z. a. der kleine Speicherplatz, der nur $1 $ Ancilla Qubit ist, oder, wenn die Prozedur nicht Adaptive ist, d. h. die erforderliche Sequenz von Quantum-Experimenten ist unabhängig von den zwischen Messergebnissen. In diesem und bevorstehenden Beispielen, in denen der Algorithmus der Phasen Schätzung von Bedeutung ist, sollten Sie in der Dokumentation wie @"microsoft.quantum.canon.robustphaseestimation" und der referenzierten Veröffentlichungen darauf verweisen, um weitere Informationen und deren Implementierung zu erhalten.
 
 > [!TIP]
-> Es gibt viele Beispiele, in denen eine robuste Phasen Schätzung verwendet wird. Die Phasen Schätzung zum Extrahieren der Grund Zustands Energie des unterschiedlichen physischen Systems finden Sie im Beispiel für die [ **H2-Simulation** ](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine), das [ **simpleising** -Beispiel](https://github.com/Microsoft/Quantum/tree/master/Samples/src/SimpleIsing)und das Beispiel für das Hubbard- [ **Modell** ](https://github.com/Microsoft/Quantum/tree/master/Samples/src/HubbardSimulation).
+> Es gibt viele Beispiele, in denen eine robuste Phasen Schätzung verwendet wird. Die Phasen Schätzung zum Extrahieren der Grund Zustands Energie des unterschiedlichen physischen Systems finden Sie im Beispiel für die [ **H2-Simulation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), das [ **simpleising** -Beispiel](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)und das Beispiel für das Hubbard- [ **Modell** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard).
 
 
 ### <a name="continuous-oracles"></a>Kontinuierliche Oracles ###
@@ -119,9 +119,9 @@ Angenommen, anstelle eines einzelnen einheitlichen Operators $U $ haben wir eine
 Dies ist eine schwächere Anweisung als im diskreten Fall, da wir eine <xref:microsoft.quantum.oracles.discreteoracle> erstellen können, indem wir $t = m\,\delta t $ für einige festgelegte $ \delta t $ einschränken.
 Nach dem [Theorem des Steins](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups), $U (t) = \exp (i H t) $ für einen Operator $H $, wobei $ \exp $ die Matrix exponentialweise ist, wie in [Advanced Matrizen](xref:microsoft.quantum.concepts.matrix-advanced)beschrieben.
 Der Eigen Status $ \ket{\phi} $ von $H $, sodass $H \ket{\phi} = \phi \ket{\phi} $ auch der Eigen Status $U (t) $ für alle $t $, \begin{Equation} U (t) \ket{\phi} = e ^ {i \phi t} \ket{\phi}.
-\end{Equation}
+\end{equation}
 
-Genau dieselbe Analyse, die für die Bayes- [Phasen Schätzung](#bayesian-phase-estimation) besprochen wurde, kann angewendet werden, und die Wahrscheinlichkeitsfunktion ist für dieses allgemeinere Oracle-Modell exakt gleich: $ $ \pr (\texttt{Zero} | \phi; t, \mesta) = \cos ^ 2 \ Left (\bruchteil {t [\phi-\urta] @no__} t_1_ \right).
+Genau dieselbe Analyse, die für die Bayes- [Phasen Schätzung](#bayesian-phase-estimation) erläutert wurde, kann angewendet werden. und die Wahrscheinlichkeitsfunktion ist für dieses allgemeinere Oracle-Modell exakt identisch: $ $ \pr (\texttt{Zero} | \phi; t, \orta) = \cos ^ 2 \ Left (\bruchteil {t [\phi-\urta]}{2}\right).
 Außerdem gilt: Wenn $U $ eine Simulation eines dynamischen Generators ist, wie es bei der [hamiltona-Simulation](xref:microsoft.quantum.libraries.applications#hamiltonian-simulation)der Fall ist, wird $ \phi $ als Strom interpretiert.
 Durch die Verwendung der Phasen Schätzung mit kontinuierlichen Abfragen können wir also das simulierte [Strom Spektrum von Molekülen](https://arxiv.org/abs/quant-ph/0604193), [Materialien](https://arxiv.org/abs/1510.03859) oder [Feldtheorien](https://arxiv.org/abs/1111.3633v2) erlernen, ohne unsere Auswahl von Experimenten kompromittieren zu müssen, da $t $ eine ganze Zahl sein muss.
 

@@ -6,18 +6,18 @@ ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.qubits
-ms.openlocfilehash: d1a8ccc9423a9a04e12bc98e3783790232b2f5d8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 477b358c3eba58b62926b4e9094770c9741cac92
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183470"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864252"
 ---
 # <a name="working-with-qubits"></a>Arbeiten mit Qubits #
 
 Nachdem wir nun eine Vielzahl von verschiedenen Teilen der Q #-Sprache gesehen haben, können wir uns die Thick of IT ansehen und erfahren, wie Sie Qubits selbst verwenden können.
 
-## <a name="allocating-qubits"></a>Zuordnen von Qubits ##
+## <a name="allocating-qubits"></a>Speicherbelegung für Qubits ##
 
 Zum Abrufen eines Qubit, das in Q # verwendet werden kann, weisen wir *Qubits* in einem `using` Block zu:
 
@@ -43,7 +43,7 @@ Diese Vorgänge werden in systeminternen [Vorgängen und Funktionen](xref:micros
 
 Zuerst werden die Single-Qubit-Pauli-Operatoren $X $, $Y $ und $Z $ in Q # durch die intrinsischen Vorgänge `X`, `Y`und `Z`dargestellt, von denen jeder über den Typ `(Qubit => Unit is Adj + Ctl)`verfügt.
 Wie in systeminternen [Vorgängen und Funktionen](xref:microsoft.quantum.libraries.standard.prelude)beschrieben, können wir uns $X $ und somit `X` als bitflip-Vorgang oder nicht als Gate vorstellen.
-Auf diese Weise können wir die Zustände der Form $ \ket{s_0 s_1 \dots s_n} $ für einige klassische Bitzeichenfolgen vorbereiten $s $:
+Auf diese Weise können wir die Zustände der Form $ \ket{s_0 s_1 \dots s_n} $ für eine klassische Bitzeichenfolge vorbereiten $s $:
 
 ```qsharp
 operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : Unit 
@@ -72,7 +72,7 @@ operation Example() : Unit {
 > [!TIP]
 > Später werden weitere kompakte Methoden zum Schreiben dieses Vorgangs angezeigt, für die keine manuelle Fluss Steuerung erforderlich ist.
 
-Wir können auch die Zustände wie $ \ket{+} = \left (\ket{0} + \ket{1}\right)/\sqrt{2}$ und $ \ket{-} = \left (\ket{0}-\ket{1}\right)/\sqrt{2}$ mithilfe der Hadamard Transform $H $ , der in f # durch den intrinsischen Vorgang `H : (Qubit => Unit is Adj + Ctl)`dargestellt wird:
+Wir können auch Zustände wie $ \ket{+} = \left (\ket{0} + \ket{1}\right)/\sqrt{2}$ und $ \ket{-} = \left (\ket{0}-\ket{1}\right)/\sqrt{2}$ mithilfe der Hadamard Transform $H $, das in Q # durch den systeminternen Vorgang `H : (Qubit => Unit is Adj + Ctl)`dargestellt wird:
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -90,7 +90,7 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 
 ## <a name="measurements"></a>Measurements (Messungen) ##
 
-Mithilfe des `Measure`-Vorgangs, bei dem es sich um einen integrierten, systeminternen, nicht einheitlichen Vorgang handelt, können wir klassische Informationen aus einem Objekt des Typs `Qubit` extrahieren und einen klassischen Wert als Ergebnis zuweisen, der einen reservierten Typ hat `Result`, der angibt, dass das Ergebnis "No" ist. längerer quantumzustand. Die Eingabe für `Measure` ist eine Pauli-Achse in der Bloch-Kugel, die durch ein Objekt vom Typ `Pauli` (z. BB`PauliX`) und ein Objekt vom Typ `Qubit`dargestellt wird. 
+Mithilfe des `Measure`-Vorgangs, bei dem es sich um einen integrierten, systeminternen, nicht einheitlichen Vorgang handelt, können wir klassische Informationen aus einem Objekt des Typs `Qubit` extrahieren und einen klassischen Wert als Ergebnis zuweisen, der einen reservierten Typ hat `Result`, der angibt, dass das Ergebnis nicht mehr ein Quantum-Zustand ist. Die Eingabe für `Measure` ist eine Pauli-Achse in der Bloch-Kugel, die durch ein Objekt vom Typ `Pauli` (z. BB`PauliX`) und ein Objekt vom Typ `Qubit`dargestellt wird. 
 
 Ein einfaches Beispiel ist der folgende Vorgang, bei dem ein Qubit im $ \ket-{0}$ State erstellt wird. Anschließend wird ein Hadamard-Gate ``H`` darauf angewendet, und dann wird das Ergebnis auf `PauliZ` Basis gemessen. 
 
@@ -129,7 +129,7 @@ operation AllMeasurementsZero (qs : Qubit[], pauli : Pauli) : Bool {
 }
 ```
 
-Die Q #-Sprache ermöglicht Abhängigkeiten der klassischen Ablauf Steuerung bei Messergebnissen von Qubits. Dies wiederum ermöglicht es, leistungsstarke, probabilistische Mini Anwendungen zu implementieren, die die berechnungskosten für die Implementierung von uniflüssen reduzieren können. Beispielsweise ist es einfach, eine so genannte *Wiederholung bis zum Erfolg* in Q # zu implementieren, bei der es sich um probabilistische Verbindungen handelt, die in Bezug auf elementare Gates *erwartete* niedrige Kosten aufweisen, aber für die die tatsächlichen Kosten von einem tatsächlichen Testlauf und einem tatsächlichen Austausch Vorgänge verschiedener möglicher Verzweigungen. 
+Die Q #-Sprache ermöglicht Abhängigkeiten der klassischen Ablauf Steuerung bei Messergebnissen von Qubits. Dies wiederum ermöglicht es, leistungsstarke, probabilistische Mini Anwendungen zu implementieren, die die berechnungskosten für die Implementierung von uniflüssen reduzieren können. Beispielsweise ist es einfach, eine so genannte *Wiederholung bis zum Erfolg* in Q # zu implementieren, bei der es sich um probabilistische Verbindungen handelt, die in Bezug auf elementare Gates *erwartete* niedrige Kosten aufweisen, aber für die die echten Kosten von einem tatsächlichen Testlauf und einem tatsächlichen Austausch der verschiedenen möglichen Verzweigungen abhängen. 
 
 Zum Vereinfachen von Wiederholungs-bis-Erfolg-Mustern (RUS) unterstützt Q # das-Konstrukt.
 ```qsharp
@@ -167,7 +167,7 @@ operation RUScircuit (qubit : Qubit) : Unit {
 
 Dieses Beispiel zeigt die Verwendung einer änderbaren Variablen `finished` die sich im Gültigkeitsbereich der gesamten Repeat-Until-Fixup-Schleife befindet und die vor der Schleife initialisiert und im fixupschritt aktualisiert wird.
 
-Zum Schluss zeigen wir ein Beispiel eines RUS-Musters zum Vorbereiten des Quantums $ \frac{1}{\sqrt{3}} \left (\sqrt{2}\ket{0}+ \ket{1}\right) $, beginnend ab dem $ \ket{+} $-Status. Siehe auch das [Beispiel für Komponententests, das mit der Standardbibliothek bereitgestellt](https://github.com/Microsoft/Quantum/blob/master/Samples/src/UnitTesting/RepeatUntilSuccessCircuits.qs)wird: 
+Zum Schluss zeigen wir ein Beispiel eines RUS-Musters zum Vorbereiten des Quantums $ \frac{1}{\sqrt{3}} \left (\sqrt{2}\ket{0}+ \ket{1}\right) $, beginnend ab dem $ \ket{+} $-Status. Siehe auch das [Beispiel für Komponententests, das mit der Standardbibliothek bereitgestellt](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs)wird: 
 
 ```qsharp
 operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
@@ -212,4 +212,4 @@ operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
 }
 ```
  
-Wichtige programmgesteuerte Features, die in diesem Vorgang gezeigt werden, sind eine komplexere `fixup` Teil der Schleife, die Quantum-Vorgänge einschließt, und die Verwendung von `AssertProb`-Anweisungen, um die Wahrscheinlichkeit zu ermitteln, dass der Quantum-Zustand an bestimmten bestimmten Punkten im Oren. Weitere Informationen zu `Assert`-und `AssertProb`-Anweisungen finden Sie unter [Testen und Debuggen](xref:microsoft.quantum.techniques.testing-and-debugging) . 
+Wichtige programmgesteuerte Features, die in diesem Vorgang gezeigt werden, sind eine komplexere `fixup` Teil der Schleife, die Quantum-Vorgänge einschließt, und die Verwendung von `AssertProb`-Anweisungen, um die Wahrscheinlichkeit zu ermitteln, dass der Quantum-Zustand an bestimmten angegebenen Punkten im Programm gemessen wird. Weitere Informationen zu `Assert`-und `AssertProb`-Anweisungen finden Sie unter [Testen und Debuggen](xref:microsoft.quantum.techniques.testing-and-debugging) . 

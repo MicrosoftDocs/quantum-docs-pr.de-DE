@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5aac40686ba9b45a51e0274a1828f2ff7cce6fc3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: e1b78cf94ae0a043ad275d4cb06b230eafd7fc85
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184439"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863196"
 ---
 # <a name="error-correction"></a>Fehlerkorrektur #
 
@@ -28,7 +28,7 @@ In der Quantum-Einstellung werden wir sehen, dass die Messung problematisch ist.
 Dies ist hilfreich, um zu sehen, wie die Fehlerkorrektur in den Quantum-Fall generalisiert werden kann.
 Geben Sie daher $ \ket{\overline{0}} = \ket{000} = \ket{0} \otimes \ket{0} \otimes \ket{0}$ ein, und lassen Sie $ \ket{\overline{1}} = \ket{111}$.
 Anschließend haben wir in Linearität unseren Wiederholungs Code für alle Eingaben definiert. Beispiel: $ \ket{\overline{+}} = (\ket{\overline{0}} + \ket{\overline{1}})/\sqrt{2} = (\ket{000} + \ket{111})/\sqrt{2}$.
-Insbesondere, wenn Sie einen Bit-Flip-Fehler $X _1 $ Act für das mittlere Qubit, sehen wir, dass die erforderliche Korrektur in beiden branches genau $X _1 $: $ $ \begin{align} x_1 \ket{\overline{+}} & = \frac{1}{\sqrt{2}} \left (x_1 \ket{000} + x_1 \ket @no__ t_3_ \right) \\\\ & = \frac{1}{\sqrt{2}} \left (\ket{010} + \ket{101} \right).
+Insbesondere, wenn Sie einen Bit-Flip-Fehler $X _1 $ Act für das mittlere Qubit, sehen wir, dass die Korrektur, die für beide branches erforderlich ist, genau $X _1 $: $ $ \begin{align} x_1 \ket{\overline{+}} & = \frac{1}{\sqrt{2}} \left (x_1 \ket{000} + x_1 \ket{111} \right) \\\\ & = \frac{1}{\sqrt{2}} \left (\ket{010} + \ket{101} \right).
 \end{align} $ $
 
 Um zu sehen, wie wir erkennen können, dass dies der Fall ist, ohne den Zustand zu messen, den wir zu schützen versuchen, ist es hilfreich, die einzelnen anderen Bits-Flip-Fehler in die logischen Zustände zu schreiben:
@@ -43,14 +43,14 @@ Um zu sehen, wie wir erkennen können, dass dies der Fall ist, ohne den Zustand 
 Um den Zustand zu schützen, den wir codieren, müssen wir die drei Fehler voneinander und von der Identität $ \boldone $ unterscheiden können, ohne zwischen "$ \ket{\overline{0}} $" und "$ \ket{\overline{1}} $" zu unterscheiden.
 Wenn z. b. $Z _0 $ gemessen wird, erhalten wir ein anderes Ergebnis für "$ \ket{\overline{0}} $" und "$ \ket{\overline{1}} $" im Fehlerfall, sodass der codierte Zustand reduziert wird.
 Auf der anderen Seite können Sie $Z _0 Z_1 $ Messen, die Parität der ersten beiden Bits in den einzelnen Berechnungs Status Zuständen.
-Beachten Sie, dass jede Messung eines Pauli-Operators überprüft, welcher eigen Wert der gemessene Wert entspricht. Daher können wir für jeden Status $ \ket{\psi} $ in der obigen Tabelle $Z _0 Z_1 \ket{\psi} $ berechnen, um festzustellen, ob "$ \pm\ket{\psi} $" erhalten wird.
-Beachten Sie, dass $Z _0 Z_1 \ket{000} = \ket{000}$ und $Z _0 Z_1 \ket{111} = \ket{111}$, sodass wir feststellen, dass diese Maßeinheit den beiden codierten Zuständen dasselbe entspricht.
-Auf der anderen Seite $Z _0 Z_1 \ket{100} =-\ket{100}$ und $Z _0 Z_1 \ket{011} =-\ket{011}$, sodass das Ergebnis der Messung von $Z _0 Z_1 $ nützliche Informationen zu dem Fehler zeigt, der aufgetreten ist.
+Beachten Sie, dass jede Messung eines Pauli-Operators überprüft, welcher eigen Wert der gemessene Wert entspricht. Daher können wir für jeden Status $ \ket{\psi} $ in der obigen Tabelle $Z _0-Z_1 \ket{\psi} $ berechnen, um festzustellen, ob "$ \pm\ket{\psi} $" erhalten wird.
+Beachten Sie, dass $Z _0 Z_1 \ket{000} = \ket{000}$ und diese $Z _0 Z_1 \ket{111} = \ket{111}$, sodass wir feststellen, dass diese Maßeinheit den beiden codierten Zuständen dasselbe entspricht.
+Auf der anderen Seite $Z _0 Z_1 \ket{100} =-\ket{100}$ und $Z _0 Z_1 \ket{011} =-\ket{011}$. das Ergebnis der Messung $Z _0 $ zeigt daher nützliche Informationen über den Fehler an.
 
-Um dies zu verdeutlichen, wird die obige Tabelle wiederholt, aber die Ergebnisse der Messung $Z _0 Z_1 $ und $Z _1 Z_2 $ für jede Zeile werden hinzugefügt.
+Um dies hervorzuheben, wiederholen wir die obige Tabelle, fügen jedoch die Ergebnisse der Messung $Z _0 Z_1 $ und $Z _1 Z_2 $ für jede Zeile hinzu.
 Wir bezeichnen die Ergebnisse der einzelnen Messungen durch das Vorzeichen des Eigenwerts, der beobachtet wird, entweder $ + $ oder $-$, der den Q #-`Result` Werten von `Zero` bzw. der `One`entspricht.
 
-| Fehler $E $ | $E \ket{\overline{0}} $ | $E \ket{\overline{1}} $ | Ergebnis $Z _0 Z_1 $ | Ergebnis $Z _1 Z_2 $ |
+| Fehler $E $ | $E \ket{\overline{0}} $ | $E \ket{\overline{1}} $ | Ergebnis der $Z _0 Z_1 $ | Ergebnis der $Z _1 Z_2 $ |
 | --- | --- | --- | --- | --- |
 | $ \boldone $ | $ \ket{000}$ | $ \ket{111}$ | $+$ | $+$ |
 | $X _0 $ | $ \ket{100}$ | $ \ket{011}$ | $-$ | $+$ |
@@ -67,7 +67,7 @@ Insbesondere betonen wir, dass die Wiederherstellung eine *klassische* Inferenz 
 > Auf ähnliche Weise wird durch das Anwenden eines Phasen kippen `Z` $ \ket{\overline{1}} $ zu $-\ket{\overline{1}} $ zugeordnet. Daher wird $ \ket{\overline{+}} $ zu $ \ket{\overline{-}} $ zugeordnet.
 > Im Allgemeinen können Codes erstellt werden, um eine größere Anzahl von Fehlern zu verarbeiten und $Z $ Errors sowie $X $ Errors zu behandeln.
 
-Die Erkenntnis, dass wir Messungen in der Quantum-Fehlerkorrektur beschreiben können, die auf die gleiche Weise für alle Code Zustände agieren, ist die essense der *stabilisatformalität*.
+Die Erkenntnis, dass wir Messungen in der Quantum-Fehlerkorrektur beschreiben können, die auf die gleiche Weise für alle Code Zustände agieren, ist der Grund für die *stabilisatformalität*.
 Q # Canon bietet ein Framework zum Beschreiben der Codierung in und Decodierung von Stabilisator-Codes und zum Beschreiben der Art und Weise, wie eine von Fehlern wieder hergestellt wird.
 In diesem Abschnitt werden dieses Framework und seine Anwendung für einige einfache Quantum-Fehler Behebungs Codes beschrieben.
 
@@ -117,6 +117,6 @@ using (scratch = Qubit[nScratch]) {
 }
 ```
 
-Wir untersuchen dies im [bitflip-Codebeispiel](https://github.com/Microsoft/Quantum/tree/master/Samples/src/BitFlipCode)ausführlicher.
+Wir untersuchen dies im [bitflip-Codebeispiel](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code)ausführlicher.
 
-Abgesehen vom Bit-Flip-Code wird der Q #-Kanon mit Implementierungen des [perfekten 5-Qubit-Codes](https://arxiv.org/abs/1305.08)bereitgestellt, und der [sieben-Qubit](https://arxiv.org/abs/quant-ph/9705052)-Code, der beide einen beliebigen Single-Qubit-Fehler beheben kann.
+Abgesehen vom Bit-Flip-Code wird der Q #-Kanon mit Implementierungen des [perfekten 5-Qubit-Codes](https://arxiv.org/abs/quant-ph/9602019)bereitgestellt, und der [sieben-Qubit](https://arxiv.org/abs/quant-ph/9705052)-Code, der beide einen beliebigen Single-Qubit-Fehler beheben kann.

@@ -1,24 +1,24 @@
 ---
 title: Ungültige Qubits-Verwendungs Überprüfung | Ablauf Verfolgungs Simulator für Quantum-Computer | Microsoft-Dokumentation
-description: Übersicht über den Ablauf Verfolgungs Simulator für Quantum-Computer
+description: Übersicht über Ablaufverfolgungssimulator für Quantencomputer
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: 7403381b995ab660aa5cbc5a52b1e12c5c9ce442
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 283cc7d7d88f731f40fa396c38ae5ea8dd90537f
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184966"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863179"
 ---
 # <a name="invalidated-qubits-use-checker"></a>Ungültige Qubits-Verwendungs Überprüfung
 
 Der `Invalidated Qubits Use Checker` ist Teil des Quantum- [computertracesimulators](xref:microsoft.quantum.machines.qc-trace-simulator.intro) , der zum Erkennen potenzieller Fehler im Code entworfen wurde. Sehen Sie sich den folgenden Q #-Code an, um die vom `Invalidated Qubits Use Checker`erkannten Probleme zu veranschaulichen.
 
 ```qsharp
-operation UseReleasedQubitTest () : Unit {
+operation UseReleasedQubit () : Unit {
     mutable q = new Qubit[1];
     using (ans = Qubit()) {
         set q w/= 0 <- ans;

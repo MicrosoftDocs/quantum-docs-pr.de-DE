@@ -5,18 +5,17 @@ author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 4677b0f9c4f64a9c1bc46d34e8a883dc006ba8f0
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: c079364f8808304e0132fa2a4226cd6400e81339
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183300"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863145"
 ---
-# <a name="going-further"></a>Weiter #
+# <a name="going-further"></a>Vertiefung #
 
 Nachdem Sie nun erfahren haben, wie Sie interessante Quantum-Programme in Q # schreiben, werden in diesem Abschnitt noch einige erweiterte Themen vorgestellt, die sich in Zukunft als nützlich erweisen sollten.
 
-<!-- Moved Debugging and Testing Quantum Programs section to a separate article -->
 
 ## <a name="generic-operations-and-functions"></a>Generische Vorgänge und Funktionen ##
 
@@ -119,7 +118,7 @@ function Compose(outerFn : (B -> C), innerFn : (A -> B)) : (A -> C) {
 
 Hier müssen Sie genau angeben, welche `A`, `B`und `C` sind, und so das Dienstprogramm der neuen `Compose` Funktion stark einschränken.
 Schließlich ist `Compose` nur über `innerFn` und `outerFn`von `A`, `B`und *`C` abhängig* .
-Als Alternative können wir Typparameter zu `Compose` hinzufügen, die angeben, dass Sie für *alle* `A`, `B`und `C`funktioniert, solange diese Parameter den von `innerFn` erwarteten und `outerFn`:
+Als Alternative können wir Typparameter zu `Compose` hinzufügen, die angeben, dass Sie für *alle* `A`, `B`und `C`funktioniert, solange diese Parameter den von `innerFn` und `outerFn`erwarteten entsprechen:
 
 ```qsharp
 function ComposeImpl<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B), input : 'A) : 'C {
@@ -178,6 +177,6 @@ is Adj + Ctl {
 }
 ```
 
-Beachten Sie, dass die ausführliche Verwendung des `With` Combinator in seinem Formular---ist, das für Vorgänge anwendbar ist, die Adjoint unterstützen, d. h. `WithA`---in diesem Beispiel erstellt wurde. Dies ist ein guter Programmierstil, da die Strukturen, die nur `With` einschließen Gibt das Steuerelement an den inneren Vorgang weiter. Beachten Sie, dass hier zusätzlich zum `body` des Vorgangs eine Implementierung des `controlled` Texts des Vorgangs explizit bereitgestellt wurde, anstatt auf eine `controlled auto`-Anweisung zurückgreifen zu müssen. Der Grund hierfür ist, dass wir aus der Struktur der Verbindung wissen, wie Sie ganz einfach weitere Steuerelemente hinzufügen können, die im Vergleich zum Hinzufügen von Steuerelementen zu jedem und jedem einzelnen Gate im `body`von Vorteil sind. 
+Beachten Sie, dass die umfangreiche Verwendung des `With` Combinator in seinem Formular---, das für Vorgänge anwendbar ist, die Adjoint unterstützen, d. h., `WithA`---in diesem Beispiel erstellt wurde. Dies ist ein guter Programmierstil, als das Steuerelement zu Strukturen hinzuzufügen, die `With` nur Steuerelemente an den inneren Vorgang weitergibt Beachten Sie, dass hier zusätzlich zum `body` des Vorgangs eine Implementierung des `controlled` Texts des Vorgangs explizit bereitgestellt wurde, anstatt auf eine `controlled auto`-Anweisung zurückgreifen zu müssen. Der Grund hierfür ist, dass wir aus der Struktur der Verbindung wissen, wie Sie ganz einfach weitere Steuerelemente hinzufügen können, die im Vergleich zum Hinzufügen von Steuerelementen zu jedem und jedem einzelnen Gate im `body`von Vorteil sind. 
 
 Es ist aufschlussreich, diesen Code mit einer anderen Funktion von `MultiControlledXClean` zu vergleichen, die das gleiche Ziel erreicht, eine mehrfach gesteuerte `X` Operation zu implementieren, bei der jedoch mithilfe des `using` Mechanismus mehrere Clean Qubits verwendet werden. 

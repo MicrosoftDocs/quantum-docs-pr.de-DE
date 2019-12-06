@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e8b28561f1aba37cb5bf41c6176386d19bfacf06
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 6eb47de84fdfbb9d35fdfc2988883f8e1cffa332
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184507"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864354"
 ---
 # <a name="data-structures-and-modeling"></a>Datenstrukturen und Modellierung #
 
@@ -20,7 +20,7 @@ ms.locfileid: "73184507"
 Zusammen mit benutzerdefinierten Typen für die Darstellung von Quantum-Konzepten stellt der Kanon auch Vorgänge, Funktionen und Typen für die Arbeit mit klassischen Daten bereit, die bei der Steuerung von Quantum-Systemen verwendet werden.
 Die <xref:microsoft.quantum.arrays.reversed>-Funktion nimmt beispielsweise ein Array als Eingabe an und gibt dasselbe Array in umgekehrter Reihenfolge zurück.
 Dies kann dann für ein Array vom Typ `Qubit[]` verwendet werden, um zu vermeiden, dass unnötige $ \operatschmue{curap} $ Gates beim Konvertieren zwischen den ganzen Zahlen von ganzen Zahlen angewendet werden müssen.
-Ebenso haben wir im vorherigen Abschnitt gesehen, dass Formular `(Int, Int -> T)` für die Darstellung von zufälligen Zugriffs Auflistungen nützlich sein können, sodass die <xref:microsoft.quantum.arrays.lookupfunction>-Funktion eine Möglichkeit bietet, solche Typen aus Array Typen zu erstellen.
+Ebenso haben wir im vorherigen Abschnitt gesehen, dass Formular `(Int, Int -> T)` für die Darstellung von zufälligen Zugriffs Auflistungen nützlich sein können, sodass die <xref:microsoft.quantum.arrays.lookupfunction>-Funktion eine bequeme Möglichkeit zum Erstellen solcher Typen aus Array Typen bietet.
 
 ### <a name="pairs"></a>Chen ###
 
@@ -73,11 +73,11 @@ Hier bezieht sich der Begriff Oracle auf eine blackboxtests-Quantum-Unterroutine
 Diese Unterroutine kann sich oft als Eingabe für einen Quantum-Algorithmus vorstellen, der das Oracle zusätzlich zu einigen anderen Parametern annimmt, und eine Reihe von Quantum-Vorgängen anwendet und einen aufzurufenden aufrufungs Vorgang als grundlegende Gate behandelt.
 Um den größeren Algorithmus tatsächlich zu implementieren, muss eine konkrete Zerlegung des Oracle in grundlegende Gates bereitgestellt werden, aber eine solche Zerlegung ist nicht erforderlich, um den Algorithmus zu verstehen, der das Oracle aufruft.
 In f # wird diese Abstraktion mithilfe von Vorgängen als erstklassige Werte dargestellt, sodass Vorgänge in einer Blackbox-Weise an Implementierungen von Quantum-Algorithmen übermittelt werden können.
-Außerdem werden benutzerdefinierte Typen verwendet, um die verschiedenen Oracle-Darstellungen auf typsichere Weise zu bezeichnen. dadurch ist es schwierig, unterschiedliche Arten von Black Box-Vorgängen versehentlich zu verscheihen.
+Darüber hinaus werden benutzerdefinierte Typen verwendet, um die verschiedenen Oracle-Darstellungen auf typsichere Weise zu bezeichnen. dadurch ist es schwierig, unterschiedliche Arten von Black Box-Vorgängen versehentlich zu verscheihen.
 
 Solche Oracles werden in verschiedenen Kontexten angezeigt, einschließlich bekannter Beispiele wie [der Such-und Quantum-Simulations Algorithmen von Grover](https://en.wikipedia.org/wiki/Grover%27s_algorithm) .
 Hier konzentrieren wir uns auf die Oracles, die nur für zwei Anwendungen benötigt werden: Amplitude-Verstärkung und Phasen Schätzung.
-Zuerst werden Amplitude-Verstärkungs-Oracles behandelt, bevor die Phasen Schätzung erfolgt.
+Zuerst werden Amplitude-Verstärkungs-Oracles erläutert, bevor die Phasen Schätzung fortgesetzt wird.
 
 ### <a name="amplitude-amplification-oracles"></a>Amplitude-Verstärkungs-Oracles ###
 
@@ -145,20 +145,20 @@ is Adj + Ctl {
 }
 ```
 
-Anschließend können Sie diese beiden Oracles miteinander kombinieren, um zwischen den beiden Zuständen zu drehen und $ \ket{+} ^ {\otimes n} $ in $ \ket{0}$ mithilfe von zu transformieren. eine Anzahl von Ebenen von Hadamard Gates, die proportional zu $ \sqrt{2 ^ n} $ (IE $m \propto \sqrt{2 ^ n} $) im Vergleich zu den ungefähr $2 ^ n $-Ebenen, die benötigt werden, um den $ \ket-{0}$ State auf nicht deterministische Weise vorzubereiten, indem Sie den Anfangszustand vorbereiten und Messen, bis das Ergebnis $0 $ beobachtet wird.
+Anschließend können Sie diese beiden Oracles miteinander kombinieren, um zwischen den beiden Zuständen zu wechseln, und die deterministische Transformation $ \ket{+} ^ {\otimes n} $ auf $ \ket{0}$ unter Verwendung einer Reihe von Hadamard Gates, die proportional zu $ \sqrt{2 ^ n sind.} $ (IE $m \propto \sqrt{2 ^ n} $) im Vergleich zu den n $2 ^ n $-Ebenen, die für eine nicht deterministische Vorbereitung des $ \ket-{0}$ State benötigt werden, indem Sie den anfänglichen Status vorbereiten und Messen, bis das Ergebnis $0 $ beobachtet wird.
 
 ### <a name="phase-estimation-oracles"></a>Phasen Schätz-Oracles ###
 
 Bei der Phasen Schätzung sind die Oracles etwas natürlicher.
 Das Ziel der Phasen Schätzung ist das Entwerfen einer Unterroutine, die eine Stichprobe aus den eigen Werten einer einheitlichen Matrix erstellen kann.
-Diese Methode ist in der Quantum-Simulation nicht zu verwenden, da diese Eigenwerte für viele physische Probleme in der Chemie und in der Materialwissenschaft die Boden Zustands Energien von Quantum-Systemen bereitstellen, die uns wertvolle Informationen zu den Phasen Diagrammen von Material and Reaction Dynamics für Moleküle.
+Diese Methode ist in der Quantum-Simulation unverzichtbar, da diese Eigenwerte für viele physische Probleme in der Chemie und in der Materialwissenschaft die Boden Zustands Energien von Quantum-Systemen liefern, die uns wertvolle Informationen zu den Phasen Diagrammen von Material and Reaction Dynamics für Moleküle.
 Jede Konfiguration der Phasen Schätzung benötigt eine einheitliche Eingabe.
 Diese einheitliche wird in der Regel durch einen von zwei Typen von Oracles beschrieben.
 
 > [!TIP]
 > Beide unten beschriebenen Oracle-Typen werden in den Beispielen behandelt.
-> Weitere Informationen zu kontinuierlichen Abfrage-Oracles finden Sie im Beispiel [ **phaseschätz.** ](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation)
-> Weitere Informationen zu diskreten Abfrage-Oracles finden Sie im Beispiel [ **isingphaseschätz.** ](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation)
+> Weitere Informationen zu kontinuierlichen Abfrage-Oracles finden Sie im Beispiel [ **phaseschätz.** ](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation)
+> Weitere Informationen zu diskreten Abfrage-Oracles finden Sie im Beispiel [ **isingphaseschätz.** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)
 
 Der erste Oracle-Typ, der als diskretes Abfrage-Oracle bezeichnet wird und den <xref:microsoft.quantum.oracles.discreteoracle>des benutzerdefinierten Typs darstellt, umfasst einfach eine einheitliche Matrix.
 Wenn $U $ die einheitliche ist, deren Eigenwerte wir schätzen möchten, ist das Oracle für $U $ einfach ein eigenständiger Wert für eine Unterroutine, die $U $ implementiert.
@@ -166,8 +166,8 @@ Beispielsweise kann $U $ der oben definierte Oracle $Q $ für die Amplitude-Sch�
 Die Eigenwerte dieser Matrix können verwendet werden, um die Überlappung zwischen dem Anfangs-und dem Ziel Status, $ \sin ^ 2 (\teta) $, zu schätzen, wobei quadratisch weniger Stichproben verwendet werden, die andernfalls benötigt werden.
 Dadurch wird die Anwendung der Phasen Schätzung mithilfe der Grover-Oracle-$Q $ als Eingabe für den Moniker der Amplitude-Schätzung verdient.
 Eine andere gängige Anwendung, die häufig in der Quantum-metroologie verwendet wird, umfasst die Schätzung eines kleinen Drehwinkels.
-Mit anderen Worten, wir möchten $ \Der TA $ für ein unbekanntes Drehungs Gate der Form $R _Z (\erta) $ schätzen.
-In solchen Fällen die Unterroutine, mit der wir interagieren würden, um diesen festgelegten Wert von $ \teta $ für das Gate zu erlernen, ist $ $ \begin{align} U & = R_z (\teta) \\\\ & = \begin{bmatrix} e ^ {-i \teta/2} & 0 \\\\ 0 & e ^ {i \ die \end{bmatrix}.-
+Mit anderen Worten, wir möchten $ \Der TA $ für ein unbekanntes Drehungs Gate der Form $R _Z (\Der TA) $ schätzen.
+In solchen Fällen die Unterroutine, mit der wir interagieren würden, um diesen festgelegten Wert von $ \teta $ für das Gate zu erlernen, ist $ $ \begin{align} U & = R_z (\teta) \\\\ & = \begin{bmatrix} e ^ {-i \Der Ta/2} & 0 \\\\ 0 & e ^ {i \ der TA/2} \end{bmatrix}.
 \end{align} $ $
 
 Der zweite Oracle-Typ, der in der Phasen Schätzung verwendet wird, ist die kontinuierliche Abfrage (Oracle), dargestellt durch den <xref:microsoft.quantum.oracles.continuousoracle>-Typ.
@@ -185,7 +185,7 @@ Da die Methoden der Quantum-Simulation die Möglichkeit bieten, eine nach Komma 
 Dies ist wichtig, um die letzte Unze Effizienz von Phasen Schätz Algorithmen zu unterdrücken, da es uns ermöglicht, genau das Experiment auszuwählen, das die meisten Informationen über $E $; Methoden, die auf diskreten Abfragen basieren, müssen jedoch durch die Auswahl der optimalen Anzahl von Abfragen im Algorithmus kompromittiert werden.
 
 Als konkretes Beispiel hierfür sollten Sie das Problem beachten, dass nicht der Drehungs Winkel eines Gates, sondern die Häufigkeit eines rotierenden Quantums geschätzt wird.
-Die einheitliche, die diese Quantum Dynamics beschreibt, ist $U (t) = R_z (2 \ Omega t) $ für die Entwicklungszeit $t $ und die unbekannte Häufigkeit $ \omega $.
+Der einheitliche, der diese Quantum Dynamics beschreibt, ist $U (t) = R_z (2 \ Omega t) $ für die Entwicklungszeit $t $ und die unbekannte Häufigkeit $ \omega $.
 In diesem Kontext können wir $U (t) $ für beliebige $t $ mithilfe eines einzelnen $R _Z $ Gate simulieren. Daher müssen Sie sich nicht auf einzelne Abfragen auf die einheitliche beschränken.
 Ein solches kontinuierliches Modell verfügt auch über die-Eigenschaft, dass Häufigkeits Häufigkeits Angaben aus den Phasen Schätz Prozessen, die fortlaufende Abfragen verwenden, von Phaseninformationen erlernt werden können, die andernfalls durch die Verzweigungen der Logarithmus-Funktion maskiert werden. Sie können aus den Ergebnissen von Experimenten ersichtlich werden, die für nicht angemessene Werte von $t $ ausgeführt werden.
 Aus diesem Grund sind Probleme, wie z. b. diese kontinuierlichen Abfrage Modelle für die Phasen Schätzung, nicht nur angemessen, sondern auch dem diskreten Abfrage Modell vorzuziehen.
@@ -199,17 +199,17 @@ Ein primäres Ziel der dynamischen Simulation ist die Implementierung des Time-E
 
 $ $ \begin{align} H & = \sum ^ {d-1} _ {j = 0} H_j, \end{align} $ $
 
-Wenn die Zeit Weiterentwicklung pro Begriff allein auf einem Quantum-Computer leicht zu implementieren ist. Wenn $H _J $ beispielsweise ein Pauli-$X _1x_2 $-Operator ist, der auf die ersten und zweiten Elemente der Qubit-Register `qubits`wirkt, kann die Zeit Weiterentwicklung durch die IT für beliebige Zeit $t $ durch Aufrufen des Vorgangs `Exp([PauliX,PauliX], t, qubits[1..2])`, der über eine Signatur `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`verfügt, implementiert werden. Wie weiter unten in der hamiltona-Simulation erläutert, besteht eine Lösung darin, die Zeit Weiterentwicklung durch $H $ mit einer Sequenz einfacher Vorgänge zu überarbeiten.
+Wenn die Zeit Weiterentwicklung pro Begriff allein auf einem Quantum-Computer leicht zu implementieren ist. Wenn $H _J $ beispielsweise ein $X _1X_2 $-Operator ist, der für die ersten und zweiten Elemente der Qubit-Register `qubits`fungiert, kann die Zeit Weiterentwicklung durch die IT für jede Zeit $t $ einfach durch Aufrufen des Vorgangs `Exp([PauliX,PauliX], t, qubits[1..2])`implementiert werden, der über eine Signatur `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`verfügt. Wie weiter unten in der hamiltona-Simulation erläutert, besteht eine Lösung darin, die Zeit Weiterentwicklung durch $H $ mit einer Sequenz einfacher Vorgänge zu überarbeiten.
 
-$ $ \begin{align} U (t) & = \left (e ^ {-IH\_0 t/r} e ^ {-IH\_1 t/r} \cdots e ^ {-IH\_{d-1} t/r} \right) ^ {r} + \mathcal{o} (d ^ 2 \max_j \\| H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $
+$ $ \begin{align} U (t) & = \left (e ^ {-IH\_0 t/r} e ^ {-IH\_1 t/r} \cdots e ^ {-IH\_{d-1} t/r} \right) ^ {r} + \mathcal{o} (d ^ 2 \ max_j \\| H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $
 
 Dabei steuert die ganzzahlige $r > $0 den Näherungs Fehler.
 
 Die Dynamical Generator Modeling Library bietet ein Framework für die systematische Codierung komplexer Generatoren in Bezug auf einfachere Generatoren. Eine solche Beschreibung kann dann an die Simulations Bibliothek weitergeleitet werden, um die Zeitentwicklung durch einen Simulations Algorithmus Ihrer Wahl zu implementieren, wobei viele Details automatisch berücksichtigt werden.
 
 > [!TIP]
-> Die nachstehend beschriebene Dynamical Generator Library wird in den Beispielen behandelt. Ein Beispiel, das auf dem Modell zum Modellieren von Modellen basiert, finden Sie im Beispiel [ **isinggenerators** ](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingGenerators).
-> Ein Beispiel, das auf Molekular Wasserstoff basiert, finden Sie in den Beispielen [**H2SimulationCmdLine**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine) und [**H2SimulationGUI**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationGUI) .
+> Die nachstehend beschriebene Dynamical Generator Library wird in den Beispielen behandelt. Ein Beispiel, das auf dem Modell zum Modellieren von Modellen basiert, finden Sie im Beispiel [ **isinggenerators** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators).
+> Ein Beispiel, das auf Molekular Wasserstoff basiert, finden Sie in den Beispielen [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) und [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui) .
 
 ### <a name="complete-description-of-a-generator"></a>Umfassende Beschreibung eines Generators ###
 
@@ -225,7 +225,7 @@ Der `GeneratorSystem` benutzerdefinierte Typ ist eine klassische Beschreibung de
 newtype GeneratorSystem = (Int, (Int -> GeneratorIndex));
 ```
 
-Das erste `Int` Element des Tupels speichert die Anzahl der Begriffe $d $ in der hamiltonan, und das zweite Element `(Int -> GeneratorIndex)` ist eine Funktion, die einen ganzzahligen Index in $\{0, 1,..., d-1\}$ einem `GeneratorIndex` benutzerdefinierten Typ zuordnet, der die einzelnen Elemente eindeutig identifiziert. primitiver Begriff in der hamiltonan. Beachten Sie, dass durch Ausdrücken der Auflistung von Begriffen in der hamiltona als Funktion und nicht als Array `GeneratorIndex[]`eine dynamische Berechnung der `GeneratorIndex` ermöglicht wird. Dies ist besonders nützlich, wenn Sie hamiltonane mit einer großen Anzahl von Begriffen beschreiben.
+Das erste `Int` Element des Tupels speichert die Anzahl der Begriffe $d $ in der hamiltonan, und das zweite Element `(Int -> GeneratorIndex)` ist eine Funktion, die einen ganzzahligen Index in $\{0, 1,..., d-1\}$ einem `GeneratorIndex` benutzerdefinierten Typ zuordnet, der jeden primitiven Begriff in der hamiltonan eindeutig identifiziert. Beachten Sie, dass durch Ausdrücken der Auflistung von Begriffen in der hamiltona als Funktion und nicht als Array `GeneratorIndex[]`eine dynamische Berechnung der `GeneratorIndex` ermöglicht wird. Dies ist besonders nützlich, wenn Sie hamiltonane mit einer großen Anzahl von Begriffen beschreiben.
 
 Entscheidend ist, dass wir keine Konventionen dafür vorsehen, welche primitiven Begriffe, die durch die `GeneratorIndex` identifiziert werden, leicht zu simulieren sind. Primitive Begriffe können z. b. "Pauli"-Operatoren sein, wie oben erläutert, Sie können jedoch auch eine fermionische Zerstörung und Erstellungs Operatoren sein, die häufig in der Quantum-Chemie Simulation Eine `GeneratorIndex` ist allein bedeutungslos, da Sie nicht beschreibt, wie die Zeit Weiterentwicklung durch den Begriff, auf den Sie verweist, als Quantum-Leitung implementiert werden kann.
 
@@ -244,7 +244,7 @@ $ $ \begin{align} H & = \sum ^ {d-1} _ {j = 0} a_j H_j, \end{align} $ $, wobei j
 newtype GeneratorIndex = ((Int[], Double[]), Int[]);
 ```
 
-In der Codierung gibt der erste Parameter `Int[]` eine Pauli-Zeichenfolge an, wobei $ \hat i\rightarrow $0, $ \hat x\rightarrow $1, $ \hat y\rightarrow $2 und $ \hat z\rightarrow $3. Der zweite Parameter `Double[]` speichert den Koeffizienten der Pauli-Zeichenfolge in der hamiltonan. Beachten Sie, dass nur das erste Element dieses Arrays verwendet wird. Der dritte Parameter `Int[]` indiziert die Qubits, auf die diese Pauli-Zeichenfolge angewendet wird, und darf keine doppelten Elemente aufweisen. Daher kann der hamiltona-Begriff $0,4 \hat x_0 \hat Y_8\hat I_2\hat Z_1 $ als
+In der Codierung gibt der erste Parameter `Int[]` eine Pauli-Zeichenfolge an, wobei $ \hat i\rightarrow $0, $ \hat x\rightarrow $1, $ \hat y\rightarrow $2 und $ \hat z\rightarrow $3. Der zweite Parameter `Double[]` speichert den Koeffizienten der Pauli-Zeichenfolge in der hamiltonan. Beachten Sie, dass nur das erste Element dieses Arrays verwendet wird. Der dritte Parameter `Int[]` indiziert die Qubits, auf die diese Pauli-Zeichenfolge angewendet wird, und darf keine doppelten Elemente aufweisen. Daher kann der hamiltona-Begriff $0,4 \hat x_0 \hat Y_8 \hat I_2 \hat Z_1 $ als
 
 ```qsharp
 let generatorIndexExample = GeneratorIndex(([1,2,0,3], [0.4]]), [0,8,2,1]);

@@ -5,12 +5,12 @@ author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: b59f91b660281167eab182529b415b6d379e3d63
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: d5889b8d5a92801b0ada65f7a17c655c959fc57f
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184490"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864337"
 ---
 # <a name="diagnostics"></a>Diagnose #
 
@@ -42,7 +42,7 @@ Im Vergleich dazu stellt der Zielcomputer des Dienst Bereitstellungs- [Simulator
 
 ## <a name="facts-and-assertions"></a>Fakten und Assertionen ##
 
-Wie unter [Testen und Debuggen](xref:microsoft.quantum.techniques.testing-and-debugging)erläutert, kann eine Funktion oder ein Vorgang mit Signatur `Unit -> Unit` oder `Unit => Unit`als Komponenten *Test*aufgerufen werden.
+Wie unter [Testen und Debuggen](xref:microsoft.quantum.techniques.testing-and-debugging)erläutert, kann eine Funktion oder ein Vorgang mit Signatur `Unit -> Unit` oder `Unit => Unit`als Komponenten *Test*gekennzeichnet werden.
 Jeder Komponenten Test besteht in der Regel aus einem kleinen Quantum-Programm zusammen mit einer oder mehreren Bedingungen, die die Richtigkeit des Programms überprüfen.
 Diese Bedingungen können in Form von _Fakten_ _auftreten, die_die Werte Ihrer Eingaben überprüfen, oder Assertionen, die die Zustände von einem oder mehreren als Eingabe übergebenen Qubits überprüfen.
 
@@ -109,7 +109,7 @@ Aufgrund der globalen Phase können Sie jedoch $a\_i = $0 auswählen, sodass nur
 Daher müssen wir drei Assertionen angeben, die voneinander unabhängig sind, um den erwarteten Status zu bestätigen.
 Hierzu wird die Wahrscheinlichkeit ermittelt, `Zero` für die einzelnen Pauli-Messungen mit "$ \alpha $" und "$ \beta $" zu beobachten und die einzelnen Ansprüche unabhängig zu bestätigen.
 Lassen Sie $x $, $y $ und $z $ `Result` Werte für Pauli $X $, $Y $ und $Z $-Messungen.
-Verwenden Sie dann die Wahrscheinlichkeitsfunktion für Quantum-Messungen, \begin{align} \pr (x = \texttt{Zero} | \alpha, \beta) & = \bruchteil 12 + a\_r b\_r + a\_i b\_i \\\\ \pr (y = \texttt{Zero} | \alpha). , \beta) & = \bruch12 + a\_r b\_i-a\_i b\_r \\\\ \pr (z = \texttt{Zero} | \alpha, \beta) & = \bruchteil 12\left (1 + a\_r ^ 2 + a\_i ^ 2 + b\_r ^ 2 + b\_i ^ 2 \right).
+Verwenden Sie dann die Wahrscheinlichkeitsfunktion für Quantum-Messungen, \begin{align} \pr (x = \texttt{Zero} | \alpha, \beta) & = \bruchteil 12 + a\_r b\_r + a\_i b\_i \\\\ \pr (y = \texttt{Zero} | \alpha, \beta) & = \bruch12 + a\_r b\_i-a\_i b\_r \\\\ \pr (z = \texttt{Zero} | \alpha, \beta) & = \bruchteil 12\left (1 + a\_r ^ 2 + a\_i ^ 2 + b\_r ^ 2 + b\_i ^ 2 \right).
 \end{align}
 
 Der <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> Vorgang implementiert diese Assertionen anhand der Darstellungen von $ \alpha $ und $ \beta $ als Werte des Typs <xref:microsoft.quantum.math.complex>.
@@ -129,7 +129,7 @@ Diese Strategien werden von den Canon-Vorgängen implementiert, <xref:microsoft.
 
 > [!NOTE]
 > Die oben beschriebene referenzierte-Assertionen basiert auf dem [' Choi – jamiłkowski '-"isomorphism](https://en.wikipedia.org/wiki/Channel-state_duality)", einem mathematischen Framework, das Vorgänge auf $n $ Qubits mit entbickten Zuständen in $2N $ Qubits verknüpft.
-> Insbesondere wird der Identitäts Vorgang auf $n $ Qubits durch $n $ Kopien des entwinkelten Zustands $ \ket{\beta_{00}} \mathrel{: =} (\ket{00} + \ket{11})/\sqrt{2}$ dargestellt.
+> Insbesondere wird der Identitäts Vorgang auf $n $ Qubits durch $n $ Kopien des entspitzen Zustands $ \ket{\ beta_{00}} \mathrel{: =} (\ket{00} + \ket{11})/\sqrt{2}$ dargestellt.
 > Der Vorgang <xref:microsoft.quantum.preparation.preparechoistate> implementiert dieses "isomorphism" und bereitet einen Zustand vor, der einen bestimmten Vorgang darstellt.
 
 Diese Strategien werden ungefähr durch einen Zeit-–-Bereich unterschieden.
