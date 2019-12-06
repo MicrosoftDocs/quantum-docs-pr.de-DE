@@ -1,0 +1,56 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyseriesofopsa
+name: ApplySeriesOfOpsA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Wendet eine Liste von OPS und deren Zielen sequenziell auf ein Array an. (Adjoint)
+syntax: "operation ApplySeriesOfOpsA (listOfOps : ('T[] => Unit is Adj)[], targets : Int[][], register : 'T[]) : Unit"
+input:
+  content: "(listOfOps : ('T[] => Unit is Adj)[], targets : Int[][], register : 'T[])"
+  types:
+  - name: listOfOps
+    summary: >-
+      Die Liste der OPS, die jeweils ein nicht-Array enthalten, das angewendet werden soll. Sie werden sequenziell, der niedrigste Index zuerst angewendet.
+
+      Jeder muss über einen Adjoint-Funktions tüktor verfügen.
+    isArray: true
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: targets
+    summary: Geschmestete Arrays, die die Ziele des OP beschreiben. Jedes Array muss eine Liste von Punkten enthalten, in denen die zu verwendenden Indizes beschrieben werden.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Int
+  - name: register
+    summary: Das Qubit-Register, das bearbeitet werden soll.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applyoprepeatedlyover
+metadata:
+  ms.openlocfilehash: 0d48ff75f99ea7fd3b7c65790ef6c5d184532f82
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74866392"
