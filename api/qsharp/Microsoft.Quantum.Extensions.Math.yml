@@ -3,189 +3,81 @@ uid: microsoft.quantum.extensions.math
 name: Microsoft.Quantum.Extensions.Math
 functions:
 - uid: microsoft.quantum.extensions.math.absb
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.absl".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nAbsb ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.absl\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.absl\"."
 - uid: microsoft.quantum.extensions.math.absd
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.absd".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nAbsd ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.absd\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.absd\"."
 - uid: microsoft.quantum.extensions.math.absi
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.absi".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nAbsi ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.absi\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.absi\"."
 - uid: microsoft.quantum.extensions.math.arccos
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.arccos".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nARCCOS ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.arccos\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.arccos\"."
 - uid: microsoft.quantum.extensions.math.arcsin
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.arcsin".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nARCSIN ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.arcsin\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.arcsin\"."
 - uid: microsoft.quantum.extensions.math.arctan
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.arctan".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nARCTAN ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.arctan\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.arctan\"."
 - uid: microsoft.quantum.extensions.math.arctan2
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.arctan2".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nArcTan2 wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.math.arctan2\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.arctan2\"."
 - uid: microsoft.quantum.extensions.math.ceiling
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.ceiling".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nDie Obergrenze ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.ceiling\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.ceiling\"."
 - uid: microsoft.quantum.extensions.math.cos
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.cos".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nCOS ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.cos\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.cos\"."
 - uid: microsoft.quantum.extensions.math.cosh
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.cosh".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nCosh ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.cosh\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.cosh\"."
 - uid: microsoft.quantum.extensions.math.divremb
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.divreml".
+  summary: "\n> [!WARNING]\n> Veraltet\n\n\"Divremb\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.divreml\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.divreml\"."
 - uid: microsoft.quantum.extensions.math.e
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.e".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nE ist veraltet. Verwenden Sie @\"microsoft.quantum.math.e\" instead. (Anforderungsobjekt konnte nicht analysiert werden: Erwartet wurde, dass ‚key‘ und ‚value‘ für base_parameters des JSON-Zuordnungsfelds festgelegt werden. Stattdessen wurde ‚key: „...“‘ festgelegt.)\nVerwenden Sie stattdessen @\"microsoft.quantum.math.e\"."
 - uid: microsoft.quantum.extensions.math.expd
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.expd".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nExpd ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.expd\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.expd\"."
 - uid: microsoft.quantum.extensions.math.floor
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.floor".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nFloor ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.floor\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.floor\"."
 - uid: microsoft.quantum.extensions.math.ieeeremainder
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.ieeeremainder".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nIEEERemainder ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.ieeeremainder\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.ieeeremainder\"."
 - uid: microsoft.quantum.extensions.math.log
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.log".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nDas Protokoll ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.log\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.log\"."
 - uid: microsoft.quantum.extensions.math.log10
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.log10".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nLOG10 wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.math.log10\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.log10\"."
 - uid: microsoft.quantum.extensions.math.maxb
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.maxl".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nMaxB ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.maxl\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.maxl\"."
 - uid: microsoft.quantum.extensions.math.maxd
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.maxd".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nMaxd ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.maxd\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.maxd\"."
 - uid: microsoft.quantum.extensions.math.maxi
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.maxi".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nMaxI ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.maxi\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.maxi\"."
 - uid: microsoft.quantum.extensions.math.minb
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.minl".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nMinb ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.minl\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.minl\"."
 - uid: microsoft.quantum.extensions.math.mind
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.mind".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nBeachten Sie, dass der Aspekt veraltet ist. Verwenden Sie stattdessen @\"microsoft.quantum.math.mind\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.mind\"."
 - uid: microsoft.quantum.extensions.math.mini
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.mini".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nMinI ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.mini\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.mini\"."
 - uid: microsoft.quantum.extensions.math.modpowb
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.modpowl".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nModpowb ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.modpowl\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.modpowl\"."
 - uid: microsoft.quantum.extensions.math.pi
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.pi".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nPi ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.pi\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.pi\"."
 - uid: microsoft.quantum.extensions.math.powd
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.powd".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nPowd ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.powd\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.powd\"."
 - uid: microsoft.quantum.extensions.math.round
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.round".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nRound wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.math.round\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.round\"."
 - uid: microsoft.quantum.extensions.math.signb
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.signl".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nSignb ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.signl\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.signl\"."
 - uid: microsoft.quantum.extensions.math.signd
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.signd".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nDer Signatur Geber ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.signd\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.signd\"."
 - uid: microsoft.quantum.extensions.math.signi
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.signi".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nSigni ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.signi\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.signi\"."
 - uid: microsoft.quantum.extensions.math.sin
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.sin".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nSin ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.sin\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.sin\"."
 - uid: microsoft.quantum.extensions.math.sinh
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.sinh".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nSinh ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.sinh\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.sinh\"."
 - uid: microsoft.quantum.extensions.math.sqrt
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.sqrt".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nSQRT ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.sqrt\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.sqrt\"."
 - uid: microsoft.quantum.extensions.math.tan
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.tan".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nTan ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.tan\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.tan\"."
 - uid: microsoft.quantum.extensions.math.tanh
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.tanh".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nTanh ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.tanh\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.tanh\"."
 - uid: microsoft.quantum.extensions.math.truncate
-  summary: >-
-    > [!WARNING]
-
-    > Als veraltet markiert ist, verwenden Sie @"microsoft.quantum.math.truncate".
+  summary: "\n> [!WARNING]\n> Veraltet\n\nDer TRUNCATE ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.truncate\".\nVerwenden Sie stattdessen @\"microsoft.quantum.math.truncate\"."
 metadata:
-  ms.openlocfilehash: a1a8cda192f7e95141eb2e34baa37ddaae4cb8c9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1eb20bd8834d2a34022ee503808fd26eccaf8c64
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056333"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858835"

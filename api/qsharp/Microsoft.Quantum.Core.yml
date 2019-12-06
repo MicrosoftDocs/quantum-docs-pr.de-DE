@@ -3,6 +3,8 @@ uid: microsoft.quantum.core
 name: Microsoft.Quantum.Core
 summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält Q # Core-Funktionen und-Vorgänge.\n\n # <a name=\"remarks\"></a>Hinweise\n Dieser Namespace wird automatisch vom f #-Compiler geöffnet, sodass alle Elemente dieses Namespace stets verfügbar sind."
 functions:
+- uid: microsoft.quantum.core.default
+  summary: Gibt eine Standard Instanz des angegebenen Typs zurück.
 - uid: microsoft.quantum.core.length
   summary: Gibt die Anzahl der Elemente in einem Array zurück.
 - uid: microsoft.quantum.core.rangeend
@@ -13,10 +15,17 @@ functions:
   summary: Gibt den definierten Startwert des angegebenen Bereichs zurück.
 - uid: microsoft.quantum.core.rangestep
   summary: Gibt die ganze Zahl zurück, die angibt, wie der nächste Wert eines Bereichs berechnet wird.
+newtypes:
+- uid: microsoft.quantum.core.attribute
+  summary: Vom Compiler erkanntes Attribut, das zum Markieren von benutzerdefinierten Typen als Attribute verwendet wird.
+- uid: microsoft.quantum.core.deprecated
+  summary: Vom Compiler erkanntes Attribut, das verwendet wird, um einen Typ zu kennzeichnen oder als veraltet zu markieren.
+- uid: microsoft.quantum.core.entrypoint
+  summary: Vom Compiler erkanntes Attribut, das zum Markieren des Einstiegs Punkts einer ausführbaren Datei verwendet wird.
 metadata:
-  ms.openlocfilehash: 41c28f8e8e11990ec1cf9b315478996a1e0811f4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6391521907deddbf4425b927b1dec12e73f0ee5d
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056889"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858580"
