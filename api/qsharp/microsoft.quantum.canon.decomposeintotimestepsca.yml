@@ -37,7 +37,7 @@ input:
     summary: >-
       Wählt die Reihenfolge des zu verwendenden Trotter – Suzuki Integrator aus.
 
-      Die Reihenfolge 1 und 2 werden zurzeit unterstützt.
+      Bestellung 1 und sogar Orders 2, 4, 6,... werden zurzeit unterstützt.
     isPrimitive: true
     uid: Int
 output:
@@ -62,9 +62,9 @@ typeParameters:
 - uid: "'T"
   summary: Der Typ, auf den jeder Zeit Schritt reagieren soll. in der Regel werden entweder `Qubit[]` oder `Qubit`.
 metadata:
-  ms.openlocfilehash: 328db9b314320c724cf03adb19ee59d63a33e56e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ac9e4b4359c77205b7a823c334222a049ff49c10
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067831"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74863963"

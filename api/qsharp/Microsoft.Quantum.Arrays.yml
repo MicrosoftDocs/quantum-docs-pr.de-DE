@@ -45,8 +45,12 @@ functions:
   summary: Ein Array von ganzen Zahlen in einem angegebenen Intervall erhalten.
 - uid: microsoft.quantum.arrays.subarray
   summary: Nimmt ein Array und eine Liste von Speicherorten an und erstellt ein neues Array, das aus den Elementen des ursprünglichen Arrays gebildet wird, die den angegebenen Speicherorten entsprechen.
+- uid: microsoft.quantum.arrays.swapped
+  summary: Wendet einen Austausch zweier Elemente in einem Array an.
 - uid: microsoft.quantum.arrays.tail
   summary: Gibt das letzte Element des Arrays zurück.
+- uid: microsoft.quantum.arrays.tuplearrayasnestedarray
+  summary: Wandelt eine Liste von 2 Tupeln in ein Array um.
 - uid: microsoft.quantum.arrays.zip
   summary: Bei zwei Arrays wird ein neues Array von Paaren zurückgegeben, sodass jedes Paar ein Element aus jedem ursprünglichen Array enthält.
 - uid: microsoft.quantum.arrays.zip3
@@ -57,9 +61,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: Gibt ein neues Array zurück, das aus den Bildern des ursprünglichen Arrays unter dem Vorgang besteht, wenn ein Array und ein Vorgang angegeben sind, der für die Elemente des Arrays definiert ist.
 metadata:
-  ms.openlocfilehash: 7c377d5df0e32be0da75f133b08c778ec94c6a39
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 12835bef2608d979809027cb9a271f2cda864b10
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056974"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858869"
