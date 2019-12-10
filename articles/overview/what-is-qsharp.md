@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.qsharp
-ms.openlocfilehash: 3fd288439c7db7f939240b4388c9cdb114b6535c
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: e04d72bafe390ff5c79af408db1d9400754b06ce
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73529984"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864286"
 ---
 # <a name="what-is-q"></a>Was ist Q#?
 
@@ -25,12 +25,11 @@ Die Programmiersprache Q# bietet Ihnen intuitive Typen, Operationen und logische
 
 In den Anfängen des Quantencomputings wurden Algorithmen in Form von Diagrammen visualisiert, die den Schaltplänen aus dem klassischen Computing ähnelten.  Zwar hat sich das Schaltungsmodell über viele Jahre als nützlich in der Forschung an Quantencomputing erwiesen, wir bei Microsoft glauben aber, dass Entwickler Quantenschaltungen hinter sich lassen und Quantenalgorithmen und -anwendungen mithilfe von Q# entwickeln können. Die Sprache Q# wurde entwickelt, um unsere Lehren aus jahrzehntelanger Erfahrung in der klassischen Softwareentwicklung zu nutzen und Quantenentwicklern die Funktionalität höherer Sprachen mit spezieller Ausrichtung auf Quantencomputing an die Hand zu geben.
 
-
 ## <a name="how-does-q-work"></a>Wie funktioniert Q#?
 
 Einer der fundamentalen Bausteine von Q# ist der Typ `Qubit`, der nicht kopiert und auf den nicht direkt zugegriffen werden kann, ganz wie ein reales Qubit. Stattdessen können wir ihn messen und das Ergebnis der Messung in einer `Result`-Variable speichern, einem Q#-Typ, der zwei mögliche Werte annehmen kann: `Zero` und `One`. Konstrukte wie dieses stellen sicher, dass Algorithmen jederzeit die Gesetze der Quantenphysik beachten und auf Quantencomputern oder Simulatoren ordnungsgemäß ausgeführt werden können.
 
-Q# schließt darüber hinaus Funktionen der klassischen Logik wie Bedingungen oder Schleifen mit einer Reihe von Feinheiten ein, um sicherzustellen, dass alle Quantenregeln beachtet werden. Beispiel: Einschränkung der Art, wie Schleifen ausgeführt werden, um sicherzustellen, dass Quantenvorgänge ausgeführt werden.
+Q# schließt darüber hinaus Funktionen der klassischen Logik wie Bedingungen und Schleifen mit einer Reihe von Feinheiten ein, um sicherzustellen, dass alle Quantenregeln beachtet werden. Beispiel: Einschränkung der Art, wie Schleifen ausgeführt werden, um sicherzustellen, dass Quantenvorgänge nicht innerhalb von Funktionen aufgerufen werden, die unter Umständen nur deterministische klassische Unterroutinen enthalten.
 
 Q#-Programme sind häufig mit einem in C# oder Python geschriebenen Hostprogramm gekoppelt, das eine komfortable Organisation von klassischem und Quantencode bieten kann. Über die Unterstützung von Sprachen wie C# und Python hinaus bietet das QDK mit dem IQ#-Jupyter-Kernel Unterstützung für Jupyter Notebook.
 
