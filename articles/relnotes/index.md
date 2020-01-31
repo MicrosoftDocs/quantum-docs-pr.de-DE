@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: c709f1eb130d37f930ffc4acc4bd663b8b8ba24a
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: c135dacb2fc305fa97874cb4abcf4e2ac489b9e4
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863162"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871616"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Versionshinweise für das Microsoft Quantum Development Kit
 
@@ -20,6 +20,19 @@ Dieser Artikel enthält Informationen zu den einzelnen Releases des Microsoft Qu
 Installationsanweisungen finden Sie im [Installationshandbuch](xref:microsoft.quantum.install).
 
 Updateanweisungen finden Sie im [Updatehandbuch](xref:microsoft.quantum.update).
+
+## <a name="version-01020012831"></a>Version 0.10.2001.2831
+
+*Veröffentlichungsdatum: 29. Januar 2020*
+
+Dieses Release enthält Folgendes:
+
+- Neues Microsoft.Quantum.SDK-NuGet-Paket (ausführlichere Informationen in der [INFODATEI](https://github.com/microsoft/qsharp-compiler/blob/master/src/QuantumSdk/README.md))
+- Unterstützung für .NET Core 3.1 hinzugefügt. Wir empfehlen Ihnen dringend, Version 3.1.100 zu installieren, da es bei Buildvorgängen mit früheren .NET Core SDK-Versionen zu Problemen kommen kann.
+- Neue Compilertransformationen verfügbar unter „Microsoft.Quantum.QsCompiler.Experimental“.
+- Neue Funktionalität zum Verfügbarmachen von Ausgabezustandsvektoren als HTML-Code in IQ#.
+- EstimateFrequencyA-Unterstützung zu Microsoft.Quantum.Characterization für Hadamard- und SWAP-Tests hinzugefügt.
+- Für den Namespace „AmplitudeAmplification“ wird jetzt der Q#-Styleguide verwendet.
 
 ## <a name="version-01019120501"></a>Version 0.10.1912.0501
 
@@ -127,7 +140,7 @@ Mit diesem Release werden Erweiterungen neu organisiert, und die Chemiebibliothe
 * Unterstützung für [Multireferenz-Wellenfunktionen](xref:microsoft.quantum.chemistry.concepts.multireference) (sowohl für Multireferenz-Wellenfunktionen als auch für einheitlich verbundene Cluster).  [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 * (Vielen Dank!) [1QBit](https://1qbit.com)-Mitwirkender ([@valentinS4t1qbit](https://github.com/ValentinS4t1qbit)): Energieauswertung mithilfe eines variablen Ansatzes. [PR #120](https://github.com/Microsoft/QuantumLibraries/pull/120).
 * Aktualisieren des [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)-Schemas auf die neue [Version 0.2](xref:microsoft.quantum.libraries.chemistry.schema.spec_v_0_2) und Hinzufügen einer einheitlichen gekoppelten Clusterspezifikation. [Issue #65](https://github.com/microsoft/QuantumLibraries/issues/65).
-* Hinzufügen der Python-Interoperabilität zu Chemiebibliothekfunktionen Testen Sie dieses [Beispiel](https://github.com/microsoft/Quantum/tree/master/Chemistry/PythonIntegration). [Issue #53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
+* Hinzufügen der Python-Interoperabilität zu Chemiebibliothekfunktionen Testen Sie dieses [Beispiel](https://github.com/microsoft/Quantum/tree/master/Chemistry/PythonIntegration). [Problem 53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR 110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 
 ## <a name="version-061905"></a>Version 0.6.1905
 
@@ -154,7 +167,7 @@ Mit diesem Release ist es nicht mehr möglich, ein Arrayelement auf der linken S
 Mit diesem Release werden die Bibliotheken neu organisiert, um ein konsistentes Wachstum zu ermöglichen:
 * Der Namespace Microsoft.Quantum.Primitive wird in Microsoft.Quantum.Intrinsic umbenannt.  Diese Vorgänge werden vom Zielcomputer implementiert.  Der Namespace Microsoft.Quantum.Primitive ist veraltet.  Eine Runtimewarnung informiert Sie darüber, wann Programme mithilfe von veralteten Namen Vorgänge und Funktionen aufrufen.
 
-* Das Paket Microsoft.Quantum.Canon wird in Microsoft.Quantum.Standard umbenannt.  Dieses Paket enthält Namespaces, die für die meisten Q#-Programme verwendet werden.  Dies umfasst:  
+* Das Paket Microsoft.Quantum.Canon wird in Microsoft.Quantum.Standard umbenannt.  Dieses Paket enthält Namespaces, die für die meisten Q#-Programme verwendet werden.  Dies schließt Folgendes ein:  
     - Microsoft.Quantum.Canon-Paket für allgemeine Vorgänge
     - Microsoft.Quantum.Arithmetic für universelle arithmetische Operationen
     - Microsoft.Quantum.Preparation für Vorgänge zum Vorbereiten des Qubit-Zustands.
@@ -172,7 +185,7 @@ Durch diese Änderung treten bei Programmen, die eine einzelne „Open“-Anweis
 
 Wir haben ein [Beispiel für die Verwendung von Q# mit F#-Treibern](https://github.com/Microsoft/Quantum/pull/164) hinzugefügt.  
 
-**Ein besonderer Dank** gilt dem folgenden Mitwirkenden an der offenen Codebasis unter http://github.com/Microsoft/Quantum. Diese Beiträge ergänzen die umfangreichen Beispiele von Q#-Code:
+**Besonderer Dank** gilt dem folgenden Mitwirkenden an der offenen Codebasis unter http://github.com/Microsoft/Quantum. Diese Beiträge ergänzen die umfangreichen Beispiele von Q#-Code:
 
 * Mathias Soeken ([@msoeken](https://github.com/msoeken)): Oracle-Funktionssynthese. [PR #135](https://github.com/Microsoft/Quantum/pull/135).
 
@@ -321,7 +334,7 @@ Dieses Release enthält Fehlerbehebungen und Features zu Problemen, die von der 
 
 **Besonderer Dank** gilt den folgenden Mitwirkenden an der offenen Codebasis unter http://github.com/Microsoft/Quantum. Diese Beiträge ergänzen die umfangreichen Beispiele von Q#-Code:
 
-* Rolf Huisman ([@RolfHuisman](https://github.com/RolfHuisman)): verbesserte die Benutzerfreundlichkeit für QASM/Q#-Entwickler, indem er einen Konvertierer von QASM zu Q# erstellt hat. [PR #58](https://github.com/Microsoft/Quantum/pull/58).
+* Rolf Huisman ([@RolfHuisman](https://github.com/RolfHuisman)): verbesserte die Benutzerfreundlichkeit für QASM/Q#-Entwickler, indem er einen Konvertierer von QASM zu Q# erstellt hat. [PR #58](https://github.com/Microsoft/Quantum/pull/58).
 
 * Andrew Helwer ([@ahelwer](https://github.com/ahelwer)):  implementierte das CHSH-Spiel als Beispiel. Dies ist ein Quantenspiel zur Nichtlokalität.  [PR #84](https://github.com/Microsoft/Quantum/pull/84).
 
