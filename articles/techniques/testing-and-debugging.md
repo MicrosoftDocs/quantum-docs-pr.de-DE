@@ -1,24 +1,24 @@
 ---
-title: 'F #-Techniken, testen und Debuggen | Microsoft-Dokumentation'
-description: 'F #-Techniken, testen und Debuggen'
+title: 'Testen und Debuggen: f #-Techniken | Microsoft-Dokumentation'
+description: 'Testen und Debuggen: f #-Techniken'
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: d352ffa315b654cfcf8991fa116465d3dad49f0a
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: cfc71f08be0f190d9f5f4a48796e3d0ad06d6107
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864269"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820112"
 ---
 # <a name="testing-and-debugging"></a>Testen und Debuggen
 
 Wie bei der klassischen Programmierung ist es von entscheidender Bedeutung, zu überprüfen, ob Quantum-Programme erwartungsgemäß agieren, und ein ungültiges Quantum-Programm diagnostizieren zu können.
 In diesem Abschnitt werden die Tools beschrieben, die von Q # zum Testen und Debuggen von Quantum-Programmen angeboten werden.
 
-## <a name="unit-tests"></a>Komponententests
+## <a name="unit-tests"></a>Komponenten Tests
 
 Ein gängiger Ansatz zum Testen klassischer Programme ist das Schreiben von kleinen Programmen namens Komponenten *Tests* , die Code in einer Bibliothek ausführen und die Ausgabe mit einer erwarteten Ausgabe vergleichen.
 Beispielsweise möchten wir möglicherweise sicherstellen, dass `Square(2)` `4`zurückgibt, da wir *ein* -Wert von "$ 2 ^ 2 = $4" kennen.
@@ -50,8 +50,8 @@ Diese Datei enthält anfänglich einen Beispiel-Komponenten Test `AllocateQubit`
     @Test("QuantumSimulator")
     operation AllocateQubit () : Unit {
 
-        using (q = Qubit()) {
-            Assert([PauliZ], [q], Zero, "Newly allocated qubit must be in the |0⟩ state.");
+        using (qubit = Qubit()) {
+            Assert([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
         
         Message("Test passed");
@@ -136,7 +136,7 @@ Bei fehlgeschlagenen Tests werden die Ausgaben auch in der Konsole gedruckt, um 
 
 ***
 
-## <a name="assertions"></a>Assertionen
+## <a name="assertions"></a>TeilI
 
 Da Funktionen in Q # keine _logischen_ Nebeneffekte haben, können _andere Arten_ von Effekten beim Ausführen einer Funktion, deren Ausgabetyp das leere Tupel ist `()` nicht innerhalb eines Q #-Programms beobachtet werden.
 Das heißt, ein Zielcomputer kann keine Funktion ausführen, die `()` zurückgibt, wobei sichergestellt wird, dass diese Auslassung das Verhalten eines nachfolgenden f #-Codes nicht ändert.

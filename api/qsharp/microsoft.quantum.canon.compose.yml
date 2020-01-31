@@ -4,10 +4,10 @@ name: Compose
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Generiert die Komposition zweier Funktionen.
+  Gibt die Komposition zweier Funktionen zurück.
 
 
-  Das heißt, wenn zwei Funktionen $f $ und $g $, gibt eine neue Funktion zurück, die $f \circ g $ darstellt.
+  Wenn zwei Funktionen $f $ und $g $, gibt eine neue Funktion zurück, die $f \circ g $ darstellt.
 syntax: "function Compose (outer : ('U -> 'V), inner : ('T -> 'U)) : ('T -> 'V)"
 input:
   content: "(outer : ('U -> 'V), inner : ('T -> 'U))"
@@ -55,9 +55,9 @@ typeParameters:
 - uid: "'V"
   summary: Der Ausgabetyp der zweiten Funktion, die angewendet werden soll.
 metadata:
-  ms.openlocfilehash: 69fbd6a4fafbc61a63e41257b7100303fd48d4d4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 44296db92d6261fc8aba843346700bf8e22663bb
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223070"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871548"

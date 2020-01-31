@@ -1,17 +1,17 @@
 ---
 title: Quantum-Leitungen | Microsoft-Dokumentation
-description: Quantum-Verbindungen
+description: Quantenschaltungen
 author: QuantumWriter
 uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7c2afa58fd70d893529cf794ae07df480466aaec
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: fe845aa0dde7c780ea6721dfe2559119e90b4aa5
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210675"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820792"
 ---
 # <a name="quantum-circuits"></a>Quantum-Verbindungen
 Beachten Sie für einen Moment die einheitliche Transformation $ \text{CNOT} _{01}(h\otimes 1) $.
@@ -39,7 +39,7 @@ Beispielsweise das Symbol
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](~/media/concepts_2.png)
 
-Das [Hadamard](xref:microsoft.quantum.primitive.h) -Gate, das für ein Single-Qubit-Register fungiert.
+Das [Hadamard](xref:microsoft.quantum.intrinsic.h) -Gate, das für ein Single-Qubit-Register fungiert.
 
 Quantum-Gates werden in chronologischer Reihenfolge mit dem am weitesten links gerichteten Tor sortiert, wenn das Gate zuerst auf die Qubits angewendet wird.
 Mit anderen Worten: Wenn Sie die Drähte mit dem Quantum-Zustand betrachten, bringen die Drähte den Quantenzustand durch die einzelnen Gates im Diagramm von links nach rechts.
@@ -72,7 +72,7 @@ Dies bedeutet, dass Sie eine intuitions Informationen über den Datenfluss für 
 
 ## <a name="controlled-gates"></a>Kontrollierte Gates
 Das andere Konstrukt, das in Multi-Qubit-Quantum-Verbindungs Diagramme integriert ist, ist Control.
-Die Aktion eines durch eine quot;-Steuerelement gesteuerten Tors, die den Wert $ \lambda (g) $ bezeichnet, wobei der Wert eines einzelnen Qubits die Anwendung von $G $ steuert, kann durch betrachten des folgenden Beispiels einer Product State Input $ \lambda (g) (\alpha \ket{0} + \beta \ket{1}) \ket{\psi} = \alpha \ket{0} \ket{\psi} + \beta \ket{1} g\ket {\ psi} $.
+Die Aktion eines Quorums einzeln gesteuerten Tors, die $ \lambda (G) $ bezeichnet, wobei der Wert eines einzelnen Qubits die Anwendung von $G $ steuert. sehen Sie sich das folgende Beispiel einer Product State Input $ \lambda (G) (\alpha \ket{0} + \beta \ket{1}) \ket{\psi} = \alpha \ket{0} \ket{\psi} + \beta \ket{1} g\ket {\ PSI} $ an.
 Dies heißt, dass das gesteuerte Gate $G $ auf das Register anwendet, das $ \psi $ if enthält, und nur, wenn das Steuerelement Qubit den Wert $1 $ annimmt.
 Im Allgemeinen werden solche kontrollierten Vorgänge in Leitungs Diagrammen als
 
@@ -81,7 +81,7 @@ Im Allgemeinen werden solche kontrollierten Vorgänge in Leitungs Diagrammen als
 ![](~/media/concepts_5.png)
 
 Hier gibt der schwarze Kreis das Quantum-Bit an, auf dem das Gate gesteuert wird, und ein vertikales Netzwerk bezeichnet die einheitliche, die angewendet wird, wenn das Steuerelement-Qubit den Wert $1 $ annimmt.
-In den Sonderfällen, in denen $G = X $ und $G = Z $ steht, wird die folgende Notation eingeführt, um die kontrollierte Version der Gates zu beschreiben (Beachten Sie, dass das gesteuerte X-Gate der [$CNOT $ Gate](xref:microsoft.quantum.primitive.cnot)ist):
+In den Sonderfällen, in denen $G = X $ und $G = Z $ steht, wird die folgende Notation eingeführt, um die kontrollierte Version der Gates zu beschreiben (Beachten Sie, dass das gesteuerte X-Gate der [$CNOT $ Gate](xref:microsoft.quantum.intrinsic.cnot)ist):
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -106,7 +106,7 @@ Eine solche unter Leitung sieht insbesondere wie folgt aus:
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Messungs Verbindung](~/media/concepts_7.png)
 
-F # implementiert zu diesem Zweck einen [Measure-Operator](xref:microsoft.quantum.primitive.measure) .
+F # implementiert zu diesem Zweck einen [Measure-Operator](xref:microsoft.quantum.intrinsic.measure) .
 Weitere Informationen finden Sie im [Abschnitt zu Messungen](xref:microsoft.quantum.libraries.standard.prelude#measurements) .
 
 Ebenso wird die unter Leitung

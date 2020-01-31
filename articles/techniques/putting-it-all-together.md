@@ -1,23 +1,23 @@
 ---
-title: 'F #-Techniken-alles kombinieren | Microsoft-Dokumentation'
-description: 'F #-Techniken-alles vereinen'
+title: 'Alles zusammengeh Otten: f #-Techniken | Microsoft-Dokumentation'
+description: 'Alles zusammengeh Otten: f #-Techniken'
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f65b3e260f98a7a90da13b62edd6cc63d200f5af
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183266"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820163"
 ---
 # <a name="putting-it-all-together-teleportation"></a>Alles zusammen: teleportierung #
 Wir kehren zum Beispiel der in [Quantum](xref:microsoft.quantum.concepts.circuits)-Leitungen definierten Teleportations-Verbindung zurück. Wir werden diese Informationen verwenden, um die bisher gelernten Konzepte zu veranschaulichen. Eine Erläuterung der Quantum-Teleportation finden Sie unten für Personen, die mit der Theorie nicht vertraut sind, gefolgt von einer exemplarischen Vorgehensweise der Code Implementierung in f #. 
 
 ## <a name="quantum-teleportation-theory"></a>Quantum-Teleportation: Theorie
-Die Quantum-Teleportation ist eine Technik zum Senden eines unbekannten Quantums (als "__Message__" bezeichnet) von einem Qubit an einem Speicherort an einem Ort an einem Qubit an einem anderen Speicherort (wir bezeichnen diese Qubits als __"This" und__"__there__", bzw.). Wir können unsere __Nachricht__ mithilfe der Dirac-Notation als Vektor darstellen: 
+Die Quantum-Teleportation ist eine Technik zum Senden eines unbekannten Quantums (als "__Message__" bezeichnet) von einem Qubit an einem Speicherort an einem Ort an einem Qubit an einem anderen Speicherort (wir bezeichnen diese Qubits als __"This" bzw__. "__there__"). Wir können unsere __Nachricht__ mithilfe der Dirac-Notation als Vektor darstellen: 
 
 $ $ \ket{\psi} = \alpha\ket{0} + \beta\ket{1} $ $
 
@@ -56,11 +56,11 @@ $ \ket{1}$  | $ \frac{1}{\sqrt{2}} (\ket{0}-\ket{1}) $
 
 Wenn wir das Hadamard-Gate auf das erste Qubit für jeden Begriff der obigen Ausgabe anwenden, erhalten wir folgendes Ergebnis:
 
-$ $ \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{00} + \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{11} + \frac{\beta}{ \sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{10} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{01} $ $
+$ $ \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{00} + \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{11} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{10} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{01} $ $
 
 Beachten Sie, dass jeder Begriff $2 \frac{1}{\sqrt{2}} $ Factors hat. Wir können diese multiplizieren, indem wir folgendes Ergebnis erhalten:
 
-$ $ \bruchteil {\alpha}{2}(\ket{0} + \ket{1}) \ket{00} + \bruchteil {\alpha}{2}(\ket{0} + \ket{1}) \ket{11} + \bruchteil {\beta}{2}(\ket{0}-\ket{1}) \ket{10} + \bruch{\beta}{2}(\ket{0}-\ket{1}) \ket{01} $ $
+$ $ \bruchteil {\alpha}{2}(\ket{0} + \ket{1}) \ket{00} + \bruchteil {\alpha}{2}(\ket{0} + \ket{1}) \ket{11} + \bruchteil {\beta}{2}(\ket{0}-\ket{1}) \ket{10} + \bruchteil {\beta}{2}(\ket{0}-\ket{1}) \ket{01} $ $
 
 Der $ \frac-{1}{2}$ Factor ist für jeden Begriff üblich, sodass wir ihn jetzt außerhalb der Klammern nehmen können:
 
@@ -125,7 +125,7 @@ Wir müssen auch eine Qubit-`here` zuordnen, die wir mit einem `using` Block err
 ```
 
 ### <a name="step-1-create-an-entangled-state"></a>Schritt 1: Erstellen eines entkoppelt-Zustands
-Anschließend können Sie das entkoppelt-Paar zwischen `here` und `there` erstellen, indem Sie die @"microsoft.quantum.primitive.h" und @"microsoft.quantum.primitive.cnot" Vorgänge verwenden:
+Anschließend können Sie das entkoppelt-Paar zwischen `here` und `there` erstellen, indem Sie die @"microsoft.quantum.intrinsic.h" und @"microsoft.quantum.intrinsic.cnot" Vorgänge verwenden:
 
 ```qsharp
         H(here);
@@ -141,7 +141,7 @@ Anschließend verwenden wir das nächste $ \operatschmue{CNOT} $ und $H $ Gates,
 ```
 
 ### <a name="step-3--4-measuring-and-interpreting-the-result"></a>Schritt 3 & 4: Messen und interpretieren des Ergebnisses
-Zum Schluss verwenden wir @"microsoft.quantum.primitive.m", um die Messungen durchzuführen und die notwendigen Gate-Vorgänge auszuführen, um den gewünschten Zustand zu erhalten, wie von `if`-Anweisungen angegeben:
+Zum Schluss verwenden wir @"microsoft.quantum.intrinsic.m", um die Messungen durchzuführen und die notwendigen Gate-Vorgänge auszuführen, um den gewünschten Zustand zu erhalten, wie von `if`-Anweisungen angegeben:
 
 ```qsharp
         // Measure out the entanglement

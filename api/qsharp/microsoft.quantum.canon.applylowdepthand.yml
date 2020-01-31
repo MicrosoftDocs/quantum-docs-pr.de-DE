@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applylowdepthand
+name: ApplyLowDepthAnd
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Kehrt ein angegebenes Ziel-Qubit nur dann ein, wenn beide Steuerelement-Qubits den Status 1 aufweisen, mit T-Tiefe 1 und mithilfe von Messungen zum Ausführen der Adjoint-Operation.
+
+
+  Kehrt `target` nur dann ein, wenn beide Steuerelemente 1 sind, jedoch wird davon ausgegangen, dass `target` den Status 0 hat.  Der Vorgang hat t-count 4, T-Tiefe 1 und erfordert ein Hilfsobjekt und kann daher einem ccnot-Vorgang vorzuziehen sein, wenn `target` bekanntermaßen 0 ist.  Das Hilfsobjekt dieses Vorgangs ist Messungs basiert und erfordert keine T-Gates und kein Hilfsobjekt.
+syntax: 'operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
+references: >-
+  - Cody Jones: "neuartige Konstruktionen für das Fault-tolerante yffoli Gate", Phys. Rev. A 87, 022328, 2013 [arXiv: 1212.5069](https://arxiv.org/abs/1212.5069) doi: 10.1103/physreva. 87.022328
+
+  - Peter Selinger: "Quantum-Leitungen von T-tiefen One", Phys. Rev. A 87, 042302, 2013 [arXiv: 1210.0974](https://arxiv.org/abs/1210.0974) doi: 10.1103/physreva. 87.042302
+input:
+  content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
+  types:
+  - name: control1
+    summary: Qubit für erstes Steuerelement
+    isPrimitive: true
+    uid: Qubit
+  - name: control2
+    summary: Qubit für zweites Steuerelement
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: Zielfeld für das anauxende Qubit; muss den Status 0 aufweisen.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: 060a4b2241f231a9d164bdcce2beb2a3315d96f9
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872936"

@@ -6,12 +6,12 @@ ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
-ms.openlocfilehash: 7fd9d1fa4fb3c5dd216d846038abd40454ece2e8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 929745a6da6034599e97d2f573190308fde6eb75
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035136"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820435"
 ---
 # <a name="quantum-trace-simulator"></a>Ablaufverfolgungssimulator für Quantencomputer
 
@@ -24,29 +24,26 @@ Für den Ablaufverfolgungssimulator werden zusätzliche Informationen benötigt,
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Angeben der Wahrscheinlichkeit für Ergebnisse von Messungen
 
-Es gibt zwei Arten von Messungen, die in Quantenalgorithmen angezeigt werden. Die erste Messung ist eine Hilfsmessung, bei der der Benutzer normalerweise über die Wahrscheinlichkeit der Ergebnisse informiert ist. In diesem Fall kann der Benutzer <xref:microsoft.quantum.primitive.assertprob> über den Namespace <xref:microsoft.quantum.primitive> schreiben, um dies mitzuteilen. Das folgende Beispiel veranschaulicht dies:
+Es gibt zwei Arten von Messungen, die in Quantenalgorithmen angezeigt werden. Die erste Messung ist eine Hilfsmessung, bei der der Benutzer normalerweise über die Wahrscheinlichkeit der Ergebnisse informiert ist. In diesem Fall kann der Benutzer <xref:microsoft.quantum.intrinsic.assertprob> über den Namespace <xref:microsoft.quantum.intrinsic> schreiben, um dies mitzuteilen. Das folgende Beispiel veranschaulicht dies:
 
 ```qsharp
-operation Teleportation (source : Qubit, target : Qubit) : Unit {
-
-    using (ancilla = Qubit()) {
-
-        H(ancilla);
-        CNOT(ancilla, target);
-
-        CNOT(source, ancilla);
+operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
+    using (qubit = Qubit()) {
+        H(qubit);
+        CNOT(qubit, target);
+        CNOT(source, qubit);
         H(source);
 
         AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [q], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
 
         if (M(source) == One)  { Z(target); X(source); }
-        if (M(ancilla) == One) { X(target); X(ancilla); }
+        if (M(q) == One) { X(target); X(q); }
     }
 }
 ```
 
-Wenn vom Ablaufverfolgungssimulator `AssertProb` ausgeführt wird, wird dies per Messung von `PauliZ` auf `source` aufgezeichnet, und `ancilla` sollte das Ergebnis `Zero` bei einer Wahrscheinlichkeit von 0,5 aufweisen. Wenn der Simulator später `M` ausführt, erkennt er die aufgezeichneten Werte der Ergebniswahrscheinlichkeiten, und `M` gibt `Zero` oder `One` mit einer Wahrscheinlichkeit von 0,5 zurück. Wenn derselbe Code in einem Simulator ausgeführt wird, mit dem der Quantenzustand nachverfolgt wird, überprüft dieser die Wahrscheinlichkeiten in `AssertProb` auf ihre Richtigkeit.
+Wenn vom Ablaufverfolgungssimulator `AssertProb` ausgeführt wird, wird dies per Messung von `PauliZ` auf `source` aufgezeichnet, und `q` sollte das Ergebnis `Zero` bei einer Wahrscheinlichkeit von 0,5 aufweisen. Wenn der Simulator später `M` ausführt, erkennt er die aufgezeichneten Werte der Ergebniswahrscheinlichkeiten, und `M` gibt `Zero` oder `One` mit einer Wahrscheinlichkeit von 0,5 zurück. Wenn derselbe Code in einem Simulator ausgeführt wird, mit dem der Quantenzustand nachverfolgt wird, überprüft dieser die Wahrscheinlichkeiten in `AssertProb` auf ihre Richtigkeit.
 
 ## <a name="running-your-program-with-the-quantum-computer-trace-simulator"></a>Ausführen des Programms mit dem Ablaufverfolgungssimulator für Quantencomputer 
 

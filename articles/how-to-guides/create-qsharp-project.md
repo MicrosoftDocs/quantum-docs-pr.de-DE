@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: 10b1048501c2de055f5711fc0fdbc4bac76e8f77
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 5fa32f14291fa2070b49e4bb3b720cbf31ee614b
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864405"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819891"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Erstellen eines Q #-Projekts in Ihrer Entwicklungsumgebung
 
@@ -23,16 +23,16 @@ Ein q #-Projekt enthält q #-Dateien, die den Quantum-Code enthalten, sowie ein 
 Wählen Sie in den folgenden Abschnitten Ihre Entwicklungsumgebung und Sprache aus:
 
 * [Python](#create-a-python-project)
-* [Jupyter-Notebooks](#create-a-jupyter-notebook-project)
+* [Q # jupyter-Notebooks](#create-a-q-jupyter-notebook-project)
 * [C#mit Visual Studio](#create-a-c-project-on-windows-using-visual-studio)
 * [C#mit vs Code](#create-a-c-project-using-vs-code)
 * [C#mit der Befehlszeile](#create-a-c-project-using-the-dotnet-command-line-tool)
 
-## <a name="create-a-python-project"></a>Erstellen eines Python-Projekts
+## <a name="create-a-python-project"></a>Erstellen eines python-Projekts
 
 1. Voraussetzungen
 
-     * Das [Quantum Development Kit für python](xref:microsoft.quantum.install#develop-with-python)
+     * Installieren des [quantumentwicklungskit für python](xref:microsoft.quantum.install.python)
 
 1. Erstellen Sie einen Ordner für das Projekt, und navigieren Sie zu diesem Ordner.
 
@@ -75,11 +75,11 @@ Wählen Sie in den folgenden Abschnitten Ihre Entwicklungsumgebung und Sprache a
 
 Sie können nun mit der Entwicklung des Quantums Programm fortfahren.
 
-## <a name="create-a-jupyter-notebook-project"></a>Erstellen eines Jupyter Notebook Projekts
+## <a name="create-a-q-jupyter-notebook-project"></a>Erstellen eines Q # Jupyter Notebook-Projekts
 
 1. Voraussetzungen
 
-    * Das [Quantum Development Kit für jupyter-Notebooks](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
+    * Installieren des [quantumentwicklungskit für jupyter-Notebooks](xref:microsoft.quantum.install.jupyter)
 
 1. Führen Sie den folgenden Befehl aus, um den Notebookserver zu starten:
 
@@ -115,14 +115,14 @@ Sie können jetzt weitere Q #-Vorgänge hinzufügen, um die Quantum-Entwicklung 
 
 1. Voraussetzungen
 
-    * Das [Quantum Development Kit für Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
+    * Installieren der [Quantum Development Kit-Erweiterung für Visual Studio](xref:microsoft.quantum.install.cs)
 
 1. Erstellen einer neuen Q#-Anwendung
 
     * Klicken Sie auf **Datei** -> **Neu** -> **Projekt**.
     * Geben Sie im Suchfeld als Suchbegriff `Q#` ein.
     * Wählen Sie **Q#-Anwendung** aus.
-    * Wählen Sie **Weiter** aus
+    * Wählen Sie **Weiter** aus.
     * Wählen Sie einen Namen und Speicherort für Ihre Anwendung aus.
     * Klicken Sie auf **Erstellen**
 
@@ -144,7 +144,7 @@ Sie können jetzt die Quantum-Entwicklung mit Visual Studio fortsetzen.
 
 1. Voraussetzungen
 
-    * Das [Quantum Development Kit für vs Code](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code)
+    * Installieren Sie die [Quantum Development Kit-Erweiterung für vs Code](xref:microsoft.quantum.install.cs)
 
 1. Erstellen eines neuen Projekts:
 
@@ -169,7 +169,7 @@ Nun können Sie die Quantum-Entwicklung mit Visual Studio Code fortsetzen.
 
 1. Voraussetzungen
 
-    * Das [Quantum Development Kit für die Befehlszeile](xref:microsoft.quantum.install#develop-with-c-using-the-dotnet-command-line-tool)
+    * Installieren des [quantumentwicklungskit für die Befehlszeile](xref:microsoft.quantum.install.cs)
 
 1. Erstellen einer neuen Anwendung
 

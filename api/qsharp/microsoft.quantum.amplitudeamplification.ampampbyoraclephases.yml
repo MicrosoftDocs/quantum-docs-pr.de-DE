@@ -3,32 +3,22 @@ uid: microsoft.quantum.amplitudeamplification.ampampbyoraclephases
 name: AmpAmpByOraclePhases
 type: function
 namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: Amplitude-Verstärkung durch Oracles für partielle Reflektionen.
-remarks: >-
-  Dies erzwingt strengere Bedingungen in Form von Start-und Ziel Zuständen als in `AmpAmpByReflectionPhases`.
-
-  Es wird davon ausgegangen, dass der Ziel Status durch $ \ket{1}\_f $ gekennzeichnet ist.
-
-  Es wird davon ausgegangen, dass \begin{align} a\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_\_f \ket {\ Text {Target}}{0}s + \sqrt{1-| \lambda | ^ 2} \ket \_von \cdots , \end{align} in den meisten Fällen `flagQubit` und `ancillaRegister` im Status $ \ket{0}\_{f} \ket{0}\_s $ initialisiert.
+summary: Ampampbyoraclephasen ist veraltet. Verwenden Sie stattdessen @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation".
 syntax: 'function AmpAmpByOraclePhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'
   types:
   - name: phases
-    summary: Phasen von partiellen Reflektionen
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
   - name: stateOracle
-    summary: Einheitlicher Oracle-$A $, der den Startstatus vorbereitet
     uid: microsoft.quantum.oracles.stateoracle
   - name: idxFlagQubit
-    summary: Index zum Markieren von Qubit
     isPrimitive: true
     uid: Int
 output:
   content: (Qubit[] => Unit is Adj + Ctl)
   types:
-  - summary: Ein Vorgang, der die Amplitude-Verstärkung durch Oracles implementiert, die von partiellen Reflektionen implementiert werden.
-    isOperation: true
+  - isOperation: true
     input:
       types:
       - isArray: true
@@ -42,9 +32,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: cacd3b34fae01697ee5bba414d9a7422b3260e2f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a5a20dbb207841bf5dd9e46746814b4d7560cc67
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215828"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76869227"

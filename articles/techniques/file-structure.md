@@ -1,18 +1,19 @@
 ---
-title: Einführung in die Quantum-Entwicklungstechniken | Microsoft-Dokumentation
-description: Einführung in die Quantum-Entwicklungstechniken
+title: 'Q #-Programmübersicht: q #-Techniken | Microsoft-Dokumentation'
+description: 'Q #-Programmübersicht-q #-Techniken'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 702d23293a1c340ddd3d7032d0e05294345469b2
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+uid: microsoft.quantum.techniques.file-structure
+ms.openlocfilehash: e8f52e6b0d4382331665a8e845ef19a3a1beabf9
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442559"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820826"
 ---
-# <a name="q-program-overview"></a>Q #-Programmübersicht
+# <a name="q-program-overview"></a>Q#-Programmübersicht
 
 F # ist eine skalierbare, domänenspezifische Programmiersprache mit mehreren Paradigmen für das Quantum Computing. F # ist eine Quantum-Programmiersprache, mit der Sie beschreiben können, wie Anweisungen auf Quantum-Computern ausgeführt werden. Die Computer, die als Zielgruppe eingesetzt werden können, reichen von Simulatoren bis zur eigentlichen Quantum-Hardware. F # ist skalierbar: Es kann verwendet werden, um einfache Demonstrationsprogramme wie Teleports zu schreiben, die auf wenigen Qubits ausgeführt werden. Sie unterstützt aber auch das Schreiben großer, anspruchsvoller Programme, wie z. b. Simulationen komplexer Moleküle, die große Computer mit Millionen von Qubits erfordern. Auch wenn große physische Computer noch in der Zukunft liegen, ermöglicht Q # es Programmierern, jetzt komplexe Quantum-Algorithmen zu programmieren. Weitere Informationen finden Sie unter Unterstützung für verschiedene Aufgaben, z. b. Debuggen, Profilerstellung, Ressourcenschätzung und bestimmte spezielle Simulationen auf skalierbare Weise. 
 

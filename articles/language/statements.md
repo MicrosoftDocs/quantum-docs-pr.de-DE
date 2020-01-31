@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5bcbee868c76aaf53d0b7969e6e634da62689aaa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 9157cf3336ce0894816dbfbaf13ce0e712a6b096
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184864"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821064"
 ---
 # <a name="statements-and-other-constructs"></a>Anweisungen und andere Konstrukte
 
@@ -54,8 +54,7 @@ Beispiel:
 ///
 /// # See Also
 /// - Microsoft.Quantum.Intrinsic.H
-operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit
-{
+operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit {
     op(target);
     op(target);
 }
@@ -90,7 +89,6 @@ Wenn ein Kurzname `Z` für `X.Y` in diesem Namespace und in der Datei definiert 
 
 ```qsharp
 namespace NS {
-
     open Microsoft.Quantum.Intrinsic; // opens the namespace
     open Microsoft.Quantum.Math as Math; // defines a short name for the namespace
 }
@@ -181,7 +179,7 @@ for (i in 1 .. 2 .. 10) {
 Ähnliche Anweisungen sind für alle binären Operatoren verfügbar, in denen der Typ der linken Seite mit dem Ausdruckstyp übereinstimmt. Dies stellt beispielsweise eine bequeme Möglichkeit zum Sammeln von Werten dar:
 ```qsharp
 mutable results = new Result[0];
-for (q in qubits) {
+for (qubit in qubits) {
     set results += [M(q)];
     // ...
 }
@@ -193,7 +191,7 @@ Eine ähnliche Verkettung ist für Kopier-und Update Ausdrücke auf der rechten 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function AddAll (reals : Double[], ims : Double[]) : Complex[] {
+function ElementwisePlus(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {
@@ -209,19 +207,17 @@ function AddAll (reals : Double[], ims : Double[]) : Complex[] {
 Im Fall von Arrays enthalten unsere Standardbibliotheken die erforderlichen Tools für viele gängige Anforderungen an die Initialisierung und Bearbeitung von Arrays. dadurch ist es nicht mehr erforderlich, Array Elemente an erster Stelle zu aktualisieren. Update-und-REASSIGN-Anweisungen stellen bei Bedarf eine Alternative dar:
 
 ```qsharp
-operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
-
+operation GenerateRandomInts(max : Int, nSamples : Int) : Int[] {
     mutable samples = new Double[0];
-    for (i in 1 .. nrSamples) {
-        set samples += [RandomInt(maxInt)];
+    for (i in 1 .. nSamples) {
+        set samples += [RandomInt(max)];
     }
     return samples;
 }
 
-operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
-
-    let normalization = 1. / IntAsDouble(prec);
-    mutable samples = RandomInts(prec, nrSamples);
+operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
+    let normalization = 1. / IntAsDouble(nSteps);
+    mutable samples = GenerateRandomInts(nSteps, nSamples);
     
     for (i in IndexRange(samples) {
         let value = IntAsDouble(samples[i]);
@@ -236,10 +232,9 @@ operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
 
 Die-Funktion
 ```qsharp
-function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
-{
-    mutable pauliArray = new Pauli[n];
-    for (index in 0 .. n - 1) {
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    mutable pauliArray = new Pauli[length];
+    for (index in 0 .. length - 1) {
         set pauliArray w/= index <- 
             index == location ? pauli | PauliI;
     }    
@@ -249,15 +244,15 @@ function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
 kann z. b. einfach mithilfe der in `Microsoft.Quantum.Arrays``ConstantArray` Funktion vereinfacht werden und gibt einen Copy-and-Update-Ausdruck zurück:
 
 ```qsharp
-function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {
-    return ConstantArray(n, PauliI) w/ i <- pauli;
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    return ConstantArray(length, PauliI) w/ location <- pauli;
 }
 ```
 
 ### <a name="binding-scopes"></a>Bindungs Bereiche
 
 Im allgemeinen verlassen Symbol Bindungen den Gültigkeitsbereich und werden am Ende des Anweisungsblocks, in dem Sie auftreten, inaktiv.
-Für diese Regel gibt es zwei Ausnahmen:
+Es gibt jedoch zwei Ausnahmen:
 
 - Die Bindung der Schleifen Variablen einer `for`-Schleife liegt im Gültigkeitsbereich des Texts der for-Schleife, aber nicht nach dem Ende der Schleife.
 - Alle drei Teile eines `repeat`/`until`-Schleife (der Text, der Test und das Fixup) werden als einzelner Bereich behandelt, sodass im Text gebundene Symbole im Test und im Fixup verfügbar sind.
@@ -330,8 +325,8 @@ Beispiel:
 
 ```qsharp
 // ...
-for (qb in qubits) { // qubits contains a Qubit[]
-    H(qb);
+for (qubit in qubits) { // qubits contains a Qubit[]
+    H(qubit);
 }
 
 mutable results = new (Int, Results)[Length(qubits)];
@@ -359,13 +354,13 @@ Der Schleifen Text, die Bedingung und das Fixup werden als einzelner Bereich bet
 ```qsharp
 mutable iter = 1;
 repeat {
-    ProbabilisticCircuit(qs);
-    let success = ComputeSuccessIndicator(qs);
+    ProbabilisticCircuit(qubits);
+    let success = ComputeSuccessIndicator(qubits);
 }
 until (success || iter > maxIter)
 fixup {
     iter += 1;
-    ComputeCorrection(qs);
+    ComputeCorrection(qubits);
 }
 ```
 
@@ -374,25 +369,25 @@ Wenn die Bedingung true ist, wird die-Anweisung abgeschlossen. Andernfalls wird 
 Beachten Sie, dass das Abschließen der Ausführung des Fixup den Bereich für die-Anweisung beendet, sodass Symbol Bindungen, die während des Texts oder Fixup erstellt werden, in nachfolgenden Wiederholungen nicht verfügbar sind.
 
 Der folgende Code ist z. b. eine probabilistische Verbindung, die ein wichtiges Drehungs Gate implementiert $V _3 = (\boldone + 2 i)/\sqrt{5}$ mithilfe von Hadamard und t Gates.
-Die Schleife wird im Durchschnitt 8/5 Wiederholungen beendet.
+Die Schleife wird im Durchschnitt von $ \frac{8}{5}$-Wiederholungen beendet.
 Weitere Informationen finden Sie [*unter Repeat-Until-Success: nicht deterministische Zerlegung von Single-Qubit-uniflüssen*](https://arxiv.org/abs/1311.1074) ("Petznick" und "svore", 2014).
 
 ```qsharp
-using (anc = Qubit()) {
+using (qubit = Qubit()) {
     repeat {
-        H(anc);
-        T(anc);
-        CNOT(target,anc);
-        H(anc);
-        Adjoint T(anc);
-        H(anc);
-        T(anc);
-        H(anc);
-        CNOT(target,anc);
-        T(anc);
+        H(qubit);
+        T(qubit);
+        CNOT(target, qubit);
+        H(qubit);
+        Adjoint T(qubit);
+        H(qubit);
+        T(qubit);
+        H(qubit);
+        CNOT(target, qubit);
+        T(qubit);
         Z(target);
-        H(anc);
-        let result = M(anc);
+        H(qubit);
+        let result = M(qubit);
     } until (result == Zero);
 }
 ```
@@ -450,7 +445,7 @@ if (i == 1) {
 }
 ```
 
-### <a name="return"></a>return
+### <a name="return"></a>Rückgabewert
 
 Die Return-Anweisung beendet die Ausführung eines Vorgangs oder einer Funktion und gibt einen Wert an den Aufrufer zurück.
 Er besteht aus dem Schlüsselwort `return`, gefolgt von einem Ausdruck des entsprechenden Typs und einem abschließenden Semikolon.
@@ -480,7 +475,7 @@ oder
 return (results, qubits);
 ```
 
-### <a name="fail"></a>Fail
+### <a name="fail"></a>Fehler
 
 Die Fail-Anweisung beendet die Ausführung eines Vorgangs und gibt einen Fehlerwert an den Aufrufer zurück.
 Er besteht aus dem Schlüsselwort `fail`, gefolgt von einer Zeichenfolge und einem abschließenden Semikolon.
@@ -519,15 +514,15 @@ Initialisierer sind entweder für ein einzelnes Qubit, das als `Qubit()`angegebe
 Beispiel:
 
 ```qsharp
-using (q = Qubit()) {
+using (qubit = Qubit()) {
     // ...
 }
-using ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+using ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
 
-### <a name="dirty-qubits"></a>Geänderte Qubits
+### <a name="borrowed-qubits"></a>Geliehene Qubits
 
 Die `borrowing`-Anweisung wird verwendet, um Qubits für die temporäre Verwendung abzurufen. Die-Anweisung besteht aus dem Schlüsselwort `borrowing`, gefolgt von einer öffnenden Klammer `(`, einer Bindung, einer schließenden Klammer `)`und dem Anweisungsblock, in dem die Qubits verfügbar sein werden.
 Die Bindung folgt demselben Muster und denselben Regeln wie in einer `using`-Anweisung.
@@ -535,10 +530,10 @@ Die Bindung folgt demselben Muster und denselben Regeln wie in einer `using`-Anw
 Beispiel:
 
 ```qsharp
-borrowing (q = Qubit()) {
+borrowing (qubit = Qubit()) {
     // ...
 }
-borrowing ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+borrowing ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
@@ -547,8 +542,7 @@ Die geliehenen Qubits befinden sich in einem unbekannten Zustand und verlassen d
 Der Kreditnehmer führt einen Commit aus, um die Qubits in demselben Zustand zu belassen, in dem Sie sich befanden, d. h., ihr Zustand am Anfang und am Ende des Anweisungsblocks ist erwartungsgemäß identisch.
 Dabei handelt es sich nicht unbedingt um einen klassischen Zustand, der in den meisten Fällen keine Messungen enthalten sollte. 
 
-Solche Qubits werden oft als "Dirty Ancilla" bezeichnet.
-Ein Beispiel für die Verwendung von modifiziertem Ancilla finden [*Sie unter Factoring mithilfe von 2N + 2 Qubits mit Toffoli-basierter Modularität*](https://arxiv.org/abs/1611.07995) (Haner, roetteler und svore 2017).
+Ein Beispiel für eine geliehene Qubit-Verwendung finden [*Sie unter Factoring mithilfe von 2N + 2-Qubits mit Toffoli-basierter Modularität*](https://arxiv.org/abs/1611.07995) (Haner, roetteler und svore 2017).
 
 Beim Abgleich von Qubits versucht das System zunächst, die Anforderung von Qubits auszufüllen, die verwendet werden, auf die jedoch nicht während des Texts der `borrowing` Anweisung zugegriffen wird.
 Wenn nicht genügend derartige Qubits vorhanden sind, werden neue Qubits zum Durchführen der Anforderung zugeteilt.

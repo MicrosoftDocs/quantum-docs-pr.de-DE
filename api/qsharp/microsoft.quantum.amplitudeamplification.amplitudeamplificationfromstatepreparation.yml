@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation
+name: AmplitudeAmplificationFromStatePreparation
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Amplitude-Verstärkung durch Oracles für partielle Reflektionen.
+remarks: >-
+  Dies erzwingt strengere Bedingungen in Form von Start-und Ziel Zuständen als in `AmpAmpByReflectionPhases`.
+
+  Es wird davon ausgegangen, dass der Ziel Status durch $ \ket{1}\_f $ gekennzeichnet ist.
+
+  Es wird davon ausgegangen, dass \begin{align} a\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_\_f \ket {\ Text {Target}}{0}s + \sqrt{1-| \lambda | ^ 2} \ket \_von \cdots, \end{align} in den meisten Fällen werden `flagQubit` und `auxiliaryRegister` im Status $ \ket{0}\_{f} \ket{0}\_s $ initialisiert.
+syntax: 'function AmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
+input:
+  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'
+  types:
+  - name: phases
+    summary: Phasen von partiellen Reflektionen
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+  - name: stateOracle
+    summary: Einheitlicher Oracle-$A $, der den Startstatus vorbereitet
+    uid: microsoft.quantum.oracles.stateoracle
+  - name: idxFlagQubit
+    summary: Index zum Markieren von Qubit
+    isPrimitive: true
+    uid: Int
+output:
+  content: (Qubit[] => Unit is Adj + Ctl)
+  types:
+  - summary: Ein Vorgang, der die Amplitude-Verstärkung durch Oracles implementiert, die von partiellen Reflektionen implementiert werden.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+metadata:
+  ms.openlocfilehash: b31e601e5e5564ba26bc2f5b9a66a8fecd5e3786
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872494"

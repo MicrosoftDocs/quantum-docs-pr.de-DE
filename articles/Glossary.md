@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: ce15fee2be68d41f0b806be50320b562a749c3b7
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 5c7f2c4a572f6194ee846f056016a25b8c5303a2
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442540"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820758"
 ---
 # <a name="quantum-computing-glossary"></a>Quantum Computing-Glossar
 
@@ -41,7 +41,6 @@ ms.locfileid: "73442540"
 |Quantum-Status|Eine Darstellung der Qubits im System. Dies wird in der Regel als komplexer Spalten Vektor bezeichnet. Weitere Informationen finden Sie unter <xref:microsoft.quantum.concepts.vectors>. |
 |Qubit|Einheit des Quantum-Speichers. Weitere Informationen finden Sie im Abschnitt <xref:microsoft.quantum.concepts.qubit>.|
 |Wiederholung-bis-Erfolg|Ein Quantum-Algorithmus, der probabilistisch erfolgreich ist. Bei einem Fehler wird die Routine wiederholt, bis Sie erfolgreich ist (oder ein Grenzwert erreicht wurde). |
-|Software Stapel|Der gesamte Satz klassischer und quantener Software sowie die Compiler, Simulatoren und Laufzeiten, die für den Betrieb eines Quantum-Computers erforderlich sind. Weitere Informationen finden Sie im Abschnitt <xref:microsoft.quantum.concepts.software-stack>. |
 |Zielcomputer|Ein Kompilierungs Ziel, das ein abstraktes Quantum-Programm auf Hardware oder Simulation senkt. Dies schließt in der Regel Umschreib Vorgänge für viele Zwecke ein, einschließlich Gate-Ersetzung, Codierung für die Fehlerkorrektur, geometrisches Layout und andere.|
 |Tupel|Durch Kommas getrennte Typen, die über Klammern gruppiert sind. |
 |Benutzerdefinierter Typ|Sammlung integrierter oder zuvor definierter Typen, die als einzelne Einheit bezeichnet werden können.|

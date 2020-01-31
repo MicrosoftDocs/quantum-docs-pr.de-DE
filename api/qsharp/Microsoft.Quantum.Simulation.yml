@@ -10,13 +10,13 @@ functions:
     Codiert einen relevanten Operator in einen `BlockEncoding`.
 
 
-    Dadurch wird ein `BlockEncoding` einheitlicher $U = p\cdot v\cdot P ^ \dagger $ erstellt, der einen Operator $H = \sum_{j} | \alpha_j | U_j $ von Interesse, bei dem es sich um eine lineare Kombination von uniflüssen handelt. In der Regel ist $P $ eine einheitliche Zustands Vorbereitung, z. b. $P \ket{0}\_a = \ sum_j\sqrt {\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ und $V = \sum_{j}\ket{j}\bra{j}\_a\otimes U_ j $.
+    Dadurch wird ein `BlockEncoding` einheitlicher $U = p\cdot v\cdot P ^ \dagger $ erstellt, der einige Operator $H = \ sum_ {j} | \ alpha_j codiert. U_j $ von Interesse, bei dem es sich um eine lineare Kombination von uniflüssen handelt. In der Regel ist $P $ eine einheitliche Zustands Vorbereitung, z. b. $P \ket{0}\_a = \ sum_j \sqrt{\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ und $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $.
 - uid: microsoft.quantum.simulation.blockencodingreflectionbylcu
   summary: >-
     Codiert einen relevanten Operator in einen `BlockEncodingReflection`.
 
 
-    Dadurch wird ein `BlockEncodingReflection` einheitlicher $U = p\cdot v\cdot P ^ \dagger $ erstellt, der einen Operator $H = \sum_{j} | \alpha_j | U_j $ von Interesse, bei dem es sich um eine lineare Kombination von uniflüssen handelt. In der Regel ist $P $ eine einheitliche Zustands Vorbereitung, z. b. $P \ket{0}\_a\sum_j\sqrt {\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ und $V = \sum_{j}\ket{j}\bra{j}\_a\otimes U_ j $.
+    Dadurch wird ein `BlockEncodingReflection` einheitlicher $U = p\cdot v\cdot P ^ \dagger $ erstellt, der einige Operator $H = \ sum_ {j} | \ alpha_j codiert. U_j $ von Interesse, bei dem es sich um eine lineare Kombination von uniflüssen handelt. In der Regel ist $P $ eine einheitliche Zustands Vorbereitung, z. b. $P \ket{0}\_a \ sum_j \sqrt{\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ und $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $.
 - uid: microsoft.quantum.simulation.blockencodingtoreflection
   summary: >-
     Konvertiert eine `BlockEncoding` in eine entsprechende `BLockEncodingReflection`.
@@ -52,7 +52,7 @@ functions:
     Erstellt eine einheitliche Block Codierung für ein hamiltonan.
 
 
-    Die hamiltonan $H = \sum_{j}\alpha_j P_j $ wird durch eine Summe von Pauli-Begriffen $P _J $ beschrieben, die jeweils den tatsächlichen Koeffizienten $ \alpha_j $ haben.
+    Die hamiltonan $H = \ sum_ {j} \ alpha_j P_j $ wird durch eine Summe von Pauli-Begriffen $P _J $, jeweils mit dem tatsächlichen Koeffizienten $ \ alpha_j $, beschrieben.
 - uid: microsoft.quantum.simulation.paulicoefficientfromgenidx
   summary: Extrahiert den Koeffizient eines Pauli-Begriffs, der von einem `GeneratorIndex`beschrieben wird.
 - uid: microsoft.quantum.simulation.paulievolutionfunction
@@ -62,11 +62,7 @@ functions:
 - uid: microsoft.quantum.simulation.paulistringfromgenidx
   summary: Extrahiert die Pauli-Zeichenfolge und ihre Qubit-Indizes eines von einem `GeneratorIndex`beschriebenen Pauli-Begriffs.
 - uid: microsoft.quantum.simulation.quantumwalkbyqubitization
-  summary: >-
-    Konvertiert eine `BlockEncodingReflection` in einen Quantum Walk.
-
-
-    Das heißt, bei einem `BlockEncodingReflection` einheitlichen $U $, der einen Operator $H $ of Interest codiert, konvertiert ihn in einen Quantum Walk $W $, der das Spektrum von $ \pm e ^ {\pm i\sin ^{-1}(H)} $ enthält.
+  summary: Konvertiert eine Block Codierungs Reflektion in einen Quantum Walk.
 - uid: microsoft.quantum.simulation.sumgeneratorsystems
   summary: Fügt mehrere `GeneratorSystem`en hinzu, um ein neues Generatorsystem zu erstellen.
 - uid: microsoft.quantum.simulation.timedependenttrottersimulationalgorithm
@@ -91,7 +87,7 @@ newtypes:
     Das heißt, ein `BlockEncoding` ist ein einheitlicher $U $, wobei ein beliebiger Operator $H von "$ of Interest", der für das System Register `s` fungiert, in dem Block oben links codiert wird, der dem hilfstatus $ \ket{0}_A $ entspricht. Das heißt
 
 
-    $ $ \begin{align} (\bra{0}_A \ otimes I_s) U (\ket{0}_A \ otimes I_s) = H \end{align} $ $.
+    $ $ \begin{align} (\bra{0}_A \otimes I_s) U (\ket{0}_A \otimes I_s) = H \end{align} $ $.
 - uid: microsoft.quantum.simulation.blockencodingreflection
   summary: Stellt ein `BlockEncoding` dar, das auch eine Reflektion ist.
 - uid: microsoft.quantum.simulation.evolutiongenerator
@@ -143,10 +139,10 @@ newtypes:
     Stellt eine `BlockEncoding` dar, die von einem Uhren Register gesteuert wird.
 
 
-    Das heißt, ein `TimeDependentBlockEncoding` ist ein einheitlicher $U $, der durch den Status $ \ket{k}_D $ in der Uhr registriert wird `d` so, dass ein beliebiger Operator $H _K $, der für das System Register `s` ist, in dem Block oben links codiert ist, der dem hilfstatus $ \ket entspricht @No __t_3_ _A $. Das heißt
+    Das heißt, ein `TimeDependentBlockEncoding` ist ein einheitlicher $U $, der durch den Status $ \ket{k} _D $ in Clock Register gesteuert wird `d` so, dass ein beliebiger Operator $H _K $ von Interesse, der auf dem System Register `s` ist, in dem Block oben links codiert wird, der dem hilfstatus $ \ket{0}_A $ entspricht. Das heißt
 
 
-    $ $ \begin{align} (\bra{0}\_a\otimes I_ {DS}) U (\ket{0}\_a\otimes I_ {DS}) = \sum_{k}\ket{k}\bra{k}\_d\otimes H_k.
+    $ $ \begin{align} (\bra{0}\_a\otimes I_ {DS}) U (\ket{0}\_a\otimes I_ {DS}) = \ sum_ {k} \ket{k}\bra{k}\_d\otimes H_k.
 
     \end{align} $ $.
 - uid: microsoft.quantum.simulation.timedependentgeneratorsystem
@@ -162,9 +158,9 @@ newtypes:
 - uid: microsoft.quantum.simulation.unitary
   summary: Stellt die Weiterentwicklung unter einem einheitlichen Operator dar.
 metadata:
-  ms.openlocfilehash: 05db213d04304a635e4e86e0f6c40f15bb81441a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 967c27e6c5c8f475e54f7e9d4f3a14594fb04cc5
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215879"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76869826"

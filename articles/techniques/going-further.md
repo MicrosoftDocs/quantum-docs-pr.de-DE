@@ -1,18 +1,19 @@
 ---
-title: 'F #-Techniken: weiter gehen | Microsoft-Dokumentation'
-description: 'F #-Techniken: weiter gehen'
+title: 'Weitere Schritte: f #-Techniken | Microsoft-Dokumentation'
+description: 'Weitere Schritte: Q #-Techniken'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: c079364f8808304e0132fa2a4226cd6400e81339
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+uid: microsoft.quantum.techniques.going-further
+ms.openlocfilehash: bd2b799d4001e280baccb04158247891b9cbb5bc
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863145"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820197"
 ---
-# <a name="going-further"></a>Vertiefung #
+# <a name="going-further"></a>Weiter #
 
 Nachdem Sie nun erfahren haben, wie Sie interessante Quantum-Programme in Q # schreiben, werden in diesem Abschnitt noch einige erweiterte Themen vorgestellt, die sich in Zukunft als nützlich erweisen sollten.
 

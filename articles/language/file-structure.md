@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 40b2e7ddf5def6285250dffe130b152429dce1f8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 364d353c55bda38f227456909755d13dc7e67080
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185187"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821081"
 ---
 # <a name="file-structure"></a>Dateistruktur
 
@@ -21,7 +21,7 @@ Eine Namespace Deklaration kann beliebig viele Typen von Deklarationen und in be
 Der einzige Text, der außerhalb einer Namespace Deklaration angezeigt werden kann, sind Kommentare.
 Insbesondere Dokumentations Kommentare für einen Namespace vor der Deklaration.
 
-## <a name="namespace-declarations"></a>Namespace Deklarationen
+## <a name="namespace-declarations"></a>Namespacedeklarationen
 
 Eine Q #-Datei hat normalerweise genau eine Namespace Deklaration, kann jedoch keine (und leer sein oder nur Kommentare enthalten) oder mehrere Namespaces enthalten.
 Namespace Deklarationen dürfen nicht eingefügt werden.
@@ -84,7 +84,7 @@ Jede f #-Quelldatei kann eine beliebige Anzahl von Vorgängen definieren.
 
 Vorgangs Namen müssen innerhalb eines Namespace eindeutig sein und können keinen Konflikt mit Typ-und Funktionsnamen verursachen.
 
-Eine Vorgangs Deklaration besteht aus dem Schlüsselwort `operation`, gefolgt von dem Symbol, das den Namen des Vorgangs enthält, einem typisierten bezeichnertupel, das die Argumente für den Vorgang definiert, einem Doppelpunkt `:`, einer Typanmerkung, die den Ergebnistyp des Vorgangs beschreibt. optional eine Anmerkung mit den Vorgangs Merkmalen, eine öffnende geschweifte Klammer `{`, den Hauptteil der Vorgangs Deklaration und eine abschließende schließende geschweifte Klammer `}`.
+Eine Vorgangs Deklaration besteht aus dem Schlüsselwort `operation`, gefolgt vom Symbol, das den Namen des Vorgangs, ein typisiertes bezeichnertupel, das die Argumente für den Vorgang definiert, einen Doppelpunkt `:`, eine Typanmerkung, die den Ergebnistyp des Vorgangs beschreibt, optional eine Anmerkung mit den Vorgangs Merkmalen, eine öffnende geschweifte Klammer `{`, den Text der Vorgangs Deklaration und eine abschließende schließende geschweifte Klammer `}`.
 
 Der Text der Vorgangs Deklaration besteht entweder aus der Standard Implementierung oder einer Liste von spezialisierer.
 Die Standard Implementierung kann direkt innerhalb der-Deklaration angegeben werden, wenn nur die Implementierung der Standardtext Spezialisierung explizit angegeben werden muss.
@@ -138,7 +138,7 @@ is Ctl + Adj {
 }
 ```
 
-Im obigen Beispiel gibt `adjoint invert;` an, dass die Adjoint-Spezialisierung durch Umkehren der Text Implementierung generiert werden soll, und `controlled adjoint invert;` gibt an, dass die kontrollierte Adjoint-Spezialisierung generiert werden soll, indem die angegebene Implementierung des kontrollierte Spezialisierung.
+Im obigen Beispiel gibt `adjoint invert;` an, dass die Adjoint-Spezialisierung generiert werden soll, indem Sie die Text Implementierung umkehren, und `controlled adjoint invert;` gibt an, dass die kontrollierte Adjoint-Spezialisierung generiert werden soll, indem Sie die angegebene Implementierung der kontrollierten Spezialisierung umkehren.
 
 Damit ein Vorgang die Anwendung des `Adjoint`-und/oder `Controlled`-funktors unterstützt, muss der Rückgabetyp notwendigerweise `Unit`werden. 
 
@@ -187,12 +187,12 @@ Bei `body` und `adjoint`sollte die Argumentliste immer `(...)`sein. bei `control
 Wenn eine oder mehrere Spezialisierungen neben dem Standardtext explizit deklariert werden müssen, muss die Implementierung für den Standardtext ebenfalls in eine passende Spezialisierungs Deklaration integriert werden:
 
 ```qsharp
-operation CountOnes(qs: Qubit[]) : Int {
+operation CountOnes(qubits: Qubit[]) : Int {
 
     body (...) // default body specialization
     {
         mutable n = 0;
-        for (q in qs) {
+        for (qubit in qubits) {
             set n += M(q) == One ? 1 | 0;
         }
         return n;
@@ -208,7 +208,7 @@ Es ist zulässig, einen Vorgang ohne Adjoint anzugeben. Beispielsweise haben Mes
 Ein Vorgang unterstützt das `Adjoint`-Funktor, wenn seine Deklaration eine implizite oder explizite Deklaration einer Adjoint-Spezialisierung enthält.
 Eine explizit deklarierte, kontrollierte Adjoint-Spezialisierung impliziert, dass eine Adjoint-Spezialisierung vorhanden ist. 
 
-Für einen Vorgang, dessen Text Wiederholungs-bis-Erfolg-Schleifen enthält, Set-Anweisungen,-Messungen, Return-Anweisungen oder Aufrufe anderer Vorgänge, die den `Adjoint`-Funktor nicht unterstützen, wird die automatische Erzeugung einer Adjoint-Spezialisierung nach der `invert` oder @no__ die t_2_-Direktive ist nicht möglich.
+Für einen Vorgang, dessen Text Wiederholungs-bis-Erfolg-Schleifen, Set-Anweisungen, Messungen, Rückgabe Anweisungen oder Aufrufe von anderen Vorgängen enthält, die den `Adjoint`-Funktor nicht unterstützen, ist das automatische Erstellen einer Adjoint-Spezialisierung nach der `invert`-oder `auto`-Direktive nicht möglich.
 
 ### <a name="controlled"></a>Klimatisiert
 
@@ -236,7 +236,7 @@ Bei einem Vorgang, dessen Text Aufrufe von anderen Vorgängen enthält, die nich
 Eine Vorgangs Deklaration kann so einfach wie die folgende sein, die den primitiven Pauli X-Vorgang definiert:
 
 ```qsharp
-operation X (q : Qubit) : Unit
+operation X (qubit : Qubit) : Unit
 is Adj + Ctl {
     body intrinsic;
     adjoint self;
@@ -282,7 +282,7 @@ operation Teleport (source : Qubit, target : Qubit) : Unit {
 Funktionen sind rein klassische Routinen in Q #.
 Jede f #-Quelldatei kann eine beliebige Anzahl von Funktionen definieren.
 
-Eine Funktionsdeklaration besteht aus dem Schlüsselwort `function`, gefolgt von dem Symbol, das den Namen der Funktion, ein typisiertes bezeichnertupel, eine Typanmerkung, die den Rückgabetyp der Funktion beschreibt, und einem Anweisungsblock, der die Implementierung von beschreibt. Funktion.
+Eine Funktionsdeklaration besteht aus dem Schlüsselwort `function`, gefolgt von dem Symbol, das den Namen der Funktion, ein typisiertes bezeichnertupel, eine Typanmerkung, die den Rückgabetyp der Funktion beschreibt, und einem Anweisungsblock, der die Implementierung der Funktion beschreibt.
 
 Der Anweisungsblock, der eine Funktion definiert, muss in `{` eingeschlossen und `}` wie jeder andere Anweisungsblock sein.
 

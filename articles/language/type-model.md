@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.type-model
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 4e251053d1b8306bf8956314d8099e95c56bce55
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 0aabb144779da301b71ad215c8e975cc29b4dcce
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184745"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871633"
 ---
 # <a name="the-type-model"></a>Das Typmodell
 
@@ -120,7 +120,7 @@ Diese Eigenschaft wird als Übereinstimmung mit einem _Singleton-Tupel_bezeichne
 
 Eine Q #-Datei kann einen neuen benannten Typ definieren, der einen einzelnen Wert eines beliebigen Typs enthält.
 Für jeden tupeltyp `T`können wir einen neuen benutzerdefinierten Typ deklarieren, bei dem es sich um einen Untertyp von `T` mit der `newtype`-Anweisung handelt.
-Im @"microsoft.quantum.canon" Namespace sind komplexe Zahlen beispielsweise als benutzerdefinierter Typ definiert:
+Im @"microsoft.quantum.math" Namespace sind komplexe Zahlen beispielsweise als benutzerdefinierter Typ definiert:
 
 ```qsharp
 newtype Complex = (Double, Double);
@@ -141,7 +141,7 @@ newtype Nested = (Double, (ItemName : Int, String));
 Benannte Elemente haben den Vorteil, dass direkt über den Zugriffs Operator `::`auf Sie zugegriffen werden kann. 
 
 ```qsharp
-function Addition (c1 : Complex, c2 : Complex) : Complex {
+function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
     return Complex(c1::Re + c2::Re, c1::Im + c2::Im);
 }
 ```
@@ -151,7 +151,7 @@ Der Unwrap-Operator (`!`) ermöglicht das Extrahieren des Werts, der in einem be
 Der Typ eines solchen "Unwrap"-Ausdrucks ist der zugrunde liegende Typ des benutzerdefinierten Typs. 
 
 ```qsharp
-function PrintMsg (value : Nested) : Unit {
+function PrintedMessage(value : Nested) : Unit {
     let (d, (_, str)) = value!;
     Message ($"{str}, value: {d}");
 }
@@ -286,27 +286,28 @@ Q # ist in Bezug auf Eingabetypen kontra Variant: ein Aufruf barer, der einen Ty
 Das heißt, dass die folgenden Definitionen gegeben sind:
 
 ```qsharp
-operation Invertible (qs : Qubit[]) : Unit 
+operation Invert(qubits : Qubit[]) : Unit 
 is Adj {...} 
-operation Unitary (qs : Qubit[]) : Unit 
+
+operation ApplyUnitary(qubits : Qubit[]) : Unit 
 is Adj + Ctl {...} 
 
-function ConjugateInvertibleWith (
-   inner: (Qubit[] => Unit is Adj),
-   outer : (Qubit[] => Unit is Adj))
+function ConjugateInvertWith(
+    inner : (Qubit[] => Unit is Adj),
+    outer : (Qubit[] => Unit is Adj))
 : (Qubit[] => Unit is Adj) {...}
 
-function ConjugateUnitaryWith (
-   inner: (Qubit[] => Unit is Adj + Ctl),
-   outer : (Qubit[] => Unit is Adj))
+function ConjugateUnitaryWith(
+    inner : (Qubit[] => Unit is Adj + Ctl),
+    outer : (Qubit[] => Unit is Adj))
 : (Qubit[] => Unit is Adj + Ctl) {...}
 ```
 
 Folgendes gilt:
 
-- Der Vorgang `ConjugateInvertibleWith` kann mit einem `inner`-Argument entweder `Invertible` oder `Unitary`aufgerufen werden.
-- Der Vorgang `ConjugateUnitaryWith` kann mit einem `inner`-Argument `Unitary`aufgerufen werden, jedoch nicht mit `Invertible`.
-- Ein Wert vom Typ "`(Qubit[] => Unit is Adj + Ctl)`" kann von `ConjugateInvertibleWith`zurückgegeben werden.
+- Die `ConjugateInvertWith` Funktion kann mit einem `inner`-Argument entweder `Invert` oder `ApplyUnitary`aufgerufen werden.
+- Die `ConjugateUnitaryWith` Funktion kann mit einem `inner`-Argument `ApplyUnitary`aufgerufen werden, jedoch nicht mit `Invert`.
+- Ein Wert vom Typ "`(Qubit[] => Unit is Adj + Ctl)`" kann von `ConjugateInvertWith`zurückgegeben werden.
 
 > [!IMPORTANT]
 > F # 0,3 führt einen signifikanten Unterschied im Verhalten von benutzerdefinierten Typen ein.
@@ -377,14 +378,12 @@ Dieses Beispiel für einen Q #-Vorgang stammt aus dem [Mess](https://github.com/
 ```qsharp
 /// # Summary
 /// Prepares a state and measures it in the Pauli-Z basis.
-operation MeasureOneQubit () : Result {
+operation MeasureOneQubit() : Result {
         mutable result = Zero;
 
         using (qubit = Qubit()) { // Allocate a qubit
             H(qubit);               // Use a quantum operation on that qubit
-
             set result = M(qubit);      // Measure the qubit
-
             if (result == One) {    // Reset the qubit so that it can be released
                 X(qubit);
             }
@@ -396,12 +395,11 @@ operation MeasureOneQubit () : Result {
 
 Dieses Beispiel für eine Funktion stammt aus dem [phaseschätzungsbeispiel](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) . Sie enthält reinen klassischen Code. Sie können sehen, dass im Gegensatz zum obigen Beispiel keine Qubits zugeordnet sind und keine Quantum-Vorgänge verwendet werden.
 
-
 ```qsharp
 /// # Summary
 /// Given two arrays, returns a new array that is the pointwise product
 /// of each of the given arrays.
-function MultiplyPointwise (left : Double[], right : Double[]) : Double[] {
+function PointwiseProduct(left : Double[], right : Double[]) : Double[] {
     mutable product = new Double[Length(left)];
 
     for (idxElement in IndexRange(left)) {
@@ -417,7 +415,10 @@ Es ist auch möglich, dass für eine Funktion Qubits für die Verarbeitung über
 /// # Summary
 /// Translate MCT masks into multiple-controlled Toffoli gates (with single
 /// targets).
-function GateMasksToToffoliGates (qubits : Qubit[], masks : MCMTMask[]) : MCTGate[] {
+function GateMasksToToffoliGates(
+    qubits : Qubit[], 
+    masks : MCMTMask[]) 
+: MCTGate[] {
 
     mutable result = new MCTGate[0];
     let n = Length(qubits);

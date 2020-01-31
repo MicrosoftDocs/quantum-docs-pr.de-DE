@@ -10,11 +10,7 @@ functions:
 - uid: microsoft.quantum.oracles.oracletodiscrete
   summary: Bei einem Vorgang, der ein "Blackbox"-Oracle darstellt, gibt ein diskretes Oracle-Mal zurück, das den mehrfach wiederholten "Black-Box"-Oracle darstellt.
 - uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
-  summary: >-
-    Erstellt Reflektion über einen angegebenen Zustand aus einem Oracle.
-
-
-    Bei Verwendung der Oracle-$O $ vom Typ <xref:microsoft.quantum.oracles.deterministicstateoracle>ist das Ergebnis dieser Funktion eine Reflektion um den Status $ \ket{\psi} $ WHERE $O \ket{0} = \ket{\psi} $.
+  summary: Erstellt Reflektion über einen angegebenen Zustand aus einem Oracle.
 - uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
   summary: Konvertiert ein Oracle vom Typ `DeterministicStateOracle` in `StateOracle`.
 newtypes:
@@ -73,9 +69,9 @@ newtypes:
 
     - Das System registriert $s $, das den gewünschten Quantum-Status $ \ket{\psi}\_s $ speichert.
 metadata:
-  ms.openlocfilehash: 10eb2c7acebf805b955816abe2bf1cabb95ce059
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7e582286b69563bc4baa856f5236e5c2bd292ae0
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216100"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870002"

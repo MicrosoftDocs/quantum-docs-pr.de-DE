@@ -1,17 +1,17 @@
 ---
-title: 'F #-Techniken: Vorgänge und Funktionen | Microsoft-Dokumentation'
-description: 'F #-Techniken: Vorgänge und Funktionen'
+title: 'Vorgänge und Funktionen: f #-Techniken | Microsoft-Dokumentation'
+description: 'Vorgänge und Funktionen: Q #-Techniken'
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 06da09dc9c6e0ba0331db6bc0cd3d2ddeb287113
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1fca20bb44cc42008f7d25d2fc71a39b962525c2
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183453"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820775"
 ---
 # <a name="q-operations-and-functions"></a>F #-Vorgänge und-Funktionen
 
@@ -66,7 +66,7 @@ Wenn ein Vorgang eine einheitliche Transformation implementiert, ist es möglich
 Das vorhanden sein dieser Spezialisierungsmöglichkeiten kann als Teil der Vorgangs Signatur: `is Adj + Ctl` im folgenden Beispiel deklariert werden. Die entsprechende Implementierung für jede solche implizit deklarierte Spezialisierung wird dann vom Compiler generiert. 
 
 ```qsharp
-operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit {
+operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit
 is Adj + Ctl { // implies the existence of an adjoint, a controlled, and a controlled adjoint specialization
     H(here);
     CNOT(here, there);
@@ -111,7 +111,7 @@ is Ctl + Adj {
     controlled adjoint invert; 
 }
 ```
-Im obigen Beispiel gibt `adjoint invert;` an, dass die Adjoint-Spezialisierung durch Umkehren der Text Implementierung generiert werden soll, und `controlled adjoint invert;` gibt an, dass die kontrollierte Adjoint-Spezialisierung generiert werden soll, indem die angegebene Implementierung des kontrollierte Spezialisierung.
+Im obigen Beispiel gibt `adjoint invert;` an, dass die Adjoint-Spezialisierung generiert werden soll, indem Sie die Text Implementierung umkehren, und `controlled adjoint invert;` gibt an, dass die kontrollierte Adjoint-Spezialisierung generiert werden soll, indem Sie die angegebene Implementierung der kontrollierten Spezialisierung umkehren.
 
 Weitere Beispiele hierfür finden Sie in der [Ablauf Steuerung in höherer Reihenfolge](xref:microsoft.quantum.concepts.control-flow).
 
@@ -163,7 +163,7 @@ operation U(target : Qubit) : Unit {
 
 Jedes Mal, wenn `U` aufgerufen wird, wird eine andere Aktion auf `target`ausgeführt.
 Insbesondere kann der Compiler nicht garantieren, dass beim Hinzufügen einer `adjoint auto`-Spezialisierungs Deklaration zu `U`, `U(target); Adjoint U(target);` als Identität agiert (d. h. als No-OP).
-Dies verstößt gegen die Definition des Adjoint, das wir in [Vektoren und Matrizen](xref:microsoft.quantum.concepts.vectors)erkannt haben, sodass das automatische Generieren einer Adjoint-Spezialisierung in einem Vorgang möglich ist, bei dem der Vorgang aufgerufen wurde <xref:microsoft.quantum.math.randomreal> die vom Compiler bereitgestellten Garantien unterbrechen würde. ; <xref:microsoft.quantum.math.randomreal> ist ein Vorgang, für den keine Adjoint-oder kontrollierte Version vorhanden ist.
+Dies verstößt gegen die Definition des Adjoint, das wir in [Vektoren und Matrizen](xref:microsoft.quantum.concepts.vectors)erkannt haben, sodass das automatische Generieren einer Adjoint-Spezialisierung in einem Vorgang möglich ist, bei dem der Vorgang aufgerufen wurde <xref:microsoft.quantum.math.randomreal> die vom Compiler bereitgestellten Garantien unterbrechen würde. <xref:microsoft.quantum.math.randomreal> ist ein Vorgang, für den keine Adjoint-oder kontrollierte Version vorhanden ist.
 
 Das Zulassen von Funktionsaufrufen, wie z. b. `Square`, ist darin sicherzustellen, dass der Compiler sicher sein kann, dass nur die Eingabe für `Square` beibehalten werden muss, damit die Ausgabe stabil bleibt.
 Daher ist es einfach, diese Logik in anderen Funktionen und Vorgängen zu verwenden, damit Sie so viel Klassische Logik wie möglich in Functions isolieren kann.

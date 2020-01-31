@@ -3,17 +3,14 @@ uid: microsoft.quantum.amplitudeamplification.ampamprusbyoracle
 name: AmpAmpRUSByOracle
 type: operation
 namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: Modifizierungsalgorithmus mit fester Punkt Amplitude
-remarks: Startqubits muss sich im Status $ \ket{0\cdots 0} $ befinden. Dieser Vorgang durchläuft eine Reihe von Abfragen in den Befugnissen von $2 $, bis entweder eine maximale Anzahl von Abfragen erreicht oder der Ziel Status gefunden wird.
+summary: Ampamprusbyoracle ist veraltet. Verwenden Sie stattdessen @"microsoft.quantum.amplitudeamplification.applyfixedpointamplification".
 syntax: 'operation AmpAmpRUSByOracle (statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits : Qubit[]) : Unit'
 input:
   content: '(statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits : Qubit[])'
   types:
   - name: statePrepOracle
-    summary: Einheitliches Oracle, das den Startstatus vorbereitet.
     uid: microsoft.quantum.oracles.stateoracle
   - name: startQubits
-    summary: Qubit-Register
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -23,9 +20,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: a652d0fc94986552946a438a21bf9bfcba193eea
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a8b3c884b0d42a2c7d45cf42d4077cef486f7815
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215573"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870834"

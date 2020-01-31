@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: 332781a4356015461426ee7640fd931a41450367
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ca24ff60cd9ae5077c7f4bae0012fe1180d7e6d4
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184609"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821030"
 ---
 # <a name="using-the-numerics-library"></a>Verwenden der Numerics-Bibliothek
 
@@ -64,7 +64,7 @@ Für jeden der drei oben genannten Typen stehen eine Vielzahl von Vorgängen zur
     - Gegenseitige (1/x)
     - Messung (klassisches Double)
 
-Weitere Informationen und eine ausführliche Dokumentation zu den einzelnen Vorgängen finden Sie in der Referenz Dokumentation für die Q #-Bibliothek unter [docs.Microsoft.com](https://docs.microsoft.com/en-us/quantum) .
+Weitere Informationen und eine ausführliche Dokumentation zu den einzelnen Vorgängen finden Sie in der Referenz Dokumentation für die Q #-Bibliothek unter [docs.Microsoft.com](https://docs.microsoft.com/quantum) .
 
 ## <a name="sample-integer-addition"></a>Beispiel: Hinzufügen einer Ganzzahl
 
@@ -72,15 +72,14 @@ Als einfaches Beispiel angenommen, der Vorgang ist $ $ \ket x\ket y\mapsto \ket 
 
 Mit dem Quantum Development Kit kann dieser Vorgang wie folgt angewendet werden:
 ```qsharp
-operation MyAdditionTest (xInt : Int, yInt : Int, n : Int) : Unit
-{
+operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
     using ((xQubits, yQubits) = (Qubit[n], Qubit[n]))
     {
         x = LittleEndian(xQubits); // define bit order
         y = LittleEndian(yQubits);
         
-        ApplyXorInPlace(xInt, x); // initialize values
-        ApplyXorInPlace(yInt, y);
+        ApplyXorInPlace(xValue, x); // initialize values
+        ApplyXorInPlace(yValue, y);
         
         AddI(x, y); // perform addition x+y into y
         
@@ -95,18 +94,18 @@ Um Smooth-Funktionen wie $ \sin (x) $ auf einem Quantum-Computer auszuwerten, wo
 
 Der erste, `EvaluatePolynomialFxP`, ermöglicht das Auswerten eines Polynoms im Format $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $, wobei $d $ den *Grad*angibt. Dazu benötigen Sie lediglich die Polynomen `[a_0,..., a_d]` (vom Typ `Double[]`), die Eingabe `x : FixedPoint` und die Ausgabe `y : FixedPoint` (anfänglich NULL):
 ```qsharp
-EvaluatePolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```
 Das Ergebnis $P (x) = 1 + 2x $ wird in `yFxP`gespeichert.
 
-Die zweite, `EvaluateEvenPolynomialFxP`und die dritte `EvaluateOddPolynomialFxP`sind spezialisierungsfunktionen für die Fälle der geraden bzw. ungeraden Funktionen. Das heißt, bei einer geraden/ungeraden Funktion $f (x) $ und $ $ P_ {even} (x) = a_0 + A_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, $ $ $f (x) $ ist $P _ {even} (x) $ oder $P _ {Odd} (x): = x\cdot P_ {even} (x) $ angleichen. bzw.
+Die zweite, `EvaluateEvenPolynomialFxP`und die dritte `EvaluateOddPolynomialFxP`sind spezialisierungsfunktionen für die Fälle der geraden bzw. ungeraden Funktionen. Das heißt, bei einer geraden/ungeraden Funktion $f (x) $ und $ $ P_ {even} (x) = a_0 + A_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, $ $ $f (x) $ ist für $P _ {even} (x) $ oder $P _ {Odd} (x): = x\cdot P_ {even} (x) $ gleich gut.
 In f # können diese beiden Fälle wie folgt behandelt werden:
 ```qsharp
-EvaluateEvenPolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
 ```
 wertet $P _ {even} (x) = 1 + 2x ^ 2 $ aus, und
 ```qsharp
-EvaluateOddPolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluateOddPolynomialFxP([1.0, 2.0], x, y);
 ```
 , der $P _ {Odd} (x) = x + 2X ^ 3 $ auswertet.
 

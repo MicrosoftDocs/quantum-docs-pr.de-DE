@@ -6,14 +6,14 @@ uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: ef22460a5bca63ebaf32c0ba21984e103ec8ebdd
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 3e629e095bd2ee492496066710ef6fd4e578a543
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864388"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868967"
 ---
-# <a name="applications"></a>Applications (Anwendungen) #
+# <a name="applications"></a>Anwendungen #
 
 ## <a name="hamiltonian-simulation"></a>Hamilton-Simulation ##
 
@@ -69,15 +69,16 @@ Beispielsweise kann die Trotter-Suzuki-Zerlegung mithilfe der folgenden Funktion
 
 ```qsharp
 function TrotterSimulationAlgorithm(
-    trotterStepSize: Double, 
-    trotterOrder: Int) 
-    : SimulationAlgorithm {
+    trotterStepSize : Double, 
+    trotterOrder : Int) 
+: SimulationAlgorithm {
     ...
 }
+
 function TimeDependentTrotterSimulationAlgorithm(
-    trotterStepSize: Double, 
-    trotterOrder: Int) 
-    : TimeDependentSimulationAlgorithm {
+    trotterStepSize : Double, 
+    trotterOrder : Int) 
+: TimeDependentSimulationAlgorithm {
     ...
 }
 ```
@@ -99,11 +100,11 @@ Daher wird die bequeme Funktion definiert.
 
 ```qsharp
 function InterpolatedEvolution(
-        interpolationTime: Double, 
-        evolutionGeneratorStart: EvolutionGenerator,
-        evolutionGeneratorEnd: EvolutionGenerator,
-        timeDependentSimulationAlgorithm: TimeDependentSimulationAlgorithm)
-        : (Qubit[] => Unit is Adj + Ctl) {
+        interpolationTime : Double, 
+        evolutionGeneratorStart : EvolutionGenerator,
+        evolutionGeneratorEnd : EvolutionGenerator,
+        timeDependentSimulationAlgorithm : TimeDependentSimulationAlgorithm)
+: (Qubit[] => Unit is Adj + Ctl) {
         ...
 }
  
@@ -114,13 +115,13 @@ Dadurch wird ein einheitlicher Vorgang zurückgegeben, der alle Schritte der adi
 Außerdem wird ein hilfreicher Vorgang definiert, der automatisch alle Schritte eines typischen quantumchemie-Experiments ausführt. Zum Beispiel verfügen wir über Folgendes, das eine Energie Schätzung des von der Adiabatic-Zustands Vorbereitung erzeugten Zustands zurückgibt:
 
 ```qsharp
-operation AdiabaticStateEnergyEstimate( 
-    nQubits : Int, 
-    statePrepUnitary: (Qubit[] => Unit),
-    adiabaticUnitary: (Qubit[] => Unit),
+operation EstimateAdiabaticStateEnergy(
+    nQubits : Int,
+    statePrepUnitary : (Qubit[] => Unit),
+    adiabaticUnitary : (Qubit[] => Unit),
     qpeUnitary: (Qubit[] => Unit is Adj + Ctl),
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
-    : Double {
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
+: Double {
 ...
 }
 ```
@@ -174,7 +175,7 @@ Der gesteuerte $U _A $ Gate ordnet $ \ket{x} $ zu $ \ket{(AX) \text{mod} N} $ zu
 Um $ (a ^ NX) \text{mod} n $ zu erreichen, können wir einfach "gesteuerte-$U _ {a ^ n} $" anwenden, wobei wir $a ^ N \text{mod} n $ klassisch berechnen, um in die Quantum-Leitung zu gelangen.  
 Die Verbindungen, um eine solche Modulare Arithmetik zu erzielen, wurden in der [Dokumentation zur Quantum-Arithmetik](./algorithms.md#arithmetic)beschrieben. insbesondere benötigen wir eine modulare exponentiations Verbindung, um die kontrollierten $U\_{a ^ i} $-Vorgänge zu implementieren.
 
-Die obige Verbindung entspricht der [Quantum-Phasen-Schätzung](xref:microsoft.quantum.characterization.quantumphaseestimation) und ermöglicht das explizite Sortieren der Reihenfolge. die Anzahl der benötigten Qubits kann reduziert werden. Wir können die-Methode von Beauregard für die Bestellsuche befolgen, wie [auf Seite 8 von arXiv: quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)beschrieben, oder Sie können eine der Phasen Schätz Routinen verwenden, die in Microsoft. Quantum. Canon verfügbar sind. Beispielsweise wird bei der [robusten Phasen Schätzung](xref:microsoft.quantum.characterization.robustphaseestimation) auch ein zusätzliches Qubit verwendet.
+Die obige Verbindung entspricht der [Quantum-Phasen-Schätzung](xref:microsoft.quantum.characterization.quantumphaseestimation) und ermöglicht das explizite Sortieren der Reihenfolge. die Anzahl der benötigten Qubits kann reduziert werden. Wir können die-Methode von Beauregard für die Bestellsuche befolgen, wie [auf Seite 8 von arXiv: quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)beschrieben, oder Sie können eine der Phasen Schätz Routinen verwenden, die in Microsoft. Quantum. Charakterisierung verfügbar sind. Beispielsweise wird bei der [robusten Phasen Schätzung](xref:microsoft.quantum.characterization.robustphaseestimation) auch ein zusätzliches Qubit verwendet.
  
 ### <a name="factoring"></a>Berücksichtigung ###
 Das Ziel der Factoring besteht darin, die beiden Hauptfaktoren der ganzzahligen $N $ zu ermitteln, wobei $N $ eine $n $-Bit-Zahl ist.  
