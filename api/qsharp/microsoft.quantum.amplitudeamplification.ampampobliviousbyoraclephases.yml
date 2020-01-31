@@ -3,37 +3,24 @@ uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyoraclephases
 name: AmpAmpObliviousByOraclePhases
 type: function
 namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: Pervirone Amplitude-Verstärkung durch Oracles für partielle Reflektionen.
-remarks: >-
-  Dies erzwingt strengere Bedingungen in Form der Ausgangs-und Ziel Zustände von Ancilla als in `AmpAmpObliviousByReflectionPhases`.
-
-  Es wird davon ausgegangen, dass $A \ket{0}{0}\_"\_A = \ket{\text{Start}}\_{FA} $" den Ancilla-Startstatus $ \ket{\text{Start}}\_{FA} $ von der Berechnungsbasis $ \ket{0}\_{0}f \ket $ vorbereitet.
-
-  Es wird davon ausgegangen, dass der Ziel Status durch $ \ket{1}\_f $ gekennzeichnet ist.
-
-  Es wird davon ausgegangen, dass \begin{align} o\ket {\ Text {Start}}\_{FA} \ket{\psi}\_s = \lambda\ket{1}\_fi\ket {\ Text {Anything}}\_a\ket {\ Text {Target}}\_s U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_fi\cdots, \end{align} für einige einheitliche $U $.
-syntax: 'function AmpAmpObliviousByOraclePhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
+summary: Ampampobliviousbyoraclephasen ist veraltet. Verwenden Sie stattdessen @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation".
+syntax: 'function AmpAmpObliviousByOraclePhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
 input:
-  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int)'
+  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int)'
   types:
   - name: phases
-    summary: Phasen von partiellen Reflektionen
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
-  - name: ancillaOracle
-    summary: Einheitlicher Oracle-$A $, der den Startstatus von Ancilla vorbereitet
+  - name: startStateOracle
     uid: microsoft.quantum.oracles.deterministicstateoracle
   - name: signalOracle
-    summary: Einheitlicher Oracle-$O $ vom Typ "`ObliviousOracle`", der zusammen mit dem "Ancilla" und dem System Register agiert
     uid: microsoft.quantum.oracles.obliviousoracle
   - name: idxFlagQubit
-    summary: Index für Single-Qubit-Flag-Register
     isPrimitive: true
     uid: Int
 output:
   content: ((Qubit[], Qubit[]) => Unit is Adj + Ctl)
   types:
-  - summary: Ein Vorgang, der die pervirone Amplitude-Verstärkung basierend auf partiellen Reflektionen implementiert.
-    isOperation: true
+  - isOperation: true
     input:
       types:
       - isArray: true
@@ -50,9 +37,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: ff75e09bf106ccc351aa9c6fa1b6bc6ee776ffad
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: df38265acd68ac6cbad3168c95f6171cfb517464
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215760"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76869044"

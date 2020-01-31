@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.measurement.measureallz
+name: MeasureAllZ
+type: operation
+namespace: Microsoft.Quantum.Measurement
+summary: >-
+  Misst gemeinsam ein Register von Qubits in der Pauli Z-Basis.
+
+
+  Misst ein Register von Qubits im $Z \otimes z \otimes \cdots \otimes z $, das die Parität des gesamten Registers darstellt.
+syntax: 'operation MeasureAllZ (register : Qubit[]) : Result'
+input:
+  content: '(register : Qubit[])'
+  types:
+  - name: register
+    summary: Das zu messende Register.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: Das Ergebnis der Messung $Z \otimes z \otimes \cdots \otimes z $.
+    isPrimitive: true
+    uid: Result
+metadata:
+  ms.openlocfilehash: a893d5b42ad39fce0f2a0516d1a99c8f03a0b37e
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872341"

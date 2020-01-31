@@ -7,7 +7,7 @@ summary: >-
   Wendet die y-Basis-analog auf die Hadamard-Transformation an, die die Z-und Y-Achse interändert.
 
 
-  Die Y Hadamard-Transformation $H _y = S H $ für ein einzelnes Qubit ist:
+  Die Y Hadamard-Transformation $H _Y = S H $ für ein einzelnes Qubit ist:
 
 
   \begin{align} H_Y \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ i &-i \end{bmatrix}.
@@ -18,6 +18,7 @@ input:
   content: '(target : Qubit)'
   types:
   - name: target
+    summary: Das Qubit, auf das das Gate angewendet werden soll.
     isPrimitive: true
     uid: Qubit
 output:
@@ -29,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 2cbbbe29e3cef42ead1f85c01ffa15ce016e8402
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: db8d7ba2e357869e02679389c113e9dace840370
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227830"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871565"

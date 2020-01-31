@@ -4,10 +4,10 @@ name: AndLadder
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Führt in den Ziel-Qubits eine gesteuerte "and"-und-Leiter aus.
+  Führt eine gesteuerte "and-Leiter" für ein Register der Ziel-Qubits aus.
 
 
-  Dies wendet eine einheitliche von der folgenden Karte auf Berechnungsbasis Vektoren an: $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1 , \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}} , \end{align} $ $, wobei $ \ket{x\_1, \dots, x\_n} $ auf die Berechnungsbasis Zustände von `controls`verweist, und WHERE $ \ket{y\_1, \dots, y\_{n-1}} $ bezieht sich auf die Berechnungsbasis Zustände der `targets`.
+  Dieser Vorgang wendet eine Transformation an, die durch die folgende Zuordnung der Berechnungsbasis beschrieben wird: $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1, \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}} , \end{align} $ $, wobei $ \ket{x\_1, \dots, x\_n} $ auf die Berechnungsbasis Zustände von `controls`verweist, und WHERE $ \ket{y\_1, \dots, y\_{n-1}} $ bezieht sich auf die Berechnungsbasis Zustände der `targets`.
 remarks: >-
   - Wird als Teil von <xref:microsoft.quantum.canon.applymulticontrolledc> und <xref:microsoft.quantum.canon.applymulticontrolledca>verwendet.
 
@@ -43,9 +43,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: 2970f9c783ea233f2f1ceb4089802320efe82602
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: bf5b262ca55bea542218356918cf36eb95502967
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217715"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871038"

@@ -7,7 +7,9 @@ summary: >-
   Führt eine modulare Multiplikation durch eine ganzzahlige Konstante in einem Qubit-Register durch.
 
 
-  Wir geben den Modulo von N und constmultiplikator durch einen an. dieser Vorgang implementiert dann eine einheitliche, die von der folgenden Karte auf Berechnungsbasis definiert wird: | y ⟩ ↦ | a ⋅ y (mod N) ⟩, für alle y zwischen 0 und N-1.
+  Wir bezeichnen `modulus` durch $N $ und `constMultiplier` von $a $.
+
+  Durch diesen Vorgang wird ein einheitlicher Vorgang implementiert, der von der folgenden Karte auf der Berechnungsbasis definiert wird: $ $ \begin{align} \ket{y} \mapsto \ket{(a \cdot y) \operatschmue{mod} N} \end{align} $ $ für alle $y $ zwischen $0 $ und $N-$1.
 remarks: >-
   - Ein Leit Diagramm und eine Erläuterung finden Sie in Abbildung 7 auf [Seite 8 von arXiv: quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)
 
@@ -21,14 +23,14 @@ input:
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: Der Multiplikations Vorgang wird Modulo ausgeführt `modulus`
+    summary: Der Multiplikations Vorgang wird Modulo `modulus`ausgeführt.
     isPrimitive: true
     uid: Int
   - name: multiplier
     summary: >-
       Die Zahl, die mit einer Konstanten multipliziert wird.
 
-      Dies ist ein Array von Qubits, das eine ganze Zahl in Little-Endian-bitorder darstellt.
+      Dies ist ein Array von Qubits, das eine ganze Zahl im Little-Endian-Format codiert.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -39,9 +41,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 4a99aff903b22ad4edcd96f2a980bd65c740025f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 49d46d1dda5afaf4a35667ec98d24aeb51beba1f
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218752"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871378"

@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.applymajorityinplace
+name: ApplyMajorityInPlace
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Wendet den drei-Qubit-Mehrheits Vorgang direkt auf ein Register von Qubits an.
+
+
+  Mit diesem Vorgang wird die Mehrheits Funktion auf drei Qubits berechnet.
+
+
+  Wenn wir das Ausgabe-Qubit als $z $ und Eingabe-Qubits als $x $ und $y $ bezeichnen, führt der Vorgang die folgende Transformation aus: $ \ket{XYZ} \rightarrow \ket{x \oplus z} \ket{y \oplus z} \ket{\operatschmue{Maj} (x, y, z)} $.
+syntax: 'operation ApplyMajorityInPlace (output : Qubit, input : Qubit[]) : Unit'
+input:
+  content: '(output : Qubit, input : Qubit[])'
+  types:
+  - name: output
+    summary: Das erste Eingabe-Qubit. Beachten Sie, dass die Ausgabe direkt berechnet und in diesem Qubit gespeichert wird.
+    isPrimitive: true
+    uid: Qubit
+  - name: input
+    summary: Zweite und dritte Eingabe-Qubits.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: 3ebe5c3b9c1ac8b4b667d0b02e234ac2fa14bd7b
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872817"
