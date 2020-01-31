@@ -1,27 +1,27 @@
 ### YamlMime:Landing
-title: Microsoft Quantum-Dokumentation
-summary: Erfahren Sie, wie Sie das Microsoft Quantum Development Kit und Q#, eine Sprache für Quantenalgorithmen, verwenden. Lernen Sie wichtige Konzepte kennen, und schreiben Sie Ihr erstes Quantenprogramm.
+title: Microsoft Quantum Development Kit
+summary: Es wird beschrieben, wie Sie das Microsoft Quantum Development Kit und Q#, eine Sprache zum Programmieren von Quantenalgorithmen, verwenden.
 metadata:
-  title: 'Microsoft Quantum-Dokumentation: Q#-API-Referenz'
-  description: Hier erfahren Sie, wie Sie das Microsoft Quantum Development Kit und Q#, eine Sprache für Quantenprogrammierung, verwenden. Lernen Sie wichtige Konzepte kennen, und schreiben Sie Ihr erstes Quantenprogramm.  Erkunden Sie die umfangreichen Tools und Bibliotheken des QDK.
+  title: 'Microsoft Quantum Development Kit: Q#-API-Referenz'
+  description: Es wird beschrieben, wie Sie das Microsoft Quantum Development Kit und Q#, eine Sprache zum Programmieren von Quantenalgorithmen, verwenden. Lernen Sie wichtige Konzepte kennen, und schreiben Sie Ihr erstes Quantenprogramm.  Erkunden Sie die umfangreichen Tools und Bibliotheken des QDK.
   ms.prod: quantum
   ms.topic: landing-page
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
   ms.date: 10/21/2019
-  ms.openlocfilehash: f757c99b1f5b1a821c9c341c442e1080378949a8
-  ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+  ms.openlocfilehash: 53ee7b0a1ba7a83fb943f18afd27b5c699f848b2
+  ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/02/2019
-  ms.locfileid: "73442508"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76820724"
 landingContent:
 - title: Erste Schritte mit Microsoft Quantum
   linkLists:
   - linkListType: overview
     links:
-    - text: Fünf Fragen zu Quantencomputing
+    - text: Fünf Fragen zum Quantencomputing
       url: welcome.md
   - linkListType: get-started
     links:
@@ -44,9 +44,9 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: Python-Installation
-      url: install-guide/index.md#develop-with-python
+      url: install-guide/pyinstall.md
     - text: Jupyter-Installation
-      url: install-guide/index.md#develop-with-jupyter-notebooks
+      url: install-guide/qjupyter.md
   - linkListType: how-to-guide
     links:
     - text: Q#-Beispiele mit Python
@@ -60,9 +60,9 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: Installieren von Visual Studio
-      url: install-guide/index.md#develop-with-c-on-windows-using-visual-studio
+      url: install-guide/csinstall.md
     - text: Installieren von Visual Studio Code
-      url: install-guide/index.md#develop-with-c-using-visual-studio-code
+      url: install-guide/csinstall.md
 - title: Q#-Beispiele
   linkLists:
   - linkListType: how-to-guide

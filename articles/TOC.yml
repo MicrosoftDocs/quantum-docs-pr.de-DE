@@ -4,7 +4,7 @@
   items:
     - name: Erste Schritte
       href: welcome.md
-    - name: Fünf Fragen zu Quantencomputing
+    - name: Fünf Fragen zum Quantencomputing
       items:
         - name: Was ist Quantencomputing?
           href: overview/what-is-quantum-computing.md
@@ -14,7 +14,7 @@
           href: overview/why-learn-quantum-computing.md
         - name: 'Was ist Q#?'
           href: overview/what-is-qsharp.md
-        - name: Wie erlerne ich Quantencomputing?
+        - name: Wie erlerne ich das Quantencomputing?
           href: overview/how-to-learn-quantum-computing.md
     - name: Lernen mit den Quanten-Katas
       href: intro-to-katas.md
@@ -29,7 +29,15 @@
 - name: Anleitungen
   items:
     - name: Installieren des QDK
-      href: install-guide/index.md
+      items:
+        - name: Übersicht über die Installation
+          href: install-guide/index.md
+        - name: 'Q# + C#'
+          href: install-guide/csinstall.md
+        - name: 'Q# + Python'
+          href: install-guide/pyinstall.md
+        - name: 'Q# Jupyter Notebooks'
+          href: install-guide/qjupyter.md
     - name: Aktualisieren des QDK
       href: install-guide/update.md
     - name: 'Erstellen eines Q#-Projekts'
@@ -58,7 +66,7 @@
       topicHref: contributing/index.md
     - name: Glossar
       href: Glossary.md
-    - name: Weitere Informationen
+    - name: Weitere Informationen finden Sie unter
       href: for-more-info.md
     - name: Lizenz
       href: license.md
