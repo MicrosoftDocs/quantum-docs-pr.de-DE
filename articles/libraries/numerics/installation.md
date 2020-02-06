@@ -3,15 +3,15 @@ title: Installation und Validierung der Numerics-Bibliothek | Microsoft-Dokument
 description: Installation und Validierung der Numerics-Bibliothek
 author: thomashaener
 ms.author: thhaner
-ms.date: 5/14/2019
+ms.date: 05/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.installation
-ms.openlocfilehash: 8369a6f342ee8e6f56b69bd1f2ce3df40e4093aa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: c41bb73ea484271689eea2ca1b59ce6639dc15a7
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184626"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036456"
 ---
 # <a name="numerics-library-installation-and-validation"></a>Installation und Validierung der Numerics-Bibliothek
 
@@ -33,7 +33,7 @@ Weitere Informationen finden Sie im Leitfaden für die [Benutzeroberfläche des 
 
 Alternativ können Sie die Numerics-Bibliothek mithilfe der Paket-Manager-Konsole über die Befehlszeilenschnittstelle dem Projekt hinzufügen.
 
-![](~/media/vs2017-nuget-console-menu.png)
+![](../../media/vs2017-nuget-console-menu.png)
 
 Führen Sie in der Paket-Manager-Konsole Folgendes aus:
 
@@ -45,7 +45,7 @@ Weitere Informationen finden Sie im Handbuch für die [Paket-Manager-Konsole](ht
 
 **Befehlszeile oder Visual Studio Code:** Mithilfe der Befehlszeile eigenständig oder innerhalb Visual Studio Code können Sie den `dotnet`-Befehl verwenden, um dem Projekt einen nuget-Paket Verweis hinzuzufügen:
 
-```bash
+```dotnetcli
 dotnet add package Microsoft.Quantum.Numerics
 ```
 
@@ -55,10 +55,10 @@ dotnet add package Microsoft.Quantum.Numerics
 Wie das restliche Quantum Development Kit enthält die Numerics-Bibliothek Beispiele, mit deren Hilfe Sie so schnell wie möglich loslegen können.
 Zum Testen Ihrer Installation mithilfe dieser Beispiele Klonen Sie das [hauptbeispielrepository](https://github.com/Microsoft/Quantum) , und führen Sie dann eines der Beispiele aus.
 
-So führen Sie das [`CustomModAdd`](https://github.com/microsoft/Quantum/tree/master/Numerics/CustomModAdd) Beispiel aus:
+So führen Sie das [`CustomModAdd`](https://github.com/microsoft/Quantum/tree/master/samples/numerics/CustomModAdd) Beispiel aus:
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Numerics/CustomModAdd
+cd Quantum/samples/numerics/CustomModAdd
 dotnet run
 ```

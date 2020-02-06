@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9157cf3336ce0894816dbfbaf13ce0e712a6b096
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 9a6f5d53ec21090d0c13f4369e0270d264cd1e9b
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821064"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036490"
 ---
 # <a name="statements-and-other-constructs"></a>Anweisungen und andere Konstrukte
 
@@ -191,7 +191,7 @@ Eine ähnliche Verkettung ist für Kopier-und Update Ausdrücke auf der rechten 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function ElementwisePlus(reals : Double[], ims : Double[]) : Complex[] {
+function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {
@@ -273,7 +273,7 @@ let n = 8;
 ...                 // n is 8
 ```
 
-und der
+and
 
 ```qsharp
 if (a == b) {

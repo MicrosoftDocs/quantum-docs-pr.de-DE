@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 91f65b05c83367c2d2ece93212369dc448d8c2a8
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 1c45808207a2020f603448eba05900cdc40b4916
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821013"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036354"
 ---
 # <a name="quantum-algorithms"></a>Quantum-Algorithmen #
 
@@ -48,7 +48,8 @@ Darüber hinaus überschreitet die Effizienz von *Quantum Fourier Transform* (QF
 
 Als ungefähre Generalisierung der QFT stellen wir den <xref:microsoft.quantum.canon.approximateqft> Vorgang bereit, der weitere Optimierungen ermöglicht, indem Rotationen bereinigt werden, die für die gewünschte algorithmische Genauigkeit nicht unbedingt notwendig sind.
 Der ungefähre QFT erfordert, dass der dyadic-$Z $-Rotation-Vorgang <xref:microsoft.quantum.intrinsic.rfrac> sowie der <xref:microsoft.quantum.intrinsic.h> Vorgang ist.
-Es wird davon ausgegangen, dass die Eingabe und die Ausgabe in der Big-Endian-Codierung codiert werden (das niedrigste Bit/Qubit befindet sich auf der linken Seite und die [Ket-Notation](xref:microsoft.quantum.concepts.dirac))
+Es wird davon ausgegangen, dass die Eingabe und die Ausgabe in Big Endian-Codierung codiert werden---d. h., das Qubit mit Index `0` wird im äußersten äußersten (höchsten) Bit der binären ganzzahligen Darstellung codiert.
+Dies richtet sich nach der [Ket-Notation](xref:microsoft.quantum.concepts.dirac)als Register von drei Qubits im Status $ \ket{100}$ entspricht $q _0 $ im Status $ \ket{1}$, während $q _1 $ und $q _2 $ beide den Status $ \ket{0}$ aufweisen.
 Der Näherungs Parameter $a $ bestimmt die Bereinigungs Ebene der $Z $-Drehungen, d. h. $a \in [0.. n] $.
 In diesem Fall werden alle $Z $-Drehungen $2 \ Pi/2 ^ k $, wobei $k > a $ aus der QFT-Leitung entfernt werden.
 Es ist bekannt, dass für $k \ge \ Log_2 (n) + \ Log_2 (1/\epsilon) + $3. eine Bindung kann $\\| \operatschmue{QFT}-\operatschmue{aqft} \\| < \epsilon $.
@@ -56,7 +57,7 @@ Hier ist $\\| \cdot\\| $ der Operator Norm, bei der es sich in diesem Fall um di
 
 ## <a name="arithmetic"></a>Arithmetik ##
 
-Ebenso wie Arithmetik bei klassischem Computing eine zentrale Rolle spielt, ist Sie auch bei der Quantenberechnung nicht möglich.  Algorithmen, wie z. b. der factoringalgorithmus von Shor, Quantum-Simulationsmethoden und viele für die Organisation basierende Algorithmen basieren auf zusammenhängenden arithmetischen Operationen.  Die meisten Ansätze für die arithmetische Erstellung bei quantadder-Leitungen.  Der einfachste Adder nimmt eine klassische Eingabe $b $ und fügt den Wert einem Quantum-Zustand mit einer Ganzzahl von $ \ket{a} $ hinzu.  Mathematisch hat der Adler (der $ \operatschmue{Add} (b) $ für die klassische Eingabe $b $) die Eigenschaft
+Ebenso wie Arithmetik beim klassischen Computing eine zentrale Rolle spielt, ist Sie auch bei der Quantenberechnung unverzichtbar.  Algorithmen, wie z. b. der factoringalgorithmus von Shor, Quantum-Simulationsmethoden und viele für die Organisation basierende Algorithmen basieren auf zusammenhängenden arithmetischen Operationen.  Die meisten Ansätze für die arithmetische Erstellung bei quantadder-Leitungen.  Der einfachste Adder nimmt eine klassische Eingabe $b $ und fügt den Wert einem Quantum-Zustand mit einer Ganzzahl von $ \ket{a} $ hinzu.  Mathematisch hat der Adler (der $ \operatschmue{Add} (b) $ für die klassische Eingabe $b $) die Eigenschaft
 
 $ $ \operatschmue{Add} (b) \ket{a} = \ket{a + b}.
 $ $ Diese einfache Adder-Leitung ist eher inkrementierter als ein Adder.

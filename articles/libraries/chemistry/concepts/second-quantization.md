@@ -6,24 +6,24 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.secondquantization
-ms.openlocfilehash: b3cc7eb8139d2df6e02de371ccf7a423e58ea76d
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 4b7b5a6be6d0c1f3520128609e6b9fa83e5460d5
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210410"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036422"
 ---
 # <a name="second-quantization"></a>Zweite Quantifizierung
 
 Die zweite Quantifizierung untersucht das Problem der elektronischen Struktur durch einen anderen.
-Anstatt jeden der $N _E $-Elektronen einem bestimmten Zustand (oder einer beliebigen Orbital) zuzuweisen, verfolgt die zweite Quantifizierung jede Zwischenspeicherung nach und speichert, ob ein Elektron vorhanden ist, und stellt gleichzeitig automatisch die symmetrischen Eigenschaften der entsprechende Wave-Funktion.
+Anstatt jede der $N _E $-Elektronen einem bestimmten Zustand (oder einer beliebigen Orbital) zuzuweisen, verfolgt die zweite Quantifizierung jede Zwischenspeicherung nach und speichert, ob ein Elektron vorhanden ist. gleichzeitig werden die symmetrischen Eigenschaften von automatisch sichergestellt. entsprechende Wave-Funktion.
 Dies ist wichtig, da die Verwendung von Quantum-Chemie Modellen möglich ist, ohne sich Gedanken über die antisymmetrierung des Eingabe Zustands machen zu müssen (wie für Fermions erforderlich), und auch weil die zweite Quantifizierung das simulieren solcher Modelle mithilfe von Small Quantum ermöglicht. Computer.
 
-Als Beispiel für die zweite Quantifizierung in Aktion gehen wir davon aus, dass $ \psi_0\cdots \psi_{N-1} $ ein orthonormale Satz räumlicher Orbit ist.
+Als Beispiel für die zweite Quantifizierung in Aktion gehen wir davon aus, dass $ \ psi_0 \cdots \ psi_ {N-1} $ ein orthonormale Satz räumlicher Orbit ist.
 Diese Orbitals stellen fest, dass das System so genau wie möglich innerhalb des festgelegten begrenzten Basis Satzes dargestellt wird.
 Ein gängiges Beispiel für solche Orbitals sind atomarische Orbitals, die eine eigenständige Basis für das Atom-Atom bilden.
 Da mit zwei Dreh Zuständen zwei Elektronen vorhanden sind, können zwei Elektronen in jeder solchen räumlichen zwischen Raum angezeigt werden.
-Das heißt, gültige Basiszustände sind das Format "$ \psi_{0", "\ubirow}", "\ldots", "\psi_{N-1", "\ubirow}", "\psi_{0", "downarrow}", "\ldots, \psi_{N-1, \downarrow} $", wobei "$ \ubirow $" und "$ \downpfeil $" Freiheit.
+Das heißt, die gültigen Basiszustände haben das Format $ \ psi_ {0, \ubirow}, \ldots, \ psi_ {N-1, \uparamerow}, \ psi_ {0, \downarrow}, \ldots, \ psi_ {N-1, \downarrow} $ WHERE $ \ubirow $ und $ \downpfeil $ sind Bezeichnungen, die die beiden eigen Zustände des Drehungs Grades angeben. Freiheit.
 Dieser kombinierte Index von $ (j, \sigma) $ für $ \sigma \in \{\ubirow, \downpfeil\}$ wird als Spin-Orbital bezeichnet, da sowohl der räumliche als auch der Dreh Freiheitsgrad gespeichert werden.
 In der Chemie Bibliothek werden Spin-Orbitals in einer `SpinOrbital` Datenstruktur gespeichert und wie folgt erstellt.
 
@@ -49,7 +49,7 @@ In der Chemie Bibliothek werden Spin-Orbitals in einer `SpinOrbital` Datenstrukt
     SpinOrbital spinOrbital1 = tuple;
 ```
 
-Dies bedeutet, dass wir formal die Basis für die Drehung und den räumlichen Teil der Wave-Funktion als $ \psi_{0} \cdots \psi_{2n-1} $ vorstellen können, wobei jeder der Indizes jetzt eine Enumeration von $ (j, \sigma) $ ist.
+Dies bedeutet, dass wir formal die Basis für die Drehung und den räumlichen Teil der Wave-Funktion als $ \ psi_{0} \cdots \ psi_ {2n-1} $ vorstellen können, wobei jeder der Indizes jetzt eine Enumeration von $ (j, \sigma) $ ist.
 Eine mögliche Enumeration ist $g (j, \sigma) = j + n\sigma ' $.
 Eine weitere mögliche Enumeration ist $h (j, \sigma) = 2 * j + \sigma $.
 Die Quantum-Chemie Bibliothek kann diese Konventionen verwenden, und die Spin-Orbitals in einer solchen Codierung können wie folgt instanziiert werden.
@@ -74,8 +74,8 @@ Die Quantum-Chemie Bibliothek kann diese Konventionen verwenden, und die Spin-Or
 ```
 
 Bei fermionic Systems verhindert das Ausschlussprinzip von Pauli, dass mehrere Elektronen gleichzeitig in einer beliebigen Spin-Orbital vorhanden sind.
-Dies bedeutet, dass wir die zwei rechtlichen Zustände für $ \psi_1 $ wie folgt schreiben können: \begin{Equation} \psi_1 \rightarrow \begin{Cases} \ket{0}_1 & \text{if $ \psi_1 $ ist nicht belegt,} \\\
-\ket{1}_1 & \text{if $ \psi_1 $ ist belegt.} \end{Cases} \end{Equation} diese Codierung eignet sich hervorragend für Quantum-Computer, da dies bedeutet, dass wir den elektronischen Beruf als einzelnes Quantum-Bit speichern können.
+Dies bedeutet, dass Sie die beiden rechtlichen Zustände für $ \ psi_1 $ wie folgt schreiben können: \begin{Equation} \ psi_1 \rightarrow \begin{Cases} \ket{0}_1 & \text{if $ \ psi_1 $ ist nicht belegt,} \\\
+\ket{1}_1 & \text{if $ \ psi_1 $ ist belegt.} \end{Cases} \end{Equation} diese Codierung eignet sich hervorragend für Quantum-Computer, da dies bedeutet, dass wir den elektronischen Beruf als einzelnes Quantum-Bit speichern können.
 
 Die Berufs Zustände für die $2N $ Spin-Orbitals können auf ähnliche Weise in $2N $ Qubits gespeichert werden.
 Beispiel: Wenn $N = $2, dann lautet der Status $ $ \ket{0} \ket{1} \ket{1} \ket{0}, $ $
@@ -92,10 +92,10 @@ Der Grund hierfür ist, dass die Antisymmetrie des Zustands selbst durch die Ant
 
 Die beiden grundlegenden Operatoren, die auf die zweiten quantifizierten Basis-Vektoren reagieren, werden als Erstellungs-und Vernichtungs Operatoren bezeichnet.
 Diese Operatoren fügen Elektronen an einer bestimmten Position ein oder zerstören diese.
-Diese werden $a ^ \dagger_j $ und $a _J $ bezeichnet.
+Diese werden $a ^ \ dagger_j $ und $a _J $ bezeichnet.
 
-Beispiel: \begin{align} a ^ \dagger_1 \ket{0}_1 = \ket{1}_1, \quad a ^ \dagger_1 \ket{1}_1 = 0, \quad A_1 \ket{0}_1 = 0, \quad A_1 \ket{1}_1 = \ket{0}_1.
-\end{align} beachten Sie, dass hier $a ^ \dagger_1 \ket{1}_1 = 0 $ und $a _1 \ket{0}_1 $ den NULL-Vektor nicht $ \ket{0}_1 $ ergibt.
+Beispiel: \begin{align} a ^ \ dagger_1 \ket{0}_1 = \ket{1}_1, \quad a ^ \ dagger_1 \ket{1}_1 = 0, \quad A_1 \ket{0}_1 = 0, \quad A_1 \ket{1}_1 = \ket{0}_1.
+\end{align} beachten Sie, dass hier $a ^ \ dagger_1 \ket{1}_1 = 0 $ und $a _1 \ket{0}_1 $ den NULL-Vektor nicht $ \ket{0}_1 $ ergibt.
 Diese Operatoren sind daher weder hermitian noch einheitlich.
 Wir stellen allgemeine Erstellungs-und Vernichtungs Operatoren mithilfe des <xref:Microsoft.Quantum.Chemistry.LadderOperators.LadderOperator`1> Typs dar.
 Beispielsweise wird ein einzelner Erstellungs Operator wie folgt dargestellt.
@@ -123,7 +123,7 @@ Beispielsweise wird ein einzelner Erstellungs Operator wie folgt dargestellt.
     var ladderOperator1 = new LadderOperator<int>((creationEnum, spinOrbitalInteger));
 ```
 
-Mit diesen Operatoren können wir auch $ $ \ket{0} \ket{1} \ket{1} \ket{0} = a ^ \dagger_1 a ^ \dagger_2 \ket{0}^ {\otimes 4} Ausdrücken.
+Mit diesen Operatoren können wir auch $ $ \ket{0} \ket{1} \ket{1} \ket{0} = a ^ \ dagger_1 a ^ \ dagger_2 \ket{0}^ {\otimes 4} Ausdrücken.
 $ $ Diese Sequenz von Operatoren wird in der hamiltona-Simulations Bibliothek mithilfe C# von Code erstellt, der mit dem Single-Spin-Orbital Fall vergleichbar ist, der oben weiter oben behandelt wird:
 ```csharp
     // We load the namespace containing fermion-related objects.
@@ -144,16 +144,16 @@ $ $ Diese Sequenz von Operatoren wird in der hamiltona-Simulations Bibliothek mi
     var fermionTerm = new FermionTerm(ladderSequences);
 ```
 
-Bei einem System von $k $ Fermions wird in der zweiten Quantisierung die Aktion des Erstellungs Operators $a ^ \dagger_i $ durch $ $ a ^ \dagger_i \ket{n_1, n_2, \ldots, 0_i, \ldots, n_k} = (-1) ^ {S_i} \ket{n_1, n_2, \ldots, 1_I , \ldots, n_k}, $ $ und $ $ a ^ \dagger_i \ket{n_1, n_2, \ldots, 1_I, \ldots, n_k} = 0, $ $ WHERE $S _I = \sum_{j < i} a ^ \dagger_j a_j $ misst die Gesamtzahl der Fermions im Zustand eines einzelnen Partikels, die über einen Index $j < i $ verfügen.
+Bei einem System von $k $ Fermions wird in der zweiten Quantisierung die Aktion des Erstellungs Operators $a ^ \ dagger_i $ durch $ $ a ^ \ dagger_i \ket{n_1, n_2, \ldots, 0_i, \ldots, n_k} = (-1) ^ {S_i} \ket{n_1, n_2, \ldots, 1_I , \ldots, n_k} $ $ und $ $ a ^ \ dagger_i \ket{n_1, n_2, \ldots, 1_I, \ldots, n_k} = 0, $ $ WHERE $S _I sum_ = \ < {j dagger_j i} a ^ \ a_j $j $ misst die Gesamtzahl der Fermions, die den Zustand eines einzelnen Partikels aufweisen und über einen Index < i $ verfügen.
 
 Ein Dritter Operator wird häufig auch in zweiten quantifizierten Darstellungen verwendet.
-Dieser Operator wird als Zahlen Operator bezeichnet und durch \begin{Equation} n_i = a ^ \dagger_i a_i definiert.
-\end{Equation} dieser Operator zählt die Besetzung eines bestimmten Drehfelds, d. h. "\begin{align} n_i \ket{0}_I & = 0 \ nicht Umlauf\\\
+Dieser Operator wird als Zahlen Operator bezeichnet und durch \begin{Equation} n_i = a ^ \ dagger_i a_i definiert.
+\end{Equation} dieser Operator zählt die Besetzung eines bestimmten Drehfelds, d. h. "\begin{align} n_i \ket{0}_I & = 0 \ nonneuber\\\
 n_i \ket{1}_I & = \ket{1}_i.
 \end{align} ähnlich wie in den obigen `FermionTerm` Beispielen, wird dieser Zahlen Operator wie folgt konstruiert.
 ```csharp
     // Let us use a new method to compactly create a sequence of ladder
-    // operators. Note that we have ommitted specifying whether the 
+    // operators. Note that we have omitted specifying whether the 
     // operators are raising or lowering. In this case, the first half
     // will be raising operators, and the second half will be lowering 
     // operators.
@@ -166,8 +166,8 @@ n_i \ket{1}_I & = \ket{1}_i.
 
 Bei der Verwendung von Erstellungs-oder Vernichtungs Operatoren in fermionic-Systemen tritt jedoch eine Feinheit auf.
 Wir verlangen, dass ein beliebiger gültiger Quantum-Zustand unter dem Austausch von Bezeichnungen antisymmetrisch ist.
-Dies bedeutet, dass $ $ a ^ \dagger_2 a ^ \dagger_1 \ket{0} =-a ^ \dagger_1 a ^ \dagger_2 \ket{0}.
-$ $ Solche Operatoren werden als "Anti-pendeln" bezeichnet und im Allgemeinen für alle $i. j $ wir haben diese \begin{align} a ^ \dagger_i a ^ \dagger_j =-(1-\delta_{i, j}) a ^ \dagger_j a ^ \dagger_i, \quad a ^ \dagger_i a_j = \delta_{i, j}-a_j a ^ \dagger_i.
+Dies bedeutet, dass $ $ a ^ \ dagger_2 a ^ \ dagger_1 \ket{0} =-a ^ \ dagger_1 a ^ \ dagger_2 \ket{0}.
+$ $ Solche Operatoren werden als "Anti-pendeln" und im Allgemeinen für alle $i bezeichnet. j $ wir haben diese \begin{align} a ^ \ dagger_i a ^ \ dagger_j =-(1-\ delta_ {i, j}) a ^ \ dagger_j a ^ \ dagger_i, \quad a ^ \ dagger_i a_j = \ delta_ {i, j}-a_j a ^ \ dagger_i.
 \end{align} die beiden folgenden <xref:Microsoft.Quantum.Chemistry.LadderOperators.LadderSequence`1> Instanzen werden als nicht äquivalent betrachtet.
 ```csharp
     // Let us initialize an array of tuples representing the
@@ -187,7 +187,7 @@ Durch die Verwendung einer zweiten quantifizierten Darstellung werden die Anford
 Stattdessen wird die Herausforderung in unserer Definition der Erstellungs Operatoren wieder auftauchen. 
 
 Bei Verwendung der Anti--komtypregeln entsprechen einige `LadderSequence` Instanzen tatsächlich derselben Sequenz von fermionic-Operatoren, manchmal bis zu einem Minuszeichen.
-Sehen Sie sich beispielsweise den hamiltonan $a _0 ^ \dagger A_1 ^ \dagger A_1 a_0 =-A_1 ^ \dagger a_0 ^ \dagger A_1 a_0 $ an.
+Sehen Sie sich beispielsweise den hamiltonan $a _0 ^ \dagger A_1 ^ \dagger A_1 a_0 =-A_1 ^ \dagger a_0 ^ \dagger A_1 a_0 $.
 Dies motiviert uns, eine kanonische Reihenfolge für jede `FermionTerm`zu definieren.
 Alle `FermionTerm` werden wie folgt automatisch in kanonischer Reihenfolge eingefügt.
 ```csharp
@@ -213,23 +213,23 @@ Alle `FermionTerm` werden wie folgt automatisch in kanonischer Reihenfolge einge
 Vielleicht ist es nicht verwunderlich, dass die hamiltonan in [Quantum-Modellen für elektronische Systeme](xref:microsoft.quantum.chemistry.concepts.quantummodels) in Form von Erstellungs-und Vernichtungs Operatoren geschrieben werden kann.
 Insbesondere, wenn "$ \psi\_j $" die Dreh-und Ausgangs Typen sind, die die Grundlage bilden,
 
-\begin{Equation} \hat{h} = \sum\_{PQ} h\_{PQ} a ^ \dagger\_p a\_q + \frac{1}{2}\sum\_{pqrs} h\_{pqrs} a ^ \dagger\_p a ^ \dagger\_q a\_RA\_s + h\_{\textrm NUC}, \label{EQ: totalham} \end{Equation}, wobei $h\_{\textrm NUC} $ die atomare Strom Energie (eine Konstante unter der "Born-Oppenheimer Näherung") und
+\begin{Equation} \hat{h} = \sum\_{PQ} H\_{PQ} a ^ \dagger\_p a\_q + \frac{1}{2}\sum\_{pqrs} H\_{pqrs} a ^ \dagger\_p a ^ \dagger\_q a\_RA\_s + H\_{\textrm NUC}, \label{EQ: totalham} \end{Equation}, wobei $h\_{\textrm NUC} $ die atomare Strom Energie (eine Konstante unter der "Born-Oppenheimer"-Näherung) und
 
-\begin{align} h\_{PQ} & = \int\_{-\infty} ^ \infty \psi ^\*\_p (x\_1) \left (-\bruchteil {\nabla ^ 2}{2} + V (x\_1) \right) \psi\_q (x\_1) \mathrm{d} ^ 3X @no__ t_9_ 1, \end{align}
+\begin{align} h\_{PQ} & = \int\_{-\infty} ^ \infty \psi ^\*\_p (x\_1) \left (-\bruchteil {\nabla ^ 2}{2} + V (x\_1) \right) \psi\_q (x\_1) \mathrm{d} ^ 3X\_1, \end{align}
 
 Dabei ist $V (x) $ das Mittelfeld Potenzial und
 
-\begin{align} h\_{pqrs} & = \int\_{-\infty} ^ \infty \int\_{-\infty} ^ \infty\psi\_p ^\*(x\_1) \psi\_q ^\*(x\_2) \left (\frac{1}{| x_1-x_2 |} \ Right) \psi\_r (x\_2) \psi\_s (x\_1) \mathrm{d} ^ 3X\_1 \ mathrm {d} ^ 3X\_2. \ Bezeichnung {EQ: Integrals} \end{align}
+\begin{align} h\_{pqrs} & = \int\_{-\infty} ^ \infty \int\_{-\infty} ^ \infty\psi\_p ^\*(x\_1) \psi\_q ^\*(x\_2) \left (\frac{1}{| x_1-x_2 |} \right) \psi\_r (x\_2) \psi\_s (x\_1) \mathrm{d} ^ 3X\_1 \ mathrm {d} ^ 3X\_2. \ Bezeichnung {EQ : Integrals} \end{align}
 
-Die Begriffe $h\_{PQ} $ werden als One-Electron-inteder refereniert, da nur einzelne Elektronen und $h\_{pqrs} $ die zwei-Elektronen-integleich sind.
+Die Begriffe $h\_{PQ} $ werden als One-Electron-integrale bezeichnet, da nur einzelne Elektronen und $h\_{pqrs} $ die zwei-Elektronen-integleich sind.
 Sie werden als integrale bezeichnet, da das Berechnen der Werte dieser Koeffizienten einen integralen Wert erfordert.
 Die einzelnen Elektronen Begriffe beschreiben die kinetische Energie der einzelnen Elektronen und ihre Interaktionen mit den elektrischen Feldern der Kerne.
 Die zwei-Elektronen-inteder auf der anderen Seite beschreiben die Interaktionen zwischen den Elektronen.
 
 Eine Intuition für das, was diese Begriffe bedeuten, kann von den Erstellungs-und Vernichtungs Operatoren abgeleitet werden, die die einzelnen Komponenten bilden.
-$H _ {PQ} a ^ \dagger_p a_q $ beschreibt z. b. das aus Spin-Orbital $q $ zum Drehen von Orbital $p $ zu drehende Elektron.
-Ebenso beschreibt der Begriff "$h _ {pqrs} a ^ \dagger_p a ^ \dagger_q a_r a_s $ (für eindeutige $p, q, r, s $)" zwei Elektronen in $r Drehungs-und $s $-Gliederung und endet in Drehungs-Orbitals $p $ und $q $.
-Wenn $r = q $ und $p = s $, gibt $h _ {prrp} a ^ \dagger_p a ^ \dagger_r a_r a_p = H_ {prrp} n_p n_r $ den Energie Nachteil aus, der mit den beiden jeweils naheliegenden Elektronen verbunden ist, aber keinen dynamischen Prozess beschreibt.
+Beispielsweise beschreibt $h _ {PQ} a ^ \ dagger_p a_q $ den aus Spin-Orbital $q $ zum Spin-Orbital $p $.
+Ebenso beschreibt der Begriff $h _ {pqrs} a ^ \ dagger_p a ^ \ dagger_q a_r a_s $ (für unterschiedliche $p, q, r, s $) zwei Elektronen in Drehungs-und $r $-und-$s $-Gliederung voneinander und endet in Drehungs-Orbitals $p $ und $q $.
+Wenn $r = q $ und $p = s $, gibt $h _ {prrp} a ^ \ dagger_p a ^ \ dagger_r a_r a_p = H_ {prrp} n_p n_r $ den Energieverlust aus, der den beiden einander naheliegenden Elektronen zugeordnet ist, aber keinen dynamischen Prozess beschreibt.
 
 Mit der `FermionHamiltonian`-Klasse, die im Wesentlichen eine Liste mit allen gewünschten `FermionTerm`-Instanzen ist, können wir solche hamiltonoren darstellen.
 Da hamiltonane in der Definition "hermitian" sind, indizieren wir Begriffe mithilfe des spezielleren Typs `HermitianFermionTerm`, der auch die hermitian Symmetrie verwendet, wenn überprüft wird, ob Begriffe äquivalent sind.
@@ -273,7 +273,7 @@ Der folgende Code Ausschnitt stellt daher auch dieselbe hamiltonan dar:
 ```
 
 Bei der Verwendung der Anti--komtypregeln entsprechen einige `FermionTerm` Instanzen in der hamiltona tatsächlich derselben Sequenz von fermionic-Operatoren, manchmal bis zu einem Minuszeichen.
-Sehen Sie sich beispielsweise den hamiltonan $H = a_0 ^ \dagger A_1 ^ \dagger A_1 a_0-A_1 ^ \dagger a_0 ^ \dagger A_1 a_0 = 2a_0 ^ \dagger A_1 ^ \dagger A_1 a_0 $ an, der eine Summe der oben erstellten Begriffe ist.
+Nehmen Sie zum Beispiel den hamiltonan $H = a_0 ^ \dagger A_1 ^ \dagger A_1 a_0-A_1 ^ \dagger a_0 ^ \dagger A_1 a_0 = 2a_0 ^ \dagger A_1 ^ \dagger A_1 a_0 $. Dies ist eine Summe der oben erstellten Begriffe.
 Es ist für den Benutzer möglicherweise nicht immer klar, dass es sich um äquivalente Begriffe handelt, und daher können Sie der hamiltona separat hinzugefügt werden.
 Alternativ kann eine Änderung bereits vorhandener Begriffe in der hamiltonan sinnvoll sein.
 In diesen Fällen können wir äquivalente Begriffe wie folgt kombinieren.
@@ -301,15 +301,15 @@ Später wird dadurch die Anzahl der zum Simulieren der hamiltonan erforderlichen
 
 Eine fermionic-hamiltonan mit ein-und zwei-Text-Interaktionen wird in der zweiten quantifizierten Notation als dargestellt.
 
-$ $ \begin{align} h = \sum\_{PQ} h\_{PQ} a ^ \dagger\_{p} a\_{q} + \frac{1}{2}\sum\_{pqrs} h\_{pqrs} a ^ \dagger\_{p} a ^ \dagger\_{q} a @no__ t_10_ {r} a\_{s}.
+$ $ \begin{align} h = \sum\_{PQ} h\_{PQ} a ^ \dagger\_{p} a\_{q} + \frac{1}{2}\ Summe\_{pqrs} H\_{pqrs} a ^ \dagger\_{p} a ^ \dagger\_{q} a\_{r} a\_{s}.
 \end{align} $ $
 
 In dieser Notation sind höchstens $N ^ 2 + N ^ 4 $ Koeffizienten vorhanden.
 Viele dieser Koeffizienten können jedoch gesammelt werden, da Sie demselben Operator entsprechen.
-Beispielsweise wenn $p, q, r, s $ unterschiedliche Indizes darstellen, können wir mithilfe der Anti--typzuordnungs Regeln Folgendes anzeigen: $ $ a ^ \dagger\_{p} a ^ \dagger\_{q} a\_{r} a\_{s} =-a ^ \dagger\_{q} a ^ \dagger\_{ p} a\_{r} a\_{s} =-a ^ \dagger\_{p} a ^ \dagger\_{q} a\_{s} a\_{r} = a ^ \dagger\_{q} a ^ \dagger\_{p} a\_{s} a\_{r}.
+Beispielsweise in dem Fall, in dem $p, q, r, bei s $ handelt es sich um unterschiedliche Indizes. Wir können die antikomoringregeln verwenden, um Folgendes anzuzeigen: $ $ a ^ \dagger\_{p} a ^ \dagger\_{q} a\_{r} a\_{s} =-a ^ \dagger\_{q} a ^ \dagger\_{p} a\_{r} a\_{s} =-a ^ \dagger\_{p} a ^ \dagger\_{q} a\_{s} a\_{r} = a ^ \dagger\_{q} a ^ \dagger\_{p} a\_{s} a\_{r}.
 $$
 
-Ebenso wie $H $ "hermitian" ist jeder nicht-hermitian fermionic-Operator, z. b. $h\_{pqrs} a ^ \dagger\_{p} a ^ \dagger\_{q} a\_{r} a\_{s} $, ein hermitian-Konjugate, das auch in $H $ gefunden wird Um Gruppen von Begriffen eindeutig zu indizieren, die durch diese Symmetries gekennzeichnet sind, definieren wir eine kanonische Sortierung für die Indizes $ (i\_1, \cdots, i\_n, j\_1, \cdots, j\_m) $ einer beliebigen Sequenz von $n + m $ fermionic Operators $a ^ \dagger\_{i\_1} \cdots a ^ \dagger\_{i\_n} a\_{j\_1} \cdots a\_{j\_m} $As folgt:
+Ebenso wie $H $ "hermitian" ist jeder nicht-hermitian fermionic-Operator, z. b. $h\_{pqrs} a ^ \dagger\_{p} a ^ \dagger\_{q} a\_{r} a\_{s} $, ein hermitian-Konjugate, das auch in $H $ gefunden wird Um Gruppen von Begriffen eindeutig zu indizieren, die durch diese Symmetries gekennzeichnet sind, definieren wir eine kanonische Reihenfolge für die Indizes $ (i\_1, \cdots, i\_n, j\_1, \cdots, j\_m) $ einer beliebigen Sequenz von $n + m $ fermionic Operators $a ^ \dagger\_{i\_1} \cdots a ^ \dagger\_{i\_n} a\_{j\_1} \cdots a\_{j\_m} $As folgt :
 -   Alle Erstellungs Operatoren $a ^ \dagger\_{i\_\cdot} $ werden vor allen Vernichtungs Operatoren $a\_{j\_\cdot} $ platziert.
 -   Alle Erstellungs Operator Indizes werden in aufsteigender Reihenfolge sortiert, d. h. $i\_1 < i\_2 < \cdots < i\_n $.
 -   Alle Vernichtungs Operator Indizes werden in absteigender Reihenfolge sortiert, d. h. $j\_1 > j\_2 \cdots > j\_m $.
@@ -318,5 +318,5 @@ Ebenso wie $H $ "hermitian" ist jeder nicht-hermitian fermionic-Operator, z. b. 
 Lassen Sie uns diesen Satz von kanonationshierorxen als $ $ \begin{align} (i\_1, \cdots, i\_n, j\_1, \cdots, j\_m) \in S\_{n, m} identifizieren.
 \end{align} $ $
 
-Mit dieser kanonischen Reihenfolge die fermionic-hamiltonan kann als $ $ \begin{align} H = \sum\_{(p, q) \in S\_{1,1}} H '\_{PQ} \bruchteil {a ^ \dagger\_{p} a\_{q} + a ^ \dagger\_{q} a\_{ p}}{2}+ \sum\_{(p, q, r, s) \in s\_{2,2}} h '\_{pqrs} \bruchteil {a ^ \dagger\_{p} a ^ \dagger\_{q} a\_{r} a\_{s} + a ^ \dagger\_{s} a ^ \ der Kreuz\_{r} a\_{q} a\_{p}}{2}, \end{align} $ $ mit angemessen angepassten 1-und zwei-Elektronen-inteden $h '\_{PQ} $ und $h '\_{pqrs} $.
+Bei dieser kanonischen Reihenfolge kann die fermionische hamiltonan als $ $ \begin{align} H = \sum\_{(p) ausgedrückt werden. q) \in S\_{1,1}} H '\_{PQ} \bruchteil {a ^ \dagger\_{p} a\_{q} + a ^ \dagger\_{q} a\_{p}}{2}+ \sum\_{(p, q, r, S) \in S\_{2,2}} H '\_{pqrs} \bruchteil {a ^ \dagger\_{p} a ^ \dagger\_{q} a\_{r} a\_{s} + a ^ \dagger\_{s} a ^ \ der Kreuz\_{r} a\_{q} a\_{p}}{2}, \end{align} $ $ mit angemessen angepassten 1-und zwei-Elektronen-inteden $h '\_{PQ} $ und $h '\_{pqrs} $.
 

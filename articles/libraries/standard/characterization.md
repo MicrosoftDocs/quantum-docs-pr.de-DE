@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: 0c347113339a77e9eaf63dc0967c320f8b063a0e
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76870348"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036252"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum-Charakterisierung und-Statistiken #
 
@@ -88,7 +88,7 @@ Nach der herkömmlichen klassischen Terminologie wird $ \eqref{EQ: Phase-EST-Wah
 
 Nachdem Sie eine `Result` mit der Wahrscheinlichkeits Wahrscheinlichkeitsfunktion für iterative Phasen beobachtet haben, können wir die Bayes-Regel verwenden, um vorzuschreiben, was in der Phase der Betrachtung folgen soll.
 Konkret: \begin{Equation} \pr (\phi | d) = \bruchteil {\pr (d | \phi) \pr (\phi)} {\int \pr (d | \phi) \pr (\phi) {\mathrm d} \phi} \pr (\phi), \end{Equation} WHERE $d \in \\{\texttt{Zero}, \texttt{One}\\} $ ist ein `Result`, und WHERE $ \pr (\phi) $ beschreibt unsere früheren Überzeugungen zu $ \phi $.
-Dadurch wird die iterative Phasen Schätzung explizit durchlaufen, da der Wert der nachfolgenden Distribution $ \pr (\phi | d) die Überzeugungen unmittelbar vor der Betrachtung der nächsten `Result`beschreibt.
+Dadurch wird die iterative Phasen Schätzung explizit durchlaufen, da der Wert der nachfolgenden Distribution $ \pr (\phi | d) "unsere Überzeugungen" unmittelbar vor der Betrachtung der nächsten `Result`beschreibt.
 
 Zu einem beliebigen Zeitpunkt während dieses Verfahrens können wir die Phase $ \hat{\phi} $, die vom klassischen Controller abgeleitet wurde, als "\begin{Equation} \hat{\phi} \mathrel{" melden: =} \erwartet [\phi | \text{Data}] = \int \phi \pr (\phi | \text{Data}) {\mathrm d} \phi, \end{Equation} WHERE $ \text{Data} $ steht für den gesamten Datensatz aller `Result` Werte, die abgerufen wurden.
 

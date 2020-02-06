@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.expressions
-ms.openlocfilehash: 09d493df4e1178fee1f7a5946cfda2f411111006
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 83fe697aa07a8ab28bd64437c8f5746bc5893b27
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185204"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036311"
 ---
 # <a name="expressions"></a>Ausdrücke
 
@@ -22,7 +22,7 @@ Bei jedem Ausdruck ist derselbe Ausdruck, der in Klammern eingeschlossen ist, ei
 
 Die Äquivalenz zwischen einfachen Werten und Tupeln mit einem einzelnen Element, die im [Typmodell](xref:microsoft.quantum.language.type-model#tuple-types) beschrieben werden, entfernt die Mehrdeutigkeit zwischen `(6)` als Gruppe und `(6)` als ein Tupel mit einem einzelnen Element.
 
-## <a name="symbols"></a>MB
+## <a name="symbols"></a>Symbols
 
 Der Name eines Symbols, das einem Wert des Typs `'T` gebunden oder zugewiesen ist, ist ein Ausdruck vom Typ `'T`.
 Wenn beispielsweise das Symbol `count` an den ganzzahligen Wert `5`gebunden ist, ist `count` ein ganzzahliger Ausdruck.
@@ -61,7 +61,7 @@ In diesem Fall muss der zweite Parameter in 32 Bits passen. Wenn dies nicht der 
 
 Bei zwei ganzzahligen oder großen ganzzahligen Ausdrücken kann ein neuer Integer-Ausdruck oder ein großer ganzzahliger Ausdruck mithilfe des `%` (Modulus), `&&&` (bitweisen und), `|||` (bitweisen OR) oder `^^^` (bitweisen XOR)-Operatoren gebildet werden.
 
-Wenn auf der linken Seite entweder ein ganzzahliger Ausdruck oder ein großer ganzzahliger Ausdruck und ein ganzzahliger Ausdruck auf der rechten Seite angegeben ist, können die `<<<`-Operatoren (arithmetischer Left Shift) oder `>>>` (arithmetische rechts Schiebe) zum Erstellen eines neuen Ausdrucks mit demselben Typ wie der linke verwendet werden. Begriff.
+Wenn auf der linken Seite entweder ein ganzzahliger Ausdruck oder ein großer ganzzahliger Ausdruck und ein ganzzahliger Ausdruck auf der rechten Seite angegeben ist, können die `<<<`-Operatoren (arithmetischer Left Shift) oder `>>>` (arithmetische Rechte Shift) zum Erstellen eines neuen Ausdrucks mit demselben Typ wie der linke Ausdruck verwendet werden.
 
 Der zweite Parameter (die UMSCHALT Menge) in einen Verschiebungs Vorgang muss größer oder gleich 0 (null) sein. das Verhalten für negative Verschiebungs Beträge ist nicht definiert.
 Der Verschiebungs Betrag für einen der Verschiebungs Vorgänge muss ebenfalls in 32 Bits passen. Wenn dies nicht der Fall ist, wird ein Laufzeitfehler ausgelöst.
@@ -94,9 +94,9 @@ Bei jedem Integer-Ausdruck oder einem Big Integer-Ausdruck kann ein neuer Ausdru
 Die beiden `Bool` Literalwerte sind `true` und `false`.
 
 Wenn zwei Ausdrücke desselben primitiven Typs vorhanden sind, können die `==` und `!=` binäre Operatoren verwendet werden, um einen `Bool` Ausdruck zu erstellen.
-Der Ausdruck ist true, wenn die beiden Ausdrücke (bzw. nicht) gleich sind.
+Der Ausdruck ist true, wenn die beiden Ausdrücke gleich sind, andernfalls false.
 
-Werte von benutzerdefinierten Typen können nicht verglichen werden, sondern nur ihre Werte können verglichen werden. Beispiel:
+Werte von benutzerdefinierten Typen können nicht verglichen werden, sondern es können nur Ihre nicht umschließenden Werte verglichen werden. Verwenden Sie beispielsweise den "Unwrap"-Operator `!` (auf der [Seite "Q # Type Model](xref:microsoft.quantum.language.type-model#user-defined-types)" erläutert).
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -112,7 +112,7 @@ Der Zustand der beiden Qubits wird von diesem Vergleich nicht verglichen, auf Si
 Der Gleichheits Vergleich für `Double` Werte kann aufgrund von Rundungs Effekten irreführend sein.
 Beispielsweise `49.0 * (1.0/49.0) != 1.0`.
 
-Bei zwei numerischen Ausdrücken können die binären Operatoren `>`, `<`, `>=`und `<=` verwendet werden, um einen neuen booleschen Ausdruck zu erstellen, der true ist, wenn der erste Ausdruck größer als, kleiner als, größer als oder gleich ist. oder kleiner oder gleich dem zweiten Ausdruck.
+Bei zwei numerischen Ausdrücken können die binären Operatoren `>`, `<`, `>=`und `<=` verwendet werden, um einen neuen booleschen Ausdruck zu erstellen, der true ist, wenn der erste Ausdruck größer als, kleiner als, größer als oder gleich oder kleiner oder gleich dem zweiten Ausdruck ist.
 
 Bei zwei booleschen Ausdrücken können die `and` und `or` binäre Operatoren verwendet werden, um einen neuen booleschen Ausdruck zu erstellen, der true ist, wenn die beiden Ausdrücke "true" sind.
 
@@ -229,7 +229,7 @@ Dies ist in der Regel unnötig, da der Q #-Compiler die eigentlichen Typen ablei
 Dies ist für die partielle Anwendung erforderlich (siehe unten), wenn ein typparametrisiertes Argument nicht angegeben wird.
 Dies ist manchmal auch nützlich, wenn die Übergabe von Vorgängen mit unterschiedlichen Funktoren unterstützt wird.
 
-Wenn `Func` beispielsweise über eine Signatur `('T1, 'T2, 'T1) -> 'T2`verfügt, `Op1` und `Op2` Signatur `(Qubit[] => Unit is Adj)`aufweisen und `Op3` über eine Signatur `(Qubit[] => Unit)`verfügt, um `Func` als erstes Argument aufzurufen `Op1` mit `Op2` als erstes Argument als zweites und `Op3` als drittes:
+Wenn `Func` beispielsweise über eine Signatur `('T1, 'T2, 'T1) -> 'T2`verfügt, `Op1` und `Op2` Signatur `(Qubit[] => Unit is Adj)`aufweisen und `Op3` über eine Signatur `(Qubit[] => Unit)`verfügt, um `Func` mit `Op1` als erstes Argument aufzurufen, `Op2` als zweites und `Op3` als drittes Argument:
 
 ```qsharp
 let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3);
@@ -476,7 +476,7 @@ Wenn `a==b` beispielsweise `a==b ? C(qs) | D(qs)`den Wert true hat, wird der `C`
 Dies ähnelt der Kurzschluss in anderen Sprachen.
 
 
-## <a name="operator-precedence"></a>Operator Rangfolge
+## <a name="operator-precedence"></a>Operatorrangfolge
 
 Alle binären Operatoren sind mit Ausnahme von `^`rechts assoziativ.
 
@@ -488,21 +488,21 @@ Klammern für Vorgangs-und Funktionsaufrufe werden auch vor jedem Operator gebun
 
 Operatoren in Rangfolge, vom höchsten zum niedrigsten:
 
-Operators | Ständigkeit | description | Operanden Typen
+Operator | Ständigkeit | BESCHREIBUNG | Operanden Typen
 ---------|----------|---------|---------------
- nachfolgende `!` | Unären | Aufheben der Umschließung | Ein beliebiger benutzerdefinierter Typ
- `-`, `~~~`, `not` | Unären | Numerische negative, bitweise Komplement logische Negation | `Int`, `BigInt` oder `Double` für `-`, `Int` oder `BigInt` `~~~`für `Bool`
- `^` | Binär | Ganzzahlige Potenz | `Int` oder `BigInt` für die Basis `Int` für den Exponenten.
- `/`, `*`, `%` | Binär | Division, Multiplikation, ganzzahliger Modulo | `Int`, `BigInt` oder `Double` für `/` und `*`, `Int` oder `BigInt` für `%`
- `+`, `-` | Binär | Addition oder Zeichenfolge und Array Verkettung, Subtraktion | `Int`, `BigInt` oder `Double`, zusätzlich `String` oder ein beliebiger Arraytyp für `+`
- `<<<`, `>>>` | Binär | Left Shift, Right Shift | `Int` oder `BigInt`
- `<`, `<=`, `>`, `>=` | Binär | Kleiner-als-, kleiner-als-oder-gleich-, größer-als-, größer-als-oder-gleich-Vergleiche | `Int`, `BigInt` oder `Double`
- `==`, `!=` | Binär | gleich, nicht gleichmäßige Vergleiche | beliebiger primitiver Typ
- `&&&` | Binär | Bitweises and | `Int` oder `BigInt`
- `^^^` | Binär | Bitweises XOR | `Int` oder `BigInt`
- <code>\|\|\|</code> | Binär | Bitweises OR | `Int` oder `BigInt`
- `and` | Binär | Logisches and | `Bool`
- `or` | Binär | Logisches OR | `Bool`
+ nachfolgende `!` | Unäroperatoren | Aufheben der Umschließung | Ein beliebiger benutzerdefinierter Typ
+ `-`, `~~~`, `not` | Unäroperatoren | Numerische negative, bitweise Komplement logische Negation | `Int`, `BigInt` oder `Double` für `-`, `Int` oder `BigInt` `~~~`für `Bool``not`
+ `^` | Binary | Ganzzahlige Potenz | `Int` oder `BigInt` für die Basis `Int` für den Exponenten.
+ `/`, `*`, `%` | Binary | Division, Multiplikation, ganzzahliger Modulo | `Int`, `BigInt` oder `Double` für `/` und `*`, `Int` oder `BigInt` für `%`
+ `+`, `-` | Binary | Addition oder Zeichenfolge und Array Verkettung, Subtraktion | `Int`, `BigInt` oder `Double`, zusätzlich `String` oder ein beliebiger Arraytyp für `+`
+ `<<<`, `>>>` | Binary | Left Shift, Right Shift | `Int` oder `BigInt`
+ `<`, `<=`, `>`, `>=` | Binary | Kleiner-als-, kleiner-als-oder-gleich-, größer-als-, größer-als-oder-gleich-Vergleiche | `Int`, `BigInt` oder `Double`
+ `==`, `!=` | Binary | gleich, nicht gleichmäßige Vergleiche | beliebiger primitiver Typ
+ `&&&` | Binary | Bitweises AND | `Int` oder `BigInt`
+ `^^^` | Binary | Bitweises XOR | `Int` oder `BigInt`
+ <code>\|\|\|</code> | Binary | Bitweises OR | `Int` oder `BigInt`
+ `and` | Binary | Logisches AND | `Bool`
+ `or` | Binary | Logisches OR | `Bool`
  `..` | Binär/Ternär | Bereichs Operator | `Int`
- `?``|` | TERNÄRE | Bedingt | `Bool` für die linke Seite
-`w/``<-` | TERNÄRE | Kopieren und aktualisieren | Weitere Informationen finden Sie unter [Copy-and-Update-Ausdrücke](#copy-and-update-expressions)
+ `?` `|` | TERNÄRE | Bedingt | `Bool` für die linke Seite
+`w/` `<-` | TERNÄRE | Kopieren und aktualisieren | Weitere Informationen finden Sie unter [Copy-and-Update-Ausdrücke](#copy-and-update-expressions)
