@@ -16,17 +16,7 @@
           href: overview/what-is-qsharp.md
         - name: Wie erlerne ich das Quantencomputing?
           href: overview/how-to-learn-quantum-computing.md
-    - name: Lernen mit den Quanten-Katas
-      href: intro-to-katas.md
-- name: Schnellstarts
-  items:
-    - name: Quanten-Zufallszahlengenerator
-      href: quickstarts/qrng.md
-    - name: 'Quantengrundlagen mit Q#'
-      href: quickstart.md
-    - name: Implementieren des Grover-Suchalgorithmus
-      href: quickstarts/search.md
-- name: Anleitungen
+- name: Installieren und Aktualisieren
   items:
     - name: Installieren des QDK
       items:
@@ -40,8 +30,14 @@
           href: install-guide/qjupyter.md
     - name: Aktualisieren des QDK
       href: install-guide/update.md
-    - name: 'Erstellen eines Q#-Projekts'
-      href: how-to-guides/create-qsharp-project.md
+- name: Schnellstarts
+  items:
+    - name: Quanten-Zufallszahlengenerator
+      href: quickstarts/qrng.md
+    - name: 'Quantengrundlagen mit Q#'
+      href: quickstart.md
+    - name: Implementieren des Grover-Suchalgorithmus
+      href: quickstarts/search.md
 - name: Konzepte
   items:
     - name: Verfahren der Quantenentwicklung
@@ -52,21 +48,31 @@
       href: language/toc.yml
     - name: 'Q#-Bibliotheken'
       href: libraries/toc.yml
-    - name: Quantencomputingkonzepte
-      href: concepts/toc.yml
     - name: Quantensimulatoren und Ressourcenschätzungen
       href: machines/toc.yml
+    - name: Quantencomputingkonzepte
+      href: concepts/toc.yml
+- name: Anleitungen
+  items:
+    - name: 'Erstellen eines Q#-Projekts'
+      href: how-to-guides/create-qsharp-project.md
+- name: 'Q#-Schulungsressourcen'
+  items:
+    - name: Lernen mit den Quanten-Katas
+      href: intro-to-katas.md
+    - name: 'Q#-Beispiele'
+      href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
 - name: Ressourcen
   items:
+    - name: Glossar
+      href: Glossary.md
+    - name: Weitere Informationsquellen
+      href: for-more-info.md
     - name: 'QDK: Versionshinweise'
       topicHref: relnotes/index.md
       href: relnotes/toc.yml
     - name: Mitwirken am QDK
       href: contributing/toc.yml
       topicHref: contributing/index.md
-    - name: Glossar
-      href: Glossary.md
-    - name: Weitere Informationen finden Sie unter
-      href: for-more-info.md
     - name: Lizenz
       href: license.md
