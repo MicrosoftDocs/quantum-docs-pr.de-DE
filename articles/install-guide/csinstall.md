@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 1fd829c684502092bb7491b0f46b5f690320c941
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 7803846279f230f5fc0ee8424bd39be735a650ca
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831017"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036286"
 ---
 # <a name="develop-with-q--c"></a>Entwickeln mit Q # +C#
 
@@ -23,7 +23,7 @@ Q # ist speziell für .NET-Sprachen konzipiert, insbesondere C#. Sie können mit
 - [Q # + C# Verwenden von Visual Studio Code (Windows, Linux und Mac)](#VSC)
 - [Q # + C# mit dem Befehlszeilen Tool "`dotnet`"](#command)
 
-## Entwickeln mit Q # + C# mithilfe von Visual Studio<a name="VS"></a>
+## Entwickeln mit Q # + C# mithilfe von Visual Studio <a name="VS"></a>
 
 Visual Studio bietet eine umfangreiche Umgebung für die Entwicklung von f #-Programmen. Die f # Visual Studio-Erweiterung enthält Vorlagen für Q #-Dateien und-Projekte sowie Syntax Hervorhebung, Codevervollständigung und IntelliSense-Unterstützung.
 
@@ -59,7 +59,7 @@ Visual Studio bietet eine umfangreiche Umgebung für die Entwicklung von f #-Pro
 > [!NOTE]
 > * Falls Sie über mehrere Projekte innerhalb einer Visual Studio-Projektmappe verfügen, müssen sich alle darin enthaltenen Projekte in demselben Ordner wie die Projektmappe oder in einem ihrer Unterordner befinden.  
 
-## Entwickeln mit Q # + C# mit Visual Studio Code<a name="VSC"></a>
+## Entwickeln mit Q # + C# mit Visual Studio Code <a name="VSC"></a>
 
 Visual Studio Code (vs Code) bietet eine umfangreiche Umgebung für die Entwicklung von Q #-Programmen unter Windows, Linux und Mac.  Die q # vs Code-Erweiterung bietet Unterstützung für die f #-Syntax Hervorhebung, Codevervollständigung und f #-Code Ausschnitte.
 
@@ -111,7 +111,7 @@ Natürlich können Sie Q#-Programme auch über die Befehlszeile erstellen und au
 
 1. Installieren der Quantum-Projektvorlagen für .NET
 
-    ```bash
+    ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
@@ -121,8 +121,8 @@ Natürlich können Sie Q#-Programme auch über die Befehlszeile erstellen und au
 
     - Erstellen einer neuen Anwendung
 
-       ```bash
-       dotnet new console -lang Q# -o runSayHello
+       ```dotnetcli
+       dotnet new console -lang "Q#" -o runSayHello
        ```
 
     - Navigieren Sie zum neuen Anwendungsverzeichnis.
@@ -135,7 +135,7 @@ Natürlich können Sie Q#-Programme auch über die Befehlszeile erstellen und au
 
     - Ausführen der Anwendung
 
-        ```bash
+        ```dotnetcli
         dotnet run
         ```
 
