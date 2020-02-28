@@ -1,17 +1,17 @@
 ---
-title: Installation und Validierung der Numerics-Bibliothek | Microsoft-Dokumentation
-description: Installation und Validierung der Numerics-Bibliothek
+title: Microsoft Quantum-Numerics-Bibliothek-Installation und Validierung
+description: Erfahren Sie, wie Sie die Microsoft Quantum-Numerics-Bibliothek zu Ihrer Installation von Visual Studio 2019 oder höher hinzufügen.
 author: thomashaener
 ms.author: thhaner
 ms.date: 05/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.installation
-ms.openlocfilehash: c41bb73ea484271689eea2ca1b59ce6639dc15a7
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: cb0d00a509b3986b605dd7f15f9bccc0661bb894
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036456"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906337"
 ---
 # <a name="numerics-library-installation-and-validation"></a>Installation und Validierung der Numerics-Bibliothek
 
@@ -33,7 +33,7 @@ Weitere Informationen finden Sie im Leitfaden für die [Benutzeroberfläche des 
 
 Alternativ können Sie die Numerics-Bibliothek mithilfe der Paket-Manager-Konsole über die Befehlszeilenschnittstelle dem Projekt hinzufügen.
 
-![](../../media/vs2017-nuget-console-menu.png)
+![Verwenden der Paket-Manager-Konsole über die Befehlszeile](../../media/vs2017-nuget-console-menu.png)
 
 Führen Sie in der Paket-Manager-Konsole Folgendes aus:
 
