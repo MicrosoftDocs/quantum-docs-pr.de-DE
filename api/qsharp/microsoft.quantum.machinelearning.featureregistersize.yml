@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.featureregistersize
+name: FeatureRegisterSize
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: Gibt die Anzahl von Qubits zurück, die erforderlich sind, um einen bestimmten featurevektor zu codieren.
+syntax: 'function FeatureRegisterSize (sample : Double[]) : Int'
+input:
+  content: '(sample : Double[])'
+  types:
+  - name: sample
+    summary: Ein Beispiel Funktions Vektor, der in ein Qubit-Register codiert werden soll.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: Int
+  types:
+  - summary: Die zum Codieren von `sample` in ein Qubit-Register erforderliche Größe, ausgedrückt als Anzahl von Qubits.
+    isPrimitive: true
+    uid: Int
+metadata:
+  ms.openlocfilehash: 780a7d4aa75a8bd3a4d58879339506451ddb3664
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909329"

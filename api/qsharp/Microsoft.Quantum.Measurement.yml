@@ -16,10 +16,12 @@ operations:
   summary: Misst ein einzelnes Qubit auf `Z` Basis und setzt es auf den standardmäßigen Basiszustand | 0 〉 nach der Messung zurück.
 - uid: microsoft.quantum.measurement.multim
   summary: Misst jedes Qubit in einem angegebenen Array standardmäßig.
+- uid: microsoft.quantum.measurement.settobasisstate
+  summary: Legt ein Qubit auf einen angegebenen Berechnungsbasis Zustand fest, indem das Qubit gemessen und bei Bedarf ein bitflip angewendet wird.
 metadata:
-  ms.openlocfilehash: 7964ab7b090fdff8f1a8af556e901dbab68cff9f
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: dc74db43b60728bf9924c05346bae4c6b329a265
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870029"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905759"

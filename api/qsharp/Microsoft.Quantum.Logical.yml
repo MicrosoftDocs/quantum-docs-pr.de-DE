@@ -45,6 +45,8 @@ functions:
   summary: Gibt nur dann true zurück, wenn eine Zahl kleiner oder gleich einer anderen Zahl ist.
 - uid: microsoft.quantum.logical.lessthanorequall
   summary: Gibt nur dann true zurück, wenn eine Zahl kleiner oder gleich einer anderen Zahl ist.
+- uid: microsoft.quantum.logical.nearlyequald
+  summary: Gibt nur dann true zurück, wenn zwei Eingaben fast gleich sind (d. h. innerhalb einer Toleranz von 1E-12).
 - uid: microsoft.quantum.logical.not
   summary: Gibt die boolesche Negation eines Werts zurück.
 - uid: microsoft.quantum.logical.notequalb
@@ -61,14 +63,16 @@ functions:
   summary: Gibt nur dann true zurück, wenn zwei Eingaben nicht gleich sind.
 - uid: microsoft.quantum.logical.notequalr
   summary: Gibt nur dann true zurück, wenn zwei Eingaben nicht gleich sind.
+- uid: microsoft.quantum.logical.notnearlyequald
+  summary: Gibt nur dann true zurück, wenn zwei Eingaben nicht annähernd gleich sind (d. h. nicht innerhalb einer Toleranz von 1E-12).
 - uid: microsoft.quantum.logical.or
   summary: Gibt die boolesche Disjunktion von zwei Werten zurück.
 - uid: microsoft.quantum.logical.xor
   summary: Gibt die boolesche exklusive Disjunktion von zwei Werten zurück.
 metadata:
-  ms.openlocfilehash: 12f462356dfe7ae4bf7c60110e71a9928bc8c178
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 356a31be888d7ed3a96e219f8f7b31151179d3eb
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056274"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905895"

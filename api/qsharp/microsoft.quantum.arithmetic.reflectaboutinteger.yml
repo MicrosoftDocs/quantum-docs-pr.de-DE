@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.reflectaboutinteger
+name: ReflectAboutInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Reflektiert ein Quantum-Register über eine angegebene klassische Ganzzahl.
+
+
+  Wenn ein Quantum-Register anfänglich im Status $ \ sum_i \ alpha_i \ket{i} $, wobei jede $ \ket{i} $ ein Basiszustand ist, der eine ganze Zahl $i $ darstellt, gibt den Status des Registers über den Basiszustand für eine gegebene Ganzzahl $ \ket{j} $, $ $ \ sum_i (-1) ^ {\ delta_ {IJ}} \alpha _I \ket{i} $ $
+remarks: Dieser Vorgang wird direkt implementiert, ohne dass zusätzliche hilfsqubits explizit zugeordnet werden.
+syntax: 'operation ReflectAboutInteger (index : Int, reg : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(index : Int, reg : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: index
+    summary: Die klassische Ganzzahl, die den Basiszustand indiziert, der reflektiert werden soll.
+    isPrimitive: true
+    uid: Int
+  - name: reg
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: 4a76b08b8d8b7b70a63a615f8e69e26cd4df7129
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908258"

@@ -3,37 +3,37 @@ uid: microsoft.quantum.canon
 name: Microsoft.Quantum.Canon
 functions:
 - uid: microsoft.quantum.canon.asqubitarray
-  summary: "\n> [!WARNING]\n> Veraltet\n\nAsqubitarray wurde als veraltet markiert.\nDiese Funktion wurde entfernt."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nAsqubitarray wurde als veraltet markiert.\nDiese Funktion wurde entfernt."
 - uid: microsoft.quantum.canon.assertalmostequal
-  summary: "\n> [!WARNING]\n> Veraltet\n\nAssertalmustequal ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.diagnostics.nearequalityfactd\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nAssertalmustequal ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.diagnostics.nearequalityfactd\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\"."
 - uid: microsoft.quantum.canon.assertalmostequaltol
-  summary: "\n> [!WARNING]\n> Veraltet\n\nAssertalmustequaltol ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.diagnostics.equalitywithintolerancefact\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nAssertalmustequaltol ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.diagnostics.equalitywithintolerancefact\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact\"."
 - uid: microsoft.quantum.canon.assertboolarrayequal
-  summary: "\n> [!WARNING]\n> Veraltet\n\nAssertboolarrayequal ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.diagnostics.allequalityfactb\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Diagnostics.AllEqualityFactB\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nAssertboolarrayequal ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.diagnostics.allequalityfactb\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Diagnostics.AllEqualityFactB\"."
 - uid: microsoft.quantum.canon.assertboolequal
-  summary: "\n> [!WARNING]\n> Veraltet\n\nAssertboolequal ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.diagnostics.equalityfactb\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Diagnostics.EqualityFactB\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nAssertboolequal ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.diagnostics.equalityfactb\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Diagnostics.EqualityFactB\"."
 - uid: microsoft.quantum.canon.assertintequal
-  summary: "\n> [!WARNING]\n> Veraltet\n\nAssertintequal ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.diagnostics.equalityfacti\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Diagnostics.EqualityFactI\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nAssertintequal ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.diagnostics.equalityfacti\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Diagnostics.EqualityFactI\"."
 - uid: microsoft.quantum.canon.assertresultequal
-  summary: "\n> [!WARNING]\n> Veraltet\n\nAssertresultequal ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.diagnostics.equalityfactr\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Diagnostics.EqualityFactR\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nAssertresultequal ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.diagnostics.equalityfactr\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Diagnostics.EqualityFactR\"."
 - uid: microsoft.quantum.canon.bigendiantolittleendian
-  summary: "\n> [!WARNING]\n> Veraltet\n\nBigendiantolittleendian ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.bigendianaslittleendian\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nBigendiantolittleendian ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.bigendianaslittleendian\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian\"."
 - uid: microsoft.quantum.canon.bind
-  summary: "\n> [!WARNING]\n> Veraltet\n\nDie Bindung wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.canon.bound\".\nVerwenden Sie @\"microsoft.quantum.canon.bound\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nDie Bindung wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.canon.bound\".\nVerwenden Sie @\"microsoft.quantum.canon.bound\"."
 - uid: microsoft.quantum.canon.binda
-  summary: "\n> [!WARNING]\n> Veraltet\n\nBinda ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.bounda\".\nVerwenden Sie @\"microsoft.quantum.canon.bounda\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nBinda ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.bounda\".\nVerwenden Sie @\"microsoft.quantum.canon.bounda\"."
 - uid: microsoft.quantum.canon.bindc
-  summary: "\n> [!WARNING]\n> Veraltet\n\nBindc ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.boundc\".\nVerwenden Sie @\"microsoft.quantum.canon.boundc\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nBindc ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.boundc\".\nVerwenden Sie @\"microsoft.quantum.canon.boundc\"."
 - uid: microsoft.quantum.canon.bindca
-  summary: "\n> [!WARNING]\n> Veraltet\n\nBindca ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.boundca\".\nVerwenden Sie @\"microsoft.quantum.canon.boundca\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nBindca ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.boundca\".\nVerwenden Sie @\"microsoft.quantum.canon.boundca\"."
 - uid: microsoft.quantum.canon.bitsize
-  summary: "\n> [!WARNING]\n> Veraltet\n\nBitsize ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.bitsizei\".\nVerwenden Sie @\"microsoft.quantum.math.bitsizei\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nBitsize ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.bitsizei\".\nVerwenden Sie @\"microsoft.quantum.math.bitsizei\"."
 - uid: microsoft.quantum.canon.boolarrfrompositiveint
-  summary: "\n> [!WARNING]\n> Veraltet\n\nBoolarrfrompositiveint ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.intasboolarray\".\nVerwenden Sie @\"microsoft.quantum.convert.intasboolarray\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nBoolarrfrompositiveint ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.intasboolarray\".\nVerwenden Sie @\"microsoft.quantum.convert.intasboolarray\"."
 - uid: microsoft.quantum.canon.boolarrfromresultarr
-  summary: "\n> [!WARNING]\n> Veraltet\n\nBoolarrfromresultarr ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.resultarrayasboolarray\".\nVerwenden Sie @\"microsoft.quantum.convert.resultarrayasboolarray\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nBoolarrfromresultarr ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.resultarrayasboolarray\".\nVerwenden Sie @\"microsoft.quantum.convert.resultarrayasboolarray\"."
 - uid: microsoft.quantum.canon.boolfromresult
-  summary: "\n> [!WARNING]\n> Veraltet\n\nBoolfromresult ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.resultasbool\".\nVerwenden Sie @\"microsoft.quantum.convert.resultasbool\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nBoolfromresult ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.resultasbool\".\nVerwenden Sie @\"microsoft.quantum.convert.resultasbool\"."
 - uid: microsoft.quantum.canon.bound
   summary: Bei einem Array von Vorgängen, die für eine einzelne Eingabe agieren, erzeugt einen neuen Vorgang, der jeden gegebenen Vorgang nacheinander ausführt.
 - uid: microsoft.quantum.canon.bounda
@@ -79,9 +79,9 @@ functions:
 - uid: microsoft.quantum.canon.conjugatedbyca
   summary: Bei den äußeren und inneren Vorgängen wird ein neuer Vorgang zurückgegeben, der den inneren Vorgang durch den äußeren Vorgang konjugiert.
 - uid: microsoft.quantum.canon.continuedfractionconvergent
-  summary: "\n> [!WARNING]\n> Veraltet\n\nContinuedfractionconvergent ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.continuedfractionconvergenti\".\nVerwenden Sie @\"microsoft.quantum.math.continuedfractionconvergenti\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nContinuedfractionconvergent ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.continuedfractionconvergenti\".\nVerwenden Sie @\"microsoft.quantum.math.continuedfractionconvergenti\"."
 - uid: microsoft.quantum.canon.controlledonbitstring
-  summary: Gibt einen einheitlichen Operator zurück, der ein Oracle auf das Ziel Register anwendet, wenn der Steuerelement Registrierungs Zustand einer angegebenen Bitmaske entspricht.
+  summary: Gibt einen einheitlichen Vorgang zurück, der ein Oracle auf das Ziel Register anwendet, wenn der Steuerelement Registrierungs Zustand einer angegebenen Bitmaske entspricht.
 - uid: microsoft.quantum.canon.controlledonint
   summary: Gibt einen einheitlichen Operator zurück, der ein Oracle auf das Ziel Register anwendet, wenn der Steuerelement Registrierungs Zustand einer angegebenen positiven ganzen Zahl entspricht.
 - uid: microsoft.quantum.canon.curriedop
@@ -91,11 +91,11 @@ functions:
 
     Bei einem Vorgang mit zwei Eingaben wendet diese Funktion z. b. die "isomorphism"-$f (x, y) \equiv f (x) (y) $ an, um einen Vorgang mit einer Eingabe zurückzugeben, der einen Vorgang mit einer Eingabe zurückgibt.
 - uid: microsoft.quantum.canon.curryop
-  summary: "\n> [!WARNING]\n> Veraltet\n\nCurryop ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.curriedop\".\nVerwenden Sie @\"microsoft.quantum.canon.curriedop\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nCurryop ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.curriedop\".\nVerwenden Sie @\"microsoft.quantum.canon.curriedop\"."
 - uid: microsoft.quantum.canon.decomposedintotimestepsca
   summary: Gibt einen Vorgang zurück, der den Trotter – Suzuki Integrator für einen angegebenen Vorgang implementiert.
 - uid: microsoft.quantum.canon.decomposeintotimestepsca
-  summary: "\n> [!WARNING]\n> Veraltet\n\n\"Debug\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.decomposedintotimestepsca\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"Debug\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.decomposedintotimestepsca\"."
 - uid: microsoft.quantum.canon.delayed
   summary: Gibt einen Vorgang zurück, der den angegebenen Vorgang mit dem angegebenen Argument anwendet.
 - uid: microsoft.quantum.canon.delayeda
@@ -107,43 +107,43 @@ functions:
 - uid: microsoft.quantum.canon.embedpauli
   summary: Gibt bei einem Single-Qubit-Pauli-Operator und dem Index eines Qubit einen multiqubit-Pauli-Operator mit dem angegebenen Single-Qubit-Operator an diesem Index zurück und `PauliI` an jedem anderen Index.
 - uid: microsoft.quantum.canon.expmod
-  summary: "\n> [!WARNING]\n> Veraltet\n\nExpmod ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.expmodi\".\nVerwenden Sie @\"microsoft.quantum.math.expmodi\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nExpmod ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.expmodi\".\nVerwenden Sie @\"microsoft.quantum.math.expmodi\"."
 - uid: microsoft.quantum.canon.extendedgcd
-  summary: "\n> [!WARNING]\n> Veraltet\n\n\"Extendedgcd\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.extendedgreatestcommondivisori\".\nVerwenden Sie @\"microsoft.quantum.math.extendedgreatestcommondivisori\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"Extendedgcd\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.extendedgreatestcommondivisori\".\nVerwenden Sie @\"microsoft.quantum.math.extendedgreatestcommondivisori\"."
 - uid: microsoft.quantum.canon.filter
-  summary: "\n> [!WARNING]\n> Veraltet\n\nDer Filter ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arrays.filtered\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Arrays.Filtered\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nDer Filter ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arrays.filtered\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Arrays.Filtered\"."
 - uid: microsoft.quantum.canon.forall
-  summary: "\n> [!WARNING]\n> Veraltet\n\nForAll ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arrays.all\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Arrays.All\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nForAll ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arrays.all\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Arrays.All\"."
 - uid: microsoft.quantum.canon.forany
-  summary: "\n> [!WARNING]\n> Veraltet\n\n\"Forany\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arrays.any\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Arrays.Any\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"Forany\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arrays.any\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Arrays.Any\"."
 - uid: microsoft.quantum.canon.fst
   summary: Gibt bei einem Paar das erste Element zurück.
 - uid: microsoft.quantum.canon.gcd
-  summary: "\n> [!WARNING]\n> Veraltet\n\nGCD wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.math.greatestcommondivisori\".\nVerwenden Sie @\"microsoft.quantum.math.greatestcommondivisori\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nGCD wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.math.greatestcommondivisori\".\nVerwenden Sie @\"microsoft.quantum.math.greatestcommondivisori\"."
 - uid: microsoft.quantum.canon.ignore
   summary: Ignoriert die Ausgabe eines Vorgangs oder einer Funktion.
 - uid: microsoft.quantum.canon.intabs
-  summary: "\n> [!WARNING]\n> Veraltet\n\nIntabstopps sind veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.absi\".\nDiese Funktion wurde entfernt."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nIntabstopps sind veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.absi\".\nDiese Funktion wurde entfernt."
 - uid: microsoft.quantum.canon.intarrayfromrange
-  summary: "\n> [!WARNING]\n> Veraltet\n\nIntarrayfromrange ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.rangeasintarray\".\nVerwenden Sie @\"microsoft.quantum.convert.rangeasintarray\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nIntarrayfromrange ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.rangeasintarray\".\nVerwenden Sie @\"microsoft.quantum.convert.rangeasintarray\"."
 - uid: microsoft.quantum.canon.intmax
-  summary: "\n> [!WARNING]\n> Veraltet\n\nIntMax ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.maxi\".\nDiese Funktion wurde entfernt."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nIntMax ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.maxi\".\nDiese Funktion wurde entfernt."
 - uid: microsoft.quantum.canon.inversemod
-  summary: "\n> [!WARNING]\n> Veraltet\n\nInverabmod ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.inversemodi\".\nVerwenden Sie @\"microsoft.quantum.math.inversemodi\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nInverabmod ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.inversemodi\".\nVerwenden Sie @\"microsoft.quantum.math.inversemodi\"."
 - uid: microsoft.quantum.canon.iscoprime
-  summary: "\n> [!WARNING]\n> Veraltet\n\nIscoprime ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.iscoprimei\".\nVerwenden Sie @\"microsoft.quantum.math.greatestcommondivisori\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nIscoprime ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.iscoprimei\".\nVerwenden Sie @\"microsoft.quantum.math.greatestcommondivisori\"."
 - uid: microsoft.quantum.canon.isresultone
   summary: Testet, ob ein angegebener Ergebniswert gleich `One`ist.
 - uid: microsoft.quantum.canon.isresultzero
   summary: Testet, ob ein angegebener Ergebniswert gleich `Zero`ist.
 - uid: microsoft.quantum.canon.littleendiantobigendian
-  summary: "\n> [!WARNING]\n> Veraltet\n\n\"Littleendiantobigendian\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.littleendianasbigendian\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"Littleendiantobigendian\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.littleendianasbigendian\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian\"."
 - uid: microsoft.quantum.canon.map
-  summary: "\n> [!WARNING]\n> Veraltet\n\nMap wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.arrays.mapped\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Arrays.Mapped\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nMap wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.arrays.mapped\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Arrays.Mapped\"."
 - uid: microsoft.quantum.canon.mapindex
-  summary: "\n> [!WARNING]\n> Veraltet\n\nMapindex ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arrays.mappedbyindex\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Arrays.MappedByIndex\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nMapindex ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arrays.mappedbyindex\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Arrays.MappedByIndex\"."
 - uid: microsoft.quantum.canon.modulus
-  summary: "\n> [!WARNING]\n> Veraltet\n\nDer Modulus ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.modulusi\".\nVerwenden Sie @\"microsoft.quantum.math.modulusi\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nDer Modulus ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.modulusi\".\nVerwenden Sie @\"microsoft.quantum.math.modulusi\"."
 - uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
   summary: >-
     Gibt einen mehrfach kontrollierten einheitlichen Vorgang $U $ zurück, der eine einheitliche $V _J $ anwendet, wenn dies durch den n-Qubit-Zahlen Status $ \ket{j} $ gesteuert wird.
@@ -157,7 +157,7 @@ functions:
 
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
 - uid: microsoft.quantum.canon.nearequalityfact
-  summary: "\n> [!WARNING]\n> Veraltet\n\n\"Netarequalityfact\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.diagnostics.nearequalityfactd\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"Netarequalityfact\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.diagnostics.nearequalityfactd\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\"."
 - uid: microsoft.quantum.canon.operationpow
   summary: >-
     Löst einen Vorgang für eine Stromversorgung aus.
@@ -189,15 +189,15 @@ functions:
 
     Das heißt, wenn ein Vorgang, der ein Gate $U $ darstellt, einen neuen Vorgang $U ^ m $ für eine Power $m $ zurückgibt.
 - uid: microsoft.quantum.canon.pad
-  summary: "\n> [!WARNING]\n> Veraltet\n\nDer Pad ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arrays.padded\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Arrays.Padded\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nDer Pad ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arrays.padded\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Arrays.Padded\"."
 - uid: microsoft.quantum.canon.paulifrombitstring
-  summary: "\n> [!WARNING]\n> Veraltet\n\n\"Paulifrombitstring\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.boolarrayaspauli\".\nVerwenden Sie @\"microsoft.quantum.convert.boolarrayaspauli\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"Paulifrombitstring\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.boolarrayaspauli\".\nVerwenden Sie @\"microsoft.quantum.convert.boolarrayaspauli\"."
 - uid: microsoft.quantum.canon.pnormalize
-  summary: "\n> [!WARNING]\n> Veraltet\n\nPnormalize ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.pnormalized\".\nVerwenden Sie @\"microsoft.quantum.math.pnormalized\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nPnormalize ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.pnormalized\".\nVerwenden Sie @\"microsoft.quantum.math.pnormalized\"."
 - uid: microsoft.quantum.canon.positiveintfromboolarr
-  summary: "\n> [!WARNING]\n> Veraltet\n\nPositivintfromboolarr ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.boolarrayasint\".\nVerwenden Sie @\"microsoft.quantum.convert.boolarrayasint\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nPositivintfromboolarr ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.boolarrayasint\".\nVerwenden Sie @\"microsoft.quantum.convert.boolarrayasint\"."
 - uid: microsoft.quantum.canon.positiveintfromresultarr
-  summary: "\n> [!WARNING]\n> Veraltet\n\nPositivertfromresultarr ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.resultarrayasint\".\nVerwenden Sie @\"microsoft.quantum.canon.resultarrayasint\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nPositivertfromresultarr ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.resultarrayasint\".\nVerwenden Sie @\"microsoft.quantum.canon.resultarrayasint\"."
 - uid: microsoft.quantum.canon.restrictedtosubregister
   summary: Schränkt einen Vorgang auf ein Array von Indizes eines Registers ein, d. h. ein unter Register.
 - uid: microsoft.quantum.canon.restrictedtosubregistera
@@ -216,39 +216,39 @@ functions:
 
     Der Modifizierer `CA` gibt an, dass der Vorgang steuerbar und adjointable ist.
 - uid: microsoft.quantum.canon.restricttosubregister
-  summary: "\n> [!WARNING]\n> Veraltet\n\nRestrictdesubregister ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.restrictedtosubregister\".\nVerwenden Sie @\"microsoft.quantum.canon.restrictedtosubregister\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nRestrictdesubregister ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.restrictedtosubregister\".\nVerwenden Sie @\"microsoft.quantum.canon.restrictedtosubregister\"."
 - uid: microsoft.quantum.canon.restricttosubregistera
-  summary: "\n> [!WARNING]\n> Veraltet\n\nRestrict| subregistera ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.restrictedtosubregistera\".\nVerwenden Sie @\"microsoft.quantum.canon.restrictedtosubregistera\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nRestrict| subregistera ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.restrictedtosubregistera\".\nVerwenden Sie @\"microsoft.quantum.canon.restrictedtosubregistera\"."
 - uid: microsoft.quantum.canon.restricttosubregisterc
-  summary: "\n> [!WARNING]\n> Veraltet\n\nRestrict| subregisterc ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.restrictedtosubregisterc\".\nVerwenden Sie @\"microsoft.quantum.canon.restrictedtosubregisterc\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nRestrict| subregisterc ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.restrictedtosubregisterc\".\nVerwenden Sie @\"microsoft.quantum.canon.restrictedtosubregisterc\"."
 - uid: microsoft.quantum.canon.restricttosubregisterca
-  summary: "\n> [!WARNING]\n> Veraltet\n\nRestrictTo subregisterca ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.restrictedtosubregisterca\".\nVerwenden Sie @\"microsoft.quantum.canon.restrictedtosubregisterca\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nRestrictTo subregisterca ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.restrictedtosubregisterca\".\nVerwenden Sie @\"microsoft.quantum.canon.restrictedtosubregisterca\"."
 - uid: microsoft.quantum.canon.resultarrfromboolarr
-  summary: "\n> [!WARNING]\n> Veraltet\n\nResultarrfromboolarr ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.boolarrayasresultarray\".\nVerwenden Sie @\"microsoft.quantum.convert.resultarrayasboolarray\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nResultarrfromboolarr ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.boolarrayasresultarray\".\nVerwenden Sie @\"microsoft.quantum.convert.resultarrayasboolarray\"."
 - uid: microsoft.quantum.canon.resultasint
-  summary: "\n> [!WARNING]\n> Veraltet\n\nResultasint ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.resultarrayasint\".\nVerwenden Sie @\"microsoft.quantum.convert.resultarrayasint\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nResultasint ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.resultarrayasint\".\nVerwenden Sie @\"microsoft.quantum.convert.resultarrayasint\"."
 - uid: microsoft.quantum.canon.resultfrombool
-  summary: "\n> [!WARNING]\n> Veraltet\n\nResultfrombool wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.convert.boolasresult\".\nVerwenden Sie @\"microsoft.quantum.convert.boolasresult\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nResultfrombool wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.convert.boolasresult\".\nVerwenden Sie @\"microsoft.quantum.convert.boolasresult\"."
 - uid: microsoft.quantum.canon.reverse
-  summary: "\n> [!WARNING]\n> Veraltet\n\nReverse ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arrays.reversed\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Arrays.Reversed\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nReverse ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arrays.reversed\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Arrays.Reversed\"."
 - uid: microsoft.quantum.canon.snd
   summary: Gibt bei einem Paar das zweite Element zurück.
 - uid: microsoft.quantum.canon.splitarray
-  summary: "\n> [!WARNING]\n> Veraltet\n\nSplitarray wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.arrays.partitioned\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Arrays.Partitioned\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nSplitarray wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.arrays.partitioned\".\nVerwenden Sie stattdessen @\"Microsoft.Quantum.Arrays.Partitioned\"."
 - uid: microsoft.quantum.canon.stackcapacity
-  summary: "\n> [!WARNING]\n> Veraltet\n\nStackcapacity ist veraltet."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nStackcapacity ist veraltet."
 - uid: microsoft.quantum.canon.stacklength
-  summary: "\n> [!WARNING]\n> Veraltet\n\nStacklength ist veraltet."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nStacklength ist veraltet."
 - uid: microsoft.quantum.canon.stacknew
-  summary: "\n> [!WARNING]\n> Veraltet\n\nStacknew ist veraltet."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nStacknew ist veraltet."
 - uid: microsoft.quantum.canon.stackpeek
-  summary: "\n> [!WARNING]\n> Veraltet\n\nStackpeek ist veraltet."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nStackpeek ist veraltet."
 - uid: microsoft.quantum.canon.stackpop
-  summary: "\n> [!WARNING]\n> Veraltet\n\nStackpop ist veraltet."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nStackpop ist veraltet."
 - uid: microsoft.quantum.canon.stackpush
-  summary: "\n> [!WARNING]\n> Veraltet\n\nStackpush wurde als veraltet markiert."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nStackpush wurde als veraltet markiert."
 - uid: microsoft.quantum.canon.tooperation
-  summary: "\n> [!WARNING]\n> Veraltet\n\n\"Deoperation\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.functionasoperation\".\nVerwenden Sie @\"microsoft.quantum.convert.functionasoperation\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"Deoperation\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.functionasoperation\".\nVerwenden Sie @\"microsoft.quantum.convert.functionasoperation\"."
 - uid: microsoft.quantum.canon.transformedoperation
   summary: Gibt bei Angabe einer Funktion und eines Vorgangs einen neuen Vorgang zurück, dessen Eingabe von der angegebenen Funktion transformiert wird.
 - uid: microsoft.quantum.canon.transformedoperationa
@@ -275,20 +275,20 @@ functions:
 
     Der Modifizierer `CA` gibt an, dass die Vorgänge steuerbar und adjointable sind.
 - uid: microsoft.quantum.canon.uncurryop
-  summary: "\n> [!WARNING]\n> Veraltet\n\nUncurryop ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.uncurriedop\".\nVerwenden Sie @\"microsoft.quantum.canon.uncurriedop\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nUncurryop ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.uncurriedop\".\nVerwenden Sie @\"microsoft.quantum.canon.uncurriedop\"."
 - uid: microsoft.quantum.canon.uncurryopa
-  summary: "\n> [!WARNING]\n> Veraltet\n\nUncurryopa ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.uncurriedopa\".\nVerwenden Sie @\"microsoft.quantum.canon.uncurriedopa\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nUncurryopa ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.uncurriedopa\".\nVerwenden Sie @\"microsoft.quantum.canon.uncurriedopa\"."
 - uid: microsoft.quantum.canon.uncurryopc
-  summary: "\n> [!WARNING]\n> Veraltet\n\nUncurryopc ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.uncurriedopc\".\nVerwenden Sie @\"microsoft.quantum.canon.uncurriedopc\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nUncurryopc ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.uncurriedopc\".\nVerwenden Sie @\"microsoft.quantum.canon.uncurriedopc\"."
 - uid: microsoft.quantum.canon.uncurryopca
-  summary: "\n> [!WARNING]\n> Veraltet\n\nUncurryopca ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.uncurriedopca\".\nVerwenden Sie @\"microsoft.quantum.canon.uncurriedopca\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nUncurryopca ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.uncurriedopca\".\nVerwenden Sie @\"microsoft.quantum.canon.uncurriedopca\"."
 - uid: microsoft.quantum.canon.weightonepaulis
   summary: Gibt ein Array aller Gewichtungs-1-Pauli-Operatoren für eine angegebene Anzahl von Qubits zurück.
 - uid: microsoft.quantum.canon.xor
-  summary: "\n> [!WARNING]\n> Veraltet\n\nXOR ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.logical.xor\".\nVerwenden Sie @\"microsoft.quantum.logical.xor\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nXOR ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.logical.xor\".\nVerwenden Sie @\"microsoft.quantum.logical.xor\"."
 operations:
 - uid: microsoft.quantum.canon.adiabaticstateenergyunitary
-  summary: "\n> [!WARNING]\n> Veraltet\n\nAdiabaticstateenergyeinheitlicher ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.simulation.estimateenergywithadiabaticevolution\".\nVerwenden Sie @\"microsoft.quantum.simuilation.pnormalized\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nAdiabaticstateenergyeinheitlicher ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.simulation.estimateenergywithadiabaticevolution\".\nVerwenden Sie @\"microsoft.quantum.simuilation.pnormalized\"."
 - uid: microsoft.quantum.canon.andladder
   summary: Führt eine gesteuerte "and-Leiter" für ein Register der Ziel-Qubits aus.
 - uid: microsoft.quantum.canon.applyand
@@ -298,14 +298,7 @@ operations:
 - uid: microsoft.quantum.canon.applycnotchainwithtarget
   summary: Berechnet die Parität eines Arrays von Qubits in einem Ziel-Qubit.
 - uid: microsoft.quantum.canon.applydiagonalunitary
-  summary: >-
-    Wendet ein Array komplexer Phasen auf numerische Basiszustände eines Register von Qubits an.
-
-
-    Das heißt, dies implementiert die Diagonale einheitliche Operation $U $, die eine komplexe Phase $e ^ {i \ theta_j} $ auf dem $n $-Qubit-Zahlen Status $ \ket{j} $ anwendet.
-
-
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i \ theta_j} \ket{j}\bra{j} $.
+  summary: Wendet ein Array komplexer Phasen auf numerische Basiszustände eines Register von Qubits an.
 - uid: microsoft.quantum.canon.applyfermionicswap
   summary: Wendet den fermionic-Swap an.
 - uid: microsoft.quantum.canon.applyif
@@ -375,29 +368,29 @@ operations:
 - uid: microsoft.quantum.canon.applyquantumfouriertransform
   summary: Führt die Quantum Fourier-Transformation für ein Quantum-Register durch, das eine ganze Zahl in der Little-Endian-Darstellung enthält.
 - uid: microsoft.quantum.canon.applyquantumfouriertransformbe
-  summary: "\n> [!WARNING]\n> Veraltet\n\nApplyquantenfouriertransformbe ist veraltet. Verwenden Sie stattdessen @ \"applyquantumfouriertransform (bigendianaslittleendian (QS))\".\nDieser Vorgang wurde entfernt."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nApplyquantenfouriertransformbe ist veraltet. Verwenden Sie stattdessen @ \"applyquantumfouriertransform (bigendianaslittleendian (QS))\".\nDieser Vorgang wurde entfernt."
 - uid: microsoft.quantum.canon.applyquantumfouriertransformle
-  summary: "\n> [!WARNING]\n> Veraltet\n\nApplyquantenfouriertransformle ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.applyquantumfouriertransform\".\nVerwenden Sie @\"microsoft.quantum.canon.applyquantumfouriertransform\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nApplyquantenfouriertransformle ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.applyquantumfouriertransform\".\nVerwenden Sie @\"microsoft.quantum.canon.applyquantumfouriertransform\"."
 - uid: microsoft.quantum.canon.applyreversedopbigendian
-  summary: "\n> [!WARNING]\n> Veraltet\n\nApplyrevergendopbigendian ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.applyreversedopbe\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nApplyrevergendopbigendian ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.applyreversedopbe\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE\"."
 - uid: microsoft.quantum.canon.applyreversedopbigendiana
-  summary: "\n> [!WARNING]\n> Veraltet\n\nApplyrevergendopbigendiana ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.applyreversedopbea\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nApplyrevergendopbigendiana ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.applyreversedopbea\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA\"."
 - uid: microsoft.quantum.canon.applyreversedopbigendianc
-  summary: "\n> [!WARNING]\n> Veraltet\n\nApplyrevergendopbigendianc ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.applyreversedopbec\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nApplyrevergendopbigendianc ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.applyreversedopbec\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"."
 - uid: microsoft.quantum.canon.applyreversedopbigendianca
-  summary: "\n> [!WARNING]\n> Veraltet\n\nApplyrevereindopbigendianca ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.applyreversedopbeca\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nApplyrevereindopbigendianca ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.applyreversedopbeca\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"."
 - uid: microsoft.quantum.canon.applyreversedoplittleendian
-  summary: "\n> [!WARNING]\n> Veraltet\n\nApplyreverledoplittleendian ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.applyreversedople\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nApplyreverledoplittleendian ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.applyreversedople\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE\"."
 - uid: microsoft.quantum.canon.applyreversedoplittleendiana
-  summary: "\n> [!WARNING]\n> Veraltet\n\nApplyreverledoplittleendiana ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.applyreversedoplea\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nApplyreverledoplittleendiana ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.applyreversedoplea\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA\"."
 - uid: microsoft.quantum.canon.applyreversedoplittleendianc
-  summary: "\n> [!WARNING]\n> Veraltet\n\nApplyreverledoplittleendianc ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.applyreversedoplec\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nApplyreverledoplittleendianc ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.applyreversedoplec\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"."
 - uid: microsoft.quantum.canon.applyreversedoplittleendianca
-  summary: "\n> [!WARNING]\n> Veraltet\n\nApplyreverledoplittleendianca ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.applyreversedopleca\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nApplyreverledoplittleendianca ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.applyreversedopleca\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"."
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
-  summary: "\n> [!WARNING]\n> Veraltet\n\nApplyripplecarrycomparatorbe ist veraltet. Verwenden Sie stattdessen @ \"compareusingripplecarry (bigendianaslittleendian (x), bigendianaslittleendian (y), Output)\".\nDieser Vorgang wurde entfernt."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nApplyripplecarrycomparatorbe ist veraltet. Verwenden Sie stattdessen @ \"compareusingripplecarry (bigendianaslittleendian (x), bigendianaslittleendian (y), Output)\".\nDieser Vorgang wurde entfernt."
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorle
-  summary: "\n> [!WARNING]\n> Veraltet\n\nApplyripplecarrycomparatorle ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.compareusingripplecarry\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nApplyripplecarrycomparatorle ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.compareusingripplecarry\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry\"."
 - uid: microsoft.quantum.canon.applyseriesofops
   summary: Wendet eine Liste von OPS und deren Zielen sequenziell auf ein Array an.
 - uid: microsoft.quantum.canon.applyseriesofopsa
@@ -440,6 +433,14 @@ operations:
     Wendet einen Single-Qubit-Vorgang auf jedes indizierte Element in einem Register an.
 
     Der Modifizierer `CA` gibt an, dass der Single-Qubit-Vorgang adjointable und steuerbar ist.
+- uid: microsoft.quantum.canon.applytoelement
+  summary: Wendet einen Vorgang auf ein angegebenes Element eines Arrays an.
+- uid: microsoft.quantum.canon.applytoelementa
+  summary: Wendet einen Vorgang auf ein angegebenes Element eines Arrays an.
+- uid: microsoft.quantum.canon.applytoelementc
+  summary: Wendet einen Vorgang auf ein angegebenes Element eines Arrays an.
+- uid: microsoft.quantum.canon.applytoelementca
+  summary: Wendet einen Vorgang auf ein angegebenes Element eines Arrays an.
 - uid: microsoft.quantum.canon.applytofirstqubit
   summary: Wendet einen Vorgang auf das erste Qubit im Register an.
 - uid: microsoft.quantum.canon.applytofirstqubita
@@ -541,12 +542,18 @@ operations:
   summary: Bei einem Vorgang, der eine Eingabe akzeptiert, eine Funktion, die eine mit diesem Vorgang kompatible Ausgabe zurückgibt, sowie eine Eingabe für diese Funktion wendet den Vorgang mithilfe der-Funktion an, um die Eingabe in ein vom Vorgang erwartetes Formular umzuwandeln.
 - uid: microsoft.quantum.canon.applywithinputtransformationca
   summary: Bei einem Vorgang, der eine Eingabe akzeptiert, eine Funktion, die eine mit diesem Vorgang kompatible Ausgabe zurückgibt, sowie eine Eingabe für diese Funktion wendet den Vorgang mithilfe der-Funktion an, um die Eingabe in ein vom Vorgang erwartetes Formular umzuwandeln.
+- uid: microsoft.quantum.canon.approximatelyapplydiagonalunitary
+  summary: Wendet ein Array komplexer Phasen auf numerische Basiszustände eines Register von Qubits an und verkürzt kleine Drehwinkel entsprechend einer bestimmten Toleranz.
+- uid: microsoft.quantum.canon.approximatelymultiplexpauli
+  summary: Wendet eine für ein Array von Qubits bedingte Pauli-Drehung an und verkürzt kleine Drehwinkel entsprechend einer gegebenen Toleranz.
+- uid: microsoft.quantum.canon.approximatelymultiplexz
+  summary: Wendet eine Pauli Z-Drehung an, die auf ein Array von Qubits bedingt ist, wobei kleine Drehwinkel entsprechend einer gegebenen Toleranz abgeschnitten werden.
 - uid: microsoft.quantum.canon.approximateqft
   summary: Wenden Sie die ungefähre quantfourier Transform (aqft) auf ein Quantum-Register an.
 - uid: microsoft.quantum.canon.asserthighestbit
-  summary: "\n> [!WARNING]\n> Veraltet\n\nAsserthighestbit ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.assertmostsignificantbit\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nAsserthighestbit ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.assertmostsignificantbit\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit\"."
 - uid: microsoft.quantum.canon.assertlessthanphasele
-  summary: "\n> [!WARNING]\n> Veraltet\n\nAssertlessthanphasele ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.assertphaselessthan\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nAssertlessthanphasele ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.assertphaselessthan\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\"."
 - uid: microsoft.quantum.canon.assertphase
   summary: >-
     Bestätigt, dass die Phase eines gleich geordneten Superposition-Zustands den erwarteten Wert aufweist.
@@ -554,15 +561,15 @@ operations:
 
     Bestätigt insbesondere, dass die Phase $ \phi $ eines Quantum-Zustands, der als $ \bruchteil {e ^ {i t}} {\sqrt{2}} (e ^ {i\phi} \ Ket{0} + e ^ {-i\phi} \ Ket{1}) $ für ein beliebiges echtes t ausgedrückt werden kann, den erwarteten Wert hat.
 - uid: microsoft.quantum.canon.assertprobintbe
-  summary: "\n> [!WARNING]\n> Veraltet\n\nAssertprobintbe ist veraltet. Verwenden Sie stattdessen @ \"assertprobint (Status Index, prob, bigendianaslittleendian (Qubits), Tolerance)\".\nDieser Vorgang wurde entfernt."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nAssertprobintbe ist veraltet. Verwenden Sie stattdessen @ \"assertprobint (Status Index, prob, bigendianaslittleendian (Qubits), Tolerance)\".\nDieser Vorgang wurde entfernt."
 - uid: microsoft.quantum.canon.cascadecnot
-  summary: "\n> [!WARNING]\n> Veraltet\n\nCascadecnot ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.applycnotchain\".\nVerwenden Sie @\"microsoft.quantum.canon.applycnotchain\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nCascadecnot ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.applycnotchain\".\nVerwenden Sie @\"microsoft.quantum.canon.applycnotchain\"."
 - uid: microsoft.quantum.canon.cnotchain
-  summary: "\n> [!WARNING]\n> Veraltet\n\nCnotchain ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.applycnotchain\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nCnotchain ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.applycnotchain\"."
 - uid: microsoft.quantum.canon.cnotchaintarget
-  summary: "\n> [!WARNING]\n> Veraltet\n\nCnotchaintarget ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.applycnotchainwithtarget\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nCnotchaintarget ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.applycnotchainwithtarget\"."
 - uid: microsoft.quantum.canon.copymostsignificantbitle
-  summary: "\n> [!WARNING]\n> Veraltet\n\nCopymugesignifiantbitle ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.copymostsignificantbit\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nCopymugesignifiantbitle ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.copymostsignificantbit\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit\"."
 - uid: microsoft.quantum.canon.cx
   summary: >-
     Wendet das X (gesteuertes X)-Gate auf ein paar von Qubits an.
@@ -601,31 +608,31 @@ operations:
 
     \end{align}
 - uid: microsoft.quantum.canon.inplacemajority
-  summary: "\n> [!WARNING]\n> Veraltet\n\nInplacemajority ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.applymajorityinplace\".\nVerwenden Sie @\"microsoft.quantum.arithmetic.applymajorityinplace\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nInplacemajority ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.applymajorityinplace\".\nVerwenden Sie @\"microsoft.quantum.arithmetic.applymajorityinplace\"."
 - uid: microsoft.quantum.canon.inplacexorbe
-  summary: "\n> [!WARNING]\n> Veraltet\n\nInplacexorbe ist veraltet. Verwenden Sie stattdessen @ \"applyreversdopleca (applyxorinplace (Value, _), Target)\".\nDieser Vorgang wurde entfernt."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nInplacexorbe ist veraltet. Verwenden Sie stattdessen @ \"applyreversdopleca (applyxorinplace (Value, _), Target)\".\nDieser Vorgang wurde entfernt."
 - uid: microsoft.quantum.canon.inplacexorle
-  summary: "\n> [!WARNING]\n> Veraltet\n\nInplacexorle ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.measurement.applyxorinplace\".\nVerwenden Sie @\"Microsoft.Quantum.Measurement.ApplyXorInPlace\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nInplacexorle ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.measurement.applyxorinplace\".\nVerwenden Sie @\"Microsoft.Quantum.Measurement.ApplyXorInPlace\"."
 - uid: microsoft.quantum.canon.integerincrementle
-  summary: "\n> [!WARNING]\n> Veraltet\n\nIntegerincrementle ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.incrementbyinteger\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.IncrementByInteger\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nIntegerincrementle ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.incrementbyinteger\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.IncrementByInteger\"."
 - uid: microsoft.quantum.canon.integerincrementphasele
-  summary: "\n> [!WARNING]\n> Veraltet\n\nIntegerincrementphasele ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.incrementphasebyinteger\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nIntegerincrementphasele ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.incrementphasebyinteger\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger\"."
 - uid: microsoft.quantum.canon.iteratethroughcartesianpower
   summary: Wendet einen Vorgang für jeden Index in der kartesischen Potenz eines ganzzahligen Bereichs an.
 - uid: microsoft.quantum.canon.iteratethroughcartesianproduct
   summary: Wendet einen Vorgang für jeden Index im kartesischen Produkt mehrerer Bereiche an.
 - uid: microsoft.quantum.canon.measureintegerbe
-  summary: "\n> [!WARNING]\n> Veraltet\n\n\"Messreintegerbe\" ist veraltet. Verwenden Sie stattdessen @ \"messreinteger (bigendianaslittleendian (Target))\".\nDieser Vorgang wurde entfernt."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"Messreintegerbe\" ist veraltet. Verwenden Sie stattdessen @ \"messreinteger (bigendianaslittleendian (Target))\".\nDieser Vorgang wurde entfernt."
 - uid: microsoft.quantum.canon.modularaddproductle
-  summary: "\n> [!WARNING]\n> Veraltet\n\n\"Modularaddproductle\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"Modularaddproductle\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger\"."
 - uid: microsoft.quantum.canon.modularaddproductphasele
-  summary: "\n> [!WARNING]\n> Veraltet\n\n\"Modularaddproductphasele\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"Modularaddproductphasele\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger\"."
 - uid: microsoft.quantum.canon.modularincrementle
-  summary: "\n> [!WARNING]\n> Veraltet\n\n\"Modularincrementle\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.modularincrementbyinteger\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"Modularincrementle\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.modularincrementbyinteger\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger\"."
 - uid: microsoft.quantum.canon.modularincrementphasele
-  summary: "\n> [!WARNING]\n> Veraltet\n\n\"Modularincrementphasele\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.incrementphasebymodularinteger\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"Modularincrementphasele\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.incrementphasebymodularinteger\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger\"."
 - uid: microsoft.quantum.canon.modularmultiplybyconstantle
-  summary: "\n> [!WARNING]\n> Veraltet\n\n\"Modularmultiplybyconstantle\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.multiplybymodularinteger\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"Modularmultiplybyconstantle\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.multiplybymodularinteger\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger\"."
 - uid: microsoft.quantum.canon.multiplexoperations
   summary: >-
     Wendet ein Array von Vorgängen an, die von einem Array von Zahlen Zuständen gesteuert werden.
@@ -648,23 +655,9 @@ operations:
 
     $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
 - uid: microsoft.quantum.canon.multiplexpauli
-  summary: >-
-    Wendet eine für ein Array von Qubits bedingte Pauli-Rotation an.
-
-
-    Dadurch wird der multiplizierende einheitliche Vorgang $U $ angewendet, der die Drehung um den Winkel $ \ theta_j $ um einen Single-Qubit-Pauli-Operator $P $ durchführt, wenn er durch den $n $-Qubit-Zahlen Status $ \ket{j} $ gesteuert wird.
-
-
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \ theta_j} $.
+  summary: Wendet eine für ein Array von Qubits bedingte Pauli-Rotation an.
 - uid: microsoft.quantum.canon.multiplexz
-  summary: >-
-    Wendet eine Pauli Z-Drehung an, die auf ein Array von Qubits bedingt ist.
-
-
-    Dadurch wird der multiplizierende einheitliche Vorgang $U $ angewendet, der die Drehung um den Winkel $ \ theta_j $ um einen Single-Qubit-Pauli-Operator $Z $ durchführt, wenn er durch den $n $-Qubit-Zahlen Status $ \ket{j} $ gesteuert wird.
-
-
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \ theta_j} $.
+  summary: Wendet eine Pauli Z-Drehung an, die auf ein Array von Qubits bedingt ist.
 - uid: microsoft.quantum.canon.noop
   summary: Führt den Identitäts Vorgang (No-OP) für ein Argument aus.
 - uid: microsoft.quantum.canon.permutequbits
@@ -688,22 +681,22 @@ operations:
 - uid: microsoft.quantum.canon.swapreverseregister
   summary: Verwendet Swap-Gates zum Umkehren der Reihenfolge der Qubits in einem Register.
 - uid: microsoft.quantum.canon.with
-  summary: "\n> [!WARNING]\n> Veraltet\n\nMit wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.canon.applywith\".\nVerwenden Sie @\"Microsoft.Quantum.Canon.ApplyWith\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nMit wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.canon.applywith\".\nVerwenden Sie @\"Microsoft.Quantum.Canon.ApplyWith\"."
 - uid: microsoft.quantum.canon.witha
-  summary: "\n> [!WARNING]\n> Veraltet\n\n\"-\" Ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.applywitha\".\nVerwenden Sie @\"Microsoft.Quantum.Canon.ApplyWithA\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"-\" Ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.applywitha\".\nVerwenden Sie @\"Microsoft.Quantum.Canon.ApplyWithA\"."
 - uid: microsoft.quantum.canon.withc
-  summary: "\n> [!WARNING]\n> Veraltet\n\nWithc ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.applywithc\".\nVerwenden Sie @\"Microsoft.Quantum.Canon.ApplyWithC\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nWithc ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.applywithc\".\nVerwenden Sie @\"Microsoft.Quantum.Canon.ApplyWithC\"."
 - uid: microsoft.quantum.canon.withca
-  summary: "\n> [!WARNING]\n> Veraltet\n\nWithca ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.applywithca\".\nVerwenden Sie @\"Microsoft.Quantum.Canon.ApplyWithCA\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nWithca ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.applywithca\".\nVerwenden Sie @\"Microsoft.Quantum.Canon.ApplyWithCA\"."
 newtypes:
 - uid: microsoft.quantum.canon.ccnotop
   summary: Der Signaturtyp von ccnot Gate.
 - uid: microsoft.quantum.canon.resultstack
-  summary: "\n> [!WARNING]\n> Veraltet\n\nResultstack ist veraltet."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nResultstack ist veraltet."
 metadata:
-  ms.openlocfilehash: 8d54303daeb32281b1e531fce50443c132c14093
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: db3466b0e6fe493393f75bea85f9c91e2f56ec67
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870723"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905623"
