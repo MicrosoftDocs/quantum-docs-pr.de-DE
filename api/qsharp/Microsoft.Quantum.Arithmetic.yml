@@ -139,6 +139,8 @@ operations:
   summary: Multiplizieren von ganzzahligen ganzzahligen `xs` mit Vorzeichen `ys` mit Vorzeichen und Speichern des Ergebnisses in `result`, das anfänglich NULL sein muss.
 - uid: microsoft.quantum.arithmetic.preparefxp
   summary: Initialisieren Sie eine Quantum-fixpunktzahl in eine klassische Konstante.
+- uid: microsoft.quantum.arithmetic.reflectaboutinteger
+  summary: Reflektiert ein Quantum-Register über eine angegebene klassische Ganzzahl.
 - uid: microsoft.quantum.arithmetic.ripplecarryaddercdkm
   summary: 'Umkehrbarer, direkter Ripple-Carry-Wert: Addition von zwei Ganzzahlen.'
 - uid: microsoft.quantum.arithmetic.ripplecarryadderd
@@ -177,9 +179,9 @@ newtypes:
 - uid: microsoft.quantum.arithmetic.signedlittleendian
   summary: Der Typ einer Ganzzahl mit Vorzeichen, die in Little-kondian gespeichert ist (siehe littleenddian).
 metadata:
-  ms.openlocfilehash: f4bdca1f7b6339079cd1e13cfafc2de4e592901a
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 905bac104c15881be6b2e600bd090ff650d63e0e
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870441"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77904552"

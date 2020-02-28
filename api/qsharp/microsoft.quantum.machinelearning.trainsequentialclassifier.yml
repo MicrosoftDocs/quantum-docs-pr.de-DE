@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.trainsequentialclassifier
+name: TrainSequentialClassifier
+type: operation
+namespace: Microsoft.Quantum.MachineLearning
+summary: Trainiert bei der Struktur eines sequenziellen Klassifizierers den Klassifizierer für einen angegebenen beschrifteten Trainings Satz.
+syntax: 'operation TrainSequentialClassifier (models : Microsoft.Quantum.MachineLearning.SequentialModel[], samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions, trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule) : (Microsoft.Quantum.MachineLearning.SequentialModel, Int)'
+input:
+  content: '(models : Microsoft.Quantum.MachineLearning.SequentialModel[], samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions, trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule)'
+  types:
+  - name: models
+    summary: Ein Array von Modellen, die während des Trainings als Ausgangspunkt verwendet werden sollen.
+    isArray: true
+    uid: microsoft.quantum.machinelearning.sequentialmodel
+  - name: samples
+    summary: Eine Reihe von beschrifteten Trainingsdaten, die zum Durchführen von Schulungen verwendet werden.
+    isArray: true
+    uid: microsoft.quantum.machinelearning.labeledsample
+  - name: options
+    summary: Konfiguration, die beim Training verwendet werden soll. Weitere Informationen finden Sie unter @"microsoft.quantum.machinelearning.trainingoptions" und @"microsoft.quantum.machinelearning.defaulttrainingoptions".
+    uid: microsoft.quantum.machinelearning.trainingoptions
+  - name: trainingSchedule
+    summary: Ein Stichproben Zeitplan, der beim Auswählen von Beispielen aus den Trainingsdaten während der Trainingsschritte verwendet werden soll.
+    uid: microsoft.quantum.machinelearning.samplingschedule
+  - name: validationSchedule
+    summary: Ein Stichproben Zeitplan, der beim Auswählen von Beispielen aus den Trainingsdaten verwendet werden soll, wenn ausgewählt wird, welcher Startpunkt zu dem besten Klassifizierungs Ergebnis geführt hat.
+    uid: microsoft.quantum.machinelearning.samplingschedule
+output:
+  content: (Microsoft.Quantum.MachineLearning.SequentialModel, Int)
+  types:
+  - summary: >-
+      - Eine Parametrisierung des angegebenen Klassifizierers und eine Abweichung zwischen den beiden Klassen, die dem besten Ergebnis aus den einzelnen angegebenen Startpunkten entspricht.
+
+      - Die Anzahl der im besten Klassifizierungs Modell beobachteten Fehler.
+    types:
+    - uid: microsoft.quantum.machinelearning.sequentialmodel
+    - isPrimitive: true
+      uid: Int
+seeAlso:
+- microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
+- microsoft.quantum.machinelearning.validatesequentialclassifier
+metadata:
+  ms.openlocfilehash: 3abcfd38cbd089ec78cad6b48b157ad666813da9
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908462"

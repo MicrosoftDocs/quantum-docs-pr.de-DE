@@ -4,10 +4,10 @@ name: ControlledOnBitString
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Gibt einen einheitlichen Operator zurück, der ein Oracle auf das Ziel Register anwendet, wenn der Steuerelement Registrierungs Zustand einer angegebenen Bitmaske entspricht.
+  Gibt einen einheitlichen Vorgang zurück, der ein Oracle auf das Ziel Register anwendet, wenn der Steuerelement Registrierungs Zustand einer angegebenen Bitmaske entspricht.
 
 
-  Die Ausgabe dieser Funktion kann durch eine einheitliche Transformation $U $ dargestellt werden, z. b. \begin{align} U \ket{b_0 B_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 B_1 \cdpi b_ {n-1}} \otimes \begin{Cases} V \ket{\psi} & \textrm{if} (b_0 B_1 \cdots b_ {n-1}) = \texttt{Bits} \\\\ \ket{\psi} & \textrm{otherwits} \end{Cases}, \end{align}, wobei $V $ eine einheitliche Transformation ist, die die Aktion des `oracle` Vorgangs darstellt.
+  Die Ausgabe dieser Funktion ist ein Vorgang, der durch eine einheitliche Transformation $U $ dargestellt werden kann, sodass \begin{align} U \ket{b_0 B_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 B_1 \cdots b_ {n-1}} \otimes \begin{Cases} V \ket{\psi} & \textrm{if} (b_0 B_1 \cdots b_ {n-1}) = \texttt{Bits} \\\\ \ket{\psi} & \textrm{otherwits} \end{Cases}, \end{align}, wobei $V $ eine einheitliche Transformation ist, die die Aktion des `oracle` Vorgangs darstellt.
 remarks: >-
   Die Länge von `bits` und `controlRegister` muss gleich sein.
 
@@ -34,7 +34,7 @@ examples: >-
   ```
 
 
-  und
+  and
 
 
   ```qsharp
@@ -64,12 +64,12 @@ input:
   content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl))"
   types:
   - name: bits
-    summary: Die Bitzeichenfolge, für die der angegebene einheitliche Operator gesteuert werden soll.
+    summary: Die Bitzeichenfolge, für die der angegebene einheitliche Vorgang gesteuert werden soll.
     isArray: true
     isPrimitive: true
     uid: Bool
   - name: oracle
-    summary: Einheitlicher Operator, der auf das Ziel Register angewendet werden soll.
+    summary: Der auf das Ziel Register anzuwendende einheitliche Vorgang.
     isOperation: true
     input:
       types:
@@ -85,7 +85,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Ein einheitlicher Operator, der `oracle` auf das Ziel Register anwendet, wenn der Steuerelement Registrierungs Zustand der Bitmaske `bits`entspricht.
+  - summary: Ein einheitlicher Vorgang, der `oracle` auf das Ziel Register anwendet, wenn der Steuerelement Registrierungs Zustand der Bitmaske `bits`entspricht.
     isOperation: true
     input:
       types:
@@ -102,9 +102,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: dde246a6eb0cf5e278cd079ff52c3a0b0ff71120
-  ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
+  ms.openlocfilehash: e6f7f8980b2b9b8305df12da41e30fc563e54ad1
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 02/18/2020
-  ms.locfileid: "77441050"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77906524"

@@ -7,11 +7,11 @@ summary: >-
   Wendet ein Array von Vorgängen an, die von einem Array von Zahlen Zuständen gesteuert werden.
 
 
-  Das heißt, dass der Multiplikations gesteuerte einheitliche Vorgang $U $ anwendet, der einen einheitlichen $V _J $ anwendet, wenn er durch $n $-Qubit-Zahlen Status $ \ket{j} $ gesteuert wird.
+  Das heißt, dass der mehrfach gesteuerte einheitliche Vorgang $U $ angewendet wird, der eine einheitliche $V _J $ anwendet, wenn dies durch $n $-Qubit-Zahlen Status $ \ket{j} $ gesteuert wird.
 
 
   $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
-remarks: '`coefficients` werden mit Identitäts Elementen aufgefüllt, wenn weniger als $2 ^ n $ angegeben werden. Diese Implementierung verwendet $n-$1-Ancilla-Qubits.'
+remarks: '`coefficients` werden mit Identitäts Elementen aufgefüllt, wenn weniger als $2 ^ n $ angegeben werden. Diese Implementierung verwendet $n-$1-":illary"-Qubits.'
 syntax: "operation MultiplexOperations (unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
 references: '- Zur ersten Quantum-Simulation mit Quantum Beschleunigung Andrew M. Childs, Dmitri Maslov, yunabong Nam, Neil J. Ross, Yuan su https://arxiv.org/abs/1711.10980'
 input:
@@ -48,9 +48,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: bd248ece9d76729a33db3dfead177fa68909f438
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 93fa7ef1f5a7374f970098eb5fa865e02854d1ff
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223495"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77906711"

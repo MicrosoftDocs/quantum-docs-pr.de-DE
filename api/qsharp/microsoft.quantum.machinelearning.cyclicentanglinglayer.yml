@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.cyclicentanglinglayer
+name: CyclicEntanglingLayer
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: Gibt ein Array von einzeln kontrollierten Drehungen entlang einer angegebenen Achse zurück, das zyklisch über ein Register von Qubits angeordnet und durch unterschiedliche Modellparameter parametrisiert wird.
+examples: >-
+  Die folgenden sind gleichwertig:
+
+
+  ```Q#
+
+  let layer = CyclicEntanglingLayer(3, PauliX, 2);
+
+  let layer = [
+      ControlledRotation((0, [2]), PauliX, 0),
+      ControlledRotation((1, [0]), PauliX, 1),
+      ControlledRotation((2, [1]), PauliX, 2)
+  ];
+
+  ```
+syntax: 'function CyclicEntanglingLayer (nQubits : Int, axis : Pauli, stride : Int) : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
+input:
+  content: '(nQubits : Int, axis : Pauli, stride : Int)'
+  types:
+  - name: nQubits
+    summary: Die Anzahl der Qubits, die durch die angegebene Ebene bearbeitet wurden.
+    isPrimitive: true
+    uid: Int
+  - name: axis
+    summary: Die Drehungs Achse für jede Drehung in der angegebenen Ebene.
+    isPrimitive: true
+    uid: Pauli
+  - name: stride
+    summary: Die Trennung zwischen den Ziel-und Steuerelement Indizes für jede Drehung.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
+  types:
+  - summary: Ein Array von zwei-Qubit-gesteuerten Rotationen, das zyklisch über ein Register von `nQubits` Qubits angelegt ist.
+    isArray: true
+    uid: microsoft.quantum.machinelearning.controlledrotation
+metadata:
+  ms.openlocfilehash: 64f64fcfe2cbb969a0d16fba07ca39d64b53cbd4
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908734"
