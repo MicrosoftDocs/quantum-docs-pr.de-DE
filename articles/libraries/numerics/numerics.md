@@ -1,17 +1,17 @@
 ---
-title: Verwenden der Numerics-Bibliothek | Microsoft-Dokumentation
-description: Verwenden der Numerics-Bibliothek
+title: 'Verwenden der Microsoft Q # Numerics-Bibliothek'
+description: Erfahren Sie mehr über die Typen und Vorgänge, die in der Microsoft Quantum-Numerics-Bibliothek verfügbar sind.
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: ca24ff60cd9ae5077c7f4bae0012fe1180d7e6d4
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ad9f529efd06fdf13bab4467b091aafacf1d5b09
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821030"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907255"
 ---
 # <a name="using-the-numerics-library"></a>Verwenden der Numerics-Bibliothek
 
@@ -36,7 +36,7 @@ Die Numerics-Bibliothek unterstützt die folgenden Typen:
 1. **`SignedLittleEndian`** : identisch mit `LittleEndian`, mit dem Unterschied, dass es sich um eine ganze Zahl mit Vorzeichen handelt, die in zwei
 1. **`FixedPoint`** : stellt eine reelle Zahl dar, die aus einem Qubit-Array `qArr2 : Qubit[]` und einer binären Punktposition `pos`besteht, die die Anzahl der binären Ziffern links vom binären Punkt zählt. `qArr2` wird auf die gleiche Weise wie `SignedLittleEndian`gespeichert.
 
-## <a name="operations"></a>Operations
+## <a name="operations"></a>Operationen (Operations)
 
 Für jeden der drei oben genannten Typen stehen eine Vielzahl von Vorgängen zur Verfügung:
 

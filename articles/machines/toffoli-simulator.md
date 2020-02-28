@@ -1,17 +1,17 @@
 ---
-title: Quantum Development Kit-Simulator | Microsoft-Dokumentation
-description: Übersicht über das Quantum Development Kit von Microsoft zum Simulator
+title: Quantum Development Kit-Simulator
+description: Erfahren Sie mehr über den Microsoft QDK-Simulator für den Einsatz von Microsoft QDK, einen speziellen Zweck-Quantum-Simulator, der mit Millionen von Qubits verwendet werden kann
 author: alan-geller
 ms.author: ageller@microsoft.com
 ms.date: 01/16/2019
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
-ms.openlocfilehash: 26940d1a8fe31f1035e2d23a68940cd999517c6b
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 8a29caaa0fa058600a74e7d130e644374cbfa19c
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442354"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907017"
 ---
 # <a name="quantum-development-kit-toffoli-simulator"></a>Quantum Development Kit-Simulator
 
@@ -30,7 +30,7 @@ Um den Simulator zu verwenden, erstellen Sie einfach eine Instanz dieser Klasse,
     ///...
 ```
 
-## <a name="other-operations"></a>Weitere Vorgänge
+## <a name="other-operations"></a>Andere Vorgänge
 
 Der `ToffoliSimulator` unterstützt Drehungen und exponentiierte Paulis, z. b. `R` und `Exp`, wenn der resultierende Vorgang gleich `X` oder der Identität ist.
 

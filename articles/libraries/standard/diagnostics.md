@@ -1,16 +1,16 @@
 ---
-title: 'F #-Standardbibliotheken-Diagnose | Microsoft-Dokumentation'
-description: 'F #-Standardbibliotheken-Diagnose'
+title: 'Diagnose in den Q # Standard-Bibliotheken'
+description: 'Erfahren Sie mehr über die Diagnosefunktionen und-Vorgänge in den Q # Standard-Bibliotheken, die zum Abfangen von Fehlern oder Fehlern in quantenprogrammen verwendet werden'
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 67ec6780d8cbbda7223d46026a9df97cebc92b33
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ba2f248327bb3db4ee895f8e65ea31c17e42b5f4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820979"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906235"
 ---
 # <a name="diagnostics"></a>Diagnose #
 

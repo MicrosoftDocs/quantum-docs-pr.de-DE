@@ -1,17 +1,17 @@
 ---
-title: Quantum Dynamics | Microsoft-Dokumentation
-description: Konzeptionelle Dynamics Dynamics-Dokumentation
+title: Quantum Dynamics
+description: Informieren Sie sich über die Ähnlichkeiten und Unterschiede zwischen Quantum Dynamics und Classic Dynamics.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.quantumdynamics
-ms.openlocfilehash: 0fd27e59921fdf8429bf164c4c64cfa3b8e44160
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 9cb74ccd4b7806a90c0701300860d777fa8e5d75
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185340"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904484"
 ---
 # <a name="quantum-dynamics"></a>Quantum Dynamics
 
@@ -22,7 +22,7 @@ Bevor wir mit der Erläuterung von Quantum Dynamics fortfahren, empfiehlt es sic
 In klassischer Dynamics: Wir wissen aus dem zweiten Gesetz von Newton, dass die Position eines Partikels gemäß $F (x, t) = MA = m\frac {\ DD ^ 2} {\dd t ^ 2} {x} (t) $ weiterentwickelt wird, wobei $F (x, t) $ die Kraft ist, $m $ die Beschleunigung ist und $a $ die Beschleunigung ist.
 Bei einer anfänglichen Position $x (0) $, der Evolution time $t $ und der Beschreibung der Erzwingung der Kräfte, die auf das Partikel reagieren, können wir dann $x (t) $ suchen, indem wir die differenzielle Gleichung lösen, die von Newton-Gleichungen für $x (t) $ angegeben wird.
 Das Angeben der Kräfte auf diese Weise ist ein wenig.
-Wir werden also häufig die Kräfte in Bezug auf die potenzielle Energie des Systems Ausdrücken, die US $-\partial_x V (x, t) = m \bruchteil {\dd ^ 2} {\dd t ^ 2} {x} (t) $ ergibt.
+Wir werden also häufig die Erzwingung in Bezug auf die potenzielle Energie des Systems Ausdrücken, die US $-\ partial_x V (x, t) = m \bruchteil {\dd ^ 2} {\dd t ^ 2} {x} (t) $ ergibt.
 Daher wird die Dynamik des Systems bei einem Partikel nur von der potenziellen Energie Funktion, der Partikelmasse und der Entwicklungszeit angegeben.
 
 Eine umfassendere Sprache wird häufig für klassische Dynamics eingeführt, die über $F = MA $ hinausgeht.
@@ -30,7 +30,7 @@ Eine Formulierung, die besonders nützlich in der Quantum-Mechanik ist, ist hami
 In hamiltonan-Mechanismen enthalten die Gesamtenergie eines Systems und die (verallgemeinerten) Positionen und momenta alle Informationen, die zum Beschreiben der Bewegung eines beliebigen klassischen Objekts benötigt werden.
 Lassen Sie $f (x, p, t) $ eine Funktion der generalisierten Positionen $x $ und momenta $p $ eines Systems, und lassen Sie $H (x, p, t) $ die hamiltonan-Funktion sein.
 Wenn wir z. b. $f (x, p, t) = x (t) $ und $H (x, p, t) = p ^ 2 (t)/2M-V (x, t) $ nehmen, würden wir den obigen Fall von newtonan Dynamics wiederherstellen.
-In der Generalität haben wir diese \begin{align} \frac{d}{dt} f & = \partial_t f-(\partial_x H\partial_p f + \partial_p H\partial_x f)\\\\ & \defeq \partial_t f + \\{f, H\\}.
+In der Generalität haben wir diese \begin{align} \frac{d}{dt} f & = \ partial_t f-(\ partial_x H \ partial_p f + \ partial_p H \ partial_x f)\\\\ & \besiegq \ partial_t f + \\{f, H\\}.
 \end{align} hier $\\{f, H\\} $ wird als [Poisson-Klammer](https://en.wikipedia.org/wiki/Poisson_bracket) bezeichnet und ist aufgrund der zentralen Rolle, die beim Definieren von Dynamics spielt, in klassischer Dynamics allgegenwärtig.
 
 Quantum Dynamics kann mit exakt derselben Sprache beschrieben werden.
@@ -47,13 +47,13 @@ Dadurch wird sichergestellt, dass die Eigenwerte der Matrizen Real-wertig sind. 
 Ebenso wie die analog zu Position und Schwung in der Quantum-Mechanik durch Operatoren ersetzt werden müssen, muss die hamiltonan-Funktion durch einen Operator ersetzt werden.
 Bei einem Partikel im freien Speicherplatz haben wir z. b. $H (x, p) = p ^ 2/2M $, während in der Quantum-Mechanik der hamiltonan-Operator $ \hat{h} $ den Wert $ \hat{h} = \hat{p} ^ 2/2M $ hat.
 Aus dieser Perspektive besteht der Wechsel von "klassisch" zu "Quantum Dynamics" lediglich darin, die in normaler Dynamics verwendeten Variablen durch Operatoren zu ersetzen.
-Nachdem wir den hamiltonan-Operator durch Übersetzen der normalen klassischen hamiltona in die Quantum-Sprache erstellt haben, können wir die Dynamics einer beliebigen Quantum-Menge (d. h. eines Quantum-mechanischen Operators) $ \hat{f} (t) $ Via \begin{ align} \frac{d}{dt} \hat{f} = \partial_t \hat{f} + [\hat{f}, \hat{h}], \end{align} WHERE $ [f, H] = fH-HF $ wird als der komorname bezeichnet.
+Nachdem wir den hamiltonan-Operator durch Übersetzen der normalen klassischen hamiltona in die Quantum-Sprache erstellt haben, können wir die Dynamics einer beliebigen Quantum-Menge (d. h. eines Quantum-mechanischen Operators) $ \hat{f} (t) $ Via \begin{ align} \frac{d}{dt} \hat{fi} = \ partial_t \hat{Fi} + [\hat{fi}, \hat{h}], \end{align}, wobei $ [f, H] = fH-HF $ als der komorname bezeichnet wird.
 Dieser Ausdruck ähnelt dem klassischen Ausdruck, der oben angegeben wurde. der Unterschied besteht darin, dass die Poisson-Klammer $\\{f, H\\} $ durch den komortator zwischen $f $ und $H $ ersetzt wird.
 Dieses Verfahren, mit dem eine klassische hamiltona und die Verwendung zum Suchen eines Quantums hamiltonan verwendet werden, wird im Quantum-Jargon als kanonische Quantisierung bezeichnet.
 
 An welchen Operatoren $f $ am meisten interessiert?  Die Antwort darauf hängt von dem Problem ab, das wir lösen möchten.
 Die vielleicht nützlichste Menge, die Sie finden, ist der Quantum State-Operator, der in der vorherigen konzeptionellen Dokumentation verwendet werden kann, um alles zu extrahieren, was wir über die Dynamics erfahren würden.
-Wenn Sie dies durchgeführt haben (und das Ergebnis so vereinfachen, dass es einen reinen Zustand hat), wird die Schrödinger-Gleichung für den Quantum-Status "\begin{align} i\partial_t \ket{\psi (t)} = \hat{h} (t) \ket{\psi (t)}" gefunden.
+Wenn Sie dies durchgeführt haben (und das Ergebnis so vereinfachen, dass es einen reinen Zustand hat), wird die Schrödinger-Gleichung für den Quantum-Status "\begin{align} i \ partial_t \ket{\psi (t)} = \hat{h} (t) \ket{\psi (t)}" gefunden.
 \end{align}
 
 Diese Gleichung, aber vielleicht weniger intuitiv als die oben genannten, liefert vielleicht den einfachsten Ausdruck, um zu verstehen, wie die Quantum-Dynamics auf einem Quantum-oder klassischen Computer simuliert werden kann.

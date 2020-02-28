@@ -1,17 +1,17 @@
 ---
-title: Unterschiedliche Eingaben für Eingaben | Ablauf Verfolgungs Simulator für Quantum-Computer | Microsoft-Dokumentation
-description: Übersicht über Ablaufverfolgungssimulator für Quantencomputer
+title: Unterschiedliche Eingaben für Eingaben
+description: 'Erfahren Sie mehr über die unterschiedliche e-How-Eingaben von Microsoft QDK, die ihren Q #-Code auf potenzielle Konflikte mit freigegebenen Qubits überprüft.'
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 3c21a54f5da83bf1ea0792e79cc773be5fba71e8
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 11a0573242c8afb12f242aa3be5f9cff18290452
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820962"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907102"
 ---
 # <a name="distinct-inputs-checker"></a>Unterschiedliche Eingaben für Eingaben
 
@@ -71,6 +71,6 @@ namespace Quantum.MyProgram
 
 Die Klasse `QCTraceSimulatorConfiguration` speichert die Konfiguration des Ablauf Verfolgungs Simulators für Quantum-Computer und kann als Argument für den `QCTraceSimulator`-Konstruktor angegeben werden. Wenn `useDistinctInputsChecker` auf true festgelegt ist, ist `Distinct Inputs Checker` aktiviert. Weitere Informationen finden Sie in der API-Dokumentation zu [qctracesimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) und [qctracesimulatorconfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?) .
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - Übersicht über den Ablauf [Verfolgungs Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) für Quantum-Computer

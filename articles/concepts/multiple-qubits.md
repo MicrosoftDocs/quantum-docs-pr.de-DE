@@ -1,17 +1,17 @@
 ---
-title: Mehrere Qubits | Microsoft-Dokumentation
-description: Mehrere Qubits
+title: Mehrere Qubits
+description: Erfahren Sie, wie Sie Vorgänge für zwei oder mehr Qubits ausführen.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e9c043f4ee41a878b9544a27d5ea052fce29f06e
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 2fa227c823cd87df9c799c043c699e4ce818b8e3
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863215"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907544"
 ---
 # <a name="multiple-qubits"></a>Mehrere Qubits
 
@@ -27,7 +27,7 @@ Diese Tools sind absolut notwendig, um die Gate-Sätze zu verstehen, die häufig
 
 ## <a name="representing-two-qubits"></a>Darstellen von zwei Qubits
 Der Hauptunterschied zwischen einem-und zwei-Qubit-Zuständen besteht darin, dass zwei-Qubit-Zustände vierdimensional und nicht zweidimensional sind.
-Dies liegt daran, dass die Berechnungsbasis für zwei-Qubit-Zustände durch die tensorflow-Produkte von einem-Qubit-Status gebildet wird.  Beispiel: \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \ End{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \ End{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \ End{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \ End{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \end{bmatrix}.
+Dies liegt daran, dass die Berechnungsbasis für zwei-Qubit-Zustände durch die tensorflow-Produkte von einem-Qubit-Status gebildet wird.  Beispiel: \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \ End{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \ End{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \ End{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \ End{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \end{bmatrix}.\\
 \end{align}
 
 Es ist leicht zu erkennen, dass der Quantum-Status $n $ Qubits in der Regel durch einen Einheits Vektor der Dimension "$ 2 ^ n $" dargestellt wird, der diese Konstruktion verwendet.  Der Vektor
@@ -103,7 +103,7 @@ Wir können auch zwei Qubit-Gates durch Anwenden von Single-Qubit Gates auf beid
 
 $ $ \begin{bmatrix} a \ b\\\\ c \ d \end{bmatrix} $ $
 
-und der
+and
 
 $ $ \begin{bmatrix} e \ f\\\\ g \ h \end{bmatrix} $ $
 

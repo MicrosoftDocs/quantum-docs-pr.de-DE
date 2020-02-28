@@ -1,17 +1,17 @@
 ---
-title: Beitragen von Code | Microsoft-Dokumentation
-description: Beitragen von Code
+title: Beitragen von Code an das Microsoft QDK
+description: Erfahren Sie, wie Sie Beispiel-und Bibliotheks Code zum Microsoft Quantum Development Kit (QDK) beitragen.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: f9e0f0d9540102331aea64a1245cbaa4833e1e02
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 1882e640dacf3987745ed225fef18636726f70a8
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819959"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907476"
 ---
 # <a name="contributing-code"></a>Mitwirken am Code #
 
@@ -26,7 +26,7 @@ Ein idealer Code Beitrag baut auf der vorhandenen Arbeit in einem Quantum Develo
 Wenn wir einen Code Beitrag akzeptieren, wird er Teil des Quantum Development Kit, sodass neue Features auf die gleiche Weise wie der Rest des Quantums Development Kit veröffentlicht, gewartet und entwickelt werden.
 Daher ist es hilfreich, wenn die durch einen Beitrag hinzugefügten Funktionen gut getestet und dokumentiert werden.
 
-### <a name="unit-tests"></a>Komponenten Tests ###
+### <a name="unit-tests"></a>Komponententests ###
 
 Die Q #-Funktionen,-Vorgänge und benutzerdefinierten Typen, die Bibliotheken wie den-Kanon bilden, werden automatisch als Teil der Entwicklung im [**Microsoft/quantrelibraries-** ](https://github.com/Microsoft/QuantumLibraries/) Repository getestet.
 Wenn eine neue Pull Request beispielsweise geöffnet wird, prüft unsere [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) Konfiguration, ob die Änderungen im Pull Request vorhandene Funktionen, von denen die Quantum-Programmier Community abhängt, nicht unterbrechen.

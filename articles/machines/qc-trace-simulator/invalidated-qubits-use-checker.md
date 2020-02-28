@@ -1,17 +1,17 @@
 ---
-title: Ungültige Qubits-Verwendungs Überprüfung | Ablauf Verfolgungs Simulator für Quantum-Computer | Microsoft-Dokumentation
-description: Übersicht über Ablaufverfolgungssimulator für Quantencomputer
+title: Überprüfung auf Verwendung von ungültigen Qubits
+description: 'Erfahren Sie mehr über das von Microsoft QDK ungültige Qubits use Checker, das den Q #-Code auf potenziell ungültige Qubits überprüft.'
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: 093937346488725eacb69ef7da6affde764ec5c1
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: e2bbb12448e27f28db030a0084302fb24f46f26b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820877"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907068"
 ---
 # <a name="invalidated-qubits-use-checker"></a>Ungültige Qubits-Verwendungs Überprüfung
 
@@ -58,6 +58,6 @@ namespace Quantum.MyProgram
 
 Die Klasse `QCTraceSimulatorConfiguration` speichert die Konfiguration des Ablauf Verfolgungs Simulators für Quantum-Computer und kann als Argument für den `QCTraceSimulator`-Konstruktor angegeben werden. Wenn `useInvalidatedQubitsUseChecker` auf true festgelegt ist, ist `Invalidated Qubits Use Checker` aktiviert. Weitere Informationen finden Sie in der API-Dokumentation zu [qctracesimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) und [qctracesimulatorconfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) .
 
-## <a name="see-also"></a>Siehe auch ##
+## <a name="see-also"></a>Weitere Informationen ##
 
 - Übersicht über den Ablauf [Verfolgungs Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) für Quantum-Computer

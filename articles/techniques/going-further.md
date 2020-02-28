@@ -1,17 +1,17 @@
 ---
-title: 'Weitere Schritte: f #-Techniken | Microsoft-Dokumentation'
-description: 'Weitere Schritte: Q #-Techniken'
+title: 'Fortfahren mit Q #-Techniken'
+description: 'Untersuchen Sie erweiterte Themen in Q #, z. b. das Erstellen von generischen Funktionen und das Ausleihen von'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.going-further
-ms.openlocfilehash: 41713827a93d2cc97e198fa4ad377012c846cf8b
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 46ebf544c1d6e56f152a06d06151305fa972011a
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036235"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906898"
 ---
 # <a name="going-further"></a>Weiter #
 

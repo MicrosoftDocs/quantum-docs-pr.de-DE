@@ -1,17 +1,17 @@
 ---
-title: Abrufen von Energie Stufen Schätzungen | Microsoft-Dokumentation
-description: Dokumente zum Abrufen von Energiepegel Schätzungen
+title: Abrufen von Energiestandschätzungen
+description: 'Exemplarische Vorgehensweise: f #-Beispielprogramm, mit dem die Energiepegel Werte von molekularer Wasserstoff geschätzt werden'
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: 0fd457b152083af364d924502c18bc0813e34b83
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 3242d8c6dc6fad2bd99055027dd7ce4ec3510ff4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442586"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907306"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Abrufen von Energiestandschätzungen
 Das Einschätzen der Werte von Energie Stufen ist eine der Hauptanwendungen der Quantum-Chemie. Hier wird erläutert, wie dies für das kanonische Beispiel für den molekularen Wasserstoff ausgeführt werden kann. Das in diesem Abschnitt referenzierte Beispiel ist `MolecularHydrogen` im Repository "Chemistry Samples". Ein visuelles Beispiel, in dem die Ausgabe dargestellt wird, ist die `MolecularHydrogenGUI` Demo.

@@ -1,17 +1,17 @@
 ---
-title: Öffnen von Pull Requests | Microsoft-Dokumentation
-description: Öffnen von Pull Requests
+title: Öffnen von Pull Requests
+description: Erfahren Sie, wie Sie eine GitHub-Pull Request übermitteln, wenn Sie bereit sind, Code oder Dokumentation für die Microsoft Quantum Development Kit beizutragen.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: d70a0a0319d14cfdae4910b897733d77b236f2f9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183725"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907459"
 ---
 # <a name="opening-pull-requests"></a>Öffnen von Pull Requests #
 
@@ -42,19 +42,19 @@ Wir zeichnen häufig Diagramme, in denen Commits als Kreise mit Pfeilen aus vorh
 Angenommen, Sie haben einen Beitrag in einer _Verzweigung_ mit dem Namen `feature`gestartet.
 Ihre Verzweigung von **Microsoft/Quantum** könnte etwa wie folgt aussehen:
 
-![](~/media/git-workflow-step0.png)
+![Eine funktionierende Verzweigung in GitHub](~/media/git-workflow-step0.png)
 
 Wenn Sie Ihre Änderungen in Ihrem lokalen Repository vornehmen, können Sie Änderungen aus einem anderen Repository per _Pull_ abrufen, um alle Änderungen zu erfassen, die mit upstreamvorgängen durchgeführt wurden.
 
-![](~/media/git-workflow-step1.png)
+![Pullen und Zusammenführen von Änderungen von einem upstreamrepository](~/media/git-workflow-step1.png)
 
 Pull Requests funktionieren auf die gleiche Weise, aber in umgekehrter Reihenfolge: Wenn Sie einen Pull Request öffnen, bitten Sie das upstreamrepository, in den Beitrag zu ziehen.
 
-![](~/media/git-workflow-step2.png)
+![Anfordern von Pull der Änderungen zurück in das ursprüngliche Repository](~/media/git-workflow-step2.png)
 
 Wenn Sie eine Pull Request in einem unserer Depots öffnen, bietet GitHub anderen Benutzern in der Community die Möglichkeit, eine Zusammenfassung Ihrer Änderungen anzuzeigen, Sie zu kommentieren und Vorschläge für einen noch besseren Beitrag zu geben.
 
-![](~/media/pull-request-header.png)
+![Screenshot einer Pull Request in GitHub](~/media/pull-request-header.png)
 
 Mithilfe dieses Prozesses können wir die GitHub-Funktionalität nutzen, um Beiträge zu verbessern und ein qualitativ hochwertiges Produkt für die Quantum-Programmier Community zu erhalten.
 

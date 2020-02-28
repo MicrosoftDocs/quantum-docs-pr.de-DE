@@ -1,17 +1,17 @@
 ---
-title: 'Alles zusammengeh Otten: f #-Techniken | Microsoft-Dokumentation'
-description: 'Alles zusammengeh Otten: f #-Techniken'
+title: 'F #-Techniken-alles vereinen'
+description: 'Gehen Sie durch ein einfaches Q #-Programm, das die Quantum-Teleportation veranschaulicht.'
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 6c988f77ef6e433945dbf21dfb41204c74bdda3e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820163"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906830"
 ---
 # <a name="putting-it-all-together-teleportation"></a>Alles zusammen: teleportierung #
 Wir kehren zum Beispiel der in [Quantum](xref:microsoft.quantum.concepts.circuits)-Leitungen definierten Teleportations-Verbindung zurück. Wir werden diese Informationen verwenden, um die bisher gelernten Konzepte zu veranschaulichen. Eine Erläuterung der Quantum-Teleportation finden Sie unten für Personen, die mit der Theorie nicht vertraut sind, gefolgt von einer exemplarischen Vorgehensweise der Code Implementierung in f #. 

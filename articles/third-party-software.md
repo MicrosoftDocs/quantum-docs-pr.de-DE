@@ -1,18 +1,18 @@
 ---
-title: Microsoft Quantum Development Kit Third Party Software | Microsoft-Dokumentation
-description: Microsoft Quantum Development Kit Third Party Software
+title: Microsoft Quantum Development Kit Third Party Software
+description: Microsoft Quantum Development Kit Hinweise und Informationen zu Drittanbieter Software.
 services: service-name-with-dashes-AZURE-ONLY
 keywords: Vermeiden Sie es, Schlüsselwörter hinzuzufügen oder zu bearbeiten, ohne Ihren SEO-Experten zurate zu ziehen.
 author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
-ms.openlocfilehash: 85bade791c0744d6636d60fe4f7c9b8f7749c7c6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 84d83bf65b3c01a630d98210a5ac3fe322fa501f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184371"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906813"
 ---
 # <a name="third-party-software-notices-and-information"></a>HINWEISE UND INFORMATIONEN ZU DRITTANBIETERSOFTWARE
 
@@ -20,7 +20,7 @@ Diese Datei basiert auf Material aus den unten aufgeführten Projekten (IP-Adres
 
 1. Yamldotnet. signierte Version 4.2.2 (https://www.nuget.org/packages/YamlDotNet.Signed/4.2.2)
 2. xUnit. Runner. VisualStudio 2.3.1 (https://www.nuget.org/packages/xunit.runner.visualstudio/2.3.1)
-3. xUnit. Runner. Console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1 )
+3. xUnit. Runner. Console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1)
 4. xUnit. Extensibility. Execution 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.execution/2.3.1)
 5. xUnit. Extensibility. Core 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.core/2.3.1)
 6. xUnit. Core 2.3.1 (https://www.nuget.org/packages/xunit.core/2.3.1)
@@ -180,7 +180,7 @@ Ein "Mitwirkender" ist jede Person, die ihren Beitrag unter dieser Lizenz vertei
 
 (A) Urheberrechts Gewährung: gemäß den Bedingungen dieser Lizenz, einschließlich der Lizenzbedingungen und Einschränkungen in Abschnitt 3, erteilt jeder Mitwirkender Ihnen eine nicht exklusive, weltweit lizenzfreie Urheberrechtslizenz, um seinen Beitrag zu reproduzieren und die Ableitung vorzubereiten. arbeitet seinen Beitrag und verteilt seinen Beitrag oder alle von Ihnen erstellten abgeleiteten Arbeiten.
 
-(B) Patent Erteilung: gemäß den Bedingungen dieser Lizenz, einschließlich der Lizenzbedingungen und Einschränkungen in Abschnitt 3, erteilt jeder Mitwirkender Ihnen eine nicht exklusive, weltweit verfügbare Lizenz, die Lizenzbedingungen erteilt, für Vertrieb, Import und/oder anderweitig verwerfen des Beitrags in der Software oder der abgeleiteten Arbeiten des Beitrags in der Software.
+(B) Patent Erteilung-gemäß den Bedingungen dieser Lizenz, einschließlich der Lizenzbedingungen und-Einschränkungen in Abschnitt 3 erteilt jeder Mitwirkender Ihnen eine nicht exklusive, weltweit erteilte lizenzfreie Lizenz unter den lizenzierten Patenten, die erstellt, genutzt, verkauft, angeboten für den Verkauf, Import und/oder anderweitig seinen Beitrag in der Software oder die abgeleiteten Arbeiten des Beitrags in der Software genutzt werden können.
 
 3. Bedingungen und Einschränkungen
 

@@ -1,17 +1,17 @@
 ---
-title: 'F #-Standardbibliotheken-Anwendungen | Microsoft-Dokumentation'
-description: Q#-Standardbibliotheken
+title: 'Anwendungen in den Q # Standard-Bibliotheken'
+description: 'Erfahren Sie mehr über zwei grundlegende Anwendungen in Quantum Computing: hamiltonan Simulation und Shor-Suchalgorithmus.'
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3e629e095bd2ee492496066710ef6fd4e578a543
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: b7c46b634c6d691c067c0dd995301395408c85ca
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868967"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907221"
 ---
 # <a name="applications"></a>Anwendungen #
 
@@ -159,7 +159,7 @@ Bei der Phasen Schätzung werden daher die Eigenwerte $e ^ {2 \ Pi i s/r} $ ausg
 
 Das Verbindungs Diagramm für das Auffinden von Quantum-Perioden lautet:
 
-![](./../../media/QPE.svg)
+![Verbindungs Diagramm für die Suche nach Quantum-Zeit](./../../media/QPE.svg)
 
 Hier werden $2N $ Qubits mit "$ \ket{0}$" initialisiert, und $n $ Qubits werden mit "$ \ket{1}$" initialisiert.
 Der Reader kann sich vielleicht Fragen, warum das Quantum-Register zum Speichern der Eigen Zustände mit "$ \ket{1}$" initialisiert wird.

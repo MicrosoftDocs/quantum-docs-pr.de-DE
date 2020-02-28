@@ -1,17 +1,17 @@
 ---
-title: Dateistruktur | Microsoft-Dokumentation
-description: 'F #-Dateistruktur'
+title: 'F #-Dateistruktur'
+description: 'Erfahren Sie, wie Sie Namespaces und Vorgänge, Funktionen und benutzerdefinierte Typdeklarationen in Q #-Programmen und-Bibliotheken strukturieren.'
 author: QuantumWriter
 uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 364d353c55bda38f227456909755d13dc7e67080
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: b4bb7d4d70677dbd5d921a9f68313760499a56a1
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821081"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907391"
 ---
 # <a name="file-structure"></a>Dateistruktur
 
@@ -277,7 +277,7 @@ operation Teleport (source : Qubit, target : Qubit) : Unit {
 }
 ```
 
-## <a name="function-declarations"></a>Funktions Deklarationen
+## <a name="function-declarations"></a>Funktionsdeklarationen
 
 Funktionen sind rein klassische Routinen in Q #.
 Jede f #-Quelldatei kann eine beliebige Anzahl von Funktionen definieren.

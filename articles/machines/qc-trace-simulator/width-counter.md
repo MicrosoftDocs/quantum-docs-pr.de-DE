@@ -1,17 +1,17 @@
 ---
-title: Breiten-Counter | Ablauf Verfolgungs Simulator für Quantum-Computer | Microsoft-Dokumentation
-description: Übersicht über Ablaufverfolgungssimulator für Quantencomputer
+title: Breiten-Counter
+description: Erfahren Sie mehr über den Microsoft QDK Width-Zähler, der die Anzahl der von jedem Vorgang in einem Quantum-Programm zugeordneten und zugeordneten Qubits zählt.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: 9c3601e74eec17bd6b463e90f8f3085c959d6f95
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: a76292222950310acc90dded02980e4a5b792e76
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820367"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907085"
 ---
 # <a name="width-counter"></a>Breiten-Counter
 
@@ -57,6 +57,6 @@ Zum Schluss können Sie die folgenden Informationen verwenden, um alle Statistik
 string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ```
 
-## <a name="see-also"></a>Siehe auch ##
+## <a name="see-also"></a>Weitere Informationen ##
 
 - Übersicht über den Ablauf [Verfolgungs Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) für Quantum-Computer

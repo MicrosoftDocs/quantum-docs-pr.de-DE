@@ -1,17 +1,17 @@
 ---
-title: Tiefen Counter | Ablauf Verfolgungs Simulator für Quantum-Computer | Microsoft-Dokumentation
-description: Übersicht über Ablaufverfolgungssimulator für Quantencomputer
+title: Tiefen Counter
+description: Erfahren Sie mehr über den Microsoft QDK-tiefen Zähler, der die Anzahl der tiefen jedes in einem Quantum-Programm aufgerufenen Vorgangs sammelt.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
-ms.openlocfilehash: 07f927c794e2c62e53e4e053b5bc683d24bbed8d
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: d532a9f512b8c87d83d62ed26e3bb67e1b6f668b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820469"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906099"
 ---
 # <a name="depth-counter"></a>Tiefen Counter
 
@@ -37,7 +37,7 @@ operation ApplySampleWithCCNOT() : Unit {
 
 Um zu überprüfen, ob `CCNOT` `T` Tiefe 5 hat und `ApplySampleWithCCNOT` `T` Tiefe 6 hat, können C# wir den folgenden Code verwenden:
 
-```csharp 
+```csharp
 using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
 using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();
@@ -61,6 +61,6 @@ Zum Schluss können Sie zum Ausgeben aller Statistiken, die von `Depth Counter` 
 string csvSummary = sim.ToCSV()[MetricsCountersNames.depthCounter];
 ```
 
-## <a name="see-also"></a>Siehe auch ##
+## <a name="see-also"></a>Weitere Informationen ##
 
 - Übersicht über den Ablauf [Verfolgungs Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) für Quantum-Computer

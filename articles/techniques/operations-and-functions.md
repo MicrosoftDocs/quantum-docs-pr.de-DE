@@ -1,17 +1,17 @@
 ---
-title: 'Vorgänge und Funktionen: f #-Techniken | Microsoft-Dokumentation'
-description: 'Vorgänge und Funktionen: Q #-Techniken'
+title: 'F #-Vorgänge und-Funktionen'
+description: 'Erfahren Sie mehr über f #-Vorgänge und-Funktionen sowie darüber, wie Sie in einem Quantum-Programm angewendet werden.'
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 1fca20bb44cc42008f7d25d2fc71a39b962525c2
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 43f0cf2da192a607e514d0c7de57a9bdd067faf7
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820775"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907663"
 ---
 # <a name="q-operations-and-functions"></a>F #-Vorgänge und-Funktionen
 
@@ -231,7 +231,7 @@ operation ApplyTwice(op : (Qubit => Unit), target : Qubit) : Unit {
 
 In diesem Beispiel gibt der `=>` Pfeil, der im Typ `(Qubit => Unit)` angezeigt wird, an, dass das Eingabefeld `op` ein Vorgang ist, der als Eingabe den Typ `Qubit` annimmt und ein leeres Tupel als Ausgabe erzeugt.
 Außerdem geben wir die Merkmale dieses Vorgangs Typs an, die die Informationen zu den unterstützten Funktoren enthalten.
-Ein Vorgang vom Typ `(Qubit => Unit)` unterstützt weder den `Adjoint` noch den `Controlled`-Funktor. Wenn Sie angeben möchten, dass ein Vorgang dieses Typs z. b. den `Adjoint`-Funktor unterstützen muss, müssen wir ihn als adjointable deklarieren. Dies erfolgt mithilfe der-Anmerkung `is Adj` für den-Typ. Ebenso gibt `(Qubit => Unit is Ctl)` an, dass ein Vorgang dieses Typs den `Controlled`-Funktor unterstützt. Wir werden dies weiter untersuchen, wenn wir [types in Q #] (Xref: Microsoft. Quantum. Language. Type-Model) allgemeiner erörtern.
+Ein Vorgang vom Typ `(Qubit => Unit)` unterstützt weder den `Adjoint` noch den `Controlled`-Funktor. Wenn Sie angeben möchten, dass ein Vorgang dieses Typs z. b. den `Adjoint`-Funktor unterstützen muss, müssen wir ihn als adjointable deklarieren. Dies erfolgt mithilfe der-Anmerkung `is Adj` für den-Typ. Ebenso gibt `(Qubit => Unit is Ctl)` an, dass ein Vorgang dieses Typs den `Controlled`-Funktor unterstützt. Wir werden dies genauer untersuchen, wenn wir [Typen in Q #](xref:microsoft.quantum.language.type-model) allgemeiner erörtern.
 
 Vorerst betonen wir, dass wir auch Vorgänge als Teil der Ausgaben zurückgeben können, sodass wir einige Arten von klassischer bedingter Logik als klassische Funktion isolieren können, die eine Beschreibung eines Quantum-Programms in Form eines Vorgangs zurückgibt.
 Als einfaches Beispiel sehen Sie sich das Beispiel für die teleportung an, in dem die Partei, die eine zwei-Bit-klassische Nachricht empfängt, die Nachricht verwenden muss, um Ihr Qubit in den richtigen teleportierten Zustand zu decodieren.

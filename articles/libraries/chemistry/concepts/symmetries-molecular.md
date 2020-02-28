@@ -1,24 +1,24 @@
 ---
-title: Symmetries von molekularen inteden | Microsoft-Dokumentation
-description: Symmetries von molekularen inteals konzeptionelle Dokumente
+title: Symmetries von molekularen inteden
+description: 'Erfahren Sie, wie Sie den Typ "Q # orbitalintegral" verwenden, um molekulare Symmetries aufzuzählen.'
 author: nathanwiebe2
 ms.author: nawiebe
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.symmetries
-ms.openlocfilehash: 041d600bc8d65e7d67f5fe7d61a69426fb42ffbc
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: b7e7b79af17af544c4a784eff08500498afc9f67
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442386"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904467"
 ---
 # <a name="symmetries-of-molecular-integrals"></a>Symmetries von molekularen inteden
 
-Die inhärente Symmetrie von Coulomb hamiltonan, der hamiltona in [Quantum-Modellen für elektronische Systeme](xref:microsoft.quantum.chemistry.concepts.quantummodels), die zeigt, dass die durch die Interaktion untereinander und mit den Kernen miteinander interagierenden Elektronen eine Reihe von Symmetries haben können. wird ausgenutzt, um die Begriffe in der hamiltonan zu komprimieren.
-Im Allgemeinen gilt: Wenn keine weiteren Annahmen über die Basisfunktionen $ \psi_j $ erfolgen, haben wir nur das "\begin{Equation} H_ {pqrs} = H_ {qpsr}", "\tag{★} \label{EQ: hpqrs} \end{Equation}", das direkt von den inteden in [Quantum-Modellen für Elektronische Systeme](xref:microsoft.quantum.chemistry.concepts.quantummodels) , bei denen festgestellt wird, dass ihre Werte identisch bleiben, wenn $p, q $ und $r, s $ sich von der Anti-typkommunikation unterscheiden.
+Die inhärente Symmetrie von Coulomb hamiltonan, der hamiltona in [Quantum-Modellen für elektronische Systeme](xref:microsoft.quantum.chemistry.concepts.quantummodels), die die interaktive Interaktion von Elektronen und der Kerne beschreiben, führt zu einer Reihe von Symmetries, die ausgenutzt werden können, um die Begriffe in der hamiltona zu komprimieren.
+Im Allgemeinen haben wir nur "\begin{Equation}" H_ {pqrs} = H_ {qpsr}, wenn keine weiteren Annahmen über die Basisfunktionen $ \ psi_j $ vorgenommen werden. \tag{★} \label{EQ: hpqrs} \end{Equation}, das direkt von den inteden in [Quantum-Modellen für elektronische Systeme](xref:microsoft.quantum.chemistry.concepts.quantummodels) eingesehen werden kann, wenn Sie feststellen, dass ihre Werte identisch bleiben, wenn sich $p, q $ und $r, s $ von der Anti--typverarbeitung unterscheiden.
 
-Wenn wir davon ausgehen, dass die Dreh-orbitwerte Real wertig sind (wie es bei gauschen Orbital Basen der Fall ist), haben wir weitere Informationen: \begin{Equation} H_ {pqrs} = H_ {qpsr} = H_ {srqp} = H_ {rspq} = H_ {RQPS} = H_ {psrq} = H_ {SPQR} = H_ {qrsp} .\tag {★} \label{EQ: hpqrsreal} \end{ Gleichung} wenn solche Annahmen angenommen werden, können wir die oben genannten Symmetries verwenden, um die Daten zu reduzieren, die zum Speichern der Matrix Elemente der hamiltona mit dem Faktor $8 $ benötigt werden. auf diese Weise wird das Importieren von Daten auf konsistente Weise etwas schwieriger.
+Wenn wir davon ausgehen, dass die Dreh-orbitwerte Real wertig sind (wie es bei gaudirektionalen Orbital Basen der Fall ist), haben wir das "\begin{Equation}" H_ {pqrs} = H_ {qpsr} = H_ {srqp} = H_ {rspq} = H_ {RQPS} = H_ {psrq} = H_ {SPQR} = H_ {qrsp} .\tag {★} \label{EQ: hpqrsreal} \end{ Gleichung} wenn solche Annahmen angenommen werden, können wir die oben genannten Symmetries verwenden, um die Daten zu reduzieren, die zum Speichern der Matrix Elemente der hamiltona mit dem Faktor $8 $ benötigt werden. auf diese Weise wird das Importieren von Daten auf konsistente Weise etwas schwieriger.
 Glücklicherweise weist die hamiltonan-Simulations Bibliothek Unterroutinen auf, die verwendet werden können, um ganzzahlige Dateien aus " [Liqui $ | \rangle $](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/) " oder direkt aus " [nwchem](http://www.nwchem-sw.org/index.php/Main_Page)" zu importieren.
 
 Molekulare Orbital inteder (z. b. die $h\_{PQ} $ und $h\_{pqrs} $-Begriffen) wie diese werden mit dem `OrbitalIntegral`-Typ dargestellt, der eine Reihe hilfreicher Funktionen zum Ausdrücken dieser Symmetrie bereitstellt.

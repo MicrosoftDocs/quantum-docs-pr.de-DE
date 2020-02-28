@@ -1,19 +1,19 @@
 ---
-title: Korrelierte wavefunctions | Microsoft-Dokumentation
-description: Konzeptionelle Dynamics Dynamics-Dokumentation
+title: Korrelierte Wellenfunktionen
+description: Erfahren Sie mehr über dynamische und nicht dynamische Korrelationen in wavefunctions mithilfe der Microsoft Quantum Chemistry-Bibliothek.
 author: guanghaolow
 ms.author: gulow@microsoft.com
 ms.date: 05/28/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.multireference
-ms.openlocfilehash: 0b14f373d31c5b63e313e07810daf62d9195b1d3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 005ef86382ca72969b06a4206cab01f3845718e2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184031"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904433"
 ---
-# <a name="correlated-wavefunctions"></a>Korrelierte wavefunctions
+# <a name="correlated-wavefunctions"></a>Korrelierte Wellenfunktionen
 
 Für viele Systeme, insbesondere solche, die sich in der Nähe der Gleichgewichts Geometrie befinden, stellt die " [Hartree – Fock](xref:microsoft.quantum.chemistry.concepts.hartreefock) "-Theorie eine qualitative Beschreibung von molekularen Eigenschaften durch einen einzigen Determinanten Verweis Status bereit. Um jedoch eine quantitative Genauigkeit zu erzielen, müssen Sie auch Korrelations Effekte in Erwägung gezogen. 
 
@@ -24,9 +24,9 @@ Dies erfordert eine untergeordnete Position von Determinanten und ist ein Beispi
 Die Bibliothek "Chemistry" bietet eine Möglichkeit, eine nullte-Reihenfolge-wavefunction für das multireference-Problem als Superposition von Determinanten anzugeben. Dieser Ansatz, der als "Sparse multireference wavefunctions" bezeichnet wird, ist wirksam, wenn nur wenige Komponenten ausreichen, um die Superposition anzugeben. Die Bibliothek bietet auch eine Methode zum einbeziehen dynamischer Korrelationen über einen einzigen Determinanten Verweis über den generalisierten einheitlichen gekoppelt-Cluster-Ansatz. Außerdem erstellt Sie auch Quantum-Leitungen, die diese Zustände auf einem Quantum-Computer generieren. Diese Zustände können im [broombridge-Schema](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)angegeben werden, und es wird auch die Funktionalität bereitgestellt, um diese Zustände manuell über die Chemie Bibliothek anzugeben.
 
 ## <a name="sparse-multi-reference-wavefunction"></a>Multireference-Wellenfunktion mit geringer Dichte
-Ein Multi-Reference-Status $ \ket{\psi_{\rM {mcscf}}} kann explizit als lineare Kombination aus $N "$-Electron"-Slater determininants angegeben werden.
-\begin{align} \ket{\psi_{\rM {mcscf}}} \propto \sum_{i_1 < i_2 < \cdots < i_N} \lambda_{i_1, i_2, \cdots, i_N} a ^ \dagger_{i_1}a ^ \dagger_{i_2}\cdots a ^ \dagger_{i_N}\ket{0}.
-\end{align} beispielsweise kann der Status $ \propto (0,1 a ^ \dagger_1a ^ \dagger_2a ^ \dagger_6-0,2 a ^ \dagger_2a ^ \dagger_1a ^ \dagger_5) \ket{0}$ wie folgt in der Chemie Bibliothek angegeben werden.
+Der multiverweisstatus "$ \ket{\ psi_ {\rM {mcscf}}} $" kann explizit als lineare Kombination von $N "$--Elektronen-Slater determininants" angegeben werden.
+\begin{align} \ket{\ psi_ {\rM {mcscf}}} \propto \ sum_ {i_1 < i_2 < \cdots < i_N} \ lambda_ {i_1, i_2, \cdots, i_N} a ^ \ dagger_ {i_1} a ^ \ dagger_ {i_2} \cdots a ^ \ dagger_ {i_N} \ket{0}.
+\end{align} beispielsweise kann der Status $ \propto (0,1 a ^ \ dagger_1a ^ \ dagger_2a ^ \ dagger_6-0,2 a ^ \ dagger_2a ^ \ dagger_1a ^ \ dagger_5) \ket{0}$ wie folgt in der Chemie Bibliothek angegeben werden.
 ```csharp
 // Create a list of tuples where the first item of each 
 // tuple are indices to the creation operators acting on the
@@ -42,18 +42,18 @@ var wavefunction = new FermionWavefunction<int>(superposition);
 Diese explizite Darstellung der superposition-Komponenten ist wirksam, wenn nur wenige Komponenten angegeben werden müssen. Sie sollten diese Darstellung vermeiden, wenn viele Komponenten erforderlich sind, um den gewünschten Zustand exakt zu erfassen. Der Grund hierfür sind die Gate-Kosten der Quantum-Leitung, die diesen Status auf einem Quantum-Computer vorbereiten, der mindestens linear mit der Anzahl der superposition-Komponenten skaliert, und höchstens quadratisch mit der einnorm der superposition-Verstärkung.
 
 ## <a name="unitary-coupled-cluster-wavefunction"></a>Einheitliche gekoppelte Cluster Wellenfunktion
-Es ist auch möglich, eine einheitliche gekoppelte Cluster-wavefunction $ \ket{\psi_{\rM {UCC}}} $ mithilfe der chemisteriebibliothek anzugeben. In dieser Situation haben wir einen einzelnen Determinanten Verweis Status, z. \ket{\psi_{\rM{SCF}}}. $ $. Die Komponenten der einheitlichen, gekoppelten Cluster-wavefunction werden dann mithilfe eines einheitlichen Operators, der auf einen Referenz Zustand agiert, als implizität angegeben.
-Dieser einheitliche Operator wird häufig als $e ^ {T-T ^ \dagger} $ geschrieben, wobei $T-T ^ \dagger $ der Anti-hermitian-Cluster Operator ist. Folglich \begin{align} \ket{\psi_{\rM {UCC}}} = e ^ {t-T ^ \dagger}\ket{\psi_{\rM{SCF}}}.
+Es ist auch möglich, eine einheitliche gekoppelte Cluster-wavefunction $ \ket{\ psi_ {\rM {UCC}}} $ mithilfe der chemisteriebibliothek anzugeben. In dieser Situation haben wir einen einzelnen Determinanten Verweis Status, z. & # # amp; a. $ \ket{\ psi_ {\rM{SCF}}} $. Die Komponenten der einheitlichen, gekoppelten Cluster-wavefunction werden dann mithilfe eines einheitlichen Operators, der auf einen Referenz Zustand agiert, als implizität angegeben.
+Dieser einheitliche Operator wird häufig als $e ^ {T-T ^ \dagger} $ geschrieben, wobei $T-T ^ \dagger $ der Anti-hermitian-Cluster Operator ist. Folglich \begin{align} \ket{\ psi_ {\rM {UCC}}} = e ^ {T-T ^ \dagger}\ket{\ psi_ {\rM{SCF}}}.
 \end{align}
 
-Es ist auch üblich, den Cluster Operator $T = T_1 + T_2 + \cdots $ in Teile aufzuteilen, wobei jeder Teil $T _J $ $j "$-Body"-Begriffen enthält. In der Theorie für generalisierte gekoppelte Cluster hat der Einzel Text Cluster-Operator (Singles) das Format \begin{align} T_1 = \sum_{PQ}t ^ {p} _ {q} a ^ \dagger_p a_q, \end{align}
+Es ist auch üblich, den Cluster Operator $T = T_1 + T_2 + \cdots $ in Teile aufzuteilen, wobei jeder Teil $T _J $ $j $-Body-Bedingungen enthält. In der Theorie des verallgemeinerten verknüpften Clusters hat der Einzel Text Cluster-Operator (Singles) das Format \begin{align} T_1 = \ sum_ {PQ} T ^ {p} _ {q} a ^ \ dagger_p a_q, \end{align}
 
-und zwei Text Cluster Operator (Double) haben das Format \begin{align} T_2 = \sum_{pqrs}t ^ {PQ} _ {RS} a ^ \dagger_p a ^ \dagger_q a_r a_s.
+und zwei Text Cluster Operator (Doubles) haben das Format \begin{align} T_2 = \ sum_ {pqrs} T ^ {PQ} _ {RS} a ^ \ dagger_p a ^ \ dagger_q a_r a_s.
 \end{align}
 
 Bedingungen höherer Ordnung (dreipel, Vierbeiner usw.) sind möglich, werden aber derzeit von der Chemie Bibliothek nicht unterstützt.
 
-Beispiel: $ \ket{\psi_{\rM{SCF}}} = a ^ \dagger_1 a ^ \dagger_2\ket{0}$ und Let $T = 0,123 a ^ \dagger_0 A_1 + 0,456 a ^ \dagger_0a ^ \dagger_3 A_1 a_2-0,789 a ^ \dagger_3a ^ \dagger_2 A_1 a_0 $. Dieser Status wird in der Chemie Bibliothek wie folgt instanziiert.
+Beispiel: $ \ket{\ psi_ {\rM{SCF}}} = a ^ \ dagger_1 a ^ \ dagger_2 \ket{0}$ und Let $T = 0,123 a ^ \ dagger_0 A_1 dagger_0a + 0,456 a ^ \ dagger_3 ^ \ A_1 a_2 dagger_3a-0,789 a ^ \ dagger_2 ^ \ A_1 a_0 $. Dieser Status wird in der Chemie Bibliothek wie folgt instanziiert.
 ```csharp
 // Create a list of indices of the creation operators
 // for the single-reference state
@@ -77,7 +77,7 @@ var clusterOperator = new[]
 var wavefunction = new FermionWavefunction<int>(reference, clusterOperator);
 ```
 
-Die drehkonverzierung kann explizit durch Angabe `SpinOrbital` Indizes anstelle von ganzzahligen Indizes vorgenommen werden. Beispiel: $ \ket{\psi_{\rM{SCF}}} = a ^ \dagger_{1, \uparamerow} a ^ \dagger_{2, \downarrow}\ket{0}$ und Let $T = 0,123 a ^ \dagger_{0, \uparamerow} a_ {1, \uparamerow} + 0,456 a ^ \dagger_{0, \uparamerow} a ^ \dagger_{3, \downarrow} a_ {1, \uparamerow} a_ {2, \ Pfeil nach unten}-0,789 a ^ \dagger_{3, \ubirow} a ^ \dagger_{2, \uparamerow} a_ {1, \uparamerow} a_ {0, \uparamerow} $ be. Dieser Status wird in der Chemie Bibliothek wie folgt instanziiert.
+Die drehkonverzierung kann explizit durch Angabe `SpinOrbital` Indizes anstelle von ganzzahligen Indizes vorgenommen werden. Beispiel: $ \ket{\ psi_ {\rM{SCF}}} = a ^ \ dagger_ {1, \uparamerow} a ^ \ dagger_ {2, \downarrow}\ket{0}$ und Let $T = 0,123 a ^ \ dagger_ {0, \u0} a_ {1, \uparamerow} + 0,456 a ^ \ dagger_ {0, \uparamerow} a ^ \ dagger_ {3, \downarrow} a_ {1, \uanrow} a_ {2, \downarrow}-0,789 a ^ \ dagger_ {3, \ubirow} a ^ \ dagger_ {2, \ubirow} a_ {1, \uparamerow} a_ {0, \uparamerow} $ be-/zulasstuf. Dieser Status wird in der Chemie Bibliothek wie folgt instanziiert.
 ```csharp
 // Create a list of indices of the creation operators
 // for the single-reference state

@@ -1,17 +1,17 @@
 ---
-title: 'Lokale Variablen: f #-Techniken | Microsoft-Dokumentation'
-description: 'Lokale Variablen-Q #-Techniken'
+title: 'Lokale Variablen-Q #-Techniken'
+description: 'Erfahren Sie, wie Sie lokale Variablen in Q # definieren und mit Ihnen arbeiten.'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.local-variables
-ms.openlocfilehash: 8b1de5c096210fb36a81c127a8bbbe1b39522741
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: cb6c662137c31a13c3dd6e9ca3f67879c469f788
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820180"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906864"
 ---
 # <a name="local-variables"></a>Lokale Variablen #
 

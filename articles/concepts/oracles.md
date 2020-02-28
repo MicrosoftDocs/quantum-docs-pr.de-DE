@@ -1,24 +1,24 @@
 ---
-title: Quantum-Oracles | Microsoft-Dokumentation
-description: Quantum-Oracles
+title: Quantenorakel
+description: Erfahren Sie, wie Sie mithilfe von Quantum-Oracles, Black Box-Vorgängen, die als Eingabe für einen anderen Algorithmus verwendet werden, arbeiten und definieren.
 author: cgranade
 uid: microsoft.quantum.concepts.oracles
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 07/11/2018
 ms.topic: article
-ms.openlocfilehash: 96949b371a3a5a1135d624690933a48ea0214a2e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1d1d0b0903db8e994166c3e8a5798f70742a1c7e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184711"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904926"
 ---
 # <a name="quantum-oracles"></a>Quantum-Oracles
 
 Bei einem Oracle-$O $ handelt es sich um einen "Blackbox"-Vorgang, der als Eingabe für einen anderen Algorithmus verwendet wird.
 Häufig werden solche Vorgänge mithilfe eines klassischen Funktions $f definiert: \\{0, 1\\} ^ n \to \\{0, 1\\} ^ m $, das eine $n $-Bit-Binär Eingabe annimmt und eine $m $-Bit-Binär Ausgabe erzeugt.
 Beachten Sie hierzu eine bestimmte binäre Eingabe $x = (x_{0}, x_{1}, \dots, x_ {n-1}) $.
-Wir können Qubit-Zustände als "$ \ket{\vec{x}} = \ket{x_{0}} \otimes \ket{x_{1}} \otimes \cdots \otimes \ket{x_{n-1}} $" bezeichnen.
+Wir können Qubit-Zustände als "$ \ket{\vec{x}} = \ket{x_{0}} \otimes \ket{x_{1}} \otimes \cdots \otimes \ket{x_ {n-1}} $" bezeichnen.
 
 Wir könnten zuerst versuchen, $O $ zu definieren, sodass $O \ket{x} = \ket{f (x)} $, dies hat jedoch einige Probleme.
 Erstens kann $f $ eine andere Größe von Eingabe und Ausgabe aufweisen ($n \nE m $), sodass die Anzahl der Qubits im Register durch Anwenden von $O $ geändert würde.
@@ -43,16 +43,16 @@ Dies folgt unmittelbar daran, dass $O $ (wie alle Quantum-Vorgänge) linear in d
 Beachten Sie beispielsweise den Hadamard-Vorgang, der durch $H \ket{0} = \ket{+} $ und $H \ket{1} = \ket{-}$ definiert wird.
 Wenn Sie wissen möchten, wie $H $ auf $ \ket{+} $ reagiert, können wir diesen $H $ ist linear verwenden,
 
-$ $ \begin{align} h\ket {+} & = \frac{1}{\sqrt{2}} H (\ket{0} + \ket{1}) = \frac{1}{\sqrt{2}} (h\ket{0} + h\ket{1}) \\\\ & = \frac{1}{\sqrt{2}} (\ Ket {+} + \ket{-}) = \bruchteil 12 (\ket{0} + \ket{1} + \ket{0}-\ket{1}) = \ket{0}.
+$ $ \begin{align} h\ket {+} & = \frac{1}{\sqrt{2}} H (\ket{0} + \ket{1}) = \frac{1}{\sqrt{2}} (h\ket{0} + h\ket{1}) \\\\ & = \frac{1}{\sqrt{2}} (\ket{+} + \ket{-}) = \bruch12 (\ket{0} + \ket{1} + \ket{0}-\ket{1}) = \ket{0}.
 \end{align} $ $
 
 Wenn wir unsere Oracle-$O $ definieren, können wir auf ähnliche Weise den Status $ \ket{\psi} $ auf $n + m $ Qubits schreiben als
 
-$ $ \begin{align} \ket{\psi} & = \sum_{x \in \\{0, 1\\} ^ n, y \in \\{0, 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y} \end{align} $ $
+$ $ \begin{align} \ket{\psi} & = \ sum_ {x \in \\{0, 1\\} ^ n, y \in \\{0, 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y} \end{align} $ $
 
 wobei $ \alpha: \\{0, 1\\} ^ n \times \\{0, 1\\} ^ m \to \mathbb{c} $ die Koeffizienten des Zustands $ \ket{\psi} $ darstellt. Bisher
 
-$ $ \begin{align} O \ket{\psi} & = o \sum_{x \in \\{0, 1\\} ^ n, y \in \\{0, 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y} \\\\ & = \sum_{x \in \\{0 , 1\\} ^ n, y \in \\{0, 1\\} ^ m} \alpha (x, y) O \ket{x} \ket{y} \\\\ & = \sum_{x \in \\{0, 1\\} ^ n, y \in \\{0 , 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y \oplus f (x)}.
+$ $ \begin{align} O \ket{\psi} & = o \ sum_ {x \in \\{0, 1\\} ^ n, y \in \\{0, 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y} \\\\ & = \ sum_ {x \in \\{0, 1\\} ^ n, y \in \\{0, 1\\} ^ m} \alpha (x, y) O \ket{x} \ket{y} \\\\ & = \ sum_ {x \in \\{0, 1\\} ^ n , y \in \\{0, 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y \oplus f (x)}.
 \end{align} $ $
 
 ## <a name="phase-oracles"></a>Phasen-Oracles
@@ -61,7 +61,7 @@ Beispielsweise können wir $O $ so definieren, dass $ $ \begin{align} O \ket{x} 
 \end{align} $ $ wenn ein Phasen-Oracle zuerst auf ein Register im Berechnungs Status $ \ket{x} $ zuarbeitet, ist diese Phase eine globale Phase und daher nicht Observable.
 Ein solches Oracle kann jedoch eine sehr leistungsfähige Ressource sein, wenn Sie auf eine übergeordnete Position oder einen kontrollierten Vorgang angewendet wird.
 Nehmen Sie z. b. eine Phase Orcale $O _F $ für eine Single-Qubit-Funktion $f $.
-Dann $ $ \begin{align} O_f \ket{+} & = O_f (\ket{0} + \ket{1})/\sqrt{2} \\\\ & = ((-1) ^ {f (0)} \ket{0} + (-1) ^ {f (1)} \ket{1})/\sqrt{2} \\\\ & = (-1) ^ {f ( 0)} (\ket{0} + (-1) ^ {f (1)-f (0)} \ket{1})/\sqrt{2} \\\\ & = (-1) ^ {f (0)} Z ^ {f (0)-f (1)} \ket{+}.
+Dann $ $ \begin{align} O_f \ket{+} & = O_f (\ket{0} + \ket{1})/\sqrt{2} \\\\ & = ((-1) ^ {f (0)} \ket{0} + (-1) ^ {f (1)} \ket{1})/\sqrt{2} \\\\ & = (-1) ^ {f (0)} (\ket{0} + (-1) ^ {f (1)-f (0)} \ket{1})/\sqrt{2} \\\\ & = (-1) ^ {f (0)} Z ^ {f (0)-f (1)} \ket{+}.
 \end{align} $ $
 
 Im Allgemeinen können beide Sichten von Oracles erweitert werden, um klassische Funktionen darzustellen, die anstelle eines einzelnen Bits reelle Zahlen zurückgeben.

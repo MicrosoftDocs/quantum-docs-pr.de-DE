@@ -1,15 +1,15 @@
 ---
 title: Microsoft Quantum Development Kit Lizenz
-description: Microsoft Quantum Development Kit Lizenz
+description: Lizenzbedingungen, Haftungsausschlüsse und Benutzerrechte für die Microsoft Quantum Development Kit.
 author: QuantumWriter
 ms.author: cpalmer
 ms.date: 11/04/2019
-ms.openlocfilehash: d864c3e4ecefa6f998b9a893ecc4a3995d67dac4
-ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.openlocfilehash: 0d3aa9ae9e4f232ba2403512ff6e2394ecedeb22
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73463366"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907119"
 ---
 # <a name="microsoft-software-license-terms"></a>MICROSOFT-SOFTWARE-LIZENZBEDINGUNGEN 
 ## <a name="microsoft-quantum-development-kit-preview"></a>Microsoft Quantum Development Kit (Vorschau)
@@ -46,7 +46,7 @@ SOLANGE SIE DIESE LIZENZBEDINGUNGEN EINHALTEN, STEHEN IHNEN DIE NACHFOLGEND AUFG
 
 1. **Datensammlung**. Die Software kann Informationen zu Ihrer Person und Ihrer Verwendung der Software sammeln und diese an Microsoft senden. Microsoft kann diese Informationen zur Bereitstellung von Diensten und zur Verbesserung der Produkte und Dienste von Microsoft verwenden. Ihre Widerspruchsrechte werden ggf. in der Produktdokumentation beschrieben. Einige Funktionen in der Software ermöglichen eventuell die Sammlung von Daten von Benutzern Ihrer Anwendungen, die auf die Software zugreifen oder diese verwenden. Wenn Sie diese Funktionen zur Aktivierung der Datensammlung in Ihren Anwendungen verwenden, müssen Sie geltende Gesetze einhalten, indem Sie beispielsweise die etwaige erforderliche Zustimmung des Benutzers einholen, und eine klare Datenschutzrichtlinie führen, die Benutzer genau über die Verwendung, Sammlung und Weitergabe ihrer Daten informiert. Weitere Informationen über die Datensammlung und -nutzung durch Microsoft finden Sie in der Produktdokumentation und der Datenschutzerklärung von Microsoft unter https://go.microsoft.com/fwlink/?LinkId=521839. Sie stimmen zu, alle geltenden Bestimmungen der Datenschutzerklärung von Microsoft einzuhalten.
 
-1. **Umfang der Lizenz** Die Software wird lizenziert, nicht verkauft. Microsoft behält sich alle anderen Rechte vor. Folgendes ist Ihnen untersagt, es sei denn, das geltende Recht räumt Ihnen trotz dieser Einschränkung mehr Rechte ein:
+1. **Umfang der Lizenz** Die Software wird lizenziert, nicht verkauft. Alle anderen Rechte behält sich Microsoft vor. Folgendes ist Ihnen untersagt, es sei denn, das geltende Recht räumt Ihnen trotz dieser Einschränkung mehr Rechte ein:
 
     a. umgehen Sie alle technischen Einschränkungen in der Software, die nur auf bestimmte Weise verwendet werden können.
 

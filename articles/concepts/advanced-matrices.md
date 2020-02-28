@@ -1,17 +1,17 @@
 ---
-title: Erweiterte Matrix Konzepte | Microsoft-Dokumentation
-description: Erweiterte Matrix Konzepte
+title: Erweiterte Matrixkonzepte
+description: Erfahren Sie mehr über Eigenvektoren, Eigenwerte und Matrix exponentiale, die grundlegenden Tools, die zum beschreiben und Simulieren von Quantum-Algorithmen verwendet werden.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.matrix-advanced
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f87b3bcd19d2f98fea2a9724a280781a78c4cbb9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a83911e01ad758bbcb7f701000fd58b4f1c91cd2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183759"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907578"
 ---
 # <a name="advanced-matrix-concepts"></a>Erweiterte Matrix Konzepte #
 
@@ -39,7 +39,7 @@ sind Eigenvektoren dieser Matrix mit eigen Werten $d _1 $, $d _2 $, bzw. $d _3 $
 Beachten Sie im obigen Beispiel, dass die Eigenvektoren von $D $ eine Grundlage für $3 $-dimensionale Vektoren bilden. Eine Basis ist ein Satz von Vektoren, sodass jeder Vektor als lineare Kombination von Ihnen geschrieben werden kann. Explizitere, $v _1 $, $v _2 $ und $v _3 $ bilden eine Grundlage, wenn ein Vektor $v $ als $v = A_1 V_1 + a_2 V_2 + a_3 V_3 $ für einige Zahlen $a _1 $, $a _2 $ und $a _3 $ geschrieben werden kann.
 
 Beachten Sie, dass eine hermitische Matrix (auch als selbst Adjoint bezeichnet) eine komplexe quadratische Matrix ist, die mit ihrer eigenen komplexen konjugierung identisch ist, während eine einheitliche Matrix eine komplexe Quadrat Matrix ist, deren Umkehrung gleich der komplexen konjugierung ist.
-Bei hermitian-und einheitlichen Matrizen, bei denen es sich im Wesentlichen um die einzigen Matrizen in Quantum Computing handelt, gibt es ein allgemeines Ergebnis, das als " [*Spektral Theorem*](https://en.wikipedia.org/wiki/Spectral_theorem)" bezeichnet wird, das Folgendes bestätigt: für jede hermitische oder einheitliche Matrix $M $, gibt es eine einheitlicher $U $, sodass $M = u ^ \dagger D U $ für eine diagonale Matrix $D $. Außerdem sind die diagonalen Einträge von $D $ die Eigenwerte $M $.
+Bei hermitian-und einheitlichen Matrizen, bei denen es sich im Wesentlichen um die einzigen Matrizen in Quantum Computing handelt, gibt es ein allgemeines Ergebnis, das als " [*Spektral Theorem*](https://en.wikipedia.org/wiki/Spectral_theorem)" bezeichnet wird, das Folgendes bestätigt: für jede hermitische oder einheitliche Matrix $M $ gibt es eine einheitliche $U $, sodass $M = u ^ \dagger D U $ für eine diagonale Matrix $D $ Außerdem sind die diagonalen Einträge von $D $ die Eigenwerte $M $.
 
 Wir wissen bereits, wie die Eigenwerte und Eigenvektoren einer Diagonalen Matrix $D $ berechnet werden. Bei Verwendung dieses Theorem wissen wir, dass $U ^ \dagger v $ ein eigen Vektor von $M $ mit dem Eigen Wert $c $ ist, wenn $v $ ein eigen Vektor von $D $ mit dem Eigen Wert $c $ ist, d. h. $DV = CV $. Dies liegt daran, dass
 

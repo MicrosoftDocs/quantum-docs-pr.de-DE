@@ -1,24 +1,24 @@
 ---
-title: 'F #-Stil Handbuch | Microsoft-Dokumentation'
-description: 'F #-Stil Handbuch'
+title: 'Microsoft Q #-Stil Handbuch'
+description: 'Erlernen Sie die Benennungs-, Eingabe-, Dokumentations-und Formatierungs Konventionen für Q #-Programme und-Bibliotheken'
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 4050e2ee9e516aed7a8ba1398792562926808ee0
-ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.openlocfilehash: 3c8e432378ec563a197a5b87000c3e90cadb8e18
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73463324"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907442"
 ---
 # <a name="q-style-guide"></a>F #-Stil Handbuch #
 ## <a name="general-conventions"></a>Allgemeine Konventionen ##
 
 Die in diesem Handbuch empfohlenen Konventionen dienen dazu, Programme und Bibliotheken, die in Q # geschrieben wurden, einfacher zu lesen und zu verstehen.
 
-## <a name="guidance"></a>Leitfaden
+## <a name="guidance"></a>Anleitungen
 
 Wir empfehlen Folgendes:
 
@@ -80,7 +80,7 @@ Vor allem empfiehlt es sich in fast allen Fällen, frühere Partizipationen zu v
 Dieser Name hat den zusätzlichen Vorteil, dass die Semantik des integrierten `Controlled`-funktors übereinstimmt, wie weiter unten erläutert.
 Ebenso können- _Agent-Nomen_ verwendet werden, um Funktions-und UDT-Namen aus Vorgangs Namen zu erstellen, wie im Fall des Namens `Encoder` für einen UDT, der stark mit `Encode`verknüpft ist.
 
-# <a name="guidancetabguidance"></a>[Leitfaden](#tab/guidance)
+# <a name="guidance"></a>[Leitfaden](#tab/guidance)
 
 Wir empfehlen Folgendes:
 
@@ -91,9 +91,9 @@ Wir empfehlen Folgendes:
 - Verwenden Sie für alle lokalen Variablen `pascalCase` unter starker Priorität für `CamelCase`, `snake_case`oder `ANGRY_CASE`. Stellen Sie insbesondere sicher, dass lokale Variablen mit Kleinbuchstaben beginnen.
 - Vermeiden Sie die Verwendung von unterstrichen `_` in Funktions-und Vorgangs Namen; Wenn weitere Hierarchieebenen benötigt werden, verwenden Sie Namespaces und Namespace Aliase.
 
-# <a name="examplestabexamples"></a>[Beispiele](#tab/examples)
+# <a name="examples"></a>[Beispiele](#tab/examples)
 
-|   | name | description |
+|   | Name | BESCHREIBUNG |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | Löschen Sie die Verwendung eines Verbs ("reflektieren"), um die Auswirkung des Vorgangs anzuzeigen. |
 | ☒ | <s>`operation XRotation`</s> | Die Verwendung von Substantiv Phrase schlägt eine Funktion anstelle von Operation vor. |
@@ -132,7 +132,7 @@ is Adj + Ctl {
 }
 ```
 
-# <a name="guidancetabguidance"></a>[Leitfaden](#tab/guidance)
+# <a name="guidance"></a>[Leitfaden](#tab/guidance)
 
 Wir empfehlen Folgendes:
 
@@ -141,9 +141,9 @@ Wir empfehlen Folgendes:
 - Verwenden Sie für kurze (aus zwei Buchstaben bestehende) Akronyme und Initialisierungen Großbuchstaben.
 - Verwenden Sie `CamelCase` für längere Akronyme und Initialisierungen (drei oder mehr Buchstabe).
 
-# <a name="examplestabexamples"></a>[Beispiele](#tab/examples)
+# <a name="examples"></a>[Beispiele](#tab/examples)
 
-|   | name | description |
+|   | Name | BESCHREIBUNG |
 |---|------|-------------|
 | ☑ | `X` | Wohl verständliche Kurzformen für "Apply a $X $ Transformation" |
 | ☑ | `CNOT` | Wohl verständliche Kurzformen für "kontrolliert-not" |
@@ -168,17 +168,17 @@ Daher wird empfohlen, dass, soweit sinnvoll, gängige Nomen, die ein Konzept bes
 Ein bestimmtes Beispiel ist, dass die einzeln kontrollierten Swap-und doppelt kontrollierten not-Vorgänge in Academic Literatur oft als "Fredkin"-und "to-do"-Vorgänge bezeichnet werden, aber in Q # primär als `CSWAP` und `CCNOT`identifiziert werden.
 In beiden Fällen enthalten die API-Dokumentations Kommentare Synonyme, die auf den richtigen Substantiven basieren, sowie alle entsprechenden citierungen.
 
-Diese Einstellung ist besonders wichtig, da eine bestimmte Verwendung von richtigen Nomen immer erforderlich ist – f # folgt der Tradition, die von vielen klassischen Sprachen festgelegt wird, und bezieht sich auf `Bool` Typen in Bezug auf die boolesche Logik, die wiederum in Bezug genommen wird. von George Boole.
+Diese Einstellung ist besonders wichtig, da eine bestimmte Verwendung von richtigen Nomen immer erforderlich ist – f # folgt der Tradition, die von vielen klassischen Sprachen festgelegt wird, und bezieht sich auf `Bool` Typen in Bezug auf die boolesche Logik, die wiederum als "George Boole" bezeichnet wird.
 Einige Quantum-Konzepte werden ähnlich benannt, einschließlich des in der Sprache Q # integrierten `Pauli` Typs.
 Wenn Sie die Verwendung von richtigen Nomen minimieren, bei denen eine solche Verwendung nicht wesentlich ist, verringern wir die Auswirkungen, bei denen die richtigen Nomen nicht vernünftig vermieden werden können.
 
-# <a name="guidancetabguidance"></a>[Leitfaden](#tab/guidance) 
+# <a name="guidance"></a>[Leitfaden](#tab/guidance) 
 
 Wir empfehlen Folgendes:
 
 - Vermeiden Sie die Verwendung von richtigen Substantiven in Namen.
 
-# <a name="examplestabexamples"></a>[Beispiele](#tab/examples)
+# <a name="examples"></a>[Beispiele](#tab/examples)
 
 ***
 
@@ -188,19 +188,19 @@ Da Q # eine stark und statisch typisierte Sprache ist, kann ein Wert eines Typs 
 Dies steht im Gegensatz zu Sprachen, die es ermöglichen, Typen implizit (z. b. typherauf Stufung) oder durch Umwandlung zu ändern.
 Typkonvertierungs Funktionen spielen daher eine wichtige Rolle bei der Entwicklung der Q #-Bibliothek und bilden eine der gängigsten Entscheidungen zum benennen.
 Es ist jedoch zu beachten, dass Typkonvertierungen immer _deterministisch_sind. Sie können als Funktionen geschrieben werden und fallen daher unter den obigen Empfehlungen.
-Insbesondere wird empfohlen, dass Typkonvertierungs Funktionen nie als Verben (z. b.: `ConvertToX`) oder adverbfilter-präpositional-Ausdrücke (`ToX`) benannt werden. Sie sollten jedoch als Adjektiv-Ausdrücke mit präpositional bezeichnet werden, die die Quell-und Zieltypen angeben (`XAsY`).
+Insbesondere wird empfohlen, dass Typkonvertierungs Funktionen nie als Verben (z. b.: `ConvertToX`) oder adverbfilter-präpositional-Ausdrücke (`ToX`) benannt werden. Sie sollten jedoch als Adjektiv-Ausdrücke mit präpositional bezeichnet werden, die die Quell-und Zieltypen (`XAsY`) angeben.
 Beim Auflisten von Array Typen in Namen der Typkonvertierungs Funktion wird die Kurzform `Arr`empfohlen.
 Abgesehen von Ausnahmefällen wird empfohlen, dass alle Typkonvertierungs Funktionen mit `As` benannt werden, damit Sie schnell identifiziert werden können.
 
-# <a name="guidancetabguidance"></a>[Leitfaden](#tab/guidance)
+# <a name="guidance"></a>[Leitfaden](#tab/guidance)
 
 Wir empfehlen Folgendes:
 
 - Wenn eine Funktion einen Wert vom Typ `X` in einen Wert vom Typ `Y`konvertiert, verwenden Sie entweder den Namen `AsY` oder `XAsY`.
 
-# <a name="examplestabexamples"></a>[Beispiele](#tab/examples)
+# <a name="examples"></a>[Beispiele](#tab/examples)
 
-|   | name | description |
+|   | Name | BESCHREIBUNG |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | Die Vorposition "to" führt zu einem Verb Ausdruck, der einen Vorgang und keine Funktion angibt. |
 | ☒ | <s>`AsDouble`</s> | Der Eingabetyp ist aus dem Funktionsnamen nicht eindeutig. |
@@ -215,22 +215,22 @@ In vielen Fällen ist ein Name ausschließlich für die interne Verwendung in ei
 Es ist hilfreich, eindeutig anzugeben, dass dies der Fall ist, wenn Funktionen und Vorgänge benannt werden, damit versehentlich Abhängigkeiten von internem Code offensichtlich werden.
 Wenn ein Vorgang oder eine Funktion nicht für die direkte Verwendung vorgesehen ist, sondern stattdessen von einer übereinstimmenden Aufruf baren Funktion verwendet werden soll, die von einer partiellen Anwendung verwendet wird, empfiehlt es sich, einen Namen zu verwenden, der mit `_` für die teilweise angewendete Aufruf Bare
 
-# <a name="guidancetabguidance"></a>[Leitfaden](#tab/guidance)
+# <a name="guidance"></a>[Leitfaden](#tab/guidance)
 
 Wir empfehlen Folgendes:
 
 - Wenn eine Funktion, ein Vorgang oder ein benutzerdefinierter Typ nicht Teil der öffentlichen API für eine Q #-Bibliothek oder ein Programm ist, müssen Sie sicherstellen, dass der Name mit einem führenden Unterstrich (`_`) beginnt.
 
-# <a name="examplestabexamples"></a>[Beispiele](#tab/examples)
+# <a name="examples"></a>[Beispiele](#tab/examples)
 
-|   | name | description |
+|   | Name | BESCHREIBUNG |
 |---|------|-------------|
 | ☒ | <s>`ApplyDecomposedOperation_`</s> | Der Unterstrich `_` sollte nicht am Ende des Namens angezeigt werden. |
 | ☑ | `_ApplyDecomposedOperation` | Der Unterstrich `_` am Anfang weist eindeutig darauf hin, dass dieser Vorgang nur für die interne Verwendung vorgesehen ist. |
 
 ***
 
-### <a name="variants"></a>HI ###
+### <a name="variants"></a>Varianten ###
 
 Obwohl diese Einschränkung in zukünftigen Versionen von Q # nicht beibehalten werden kann, ist es aktuell der Fall, dass häufig Gruppen verwandter Vorgänge oder Funktionen vorhanden sind, die durch die von Ihnen unterstützten Funktoren unterschieden werden, oder durch die konkreten Typen ihrer Argumente.
 Diese Gruppen können unterschieden werden, indem der gleiche Stamm Name verwendet wird, gefolgt von einem oder zwei Buchstaben, die die Variante angeben.
@@ -244,14 +244,14 @@ Diese Gruppen können unterschieden werden, indem der gleiche Stamm Name verwend
 | `D` | Eingabe oder Eingaben sind vom Typ `Double` |
 | `L` | Eingabe oder Eingaben sind vom Typ `BigInt` |
 
-# <a name="guidancetabguidance"></a>[Leitfaden](#tab/guidance)
+# <a name="guidance"></a>[Leitfaden](#tab/guidance)
 
 Wir empfehlen Folgendes:
 
 - Wenn eine Funktion oder ein Vorgang nicht mit ähnlichen Funktionen oder Vorgängen durch die Typen und die Funktions Unterstützung Ihrer Eingaben verknüpft ist, verwenden Sie kein Suffix.
 - Wenn eine Funktion oder ein Vorgang mit ähnlichen Funktionen oder Vorgängen verknüpft ist, die von den Typen und der funktorunterstützung Ihrer Eingaben verwendet werden, verwenden Sie Suffixe wie in der obigen Tabelle, um Varianten zu unterscheiden.
 
-# <a name="examplestabexamples"></a>[Beispiele](#tab/examples)
+# <a name="examples"></a>[Beispiele](#tab/examples)
 
 ***
 
@@ -261,7 +261,7 @@ Ein wichtiges Ziel des Q #-Codes für eine Funktion oder einen Vorgang besteht d
 Ebenso sollten die Namen von Eingaben und Typargumenten kommunizieren, wie eine Funktion oder ein Argument nach der Bereitstellung verwendet wird.
 
 
-# <a name="guidancetabguidance"></a>[Leitfaden](#tab/guidance)
+# <a name="guidance"></a>[Leitfaden](#tab/guidance)
 
 Wir empfehlen Folgendes:
 
@@ -276,7 +276,7 @@ Wir empfehlen Folgendes:
   Vermeiden Sie insbesondere die Verwendung von Variablennamen mit nur einem Buchstaben als Indizes. Verwenden Sie ggf. `idx`.
 - Variablen, die zum Speichern der Längen von Arrays verwendet werden, sollten mit `n` beginnen und pluralisiert werden (z. b.: `nThings`).
 
-# <a name="examplestabexamples"></a>[Beispiele](#tab/examples)
+# <a name="examples"></a>[Beispiele](#tab/examples)
 
 ***
 
@@ -285,7 +285,7 @@ Wir empfehlen Folgendes:
 Benannte Elemente in benutzerdefinierten Typen sollten als `CamelCase`benannt werden, auch als Eingabe für UDT-Konstruktoren.
 Dadurch können benannte Elemente bei Verwendung der accessornotation (z. b.: `callable::Apply`) oder der Copy-and-Update-Notation (`set arr w/= Data <- newData`) eindeutig von Verweisen auf lokale Variablen getrennt werden.
 
-# <a name="guidancetabguidance"></a>[Leitfaden](#tab/guidance)
+# <a name="guidance"></a>[Leitfaden](#tab/guidance)
 
 Wir empfehlen Folgendes:
 
@@ -294,9 +294,9 @@ Wir empfehlen Folgendes:
 - Benannte Elemente, die nicht in Vorgänge aufgelöst werden, sollten als nominale Ausdrücke benannt werden.
 - Für UDTs, die Vorgänge einschließen, sollte ein einzelnes benanntes Element namens "`Apply`" definiert werden.
 
-# <a name="examplestabexamples"></a>[Beispiele](#tab/examples)
+# <a name="examples"></a>[Beispiele](#tab/examples)
 
-|   | Ausschnitt | description |
+|   | Ausschnitt | BESCHREIBUNG |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | Der Name `Apply` ist ein `CamelCase`formatierter Verb Ausdruck, der darauf hinweist, dass das benannte Element ein Vorgang ist. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Benannte Elemente sollten mit einem ersten Großbuchstaben beginnen. |
@@ -342,7 +342,7 @@ Im besonderen Fall, dass eine Überraschung minimiert wird, imitieren einige Fun
 `ControlledOnInt<'T>` z. b. den Typ `(Int, ('T => Unit is Adj + Ctl)) => ((Qubit[], 'T) => Unit is Adj + Ctl)`, sodass `ControlledOnInt<Qubit[]>(5, _)` wie das `Controlled`-Funktor verhält, aber auf der Bedingung, dass das Steuerelement registriert den Status $ \ket{5} = \ket{101}$ darstellt.
 Folglich erwartet ein Entwickler, dass die Eingaben, die die zu transformierende Aufruf Bare `ControlledOnInt` platzieren, und dass der resultierende Vorgang als Eingabe `(Qubit[], 'T)`---dieselbe Reihenfolge wie die Ausgabe des `Controlled`-funktors annimmt.
 
-# <a name="guidancetabguidance"></a>[Leitfaden](#tab/guidance)
+# <a name="guidance"></a>[Leitfaden](#tab/guidance)
 
 Wir empfehlen Folgendes:
 
@@ -350,15 +350,15 @@ Wir empfehlen Folgendes:
 - Verwenden Sie Eingabe Sortierungen, die mit integrierten Funktoren konsistent sind.
 - Platzieren Sie alle klassischen Eingaben vor allen Quantum-Eingaben.
 
-# <a name="examplestabexamples"></a>[Beispiele](#tab/examples)
+# <a name="examples"></a>[Beispiele](#tab/examples)
 
 ***
 
-## <a name="documentation-conventions"></a>Dokumentations Konventionen ##
+## <a name="documentation-conventions"></a>Konventionen in der Dokumentation ##
 
 Die Q #-Sprache ermöglicht das Anfügen von Dokumentationen an Vorgänge, Funktionen und benutzerdefinierte Typen durch die Verwendung von speziell formatierten Dokumentations Kommentaren.
 Diese Dokumentations Kommentare sind durch Triple-Schrägstriche (`///`) gekennzeichnet und enthalten kleine, mit [docfx optimierte markdown-](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html) Dokumente, mit denen der Zweck der einzelnen Vorgänge, Funktionen und benutzerdefinierten Typen beschrieben werden kann, welche Eingaben jeweils erwartet werden usw.
-Der mit dem Quantum Development Kit bereitgestellte Compiler extrahiert diese Kommentare und verwendet diese, um die besitzen-Dokumentation in https://docs.microsoft.com/quantum zu unterstützen.
+Der mit dem Quantum Development Kit bereitgestellte Compiler extrahiert diese Kommentare und verwendet diese, um die besitzen-Dokumentation in https://docs.microsoft.com/quantumzu unterstützen.
 Entsprechend verwendet der mit dem Quantum Development Kit bereitgestellte Sprachserver diese Kommentare, um Benutzern Hilfe zu bieten, wenn Sie mit dem Mauszeiger auf Symbole in Ihrem Q #-Code zeigen.
 Durch die Verwendung von Dokumentations Kommentaren können Benutzer den Code sinnvoll machen, indem Sie einen nützlichen Verweis auf Details bereitstellen, die nicht ohne weiteres mit den anderen Konventionen in diesem Dokument ausgedrückt werden.
 
@@ -368,7 +368,7 @@ Durch die Verwendung von Dokumentations Kommentaren können Benutzer den Code si
 
 Um diese Funktionalität für Benutzer effektiv nutzen zu können, empfiehlt es sich, beim Schreiben von Dokumentations Kommentaren einige Punkte zu berücksichtigen.
 
-# <a name="guidancetabguidance"></a>[Leitfaden](#tab/guidance)
+# <a name="guidance"></a>[Leitfaden](#tab/guidance)
 
 Wir empfehlen Folgendes:
 
@@ -388,7 +388,7 @@ Wir empfehlen Folgendes:
 - Wenn ein Vorgang oder eine Funktion mit anderen Vorgängen oder Funktionen verknüpft ist, können Sie im `# See Also` Abschnitt andere Varianten als Aufzählungs Zeichen auflisten.
 - Belassen Sie eine leere Kommentar Linie zwischen den Abschnitten der Ebene 1 (`/// #`), aber lassen Sie keine Leerzeile zwischen den Abschnitten der Ebene 2 (`/// ##`).
 
-# <a name="examplestabexamples"></a>[Beispiele](#tab/examples)
+# <a name="examples"></a>[Beispiele](#tab/examples)
 
 #### <a name=""></a>☑ ####
 
@@ -434,7 +434,7 @@ Diese Formatierungs Regeln sind eher willkürlich und stark bis zur persönliche
 Trotzdem empfiehlt es sich, einen konsistenten Satz von Formatierungs Konventionen innerhalb einer Gruppe von Projektmitarbeitern zu verwalten, insbesondere für große Q #-Projekte wie das Quantum Development Kit selbst.
 Diese Regeln können automatisch mithilfe des in den f #-Compiler integrierten Formatierungs Tools angewendet werden.
 
-# <a name="guidancetabguidance"></a>[Leitfaden](#tab/guidance) 
+# <a name="guidance"></a>[Leitfaden](#tab/guidance) 
 
 Wir empfehlen Folgendes:
 
@@ -451,9 +451,9 @@ Wir empfehlen Folgendes:
 - Verwenden Sie keine Leerzeichen nach Funktions-, Vorgangs-oder UDT-Namen oder nach dem `@` in Attribut Deklarationen.
 - Jede Attribut Deklaration sollte sich in einer eigenen Zeile befinden.
 
-# <a name="examplestabexamples"></a>[Beispiele](#tab/examples)
+# <a name="examples"></a>[Beispiele](#tab/examples)
 
-|   | Ausschnitt | description |
+|   | Ausschnitt | BESCHREIBUNG |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | Verwenden Sie Leerzeichen um binäre Operatoren. |
 | ☒ | <s>`target:Qubit`</s> | Verwenden Sie Leerzeichen um Doppelpunkte der Typanmerkung. |

@@ -1,16 +1,17 @@
 ---
 title: Broombridge-Quantum-Chemie Schema
+description: Übersicht über das broombridge-Quantum-Chemie Schema, das verwendet wird, um reale Chemie Probleme mit dem Microsoft Quantum Development Kit zu modellieren.
 author: martinro
 ms.author: martinro@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.broombridge
-ms.openlocfilehash: c2a7636d0b3f07419e3312e04da5d811229ad854
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a746b63055bb1b2c1168b89993a7459ca9597f86
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185323"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907816"
 ---
 # <a name="broombridge-quantum-chemistry-schema"></a>Broombridge-Quantum-Chemie Schema # 
 
@@ -23,9 +24,8 @@ Als YAML-basiert ist broombridge eine strukturierte, lesbare und menschlich bear
 - Die Zustände "Ground" und "aufgeregt" können mithilfe von Erstellungs Sequenzen dargestellt
 - Obere und untere Grenzen der Energie Stufen können angegeben werden.
 
-Das Datenformat kann aus nwchem mühelos generiert werden: Es gibt eine Vielzahl von Methoden, die von einer vollständigen nwchem-Installation bis hin zum Ausführen von Chemie-Karten wie den [hier](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests) bereitgestellten und Ausgabe broombridge im Rahmen der Durchführung eines docker reichen. das Image von nwchem, das auch zum Generieren von broombridge aus dem Chemie-Stapel verwendet werden kann. Zum Schluss wird eine visuelle Methode zum schnellen Einstieg in die Rechen Chemie ohne die Installation von Chemie Software über die [EMSL-Pfeile](https://arrows.emsl.pnnl.gov/api/qsharp_chem) -Schnittstelle für nwchem bereitgestellt. 
+Das Datenformat kann aus nwchem mühelos generiert werden: Es gibt eine Vielzahl von Methoden, die von einer vollständigen nwchem-Installation bis hin zum Ausführen von Grafikkarten, wie z. b. den [hier](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests) bereitgestellten und Ausgabe broombridge, als Teil des Testlaufs, über ein docker-Image von nwchem reichen, das auch zum Generieren von broombridge aus dem Zum Schluss wird eine visuelle Methode zum schnellen Einstieg in die Rechen Chemie ohne die Installation von Chemie Software über die [EMSL-Pfeile](https://arrows.emsl.pnnl.gov/api/qsharp_chem) -Schnittstelle für nwchem bereitgestellt. 
 
-Auf hoher Ebene kann das Zusammenwirken zwischen nwchem und dem Microsoft Quantum Development Kit wie folgt visualisiert werden: ![Chemie-Stapel](~/media/broombridge.png) das blaue schattierte Feld das broombridge-Schema darstellt, werden die verschiedenen grauen schattierten Felder andere interne Daten Darstellungen, die für die Darstellung und Verarbeitung von Quantum-Algorithmen für die Rechen Chemie auf der Grundlage realer Chemie Probleme ausgewählt wurden. 
+Auf hoher Ebene kann das Zusammenwirken zwischen nwchem und dem Microsoft Quantum Development Kit wie folgt visualisiert werden: ![Chemie-Stapel](~/media/broombridge.png) das blaue schattierte Feld das broombridge-Schema darstellt, stellen die verschiedenen grauen schattierten Felder andere interne Daten Darstellungen dar, die zur Darstellung und Verarbeitung von Quantum-Algorithmen für die computingressource basierend auf realen Chemie-Problemen ausgewählt wurden. 
 
 [Hier](https://github.com/microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML)werden mehrere mithilfe des broombridge-Schemas definierte chemische Darstellungen bereitgestellt.
-

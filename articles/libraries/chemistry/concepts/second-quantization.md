@@ -1,17 +1,17 @@
 ---
-title: Zweite Quantifizierung | Microsoft-Dokumentation
-description: Konzeptionelle Dokumentation zur zweiten Quantisierung
+title: Zweite Quantifizierung
+description: Erfahren Sie mehr über den zweiten quantifisierungsansatz zum Modellieren elektronischer Strukturen in der Quantum-Programmierung.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.secondquantization
-ms.openlocfilehash: 4b7b5a6be6d0c1f3520128609e6b9fa83e5460d5
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: e17c97767b05395af46a82c4035337406c7e3218
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036422"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907340"
 ---
 # <a name="second-quantization"></a>Zweite Quantifizierung
 
