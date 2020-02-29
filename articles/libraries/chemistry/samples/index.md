@@ -1,17 +1,17 @@
 ---
-title: Beispiele der Quantenchemie | Microsoft-Dokumentation
-description: Beispiele der Quantenchemie in der Dokumentation
+title: Beispiele für Quantenanwendungen im Bereich der Chemie
+description: Erkunden Sie die Beispielanwendungen, die in der Microsoft-Quantenchemiebibliothek enthalten sind.
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples
-ms.openlocfilehash: 586ea98321ff71947df8d81a2141a8b050dbd9ed
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 5168fc8592d34a32ba67e5a0c4793aa17599fd35
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960398"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906490"
 ---
 # <a name="quantum-chemistry-examples"></a>Beispiele der Quantenchemie
 

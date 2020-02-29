@@ -1,0 +1,10 @@
+- name: Einführung in Quantum Machine Learning
+  href: introduction.md
+- name: Grundlegende Klassifizierung
+  href: basic-classification.md
+- name: Entwerfen Ihres eigenen Klassifizierers
+  href: design.md
+- name: Laden Ihrer eigenen Datasets
+  href: load.md
+- name: Glossar (QML)
+  href: glossary-qml.md

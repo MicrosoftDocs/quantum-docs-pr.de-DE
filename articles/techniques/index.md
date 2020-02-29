@@ -1,18 +1,18 @@
 ---
-title: Verfahren der Quantenentwicklung | Microsoft-Dokumentation
-description: Verfahren der Quantenentwicklung
+title: Verfahren der Quantenentwicklung
+description: Enthält grundlegende Informationen zur Entwicklung von Q#-Programmen, und es wird beschrieben, wie Sie Vorgänge, Funktionen, Variablen und Qubits verwenden und ein einfaches Quantenprogramm erstellen.
 keywords: Vermeiden Sie es, Schlüsselwörter hinzuzufügen oder zu bearbeiten, ohne Ihren SEO-Experten zurate zu ziehen.
 author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 9/20/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.techniques.intro
-ms.openlocfilehash: c1263edb75f903702ab3c16cec0443857150b662
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: e5b7fbde18afbc0333d89f70c5e4596848e30f4f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820809"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907714"
 ---
 # <a name="quantum-development-techniques"></a>Verfahren der Quantenentwicklung
 

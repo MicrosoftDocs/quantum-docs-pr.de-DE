@@ -1,17 +1,17 @@
 ---
-title: Programmiersprache Q# | Microsoft-Dokumentation
-description: Programmiersprache Q#
+title: Programmiersprache Q#
+description: Einführung in die Sprache Q# für die Entwicklung von Quantenprogrammen.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.intro
-ms.openlocfilehash: 560926f6f3e05c32a935f01ca5107a614e743ee2
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: b62e6866fc3609d95c26a5eab2a6eac325dfe330
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442484"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907374"
 ---
 # <a name="the-q-programming-language"></a>Programmiersprache Q#
 
