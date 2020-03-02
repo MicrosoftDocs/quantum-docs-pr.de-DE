@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 30135fa8a123e52a92b7187218f9980ba3cdbd2d
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 8d3b2d7c8da39a961f4eedcc5989ad3a1e134ade
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442204"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906728"
 ---
 # <a name="quantum-basics-with-q"></a>Quantengrundlagen mit Q#
 
@@ -30,7 +30,7 @@ Sie können den Vorgang auch ohne Installation des QDK durchführen, indem Sie s
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>Veranschaulichen des Qubit-Verhaltens mit Q#
 
-Denken Sie an unsere einfache [Qubit-Definition](xref:microsoft.quantum.overview.what#the-qubit) zurück.  Klassische Bits enthalten einen einzelnen binären Wert (0 oder 1). Der Zustand eines Qubits kann dagegen auch eine **Überlagerung** sein (also gleichzeitig 0 und 1).  Vom Konzept her können Sie sich ein Qubit als eine Richtung im Raum vorstellen (auch als Vektor bezeichnet).  Ein Qubit kann eine beliebige der möglichen Richtungen aufweisen. Die beiden **klassischen Zustände** sind die beiden Richtungen, die für die einhundertprozentige Chance einer Messung von 0 und die einhundertprozentige Chance einer Messung von 1 stehen.  Diese Darstellung wird formal durch die [Bloch-Kugel](/quantum/concepts/the-qubit?view=qsharp-preview#visualizing-qubits-and-transformations-using-the-bloch-sphere) visualisiert.
+Denken Sie an unsere einfache [Qubit-Definition](xref:microsoft.quantum.overview.what#the-qubit) zurück.  Klassische Bits enthalten einen einzelnen binären Wert (0 oder 1). Der Zustand eines Qubits kann dagegen eine **Superposition** sein (also 0 und 1 gleichzeitig).  Vom Konzept her können Sie sich ein Qubit als eine Richtung im Raum vorstellen (auch als Vektor bezeichnet).  Ein Qubit kann eine beliebige der möglichen Richtungen aufweisen. Die beiden **klassischen Zustände** sind die beiden Richtungen, die für die einhundertprozentige Chance einer Messung von 0 und die einhundertprozentige Chance einer Messung von 1 stehen.  Diese Darstellung wird formal durch die [Bloch-Kugel](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere) visualisiert.
 
 
 Mit dem Messvorgang wird ein binäres Ergebnis erzeugt und ein Qubit-Zustand geändert. Bei der Messung wird ein binärer Wert erzeugt (0 oder 1).  Das Qubit geht von einem Überlagerungszustand (beliebige Richtung) in einen der klassischen Zustände über.  Danach führt die Wiederholung der gleichen Messung ohne Eingriff zu demselben binären Ergebnis.  
@@ -39,14 +39,14 @@ Mehrere Qubits können **verschränkt** sein. Bei der Messung eines verschränkt
 
 Nun können wir veranschaulichen, wie dieses Verhalten von Q# ausgedrückt wird.  Sie beginnen mit dem einfachsten möglichen Programm und erweitern es anschließend, um die Quantenüberlagerung und -verschränkung zu demonstrieren.
 
-## <a name="setup"></a>Einrichtung
+## <a name="setup"></a>Einrichten
 
 Anwendungen, die mit dem Quantum Development Kit von Microsoft entwickelt wurden, bestehen aus zwei Teilen:
 
 1. Einem oder mehreren Quantenalgorithmen, die mithilfe der Quantenprogrammiersprache Q# implementiert wurden.
 1. Einem Hostprogramm, das in einer Programmiersprache wie Python oder C# implementiert wurde, das als Haupteinstiegspunkt dient und Q#-Vorgänge aufruft, um einen Quantenalgorithmus auszuführen.
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. Wählen Sie einen Speicherort für Ihre Anwendung aus
 
@@ -54,7 +54,7 @@ Anwendungen, die mit dem Quantum Development Kit von Microsoft entwickelt wurden
 
 1. Erstellen Sie eine Datei namens `host.py`. Diese Datei enthält Ihren Python-Hostcode.
 
-#### <a name="c-command-linetabtabid-csharp"></a>[C#-Befehlszeile](#tab/tabid-csharp)
+#### <a name="c-command-line"></a>[C#-Befehlszeile](#tab/tabid-csharp)
 
 1. Erstellen Sie ein neues Q#-Projekt:
 
@@ -71,7 +71,7 @@ Anwendungen, die mit dem Quantum Development Kit von Microsoft entwickelt wurden
     mv Operation.qs Bell.qs
     ```
 
-#### <a name="visual-studiotabtabid-vs2019"></a>[Visual Studio](#tab/tabid-vs2019)
+#### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs2019)
 
 1. Erstellen eines neuen Projekts
 
@@ -177,7 +177,7 @@ Die `using`-Anweisung ist eine weitere Besonderheit in Q#. Sie wird verwendet, u
 
 ## <a name="create-the-host-application-code"></a>Erstellen des Hostanwendungscodes
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. Öffnen Sie die Datei `host.py`, und fügen Sie den folgenden Code hinzu:
 
@@ -195,7 +195,7 @@ Die `using`-Anweisung ist eine weitere Besonderheit in Q#. Sie wird verwendet, u
       print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
     ```
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 1. Ersetzen Sie den Inhalt der Datei `Driver.cs` durch den folgenden Code:
 
@@ -237,7 +237,7 @@ Die `using`-Anweisung ist eine weitere Besonderheit in Q#. Sie wird verwendet, u
 
 ### <a name="about-the-host-application-code"></a>Informationen zum Hostanwendungscode
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 Die Python-Hostanwendung weist drei Teile auf:
 
@@ -245,7 +245,7 @@ Die Python-Hostanwendung weist drei Teile auf:
 * Ausführen des Quantenalgorithmus durch Aufrufen der `simulate()`-Methode der importierten Q#-Operation.
 * Verarbeiten des Ergebnisses der Operation. Im Beispiel empfängt `res` das Ergebnis der Operation. Hier ist das Ergebnis ein Tupel der Anzahl von Nullen (`num_zeros`) und der Anzahl von Einsen (`num_ones`), die vom Simulator gemessen wurden. Wir dekonstruieren das Tupel, um die zwei Felder zu erhalten, und geben die Ergebnisse aus.
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 Die C#-Hostanwendung weist vier Teile auf:
 
@@ -260,7 +260,7 @@ Die C#-Hostanwendung weist vier Teile auf:
 
 ## <a name="build-and-run"></a>Erstellen und Ausführen
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. Führen Sie den folgenden Befehl an Ihrem Terminal aus:
 
@@ -277,7 +277,7 @@ Init:0    0s=1000 1s=0
 Init:1    0s=0    1s=1000
 ```
 
-#### <a name="command-line--visual-studio-codetabtabid-csharp"></a>[Befehlszeile/Visual Studio Code](#tab/tabid-csharp)
+#### <a name="command-line--visual-studio-code"></a>[Befehlszeile/Visual Studio Code](#tab/tabid-csharp)
 
 1. Führen Sie Folgendes an Ihrem Terminal aus:
 
@@ -299,7 +299,7 @@ Init:One  0s=0    1s=1000
 Press any key to continue...
 ```
 
-#### <a name="visual-studiotabtabid-vs2019"></a>[Visual Studio](#tab/tabid-vs2019)
+#### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs2019)
 
 1. Drücken Sie einfach `F5`, dann sollte Ihr Programm erstellt und ausgeführt werden!
 
@@ -445,7 +445,7 @@ Wenn wir dies ausführen, erhalten wir exakt das gleiche 50-50-Ergebnis, das wir
 
 Der neue Rückgabewert (`agree`) hält fest, wenn die Messung des ersten Qubits mit der Messung des zweiten Qubits übereinstimmt. Außerdem müssen wir die Hostanwendung entsprechend aktualisieren:
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 ```python
 import qsharp
@@ -461,7 +461,7 @@ for i in initials:
     print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4} agree={agree: <4}')
 ```
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 ```csharp
             using (var qsim = new QuantumSimulator())
