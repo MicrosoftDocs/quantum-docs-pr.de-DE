@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 8ba4648f1837065d15957a01ab4ca8dd2d490a42
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 80d9df00159090768ea442e519c34043a99b050c
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77905147"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022749"
 ---
 # <a name="quantum-circuits"></a>Quantum-Verbindungen
 Beachten Sie für einen Moment die einheitliche Transformation $ \text{CNOT} _{01}(h\otimes 1) $.
@@ -24,7 +24,7 @@ Das Verbindungs Diagramm zum Vorbereiten dieses maximale entkoppelt Quantum-Zust
 
 <!--- ![](.\media\1.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![Leitungs Diagramm für einen maximalen entzweitigen zwei-Qubit-Status](~/media/Concepts1.png)
+![Leitungs Diagramm für einen maximalen entzweitigen zwei-Qubit-Status](~/media/1.svg)
 
 ## <a name="quantum-circuit-diagram-conventions"></a>Konventionen für das Quantum Circuit-Diagramm
 Diese visuelle Sprache für Quantum-Vorgänge kann leichter verdaulich sein als das Schreiben der äquivalenten Matrix, sobald Sie die Konventionen zum Ausdrücken einer Quantum-Verbindung verstanden haben.
@@ -37,7 +37,7 @@ Beispielsweise das Symbol
 
 <!--- ![](.\media\2.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![Symbol für einen Hadamard-Vorgang, der auf einem Single-Qubit-Register agiert](~/media/concepts_2.png)
+![Symbol für einen Hadamard-Vorgang, der auf einem Single-Qubit-Register agiert](~/media/2.svg)
 
 ist ein [Hadamard](xref:microsoft.quantum.intrinsic.h) -Vorgang, der auf einem Single-Qubit-Register agiert.
 
@@ -47,7 +47,7 @@ Das heißt,
 
 <!--- ![](.\media\3.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![Diagramm der von von links nach rechts angewendeten Quantum-Gates](~/media/concepts_3.png)
+![Diagramm der von von links nach rechts angewendeten Quantum-Gates](~/media/3.svg)
 
 ist die einheitliche Matrix $CBA $.
 Die Matrix Multiplikation befolgt die gegenteilige Konvention: die ganz rechts gerichtete Matrix wird zuerst angewendet. In Quantum-Verbindungs Diagrammen wird jedoch das am weitesten links öffnende Gate zuerst angewendet.
@@ -65,7 +65,7 @@ Als Verdeutlichung können wir eine zwei-Qubit-einheitliche Operation definieren
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![Leitungs Diagramm eines zwei-Qubit-einheitlichen Vorgangs](~/media/concepts_4.png)
+![Leitungs Diagramm eines zwei-Qubit-einheitlichen Vorgangs](~/media/4.svg)
 
 Wir können $B $ auch anzeigen, wenn eine Aktion in einem einzigen zwei-Qubit-Register statt 2 1-Qubit registriert ist, je nachdem, in welchem Kontext die Verbindung verwendet wird. Vielleicht ist die nützlichste Eigenschaft von solchen abstrakten Verbindungs Diagrammen, dass Sie komplizierte Quantum-Algorithmen auf hoher Ebene beschreiben können, ohne Sie in grundlegende Gates kompilieren zu müssen.
 Dies bedeutet, dass Sie eine intuitions Informationen über den Datenfluss für einen großen Quantum-Algorithmus erhalten können, ohne alle Details zu verstehen, wie die einzelnen Unterroutinen innerhalb des Algorithmus funktionieren.
@@ -78,14 +78,14 @@ Im Allgemeinen werden solche kontrollierten Vorgänge in Leitungs Diagrammen als
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![Leitungs Diagramm eines einzeln kontrollierten Gates](~/media/concepts_5.png)
+![Leitungs Diagramm eines einzeln kontrollierten Gates](~/media/5.svg)
 
 Hier gibt der schwarze Kreis das Quantum-Bit an, auf dem das Gate gesteuert wird, und ein vertikales Netzwerk bezeichnet die einheitliche, die angewendet wird, wenn das Steuerelement-Qubit den Wert $1 $ annimmt.
 In den Sonderfällen, in denen $G = X $ und $G = Z $ steht, wird die folgende Notation eingeführt, um die kontrollierte Version der Gates zu beschreiben (Beachten Sie, dass das gesteuerte X-Gate der [$CNOT $ Gate](xref:microsoft.quantum.intrinsic.cnot)ist):
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![Leitungs Diagramm für Sonderfälle kontrollierter Gates](~/media/concepts_6.png)
+![Leitungs Diagramm für Sonderfälle kontrollierter Gates](~/media/6.svg)
 
 Q # stellt Methoden bereit, mit denen die gesteuerte Version eines Vorgangs automatisch generiert werden kann. Dadurch wird der Programmierer daran bewahrt, diese Vorgänge zu codieren. Ein Beispiel hierfür finden Sie unten:
 
@@ -104,7 +104,7 @@ Eine solche unter Leitung sieht insbesondere wie folgt aus:
 
 <!--- ![](.\media\7.svg) ---->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![Symbol, das einen Messungs Vorgang darstellt](~/media/concepts_7.png)
+![Symbol, das einen Messungs Vorgang darstellt](~/media/7.svg)
 
 F # implementiert zu diesem Zweck einen [Measure-Operator](xref:microsoft.quantum.intrinsic.measure) .
 Weitere Informationen finden Sie im [Abschnitt zu Messungen](xref:microsoft.quantum.libraries.standard.prelude#measurements) .
@@ -113,7 +113,7 @@ Ebenso wird die unter Leitung
 
 <!--- ![](.\media\8.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![Leitungs Diagramm, das einen kontrollierten Vorgang darstellt](~/media/concepts_8.png)
+![Leitungs Diagramm, das einen kontrollierten Vorgang darstellt](~/media/8.svg)
 
 bietet ein klassisch kontrolliertes Gate, bei dem $G $ auf das klassische Steuerungs Bit angewendet wird, das den Wert $1 $ hat.
 
@@ -125,4 +125,4 @@ Dies ist erforderlich, damit das Protokoll gemäß den Gesetzen der Quantum-Mech
 Die Verbindung mit der Quantum-Teleportation ist unten angegeben. Außerdem wird eine Version der Verbindung mit Anmerkungen bereitgestellt, um zu veranschaulichen, wie die Quantum-Verbindung gelesen wird.
 
 <!--- ![](.\media\tp2.svg){ width=50% } --->
-![Quantum-Teleportations-Verbindungs](~/media/concepts_tp2.png)
+![Quantum-Teleportations-Verbindungs](~/media/tp2.svg)

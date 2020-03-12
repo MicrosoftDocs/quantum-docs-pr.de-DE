@@ -5,16 +5,16 @@ author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
-ms.openlocfilehash: 545ade99859f2a9939477fb18604921f70a5d9aa
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 7605676e05ee352e47791657eeaafceef5dbb493
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906507"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022489"
 ---
 # <a name="end-to-end-with-nwchem"></a>End-to-End mit NWChem #
 
-Auf dieser Seite wird ein Beispiel für das Aufrufen von Gate-Anzahlen für die Quantum-Chemie-Simulation erläutert, beginnend mit einem [nwchem](http://www.nwchem-sw.org/index.php/Main_Page) -Eingabe Stapel.
+In diesem Artikel wird ein Beispiel für das Aufrufen von Gate-Anzahlen für die Quantum-Chemie-Simulation erläutert, beginnend mit einem [nwchem](http://www.nwchem-sw.org/index.php/Main_Page) -Eingabe Stapel.
 Bevor Sie mit diesem Beispiel fortfahren, stellen Sie sicher, dass Sie docker installiert haben, und befolgen Sie dabei das [Installations-und Validierungs Handbuch](xref:microsoft.quantum.chemistry.concepts.installation).
 
 Weitere Informationen finden Sie unter:
@@ -62,7 +62,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 Als nächstes importieren wir den `Get-GateCount` Befehl, der mit dem **getgatecount** -Beispiel bereitgestellt wird.
-Ausführliche Informationen finden Sie in den [Anweisungen für das Beispiel](https://github.com/Microsoft/Quantum/tree/master/Chemistry/GetGateCount).
+Ausführliche Informationen finden Sie in den [Anweisungen für das Beispiel](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount).
 Führen Sie als nächstes Folgendes aus, und ersetzen Sie `<runtime>` abhängig von Ihrem Betriebssystem entweder durch `win10-x64`, `osx-x64`oder `linux-x64`:
 
 ```powershell
@@ -112,7 +112,7 @@ set tce:qelb  9
 
 ## <a name="producing-and-consuming-broombridge-output-from-nwchem"></a>Erstellen und Verarbeiten der broombridge-Ausgabe von nwchem ##
 
-Wir haben jetzt alles, was wir benötigen, um broombridge-Dokumente zu erzeugen und zu nutzen.
+Sie verfügen jetzt über alles, was Sie zum erzeugen und Nutzen von broombridge-Dokumenten benötigen.
 Führen Sie `Convert-NWChemToBroombridge`aus, um nwchem auszuführen und ein broombridge-Dokument für die `h4_sto6g_0.000.nw` Eingabe-Karten zu entwickeln:
 
 > [!NOTE]
@@ -123,7 +123,7 @@ Führen Sie `Convert-NWChemToBroombridge`aus, um nwchem auszuführen und ein bro
 Convert-NWChemToBroombridge h4_sto6g_0.000.nw 
 ```
 
-Dadurch wird ein broombridge-Dokument mit dem Namen `h4_sto6g_0.000.yaml` erstellt, das wir mit `Get-GateCount`verwenden können:
+Dadurch wird ein broombridge-Dokument mit dem Namen `h4_sto6g_0.000.yaml` erstellt, das Sie mit `Get-GateCount`verwenden können:
 
 ```powershell
 Get-GateCount -Format YAML h4_sto6g_0.000.yaml
@@ -164,7 +164,7 @@ Hierfür gibt es viele Dinge:
 - Probieren Sie verschiedene vordefinierte Eingabe Karten aus, z. b. indem Sie den Parameter `alpha` in `h4_sto6g_alpha.nw`verändern. 
 - Versuchen Sie, die Karten zu ändern, indem Sie die nwchem-Karten direkt bearbeiten, z. b. `STO-nG` Modelle für verschiedene Optionen von n, 
 - Probieren Sie weitere vordefinierte nwchem-Eingabe Karten aus, die unter `nwchem/qa/chem_library_tests`verfügbar sind.
-- Probieren Sie eine Reihe von vordefinierten broombridge-YAML-Benchmarks aus, die aus nwchem generiert wurden und als Teil des [Microsoft/quantum-Repository](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML)verfügbar sind. Diese Benchmarks umfassen Folgendes: 
+- Probieren Sie eine Reihe von vordefinierten broombridge-YAML-Benchmarks aus, die aus nwchem generiert wurden und als Teil des [Microsoft/quantum-Repository](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML)verfügbar sind. Diese Benchmarks umfassen Folgendes: 
     - kleine Moleküle, wie z. b. Molekulare Wasserstoff (H2), Beryllium (be), Lithium-Hydride (LIH),
     - größere Moleküle, wie z. b. Ozon (O3), Beta-Carotin, zykosinus und viele mehr. 
 - Probieren Sie die grafischen Front-End- [EMSL-Pfeile](https://arrows.emsl.pnnl.gov/api/qsharp_chem) aus, die eine Schnittstelle zum Microsoft Quantum Development Kit enthalten. 
