@@ -1,9 +1,14 @@
 - name: API-Referenz
   items:
+    - name: API-Referenz
+      href: index.md
     - name: 'Q#-Bibliotheken'
+      topicHref: qsharp/index.md
       href: qsharp/toc.yml
     - name: .NET-Bibliotheken
       items:
+        - name: .NET-Bibliotheken
+          href: dot-net-libraries.md
         - name: Ablaufverfolgungssimulator
           href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators'
         - name: Quantenchemie
