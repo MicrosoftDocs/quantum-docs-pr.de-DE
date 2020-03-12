@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 63c6f90a511c7bd14435b2e593af0d8615c18519
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: cf913a09395f0694a51645ec8f91171e5b1555c3
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904875"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022475"
 ---
-# <a name="contributing-to-the-quantum-development-kit"></a>Mitwirken am Quantum Development Kit #
+# <a name="contributing-to-the-quantum-development-kit"></a>Mitwirken am Quantum Development Kit
 
 Das Quantum Development Kit ist mehr als eine Sammlung von Tools zum Schreiben von Quantenprogrammen.
 Es ist in eine große Community von Personen eingebettet, die das Quantencomputing entdecken möchten, Forschung zu Quantenalgorithmen betreiben, neue Anwendungen für Quantengeräte entwickeln und anderweitig aktiv sind, um die Quantenprogrammierung bestmöglich zu nutzen.
@@ -23,7 +23,7 @@ Wir sind Ihnen für Ihre Beiträge sehr dankbar und freuen uns darüber, zusamme
 
 Dieser Leitfaden enthält einige Hinweise dazu, wie Sie Ihre Beiträge für die gesamte Community zur Quantenprogrammierung möglichst wertvoll gestalten.
 
-## <a name="building-community"></a>Schaffen einer echten Community ##
+## <a name="building-community"></a>Schaffen einer echten Community
 
 Bei Ihrer Mitwirkung sollten Sie vor allem immer zuerst an die Community denken, zu der Sie Ihren Beitrag leisten.
 Indem Sie die Personen der Community für die Quantenprogrammierung und darüber hinaus stets respektvoll und professionell behandeln, können Sie sicherstellen, dass Sie mit Ihrer Arbeit zur Schaffung einer optimalen, einladenden Community beitragen.
@@ -31,7 +31,7 @@ Indem Sie die Personen der Community für die Quantenprogrammierung und darüber
 Im Rahmen dieser Maßnahmen wurden für alle Quantum Development Kit-Projekte die [Microsoft Open-Source-Verhaltensregeln](https://opensource.microsoft.com/codeofconduct/) eingeführt.
 Weitere Informationen finden Sie in den [häufig gestellten Fragen zum Verhaltenskodex](https://opensource.microsoft.com/codeofconduct/faq/). Sie können sich auch an [opencode@microsoft.com](mailto:opencode@microsoft.com) wenden, falls Sie weitere Fragen oder Anmerkungen haben.
 
-## <a name="what-kinds-of-contributions-help-the-community"></a>Welche Arten von Beiträgen sind für die Community hilfreich? ##
+## <a name="what-kinds-of-contributions-help-the-community"></a>Welche Arten von Beiträgen sind für die Community hilfreich?
 
 Es gibt viele verschiedene Möglichkeiten, wie Sie die Community für die Quantenprogrammierung mit Beiträgen unterstützen können.
 In diesem Leitfaden werden die drei Optionen beschrieben, die für das Quantum Development Kit am relevantesten sind.
@@ -45,7 +45,7 @@ Die hier angegebene Liste deckt aber nicht alle Eventualitäten ab. Wir möchten
 Diese unterschiedlichen Arten von Beiträgen sind äußerst wertvoll und werden von uns sehr geschätzt.
 Der restliche Teil des Leitfadens enthält Hinweise dazu, wie Sie beim Leisten von Beiträgen jeweils vorgehen.
 
-## <a name="where-do-contributions-go"></a>Wohin fließen Beiträge? ##
+## <a name="where-do-contributions-go"></a>Wohin fließen Beiträge?
 
 Das Quantum Development Kit enthält eine Reihe unterschiedlicher Bestandteile, die miteinander verknüpft sind, um eine Plattform zum Schreiben von Quantenprogrammen zu erhalten.
 Jeder dieser unterschiedlichen Bestandteile wird in einem eigenen Repository aufbewahrt, und einer der ersten Schritte besteht in der Ermittlung, wohin ein Beitrag gehört.
@@ -66,7 +66,7 @@ Es sind auch einige spezielle Repositorys vorhanden, die für andere Ereignisse 
 - [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty): Unterstützung der LaTeX-Formatierung für Q#-Syntax.
 - [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019): IQ#-Notebook für das Tutorial „Deutsch-Jozsa“ aus dem Intern Workshop 2019.
 
-## <a name="next-steps"></a>Nächste Schritte ##
+## <a name="next-steps"></a>Nächste Schritte
 
 Vielen Dank, dass Sie sich an der Quantum Development Kit-Community beteiligen. Wir freuen uns auf Ihre Beiträge!
 Falls Sie mehr über Möglichkeiten zur Mitwirkung erfahren möchten, helfen Ihnen die folgenden Leitfäden weiter.
