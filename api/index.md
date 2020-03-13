@@ -6,20 +6,19 @@ author: natke
 ms.author: nakersha
 ms.date: 09/04/2019
 ms.topic: landing-page
-ms.openlocfilehash: 25a53e1cb8577761ef89cdcf2cfcddc509093f86
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 5975b0caf0fc73ad18fbd8a1e7c82a2333161da2
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056964"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022510"
 ---
-# <a name="q-standard-libraries"></a>Q#-Standardbibliotheken #
+# <a name="q-api-reference"></a>Q#-API-Referenz #
 
-Q# wird durch eine Reihe nützlicher Vorgänge, Funktionen und benutzerdefinierter Typen unterstützt, die in der Q#-*Standardbibliothek* enthalten sind.
-Die Q#-Standardbibliothek ist in zwei Hauptbereiche unterteilt:
+Diese API-Referenz umfasst die Q#-Standardbibliothek und die drei darauf basierenden Bibliotheken: die Chemiebibliothek, die numerische Bibliothek und die Machine Learning-Bibliothek. Für Q# sind auch .NET- und Python-Bibliotheken verfügbar.
 
-- **Einleitung**: Vorgänge und Funktionen, die als Teil des Zielcomputers und Compilers definiert und normalerweise in klassischem nativen .NET-Code geschrieben sind.
-  Im Allgemeinen verfügen unterschiedliche Zielcomputer ggf. über unterschiedliche Implementierungen der Einleitung, die für das jeweilige System entsprechend geeignet sind.
-- **Grundsätze**: Vorgänge und Funktionen als Q#-Definition, mit denen die Logik der Einleitung erweitert wird.
-  Die Implementierung der Grundsätze ist in Bezug auf Zielcomputer agnostisch.
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+- [Q#-Bibliotheken](xref:microsoft.quantum.qsharplibintro)
+- [.NET-Bibliotheken](xref:microsoft.quantum.dotnetlibsintro)
+- [Python-Bibliotheken](https://docs.microsoft.com/python/qsharp)
+
+Weitere Informationen zu den Q#-Bibliotheken finden Sie unter <xref:microsoft.quantum.libraries>.

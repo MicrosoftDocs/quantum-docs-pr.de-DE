@@ -6,5 +6,9 @@
   href: pull-requests.md
 - name: Mitwirken am Code
   href: code.md
+- name: Mitwirken an Beispielen
+  href: samples.md
 - name: Styleguide
   href: style-guide.md
+- name: API-Entwurfsprinzipien
+  href: api-design-principles.md
