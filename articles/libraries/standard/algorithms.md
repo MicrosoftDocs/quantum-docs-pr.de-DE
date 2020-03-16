@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: aaa9ddf47e5ea35e7e57b9828db082889d0e6adf
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 8b8a9019e8bc419f42b0c6f7558354d19a157917
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907238"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402849"
 ---
 # <a name="quantum-algorithms"></a>Quantum-Algorithmen #
 
@@ -77,9 +77,9 @@ $ $, Wenn wir $ $ \ket{\phi\_k (a)} = \frac{1}{\sqrt{2}} \left (\ket{0} + e ^ {i
 $ $ Der Pfad zum Durchführen eines Adder wird dann klar, nachdem er beobachtet hat, dass die Summe der Eingaben als $ $ \ket{a + b} = \operatorname{QFT# geschrieben werden kann.} ^{-1}\ket{\phi\_1 (a + b)} \otimes \cdots \otimes \ket{\phi\_n (a + b)}.
 $ $ Die ganzen Zahlen $b $ und $a $ können dann hinzugefügt werden, indem die gesteuerte Phasen Drehung für jedes der Qubits in der Zerlegung mithilfe der Bits von $b $ As-Steuerelementen durchgeführt wird.
 
-Diese Erweiterung kann weiter vereinfacht werden, indem Sie feststellen, dass für beliebige ganzzahlige $j $ und reelle Zahl $x $, $e ^ {i2\pi (x + j)} = e ^ {i2\pi x} $.  Dies liegt daran, dass Sie, wenn Sie "$ 360 ^ {\circ} $ degrees ($ 2 \ Pi $ radiane)" in einem Kreis drehen, am Ende genau den Anfang haben.  Der einzige wichtige Teil von $x $ für $e ^ {i2\pi x} $ ist daher der Bruchteil von $x $.  Insbesondere, wenn eine binäre Erweiterung der Form $x = y +0. x\_0x\_2 \ ldots x\_n $, dann $e ^ {i2\pi x} = e ^ {i2\pi (0. x\_0x\_2 \ ldots x\_{n-1})} $ und somit $ $ \ket{\phi\_k (a + b)} = \frac{1}{\sqrt{2}} \left (\ket{0} + e ^ {i2\pi [a/2 ^ k +0. b\_k\ldots b\_1]} \ket{1} \right). $ $ Dies bedeutet, dass beim Durchführen einer Addition durch Erhöhen der einzelnen tensorflow-Faktoren bei der Erweiterung der Fourier-Transformation von "$ \ket{a} $" verkleinert sich die Anzahl der Drehungen, wenn $k $ abnimmt.  Dadurch wird die Anzahl der im Adder benötigten Quantum-Gates erheblich reduziert.  Wir bezeichnen die Schritte "Fourier Transform", "Phasen Addition" und "inverse Fourier Transform", die den Draper Adder als "$ \operatschmue{QFT} ^{-1} \left (\phi\\\!\operatorname{Add}\right) \operatschmue{QFT} $" umfassen. Eine Quantum-Verbindung, die diese Vereinfachung verwendet, um den gesamten Prozess zu implementieren, finden Sie unten.
+Diese Erweiterung kann weiter vereinfacht werden, indem Sie feststellen, dass für beliebige ganzzahlige $j $ und reelle Zahl $x $, $e ^ {i2\pi (x + j)} = e ^ {i2\pi x} $.  Dies liegt daran, dass Sie, wenn Sie "$ 360 ^ {\circ} $ degrees ($ 2 \ Pi $ radiane)" in einem Kreis drehen, am Ende genau den Anfang haben.  Der einzige wichtige Teil von $x $ für $e ^ {i2\pi x} $ ist daher der Bruchteil von $x $.  Insbesondere, wenn eine binäre Erweiterung der Form $x = y +0. x\_0x\_2 \ ldots x\_n $, dann $e ^ {i2\pi x} = e ^ {i2\pi (0. x\_0x\_2 \ ldots x\_{n-1})} $ und somit $ $ \ket{\phi\_k (a + b)} = \frac{1}{\sqrt{2}} \left (\ket{0} + e ^ {i2\pi [a/2 ^ k +0. b\_k\ldots b\_1]} \ket{1} \right). $ $ Dies bedeutet, dass beim Durchführen der Addition durch Erhöhen der einzelnen tensorflow-Faktoren in der Erweiterung der Fourier-Transformation von $ \ket{a} $ der Wert die Anzahl der Rotationen wird verkleinert, wenn $k $ abnimmt.  Dadurch wird die Anzahl der im Adder benötigten Quantum-Gates erheblich reduziert.  Wir bezeichnen die Schritte "Fourier Transform", "Phasen Addition" und "inverse Fourier Transform", die den Draper Adder als "$ \operatschmue{QFT} ^{-1} \left (\phi\\\!\operatorname{Add}\right) \operatschmue{QFT} $" umfassen. Eine Quantum-Verbindung, die diese Vereinfachung verwendet, um den gesamten Prozess zu implementieren, finden Sie unten.
 
-![Draper-Adder als Verbindungs Diagramm dargestellt](~/media/draper.png)
+![Draper-Adder als Verbindungs Diagramm dargestellt](~/media/draper.svg)
 
 Jede kontrollierte $e ^ {I2 \ Pi/k} $ Gate in der Verbindung bezieht sich auf ein steuerungsphase.  Diese Gates haben die Eigenschaft, die auf dem Qubits-Paar, das Sie agieren, $ \ket{00}\mapsto \ket{00}$, aber $ \ket{11}\mapsto e ^ {I2 \ Pi/k} \ Ket{11}$.  Mit dieser Verbindung können wir zusätzliche Qubits ohne zusätzliche Qubits ausführen, abgesehen von denjenigen, die zum Speichern der Eingaben und Ausgaben benötigt werden.
 
@@ -92,7 +92,7 @@ $$
 
 Der Beauregard-Adder verwendet den Draper Adder oder spezifischere $ \phi\\\!\operatschmue{Add} $, um $a $ und $b $ in-Phase hinzuzufügen.  Anschließend wird der gleiche Vorgang verwendet, um zu ermitteln, ob $a + b < N $ durch Subtraktion von $N $ und testen, ob $a + b-N < 0 $ ist.  Die Verbindung speichert diese Informationen in einem zusätzlichen Qubit und fügt dann dem Register $N $ zurück, wenn $a + b < N $.  Anschließend wird die Berechnung dieses hilfbits abgeschlossen (dieser Schritt ist erforderlich, um sicherzustellen, dass die Zuordnung von "Ancilla" nach dem Aufruf von Adder aufgehoben werden kann).  Die Verbindung für den Beauregard-Adder ist unten angegeben.
 
-!["Beauregard Adder", dargestellt als Leitungs Diagramm](~/media/beau.png)
+!["Beauregard Adder", dargestellt als Leitungs Diagramm](~/media/beau.svg)
 
 Hier hat das Gate $ \phi\\\!\operatschmue{Add} $ dieselbe Form wie $ \phi\\\!\operatschmue{Add} $, mit dem Unterschied, dass die Eingabe in diesem Kontext klassisch anstelle von Quantum ist.  Dadurch können die kontrollierten Phasen in "$ \phi\\\!\operatschmue{Add} $" durch Phasen Gates ersetzt werden, die dann zusammen in weniger Vorgänge kompiliert werden können, um sowohl die Anzahl der Qubits und die Anzahl der für den Adder benötigten Gates zu verringern.
 
@@ -111,7 +111,7 @@ Anders ausgedrückt: die Auswirkung der Anwendung von $V $ ist exakt identisch m
 Daher wird für den Rest dieser Diskussion die Phasen Schätzung in Bezug auf $R _1 (\phi) $ erläutert, die wir mit dem sogenannten *Phasen-Kickback*implementieren.
 
 Da das Steuerelement und das Ziel Register nach diesem Vorgang nicht mehr geändert werden, können wir $ \ket{\phi} $ als Ziel einer kontrollierten Anwendung von $U ^ $2 wieder verwenden, um ein zweites Steuerelement-Qubit auf den Status $R _1 (2 \phi) \ket{+} $ vorzubereiten.
-Auf diese Weise können wir ein Register der Form "\begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j \phi) \ket{+} \\\\ & \propto \ bigotimes_ {j = 0} ^ {n} \left (\ket{0} + \) abrufen. Exp (i 2 ^ {j} \phi) \ket{1}\right) \\\\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \exp (i \phi k) \ket{k} \end{align}, wobei $n $ die Anzahl der benötigten Genauigkeit ist, und wo wir ${} \propto {}$ verwendet haben, um anzugeben, dass der normalisierungs Faktor von $ unterdrückt wurde. 1/\sqrt{2 ^ n} $.
+Auf diese Weise können wir ein Register der Form "\begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j \phi) \ket{+} \\\\ & \propto \ bigotimes_ {j = 0} ^ {n} \left (\ket{0} + \) abrufen. Exp (i 2 ^ {j} \phi) \ket{1}\right) \\\\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \exp (i \phi k) \ket{k} \end{align}, wobei $n $ die Anzahl der benötigten Genauigkeit ist, und wo wir ${} \propto {}$ verwendet haben, um anzugeben, dass der normalisierungs Faktor $1/\sqrt unterdrückt wurde. {2 ^ n} $.
 
 Wenn wir davon ausgehen, dass $ \phi = 2 \pi p/2 ^ k $ für eine ganze Zahl $p $ ist, erkennen wir dies als $ \ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \dots p_n} $, wobei $p _J $ das $j ^ {\textrm{Th}} $ Bit $2 \pi \phi $ ist.
 Wenn Sie das Adjoint der Quantum Fourier-Transformation anwenden, erhalten wir daher die binäre Darstellung der Phase, die als Quantenzustand codiert ist.
