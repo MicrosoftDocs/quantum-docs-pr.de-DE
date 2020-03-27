@@ -225,6 +225,8 @@
       uid: microsoft.quantum.arrays.constantarray
     - name: Enumerated
       uid: microsoft.quantum.arrays.enumerated
+    - name: EqualA
+      uid: microsoft.quantum.arrays.equala
     - name: Exclude
       uid: microsoft.quantum.arrays.exclude
     - name: Filtered
@@ -1408,7 +1410,7 @@
       uid: microsoft.quantum.machinelearning.nqubitsrequired
     - name: PartialRotationsLayer
       uid: microsoft.quantum.machinelearning.partialrotationslayer
-    - name: Sampled
+    - name: Stichproben
       uid: microsoft.quantum.machinelearning.sampled
     - name: SamplingSchedule
       uid: microsoft.quantum.machinelearning.samplingschedule
