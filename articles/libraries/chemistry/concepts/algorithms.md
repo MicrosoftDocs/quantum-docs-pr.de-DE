@@ -6,12 +6,12 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
-ms.openlocfilehash: e3ce76f5ddcca497adb519eece959c9dd5dec92f
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 5dad4e4a77eea99e72eb2efac52eec61ebbdb21c
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904637"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320712"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Simulieren von hamiltona Dynamics
 
@@ -28,14 +28,14 @@ Beachten Sie, dass der Fehler in dieser Näherung nicht $O (m ^ 2 t ^ 2) $, wenn
 Dieser Fehler tritt auf, weil $e ^ {-IHT} $ ein Operator exponentiell ist und daher bei der Verwendung dieser Formel ein Fehler aufgetreten ist, da die $H _J $ Terms nicht übernehmen (*d. h.* $H _J H_k \nE H_k H_j $ im allgemeinen).
 
 Wenn $t $ groß ist, kann Trotter– Suzuki-Formeln weiterhin verwendet werden, um die Dynamics genau zu simulieren, indem Sie Sie in eine Abfolge kurzer Zeit Schritte aufteilen.
-$R $ ist die Anzahl der Schritte, die in der Zeitentwicklung ausgeführt wurden.
-Dann haben wir die $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r), $ $. Dies impliziert, dass der Fehler, wenn $r $ als $m ^ 2 t ^ 2/\ Epsilon $ skaliert werden kann, höchstens $ \epsilon $ für alle $ \epsilon-> 0 $.
+$R $ ist die Anzahl der Schritte, die bei der Zeitentwicklung durchgeführt werden, sodass jeder Zeit Schritt für Zeit $t/r $ ausgeführt wird. Dann haben wir die $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r), $ $. Dies impliziert, dass der Fehler, wenn $r $ als $m ^ 2 t ^ 2/\ Epsilon $ skaliert werden kann, höchstens $ \epsilon $ für alle $ \epsilon-> 0 $.
 
 Genauere Näherungen können erstellt werden, indem eine Sequenz von Operator exponentialen erstellt wird, sodass die fehlerbegriffe abgebrochen werden.
-Die einfachste Formel, die symmetrische trockformel oder die Rollen Aufteilung, hat die Form $ $ U_1 (t) = \ prod_ {j = 1} ^ m e ^ {-iH_j t/2} \ prod_ {j = m} ^ 1 e ^ {-iH_j t} = e ^ {-IHT} + O (m ^ 3 t ^ 3), $ $, die für alle $ \epsilon-> 0 $ weniger als $ \epsilon $ erstellt werden können, indem Sie $r $ zum Skalieren als $m ^ {3/2} t ^ {3/2}/\sqrt {\ Epsilon} $ auswählen.
+Die einfachste Formel, die zweite Order Trotter-Suzuki-Formel, hat die Form $ $ U_2 (t) = \left (\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2R} \ prod_ {j = m} ^ 1 e ^ {-iH_j t/2R} \ right) ^ r = e ^ {-IHT} + O (m ^ 3 t ^ 3/r ^ 2), $ $ der Fehler, der kleiner als $ \epsilon $ für beliebige $ \epsilon > 0 $ gemacht werden kann, indem $r $ zum Skalieren als $m ^ {3/2} t ^ {3/2}/\sqrt {\ Epsilon} $ ausgewählt wird.
 
-Sogar auf $U _1 $ basierende trotterformeln können erstellt werden.
-Die einfachste ist die folgende Formel für die vierte Bestellung: ursprünglich eingeführt von Suzuki: $ $ U_2 (t) = U_1 ^ 2 (s_1t) U_1 ([1-4s_1] t) U_1 ^ 2 (s_1 t) = e ^ {-IHT} + O (m ^ 5T ^ 5), $ $ WHERE $s _1 = (4-4 ^ {1/3}) ^{-1}$.
+Sogar Formeln höherer Ordnung, insbesondere ($ 2K $), für $k > 0 $, können rekursiv erstellt werden: $ $ U_ {2K} (t) = [U_ {2K-2} (s_k\~ t)] ^ 2 U_ {2K-2} ([1-4s_k] t) [U_ {2K-2} (s_k\~ t)] ^ 2 = e ^ {-IHT} + O ((m t) ^ {2K + 1}/r ^ {2K}), $ $ WHERE $s _K = (4-4 ^ {1/(2K-1)}) ^{-1}$.
+
+Der einfachste Wert ist die folgende vierte Bestell Formel ($k = $2), die ursprünglich von Suzuki: $ $ U_4 (t) = [U_2 (s_2\~ t)] ^ 2 U_2 ([1-4s_2] t) [U_2 (s_2\~ t)] ^ 2 = e ^ {-IHT} + O (m ^ 5T ^ 5/r ^ 4), $ $ WHERE $s _2 = (4-4 ^ {1/3}) ^{-1}$.
 Im Allgemeinen können beliebig hochwertige Formeln ähnlich konstruiert werden. die Kosten, die durch die Verwendung komplexerer Integratoren entstehen, überwiegen jedoch häufig die Vorteile der vierten Reihenfolge für die meisten praktischen Probleme.
 
 Damit die oben genannten Strategien funktionieren, benötigen wir eine Methode zum Simulieren einer breiten Klasse von $e ^ {-iH_j t} $.

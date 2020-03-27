@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 2fa227c823cd87df9c799c043c699e4ce818b8e3
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 239073b7e7edafc49bc65cb60c9f45cf0af83dbe
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907544"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320886"
 ---
 # <a name="multiple-qubits"></a>Mehrere Qubits
 
@@ -27,7 +27,7 @@ Diese Tools sind absolut notwendig, um die Gate-Sätze zu verstehen, die häufig
 
 ## <a name="representing-two-qubits"></a>Darstellen von zwei Qubits
 Der Hauptunterschied zwischen einem-und zwei-Qubit-Zuständen besteht darin, dass zwei-Qubit-Zustände vierdimensional und nicht zweidimensional sind.
-Dies liegt daran, dass die Berechnungsbasis für zwei-Qubit-Zustände durch die tensorflow-Produkte von einem-Qubit-Status gebildet wird.  Beispiel: \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \ End{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \ End{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \ End{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \ End{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \end{bmatrix}.\\
+Dies liegt daran, dass die Berechnungsbasis für zwei-Qubit-Zustände durch die tensorflow-Produkte von einem-Qubit-Status gebildet wird.  Beispiel: \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \ End{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \ End{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \ End{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix} ,\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \ End{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0\\\\ 1 \end{bmatrix}.
 \end{align}
 
 Es ist leicht zu erkennen, dass der Quantum-Status $n $ Qubits in der Regel durch einen Einheits Vektor der Dimension "$ 2 ^ n $" dargestellt wird, der diese Konstruktion verwendet.  Der Vektor
@@ -59,13 +59,16 @@ $$
 
 Es ist auch möglich, nur ein Qubit mit einem zwei-Qubit-Quantum-Zustand zu messen. In Fällen, in denen nur eine der Qubits gemessen wird, unterscheiden sich die Auswirkungen der Messung ganz leicht, da der gesamte Zustand nicht in den Status "Compute-Basis" reduziert wird, sondern nur auf ein unter System reduziert wird.  Anders ausgedrückt: in solchen Fällen, in denen nur ein Qubit gemessen wird, reduziert nur eines der Subsysteme, aber nicht alle.  
 
-Um dies zu sehen, sollten Sie das erste Qubit des folgenden Zustands Messen, das durch Anwenden der Hadamard-Transformation $H $ auf zwei Qubits gebildet wird, die anfänglich auf den Status "0" festgelegt sind: $ $ H ^ {\otimes 2} \left (\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} \right) = \frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 &-1 & 1 &-1 \\\\ & 1 & 1 &-1 \\-1 \\ & 1- 1 &-1 & 1 \end{bmatrix}\begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ Ende {bmatrix} = \frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ Ende {bmatrix} \mapsto \begin{Cases}\text{Outcome} = 0 & \frac{1}{\sqrt{2}} \begin{bmatrix}1\\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}\\\\ \text{Ergebnis} = 1 & \frac{1}{\sqrt{2}} \begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \ End{bmatrix}\\\\ \end{Cases}.
+Um dies zu sehen, sollten Sie das erste Qubit des folgenden Zustands Messen, das durch Anwenden der Hadamard-Transformation $H $ auf zwei Qubits gebildet wird, die anfänglich auf den Status "0" festgelegt sind: $ $ H ^ {\otimes 2} \left (\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} \right) = \frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 &-1 & 1 &-1 \\\\ 1 & 1 &-1 &-1 \\\\ & &-1 &-1 1 \ End {bmatrix} \begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ Ende {bmatrix} = \frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ Ende {bmatrix} \mapsto \begin{Cases}\text{Outcome} = 0 & \frac{1}{\sqrt{2}} \begin{bmatrix}1\\\\ 1\\\\ 0\\\\ 0 \ End{bmatrix}\\\\ \text{Ergebnis} = 1 & \frac{1}{\sqrt{2}} \begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \ End{bmatrix}\\\\ \end{Cases}.
 Beide Ergebnisse haben eine Wahrscheinlichkeit von 50%.  Das Ergebnis, das 50% Wahrscheinlichkeit für beides ergibt, kann aus der Tatsache intuitiv werden, dass der anfängliche Quantum-Status Vektor beim Austauschen von $0 $ mit $1 $ auf dem ersten Qubit invariante ist.
 
-Die mathematische Regel zum Messen des ersten oder zweiten Qubits ist einfach.  Wenn wir $e _K $ der $k ^ {\rM Th} $ computevektor und $S $ der Satz aller $e _K $ sein, damit das betreffende Qubit den Wert $1 $ für diesen Wert von $k $ übernimmt.  Wenn z. b. das erste Qubit gemessen werden soll, besteht $S $ aus $e _2 \ equiv $10 und $e _3 \ equiv $11.  Wenn wir am zweiten Qubit interessiert sind, $S $ aus $e _1 \ equiv $1 und $e _3 \equiv $11.  Anschließend ist die Wahrscheinlichkeit, dass das ausgewählte Qubit als $1 $ gemessen wird, für den Status Vektor $ \psi $ festgelegt.
+Die mathematische Regel zum Messen des ersten oder zweiten Qubits ist einfach.  Wenn wir $e _K $ der $k ^ {\rM Th} $ computevektor und $S $ der Satz aller $e _K $ sein, damit das betreffende Qubit den Wert $1 $ für diesen Wert von $k $ übernimmt.  Wenn z. b. das erste Qubit gemessen werden soll, besteht $S $ aus $e _1 \ equiv $10 und $e _3 \ equiv $11.  Wenn wir am zweiten Qubit interessiert sind, $S $ aus $e _2 \ equiv $1 und $e _3 \equiv $11.  Anschließend ist die Wahrscheinlichkeit, dass das ausgewählte Qubit als $1 $ gemessen wird, für den Status Vektor $ \psi $ festgelegt.
 
 $ $ P (\text{Outcome} = 1) = \ sum_ {e_k \text{in der Gruppe} S} \psi ^ \dagger e_k e_k ^ \dagger \psi.
 $$
+
+> [!NOTE]
+> In diesem Dokument verwenden wir das Little-Endian-Format, um die Berechnungsbasis zu bezeichnen. Im Little-Endian-Format werden die am wenigsten wichtigen Bits zuerst angezeigt. Beispielsweise wird die Zahl vier im Little-Endian-Format durch die Zeichenfolge "Bits 001" dargestellt.
 
 Da jede Qubit-Messung nur $0 $ oder $1 $ ergeben kann, ist die Wahrscheinlichkeit für das Messen von $0 $ einfach $1-P (\text{Outcome} = 1) $.  Aus diesem Grund wird nur explizit eine Formel für die Wahrscheinlichkeit der Messung von $1 $ zugewiesen.
 
@@ -79,7 +82,7 @@ Der vorsichtige Reader kann sich Gedanken darüber machen, was passiert, wenn di
 
 Wenn wir $ \psi $ als den oben genannten Uniform State Vector verwenden und an der Messung des ersten Qubit interessiert sind, 
 
-$ $ P (\text{Messung des ersten Qubit} = 1) = (\psi ^ \dagger e_2) (e_2 ^ \dagger \psi) + (\psi ^ \dagger e_3) (e_3 ^ \dagger \psi) = | e_2 ^ \dagger \psi | ^ 2 + | e_3 ^ \dagger \psi | ^ 2.
+$ $ P (\text{Messung des ersten Qubit} = 1) = (\psi ^ \dagger E_1) (E_1 ^ \dagger \psi) + (\psi ^ \dagger e_3) (e_3 ^ \dagger \psi) = | E_1 ^ \dagger \psi | ^ 2 + | e_3 ^ \dagger \psi | ^ 2.
 $$
 
 Beachten Sie, dass dies nur die Summe der beiden Wahrscheinlichkeiten ist, die für das Messen der Ergebnisse erwartet werden, $10 $ und $11 $ wären alle zu messenden Qubits.
@@ -90,12 +93,13 @@ $$
 
 was mit unserer Intuition übereinstimmt, gibt Aufschluss über die Wahrscheinlichkeit.  Ebenso kann der Zustand geschrieben werden:
 
-$ $ \bruchteil {\bruch{e_2}{2}+ \bruchteil {e_3}{2}} {\sqrt{\frac{1}{2}}} = \frac{1}{\sqrt{2}} \begin{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1 \ Ende {bmatrix} $ $
+$ $ \bruchteil {\bruch{E_1}{2}+ \bruchteil {e_3}{2}} {\sqrt{\frac{1}{2}}} = \frac{1}{\sqrt{2}} \begin{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1 \ Ende {bmatrix} $ $
 
 auch in Übereinstimmung mit unserer Intuition.
 
 ## <a name="two-qubit-operations"></a>Zwei-Qubit-Vorgänge
-Wie bei einem Single-Qubit-Fall ist jede einheitliche Transformation ein gültiger Vorgang für Qubits. Im Allgemeinen ist eine einheitliche Transformation auf $n $ Qubits eine Matrix $U $ der Größe $2 ^ n \times 2 ^ n $ (sodass Sie auf Vektoren der Größe von $2 ^ n $ basiert), sodass $U ^{-1} = U ^ \dagger $ vorliegt. Beispielsweise ist das CNOT-Gate (kontrollierter not) ein häufig verwendetes zwei-Qubit-Gate und wird durch die folgende einheitliche Matrix dargestellt:
+Wie bei einem Single-Qubit-Fall ist jede einheitliche Transformation ein gültiger Vorgang für Qubits. Im Allgemeinen ist eine einheitliche Transformation auf $n $ Qubits eine Matrix $U $ der Größe $2 ^ n \times 2 ^ n $ (sodass Sie auf Vektoren der Größe von $2 ^ n $ basiert), sodass $U ^{-1} = U ^ \dagger $ vorliegt.
+Beispielsweise ist das CNOT-Gate (kontrollierter not) ein häufig verwendetes zwei-Qubit-Gate und wird durch die folgende einheitliche Matrix dargestellt:
 
 $ $ \operatschmue{CNOT} = \begin{bmatrix} 1 \ 0 \ 0 \ 0 \\\\ 0 \ 1 \ 0 \ 0 \\\\ 0 \ 0 \ 0 \ 1 \\\\ 0 \ 0 \ 1 \ 0 \end{bmatrix} $ $
 
@@ -103,7 +107,7 @@ Wir können auch zwei Qubit-Gates durch Anwenden von Single-Qubit Gates auf beid
 
 $ $ \begin{bmatrix} a \ b\\\\ c \ d \end{bmatrix} $ $
 
-and
+und
 
 $ $ \begin{bmatrix} e \ f\\\\ g \ h \end{bmatrix} $ $
 
