@@ -1,0 +1,76 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.equala
+name: EqualA
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Überprüft zwei Arrays desselben Typs und ein Prädikat, das für Paare von Elementen der Arrays definiert ist, und überprüft, ob die Arrays gleich sind.
+remarks: >-
+  Diese Funktion ist für generische Typen definiert. Wenn also zwei Arrays `'T[]` und eine Funktion `equal: ('T, 'T) -> Bool`, gibt diese Funktion einen `Bool` Wert zurück, der angibt, ob die Arrays gleich sind.
+
+  Damit zwei Arrays als gleich betrachtet werden, müssen Sie die gleiche Länge aufweisen, und die Elemente an denselben Positionen in den Arrays müssen gleich sein.
+examples: >-
+  Der folgende Code überprüft, ob verschiedene Paare von Arrays gleich sind:
+
+
+  ```qsharp
+
+  open Microsoft.Quantum.Arrays;
+
+  open Microsoft.Quantum.Logical;
+
+
+  function EqualADemo() : Unit {
+      let equalArrays = EqualA(EqualI, [2, 3, 4], [2, 3, 4]);
+      let differentLength = EqualA(EqualD, [2.0, 3.0, 4.0], [2.0, 3.0]);
+      let differentElements = EqualA(EqualR, [One, Zero], [One, One]);
+      Message($"Equal arrays are {equalArrays ? "equal" | "not equal"}");
+      Message($"Arrays of different length are {differentLength ? "equal" | "not equal"}");
+      Message($"Arrays of the same length with different elements are {differentElements ? "equal" | "not equal"}");
+  }
+
+  ```
+syntax: "function EqualA (equal : (('T, 'T) -> Bool), array1 : 'T[], array2 : 'T[]) : Bool"
+input:
+  content: "(equal : (('T, 'T) -> Bool), array1 : 'T[], array2 : 'T[])"
+  types:
+  - name: equal
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array1
+    summary: Das erste Array, das verglichen werden soll.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+  - name: array2
+    summary: Das zweite Array, das verglichen werden soll.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Bool
+  types:
+  - summary: >-
+      Der Wert `true` nur dann, wenn `array1` und `array2` gleich sind.
+
+      Das heißt, wenn beide Arrays die gleiche Länge aufweisen und alle Elemente gleich sind, wie Sie durch `equal`definiert sind.
+    isPrimitive: true
+    uid: Bool
+typeParameters:
+- uid: "'T"
+  summary: Der Typ der Elemente des Arrays.
+metadata:
+  ms.openlocfilehash: 466078fa243e2f394fa42dff15845ae5f1cd73df
+  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 03/26/2020
+  ms.locfileid: "80321605"
