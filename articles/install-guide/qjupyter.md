@@ -1,5 +1,5 @@
 ---
-title: 'Entwickeln mit Q # jupyter Notebooks'
+title: 'Entwickeln mit Q# jupyter Notebooks'
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
@@ -13,16 +13,16 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/29/2020
 ms.locfileid: "76831068"
 ---
-# <a name="develop-with-q-jupyter-notebooks"></a>Entwickeln mit Q # jupyter Notebooks
+# <a name="develop-with-q-jupyter-notebooks"></a>Entwickeln mit Q# jupyter Notebooks
 
-Installieren Sie das QDK zum Entwickeln von q #-Vorgängen für q # jupyter-Notebooks.
+Installieren Sie das QDK zum Entwickeln von Q#-Vorgängen für Q# jupyter-Notebooks.
 
-Jupyter-Notebooks ermöglichen die direkte Codeausführung neben Anweisungen, Notizen und anderem Inhalt. Diese Umgebung eignet sich ideal zum Schreiben von f #-Code mit eingebetteten Erläuterungen oder interaktiven Lernprogrammen für Quantum Computing. Hier sind die Schritte aufgeführt, die Sie zum Erstellen eigener Q#-Notebooks ausführen müssen.
+Jupyter-Notebooks ermöglichen die direkte Codeausführung neben Anweisungen, Notizen und anderem Inhalt. Diese Umgebung eignet sich ideal zum Schreiben von Q#-Code mit eingebetteten Erläuterungen oder interaktiven Lernprogrammen für Quantum Computing. Hier sind die Schritte aufgeführt, die Sie zum Erstellen eigener Q#-Notebooks ausführen müssen.
 
 IQ# (ausgesprochen „i-q-sharp“) ist eine hauptsächlich von Jupyter und Python genutzte Erweiterung für das .NET Core SDK, die die Kernfunktionen für das Kompilieren und Simulieren von Q#-Vorgängen bereitstellt.
 
 > [!NOTE]
-> * In q # jupyter Notebooks können Sie nur q #-Code ausführen, und die Vorgänge können nicht von externen Host Programmen (z. b. C# python oder Dateien) aufgerufen werden. Diese Umgebung ist nicht geeignet, wenn Sie ein externes klassisches Host Programm mit dem Quantum-Programm kombinieren möchten.
+> * In Q# jupyter Notebooks können Sie nur Q#-Code ausführen, und die Vorgänge können nicht von externen Host Programmen (z. b. C# python oder Dateien) aufgerufen werden. Diese Umgebung ist nicht geeignet, wenn Sie ein externes klassisches Host Programm mit dem Quantum-Programm kombinieren möchten.
 
 1. Voraussetzungen
 

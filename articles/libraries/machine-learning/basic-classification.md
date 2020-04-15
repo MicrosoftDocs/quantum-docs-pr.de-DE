@@ -1,6 +1,6 @@
 ---
 title: Einfache Klassifizierung mit der Quantum-Machine Learning Bibliothek
-description: 'Erfahren Sie, wie Sie mithilfe der Quantum-Machine Learning Bibliothek von Microsoft QDK einen in Q # geschriebenen Quantum-Klassifizierer ausführen.'
+description: 'Erfahren Sie, wie Sie mithilfe der Quantum-Machine Learning Bibliothek von Microsoft QDK einen in Q# geschriebenen Quantum-Klassifizierer ausführen.'
 author: geduardo
 ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
@@ -15,9 +15,9 @@ ms.locfileid: "77909924"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Basic-Klassifizierung: klassifizieren von Daten mit dem QDK
 
-In dieser Schnellstartanleitung erfahren Sie, wie Sie mithilfe der Quantum-Machine Learning Bibliothek des QDK einen in Q # geschriebenen quantesequenziellen Klassifizierer ausführen. 
+In dieser Schnellstartanleitung erfahren Sie, wie Sie mithilfe der Quantum-Machine Learning Bibliothek des QDK einen in Q# geschriebenen quantesequenziellen Klassifizierer ausführen. 
 
-In dieser Anleitung verwenden wir das Halbmond-DataSet mit einer in Q # definierten Klassifizierungs Struktur.
+In dieser Anleitung verwenden wir das Halbmond-DataSet mit einer in Q# definierten Klassifizierungs Struktur.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -34,7 +34,7 @@ Ihr Host Programm besteht aus drei Teilen:
 
     ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Python mit Visual Studio Code oder Befehlszeile](#tab/tabid-python)
 
-    Wenn Sie den Q #-Klassifizierer aus python ausführen möchten, speichern Sie den folgenden Code als `host.py`. Beachten Sie, dass Sie auch das Q #-Datei `Training.qs` benötigen, das weiter unten in diesem Tutorial erläutert wird.
+    Wenn Sie den Q#-Klassifizierer aus python ausführen möchten, speichern Sie den folgenden Code als `host.py`. Beachten Sie, dass Sie auch das Q#-Datei `Training.qs` benötigen, das weiter unten in diesem Tutorial erläutert wird.
 
     :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="3-42":::
 
@@ -49,7 +49,7 @@ Ihr Host Programm besteht aus drei Teilen:
 
     ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[C# mit Visual Studio Code oder Befehlszeile](#tab/tabid-csharp)
 
-    Wenn Sie den Q #-Klassifizierer ausführen C#möchten, speichern Sie den folgenden Code als `Host.cs`. Beachten Sie, dass Sie auch das Q #-Datei `Training.qs` benötigen, das weiter unten in diesem Tutorial erläutert wird.
+    Wenn Sie den Q#-Klassifizierer ausführen C#möchten, speichern Sie den folgenden Code als `Host.cs`. Beachten Sie, dass Sie auch das Q#-Datei `Training.qs` benötigen, das weiter unten in diesem Tutorial erläutert wird.
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -63,7 +63,7 @@ Ihr Host Programm besteht aus drei Teilen:
 
     ### <a name="c-with-visual-studio-2019"></a>[C# mit Visual Studio 2019](#tab/tabid-vs2019)
 
-    Um das neue Q #-Programm C# in Visual Studio auszuführen, ändern Sie `Host.cs`, um den C# folgenden Code einzufügen. Beachten Sie, dass Sie auch das Q #-Datei `Training.qs` benötigen, das weiter unten in diesem Tutorial erläutert wird.
+    Um das neue Q#-Programm C# in Visual Studio auszuführen, ändern Sie `Host.cs`, um den C# folgenden Code einzufügen. Beachten Sie, dass Sie auch das Q#-Datei `Training.qs` benötigen, das weiter unten in diesem Tutorial erläutert wird.
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -78,7 +78,7 @@ Ihr Host Programm besteht aus drei Teilen:
 
 ## <a name="q-classifier-code"></a>F\# klassifizierercode
 
-Sehen wir uns nun an, wie die vom Host Programm aufgerufenen Vorgänge in f # definiert werden.
+Sehen wir uns nun an, wie die vom Host Programm aufgerufenen Vorgänge in Q# definiert werden.
 Der folgende Code wird in einer Datei mit dem Namen `Training.qs`gespeichert.
 
 :::code language="qsharp" source="~/quantum/samples/machine-learning/half-moons/Training.qs" range="4-116":::

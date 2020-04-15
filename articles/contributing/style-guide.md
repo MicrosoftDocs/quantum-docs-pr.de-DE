@@ -1,6 +1,6 @@
 ---
-title: 'Microsoft Q #-Stil Handbuch'
-description: 'Erlernen Sie die Benennungs-, Eingabe-, Dokumentations-und Formatierungs Konventionen für Q #-Programme und-Bibliotheken'
+title: 'Microsoft Q#-Stil Handbuch'
+description: 'Erlernen Sie die Benennungs-, Eingabe-, Dokumentations-und Formatierungs Konventionen für Q#-Programme und-Bibliotheken'
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
@@ -13,10 +13,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "77907442"
 ---
-# <a name="q-style-guide"></a>F #-Stil Handbuch #
+# <a name="q-style-guide"></a>Q#-Stil Handbuch #
 ## <a name="general-conventions"></a>Allgemeine Konventionen ##
 
-Die in diesem Handbuch empfohlenen Konventionen dienen dazu, Programme und Bibliotheken, die in Q # geschrieben wurden, einfacher zu lesen und zu verstehen.
+Die in diesem Handbuch empfohlenen Konventionen dienen dazu, Programme und Bibliotheken, die in Q# geschrieben wurden, einfacher zu lesen und zu verstehen.
 
 ## <a name="guidance"></a>Anleitungen
 
@@ -29,13 +29,13 @@ Wir empfehlen Folgendes:
 Beim anbieten des quantumentwicklungskit werden Funktions-und Vorgangs Namen unterstützt, mit denen Quantum-Entwickler Programme schreiben können, die leicht lesbar sind und die überraschen.
 Ein wichtiger Aspekt dabei ist, dass wir bei der Auswahl von Namen für Funktionen, Vorgänge und Typen das *Vokabular* einrichten, mit dem Programmierer Quantum-Konzepte Ausdrücken. mit unseren Optionen können wir Sie bei der klaren Kommunikation unterstützen oder behindern.
 Dies liegt in der Verantwortung für uns, sicherzustellen, dass die Namen, die wir einführen, eher Klarheit bieten als Verschleierung.
-In diesem Abschnitt erfahren Sie, wie wir diese Verpflichtung in Bezug auf eine explizite Anleitung erfüllen, mit der wir am besten von der Q #-Entwicklungs Community unterstützt werden.
+In diesem Abschnitt erfahren Sie, wie wir diese Verpflichtung in Bezug auf eine explizite Anleitung erfüllen, mit der wir am besten von der Q#-Entwicklungs Community unterstützt werden.
 
 ### <a name="operations-and-functions"></a>Vorgänge und Funktionen ###
 
 Eines der ersten Dinge, die ein Name einrichten sollte, ist, ob ein bestimmtes Symbol eine Funktion oder einen Vorgang darstellt.
 Der Unterschied zwischen Funktionen und Vorgängen ist wichtig, um zu verstehen, wie sich ein Codeblock verhält.
-Um den Unterschied zwischen Funktionen und Vorgängen an Benutzer zu übermitteln, basieren wir auf der Verwendung von Nebeneffekten darauf, dass die f #-Modelle Quantum-Vorgänge verwenden.
+Um den Unterschied zwischen Funktionen und Vorgängen an Benutzer zu übermitteln, basieren wir auf der Verwendung von Nebeneffekten darauf, dass die Q#-Modelle Quantum-Vorgänge verwenden.
 Dies *bedeutet* , dass ein Vorgang etwas bewirkt.
 
 Im Gegensatz dazu beschreiben Funktionen die mathematischen Beziehungen zwischen den Daten.
@@ -97,8 +97,8 @@ Wir empfehlen Folgendes:
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | Löschen Sie die Verwendung eines Verbs ("reflektieren"), um die Auswirkung des Vorgangs anzuzeigen. |
 | ☒ | <s>`operation XRotation`</s> | Die Verwendung von Substantiv Phrase schlägt eine Funktion anstelle von Operation vor. |
-| ☒ | <s>`operation search_oracle`</s> | Die Verwendung von `snake_case` verstößt gegen die Q #-Notation. |
-| ☒ | <s>`operation Search_Oracle`</s> | Die Verwendung von unterstrichen im internen Namen für den Vorgangs Namen verstößt gegen die Q #-Notation |
+| ☒ | <s>`operation search_oracle`</s> | Die Verwendung von `snake_case` verstößt gegen die Q#-Notation. |
+| ☒ | <s>`operation Search_Oracle`</s> | Die Verwendung von unterstrichen im internen Namen für den Vorgangs Namen verstößt gegen die Q#-Notation |
 | ☑ | `function StatePreparationOracle` | Die Verwendung des Substantiv Ausdrucks deutet darauf hin, dass die Funktion einen Vorgang zurückgibt. |
 | ☑ | `function EqualityFact` | Löschen Sie die Verwendung von Substantiv ("Fakt"), um anzugeben, dass es sich hierbei um eine Funktion handelt, während das Adjektiv ist. |
 | ☒ | <s>`function GetRotationAngles`</s> | Die Verwendung von Verb ("Get") deutet darauf hin, dass es sich hierbei um einen Vorgang handelt. |
@@ -165,11 +165,11 @@ Especially in a field such as quantum computing that is rich with domain experti
 In naming code symbols, one way that this cognizance expresses itself is as an awareness of the convention from physics of adopting as the names of algorithms and operations the names of their original publishers.
 While we must maintain the history and intellectual provenance of concepts in quantum computing, demanding that all users be versed in this history to use even the most basic of functions and operations places a barrier to entry that is in most cases severe enough to even present an ethical compromise. -->
 Daher wird empfohlen, dass, soweit sinnvoll, gängige Nomen, die ein Konzept beschreiben, für die richtigen Nomen, die den Veröffentlichungs Verlauf eines Konzepts beschreiben, eine starke Bevorzugung annehmen.
-Ein bestimmtes Beispiel ist, dass die einzeln kontrollierten Swap-und doppelt kontrollierten not-Vorgänge in Academic Literatur oft als "Fredkin"-und "to-do"-Vorgänge bezeichnet werden, aber in Q # primär als `CSWAP` und `CCNOT`identifiziert werden.
+Ein bestimmtes Beispiel ist, dass die einzeln kontrollierten Swap-und doppelt kontrollierten not-Vorgänge in Academic Literatur oft als "Fredkin"-und "to-do"-Vorgänge bezeichnet werden, aber in Q# primär als `CSWAP` und `CCNOT`identifiziert werden.
 In beiden Fällen enthalten die API-Dokumentations Kommentare Synonyme, die auf den richtigen Substantiven basieren, sowie alle entsprechenden citierungen.
 
-Diese Einstellung ist besonders wichtig, da eine bestimmte Verwendung von richtigen Nomen immer erforderlich ist – f # folgt der Tradition, die von vielen klassischen Sprachen festgelegt wird, und bezieht sich auf `Bool` Typen in Bezug auf die boolesche Logik, die wiederum als "George Boole" bezeichnet wird.
-Einige Quantum-Konzepte werden ähnlich benannt, einschließlich des in der Sprache Q # integrierten `Pauli` Typs.
+Diese Einstellung ist besonders wichtig, da eine bestimmte Verwendung von richtigen Nomen immer erforderlich ist – Q# folgt der Tradition, die von vielen klassischen Sprachen festgelegt wird, und bezieht sich auf `Bool` Typen in Bezug auf die boolesche Logik, die wiederum als "George Boole" bezeichnet wird.
+Einige Quantum-Konzepte werden ähnlich benannt, einschließlich des in der Sprache Q# integrierten `Pauli` Typs.
 Wenn Sie die Verwendung von richtigen Nomen minimieren, bei denen eine solche Verwendung nicht wesentlich ist, verringern wir die Auswirkungen, bei denen die richtigen Nomen nicht vernünftig vermieden werden können.
 
 # <a name="guidance"></a>[Leitfaden](#tab/guidance) 
@@ -184,9 +184,9 @@ Wir empfehlen Folgendes:
 
 ### <a name="type-conversions"></a>Typkonvertierungen ###
 
-Da Q # eine stark und statisch typisierte Sprache ist, kann ein Wert eines Typs nur als Wert eines anderen Typs verwendet werden, indem ein expliziter Rückruf einer Typkonvertierungs Funktion verwendet wird.
+Da Q# eine stark und statisch typisierte Sprache ist, kann ein Wert eines Typs nur als Wert eines anderen Typs verwendet werden, indem ein expliziter Rückruf einer Typkonvertierungs Funktion verwendet wird.
 Dies steht im Gegensatz zu Sprachen, die es ermöglichen, Typen implizit (z. b. typherauf Stufung) oder durch Umwandlung zu ändern.
-Typkonvertierungs Funktionen spielen daher eine wichtige Rolle bei der Entwicklung der Q #-Bibliothek und bilden eine der gängigsten Entscheidungen zum benennen.
+Typkonvertierungs Funktionen spielen daher eine wichtige Rolle bei der Entwicklung der Q#-Bibliothek und bilden eine der gängigsten Entscheidungen zum benennen.
 Es ist jedoch zu beachten, dass Typkonvertierungen immer _deterministisch_sind. Sie können als Funktionen geschrieben werden und fallen daher unter den obigen Empfehlungen.
 Insbesondere wird empfohlen, dass Typkonvertierungs Funktionen nie als Verben (z. b.: `ConvertToX`) oder adverbfilter-präpositional-Ausdrücke (`ToX`) benannt werden. Sie sollten jedoch als Adjektiv-Ausdrücke mit präpositional bezeichnet werden, die die Quell-und Zieltypen (`XAsY`) angeben.
 Beim Auflisten von Array Typen in Namen der Typkonvertierungs Funktion wird die Kurzform `Arr`empfohlen.
@@ -219,7 +219,7 @@ Wenn ein Vorgang oder eine Funktion nicht für die direkte Verwendung vorgesehen
 
 Wir empfehlen Folgendes:
 
-- Wenn eine Funktion, ein Vorgang oder ein benutzerdefinierter Typ nicht Teil der öffentlichen API für eine Q #-Bibliothek oder ein Programm ist, müssen Sie sicherstellen, dass der Name mit einem führenden Unterstrich (`_`) beginnt.
+- Wenn eine Funktion, ein Vorgang oder ein benutzerdefinierter Typ nicht Teil der öffentlichen API für eine Q#-Bibliothek oder ein Programm ist, müssen Sie sicherstellen, dass der Name mit einem führenden Unterstrich (`_`) beginnt.
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
@@ -232,7 +232,7 @@ Wir empfehlen Folgendes:
 
 ### <a name="variants"></a>Varianten ###
 
-Obwohl diese Einschränkung in zukünftigen Versionen von Q # nicht beibehalten werden kann, ist es aktuell der Fall, dass häufig Gruppen verwandter Vorgänge oder Funktionen vorhanden sind, die durch die von Ihnen unterstützten Funktoren unterschieden werden, oder durch die konkreten Typen ihrer Argumente.
+Obwohl diese Einschränkung in zukünftigen Versionen von Q# nicht beibehalten werden kann, ist es aktuell der Fall, dass häufig Gruppen verwandter Vorgänge oder Funktionen vorhanden sind, die durch die von Ihnen unterstützten Funktoren unterschieden werden, oder durch die konkreten Typen ihrer Argumente.
 Diese Gruppen können unterschieden werden, indem der gleiche Stamm Name verwendet wird, gefolgt von einem oder zwei Buchstaben, die die Variante angeben.
 
 | Suffix | Bedeutung |
@@ -257,7 +257,7 @@ Wir empfehlen Folgendes:
 
 ### <a name="arguments-and-variables"></a>Argumente und Variablen ###
 
-Ein wichtiges Ziel des Q #-Codes für eine Funktion oder einen Vorgang besteht darin, dass es leicht lesbar und verständlich ist.
+Ein wichtiges Ziel des Q#-Codes für eine Funktion oder einen Vorgang besteht darin, dass es leicht lesbar und verständlich ist.
 Ebenso sollten die Namen von Eingaben und Typargumenten kommunizieren, wie eine Funktion oder ein Argument nach der Bereitstellung verwendet wird.
 
 
@@ -356,10 +356,10 @@ Wir empfehlen Folgendes:
 
 ## <a name="documentation-conventions"></a>Konventionen in der Dokumentation ##
 
-Die Q #-Sprache ermöglicht das Anfügen von Dokumentationen an Vorgänge, Funktionen und benutzerdefinierte Typen durch die Verwendung von speziell formatierten Dokumentations Kommentaren.
+Die Q#-Sprache ermöglicht das Anfügen von Dokumentationen an Vorgänge, Funktionen und benutzerdefinierte Typen durch die Verwendung von speziell formatierten Dokumentations Kommentaren.
 Diese Dokumentations Kommentare sind durch Triple-Schrägstriche (`///`) gekennzeichnet und enthalten kleine, mit [docfx optimierte markdown-](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html) Dokumente, mit denen der Zweck der einzelnen Vorgänge, Funktionen und benutzerdefinierten Typen beschrieben werden kann, welche Eingaben jeweils erwartet werden usw.
 Der mit dem Quantum Development Kit bereitgestellte Compiler extrahiert diese Kommentare und verwendet diese, um die besitzen-Dokumentation in https://docs.microsoft.com/quantumzu unterstützen.
-Entsprechend verwendet der mit dem Quantum Development Kit bereitgestellte Sprachserver diese Kommentare, um Benutzern Hilfe zu bieten, wenn Sie mit dem Mauszeiger auf Symbole in Ihrem Q #-Code zeigen.
+Entsprechend verwendet der mit dem Quantum Development Kit bereitgestellte Sprachserver diese Kommentare, um Benutzern Hilfe zu bieten, wenn Sie mit dem Mauszeiger auf Symbole in Ihrem Q#-Code zeigen.
 Durch die Verwendung von Dokumentations Kommentaren können Benutzer den Code sinnvoll machen, indem Sie einen nützlichen Verweis auf Details bereitstellen, die nicht ohne weiteres mit den anderen Konventionen in diesem Dokument ausgedrückt werden.
 
 <div class="nextstepaction">
@@ -431,8 +431,8 @@ is Adj + Ctl {
 
 Zusätzlich zu den oben genannten Vorschlägen ist es hilfreich, den Code so lesbar wie möglich zu machen, um konsistente Formatierungs Regeln zu verwenden.
 Diese Formatierungs Regeln sind eher willkürlich und stark bis zur persönlichen Ästhetik.
-Trotzdem empfiehlt es sich, einen konsistenten Satz von Formatierungs Konventionen innerhalb einer Gruppe von Projektmitarbeitern zu verwalten, insbesondere für große Q #-Projekte wie das Quantum Development Kit selbst.
-Diese Regeln können automatisch mithilfe des in den f #-Compiler integrierten Formatierungs Tools angewendet werden.
+Trotzdem empfiehlt es sich, einen konsistenten Satz von Formatierungs Konventionen innerhalb einer Gruppe von Projektmitarbeitern zu verwalten, insbesondere für große Q#-Projekte wie das Quantum Development Kit selbst.
+Diese Regeln können automatisch mithilfe des in den Q#-Compiler integrierten Formatierungs Tools angewendet werden.
 
 # <a name="guidance"></a>[Leitfaden](#tab/guidance) 
 

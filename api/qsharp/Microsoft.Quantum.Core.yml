@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.core
 name: Microsoft.Quantum.Core
-summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält Q # Core-Funktionen und-Vorgänge.\n\n # <a name=\"remarks\"></a>Hinweise\n Dieser Namespace wird automatisch vom f #-Compiler geöffnet, sodass alle Elemente dieses Namespace stets verfügbar sind."
+summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält Q# Core-Funktionen und-Vorgänge.\n\n # <a name=\"remarks\"></a>Hinweise\n Dieser Namespace wird automatisch vom Q#-Compiler geöffnet, sodass alle Elemente dieses Namespace stets verfügbar sind."
 functions:
 - uid: microsoft.quantum.core.default
   summary: Gibt eine Standard Instanz des angegebenen Typs zurück.

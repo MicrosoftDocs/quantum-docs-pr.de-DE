@@ -1,5 +1,5 @@
 ---
-title: 'Entwickeln mit Q # +C#'
+title: 'Entwickeln mit Q# +C#'
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
@@ -13,19 +13,19 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 02/06/2020
 ms.locfileid: "77036286"
 ---
-# <a name="develop-with-q--c"></a>Entwickeln mit Q # +C#
+# <a name="develop-with-q--c"></a>Entwickeln mit Q# +C#
 
-Installieren Sie das QDK, C# um Host Programme zum Abrufen von Q #-Vorgängen zu entwickeln.
+Installieren Sie das QDK, C# um Host Programme zum Abrufen von Q#-Vorgängen zu entwickeln.
 
-Q # ist speziell für .NET-Sprachen konzipiert, insbesondere C#. Sie können mit dieser Kopplung innerhalb verschiedener Entwicklungsumgebungen arbeiten:
+Q# ist speziell für .NET-Sprachen konzipiert, insbesondere C#. Sie können mit dieser Kopplung innerhalb verschiedener Entwicklungsumgebungen arbeiten:
 
-- [F # und C# Verwendung von Visual Studio (Windows)](#VS)
-- [Q # + C# Verwenden von Visual Studio Code (Windows, Linux und Mac)](#VSC)
-- [Q # + C# mit dem Befehlszeilen Tool "`dotnet`"](#command)
+- [Q# und C# Verwendung von Visual Studio (Windows)](#VS)
+- [Q# + C# Verwenden von Visual Studio Code (Windows, Linux und Mac)](#VSC)
+- [Q# + C# mit dem Befehlszeilen Tool "`dotnet`"](#command)
 
-## Entwickeln mit Q # + C# mithilfe von Visual Studio <a name="VS"></a>
+## Entwickeln mit Q# + C# mithilfe von Visual Studio <a name="VS"></a>
 
-Visual Studio bietet eine umfangreiche Umgebung für die Entwicklung von f #-Programmen. Die f # Visual Studio-Erweiterung enthält Vorlagen für Q #-Dateien und-Projekte sowie Syntax Hervorhebung, Codevervollständigung und IntelliSense-Unterstützung.
+Visual Studio bietet eine umfangreiche Umgebung für die Entwicklung von Q#-Programmen. Die Q# Visual Studio-Erweiterung enthält Vorlagen für Q#-Dateien und-Projekte sowie Syntax Hervorhebung, Codevervollständigung und IntelliSense-Unterstützung.
 
 
 1. Voraussetzungen
@@ -59,9 +59,9 @@ Visual Studio bietet eine umfangreiche Umgebung für die Entwicklung von f #-Pro
 > [!NOTE]
 > * Falls Sie über mehrere Projekte innerhalb einer Visual Studio-Projektmappe verfügen, müssen sich alle darin enthaltenen Projekte in demselben Ordner wie die Projektmappe oder in einem ihrer Unterordner befinden.  
 
-## Entwickeln mit Q # + C# mit Visual Studio Code <a name="VSC"></a>
+## Entwickeln mit Q# + C# mit Visual Studio Code <a name="VSC"></a>
 
-Visual Studio Code (vs Code) bietet eine umfangreiche Umgebung für die Entwicklung von Q #-Programmen unter Windows, Linux und Mac.  Die q # vs Code-Erweiterung bietet Unterstützung für die f #-Syntax Hervorhebung, Codevervollständigung und f #-Code Ausschnitte.
+Visual Studio Code (vs Code) bietet eine umfangreiche Umgebung für die Entwicklung von Q#-Programmen unter Windows, Linux und Mac.  Die Q# vs Code-Erweiterung bietet Unterstützung für die Q#-Syntax Hervorhebung, Codevervollständigung und Q#-Code Ausschnitte.
 
 1. Voraussetzungen
 
@@ -75,7 +75,7 @@ Visual Studio Code (vs Code) bietet eine umfangreiche Umgebung für die Entwickl
 1. Installieren Sie die Quantum-Projektvorlagen:
 
    - Navigieren Sie zu **Ansicht** -> **Befehlspalette**.
-   - Auswählen von " **Q #: Install Project Templates** "
+   - Auswählen von " **Q#: Install Project Templates** "
 
     Sie haben das Quantum Development Kit jetzt installiert und können es in Ihren eigenen Anwendungen und Bibliotheken verwenden.
 
@@ -84,7 +84,7 @@ Visual Studio Code (vs Code) bietet eine umfangreiche Umgebung für die Entwickl
     - Erstellen eines neuen Projekts:
 
         - Navigieren Sie zu **Ansicht** -> **Befehlspalette**.
-        - Wählen Sie **Q #: Neues Projekt erstellen** aus.
+        - Wählen Sie **Q#: Neues Projekt erstellen** aus.
         - **Eigenständige Konsolenanwendung** auswählen
         - Navigieren Sie im Dateisystem zu dem Speicherort, an dem Sie die Anwendung erstellen möchten.
         - Klicken Sie nach Abschluss der Projekterstellung auf die Schaltfläche **Open new project...** (Neues Projekt öffnen).
@@ -101,7 +101,7 @@ Visual Studio Code (vs Code) bietet eine umfangreiche Umgebung für die Entwickl
 > [!NOTE]
 > * Arbeitsbereiche mit mehreren Stammordnern werden von der Visual Studio Code-Erweiterung derzeit nicht unterstützt. Wenn Sie innerhalb eines VS Code-Arbeitsbereichs über mehrere Projekte verfügen, müssen alle Projekte in demselben Stammordner enthalten sein.
 
-## Entwickeln mit Q # + C# mit dem `dotnet`-Befehlszeilen Tool<a name="command"></a>
+## Entwickeln mit Q# + C# mit dem `dotnet`-Befehlszeilen Tool<a name="command"></a>
 
 Natürlich können Sie Q#-Programme auch über die Befehlszeile erstellen und ausführen, indem Sie einfach das .NET Core SDK und die QDK-Projektvorlagen installieren. 
 

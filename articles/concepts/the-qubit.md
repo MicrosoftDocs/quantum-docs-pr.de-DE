@@ -51,7 +51,7 @@ Qubits können auch in "$ 3 $ D" mithilfe der [*Bloch Sphere*](https://en.wikipe
 ![Bloch-Kugel](~/media/concepts_bloch.png)
 
 Die Pfeile in diesem Diagramm zeigen die Richtung an, in der der Quantum-Status Vektor zeigt, und jede Transformation des Pfeils kann als Drehung zu einer der Hauptachsen betrachtet werden.
-Obwohl eine Quantum-Berechnung als Folge von Rotationen eine leistungsstarke Intuition darstellt, ist es schwierig, diese intuienz zu verwenden, um Algorithmen zu entwerfen und zu beschreiben. F # verringert dieses Problem, indem es eine Sprache zum beschreiben solcher Drehungen bereitstellt.
+Obwohl eine Quantum-Berechnung als Folge von Rotationen eine leistungsstarke Intuition darstellt, ist es schwierig, diese intuienz zu verwenden, um Algorithmen zu entwerfen und zu beschreiben. Q# verringert dieses Problem, indem es eine Sprache zum beschreiben solcher Drehungen bereitstellt.
 
 ## <a name="single-qubit-operations"></a>Single-Qubit-Vorgänge
 
@@ -59,7 +59,7 @@ Quantum-Computer verarbeiten Daten, indem Sie einen universellen Satz von Quantu
 Dieses Konzept der Universalität ähnelt dem Konzept der Universalität für traditionelles (d.h. klassisches) Computing, bei dem ein Gate-Satz als universell betrachtet wird, wenn jede Transformation der Eingabe Bits mithilfe einer begrenzten Längen Verbindung ausgeführt werden kann.
 Bei der Quantenberechnung sind die gültigen Transformationen, die wir für ein Qubit ausführen dürfen, einheitliche Transformationen und Messungen.
 Der *Adjoint-Vorgang* oder das komplexe konjugierte austauschen ist für das Quantum Computing von entscheidender Bedeutung, da es für das Umkehren von Quantum-Transformationen erforderlich ist.
-F # reflektiert dies durch die Bereitstellung von Methoden zum automatischen Kompilieren von Gate-Sequenzen in ihren Adjoint-Code, der es dem Programmierer erspart, Code-adjoints in vielen Fällen zu übergeben. Ein Beispiel hierfür finden Sie unten:
+Q# reflektiert dies durch die Bereitstellung von Methoden zum automatischen Kompilieren von Gate-Sequenzen in ihren Adjoint-Code, der es dem Programmierer erspart, Code-adjoints in vielen Fällen zu übergeben. Ein Beispiel hierfür finden Sie unten:
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -86,7 +86,7 @@ $$
 
 Aus praktischen Gründen im Zusammenhang mit der Quantum-Fehlerkorrektur kann es jedoch bequemer sein, einen größeren Gate-Satz in Erwägung zu nehmen, nämlich einen, der mit $H $ und $T $ generiert werden kann.
 Wir können die Quantum-Gates in zwei Kategorien klassifizieren: Clifford Gates und die $T $-Gate.
-Diese Unterteilung ist nützlich, da die so genannten Clifford-Gates in vielen Quantum-Fehlerkorrekturen leicht implementiert werden können, sodass Sie nur wenige Ressourcen in Bezug auf Vorgänge und Qubits benötigen, um fehlertoleranter zu implementieren, wohingegen nicht-Clifford Gates sehr kostspielig, wenn Fehlertoleranz erforderlich ist. Der Standardsatz von Single-Qubit Clifford Gates, der [standardmäßig in Q # enthalten](xref:microsoft.quantum.libraries.standard.prelude)ist, umfasst
+Diese Unterteilung ist nützlich, da die so genannten Clifford-Gates in vielen Quantum-Fehlerkorrekturen leicht implementiert werden können, sodass Sie nur wenige Ressourcen in Bezug auf Vorgänge und Qubits benötigen, um fehlertoleranter zu implementieren, wohingegen nicht-Clifford Gates sehr kostspielig, wenn Fehlertoleranz erforderlich ist. Der Standardsatz von Single-Qubit Clifford Gates, der [standardmäßig in Q# enthalten](xref:microsoft.quantum.libraries.standard.prelude)ist, umfasst
 
 $ $ H = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ 1 &-1 \end{bmatrix}, \qquad S = \begin{bmatrix} 1 & 0 \\\\ 0 & i \end{bmatrix} = t ^ 2, \qquad X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix} = HT ^ 4H, $ $
 
@@ -96,11 +96,11 @@ $$
 Hier werden die Vorgänge $X $, $Y $ und $Z $ besonders häufig verwendet und nach dem Ersteller Wolfgang Pauli als [*Pauli-Operatoren*](https://en.wikipedia.org/wiki/Pauli_matrices) bezeichnet.
 Zusammen mit dem nicht-Clifford-Gate (der $T $-Gate) können diese Vorgänge so zusammengesetzt werden, dass jede einheitliche Transformation auf einem einzelnen Qubit ungefähre ist.
 
-Weitere Informationen zu diesen Vorgängen, ihren Bloch Sphere-Darstellungen und f #-Implementierungen finden Sie unter systeminterne [Vorgänge und Funktionen](xref:microsoft.quantum.libraries.standard.prelude#intrinsic-operations-and-functions).
+Weitere Informationen zu diesen Vorgängen, ihren Bloch Sphere-Darstellungen und Q#-Implementierungen finden Sie unter systeminterne [Vorgänge und Funktionen](xref:microsoft.quantum.libraries.standard.prelude#intrinsic-operations-and-functions).
 
 Als Beispiel dafür, wie einheitliche Transformationen aus diesen primitiven erstellt werden können, die drei in den "Bloch"-Bereichen dargestellten Transformationen entsprechen der Gate-Sequenz "$ \begin{bmatrix} 1 \\\\ 0 \ End{bmatrix} \mapsto hzh \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $
 
-Während der vorherige die beliebtesten primitiven Gates zum Beschreiben von Vorgängen auf der logischen Ebene des Stapels bilden (denken Sie an die logische Ebene als die Ebene des Quantum-Algorithmus), ist es häufig sinnvoll, weniger grundlegende Vorgänge bei algorithmische zu betrachten. Ebene, z. b. Vorgänge, die näher an einer Funktions Beschreibungs Ebene liegen. Glücklicherweise stehen in Q # auch Methoden zur Verfügung, die für die Implementierung von unidirektionalebenen verfügbar sind, die wiederum Algorithmen auf hoher Ebene implementieren können, ohne dass alle Elemente explizit in Clifford und $T $-Gates zerlegt werden.
+Während der vorherige die beliebtesten primitiven Gates zum Beschreiben von Vorgängen auf der logischen Ebene des Stapels bilden (denken Sie an die logische Ebene als die Ebene des Quantum-Algorithmus), ist es häufig sinnvoll, weniger grundlegende Vorgänge bei algorithmische zu betrachten. Ebene, z. b. Vorgänge, die näher an einer Funktions Beschreibungs Ebene liegen. Glücklicherweise stehen in Q# auch Methoden zur Verfügung, die für die Implementierung von unidirektionalebenen verfügbar sind, die wiederum Algorithmen auf hoher Ebene implementieren können, ohne dass alle Elemente explizit in Clifford und $T $-Gates zerlegt werden.
 
 Die einfachste solche primitive ist die einzelne Qubit-Rotation. In der Regel werden drei Single-Qubit-Drehungen berücksichtigt: $R _x $, $R _y $ und $R _Z $. Um die Aktion der Drehung $R _x (\urta) zu visualisieren, zeigen Sie z. b. an, dass der Ziehpunkt auf die Richtung der $x $-Achse der Bloch-Kugel zeigt, und drehen Sie den Vektor mit der Hand durch einen Winkel von $ \ der TA/2 $ radiane. Dieser verwirrende Faktor von $2 $ ergibt sich aus der Tatsache, dass orthogonale Vektoren $180 ^ \circ $ auseinander liegen, wenn Sie in der Bloch-Kugel gezeichnet werden, aber tatsächlich $90 ^ \circ $ Grad gleichmäßig voneinander entfernt sind. Die entsprechenden einheitlichen Matrizen lauten:
 

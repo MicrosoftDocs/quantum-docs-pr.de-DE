@@ -156,5 +156,5 @@ Zum Ermitteln der tatsächlichen Ursache des Fehlers müssen Sie eine Iteration 
 
 ## <a name="other-classical-languages"></a>Andere klassische Sprachen
 
-Die bereitgestellten Beispiele gelten für C#, F# und Python, aber das Quantum Development Kit unterstützt auch das Schreiben klassischer Hostprogramme in anderen Sprachen.
+Die bereitgestellten Beispiele gelten für C#, Q# und Python, aber das Quantum Development Kit unterstützt auch das Schreiben klassischer Hostprogramme in anderen Sprachen.
 Wenn Sie beispielsweise ein Hostprogramm in Visual Basic schreiben möchten, [sollte dies problemlos funktionieren](https://github.com/tcNickolas/MiscQSharp/blob/master/Quantum_VBNet/README.md#using-q-with-visual-basic-net).

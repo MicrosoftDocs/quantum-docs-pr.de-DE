@@ -1,6 +1,6 @@
 ---
-title: 'F #-Dateistruktur'
-description: 'Erfahren Sie, wie Sie Namespaces und Vorgänge, Funktionen und benutzerdefinierte Typdeklarationen in Q #-Programmen und-Bibliotheken strukturieren.'
+title: 'Q#-Dateistruktur'
+description: 'Erfahren Sie, wie Sie Namespaces und Vorgänge, Funktionen und benutzerdefinierte Typdeklarationen in Q#-Programmen und-Bibliotheken strukturieren.'
 author: QuantumWriter
 uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
@@ -15,7 +15,7 @@ ms.locfileid: "80320760"
 ---
 # <a name="file-structure"></a>Dateistruktur
 
-Eine Q #-Datei besteht aus einer Sequenz von Namespace Deklarationen.
+Eine Q#-Datei besteht aus einer Sequenz von Namespace Deklarationen.
 Jede Namespace Deklaration enthält Deklarationen für benutzerdefinierte Typen, Vorgänge und Funktionen.
 Eine Namespace Deklaration kann beliebig viele Typen von Deklarationen und in beliebiger Reihenfolge enthalten.
 Der einzige Text, der außerhalb einer Namespace Deklaration angezeigt werden kann, sind Kommentare.
@@ -23,10 +23,10 @@ Insbesondere Dokumentations Kommentare für einen Namespace vor der Deklaration.
 
 ## <a name="namespace-declarations"></a>Namespacedeklarationen
 
-Eine Q #-Datei hat normalerweise genau eine Namespace Deklaration, kann jedoch keine (und leer sein oder nur Kommentare enthalten) oder mehrere Namespaces enthalten.
+Eine Q#-Datei hat normalerweise genau eine Namespace Deklaration, kann jedoch keine (und leer sein oder nur Kommentare enthalten) oder mehrere Namespaces enthalten.
 Namespace Deklarationen dürfen nicht eingefügt werden.
 
-Derselbe Namespace kann in mehreren Q #-Dateien deklariert werden, die zusammen kompiliert werden, solange keine Typen-, Vorgangs-oder Funktions Deklarationen mit demselben Namen vorhanden sind.
+Derselbe Namespace kann in mehreren Q#-Dateien deklariert werden, die zusammen kompiliert werden, solange keine Typen-, Vorgangs-oder Funktions Deklarationen mit demselben Namen vorhanden sind.
 Es ist insbesondere ungültig, denselben Typ im gleichen Namespace in mehreren Dateien zu definieren, auch wenn die Deklarationen identisch sind.
 
 Eine Namespace Deklaration besteht aus dem Schlüsselwort `namespace`, gefolgt vom Namen des Namespace, einer geöffneten geschweifter Klammer `{`, den im Namespace enthaltenen Deklarationen und einer schließenden geschweifter Klammer `}`.
@@ -60,7 +60,7 @@ Die `open`-Direktive gilt für den gesamten Namespace Block in einer Datei.
 
 ## <a name="user-defined-type-declarations"></a>Deklarationen von benutzerdefinierten Typen
 
-Q # bietet Benutzern die Möglichkeit, neue benutzerdefinierte Typen zu deklarieren, wie im Abschnitt " [Q # Type Model](xref:microsoft.quantum.language.type-model) " beschrieben.
+Q# bietet Benutzern die Möglichkeit, neue benutzerdefinierte Typen zu deklarieren, wie im Abschnitt " [Q# Type Model](xref:microsoft.quantum.language.type-model) " beschrieben.
 Benutzerdefinierte Typen sind unterschiedlich, auch wenn die Basis Typen identisch sind.
 Insbesondere, wenn die zugrunde liegenden Typen identisch sind, gibt es keine automatische Konvertierung zwischen Werten von zwei benutzerdefinierten Typen.
 
@@ -72,15 +72,15 @@ Beispiel:
 newtype PairOfInts = (Int, Int);
 ```
 
-Jede f #-Quelldatei kann eine beliebige Anzahl benutzerdefinierter Typen deklarieren.
+Jede Q#-Quelldatei kann eine beliebige Anzahl benutzerdefinierter Typen deklarieren.
 Typnamen müssen innerhalb eines Namespace eindeutig sein und können nicht mit Vorgangs-und Funktionsnamen in Konflikt stehen.
 
-Es ist nicht möglich, zirkuläre Abhängigkeiten zwischen benutzerdefinierten Typen zu definieren. Rekursive Typen sind in Q # daher nicht möglich.
+Es ist nicht möglich, zirkuläre Abhängigkeiten zwischen benutzerdefinierten Typen zu definieren. Rekursive Typen sind in Q# daher nicht möglich.
 
 ## <a name="operation-declarations"></a>Vorgangs Deklarationen
 
-Vorgänge sind das Kernstück von Q #, ungefähr analog zu Funktionen in anderen Sprachen.
-Jede f #-Quelldatei kann eine beliebige Anzahl von Vorgängen definieren.
+Vorgänge sind das Kernstück von Q#, ungefähr analog zu Funktionen in anderen Sprachen.
+Jede Q#-Quelldatei kann eine beliebige Anzahl von Vorgängen definieren.
 
 Vorgangs Namen müssen innerhalb eines Namespace eindeutig sein und können keinen Konflikt mit Typ-und Funktionsnamen verursachen.
 
@@ -145,7 +145,7 @@ Damit ein Vorgang die Anwendung des `Adjoint`-und/oder `Controlled`-funktors unt
 
 ### <a name="explicit-specialization-declarations"></a>Explizite Spezialisierungs Deklarationen
 
-F #-Vorgänge können die folgenden expliziten Spezialisierungs Deklarationen enthalten:
+Q#-Vorgänge können die folgenden expliziten Spezialisierungs Deklarationen enthalten:
 
 - Die `body` Spezialisierung gibt die Implementierung des Vorgangs ohne angewendete Funktoren an.
 - Die `adjoint` Spezialisierung gibt die Implementierung des Vorgangs mit angewendetem `Adjoint`-Funktor an.
@@ -180,7 +180,7 @@ Die `auto`-Direktive wird in die folgende Generations Anweisung aufgelöst, wenn
 > [!TIP]   
 > Wenn es sich um einen eigenständigen Vorgang handelt, geben Sie entweder die Adjoint-oder die kontrollierte Adjoint-Spezialisierung mithilfe der Generations Direktive an `self` um dem Compiler zu ermöglichen, diese Informationen zu Optimierungszwecken zu verwenden.
 
-Eine Spezialisierungs Deklaration, die eine benutzerdefinierte Implementierung enthält, besteht aus einem argumenttupel, gefolgt von einem Anweisungsblock mit dem Q #-Code, der die Spezialisierung implementiert.
+Eine Spezialisierungs Deklaration, die eine benutzerdefinierte Implementierung enthält, besteht aus einem argumenttupel, gefolgt von einem Anweisungsblock mit dem Q#-Code, der die Spezialisierung implementiert.
 In der Argumentliste wird `...` verwendet, um die für den Vorgang als Ganzes deklarierten Argumente darzustellen.
 Bei `body` und `adjoint`sollte die Argumentliste immer `(...)`sein. bei `controlled` und `adjoint controlled`sollte die Argumentliste ein Symbol sein, das das Array von Steuerelement-Qubits, gefolgt von `...`, in Klammern eingeschlossen ist. beispielsweise `(controls,...)`.
 
@@ -279,8 +279,8 @@ operation Teleport (source : Qubit, target : Qubit) : Unit {
 
 ## <a name="function-declarations"></a>Funktionsdeklarationen
 
-Funktionen sind rein klassische Routinen in Q #.
-Jede f #-Quelldatei kann eine beliebige Anzahl von Funktionen definieren.
+Funktionen sind rein klassische Routinen in Q#.
+Jede Q#-Quelldatei kann eine beliebige Anzahl von Funktionen definieren.
 
 Eine Funktionsdeklaration besteht aus dem Schlüsselwort `function`, gefolgt von dem Symbol, das den Namen der Funktion, ein typisiertes bezeichnertupel, eine Typanmerkung, die den Rückgabetyp der Funktion beschreibt, und einem Anweisungsblock, der die Implementierung der Funktion beschreibt.
 
@@ -309,7 +309,7 @@ function DotProduct(a : Double[], b : Double[]) : Double {
 ## <a name="internal-declarations"></a>Interne Deklarationen
 
 Benutzerdefinierte Typen, Vorgänge und Funktionen können auch als *intern*deklariert werden.
-Dies bedeutet, dass nur innerhalb des Q #-Projekts, in dem Sie deklariert sind, auf Sie zugegriffen werden kann.
+Dies bedeutet, dass nur innerhalb des Q#-Projekts, in dem Sie deklariert sind, auf Sie zugegriffen werden kann.
 Wenn ein Projekt als Verweis verwendet wird, werden alle *öffentlichen* (nicht internen) Deklarationen zur Verfügung gestellt, aber es wird versucht, eine interne Deklaration aus einem anderen Projekt zu verwenden.
 Interne Deklarationen sind nützlich, wenn Sie modularen Code schreiben möchten, der von anderen Teilen des Projekts wieder verwendet werden kann, aber später noch geändert werden kann, ohne andere Projekte zu unterbrechen, die von ihm abhängig sein könnten.
 

@@ -50,7 +50,7 @@ Anwendungen, die mit dem Quantum Development Kit von Microsoft entwickelt wurden
 
 1. Wählen Sie einen Speicherort für Ihre Anwendung aus
 
-1. Erstellen Sie eine Datei namens `Bell.qs`. Diese Datei enthält Ihren Q #-Code.
+1. Erstellen Sie eine Datei namens `Bell.qs`. Diese Datei enthält Ihren Q#-Code.
 
 1. Erstellen Sie eine Datei namens `host.py`. Diese Datei enthält Ihren Python-Hostcode.
 
@@ -125,7 +125,7 @@ Ein Q#-Vorgang ist eine Quantenunterroutine. Dies bedeutet, dass es sich um eine
 
 Die Argumente für eine Operation werden als Tupel angegeben, in Klammern eingeschlossen.
 
-Der Rückgabetyp der Operation wird nach einem Doppelpunkt angegeben. In diesem Fall hat die Operation `Set` keinen Rückgabewert, daher ist sie als `Unit` zurückgebend markiert. Dies ist die Q#-Entsprechung von `unit` in F#, das in etwa analog zu `void` in C# und einem leeren Tupel (`Tuple[()]`) in Python ist.
+Der Rückgabetyp der Operation wird nach einem Doppelpunkt angegeben. In diesem Fall hat die Operation `Set` keinen Rückgabewert, daher ist sie als `Unit` zurückgebend markiert. Dies ist die Q#-Entsprechung von `unit` in Q#, das in etwa analog zu `void` in C# und einem leeren Tupel (`Tuple[()]`) in Python ist.
 
 Sie haben in Ihrem ersten Q#-Vorgang zwei Quantenvorgänge verwendet:
 

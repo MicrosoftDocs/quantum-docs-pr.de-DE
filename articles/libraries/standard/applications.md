@@ -1,5 +1,5 @@
 ---
-title: 'Anwendungen in den Q # Standard-Bibliotheken'
+title: 'Anwendungen in den Q# Standard-Bibliotheken'
 description: 'Erfahren Sie mehr über zwei grundlegende Anwendungen in Quantum Computing: hamiltonan Simulation und Shor-Suchalgorithmus.'
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications

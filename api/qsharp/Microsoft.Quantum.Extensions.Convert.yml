@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.extensions.convert
 name: Microsoft.Quantum.Extensions.Convert
-summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dies sind einige der Funktionen aus dem System. Convert-Namespace der .NET CLR, die im Q #-Typsystem relevant sind.\n\n # <a name=\"remarks\"></a>Hinweise\n Wenn mehrere Versionen der-Funktion für boolesche, int-und Double-Typen vorhanden sind, haben die entsprechenden Funktionen Suffix B, I und D."
+summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dies sind einige der Funktionen aus dem System. Convert-Namespace der .NET CLR, die im Q#-Typsystem relevant sind.\n\n # <a name=\"remarks\"></a>Hinweise\n Wenn mehrere Versionen der-Funktion für boolesche, int-und Double-Typen vorhanden sind, haben die entsprechenden Funktionen Suffix B, I und D."
 functions:
 - uid: microsoft.quantum.extensions.convert.biginttobools
   summary: "\n> [!WARNING]\n> Veraltet\n\nBigintum bools ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.bigintasboolarray\".\nVerwenden Sie stattdessen @\"microsoft.quantum.convert.bigintasboolarray\"."

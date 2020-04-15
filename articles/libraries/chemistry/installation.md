@@ -1,5 +1,5 @@
 ---
-title: 'Installation und Validierung der Microsoft Q #-Chemie Bibliothek'
+title: 'Installation und Validierung der Microsoft Q#-Chemie Bibliothek'
 description: Erfahren Sie, wie Sie die Microsoft Quantum Chemistry-Bibliothek installieren und mit der nwchem-Berechnungs-Chemie-Plattform verwenden.
 author: guanghaolow
 ms.author: gulow

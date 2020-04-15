@@ -17,15 +17,15 @@ ms.locfileid: "80320859"
 
 In den vorherigen Diskussionen haben wir uns auf Berechnungsbasis Messungen konzentriert.
 Tatsächlich gibt es weitere allgemeine Messungen, die bei der Quantum-Berechnung auftreten, die aus Sicht der Sicht bequem in Bezug auf Berechnungsbasis Messungen ausgedrückt werden können.
-Bei der Arbeit mit Q # sind die gängigsten Arten von Messungen wahrscheinlich *Pauli-Messungen*, die Berechnungsbasis Messungen verallgemeinern, um Messungen in anderen Basen und die Parität zwischen verschiedenen Qubits zu berücksichtigen.
+Bei der Arbeit mit Q# sind die gängigsten Arten von Messungen wahrscheinlich *Pauli-Messungen*, die Berechnungsbasis Messungen verallgemeinern, um Messungen in anderen Basen und die Parität zwischen verschiedenen Qubits zu berücksichtigen.
 In solchen Fällen ist es üblich, das Messen eines Pauli-Operators zu erörtern, im Allgemeinen ein Operator wie $X, Y, Z $ oder $Z \otimes Z, x\otimes X, x\otimes Y $ und so weiter.
 
 > [!TIP]
-> In Q # werden multiqubit-Pauli-Operatoren in der Regel durch Arrays vom Typ `Pauli[]`dargestellt.
+> In Q# werden multiqubit-Pauli-Operatoren in der Regel durch Arrays vom Typ `Pauli[]`dargestellt.
 > Wenn Sie z. b. $X \otimes Z \otimes Y $ darstellen möchten, können Sie das Array `[PauliX, PauliZ, PauliY]`verwenden.
 
 Die Erörterung von Messungen in Form von Pauli-Operatoren ist vor allem im Unterfeld der Quantum-Fehlerkorrektur üblich.
-In f # wird eine ähnliche Konvention befolgt. Wir erläutern nun diese Alternative Ansicht von Messungen.
+In Q# wird eine ähnliche Konvention befolgt. Wir erläutern nun diese Alternative Ansicht von Messungen.
 
 Bevor wir uns mit den Details der Bedeutung einer Pauli-Messung beschäftigen, ist es sinnvoll, sich Gedanken darüber zu machen, was ein einzelnes Qubit innerhalb eines Quantum-Computers in den Quantum-Zustand versetzt.
 Stellen Sie sich vor, dass ein $n $-Qubit-Quantum-Status vorhanden ist. Wenn dann ein Qubit sofort gemessen wird, werden die Hälfte der $2 ^ n $-Möglichkeiten, in denen sich der Zustand befinden könnte, sofort ausgeschlossen.
@@ -78,7 +78,7 @@ operation MeasureY(qubit : Qubit) : Result {
 
 Der richtige Zustand wird dann durch umwandeln auf die Berechnungsbasis gefunden, was das Anwenden $SH $ auf den Quantum-Status Vektor bedeutet. im obigen Code Ausschnitt wird die Transformation zurück zur Berechnungsbasis automatisch durch die Verwendung des `within … apply`-Blocks verarbeitet.
 
-In f # wird das Ergebnis---, das heißt, die klassischen Informationen, die aus der Interaktion mit dem Status---extrahiert werden, werden durch einen `Result` Wert $j \in \\{\texttt{Zero}, \texttt{One}\\} $ angegeben, der angibt, ob das Ergebnis im $ (-1) ^ j $ eigen Raum des ggf
+In Q# wird das Ergebnis---, das heißt, die klassischen Informationen, die aus der Interaktion mit dem Status---extrahiert werden, werden durch einen `Result` Wert $j \in \\{\texttt{Zero}, \texttt{One}\\} $ angegeben, der angibt, ob das Ergebnis im $ (-1) ^ j $ eigen Raum des ggf
 
 
 ## <a name="multiple-qubit-measurements"></a>Multiple-Qubit-Messungen
@@ -146,10 +146,10 @@ Beliebige Pauli-Operatoren, z. b. $X \otimes Y \otimes Z \otimes \boldone $, kö
 Alle derartigen tensorflow-Produkte von Pauli-Operatoren verfügen nur über zwei Eigenwerte $ \pm $1, und beide eigen Räume bilden halbräume des gesamten Vektor Bereichs.
 Daher stimmen Sie mit den oben genannten Anforderungen überein.
 
-In Q # geben solche Messungen $j $ zurück, wenn die Messung ein Ergebnis im Eigen Bereich von Sign $ (-1) ^ j $ ergibt.
-Die Verwendung von Pauli-Messungen als integriertes Feature in Q # ist hilfreich, da die Messung solcher Operatoren lange Ketten von gesteuerten und nicht-Transformationen und Basis Transformationen erfordert, um die Diagonalisierung $U $ Gate zu beschreiben, die erforderlich ist, um den Vorgang als tensorflow-Produkt $Z $ und $ \id $ auszudrücken.
+In Q# geben solche Messungen $j $ zurück, wenn die Messung ein Ergebnis im Eigen Bereich von Sign $ (-1) ^ j $ ergibt.
+Die Verwendung von Pauli-Messungen als integriertes Feature in Q# ist hilfreich, da die Messung solcher Operatoren lange Ketten von gesteuerten und nicht-Transformationen und Basis Transformationen erfordert, um die Diagonalisierung $U $ Gate zu beschreiben, die erforderlich ist, um den Vorgang als tensorflow-Produkt $Z $ und $ \id $ auszudrücken.
 Wenn Sie festlegen können, dass Sie eine dieser vordefinierten Messungen durchführen möchten, müssen Sie sich keine Gedanken darüber machen, wie Sie Ihre Basis so transformieren, dass eine Berechnungsbasis Messung die erforderlichen Informationen bereitstellt.
-Q # behandelt alle notwendigen Basis Transformationen automatisch.
+Q# behandelt alle notwendigen Basis Transformationen automatisch.
 Weitere Informationen finden Sie in den [`Measure`](xref:microsoft.quantum.intrinsic.measure) -und [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) Vorgängen.
 
 ## <a name="the-no-cloning-theorem"></a>Das No-Klon-Theorem
@@ -162,7 +162,7 @@ Eine solche Einschränkung wird durch das *No-Klon-Theorem*angegeben.
 Das No-Klon-Theorem weist einen passenden Namen auf.
 Sie lässt das Klonen generischer Quantenzustände durch einen Quantum-Computer nicht zu.
 Der Beweis für das Theorem ist erstaunlich einfach.
-Obwohl ein vollständiger Nachweis für das No-Klon-Theorem für unsere Erörterung etwas zu technisch ist, liegt der Nachweis im Fall von zusätzlichen Qubits in unserem Bereich. (zusätzliche Qubits sind für den temporären Speicherplatz während einer Berechnung verwendeter Qubits und können in f # problemlos verwendet und verwaltet werden. Weitere Informationen finden Sie unter <xref:microsoft.quantum.techniques.qubits>).
+Obwohl ein vollständiger Nachweis für das No-Klon-Theorem für unsere Erörterung etwas zu technisch ist, liegt der Nachweis im Fall von zusätzlichen Qubits in unserem Bereich. (zusätzliche Qubits sind für den temporären Speicherplatz während einer Berechnung verwendeter Qubits und können in Q# problemlos verwendet und verwaltet werden. Weitere Informationen finden Sie unter <xref:microsoft.quantum.techniques.qubits>).
 
 Bei solch einem Quantum-Computer muss der Klon Vorgang durch eine einheitliche Matrix beschrieben werden.
 Die Messung wird nicht zugelassen, da der Quantum-Zustand beschädigt wird, den wir klonen wollen.

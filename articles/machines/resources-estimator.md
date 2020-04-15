@@ -1,6 +1,6 @@
 ---
 title: Ressourcenschätzung für Quantum Development Kit
-description: 'Erfahren Sie mehr über die Ressourcenschätzung, mit der die Ressourcen geschätzt werden, die zum Ausführen einer bestimmten Instanz eines Q #-Vorgangs auf einem Quantum-Computer erforderlich sind.'
+description: 'Erfahren Sie mehr über die Ressourcenschätzung, mit der die Ressourcen geschätzt werden, die zum Ausführen einer bestimmten Instanz eines Q#-Vorgangs auf einem Quantum-Computer erforderlich sind.'
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
@@ -15,12 +15,12 @@ ms.locfileid: "80320823"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>Der resourcesestimator-Zielcomputer
 
-Wie der Name schon sagt, schätzt der `ResourcesEstimator` die Ressourcen, die erforderlich sind, um eine bestimmte Instanz eines Q #-Vorgangs auf einem Quantum-Computer auszuführen.
-Dies wird erreicht, indem der Quantum-Vorgang ausgeführt wird, ohne den Zustand eines Quantum-Computers zu simulieren. aus diesem Grund können Ressourcen für Q #-Vorgänge geschätzt werden, die Tausende von Qubits verwenden, wenn der klassische Teil des Codes in angemessener Zeit ausgeführt werden kann.
+Wie der Name schon sagt, schätzt der `ResourcesEstimator` die Ressourcen, die erforderlich sind, um eine bestimmte Instanz eines Q#-Vorgangs auf einem Quantum-Computer auszuführen.
+Dies wird erreicht, indem der Quantum-Vorgang ausgeführt wird, ohne den Zustand eines Quantum-Computers zu simulieren. aus diesem Grund können Ressourcen für Q#-Vorgänge geschätzt werden, die Tausende von Qubits verwenden, wenn der klassische Teil des Codes in angemessener Zeit ausgeführt werden kann.
 
 ## <a name="usage"></a>Verwendung
 
-Der `ResourcesEstimator` ist nur ein anderer Typ von Zielcomputer und kann daher verwendet werden, um einen beliebigen Q #-Vorgang auszuführen. 
+Der `ResourcesEstimator` ist nur ein anderer Typ von Zielcomputer und kann daher verwendet werden, um einen beliebigen Q#-Vorgang auszuführen. 
 
 Erstellen Sie wie andere Zielcomputer eine-Instanz, C# um Sie auf einem Host Programm zu verwenden, und übergeben Sie Sie als ersten Parameter der `Run`-Methode des Vorgangs:
 
@@ -65,7 +65,7 @@ BorrowedWidth   0
 
 Zusätzlich zu einer TSV-Tabelle können die geschätzten Ressourcen Programm gesteuert über die `Data`-Eigenschaft des `ResourcesEstimator`abgerufen werden. `Data` stellt eine `System.DataTable` Instanz mit zwei Spalten bereit: `Metric` und `Sum`, indiziert durch die metriknamen.
 
-Der folgende Code zeigt, wie Sie die Gesamtzahl der `QubitClifford`, `T` und `CNOT` Gates abrufen und ausdrucken, die von einem Q #-Vorgang verwendet werden:
+Der folgende Code zeigt, wie Sie die Gesamtzahl der `QubitClifford`, `T` und `CNOT` Gates abrufen und ausdrucken, die von einem Q#-Vorgang verwendet werden:
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -98,14 +98,14 @@ Im folgenden finden Sie eine Liste der Metriken, die vom `ResourcesEstimator`ges
 * __Measure__: die Anzahl der ausgeführten Messungen.
 * __R__: die Anzahl der ausgeführten einzelnen Qubit-Drehungen, ausgenommen T, Clifford und Pauli Gates.
 * __T__: die Anzahl der t-Gates und ihre konjugierte, einschließlich t Gate, T_x = h. T. h und T_y = HY. T. HY, ausgeführt.
-* __Tiefe__: Tiefe der vom Q #-Vorgang ausgeführten Quantum-Leitung. Standardmäßig werden nur T Gates in der Tiefe gezählt. Weitere Informationen finden Sie unter [tiefen Zähler](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) .
-* __Width__: maximale Anzahl von Qubits, die während der Ausführung des Q #-Vorgangs zugeordnet wurden.
-* __Borrowedwidth__: maximale Anzahl von im Q #-Vorgang geliehenen Qubits.
+* __Tiefe__: Tiefe der vom Q#-Vorgang ausgeführten Quantum-Leitung. Standardmäßig werden nur T Gates in der Tiefe gezählt. Weitere Informationen finden Sie unter [tiefen Zähler](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) .
+* __Width__: maximale Anzahl von Qubits, die während der Ausführung des Q#-Vorgangs zugeordnet wurden.
+* __Borrowedwidth__: maximale Anzahl von im Q#-Vorgang geliehenen Qubits.
 
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Angeben der Wahrscheinlichkeit für Ergebnisse von Messungen
 
-<xref:microsoft.quantum.intrinsic.assertprob> aus dem <xref:microsoft.quantum.intrinsic>-Namespace kann verwendet werden, um Informationen über die erwartete Wahrscheinlichkeit einer Messung bereitzustellen, um die Ausführung des Q #-Programms zu fördern. Das folgende Beispiel veranschaulicht dies:
+<xref:microsoft.quantum.intrinsic.assertprob> aus dem <xref:microsoft.quantum.intrinsic>-Namespace kann verwendet werden, um Informationen über die erwartete Wahrscheinlichkeit einer Messung bereitzustellen, um die Ausführung des Q#-Programms zu fördern. Das folgende Beispiel veranschaulicht dies:
 
 ```qsharp
 operation Teleport(source : Qubit, target : Qubit) : Unit {
@@ -132,5 +132,5 @@ Wenn die `ResourcesEstimator` `AssertProb`, wird festgestellt, dass das Messen `
 
 ## <a name="see-also"></a>Siehe auch
 
-Der `ResourcesEstimator` basiert auf dem Quantum-Computer-Ablauf [Verfolgungs Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), der einen umfassenderen Satz an Metriken, die Möglichkeit zum Melden von Metriken für das vollständige Aufruf Diagramm und Features wie die unter [schiedliche Eingabe](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) Prüfung bereitstellt, um Fehler in Q #-Programmen zu finden. Weitere Informationen finden Sie in der Dokumentation des Ablauf [Verfolgungs Simulators](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .
+Der `ResourcesEstimator` basiert auf dem Quantum-Computer-Ablauf [Verfolgungs Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), der einen umfassenderen Satz an Metriken, die Möglichkeit zum Melden von Metriken für das vollständige Aufruf Diagramm und Features wie die unter [schiedliche Eingabe](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) Prüfung bereitstellt, um Fehler in Q#-Programmen zu finden. Weitere Informationen finden Sie in der Dokumentation des Ablauf [Verfolgungs Simulators](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .
 

@@ -28,7 +28,7 @@ Diese $a ^ \ dagger_j \ket{0}_J = \ket{1}_J $ und $a ^ \ dagger_j \ket{1}_J = $0
 Es ist leicht zu überprüfen, ob "\begin{align} a ^ \ dagger_j & = \begin{bmatrix}0 & 0 \\\ 1 & 0 \ End{bmatrix} = \bruchteil {X_j-iY_j}{2}, \nonneuber\\\\ a_j & = \begin{bmatrix}0 & 1 \\\ 0 & 0 \end{bmatrix} = \bruch{X_j + iY_j}{2}, \end{align}, wobei $X _J $ und $Y _J $ die für die Qubit-$X $-Operatoren $Y $ und-$j $ sind.
 
 >[!NOTE]
-> In f # stellt der $ \ket-{0}$ State den + 1-eigen Zustand des $Z $-Operators dar. In einigen Bereichen der Physik $ \ket steht{0}$ für den Energiezustand und somit den-1-eigen Zustand des $Z $-Operators. Daher können sich einige Formeln von gängigen Literatur unterscheiden.
+> In Q# stellt der $ \ket-{0}$ State den + 1-eigen Zustand des $Z $-Operators dar. In einigen Bereichen der Physik $ \ket steht{0}$ für den Energiezustand und somit den-1-eigen Zustand des $Z $-Operators. Daher können sich einige Formeln von gängigen Literatur unterscheiden.
 
 In der Chemie Bibliothek verwenden wir $ \ket{0}$, um ein nicht belegtes Spin-Orbital darzustellen.
 Dies zeigt, dass es bei einer einzelnen Spin-Orbital-Schnittstelle einfach Erstellungs-und Vernichtungs Operatoren in Bezug auf einheitliche Matrizen darstellen kann, die von Quantum-Computern verstanden werden

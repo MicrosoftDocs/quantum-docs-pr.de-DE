@@ -1,6 +1,6 @@
 ---
-title: 'F #-Datentypen'
-description: 'Erfahren Sie mehr über die verschiedenen Typen, die in der Q #-Programmiersprache verwendet werden, einschließlich integrierter Typen, Arrays, Tupel, Vorgänge, Funktionen und benutzerdefinierter Typen.'
+title: 'Q#-Datentypen'
+description: 'Erfahren Sie mehr über die verschiedenen Typen, die in der Q#-Programmiersprache verwendet werden, einschließlich integrierter Typen, Arrays, Tupel, Vorgänge, Funktionen und benutzerdefinierter Typen.'
 author: QuantumWriter
 uid: microsoft.quantum.language.type-model
 ms.author: Alan.Geller@microsoft.com
@@ -15,18 +15,18 @@ ms.locfileid: "77904654"
 ---
 # <a name="the-type-model"></a>Das Typmodell
 
-In diesem Abschnitt wird das Q # Type-Modell erläutert und die Syntax zum Angeben von und arbeiten mit Typen beschrieben.
-Beachten Sie, dass Q # eine *stark typisierte* Sprache ist, sodass der Compiler durch eine sorgfältige Verwendung dieser Typen bei der Kompilierung starke Garantien für Q #-Programme bereitstellen kann.
+In diesem Abschnitt wird das Q# Type-Modell erläutert und die Syntax zum Angeben von und arbeiten mit Typen beschrieben.
+Beachten Sie, dass Q# eine *stark typisierte* Sprache ist, sodass der Compiler durch eine sorgfältige Verwendung dieser Typen bei der Kompilierung starke Garantien für Q#-Programme bereitstellen kann.
 
-Um die bestmögliche Garantie bereitzustellen, müssen Konvertierungen zwischen Typen in Q # explizit mithilfe von Aufrufen von Funktionen erfolgen, die diese Konvertierung Ausdrücken. Eine Vielzahl solcher Funktionen werden als Teil des <xref:microsoft.quantum.convert>-Namespace bereitgestellt.
+Um die bestmögliche Garantie bereitzustellen, müssen Konvertierungen zwischen Typen in Q# explizit mithilfe von Aufrufen von Funktionen erfolgen, die diese Konvertierung Ausdrücken. Eine Vielzahl solcher Funktionen werden als Teil des <xref:microsoft.quantum.convert>-Namespace bereitgestellt.
 Auf der anderen Seite werden Upcasts zu kompatiblen Typen implizit durchgeführt. 
 
-Q # stellt beide primitiven Typen bereit, die direkt verwendet werden können, und eine Vielzahl von Möglichkeiten, um neue Typen aus anderen Typen zu entwickeln.
+Q# stellt beide primitiven Typen bereit, die direkt verwendet werden können, und eine Vielzahl von Möglichkeiten, um neue Typen aus anderen Typen zu entwickeln.
 Diese werden im restlichen Teil dieses Abschnitts beschrieben.
 
 ## <a name="primitive-types"></a>Primitive Typen
 
-Die Sprache Q # stellt mehrere *primitive Typen*bereit, von denen andere Typen erstellt werden können:
+Die Sprache Q# stellt mehrere *primitive Typen*bereit, von denen andere Typen erstellt werden können:
 
 - Der `Int`-Typ stellt eine 64-Bit-Ganzzahl mit Vorzeichen dar, z. b.: `2`, `107`, `-5`.
 - Der `BigInt`-Typ stellt eine Ganzzahl mit Vorzeichen beliebiger Größe dar, z. b. `2L`, `107L``-5L`.
@@ -48,20 +48,20 @@ Die Sprache Q # stellt mehrere *primitive Typen*bereit, von denen andere Typen e
 - Der `String`-Typ ist eine Sequenz von Unicode-Zeichen, die für den Benutzer nach der Erstellung nicht transparent ist.
   Dieser Typ wird verwendet, um Nachrichten an einen klassischen Host zu melden, wenn ein Fehler oder ein Diagnose Ereignis vorliegt.
 - Der `Unit` Typ ist der Typ, der nur einen Wert `()`zulässt. 
-  Dieser Typ wird verwendet, um anzugeben, dass die Q #-Funktion oder der-Vorgang keine Informationen zurückgibt. 
+  Dieser Typ wird verwendet, um anzugeben, dass die Q#-Funktion oder der-Vorgang keine Informationen zurückgibt. 
 
-Die Konstanten `true`, `false`, `PauliI`, `PauliX`, `PauliY`, `PauliZ`, `One`und `Zero` sind alle reservierten Symbole in f #.
+Die Konstanten `true`, `false`, `PauliI`, `PauliX`, `PauliY`, `PauliZ`, `One`und `Zero` sind alle reservierten Symbole in Q#.
 
 ## <a name="array-types"></a>Array Typen
 
-Bei jedem gültigen Q #-`'T`gibt es einen Typ, der ein Array von Werten des Typs "`'T`" darstellt.
+Bei jedem gültigen Q#-`'T`gibt es einen Typ, der ein Array von Werten des Typs "`'T`" darstellt.
 Dieser Arraytyp wird als `'T[]`dargestellt. beispielsweise `Qubit[]` oder `Int[][]`.
 Beispielsweise wird eine Auflistung von ganzen Zahlen als `Int[]`bezeichnet, während ein Array von Arrays mit `(Bool, Pauli)` Werten `(Bool, Pauli)[][]`angegeben wird.
 
 Beachten Sie im zweiten Beispiel, dass dies eine potenziell Jagged Array von Arrays und kein rechteckiges zweidimensionales Array darstellt.
-Q # bietet keine Unterstützung für rechteckige mehrdimensionale Arrays.
+Q# bietet keine Unterstützung für rechteckige mehrdimensionale Arrays.
 
-Ein Arraywert kann in Q #-Quellcode mithilfe von eckigen Klammern um die Elemente eines Arrays geschrieben werden, wie in `[PauliI, PauliX, PauliY, PauliZ]`.
+Ein Arraywert kann in Q#-Quellcode mithilfe von eckigen Klammern um die Elemente eines Arrays geschrieben werden, wie in `[PauliI, PauliX, PauliY, PauliZ]`.
 Der Typ eines Arrayliterals hängt von dem allgemeinen Basistyp aller Elemente im Array ab. 
 
 > [!WARNING]
@@ -96,18 +96,18 @@ Werte des neuen tupeltyps sind Tupel, die durch Sequenz von Werten aus jedem Typ
 `(3, false)` ist beispielsweise ein Tupel, dessen Typ der tupeltyp `(Int, Bool)`ist.
 Es ist möglich, Arrays von Tupeln, Tupeln von Arrays, Tupeln von subtupeln usw. zu erstellen.
 
-Ab Q # 0,3 ist `Unit` der Name des *Typs* des leeren Tupels. `()` wird für den leeren *tupelwert*verwendet.
+Ab Q# 0,3 ist `Unit` der Name des *Typs* des leeren Tupels. `()` wird für den leeren *tupelwert*verwendet.
 
 Tupelinstanzen sind unveränderlich.
-Q # stellt keinen Mechanismus zum Ändern des Inhalts eines Tupels bereit, nachdem er erstellt wurde.
+Q# stellt keinen Mechanismus zum Ändern des Inhalts eines Tupels bereit, nachdem er erstellt wurde.
 
-Tupel sind ein leistungsfähiges Konzept, das in Q # verwendet wird, um Werte in einem einzelnen Wert zusammenzufassen, sodass Sie einfacher zu übergeben sind.
+Tupel sind ein leistungsfähiges Konzept, das in Q# verwendet wird, um Werte in einem einzelnen Wert zusammenzufassen, sodass Sie einfacher zu übergeben sind.
 Insbesondere mithilfe von tupelnotation können wir ausdrücken, dass jeder Vorgang und Callable genau eine Eingabe annimmt und genau eine Ausgabe zurückgibt.
 
 ### <a name="singleton-tuple-equivalence"></a>Äquivalenz für Singleton-Tupel
 
 Es ist möglich, ein Singleton-Tupel (Single-Element) zu erstellen, `('T1)`, z. b. `(5)` oder `([1,2,3])`.
-Q # behandelt jedoch ein Singleton-Tupel als vollständig Äquivalent zu einem Wert des eingeschlossenen Typs.
+Q# behandelt jedoch ein Singleton-Tupel als vollständig Äquivalent zu einem Wert des eingeschlossenen Typs.
 Das heißt, es gibt keinen Unterschied zwischen `5` und `(5)`bzw. zwischen `5` und `(((5)))`oder zwischen `(5, (6))` und `(5, 6)`.
 
 Diese Äquivalenz gilt für alle Zwecke, einschließlich Zuweisung und Ausdrücke.
@@ -118,7 +118,7 @@ Diese Eigenschaft wird als Übereinstimmung mit einem _Singleton-Tupel_bezeichne
 
 ## <a name="user-defined-types"></a>Benutzerdefinierte Typen
 
-Eine Q #-Datei kann einen neuen benannten Typ definieren, der einen einzelnen Wert eines beliebigen Typs enthält.
+Eine Q#-Datei kann einen neuen benannten Typ definieren, der einen einzelnen Wert eines beliebigen Typs enthält.
 Für jeden tupeltyp `T`können wir einen neuen benutzerdefinierten Typ deklarieren, bei dem es sich um einen Untertyp von `T` mit der `newtype`-Anweisung handelt.
 Im @"microsoft.quantum.math" Namespace sind komplexe Zahlen beispielsweise als benutzerdefinierter Typ definiert:
 
@@ -127,7 +127,7 @@ newtype Complex = (Double, Double);
 ```
 
 Mit dieser Anweisung wird ein neuer Typ mit zwei anonymen Elementen vom Typ "`Double`" erstellt.   
-Abgesehen von anonymen Elementen unterstützen benutzerdefinierte Typen auch benannte Elemente ab Q # Version 0,7 oder höher. Beispielsweise könnten wir den `Re` für das Double benennen, das den Realteil einer komplexen Zahl darstellt, und `Im` für den imaginären Teil: 
+Abgesehen von anonymen Elementen unterstützen benutzerdefinierte Typen auch benannte Elemente ab Q# Version 0,7 oder höher. Beispielsweise könnten wir den `Re` für das Double benennen, das den Realteil einer komplexen Zahl darstellt, und `Im` für den imaginären Teil: 
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
@@ -220,16 +220,16 @@ Wenn Sie zum Beispiel `Complex`zurückkehren, können Sie auch 2D-Polarkoordinat
 newtype Polar = (Radius : Double, Phase : Double);
 ```
 
-Obwohl sowohl `Complex` als auch `Polar` beide über einen zugrunde liegenden Typ `(Double, Double)`verfügen, sind die beiden Typen in f # vollständig inkompatibel. Dadurch wird das Risiko minimiert, dass versehentlich eine komplexe mathematische Funktion mit Polarkoordinaten aufgerufen wird und umgekehrt.
-Auf diese Weise haben benutzerdefinierte Typen eine ähnliche Rolle wie Datensätze in F# z. b. 
+Obwohl sowohl `Complex` als auch `Polar` beide über einen zugrunde liegenden Typ `(Double, Double)`verfügen, sind die beiden Typen in Q# vollständig inkompatibel. Dadurch wird das Risiko minimiert, dass versehentlich eine komplexe mathematische Funktion mit Polarkoordinaten aufgerufen wird und umgekehrt.
+Auf diese Weise haben benutzerdefinierte Typen eine ähnliche Rolle wie Datensätze in Q# z. b. 
 
 
 ## <a name="operation-and-function-types"></a>Vorgangs-und Funktionstypen
 
-Ein f #- _Vorgang_ ist eine Quantum-Unterroutine.
+Ein Q#- _Vorgang_ ist eine Quantum-Unterroutine.
 Dies bedeutet, dass es sich um eine aufrufbare Routine handelt, die Quantenvorgänge enthält.
 
-Eine Q #- _Funktion_ ist eine klassische Unterroutine, die innerhalb eines Quantum-Algorithmus verwendet wird.
+Eine Q#- _Funktion_ ist eine klassische Unterroutine, die innerhalb eines Quantum-Algorithmus verwendet wird.
 Sie kann klassischen Code, aber keine Quantum-Vorgänge enthalten.
 Insbesondere können Funktionen keine Qubits zuordnen oder ausleihen, und Sie können auch keine Vorgänge aufzurufen.
 Es ist jedoch möglich, dass Sie Vorgänge oder Qubits für die Verarbeitung übergeben.
@@ -237,7 +237,7 @@ Funktionen sind daher vollständig deterministisch, da der Aufruf mit denselben 
 
 Vorgänge und Funktionen werden kombiniert als _callables_bezeichnet.  Einige [Beispiele hierfür](#examples) finden Sie unten.
 
-Alle f #-callables werden als Eingabe betrachtet und geben einen einzelnen Wert als Ausgabe zurück.
+Alle Q#-callables werden als Eingabe betrachtet und geben einen einzelnen Wert als Ausgabe zurück.
 Sowohl der Eingabe-als auch der Ausgabewert können Tupel sein.
 Callables ohne Ergebnis Rückgabe `Unit`.
 Callables ohne Eingabe nehmen das leere Tupel als Eingabe auf.
@@ -272,16 +272,16 @@ Ebenso kann eine Funktion, die die Komposition von zwei Vorgängen zurückgibt, 
 
 Beim Aufrufen eines typparametrisierten Aufruf baren Typs müssen alle Argumente, die denselben Typparameter aufweisen, denselben Typ aufweisen.
 
-Q # stellt keinen Mechanismus zum Einschränken der möglichen Typen bereit, die durch einen Typparameter ersetzt werden könnten.
+Q# stellt keinen Mechanismus zum Einschränken der möglichen Typen bereit, die durch einen Typparameter ersetzt werden könnten.
 
 ### <a name="type-compatibility"></a>Typkompatibilität
 
 Ein Vorgang mit zusätzlichen Funktoren, die unterstützt werden, kann überall dort verwendet werden, wo ein Vorgang mit weniger Funktoren, jedoch mit derselben Signatur erwartet wird.
 Beispielsweise kann ein Vorgang des Typs `(Qubit => Unit is Adj)` überall dort verwendet werden, wo ein Vorgang des Typs `(Qubit => Unit)` erwartet wird.
 
-Q # ist kovariant in Bezug auf Aufruf Bare Rückgabe Typen: ein Aufruf bares Element, das einen Typ zurückgibt `'A` ist mit einem Aufruf baren mit dem gleichen Eingabetyp und einem Ergebnistyp kompatibel, mit dem `'A` kompatibel ist.
+Q# ist kovariant in Bezug auf Aufruf Bare Rückgabe Typen: ein Aufruf bares Element, das einen Typ zurückgibt `'A` ist mit einem Aufruf baren mit dem gleichen Eingabetyp und einem Ergebnistyp kompatibel, mit dem `'A` kompatibel ist.
 
-Q # ist in Bezug auf Eingabetypen kontra Variant: ein Aufruf barer, der einen Typ `'A` als Eingabe annimmt, ist mit einem Aufruf baren mit demselben Ergebnistyp und einem Eingabetyp kompatibel, der mit `'A`kompatibel ist.
+Q# ist in Bezug auf Eingabetypen kontra Variant: ein Aufruf barer, der einen Typ `'A` als Eingabe annimmt, ist mit einem Aufruf baren mit demselben Ergebnistyp und einem Eingabetyp kompatibel, der mit `'A`kompatibel ist.
 
 Das heißt, dass die folgenden Definitionen gegeben sind:
 
@@ -310,18 +310,18 @@ Folgendes gilt:
 - Ein Wert vom Typ "`(Qubit[] => Unit is Adj + Ctl)`" kann von `ConjugateInvertWith`zurückgegeben werden.
 
 > [!IMPORTANT]
-> F # 0,3 führt einen signifikanten Unterschied im Verhalten von benutzerdefinierten Typen ein.
+> Q# 0,3 führt einen signifikanten Unterschied im Verhalten von benutzerdefinierten Typen ein.
 
 Benutzerdefinierte Typen werden als umschließende Version des zugrunde liegenden Typs und nicht als Untertyp behandelt.
 Dies bedeutet, dass ein Wert eines benutzerdefinierten Typs nicht verwendbar ist, wenn ein Wert des zugrunde liegenden Typs erwartet wird.
 
 ### <a name="functors"></a>Funktionselemente
 
-Ein Funktor in Q # ist eine Factory, die einen neuen Vorgang aus einem anderen Vorgang definiert.
+Ein Funktor in Q# ist eine Factory, die einen neuen Vorgang aus einem anderen Vorgang definiert.
 Funktoren haben Zugriff auf die Implementierung des Basis Vorgangs, wenn die Implementierung des neuen Vorgangs definiert wird.
 Daher können Funktoren komplexere Funktionen als herkömmliche Funktionen höherer Ebene ausführen.
 
-Funktoren haben keine Darstellung im Q #-Typsystem. Daher ist es derzeit nicht möglich, Sie an eine Variable zu binden oder Sie als Argumente zu übergeben. 
+Funktoren haben keine Darstellung im Q#-Typsystem. Daher ist es derzeit nicht möglich, Sie an eine Variable zu binden oder Sie als Argumente zu übergeben. 
 
 Ein Funktor wird verwendet, indem er auf einen Vorgang angewendet und ein neuer Vorgang zurückgegeben wird.
 Beispielsweise wird der Vorgang, der sich aus der Anwendung des `Adjoint`-funktors auf den `Y` Vorgang ergibt, als `Adjoint Y`geschrieben.
@@ -330,7 +330,7 @@ Folglich wendet `Adjoint Y(q1)` das Adjoint-Funktor auf den `Y` Vorgang an, um e
 
 Entsprechend wendet `Controlled X(controls, target)` den gesteuerten Funktor auf den `X` Vorgang an, um einen neuen Vorgang zu generieren, und wendet diesen neuen Vorgang auf `controls` und `target`an.
 
-Die zwei standardfunktoren in Q # sind `Adjoint` und `Controlled`.
+Die zwei standardfunktoren in Q# sind `Adjoint` und `Controlled`.
 
 #### <a name="adjoint"></a>Adjoint
 
@@ -351,7 +351,7 @@ Bei der kontrollierten Version eines Vorgangs handelt es sich um einen neuen Vor
 Wenn sich die Steuerelement-Qubits in der superposition befinden, wird der Basis Vorgang einheitlich auf den entsprechenden Teil der superposition angewendet.
 Folglich werden kontrollierte Vorgänge häufig zum Generieren von entanglement verwendet.
 
-In Q # nehmen kontrollierte Versionen immer ein Array von Steuerelement-Qubits auf, und der angegebene Status ist immer, damit alle Steuerelement-Qubits im Berechnungs Zustand (`PauliZ`) `One`, $ \ket{1}$.
+In Q# nehmen kontrollierte Versionen immer ein Array von Steuerelement-Qubits auf, und der angegebene Status ist immer, damit alle Steuerelement-Qubits im Berechnungs Zustand (`PauliZ`) `One`, $ \ket{1}$.
 Das Steuern auf der Grundlage anderer Zustände kann erreicht werden, indem der entsprechende einheitliche Vorgang auf die Steuerungs Qubits vor dem kontrollierten Vorgang angewendet und dann nach dem kontrollierten Vorgang die Umkehrung des einheitlichen Vorgangs angewendet wird.
 Wenn Sie z. b. einen `X` Vorgang auf ein Steuerelement Qubit vor und nach einer kontrollierten Operation anwenden, bewirkt dies, dass der Vorgang den `Zero` Zustand ($ \ket{0}$) für dieses Qubit steuert. Wenn Sie einen `H` Vorgang vor und nach anwenden, wird die `PauliX` `One` Status gesteuert, d. h.-1 eigen Wert von Pauli X, $ \ket{-} \mathrel{: =} (\ket{0}-\ket{1})/\sqrt{2}$ und nicht der `PauliZ` `One` Status.
 
@@ -373,7 +373,7 @@ Als weiteres Beispiel können `CNOT(control, target)` als `Controlled X([control
 
 ### <a name="examples"></a>Beispiele
 
-Dieses Beispiel für einen Q #-Vorgang stammt aus dem [Mess](https://github.com/microsoft/Quantum/tree/master/samples/getting-started/measurement) Beispiel. Innerhalb von Vorgängen können wir Qubits zuordnen und Quantum-Vorgänge für diese Qubits verwenden, wie z. b. `H` und `X`:
+Dieses Beispiel für einen Q#-Vorgang stammt aus dem [Mess](https://github.com/microsoft/Quantum/tree/master/samples/getting-started/measurement) Beispiel. Innerhalb von Vorgängen können wir Qubits zuordnen und Quantum-Vorgänge für diese Qubits verwenden, wie z. b. `H` und `X`:
 
 ```qsharp
 /// # Summary

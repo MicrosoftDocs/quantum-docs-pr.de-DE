@@ -1,6 +1,6 @@
 ---
 title: Überprüfung auf Verwendung von ungültigen Qubits
-description: 'Erfahren Sie mehr über das von Microsoft QDK ungültige Qubits use Checker, das den Q #-Code auf potenziell ungültige Qubits überprüft.'
+description: 'Erfahren Sie mehr über das von Microsoft QDK ungültige Qubits use Checker, das den Q#-Code auf potenziell ungültige Qubits überprüft.'
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
@@ -15,7 +15,7 @@ ms.locfileid: "77907068"
 ---
 # <a name="invalidated-qubits-use-checker"></a>Ungültige Qubits-Verwendungs Überprüfung
 
-Der `Invalidated Qubits Use Checker` ist Teil des Quantum- [computertracesimulators](xref:microsoft.quantum.machines.qc-trace-simulator.intro) , der zum Erkennen potenzieller Fehler im Code entworfen wurde. Sehen Sie sich den folgenden Q #-Code an, um die vom `Invalidated Qubits Use Checker`erkannten Probleme zu veranschaulichen.
+Der `Invalidated Qubits Use Checker` ist Teil des Quantum- [computertracesimulators](xref:microsoft.quantum.machines.qc-trace-simulator.intro) , der zum Erkennen potenzieller Fehler im Code entworfen wurde. Sehen Sie sich den folgenden Q#-Code an, um die vom `Invalidated Qubits Use Checker`erkannten Probleme zu veranschaulichen.
 
 ```qsharp
 operation UseReleasedQubit() : Unit {

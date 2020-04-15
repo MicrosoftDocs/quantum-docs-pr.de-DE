@@ -19,7 +19,7 @@ Das Quantum Development Kit bietet einen deffoli-Simulator, bei dem es sich um e
 
 Während der Vorgang "deffoli" in der Operation wesentlich eingeschränkter ist als der [vollständige Zustands Simulator](xref:microsoft.quantum.machines.full-state-simulator), kann er weitaus mehr Qubits simulieren.
 Der-Simulator kann mit Millionen von Qubits verwendet werden, während der vollständige Zustands Simulator im Allgemeinen auf ungefähr 30 beschränkt ist.
-Es kann einen begrenzten Satz von Quantum-Algorithmen ausführen und Debuggen, die in Q # auf dem Computer geschrieben wurden. Beispielsweise können Oracles, die Boolesche Funktionen evaluieren, mithilfe dieser Gates implementiert werden. Diese werden daher bei einer großen Anzahl von Qubits mit diesem Simulator getestet.
+Es kann einen begrenzten Satz von Quantum-Algorithmen ausführen und Debuggen, die in Q# auf dem Computer geschrieben wurden. Beispielsweise können Oracles, die Boolesche Funktionen evaluieren, mithilfe dieser Gates implementiert werden. Diese werden daher bei einer großen Anzahl von Qubits mit diesem Simulator getestet.
 
 Dieser Quantum-Simulator wird über die `ToffoliSimulator`-Klasse verfügbar gemacht.
 Um den Simulator zu verwenden, erstellen Sie einfach eine Instanz dieser Klasse, und übergeben Sie Sie an die `Run`-Methode des Quantum-Vorgangs, den Sie zusammen mit den restlichen Parametern ausführen möchten:

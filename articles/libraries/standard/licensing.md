@@ -1,6 +1,6 @@
 ---
 title: Open-Source-Lizenzierung für das QDK
-description: 'Erfahren Sie mehr über die Lizenzierung für die Verwendung von und Beiträge zu den Microsoft Q # Standard-Bibliotheken-Lizenzierung und Mitwirkender.'
+description: 'Erfahren Sie mehr über die Lizenzierung für die Verwendung von und Beiträge zu den Microsoft Q# Standard-Bibliotheken-Lizenzierung und Mitwirkender.'
 author: martinro
 ms.author: martinro@microsoft.com
 ms.date: 2/16/2018

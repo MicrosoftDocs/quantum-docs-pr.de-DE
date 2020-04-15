@@ -1,6 +1,6 @@
 ---
-title: 'Erfahren Sie, wie Sie ein Q #-Projekt mit dem Quantum Development Kit (QDK) erstellen.'
-description: 'Initialisieren eines Projekts für die Quantum-Entwicklung mit dem QDK und f # in der von Ihnen ausgewählten Entwicklungsumgebung'
+title: 'Erfahren Sie, wie Sie ein Q#-Projekt mit dem Quantum Development Kit (QDK) erstellen.'
+description: 'Initialisieren eines Projekts für die Quantum-Entwicklung mit dem QDK und Q# in der von Ihnen ausgewählten Entwicklungsumgebung'
 author: natke
 ms.author: nakersha
 ms.date: 10/19/2019
@@ -14,16 +14,16 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 02/06/2020
 ms.locfileid: "77036439"
 ---
-# <a name="create-a-q-project-in-your-development-environment"></a>Erstellen eines Q #-Projekts in Ihrer Entwicklungsumgebung
+# <a name="create-a-q-project-in-your-development-environment"></a>Erstellen eines Q#-Projekts in Ihrer Entwicklungsumgebung
 
-Erfahren Sie, wie Sie ein Q #-Projekt mit dem QDK erstellen.
+Erfahren Sie, wie Sie ein Q#-Projekt mit dem QDK erstellen.
 
-Ein q #-Projekt enthält q #-Dateien, die den Quantum-Code enthalten, sowie ein Host Programm zum Ausführen des Quantum-Programms. Sie können das Host Programm in .NET-Sprachen wie C#oder in Python schreiben. Sie können auch Q #-Code in einem jupyter-Notebook mithilfe des IQ #-Kernels ausführen.
+Ein Q#-Projekt enthält Q#-Dateien, die den Quantum-Code enthalten, sowie ein Host Programm zum Ausführen des Quantum-Programms. Sie können das Host Programm in .NET-Sprachen wie C#oder in Python schreiben. Sie können auch Q#-Code in einem jupyter-Notebook mithilfe des IQ#-Kernels ausführen.
 
 Wählen Sie in den folgenden Abschnitten Ihre Entwicklungsumgebung und Sprache aus:
 
 * [Python](#create-a-python-project)
-* [Q # jupyter-Notebooks](#create-a-q-jupyter-notebook-project)
+* [Q# jupyter-Notebooks](#create-a-q-jupyter-notebook-project)
 * [C#mit Visual Studio](#create-a-c-project-on-windows-using-visual-studio)
 * [C#mit vs Code](#create-a-c-project-using-vs-code)
 * [C#mit der Befehlszeile](#create-a-c-project-using-the-dotnet-command-line-tool)
@@ -36,7 +36,7 @@ Wählen Sie in den folgenden Abschnitten Ihre Entwicklungsumgebung und Sprache a
 
 1. Erstellen Sie einen Ordner für das Projekt, und navigieren Sie zu diesem Ordner.
 
-1. Erstellen Sie eine q #-Datei mit dem Namen `Operation.qs`, und fügen Sie Ihr den q #-Code hinzu. Beispiel:
+1. Erstellen Sie eine Q#-Datei mit dem Namen `Operation.qs`, und fügen Sie Ihr den Q#-Code hinzu. Beispiel:
 
     ```qsharp
     namespace HelloWorld {
@@ -50,7 +50,7 @@ Wählen Sie in den folgenden Abschnitten Ihre Entwicklungsumgebung und Sprache a
     }
     ```
 
-1. Erstellen Sie eine python-Hostdatei mit dem Namen `host.py`, um den Q #-Vorgang aufzurufen Beispiel:
+1. Erstellen Sie eine python-Hostdatei mit dem Namen `host.py`, um den Q#-Vorgang aufzurufen Beispiel:
 
     ```python
     import qsharp
@@ -75,7 +75,7 @@ Wählen Sie in den folgenden Abschnitten Ihre Entwicklungsumgebung und Sprache a
 
 Sie können nun mit der Entwicklung des Quantums Programm fortfahren.
 
-## <a name="create-a-q-jupyter-notebook-project"></a>Erstellen eines Q # Jupyter Notebook-Projekts
+## <a name="create-a-q-jupyter-notebook-project"></a>Erstellen eines Q# Jupyter Notebook-Projekts
 
 1. Voraussetzungen
 
@@ -89,7 +89,7 @@ Sie können nun mit der Entwicklung des Quantums Programm fortfahren.
 
 1. Navigieren Sie zu der URL, die in der Befehlszeile angezeigt wird. Beispiel: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85]
 
-1. Eine jupyter-Seite wird im Browser angezeigt. Wählen Sie auf der Registerkarte **Dateien** die Option **neu** > **Q #** aus, um ein jupyter-Notebook mit einem Q #-Kernel zu erstellen. Fügen Sie den folgenden Code in die erste Notebook-Zelle ein:
+1. Eine jupyter-Seite wird im Browser angezeigt. Wählen Sie auf der Registerkarte **Dateien** die Option **neu** > **Q#** aus, um ein jupyter-Notebook mit einem Q#-Kernel zu erstellen. Fügen Sie den folgenden Code in die erste Notebook-Zelle ein:
 
     ```qsharp
     operation SayHello() : Unit {
@@ -101,7 +101,7 @@ Sie können nun mit der Entwicklung des Quantums Programm fortfahren.
 
     ![Zelle im Jupyter-Notebook mit Q#-Code](~/media/install-guide-jupyter.png)
 
-    Bei der Ausführung in jupyter-Notebooks wird der Q #-Code kompiliert, und das Notebook gibt den Namen der gefundenen Vorgänge aus.
+    Bei der Ausführung in jupyter-Notebooks wird der Q#-Code kompiliert, und das Notebook gibt den Namen der gefundenen Vorgänge aus.
 
 1. Simulieren Sie auf einem Quantencomputer in einer neuen Zelle die Ausführung des gerade erstellten Vorgangs mithilfe der `%simulate`-Magic:
 
@@ -109,7 +109,7 @@ Sie können nun mit der Entwicklung des Quantums Programm fortfahren.
 
     Auf dem Bildschirm sollte die Nachricht zusammen mit dem Ergebnis des von Ihnen aufgerufenen Vorgangs angezeigt werden (in diesem Fall: leer).
 
-Sie können jetzt weitere Q #-Vorgänge hinzufügen, um die Quantum-Entwicklung fortzusetzen.
+Sie können jetzt weitere Q#-Vorgänge hinzufügen, um die Quantum-Entwicklung fortzusetzen.
 
 ## <a name="create-a-c-project-on-windows-using-visual-studio"></a>Erstellen eines C# Projekts unter Windows mit Visual Studio
 
@@ -149,7 +149,7 @@ Sie können jetzt die Quantum-Entwicklung mit Visual Studio fortsetzen.
 1. Erstellen eines neuen Projekts:
 
     * Navigieren Sie zu **Ansicht** -> **Befehlspalette**.
-    * Wählen Sie **Q #: Neues Projekt erstellen** aus.
+    * Wählen Sie **Q#: Neues Projekt erstellen** aus.
     * **Eigenständige Konsolenanwendung** auswählen
     * Navigieren Sie im Dateisystem zu dem Speicherort, an dem Sie die Anwendung erstellen möchten.
     * Klicken Sie nach Abschluss der Projekterstellung auf die Schaltfläche **Open new project...** (Neues Projekt öffnen).

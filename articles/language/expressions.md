@@ -1,6 +1,6 @@
 ---
-title: 'F #-Ausdrücke'
-description: 'Erfahren Sie, wie Konstanten, Variablen, Operatoren, Vorgänge und Funktionen als Ausdrücke in Q # angegeben, referenziert und kombiniert werden.'
+title: 'Q#-Ausdrücke'
+description: 'Erfahren Sie, wie Konstanten, Variablen, Operatoren, Vorgänge und Funktionen als Ausdrücke in Q# angegeben, referenziert und kombiniert werden.'
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
@@ -32,10 +32,10 @@ Wenn beispielsweise das Symbol `count` an den ganzzahligen Wert `5`gebunden ist,
 Numerische Ausdrücke sind Ausdrücke vom Typ `Int`, `BigInt`oder `Double`.
 Das heißt, Sie sind entweder ganzzahlige oder Gleit Komma Zahlen.
 
-`Int` Literale in Q # sind mit ganzzahligen literalen C#in identisch, mit dem Unterschied, dass kein nach gestelltes "l" oder "l" erforderlich (oder zulässig) ist.
+`Int` Literale in Q# sind mit ganzzahligen literalen C#in identisch, mit dem Unterschied, dass kein nach gestelltes "l" oder "l" erforderlich (oder zulässig) ist.
 Hexadezimale und binäre ganze Zahlen werden mit dem Präfix "0x" bzw. "0B" unterstützt.
 
-`BigInt` Literale in Q # sind identisch mit großen ganzzahligen Zeichen folgen in .net mit einem nachfolgenden "l" oder "l".
+`BigInt` Literale in Q# sind identisch mit großen ganzzahligen Zeichen folgen in .net mit einem nachfolgenden "l" oder "l".
 Hexadezimale große ganze Zahlen werden mit dem Präfix "0x" unterstützt.
 Daher sind die folgenden alle gültigen Verwendungsmöglichkeiten von `BigInt` Literalen:
 
@@ -45,7 +45,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-`Double` Literale in Q # sind mit doppelten Literalen in C#identisch, mit dem Unterschied, dass kein nach gestelltes "d" oder "d" erforderlich (oder zulässig) ist.
+`Double` Literale in Q# sind mit doppelten Literalen in C#identisch, mit dem Unterschied, dass kein nach gestelltes "d" oder "d" erforderlich (oder zulässig) ist.
 
 Wenn ein Array Ausdruck eines beliebigen Elementtyps vorhanden ist, kann ein `Int` Ausdruck mit der integrierten Funktion `Length` gebildet werden, wobei der Array Ausdruck in Klammern, `(` und `)`eingeschlossen ist.
 Wenn `a` beispielsweise an ein Array gebunden ist, ist `Length(a)` ein ganzzahliger Ausdruck.
@@ -96,7 +96,7 @@ Die beiden `Bool` Literalwerte sind `true` und `false`.
 Wenn zwei Ausdrücke desselben primitiven Typs vorhanden sind, können die `==` und `!=` binäre Operatoren verwendet werden, um einen `Bool` Ausdruck zu erstellen.
 Der Ausdruck ist true, wenn die beiden Ausdrücke gleich sind, andernfalls false.
 
-Werte von benutzerdefinierten Typen können nicht verglichen werden, sondern es können nur Ihre nicht umschließenden Werte verglichen werden. Verwenden Sie beispielsweise den "Unwrap"-Operator `!` (auf der [Seite "Q # Type Model](xref:microsoft.quantum.language.type-model#user-defined-types)" erläutert).
+Werte von benutzerdefinierten Typen können nicht verglichen werden, sondern es können nur Ihre nicht umschließenden Werte verglichen werden. Verwenden Sie beispielsweise den "Unwrap"-Operator `!` (auf der [Seite "Q# Type Model](xref:microsoft.quantum.language.type-model#user-defined-types)" erläutert).
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -120,9 +120,9 @@ Bei jedem booleschen Ausdruck kann der `not` unäre Operator verwendet werden, u
 
 ## <a name="string-expressions"></a>Zeichen folgen Ausdrücke
 
-Q # ermöglicht die Verwendung von Zeichen folgen in der `fail`-Anweisung und der `Log`-Standardfunktion.
+Q# ermöglicht die Verwendung von Zeichen folgen in der `fail`-Anweisung und der `Log`-Standardfunktion.
 
-Zeichen folgen in Q # sind entweder Literale oder interpoliert Zeichen folgen.
+Zeichen folgen in Q# sind entweder Literale oder interpoliert Zeichen folgen.
 Zeichen folgen Literale ähneln in den meisten Sprachen einfachen Zeichenfolgenliteralen: eine Sequenz von Unicode-Zeichen, die in doppelten Anführungszeichen eingeschlossen sind, `"`.
 Innerhalb einer Zeichenfolge kann der umgekehrte Schrägstrich `\` verwendet werden, um ein doppeltes Anführungszeichen zu versehen und eine neue Zeile als `\n`einzufügen, ein Wagen Rücklauf als `\r`und eine Registerkarte als `\t`.
 Beispiel:
@@ -131,11 +131,11 @@ Beispiel:
 "\"Hello world!\", she said.\n"
 ```
 
-Die Q #-Syntax für Zeichen folgen Interpolationen ist eine Teilmenge C# der 7,0-Syntax. Q # unterstützt keine ausführlichen (mehrzeiligen) interpoliert Zeichen folgen.
+Die Q#-Syntax für Zeichen folgen Interpolationen ist eine Teilmenge C# der 7,0-Syntax. Q# unterstützt keine ausführlichen (mehrzeiligen) interpoliert Zeichen folgen.
 Informationen zur Syntax finden Sie unter C# [*interpoliert*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings) .
 
-Ausdrücke in einer interinterierten Zeichenfolge Folgen der Q #- C# Syntax, nicht der Syntax.
-Jeder gültige Q #-Ausdruck kann in einer interinterierten Zeichenfolge angezeigt werden.
+Ausdrücke in einer interinterierten Zeichenfolge Folgen der Q#- C# Syntax, nicht der Syntax.
+Jeder gültige Q#-Ausdruck kann in einer interinterierten Zeichenfolge angezeigt werden.
 
 ## <a name="qubit-expressions"></a>Qubit-Ausdrücke
 
@@ -225,7 +225,7 @@ Um also das Ergebnis des Aufrufs von `Builder` aus dem vorherigen Absatz aufzuru
 ```
 
 Beim Aufrufen einer typparametrisierten Aufruf baren kann der tatsächliche Typparameter in spitzen Klammern `<` und nach dem Aufruf baren Ausdruck `>` werden.
-Dies ist in der Regel unnötig, da der Q #-Compiler die eigentlichen Typen ableiten wird.
+Dies ist in der Regel unnötig, da der Q#-Compiler die eigentlichen Typen ableiten wird.
 Dies ist für die partielle Anwendung erforderlich (siehe unten), wenn ein typparametrisiertes Argument nicht angegeben wird.
 Dies ist manchmal auch nützlich, wenn die Übergabe von Vorgängen mit unterschiedlichen Funktoren unterstützt wird.
 
@@ -242,7 +242,7 @@ Die Typspezifikation ist erforderlich, da `Op3` und `Op1` unterschiedliche Typen
 Bei einem Aufruf baren Ausdruck kann ein neuer Aufruf barer Ausdruck erstellt werden, indem eine Teilmenge der Argumente für die Aufruf Bare bereitgestellt wird.
 Dies wird als _partielle Anwendung_bezeichnet.
 
-In f # wird eine teilweise angewendete Aufruf Bare-Datei durch Schreiben eines normalen Aufruf Ausdrucks ausgedrückt, wobei jedoch ein Unterstrich, `_`, für die nicht angegebenen Argumente verwendet wird.
+In Q# wird eine teilweise angewendete Aufruf Bare-Datei durch Schreiben eines normalen Aufruf Ausdrucks ausgedrückt, wobei jedoch ein Unterstrich, `_`, für die nicht angegebenen Argumente verwendet wird.
 Die sich ergebende Aufruf Bare hat denselben Ergebnistyp wie die basiscallable und die gleichen Spezialisierungs Vorgänge für Vorgänge.
 Der Eingabetyp der partiellen Anwendung ist einfach der ursprüngliche Typ mit den angegebenen Argumenten.
 
@@ -269,7 +269,7 @@ let f3 = Op(_,qb, _);       // f3 generates a compilation error
 
 ### <a name="recursion"></a>Rekursion
 
-F #-callables dürfen direkt oder indirekt rekursiv sein.
+Q#-callables dürfen direkt oder indirekt rekursiv sein.
 Das heißt, ein Vorgang oder eine Funktion kann sich selbst aufrufen, oder es kann eine andere Aufruf Bare aufgerufen werden, die den Aufruf baren Vorgang direkt oder indirekt aufruft.
 
 Es gibt jedoch zwei wichtige Kommentare zur Verwendung der Rekursion:
@@ -277,7 +277,7 @@ Es gibt jedoch zwei wichtige Kommentare zur Verwendung der Rekursion:
 - Die Verwendung von Rekursion bei Vorgängen beeinträchtigt wahrscheinlich bestimmte Optimierungen.
   Dies kann erhebliche Auswirkungen auf die Ausführungszeit des Algorithmus haben.
 - Bei der Ausführung auf einem eigentlichen Quantum-Gerät kann der Stapel Speicher eingeschränkt sein, sodass die Tiefe Rekursion zu einem Laufzeitfehler führen kann.
-  Insbesondere der Q #-Compiler und die Common Language Runtime erkennen und optimieren die Endrekursion nicht.
+  Insbesondere der Q#-Compiler und die Common Language Runtime erkennen und optimieren die Endrekursion nicht.
 
 ## <a name="tuple-expressions"></a>Tupelausdrücke
 
@@ -295,7 +295,7 @@ Anders als Literale sind die einzigen Ausdrücke eines benutzerdefinierten Typs 
 
 ## <a name="unwrap-expressions"></a>Entpacken von Ausdrücken
 
-In Q # ist der Unwrap-Operator ein nach gestelltes Ausrufezeichen `!`.
+In Q# ist der Unwrap-Operator ein nach gestelltes Ausrufezeichen `!`.
 Wenn `IntPair` beispielsweise einen benutzerdefinierten Typ mit dem zugrunde liegenden Typ `(Int, Int)`und `s` eine Variable mit einem Wert `IntPair(2,3)`war, dann `s!` `(2,3)`.
 
 Für benutzerdefinierte Typen, die in Bezug auf andere benutzerdefinierte Typen definiert sind. der Unwrap-Operator kann wiederholt werden. Beispielsweise gibt `s!!` den doppelt entpackten Wert `s`an.
@@ -397,7 +397,7 @@ Wenn beispielsweise `a` und `b` beide Arrays `Int`s sind, würde ein Slice aus d
 (a+b)[1..2..7]
 ```
 
-Alle Arrays in Q # sind NULL basiert.
+Alle Arrays in Q# sind NULL basiert.
 Das heißt, dass das erste Element eines Arrays `a` immer `a[0]`ist.
 
 Ab unserer Version 0,8 unterstützen wir Kontext Ausdrücke für die Bereichs Aufteilung. Insbesondere können Bereichs Start-und Endwerte im Kontext eines Bereichs aufteilen-Ausdrucks weggelassen werden. In diesem Fall wendet der Compiler die folgenden Regeln an, um die vorgesehenen Trennzeichen für den Bereich abzuleiten. 
@@ -436,7 +436,7 @@ Wenn beispielsweise `a` und `b` beide Arrays `Int`s sind, würde ein Element aus
 (a+b)[13]
 ```
 
-Alle Arrays in Q # sind NULL basiert.
+Alle Arrays in Q# sind NULL basiert.
 Das heißt, dass das erste Element eines Arrays `a` immer `a[0]`ist.
 
 

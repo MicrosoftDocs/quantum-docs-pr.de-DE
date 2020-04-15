@@ -1,6 +1,6 @@
 ---
 title: Vollständiger Zustands Simulator
-description: 'Erfahren Sie, wie Sie Ihre Q #-Programme auf dem Microsoft Quantum Development Kit vollständigen Status Simulator ausführen.'
+description: 'Erfahren Sie, wie Sie Ihre Q#-Programme auf dem Microsoft Quantum Development Kit vollständigen Status Simulator ausführen.'
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 12/7/2017
@@ -16,7 +16,7 @@ ms.locfileid: "77906116"
 # <a name="quantum-development-kit-full-state-simulator"></a>Vollständiger Status Simulator für das Quantum Development Kit
 
 Das Quantum Development Kit bietet einen vollständigen Quantum-Simulator ähnlich dem [Liq $ UI | \rangle $](http://stationq.github.io/Liquid/) von Microsoft Research.
-Dieser Simulator kann zum Ausführen und Debuggen von in Q # geschriebenen Quantenalgorithmen auf dem Computer verwendet werden.
+Dieser Simulator kann zum Ausführen und Debuggen von in Q# geschriebenen Quantenalgorithmen auf dem Computer verwendet werden.
 
 Dieser Quantum-Simulator wird über die `QuantumSimulator`-Klasse verfügbar gemacht. Um den Simulator zu verwenden, erstellen Sie einfach eine Instanz dieser Klasse, und übergeben Sie Sie an die `Run`-Methode des Quantum-Vorgangs, den Sie zusammen mit den restlichen Parametern ausführen möchten:
 

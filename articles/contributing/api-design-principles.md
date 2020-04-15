@@ -1,6 +1,6 @@
 ---
-title: 'Q #-API-Entwurfs Prinzipien'
-description: 'Q #-API-Entwurfs Prinzipien'
+title: 'Q#-API-Entwurfs Prinzipien'
+description: 'Q#-API-Entwurfs Prinzipien'
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
@@ -13,20 +13,20 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 03/10/2020
 ms.locfileid: "79024201"
 ---
-# <a name="q-api-design-principles"></a>Q #-API-Entwurfs Prinzipien
+# <a name="q-api-design-principles"></a>Q#-API-Entwurfs Prinzipien
 
 ## <a name="introduction"></a>Einführung
 
-Als Sprache und als Plattform ermöglicht Ihnen Q # Benutzern das Schreiben, ausführen, verstehen und untersuchen von Quantum-Anwendungen.
-Um Benutzer zu unterstützen, befolgen wir beim Entwerfen von Q #-Bibliotheken eine Reihe von API-Entwurfs Prinzipien, um unsere Entwürfe zu unterstützen und uns dabei zu unterstützen, für die Quantum-Entwicklungs Community verwendbare Bibliotheken zu erstellen.
-In diesem Artikel werden diese Grundsätze aufgeführt und Beispiele für die Vorgehensweise beim Entwerfen von Q #-APIs erläutert.
+Als Sprache und als Plattform ermöglicht Ihnen Q# Benutzern das Schreiben, ausführen, verstehen und untersuchen von Quantum-Anwendungen.
+Um Benutzer zu unterstützen, befolgen wir beim Entwerfen von Q#-Bibliotheken eine Reihe von API-Entwurfs Prinzipien, um unsere Entwürfe zu unterstützen und uns dabei zu unterstützen, für die Quantum-Entwicklungs Community verwendbare Bibliotheken zu erstellen.
+In diesem Artikel werden diese Grundsätze aufgeführt und Beispiele für die Vorgehensweise beim Entwerfen von Q#-APIs erläutert.
 
 > [!TIP]
 > Dies ist ein Recht detailliertes Dokument, das Sie bei der Entwicklung von Bibliotheken und ausführlichen Bibliotheks Beiträgen unterstützen soll.
-> Sie finden es wahrscheinlich am nützlichsten, wenn Sie Ihre eigenen Bibliotheken in q # schreiben, oder wenn Sie größere Features zum [Repository für q #-Bibliotheken](https://github.com/microsoft/QuantumLibraries)beitragen.
+> Sie finden es wahrscheinlich am nützlichsten, wenn Sie Ihre eigenen Bibliotheken in Q# schreiben, oder wenn Sie größere Features zum [Repository für Q#-Bibliotheken](https://github.com/microsoft/QuantumLibraries)beitragen.
 >
 > Wenn Sie jedoch erfahren möchten, wie Sie im Allgemeinen an das Quantum Development Kit mitwirken, empfehlen wir Ihnen, mit dem [Beitrags Handbuch](xref:microsoft.quantum.contributing)zu beginnen.
-> Wenn Sie allgemeinere Informationen über das Formatieren Ihres Q #-Codes suchen möchten, sind Sie möglicherweise daran interessiert, sich das [Styleguide](xref:microsoft.quantum.contributing.style)anzusehen.
+> Wenn Sie allgemeinere Informationen über das Formatieren Ihres Q#-Codes suchen möchten, sind Sie möglicherweise daran interessiert, sich das [Styleguide](xref:microsoft.quantum.contributing.style)anzusehen.
 
 ## <a name="general-principles"></a>Allgemeine Prinzipien
 
@@ -81,7 +81,7 @@ In diesem Artikel werden diese Grundsätze aufgeführt und Beispiele für die Vo
 - ✅ entwerfen **Sie** Entwurfsfunktionen und-Vorgänge, um sich gut mit anderen Funktionen und Vorgängen zu kombinieren, sowohl in derselben API als auch in bereits vorhandenen Bibliotheken.
 
   *Beispiele:*
-  - Der @"microsoft.quantum.canon.delay" Vorgang nimmt nur minimale Annahmen über seine Eingaben an und kann daher verwendet werden, um Anwendungen von entweder in der Q #-Standardbibliothek oder gemäß der Definition durch die Benutzer zu verzögern.
+  - Der @"microsoft.quantum.canon.delay" Vorgang nimmt nur minimale Annahmen über seine Eingaben an und kann daher verwendet werden, um Anwendungen von entweder in der Q#-Standardbibliothek oder gemäß der Definition durch die Benutzer zu verzögern.
     <!-- TODO: define bad example. -->
 
 - ✅ **machen** rein deterministische Klassische Logik als Funktionen anstelle von Vorgängen verfügbar.

@@ -1,6 +1,6 @@
 ---
-title: 'Math in den Q # Standard-Bibliotheken'
-description: 'Erfahren Sie mehr über die klassischen mathematischen Funktionen in den Q # Standard-Bibliotheken, die mit den integrierten Datentypen verwendet werden.'
+title: 'Math in den Q# Standard-Bibliotheken'
+description: 'Erfahren Sie mehr über die klassischen mathematischen Funktionen in den Q# Standard-Bibliotheken, die mit den integrierten Datentypen verwendet werden.'
 author: cgranade
 uid: microsoft.quantum.libraries.math
 ms.author: chgranad@microsoft.com
@@ -14,7 +14,7 @@ ms.locfileid: "77906150"
 ---
 # <a name="classical-mathematical-functions"></a>Klassische mathematische Funktionen #
 
-Diese Funktionen werden hauptsächlich verwendet, um mit den integrierten f #-Datentypen `Int`, `Double`und `Range`zu arbeiten.
+Diese Funktionen werden hauptsächlich verwendet, um mit den integrierten Q#-Datentypen `Int`, `Double`und `Range`zu arbeiten.
 
 Der <xref:microsoft.quantum.intrinsic.random> Vorgang verfügt über eine Signatur `(Double[] => Int)`.
 Er nimmt ein Array von Doubles als Eingabe an und gibt einen zufällig ausgewählten Index als `Int`in das Array zurück.

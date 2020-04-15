@@ -23,7 +23,7 @@ Das Erhöhen der Größe der Berechnung durch nur ein zusätzliches Qubit *verdo
 Diese schnelle Verdoppelung der computeleistung liegt darin begründet, dass ein Quantum-Computer mit einer relativ kleinen Anzahl von Qubits die leistungsstärksten superpcs von heute, Morgen und mehr für einige Rechenaufgaben überschreiten kann.
 
 Warum haben wir exponentielles Wachstum für Quantum State Vectors?  Unser Ziel in diesem Abschnitt besteht darin, die Regeln zu überprüfen, die zum Erstellen von Multi-Qubit-Zuständen aus den Single-Qubit-Zuständen verwendet werden, und die Gate-Vorgänge zu erörtern, die wir in unserem Gate festlegen müssen, um einen Universal many-Qubit-Quantum-Computer zu bilden.
-Diese Tools sind absolut notwendig, um die Gate-Sätze zu verstehen, die häufig in Q #-Code verwendet werden, und um sich darüber zu informieren, warum Quantum-Effekte wie jede Verflechtungen oder Störungen das Quantum-Computing leistungsfähiger als klassisches Computing darstellen.
+Diese Tools sind absolut notwendig, um die Gate-Sätze zu verstehen, die häufig in Q#-Code verwendet werden, und um sich darüber zu informieren, warum Quantum-Effekte wie jede Verflechtungen oder Störungen das Quantum-Computing leistungsfähiger als klassisches Computing darstellen.
 
 ## <a name="representing-two-qubits"></a>Darstellen von zwei Qubits
 Der Hauptunterschied zwischen einem-und zwei-Qubit-Zuständen besteht darin, dass zwei-Qubit-Zustände vierdimensional und nicht zweidimensional sind.

@@ -28,10 +28,10 @@ Daher ist es hilfreich, wenn die durch einen Beitrag hinzugefügten Funktionen g
 
 ### <a name="unit-tests"></a>Komponententests
 
-Die Q #-Funktionen,-Vorgänge und benutzerdefinierten Typen, die Bibliotheken wie den-Kanon bilden, werden automatisch als Teil der Entwicklung im [**Microsoft/quantrelibraries-** ](https://github.com/Microsoft/QuantumLibraries/) Repository getestet.
+Die Q#-Funktionen,-Vorgänge und benutzerdefinierten Typen, die Bibliotheken wie den-Kanon bilden, werden automatisch als Teil der Entwicklung im [**Microsoft/quantrelibraries-** ](https://github.com/Microsoft/QuantumLibraries/) Repository getestet.
 Wenn eine neue Pull Request beispielsweise geöffnet wird, prüft unsere [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) Konfiguration, ob die Änderungen im Pull Request vorhandene Funktionen, von denen die Quantum-Programmier Community abhängt, nicht unterbrechen.
 
-Mit der neuesten Q #-Version werden Komponententests mithilfe des `@Test("QuantumSimulator")`-Attributs definiert. Das Argument kann entweder "Quantensimulator", "-ffolisimulator", "tracesimulator" oder ein beliebiger voll qualifizierter Name sein, der das Ausführungs Ziel angibt. Mehrere Attribute, die verschiedene Ausführungs Ziele definieren, können an dieselbe Aufruf Bare angefügt werden. Bei einigen unserer Tests wird weiterhin das veraltete [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) -Paket verwendet, das alle f #-Funktionen und-Vorgänge verfügbar macht, die `Test` mit dem [xUnit](https://xunit.github.io/) -Framework enden. Dieses Paket wird nicht mehr zum Definieren von Komponententests benötigt. 
+Mit der neuesten Q#-Version werden Komponententests mithilfe des `@Test("QuantumSimulator")`-Attributs definiert. Das Argument kann entweder "Quantensimulator", "-ffolisimulator", "tracesimulator" oder ein beliebiger voll qualifizierter Name sein, der das Ausführungs Ziel angibt. Mehrere Attribute, die verschiedene Ausführungs Ziele definieren, können an dieselbe Aufruf Bare angefügt werden. Bei einigen unserer Tests wird weiterhin das veraltete [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) -Paket verwendet, das alle Q#-Funktionen und-Vorgänge verfügbar macht, die `Test` mit dem [xUnit](https://xunit.github.io/) -Framework enden. Dieses Paket wird nicht mehr zum Definieren von Komponententests benötigt. 
 
 Die folgende Funktion wird verwendet, um sicherzustellen, dass die Funktionen <xref:microsoft.quantum.canon.fst> und <xref:microsoft.quantum.canon.snd> beide die richtigen Ausgaben in einem repräsentativen Beispiel zurückgeben.
 Wenn die Ausgabe von `Fst` oder `Snd` nicht korrekt ist, wird die `fail`-Anweisung verwendet, um den Test zu einem Fehler zu führen.
@@ -92,7 +92,7 @@ Es kann schwierig sein, alles zu erledigen. Daher planen wir, welche Features wi
 Dies kann ein weiterer Fall sein, wenn das Freigeben eines Features als Bibliothek eines Drittanbieters sehr sinnvoll ist.
 Alternativ können wir Ihnen helfen, Ihre Hilfe beim Ändern eines Features zu ändern, um eine bessere Anpassung in unsere Roadmap zu erreichen, damit wir die bestmögliche Arbeit erreichen können.
 
-Außerdem werden Sie aufgefordert, Änderungen an einer Pull Request vorzunehmen, wenn Sie weitere Dokumentationen oder Komponententests erfordert, damit wir Sie nutzen können, oder wenn Sie sich im Stil von den restlichen Q #-Bibliotheken unterscheiden, sodass Sie den Benutzern das Auffinden Ihrer Funktion erschweren.
+Außerdem werden Sie aufgefordert, Änderungen an einer Pull Request vorzunehmen, wenn Sie weitere Dokumentationen oder Komponententests erfordert, damit wir Sie nutzen können, oder wenn Sie sich im Stil von den restlichen Q#-Bibliotheken unterscheiden, sodass Sie den Benutzern das Auffinden Ihrer Funktion erschweren.
 In diesen Fällen versuchen wir, einige Ratschläge in Bezug auf Code Überprüfungen zu bieten, die hinzugefügt oder geändert werden können, um das einbeziehen Ihres Beitrags zu vereinfachen.
 
 Schließlich können wir keine Beiträge akzeptieren, die zu Schäden der Quantum Computing-Community führen, wie im [Microsoft Open Source-Verhaltenskodex](https://opensource.microsoft.com/codeofconduct/)erläutert.
@@ -102,10 +102,10 @@ Wir freuen uns auf Ihre Hilfe bei der Umsetzung dieses Ziels.
 ## <a name="next-steps"></a>Nächste Schritte
 
 Vielen Dank, dass Sie das Quantum Development Kit zu einer großartigen Ressource für die gesamte Quantum-Programmier Community machen!
-Weitere Informationen finden Sie im folgenden Leitfaden für Q # Style.
+Weitere Informationen finden Sie im folgenden Leitfaden für Q# Style.
 
 > [!div class="nextstepaction"]
-> [Informationen zu f #-Stilrichtlinien](xref:microsoft.quantum.contributing.style)
+> [Informationen zu Q#-Stilrichtlinien](xref:microsoft.quantum.contributing.style)
 
 Abhängig von der Art des Codes, den Sie mitwirken, sind möglicherweise weitere Aspekte zu beachten, die Ihnen dabei helfen können, ihren Beitrag für die Community so gut wie möglich zu gestalten.
 

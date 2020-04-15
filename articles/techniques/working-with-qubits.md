@@ -15,11 +15,11 @@ ms.locfileid: "77907646"
 ---
 # <a name="working-with-qubits"></a>Arbeiten mit Qubits
 
-Nachdem wir nun eine Vielzahl von verschiedenen Teilen der Q #-Sprache gesehen haben, können wir uns die Thick of IT ansehen und erfahren, wie Sie Qubits selbst verwenden können.
+Nachdem wir nun eine Vielzahl von verschiedenen Teilen der Q#-Sprache gesehen haben, können wir uns die Thick of IT ansehen und erfahren, wie Sie Qubits selbst verwenden können.
 
 ## <a name="allocating-qubits"></a>Zuordnen von Qubits
 
-Zum Abrufen eines Qubit, das in Q # verwendet werden kann, weisen wir *Qubits* in einem `using` Block zu:
+Zum Abrufen eines Qubit, das in Q# verwendet werden kann, weisen wir *Qubits* in einem `using` Block zu:
 
 ```qsharp
 using (register = Qubit[5]) {
@@ -38,10 +38,10 @@ Am Ende des `using`-Blocks werden alle von diesem Block zugeordneten Qubits sofo
 ## <a name="intrinsic-operations"></a>Intrinsische Vorgänge
 
 Nach der Zuordnung kann ein Qubit an Funktionen und Vorgänge weitergegeben werden.
-In gewisser Hinsicht ist dies alles, was ein Q #-Programm mit einem Qubit tun kann, da die Aktionen, die ausgeführt werden können, als Vorgänge definiert sind.
+In gewisser Hinsicht ist dies alles, was ein Q#-Programm mit einem Qubit tun kann, da die Aktionen, die ausgeführt werden können, als Vorgänge definiert sind.
 Diese Vorgänge werden in systeminternen [Vorgängen und Funktionen](xref:microsoft.quantum.libraries.standard.prelude)ausführlicher angezeigt. vorerst werden jedoch einige nützliche Vorgänge erwähnt, die für die Interaktion mit Qubits verwendet werden können.
 
-Zuerst werden die Single-Qubit-Pauli-Operatoren $X $, $Y $ und $Z $ in Q # durch die intrinsischen Vorgänge `X`, `Y`und `Z`dargestellt, von denen jeder über den Typ `(Qubit => Unit is Adj + Ctl)`verfügt.
+Zuerst werden die Single-Qubit-Pauli-Operatoren $X $, $Y $ und $Z $ in Q# durch die intrinsischen Vorgänge `X`, `Y`und `Z`dargestellt, von denen jeder über den Typ `(Qubit => Unit is Adj + Ctl)`verfügt.
 Wie in systeminternen [Vorgängen und Funktionen](xref:microsoft.quantum.libraries.standard.prelude)beschrieben, können wir uns $X $ und somit `X` als bitflip-Vorgang oder nicht als Gate vorstellen.
 Mit dem `X` Vorgang können wir die Zustände der Form $ \ket{s_0 s_1 \dots s_n} $ für eine klassische Bitzeichenfolge vorbereiten $s $:
 
@@ -72,7 +72,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > Später werden weitere kompakte Methoden zum Schreiben dieses Vorgangs angezeigt, für die keine manuelle Fluss Steuerung erforderlich ist.
 
-Wir können auch Zustände wie $ \ket{+} = \left (\ket{0} + \ket{1}\right)/\sqrt{2}$ und $ \ket{-} = \left (\ket{0}-\ket{1}\right)/\sqrt{2}$ mithilfe der Hadamard Transform $H $, das in Q # durch den systeminternen Vorgang `H : (Qubit => Unit is Adj + Ctl)`dargestellt wird:
+Wir können auch Zustände wie $ \ket{+} = \left (\ket{0} + \ket{1}\right)/\sqrt{2}$ und $ \ket{-} = \left (\ket{0}-\ket{1}\right)/\sqrt{2}$ mithilfe der Hadamard Transform $H $, das in Q# durch den systeminternen Vorgang `H : (Qubit => Unit is Adj + Ctl)`dargestellt wird:
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -127,12 +127,12 @@ operation MeasureIfAllQubitsAreZero(qubits : Qubit[], pauli : Pauli) : Bool {
 }
 ```
 
-Die Q #-Sprache ermöglicht eine klassische Ablauf Steuerung, die von den Ergebnissen der Messung von Qubits abhängig ist.
+Die Q#-Sprache ermöglicht eine klassische Ablauf Steuerung, die von den Ergebnissen der Messung von Qubits abhängig ist.
 Diese Funktion ermöglicht es wiederum, leistungsfähige, probabilistische Mini Anwendungen zu implementieren, die die berechnungskosten für die Implementierung von uniflüssen reduzieren können.
-Beispielsweise ist es einfach, so genannte *Wiederholungs-bis-Erfolg-* Muster (RUS) in Q # zu implementieren.
+Beispielsweise ist es einfach, so genannte *Wiederholungs-bis-Erfolg-* Muster (RUS) in Q# zu implementieren.
 Diese RUS-Muster sind probabilistische Programme, deren Kosten in Bezug auf elementare Gates *erwartungsgemäß* sind, aber für die die echten Kosten von einem tatsächlichen Testlauf und einem tatsächlichen Austausch der verschiedenen möglichen Verzweigungen abhängen.
 
-Zum Vereinfachen von Wiederholungs-bis-Erfolg-Mustern (RUS) unterstützt Q # das-Konstrukt.
+Zum Vereinfachen von Wiederholungs-bis-Erfolg-Mustern (RUS) unterstützt Q# das-Konstrukt.
 
 ```qsharp
 repeat {
@@ -144,8 +144,8 @@ fixup {
 }
 ```
 
-Dabei sind `statementBlock1` und `statementBlock2` keine oder mehrere Q #-Anweisungen, und `expression` alle gültigen Ausdrücke, die zu einem Wert vom Typ `Bool`ausgewertet werden.
-In einem typischen Anwendungsfall implementiert der folgende Q #-Vorgang eine Drehung um eine irrationale Achse von $ (I + 2i Z)/\sqrt{5}$ in der Bloch-Kugel. Dies wird mit einem bekannten RUS-Muster erreicht:
+Dabei sind `statementBlock1` und `statementBlock2` keine oder mehrere Q#-Anweisungen, und `expression` alle gültigen Ausdrücke, die zu einem Wert vom Typ `Bool`ausgewertet werden.
+In einem typischen Anwendungsfall implementiert der folgende Q#-Vorgang eine Drehung um eine irrationale Achse von $ (I + 2i Z)/\sqrt{5}$ in der Bloch-Kugel. Dies wird mit einem bekannten RUS-Muster erreicht:
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {

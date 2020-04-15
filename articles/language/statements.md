@@ -1,6 +1,6 @@
 ---
-title: 'Q #-Anweisungen'
-description: 'Erfahren Sie mehr über die korrekte Verwendung von Anweisungen in Q #, einschließlich Funktions-und Vorgangs Deklarationen, Variablen Deklarationen und Zuweisungen und Vorgangs aufrufen.'
+title: 'Q#-Anweisungen'
+description: 'Erfahren Sie mehr über die korrekte Verwendung von Anweisungen in Q#, einschließlich Funktions-und Vorgangs Deklarationen, Variablen Deklarationen und Zuweisungen und Vorgangs aufrufen.'
 author: QuantumWriter
 uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
@@ -18,7 +18,7 @@ ms.locfileid: "77904671"
 ## <a name="comments"></a>Kommentare
 
 Kommentare beginnen mit zwei Schrägstrichen, `//`und werden bis zum Ende der Zeile fortgesetzt.
-Ein Kommentar kann an beliebiger Stelle in einer f #-Quelldatei angezeigt werden.
+Ein Kommentar kann an beliebiger Stelle in einer Q#-Quelldatei angezeigt werden.
 
 ### <a name="documentation-comments"></a>Dokumentations Kommentare
 
@@ -26,7 +26,7 @@ Kommentare, die mit drei Schrägstrichen (`///`) beginnen, werden vom Compiler s
 In diesem Fall wird der Inhalt als Dokumentation für den definierten Aufruf baren oder benutzerdefinierten Typ, wie für andere .NET-Sprachen, übernommen.
 
 In `///` Kommentaren wird Text, der als Teil der API-Dokumentation angezeigt wird, als [markdown](https://daringfireball.net/projects/markdown/syntax)formatiert, wobei verschiedene Teile der Dokumentation durch speziell benannte Header angezeigt werden.
-Als Erweiterung von markdown können Querverweise auf Vorgänge, Funktionen und benutzerdefinierte Typen in Q # mithilfe des `@"<ref target>"`eingeschlossen werden, wobei `<ref target>` durch den voll qualifizierten Namen des Code Objekts ersetzt wird, auf das verwiesen wird.
+Als Erweiterung von markdown können Querverweise auf Vorgänge, Funktionen und benutzerdefinierte Typen in Q# mithilfe des `@"<ref target>"`eingeschlossen werden, wobei `<ref target>` durch den voll qualifizierten Namen des Code Objekts ersetzt wird, auf das verwiesen wird.
 Optional kann eine Dokumentations-Engine auch zusätzliche markdownerweiterungen unterstützen.
 
 Beispiel:
@@ -76,9 +76,9 @@ Die folgenden Namen werden als Dokumentations Kommentar Header erkannt.
 
 ## <a name="namespaces"></a>Namespaces
 
-Jeder Q #-Vorgang, jede Funktion und jeder benutzerdefinierte Typ wird in einem Namespace definiert.
-F # befolgt die gleichen Regeln für die Benennung wie andere .NET-Sprachen.
-F # unterstützt jedoch keine relativen Verweise auf Namespaces.
+Jeder Q#-Vorgang, jede Funktion und jeder benutzerdefinierte Typ wird in einem Namespace definiert.
+Q# befolgt die gleichen Regeln für die Benennung wie andere .NET-Sprachen.
+Q# unterstützt jedoch keine relativen Verweise auf Namespaces.
 Das heißt, wenn der Namespace `a.b` geöffnet wurde, wird ein Verweis auf die Vorgangs Namen `c.d` nicht in einen Vorgang mit vollständigem Namen `a.b.c.d`aufgelöst.
 
 Innerhalb eines Namespace Blocks kann die `open` Direktive verwendet werden, um alle Typen und callables zu importieren, die in einem bestimmten Namespace deklariert sind, und auf diese mit Ihrem nicht qualifizierten Namen zu verweisen. Optional kann ein Kurzname für den geöffneten Namespace definiert werden, sodass alle Elemente aus diesem Namespace durch den definierten Kurznamen qualifiziert werden können (und müssen). Die `open`-Direktive gilt für den gesamten Namespace Block in einer Datei.
@@ -99,7 +99,7 @@ Die Verwendung eines voll qualifizierten Namens ist erforderlich, wenn zwei Name
 
 ## <a name="formatting"></a>Formatierung
 
-Die meisten Q #-Anweisungen und-Direktiven enden mit einem abschließenden Semikolon, `;`.
+Die meisten Q#-Anweisungen und-Direktiven enden mit einem abschließenden Semikolon, `;`.
 -Anweisungen und-Deklarationen wie `for` und `operation`, die mit einem-Anweisungsblock enden, erfordern kein abschließendes Semikolon.
 Jede Anweisungs Beschreibung gibt an, ob das abschließende Semikolon erforderlich ist.
 
@@ -108,19 +108,19 @@ Das vorhanden sein mehrerer Anweisungen in einer einzelnen Zeile sollte vermiede
 
 ## <a name="statement-blocks"></a>Anweisungsblöcke
 
-Q #-Anweisungen werden in Anweisungsblöcke gruppiert.
+Q#-Anweisungen werden in Anweisungsblöcke gruppiert.
 Ein Anweisungsblock beginnt mit einem öffnenden `{` und endet mit einem schließenden `}`.
 
 Ein Anweisungsblock, der lexikalisch in einem anderen-Block eingeschlossen ist, wird als Teil Block des enthaltenden Blocks angesehen; enthaltende-und-Unterblöcke werden auch als äußere und innere Blöcke bezeichnet.
 
 ## <a name="symbol-binding-and-assignment"></a>Symbol Bindung und-Zuweisung
 
-Q # unterscheidet zwischen veränderbaren und unveränderlichen Symbolen.
+Q# unterscheidet zwischen veränderbaren und unveränderlichen Symbolen.
 Im Allgemeinen wird die Verwendung unveränderlicher Symbole empfohlen, da es dem Compiler ermöglicht, weitere Optimierungen auszuführen.
 
 Die linke Seite der Bindung besteht aus einem symboltupel und der rechten Seite eines Ausdrucks.
 
-Da es sich bei allen Q #-Typen um Werttypen handelt, bei denen die Qubits eine etwas besondere Rolle übernimmt, wird formal eine Kopie erstellt, wenn ein Wert an ein Symbol gebunden ist oder wenn ein Symbol erneut erstellt wird. Dies heißt, dass das Verhalten von Q # identisch ist, wenn eine Kopie bei der Zuweisung erstellt wurde. Dies gilt insbesondere für Arrays. Natürlich werden in der Praxis nur die relevanten Teile bei Bedarf neu erstellt. 
+Da es sich bei allen Q#-Typen um Werttypen handelt, bei denen die Qubits eine etwas besondere Rolle übernimmt, wird formal eine Kopie erstellt, wenn ein Wert an ein Symbol gebunden ist oder wenn ein Symbol erneut erstellt wird. Dies heißt, dass das Verhalten von Q# identisch ist, wenn eine Kopie bei der Zuweisung erstellt wurde. Dies gilt insbesondere für Arrays. Natürlich werden in der Praxis nur die relevanten Teile bei Bedarf neu erstellt. 
 
 ### <a name="tuple-deconstruction"></a>Tupelerstellung
 
@@ -139,7 +139,7 @@ let (r1, r2) = MeasureTwice(q1, PauliX, q2, PauliY);
 ### <a name="immutable-symbols"></a>Unveränderliche Symbole
 
 Unveränderliche Symbole werden mithilfe der `let`-Anweisung gebunden.
-Dies entspricht ungefähr der Variablen Deklaration und Initialisierung in Sprachen wie C#, mit dem Unterschied, dass Q #-Symbole nach der Bindung möglicherweise nicht geändert werden. `let` Bindungen sind unveränderlich.
+Dies entspricht ungefähr der Variablen Deklaration und Initialisierung in Sprachen wie C#, mit dem Unterschied, dass Q#-Symbole nach der Bindung möglicherweise nicht geändert werden. `let` Bindungen sind unveränderlich.
 
 Eine unveränderliche Bindung besteht aus dem Schlüsselwort `let`, gefolgt von einem Symbol oder einem symboltupel, einem Gleichheitszeichen `=`, einem Ausdruck, an den die Symbole gebunden werden, und einem abschließenden Semikolon.
 Der Typ der gebundenen Symbole wird basierend auf dem Ausdruck auf der rechten Seite abgeleitet.
@@ -397,9 +397,9 @@ using (qubit = Qubit()) {
 
 ### <a name="while-loop"></a>While-Schleife
 
-Wiederholungs-bis-Erfolg-Muster verfügen über eine sehr Quantum-spezifische-Anmerkung. Sie werden häufig in bestimmten Klassen von Quantum-Algorithmen verwendet. Dies ist daher das dedizierte Sprachkonstrukt in f #. Allerdings müssen Schleifen, die basierend auf einer Bedingung unterbrechen und deren Ausführungsdauer zur Kompilierzeit nicht bekannt ist, mit bestimmter Sorgfalt in einer Quantum-Laufzeit behandelt werden. Die Verwendung in Funktionen andererseits ist nicht problematisch, da diese nur Code enthalten, der auf herkömmlicher (nicht Quantum-) Hardware ausgeführt wird. 
+Wiederholungs-bis-Erfolg-Muster verfügen über eine sehr Quantum-spezifische-Anmerkung. Sie werden häufig in bestimmten Klassen von Quantum-Algorithmen verwendet. Dies ist daher das dedizierte Sprachkonstrukt in Q#. Allerdings müssen Schleifen, die basierend auf einer Bedingung unterbrechen und deren Ausführungsdauer zur Kompilierzeit nicht bekannt ist, mit bestimmter Sorgfalt in einer Quantum-Laufzeit behandelt werden. Die Verwendung in Funktionen andererseits ist nicht problematisch, da diese nur Code enthalten, der auf herkömmlicher (nicht Quantum-) Hardware ausgeführt wird. 
 
-F # unterstützt daher die Verwendung von while-Schleifen nur innerhalb von Functions. Eine `while`-Anweisung besteht aus dem Schlüsselwort `while`, einer öffnenden Klammer `(`, einer Bedingung (d. h. einem booleschen Ausdruck), einer schließenden Klammer `)`und einem Anweisungsblock.
+Q# unterstützt daher die Verwendung von while-Schleifen nur innerhalb von Functions. Eine `while`-Anweisung besteht aus dem Schlüsselwort `while`, einer öffnenden Klammer `(`, einer Bedingung (d. h. einem booleschen Ausdruck), einer schließenden Klammer `)`und einem Anweisungsblock.
 Der Anweisungsblock (der Text der Schleife) wird ausgeführt, solange die Bedingung als `true`ausgewertet wird.
 
 ```qsharp

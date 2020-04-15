@@ -15,7 +15,7 @@ ms.locfileid: "77907204"
 ---
 # <a name="the-prelude"></a>Der Auftakt #
 
-Der f #-Compiler und die im Quantum Development Kit enthaltenen Zielcomputer stellen eine Reihe von intrinsischen Funktionen und Vorgängen bereit, die beim Schreiben von Quantum-Programmen in Q # verwendet werden können.
+Der Q#-Compiler und die im Quantum Development Kit enthaltenen Zielcomputer stellen eine Reihe von intrinsischen Funktionen und Vorgängen bereit, die beim Schreiben von Quantum-Programmen in Q# verwendet werden können.
 
 ## <a name="intrinsic-operations-and-functions"></a>Intrinsische Vorgänge und Funktionen ##
 
@@ -27,11 +27,11 @@ Die in der Standardbibliothek definierten systeminternen Vorgänge sind in einer
 - Vorgänge zum Implementieren von Messungen.
 
 Da der Clifford + $T $ Gate-Satz für das Quantum Computing [universell](xref:microsoft.quantum.concepts.multiple-qubits) ist, reichen diese Vorgänge aus, um einen beliebigen Quantum-Algorithmus innerhalb eines negisch kleinen Fehlers zu implementieren.
-Durch die Bereitstellung von Rotationen ermöglicht Q # dem Programmierer, in der einzelnen Qubit-Bibliothek mit einheitlicher und CNOT Gate zu arbeiten. Diese Bibliothek ist viel leichter zu überprüfen, da der Programmierer keinen direkten Ausdruck der Clifford + $T $-Zerlegung erfordert, und da für die Kompilierung einzelner Qubit-unitoren in Clifford und $T $ Gates sehr effiziente Methoden vorhanden sind (Weitere Informationen finden Sie [hier](xref:microsoft.quantum.more-information) ).
+Durch die Bereitstellung von Rotationen ermöglicht Q# dem Programmierer, in der einzelnen Qubit-Bibliothek mit einheitlicher und CNOT Gate zu arbeiten. Diese Bibliothek ist viel leichter zu überprüfen, da der Programmierer keinen direkten Ausdruck der Clifford + $T $-Zerlegung erfordert, und da für die Kompilierung einzelner Qubit-unitoren in Clifford und $T $ Gates sehr effiziente Methoden vorhanden sind (Weitere Informationen finden Sie [hier](xref:microsoft.quantum.more-information) ).
 
 Wenn möglich ermöglichen die in der Einleitung definierten Vorgänge, die auf Qubits reagieren, das Anwenden des `Controlled` Variant, sodass der Zielcomputer die geeignete Zerlegung ausführt.
 
-Viele der in diesem Teil der Einleitung definierten Funktionen und Vorgänge befinden sich im @"microsoft.quantum.intrinsic"-Namespace, sodass die meisten Q #-Quelldateien über eine `open Microsoft.Quantum.Intrinsic;` Direktive verfügen, die direkt auf die anfängliche Namespace Deklaration folgt.
+Viele der in diesem Teil der Einleitung definierten Funktionen und Vorgänge befinden sich im @"microsoft.quantum.intrinsic"-Namespace, sodass die meisten Q#-Quelldateien über eine `open Microsoft.Quantum.Intrinsic;` Direktive verfügen, die direkt auf die anfängliche Namespace Deklaration folgt.
 Der <xref:microsoft.quantum.core>-Namespace wird automatisch geöffnet, sodass Funktionen wie <xref:microsoft.quantum.core.length> ohne eine `open`-Anweisung verwendet werden können.
 
 ### <a name="common-single-qubit-unitary-operations"></a>Allgemeine Single-Qubit-einheitliche Vorgänge ###
@@ -98,7 +98,7 @@ Sie verfügt über eine Signatur `(Qubit => Unit is Adj + Ctl)`und entspricht de
 
 #### <a name="rotations"></a>Drehungen ####
 
-Zusätzlich zu den oben beschriebenen Pauli-und Clifford-Vorgängen bietet Q # Prelude eine Vielzahl von Möglichkeiten, um Drehungen auszudrücken.
+Zusätzlich zu den oben beschriebenen Pauli-und Clifford-Vorgängen bietet Q# Prelude eine Vielzahl von Möglichkeiten, um Drehungen auszudrücken.
 Wie in [Single-Qubit-Vorgängen](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)beschrieben, ist die Möglichkeit der Rotation für Quantum-Algorithmen von entscheidender Bedeutung.
 
 Wir gehen zunächst von der Erinnerung aus, dass wir jeden einzelnen Qubit-Vorgang mithilfe der $H $ und $T $ Gates Ausdrücken können. dabei ist $H $ der Hadamard-Vorgang und WHERE \begin{Equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\% FIXME: Dies verwendet derzeit den Quad Back zerstören
@@ -229,7 +229,7 @@ return rs;
 
 ## <a name="extension-functions-and-operations"></a>Erweiterungsfunktionen und-Vorgänge ##
 
-Außerdem definiert der-Auftakt einen umfangreichen Satz mathematischer und Typkonvertierungs Funktionen auf der .NET-Ebene für die Verwendung in Q #-Code.
+Außerdem definiert der-Auftakt einen umfangreichen Satz mathematischer und Typkonvertierungs Funktionen auf der .NET-Ebene für die Verwendung in Q#-Code.
 Der <xref:microsoft.quantum.extensions.math>-Namespace definiert z. b. nützliche Vorgänge, z. b. <xref:microsoft.quantum.extensions.math.sin> und <xref:microsoft.quantum.extensions.math.log>.
 Die vom Quantum Development Kit bereitgestellte Implementierung verwendet die klassische .net-Basisklassen Bibliothek und kann daher einen zusätzlichen kommunikationsroundtrip zwischen Quantum-Programmen und ihren klassischen Treibern beinhalten.
 Dies stellt zwar kein Problem für einen lokalen Simulator dar, dies kann jedoch bei der Verwendung eines Remote Simulators oder der tatsächlichen Hardware als Zielcomputer ein Leistungsproblem darstellen.
@@ -238,7 +238,7 @@ Dies bedeutet, dass ein einzelner Zielcomputer diese Auswirkungen auf die Leistu
 ### <a name="math"></a>Mathematisch ###
 
 Der <xref:microsoft.quantum.extensions.math>-Namespace stellt viele nützliche Funktionen aus der [`System.Math` Klasse](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)der .net-Basisklassen Bibliothek bereit.
-Diese Funktionen können auf die gleiche Weise wie alle anderen Q #-Funktionen verwendet werden:
+Diese Funktionen können auf die gleiche Weise wie alle anderen Q#-Funktionen verwendet werden:
 
 ```qsharp
 open Microsoft.Quantum.Math;
@@ -246,7 +246,7 @@ open Microsoft.Quantum.Math;
 let y = Sin(theta);
 ```
 
-Wenn eine statische .NET-Methode basierend auf dem Typ ihrer Argumente überladen wurde, wird die entsprechende Q #-Funktion mit einem Suffix kommentiert, das den Typ der Eingabe angibt:
+Wenn eine statische .NET-Methode basierend auf dem Typ ihrer Argumente überladen wurde, wird die entsprechende Q#-Funktion mit einem Suffix kommentiert, das den Typ der Eingabe angibt:
 
 ```qsharp
 let x = AbsI(-3); // x : Int = 3

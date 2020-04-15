@@ -1,6 +1,6 @@
 ---
 title: Symmetries von molekularen inteden
-description: 'Erfahren Sie, wie Sie den Typ "Q # orbitalintegral" verwenden, um molekulare Symmetries aufzuzählen.'
+description: 'Erfahren Sie, wie Sie den Typ "Q# orbitalintegral" verwenden, um molekulare Symmetries aufzuzählen.'
 author: nathanwiebe2
 ms.author: nawiebe
 ms.date: 10/09/2017

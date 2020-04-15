@@ -1,6 +1,6 @@
 ---
-title: 'Datenstrukturen in den Q # Standard-Bibliotheken'
-description: 'Erfahren Sie mehr über Datenstrukturen, Oracles und dynamikalische Generatoren in den Microsoft Q # Standard-Bibliotheken.'
+title: 'Datenstrukturen in den Q# Standard-Bibliotheken'
+description: 'Erfahren Sie mehr über Datenstrukturen, Oracles und dynamikalische Generatoren in den Microsoft Q# Standard-Bibliotheken.'
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
@@ -34,7 +34,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ### <a name="arrays"></a>Arrays ###
 
 Der Kanon stellt mehrere Funktionen zum Bearbeiten von Arrays bereit.
-Diese Funktionen sind typparametrisiert und können daher mit Arrays beliebiger Q #-Typen verwendet werden.
+Diese Funktionen sind typparametrisiert und können daher mit Arrays beliebiger Q#-Typen verwendet werden.
 Die <xref:microsoft.quantum.arrays.reversed>-Funktion gibt beispielsweise ein neues Array zurück, dessen Elemente in umgekehrter Reihenfolge von der Eingabe sind.
 Dies kann verwendet werden, um zu ändern, wie ein Quantum-Register beim Aufrufen von Vorgängen dargestellt wird:
 
@@ -72,7 +72,7 @@ In der Literatur der [Phasen Schätzung](https://en.wikipedia.org/wiki/Quantum_p
 Hier bezieht sich der Begriff Oracle auf eine blackboxtests-Quantum-Unterroutine, die auf einen Satz von Qubits anwendet und die Antwort als Phase zurückgibt.
 Diese Unterroutine kann sich oft als Eingabe für einen Quantum-Algorithmus vorstellen, der das Oracle zusätzlich zu einigen anderen Parametern annimmt, und eine Reihe von Quantum-Vorgängen anwendet und einen aufzurufenden aufrufungs Vorgang als grundlegende Gate behandelt.
 Um den größeren Algorithmus tatsächlich zu implementieren, muss eine konkrete Zerlegung des Oracle in grundlegende Gates bereitgestellt werden, aber eine solche Zerlegung ist nicht erforderlich, um den Algorithmus zu verstehen, der das Oracle aufruft.
-In f # wird diese Abstraktion mithilfe von Vorgängen als erstklassige Werte dargestellt, sodass Vorgänge in einer Blackbox-Weise an Implementierungen von Quantum-Algorithmen übermittelt werden können.
+In Q# wird diese Abstraktion mithilfe von Vorgängen als erstklassige Werte dargestellt, sodass Vorgänge in einer Blackbox-Weise an Implementierungen von Quantum-Algorithmen übermittelt werden können.
 Darüber hinaus werden benutzerdefinierte Typen verwendet, um die verschiedenen Oracle-Darstellungen auf typsichere Weise zu bezeichnen. dadurch ist es schwierig, unterschiedliche Arten von Black Box-Vorgängen versehentlich zu verscheihen.
 
 Solche Oracles werden in verschiedenen Kontexten angezeigt, einschließlich bekannter Beispiele wie [der Such-und Quantum-Simulations Algorithmen von Grover](https://en.wikipedia.org/wiki/Grover%27s_algorithm) .
@@ -189,7 +189,7 @@ Der einheitliche, der diese Quantum Dynamics beschreibt, ist $U (t) = R_z (2 \ O
 In diesem Kontext können wir $U (t) $ für beliebige $t $ mithilfe eines einzelnen $R _Z $ Gate simulieren. Daher müssen Sie sich nicht auf einzelne Abfragen auf die einheitliche beschränken.
 Ein solches kontinuierliches Modell verfügt auch über die-Eigenschaft, dass Häufigkeits Häufigkeits Angaben aus den Phasen Schätz Prozessen, die fortlaufende Abfragen verwenden, von Phaseninformationen erlernt werden können, die andernfalls durch die Verzweigungen der Logarithmus-Funktion maskiert werden. Sie können aus den Ergebnissen von Experimenten ersichtlich werden, die für nicht angemessene Werte von $t $ ausgeführt werden.
 Aus diesem Grund sind Probleme, wie z. b. diese kontinuierlichen Abfrage Modelle für die Phasen Schätzung, nicht nur angemessen, sondern auch dem diskreten Abfrage Modell vorzuziehen.
-Aus diesem Grund verfügt Q # über Funktionen für beide Formen von Abfragen und überlassen Sie dem Benutzer die Entscheidung über einen Phasen Schätz Algorithmus, um die Anforderungen und den verfügbaren Oracle-Typ zu erfüllen.
+Aus diesem Grund verfügt Q# über Funktionen für beide Formen von Abfragen und überlassen Sie dem Benutzer die Entscheidung über einen Phasen Schätz Algorithmus, um die Anforderungen und den verfügbaren Oracle-Typ zu erfüllen.
 
 ## <a name="dynamical-generator-modeling"></a>Dynamical Generator-Modellierung ##
 

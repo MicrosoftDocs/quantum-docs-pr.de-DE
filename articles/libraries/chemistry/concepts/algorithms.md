@@ -17,7 +17,7 @@ ms.locfileid: "80320712"
 
 Sobald der hamiltonan als Summe der elementaren Operatoren ausgedrückt wurde, kann die Dynamics dann mithilfe eines Hosts bekannter Techniken in grundlegende Gate-Vorgänge kompiliert werden.
 Zu den drei effizienten Ansätzen gehören Trotter – Suzuki-Formeln, lineare Kombinationen von Uni-und qubisierungen.
-Im folgenden werden diese drei Ansätze erläutert und konkrete Q #-Beispiele für die Implementierung dieser Methoden mithilfe der hamiltonan Simulations Bibliothek erläutert.
+Im folgenden werden diese drei Ansätze erläutert und konkrete Q#-Beispiele für die Implementierung dieser Methoden mithilfe der hamiltonan Simulations Bibliothek erläutert.
 
 
 ## <a name="trottersuzuki-formulas"></a>Trotter – Suzuki-Formeln
@@ -49,7 +49,7 @@ Beispiel: $ $ e ^ {-ix\otimes X t} = (h\otimes h) e ^ {-iz\otimes Z t} (h\otimes
         0 & 0 & 0 & e ^ {-IT} \end{bmatrix}.
 $ $ Hier, $e ^ {-IHT} \ket{00} = e ^ {IT} \ket{00}$ und $e ^ {-IHT} \ket{01} = e ^ {-IT} \ket{01}$, das direkt als Folge der Tatsache angesehen werden kann, dass die Parität von $0 $ $0 $ ist, während die Parität der Bitzeichenfolge $1 $ $1 $ ist.
 
-Exponentiale von Pauli-Operatoren können mithilfe des <xref:microsoft.quantum.intrinsic.exp>-Vorgangs direkt in Q # implementiert werden:
+Exponentiale von Pauli-Operatoren können mithilfe des <xref:microsoft.quantum.intrinsic.exp>-Vorgangs direkt in Q# implementiert werden:
 ```qsharp
     using(qubits = Qubit[2]){
         let pauliString = [PauliX, PauliX];
@@ -86,8 +86,8 @@ Unser Ausgangspunkt ist eine [Jordanien – Wigner-Codierung](xref:microsoft.qua
     var qSharpData = jordanWignerEncoding.ToQSharpFormat();
 ```
 
-Dieses Format der –-Darstellung von Jordanien, das von den Q #-Simulations Algorithmen genutzt werden kann, ist ein benutzerdefinierter Typ `JordanWignerEncodingData`.
-In Q # wird dieses Format an eine Hilfsfunktion `TrotterStepOracle`, die einen Operator zurückgibt, der die Zeit Weiterentwicklung mithilfe des Trotter – Suzuki Integrator zusätzlich zu anderen Parametern zurückgibt, die für seine Ausführung erforderlich sind.
+Dieses Format der –-Darstellung von Jordanien, das von den Q#-Simulations Algorithmen genutzt werden kann, ist ein benutzerdefinierter Typ `JordanWignerEncodingData`.
+In Q# wird dieses Format an eine Hilfsfunktion `TrotterStepOracle`, die einen Operator zurückgibt, der die Zeit Weiterentwicklung mithilfe des Trotter – Suzuki Integrator zusätzlich zu anderen Parametern zurückgibt, die für seine Ausführung erforderlich sind.
 
 ```qsharp
 // qSharpData passed from driver
@@ -151,10 +151,10 @@ Der $ \operatorname{Prepare} $-Vorgang wird nicht direkt in der qubisierung verw
 
 Der Walk-Operator, $W $, kann im Format $ \operatschmue{SELECT} $ und $R $ als $ $ W = \operatorname{Select} R ausgedrückt werden. $ $, das wiederum angezeigt werden kann, um einen Operator zu implementieren, der (bis zu einem isometry) zum $e ^ {\pm i \cos ^{-1}(H/| H | _1)} $ entspricht.
 
-Diese Unterroutinen können einfach in Q # eingerichtet werden.
+Diese Unterroutinen können einfach in Q# eingerichtet werden.
 Stellen Sie sich als Beispiel das einfache Qubit-Kreuz, das eine Kreuz Zerlegung durch $H = x_1 + X_2 + Z_1 Z_2 $ in Erwägung.
-In diesem Fall wird der f #-Code, der den Vorgang $ \operatschmue{Select} $ implementiert, von <xref:microsoft.quantum.canon.multiplexoperations>aufgerufen, während der $ \operatorname{Prepare} $-Vorgang mithilfe von <xref:microsoft.quantum.preparation.preparearbitrarystate>implementiert werden kann.
-Ein Beispiel zum Simulieren des Hubbard-Modells finden Sie in einem [Q #](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)-Beispiel.
+In diesem Fall wird der Q#-Code, der den Vorgang $ \operatschmue{Select} $ implementiert, von <xref:microsoft.quantum.canon.multiplexoperations>aufgerufen, während der $ \operatorname{Prepare} $-Vorgang mithilfe von <xref:microsoft.quantum.preparation.preparearbitrarystate>implementiert werden kann.
+Ein Beispiel zum Simulieren des Hubbard-Modells finden Sie in einem [Q#](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)-Beispiel.
 
 Wenn Sie diese Schritte für willkürliche chemische Probleme manuell angeben, wäre dies sehr aufwändig, was mithilfe der Chemie Bibliothek vermieden werden sollte.
 Ähnlich wie beim Trotter– Suzuki-Simulations Algorithmus wird der `JordanWignerEncodingData` an die Hilfsfunktion `QubitizationOracle` weitergegeben, die den walkoperator zurückgibt, zusätzlich zu anderen Parametern, die für die Ausführung erforderlich sind.

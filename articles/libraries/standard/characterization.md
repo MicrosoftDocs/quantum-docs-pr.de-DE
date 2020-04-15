@@ -19,7 +19,7 @@ Es ist wichtig, dass Sie die Auswirkungen von Vorgängen charakterisieren könne
 Dies ist eine Herausforderung, da jede Messung eines Quantum-Systems höchstens ein Bit von Informationen ergibt.
 Zum Erlernen eines Eigenwerts müssen die Ergebnisse von vielen Messungen zusammengefasst werden, damit der Benutzer die vielen Informationen, die für die Darstellung dieser Konzepte erforderlich sind, ggf. in die Lage versetzt.
 Quantum-Zustände sind besonders ärgerlich, da das [No-Klon-Theorem](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem) besagt, dass es keine Möglichkeit gibt, einen beliebigen Quantum-Zustand von einer einzelnen Kopie des Zustands zu erlernen, da Sie dadurch Kopien des Zustands erstellen können.
-Diese Verschleierung des Quantums gibt an, dass Q # *den Zustand für* Quantum-Programme nicht verfügbar macht oder überhaupt nicht definiert.
+Diese Verschleierung des Quantums gibt an, dass Q# *den Zustand für* Quantum-Programme nicht verfügbar macht oder überhaupt nicht definiert.
 Wir nähern uns daher der Quantum-Charakterisierung, indem wir Vorgänge und Zustände als Blackbox behandeln. Dieser Ansatz ist gemeinsam mit der experimentellen Praxis von Quantum-Charakterisierung, Verifizierung und Validierung (qcvv) gemeinsam.
 
 Die Charakterisierung unterscheidet sich von vielen der anderen Bibliotheken, die bereits erläutert wurden.
@@ -36,7 +36,7 @@ Dies hat den Vorteil, dass wir nur ein einzelnes zusätzliches Qubit benötigen,
 Jede der unten vorgeschlagenen Methoden verwendet eine andere Strategie für das Entwerfen von Experimenten und verschiedene Datenverarbeitungsmethoden, um die Phase zu erlernen.  Sie verfügen jeweils über einen einzigartigen Vorteil, der von strengen Fehler Grenzen bis hin zu den Möglichkeiten zum einbeziehen vorheriger Informationen, zum tolerieren von Fehlern oder zur Verwendung von klassischen Computern mit Arbeitsspeicher verfügt.
 
 Bei der Erörterung der iterativen Phasen Schätzung wird ein einheitlicher $U $ als schwarzer-Box-Vorgang berücksichtigt.
-Wie im Abschnitt zu Oracles in [Datenstrukturen](xref:microsoft.quantum.libraries.data-structures)beschrieben, modelliert das Q #-Canon solche Vorgänge durch den <xref:microsoft.quantum.oracles.discreteoracle> benutzerdefinierten Typ, der durch den tupeltyp `((Int, Qubit[]) => Unit : Adjoint, Controlled)`definiert wird.
+Wie im Abschnitt zu Oracles in [Datenstrukturen](xref:microsoft.quantum.libraries.data-structures)beschrieben, modelliert das Q#-Canon solche Vorgänge durch den <xref:microsoft.quantum.oracles.discreteoracle> benutzerdefinierten Typ, der durch den tupeltyp `((Int, Qubit[]) => Unit : Adjoint, Controlled)`definiert wird.
 Wenn `U : DiscreteOracle`, wird `U(m)` $U ^ m $ für `m : Int`implementiert.
 
 Wenn diese Definition vorhanden ist, wird jeder Schritt der iterativen Phasen Schätzung fortgesetzt, indem ein zusätzliches Qubit im $ \ket{+} $-Status zusammen mit dem ursprünglichen Zustand $ \ket{\phi} $ vorbereitet wird. wir gehen davon aus, dass es sich um einen [eigen Vektor](xref:microsoft.quantum.concepts.matrix-advanced) von $U (m) $, d. h. $U (m) \ket{\phi} = e ^ {im\phi} \ Ket {\ Phi} $.  
@@ -47,7 +47,7 @@ Das zusätzliche Qubit, das als Steuerelement für `U(m)` verwendet wird, wird d
 
 An diesem Punkt ist das erneute Erstellen der Phase aus den `Result` Werten, die durch die iterative Phasen Schätzung abgerufen werden, ein klassisches Statistisches Typrückschluss-Problem.
 Das Auffinden des Werts $m $, der die gesammelten Informationen mit einer festgelegten Rückschluss Methode maximiert, ist einfach ein Problem in den Statistiken.
-Wir betonen dies, indem wir die iterative Phasen Schätzung auf der theoretischen Ebene im bayyesian-parameterschätzungsformalismus kurz beschreiben, bevor wir mit der Beschreibung der statistischen Algorithmen in Q # Canon zum lösen dieses klassischen Inferenz Problems fortfahren.
+Wir betonen dies, indem wir die iterative Phasen Schätzung auf der theoretischen Ebene im bayyesian-parameterschätzungsformalismus kurz beschreiben, bevor wir mit der Beschreibung der statistischen Algorithmen in Q# Canon zum lösen dieses klassischen Inferenz Problems fortfahren.
 
 ### <a name="iterative-phase-estimation-without-eigenstates"></a>Iterative Phasen Schätzung ohne eigen Status ###
 
@@ -127,7 +127,7 @@ Durch die Verwendung der Phasen Schätzung mit kontinuierlichen Abfragen können
 
 ### <a name="random-walk-phase-estimation"></a>Schätzung der Zufalls Durchlauf Phase ###
 
-Q # bietet eine hilfreiche Näherung der bayyesian-Phasen Schätzung, die für die Verwendung in der Nähe von Quantum-Geräten entwickelt wurde
+Q# bietet eine hilfreiche Näherung der bayyesian-Phasen Schätzung, die für die Verwendung in der Nähe von Quantum-Geräten entwickelt wurde
 Diese Methode ist sowohl adaptiv als auch vollständig deterministisch und ermöglicht eine nahezu optimale Skalierung von Fehlern in der geschätzten Phase $ \hat{\phi} $ mit sehr geringem Arbeitsspeicher Aufwand.
 
 Das Protokoll verwendet eine ungefähre Bayessche Typrückschluss-Methode, die annimmt, dass die vorherige Verteilung Gaußsch ist.
@@ -141,7 +141,7 @@ Die Möglichkeit, rückwärts zu wechseln, ermöglicht es dem Algorithmus auch, 
 
 ## <a name="calling-phase-estimation-algorithms"></a>Algorithmen zur Aufruf Phasen Schätzung ##
 
-Jeder Phasen Schätz Vorgang, der mit Q # Canon bereitgestellt wird, erfordert einen anderen Satz von Eingaben, der die Qualität parametrisiert, die wir für die abschließende Schätzung $ \hat{\phi} $ verlangen.
+Jeder Phasen Schätz Vorgang, der mit Q# Canon bereitgestellt wird, erfordert einen anderen Satz von Eingaben, der die Qualität parametrisiert, die wir für die abschließende Schätzung $ \hat{\phi} $ verlangen.
 In diesen unterschiedlichen Eingaben werden allerdings mehrere allgemeine Eingaben gemeinsam genutzt, sodass die partielle Anwendung über den Qualitätsparametern eine gängige Signatur zur Folge hat.
 Der im nächsten Abschnitt erörterte <xref:microsoft.quantum.characterization.robustphaseestimation> Vorgang hat z. b. die folgende Signatur:
 

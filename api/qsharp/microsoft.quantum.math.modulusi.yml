@@ -4,7 +4,7 @@ name: ModulusI
 type: function
 namespace: Microsoft.Quantum.Math
 summary: Berechnet den kanonischen Rückstand von `value` Modulo `modulus`.
-remarks: 'Diese Funktion verhält sich anders, als sich der Operator `%` C# verhält, und f # As im Ergebnis ist immer eine positive Ganzzahl zwischen 0 und `modulus - 1`, auch wenn der Wert negativ ist.'
+remarks: 'Diese Funktion verhält sich anders, als sich der Operator `%` C# verhält, und Q# As im Ergebnis ist immer eine positive Ganzzahl zwischen 0 und `modulus - 1`, auch wenn der Wert negativ ist.'
 syntax: 'function ModulusI (value : Int, modulus : Int) : Int'
 input:
   content: '(value : Int, modulus : Int)'

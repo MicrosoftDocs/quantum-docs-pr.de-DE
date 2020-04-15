@@ -1,6 +1,6 @@
 ---
-title: 'F #-Vorgänge und-Funktionen'
-description: 'Erfahren Sie mehr über f #-Vorgänge und-Funktionen sowie darüber, wie Sie in einem Quantum-Programm angewendet werden.'
+title: 'Q#-Vorgänge und-Funktionen'
+description: 'Erfahren Sie mehr über Q#-Vorgänge und-Funktionen sowie darüber, wie Sie in einem Quantum-Programm angewendet werden.'
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
@@ -13,15 +13,15 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "77907663"
 ---
-# <a name="q-operations-and-functions"></a>F #-Vorgänge und-Funktionen
+# <a name="q-operations-and-functions"></a>Q#-Vorgänge und-Funktionen
 
-Q #-Programme bestehen aus mindestens einem *Vorgang* , bei dem die Nebeneffekte, die Quantum-Vorgänge auf Quantum-Daten haben können, und eine oder mehrere *Funktionen* , die Änderungen an klassischen Daten zulassen, beschrieben werden. Im Gegensatz zu Vorgängen werden Funktionen verwendet, um rein klassisches Verhalten zu beschreiben, und Sie haben keine Auswirkungen, außer wenn Sie klassische Ausgabewerte berechnen.
+Q#-Programme bestehen aus mindestens einem *Vorgang* , bei dem die Nebeneffekte, die Quantum-Vorgänge auf Quantum-Daten haben können, und eine oder mehrere *Funktionen* , die Änderungen an klassischen Daten zulassen, beschrieben werden. Im Gegensatz zu Vorgängen werden Funktionen verwendet, um rein klassisches Verhalten zu beschreiben, und Sie haben keine Auswirkungen, außer wenn Sie klassische Ausgabewerte berechnen.
 
-Jeder in Q # definierte Vorgang kann dann eine beliebige Anzahl anderer Vorgänge aufzurufen, einschließlich der integrierten systeminternen Vorgänge, die von der Sprache definiert werden. Die spezielle Methode, mit der diese systeminternen Vorgänge definiert werden, hängt vom Zielcomputer ab. Bei der Kompilierung wird jeder Vorgang als .NET-Klassentyp dargestellt, der den Ziel Computern bereitgestellt werden kann.
+Jeder in Q# definierte Vorgang kann dann eine beliebige Anzahl anderer Vorgänge aufzurufen, einschließlich der integrierten systeminternen Vorgänge, die von der Sprache definiert werden. Die spezielle Methode, mit der diese systeminternen Vorgänge definiert werden, hängt vom Zielcomputer ab. Bei der Kompilierung wird jeder Vorgang als .NET-Klassentyp dargestellt, der den Ziel Computern bereitgestellt werden kann.
 
 ## <a name="defining-new-operations"></a>Definieren von neuen Vorgängen
 
-Wie oben beschrieben, ist der grundlegendste Baustein eines in q # geschriebenen Quantum-Programms ein *Vorgang*, der entweder von klassischen .NET-Anwendungen aus aufgerufen werden kann, z. b. durch die Verwendung eines Simulators oder durch andere Vorgänge in q #.
+Wie oben beschrieben, ist der grundlegendste Baustein eines in Q# geschriebenen Quantum-Programms ein *Vorgang*, der entweder von klassischen .NET-Anwendungen aus aufgerufen werden kann, z. b. durch die Verwendung eines Simulators oder durch andere Vorgänge in Q#.
 Jeder Vorgang nimmt eine Eingabe an, erzeugt eine Ausgabe und gibt die Implementierung für eine oder mehrere Vorgangs Spezialisierungs Vorgänge an.
 Beispielsweise wird durch den folgenden Vorgang nur eine standardmäßige Text Spezialisierung definiert, und es wird ein einzelnes Qubit als Eingabe benötigt. Anschließend wird der integrierte `X` Vorgang für diese Eingabe aufgerufen:
 
@@ -34,15 +34,15 @@ operation BitFlip(target : Qubit) : Unit {
 Das Schlüsselwort `operation` beginnt die Vorgangs Definition, gefolgt vom Namen. Hier `BitFlip`.
 Als nächstes wird der Typ der Eingabe als `Qubit`definiert, zusammen mit einem Namen `target`, um auf die Eingabe innerhalb des neuen Vorgangs zu verweisen.
 Ebenso definiert das `Unit`, dass die Ausgabe des Vorgangs leer ist.
-Dies wird ähnlich wie bei `void` in C# und anderen imperativen Sprachen verwendet und entspricht `unit` in F# und anderen funktionalen Sprachen.
+Dies wird ähnlich wie bei `void` in C# und anderen imperativen Sprachen verwendet und entspricht `unit` in Q# und anderen funktionalen Sprachen.
 
 > [!NOTE]
-> Dies wird im folgenden ausführlicher erläutert, aber jeder Vorgang in Q # nimmt genau eine Eingabe an und gibt genau eine Ausgabe zurück.
+> Dies wird im folgenden ausführlicher erläutert, aber jeder Vorgang in Q# nimmt genau eine Eingabe an und gibt genau eine Ausgabe zurück.
 > Anschließend werden mehrere Eingaben und Ausgaben mithilfe von *Tupeln*dargestellt, die mehrere Werte in einem einzelnen Wert zusammenfassen.
-> Informell gesagt, dass Q # eine "tupelin tupelout"-Sprache ist.
+> Informell gesagt, dass Q# eine "tupelin tupelout"-Sprache ist.
 > Nach diesem Konzept sollten `()` als "leeres" Tupel mit dem Typ "`Unit`" gelesen werden.
 
-Innerhalb des neuen Vorgangs kann die Implementierung direkt innerhalb der-Deklaration angegeben werden, wenn nur die Implementierung der Standardtext Spezialisierung explizit angegeben werden muss. Außerdem ist es möglich, die Implementierungen von (z. b. eine oder mehrere `functor` Vorgänge) zu definieren, wie unten erläutert. Im obigen Beispiel besteht die einzige Anweisung darin, den integrierten f #-Vorgang <xref:microsoft.quantum.intrinsic.x>aufzurufen.
+Innerhalb des neuen Vorgangs kann die Implementierung direkt innerhalb der-Deklaration angegeben werden, wenn nur die Implementierung der Standardtext Spezialisierung explizit angegeben werden muss. Außerdem ist es möglich, die Implementierungen von (z. b. eine oder mehrere `functor` Vorgänge) zu definieren, wie unten erläutert. Im obigen Beispiel besteht die einzige Anweisung darin, den integrierten Q#-Vorgang <xref:microsoft.quantum.intrinsic.x>aufzurufen.
 
 Vorgänge können auch interessantere Typen als `Unit`zurückgeben.
 Der <xref:microsoft.quantum.intrinsic.m>-Vorgang gibt beispielsweise eine Ausgabe des Typs `Result`zurück, die angibt, dass eine Messung durchgeführt wurde. Die Ausgabe kann entweder von einem Vorgang an einen anderen Vorgang übergeben werden, oder Sie kann mit dem `let`-Schlüsselwort verwendet werden, um eine neue Variable zu definieren.
@@ -74,7 +74,7 @@ is Adj + Ctl { // implies the existence of an adjoint, a controlled, and a contr
 ```
 
 > [!NOTE]
-> Viele Vorgänge in Q # stellen einheitliche Gates dar.
+> Viele Vorgänge in Q# stellen einheitliche Gates dar.
 > Wenn $U $ das einheitliche Gate ist, das durch einen Vorgang `U`dargestellt wird, stellt `Adjoint U` das einheitliche Gate $U ^ \dagger $ dar.
 
 Wenn die Implementierung nicht vom Compiler generiert werden kann, kann Sie explizit angegeben werden. Solche expliziten Spezialisierungs Deklarationen können aus einer geeigneten Generierungs Direktive oder einer benutzerdefinierten Implementierung bestehen. Der oben genannte Code in `PrepareEntangledPair` z. b. Äquivalent zum folgenden Code, der explizite Spezialisierungs Deklarationen enthält: 
@@ -135,10 +135,10 @@ In den meisten Fällen können Spezialisierungs Vorgänge für einen Vorgang, de
 
 ## <a name="defining-new-functions"></a>Definieren neuer Funktionen
 
-Q # ermöglicht außerdem das Definieren von *Funktionen*, die sich von Vorgängen unterscheiden, da Sie keine Auswirkungen auf die Berechnung eines Ausgabe Werts haben dürfen.
+Q# ermöglicht außerdem das Definieren von *Funktionen*, die sich von Vorgängen unterscheiden, da Sie keine Auswirkungen auf die Berechnung eines Ausgabe Werts haben dürfen.
 Insbesondere können Funktionen keine Vorgänge aufzurufen, auf Qubits reagieren, Zufallszahlen in Stichproben oder anderweitig abhängig von dem Zustand, der über den Eingabe Wert hinausgeht, auf eine Funktion setzen.
-Folglich sind Q #-Funktionen *rein*, da Sie die gleichen Eingabewerte immer denselben Ausgabe Werten zuordnen.
-Dadurch kann der Q #-Compiler sicher neu anordnen, wie und wann Funktionen beim Erstellen von Vorgangs speziationen aufgerufen werden.
+Folglich sind Q#-Funktionen *rein*, da Sie die gleichen Eingabewerte immer denselben Ausgabe Werten zuordnen.
+Dadurch kann der Q#-Compiler sicher neu anordnen, wie und wann Funktionen beim Erstellen von Vorgangs speziationen aufgerufen werden.
 
 Das Definieren einer Funktion funktioniert ähnlich wie ein Vorgang, mit dem Unterschied, dass für eine Funktion keine Adjoint-oder kontrollierten Spezialisierungs Funktionen definiert werden können.
 Beispiel:
@@ -151,7 +151,7 @@ function Square(x : Double) : (Double) {
 Wenn dies möglich ist, ist es hilfreich, Klassische Logik in Bezug auf Funktionen anstelle von Vorgängen zu schreiben, damit Sie von innerhalb von Vorgängen leichter verwendet werden kann.
 Wenn wir z. b. `Square` als Vorgang geschrieben hätten, wäre der Compiler nicht in der Lage, zu garantieren, dass der Aufruf mit derselben Eingabe konsistent die gleichen Ausgaben erzeugt.
 
-Um den Unterschied zwischen Funktionen und Vorgängen zu unterstreichen, sollten Sie das Problem der klassischen Stichprobenentnahme einer Zufallszahl aus einem f #-Vorgang in Erwägung gezogen
+Um den Unterschied zwischen Funktionen und Vorgängen zu unterstreichen, sollten Sie das Problem der klassischen Stichprobenentnahme einer Zufallszahl aus einem Q#-Vorgang in Erwägung gezogen
 
 ```qsharp
 operation U(target : Qubit) : Unit {
@@ -207,9 +207,9 @@ Es funktioniert ausgesprochen weniger gut, wenn Sie versuchen, die SOCKS zu wied
 
 ## <a name="operations-and-functions-as-first-class-values"></a>Vorgänge und Funktionen als First-Class-Werte
 
-Ein wichtiges Verfahren, um die Ablauf Steuerung und die klassische Logik mithilfe von Funktionen anstelle von Vorgängen zu überdenken, besteht darin, diese Vorgänge und Funktionen in Q # als *erste Klasse*zu verwenden.
+Ein wichtiges Verfahren, um die Ablauf Steuerung und die klassische Logik mithilfe von Funktionen anstelle von Vorgängen zu überdenken, besteht darin, diese Vorgänge und Funktionen in Q# als *erste Klasse*zu verwenden.
 Das heißt, Sie sind jeweils die einzelnen Werte in der Sprache.
-Beispielsweise ist der folgende vollständig gültige Q #-Code, wenn ein wenig indirekt:
+Beispielsweise ist der folgende vollständig gültige Q#-Code, wenn ein wenig indirekt:
 
 ```qsharp
 operation FirstClassExample(target : Qubit) : Unit {
@@ -231,7 +231,7 @@ operation ApplyTwice(op : (Qubit => Unit), target : Qubit) : Unit {
 
 In diesem Beispiel gibt der `=>` Pfeil, der im Typ `(Qubit => Unit)` angezeigt wird, an, dass das Eingabefeld `op` ein Vorgang ist, der als Eingabe den Typ `Qubit` annimmt und ein leeres Tupel als Ausgabe erzeugt.
 Außerdem geben wir die Merkmale dieses Vorgangs Typs an, die die Informationen zu den unterstützten Funktoren enthalten.
-Ein Vorgang vom Typ `(Qubit => Unit)` unterstützt weder den `Adjoint` noch den `Controlled`-Funktor. Wenn Sie angeben möchten, dass ein Vorgang dieses Typs z. b. den `Adjoint`-Funktor unterstützen muss, müssen wir ihn als adjointable deklarieren. Dies erfolgt mithilfe der-Anmerkung `is Adj` für den-Typ. Ebenso gibt `(Qubit => Unit is Ctl)` an, dass ein Vorgang dieses Typs den `Controlled`-Funktor unterstützt. Wir werden dies genauer untersuchen, wenn wir [Typen in Q #](xref:microsoft.quantum.language.type-model) allgemeiner erörtern.
+Ein Vorgang vom Typ `(Qubit => Unit)` unterstützt weder den `Adjoint` noch den `Controlled`-Funktor. Wenn Sie angeben möchten, dass ein Vorgang dieses Typs z. b. den `Adjoint`-Funktor unterstützen muss, müssen wir ihn als adjointable deklarieren. Dies erfolgt mithilfe der-Anmerkung `is Adj` für den-Typ. Ebenso gibt `(Qubit => Unit is Ctl)` an, dass ein Vorgang dieses Typs den `Controlled`-Funktor unterstützt. Wir werden dies genauer untersuchen, wenn wir [Typen in Q#](xref:microsoft.quantum.language.type-model) allgemeiner erörtern.
 
 Vorerst betonen wir, dass wir auch Vorgänge als Teil der Ausgaben zurückgeben können, sodass wir einige Arten von klassischer bedingter Logik als klassische Funktion isolieren können, die eine Beschreibung eines Quantum-Programms in Form eines Vorgangs zurückgibt.
 Als einfaches Beispiel sehen Sie sich das Beispiel für die teleportung an, in dem die Partei, die eine zwei-Bit-klassische Nachricht empfängt, die Nachricht verwenden muss, um Ihr Qubit in den richtigen teleportierten Zustand zu decodieren.
@@ -283,4 +283,4 @@ function SquareOperation(op : (Qubit => Unit)) : (Qubit => Unit) {
 ```
 
 Im Prinzip könnte die klassische Logik in `SquareOperation` viel komplizierter sein, aber Sie ist weiterhin vom Rest eines Vorgangs isoliert, indem die Garantien, die der Compiler über Funktionen bereitstellen kann.
-Diese Vorgehensweise wird in der Q #-Standardbibliothek verwendet, um die klassische Ablauf Steuerung so auszudrücken, dass Sie in quantenprogrammen problemlos verwendet werden kann.
+Diese Vorgehensweise wird in der Q#-Standardbibliothek verwendet, um die klassische Ablauf Steuerung so auszudrücken, dass Sie in quantenprogrammen problemlos verwendet werden kann.

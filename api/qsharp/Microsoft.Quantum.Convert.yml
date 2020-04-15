@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.convert
 name: Microsoft.Quantum.Convert
-summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält Funktionen für die Konvertierung zwischen verschiedenen Q #-Datentypen."
+summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält Funktionen für die Konvertierung zwischen verschiedenen Q#-Datentypen."
 functions:
 - uid: microsoft.quantum.convert.bigintasboolarray
   summary: >-

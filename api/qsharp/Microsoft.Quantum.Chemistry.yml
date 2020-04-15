@@ -13,7 +13,7 @@ functions:
 newtypes:
 - uid: microsoft.quantum.chemistry.hterm
   summary: >-
-    Das Format der Daten, C# die von an Q # übermittelt werden, um einen Begriff von "hamiltonan" darzustellen.
+    Das Format der Daten, C# die von an Q# übermittelt werden, um einen Begriff von "hamiltonan" darzustellen.
 
     Die Bedeutung der dargestellten Daten wird durch den Algorithmus bestimmt, der Sie empfängt.
 metadata:

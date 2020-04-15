@@ -20,7 +20,7 @@ Es wird verwendet, um die Anzahl der tiefen jedes in einem Quantum-Programm aufg
 
 Standardmäßig haben alle Vorgänge eine Tiefe von 0, außer dem T-Gate, das Tiefe 1 hat. Dies bedeutet, dass standardmäßig nur die T-Tiefe der Vorgänge berechnet wird (was häufig wünschenswert ist). Gesammelte Statistiken werden über alle Ränder des Vorgangs Aufruf Diagramms aggregiert. 
 
-Wir berechnen nun die <xref:microsoft.quantum.intrinsic.t> Tiefe des <xref:microsoft.quantum.intrinsic.ccnot> Vorgangs. Der folgende f #-Beispielcode wird verwendet:
+Wir berechnen nun die <xref:microsoft.quantum.intrinsic.t> Tiefe des <xref:microsoft.quantum.intrinsic.ccnot> Vorgangs. Der folgende Q#-Beispielcode wird verwendet:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

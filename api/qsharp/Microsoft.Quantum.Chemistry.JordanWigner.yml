@@ -38,14 +38,14 @@ operations:
 newtypes:
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
   summary: >-
-    Format der Daten, die C# von an Q # übermittelt werden, um alle Informationen für die hamiltonan-Simulation darzustellen.
+    Format der Daten, die C# von an Q# übermittelt werden, um alle Informationen für die hamiltonan-Simulation darzustellen.
 
     Die Bedeutung der dargestellten Daten wird durch den Algorithmus bestimmt, der Sie empfängt.
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerinputstate
-  summary: 'Format der Daten, die C# von an Q # übermittelt werden, um die Vorbereitung des Anfangs Zustands darzustellen. die Bedeutung der dargestellten Daten wird durch den Algorithmus bestimmt, der Sie empfängt.'
+  summary: 'Format der Daten, die C# von an Q# übermittelt werden, um die Vorbereitung des Anfangs Zustands darzustellen. die Bedeutung der dargestellten Daten wird durch den Algorithmus bestimmt, der Sie empfängt.'
 - uid: microsoft.quantum.chemistry.jordanwigner.jwoptimizedhterms
   summary: >-
-    Format der Daten, die C# von an Q # übermittelt werden, um die Begriffe der hamiltonan darzustellen.
+    Format der Daten, die C# von an Q# übermittelt werden, um die Begriffe der hamiltonan darzustellen.
 
     Die Bedeutung der dargestellten Daten wird durch den Algorithmus bestimmt, der Sie empfängt.
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbegeneratorsystem

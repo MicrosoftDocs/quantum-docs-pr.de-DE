@@ -1,6 +1,6 @@
 ---
-title: 'Lokale Variablen-Q #-Techniken'
-description: 'Erfahren Sie, wie Sie lokale Variablen in Q # definieren und mit Ihnen arbeiten.'
+title: 'Lokale Variablen-Q#-Techniken'
+description: 'Erfahren Sie, wie Sie lokale Variablen in Q# definieren und mit Ihnen arbeiten.'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
@@ -15,7 +15,7 @@ ms.locfileid: "77906864"
 ---
 # <a name="local-variables"></a>Lokale Variablen #
 
-Ein Wert eines beliebigen Typs in Q # kann einer Variablen für die Wiederverwendung innerhalb eines Vorgangs oder einer Funktion mithilfe des `let`-Schlüssel Worts zugewiesen werden.
+Ein Wert eines beliebigen Typs in Q# kann einer Variablen für die Wiederverwendung innerhalb eines Vorgangs oder einer Funktion mithilfe des `let`-Schlüssel Worts zugewiesen werden.
 Beispiel:
 
 ```qsharp
@@ -27,7 +27,7 @@ Dadurch wird einer Variablen mit dem Namen `measurementOperator`ein bestimmtes A
 > [!TIP]
 > Beachten Sie, dass der Typ der neuen Variablen nicht explizit angegeben werden muss, da der Ausdruck auf der rechten Seite der `let` Anweisung eindeutig ist und der Typ vom Compiler abgeleitet wird. 
 
-Variablen in Q # sind *unveränderlich*. Dies bedeutet, dass eine Variable nicht mehr geändert werden kann, sobald eine Variable auf diese Weise definiert wurde.
+Variablen in Q# sind *unveränderlich*. Dies bedeutet, dass eine Variable nicht mehr geändert werden kann, sobald eine Variable auf diese Weise definiert wurde.
 Dies ermöglicht eine Reihe nützlicher Optimierungen, einschließlich der Optimierung der klassischen Logik, die auf Variablen angewendet wird, die für die Anwendung der `Adjoint` Variant eines Vorgangs neu angeordnet werden.
 
 Variablen, die mit der `let` Bindung wie oben definiert definiert sind, sind für einen bestimmten Bereich lokal, z. b. den Text eines Vorgangs oder den Inhalt einer `for` Schleife.
@@ -47,7 +47,7 @@ operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
 }
 ```
 
-Alle Typen in Q #, einschließlich Arrays, folgen der Wert Semantik. Insbesondere ist es nicht möglich, Array Elemente zu aktualisieren. Wenn Sie ein vorhandenes Array ändern möchten, müssen Sie einen Kopier-und Aktualisierungsmechanismus ähnlich dem für F#Datensätze in nutzen. Mithilfe der Bibliotheks Tools für Arrays, die in [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays)bereitgestellt werden, können wir einfach eine Funktion definieren, die ein Array von Paulis zurückgibt, bei dem der Pauli bei Index `i` den angegebenen Wert annimmt und alle anderen Einträge die Identität sind: 
+Alle Typen in Q#, einschließlich Arrays, folgen der Wert Semantik. Insbesondere ist es nicht möglich, Array Elemente zu aktualisieren. Wenn Sie ein vorhandenes Array ändern möchten, müssen Sie einen Kopier-und Aktualisierungsmechanismus ähnlich dem für Q#Datensätze in nutzen. Mithilfe der Bibliotheks Tools für Arrays, die in [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays)bereitgestellt werden, können wir einfach eine Funktion definieren, die ein Array von Paulis zurückgibt, bei dem der Pauli bei Index `i` den angegebenen Wert annimmt und alle anderen Einträge die Identität sind: 
 
 ```qsharp
 function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {
@@ -57,9 +57,9 @@ function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {
 }
 ```
 
-Weitere Informationen zum Arbeiten mit Arrays finden Sie bei der Erörterung von Q #-Anweisungen und-Ausdrücken. 
+Weitere Informationen zum Arbeiten mit Arrays finden Sie bei der Erörterung von Q#-Anweisungen und-Ausdrücken. 
 
-Die muability in Q # ist ein Konzept, das für ein *Symbol* anstelle eines Typs oder Werts gilt. Insbesondere weist Sie weder implizit noch explizit eine Darstellung im Typsystem auf, und ob eine Bindung änderbar (wie durch das `mutable`-Schlüsselwort angegeben) oder unveränderlich (wie durch `let`angegeben) nicht den Typ der gebundenen Variablen ändert. Dies bietet eine wichtige Möglichkeit zum Isolieren der muability in spezialisierten Funktionen und Vorgängen.
+Die muability in Q# ist ein Konzept, das für ein *Symbol* anstelle eines Typs oder Werts gilt. Insbesondere weist Sie weder implizit noch explizit eine Darstellung im Typsystem auf, und ob eine Bindung änderbar (wie durch das `mutable`-Schlüsselwort angegeben) oder unveränderlich (wie durch `let`angegeben) nicht den Typ der gebundenen Variablen ändert. Dies bietet eine wichtige Möglichkeit zum Isolieren der muability in spezialisierten Funktionen und Vorgängen.
 Insbesondere, obwohl eine Adjoint-Spezialisierung für einen Vorgang, der eine änderbare Variable verwendet, nicht automatisch generiert werden kann, funktioniert die automatische Generierung problemlos für einen Vorgang, der eine Funktion aufrufen, die Veränderlichkeit verwendet.
 Aus diesem Grund empfiehlt es sich, Funktionen und Vorgänge zu erstellen, die die Änderbarkeit so kurz und kompakt wie möglich verwenden, sodass der Rest des Quantum-Programms mithilfe normaler unveränderlicher Variablen geschrieben werden kann.
 

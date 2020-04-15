@@ -25,7 +25,7 @@ Wir übernehmen auf ähnliche Weise die [mathjax](https://www.mathjax.org/) -Bib
 Dies bedeutet, dass jede Art von Dokumentation in den Details etwas variiert:
 
 - Die **konzeptionelle Dokumentation** besteht aus einer Reihe von Artikeln, die in https://docs.microsoft.com/quantumveröffentlicht werden, und die alles von den Grundlagen von Quantum Computing bis hin zu den technischen Spezifikationen für Austauschformate beschreiben. Diese Artikel sind in " [docfx-aromatied markdown" (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)geschrieben, einer markdown-Variante, die zum Erstellen umfassender Dokumentations Sätze verwendet wird.
-- Die **API-Referenz** besteht aus einem Satz von Seiten für jede f #-Funktion, jeden Vorgang und jeden benutzerdefinierten Typ, der in https://docs.microsoft.com/qsharp/api/veröffentlicht wird. Diese Seiten dokumentieren die Eingaben und Vorgänge für jede Aufruf Bare Datei sowie Beispiele und Links zu weiteren Informationen. Die API-Referenz wird automatisch aus kleinen DFM-Dokumenten in Q #-Quellcode als Teil der einzelnen Releases extrahiert.
+- Die **API-Referenz** besteht aus einem Satz von Seiten für jede Q#-Funktion, jeden Vorgang und jeden benutzerdefinierten Typ, der in https://docs.microsoft.com/qsharp/api/veröffentlicht wird. Diese Seiten dokumentieren die Eingaben und Vorgänge für jede Aufruf Bare Datei sowie Beispiele und Links zu weiteren Informationen. Die API-Referenz wird automatisch aus kleinen DFM-Dokumenten in Q#-Quellcode als Teil der einzelnen Releases extrahiert.
 - Die in den einzelnen Beispielen und in der Datei "Info Datei **<!---->. MD** " enthaltenen MD-Dateien beschreiben, wie dieses Beispiel verwendet wird, und wie es verwendet wird, was es behandelt und wie es mit dem Rest des Quantum Development Kit verknüpft ist. Diese Dateien werden mithilfe von [GitHub-debuggermarkdown (GFM)](https://github.github.com/gfm/)geschrieben, eine einfachere Alternative zu DFM, die für die direkte Anfügung von Dokumentation an Coderepositorys beliebt ist.
 
 ## <a name="contributing-to-the-conceptual-documentation"></a>Mitwirken an der konzeptionellen Dokumentation
@@ -49,7 +49,7 @@ Wenn Sie Code aus dem [beispielrepository](https://github.com/Microsoft/Quantum)
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
 ```
 
-Dieser Befehl importiert die Zeilen 4 in 8 der [`Game.qs` Datei aus dem `chsh-game` Beispiel](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)und markiert sie als f #-Code für die Syntax Hervorhebung.
+Dieser Befehl importiert die Zeilen 4 in 8 der [`Game.qs` Datei aus dem `chsh-game` Beispiel](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)und markiert sie als Q#-Code für die Syntax Hervorhebung.
 Mit diesem Befehl können Sie das Duplizieren von Code zwischen konzeptionellen Artikeln und dem beispielrepository vermeiden, sodass der Beispielcode in der Dokumentation immer so aktuell wie möglich ist.
 
 ## <a name="contributing-to-the-api-references"></a>Beitrag zu den API-verweisen
@@ -64,7 +64,7 @@ Beim Kompilieren der einzelnen Releases des Quantum Development Kit werden diese
 
 Beachten Sie beispielsweise die-Funktion `ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)`.
 Ein Dokumentations Kommentar sollte einem Benutzer helfen, zu erfahren, wie `bits` und `oracle` interpretiert werden und wofür die Funktion vorgesehen ist.
-Alle diese unterschiedlichen Informationen können dem f #-Compiler von einem speziell benannten markdown-Abschnitt im Dokumentations Kommentar bereitgestellt werden.
+Alle diese unterschiedlichen Informationen können dem Q#-Compiler von einem speziell benannten markdown-Abschnitt im Dokumentations Kommentar bereitgestellt werden.
 Im Beispiel für `ControlledOnBitString`könnten wir etwas wie das folgende schreiben:
 
 ```qsharp
@@ -139,7 +139,7 @@ Die gerenderte Version des obigen Codes finden Sie in der [API-Dokumentation fü
 
 Zusätzlich zur allgemeinen Vorgehensweise bei der Dokumentations Erstellung werden im Artikel Schreiben von API-Dokumentations Kommentaren die folgenden Punkte berücksichtigt:
 
-- Das Format der einzelnen Dokumentations Kommentare muss mit dem des Q #-Compilers identisch sein, damit die Dokumentation ordnungsgemäß angezeigt wird. In einigen Abschnitten, wie z. b. `/// # Remarks`, frei Form Inhalte zuzulassen, sind Abschnitte wie `/// # See Also` Abschnitt restriktiver.
+- Das Format der einzelnen Dokumentations Kommentare muss mit dem des Q#-Compilers identisch sein, damit die Dokumentation ordnungsgemäß angezeigt wird. In einigen Abschnitten, wie z. b. `/// # Remarks`, frei Form Inhalte zuzulassen, sind Abschnitte wie `/// # See Also` Abschnitt restriktiver.
 - Ein Leser kann Ihre API-Dokumentation auf der Haupt-API-Referenz Website, in der Zusammenfassung für jeden Namespace oder sogar in der IDE durch die Verwendung von Hover-Informationen lesen. Wenn Sie sicherstellen, dass `/// # Summary` nicht länger als ein Satz ist, können Sie den Leser schnell herausfinden, ob Sie einen weiteren Lesevorgang ausführen müssen, und Sie können bei der schnellen Durchführung von Namespace Zusammenfassungen helfen.
 - Die Dokumentation kann deutlich länger als der Code selbst sein, aber das ist in Ordnung. Sogar ein kleiner Code Abschnitt kann unerwartete Auswirkungen auf Benutzer haben, die den Kontext, in dem der Code vorhanden ist, nicht kennen. Wenn Sie konkrete Beispiele und Erläuterungen erläutern, können Sie die Benutzer dabei unterstützen, den Code, der für Sie verfügbar ist, optimal zu nutzen.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Entwickeln mit Q # + python'
+title: 'Entwickeln mit Q# + python'
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
@@ -13,9 +13,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/29/2020
 ms.locfileid: "76831000"
 ---
-# <a name="develop-with-q--python"></a>Entwickeln mit Q # + python
+# <a name="develop-with-q--python"></a>Entwickeln mit Q# + python
 
-Installieren Sie das QDK, um python-Host Programme zum Abrufen von Q #-Vorgängen zu entwickeln.
+Installieren Sie das QDK, um python-Host Programme zum Abrufen von Q#-Vorgängen zu entwickeln.
 
 1. Voraussetzungen
 
@@ -24,20 +24,20 @@ Installieren Sie das QDK, um python-Host Programme zum Abrufen von Q #-Vorgänge
     - [.Net Core SDK 3,1 oder höher](https://www.microsoft.com/net/download)
 
 
-1. Installieren Sie das `qsharp` Paket, ein Python-Paket, das Interop zwischen Q # und python ermöglicht.
+1. Installieren Sie das `qsharp` Paket, ein Python-Paket, das Interop zwischen Q# und python ermöglicht.
 
     ```bash
     pip install qsharp
     ```
 
-1. Installieren Sie `iqsharp`, einen von jupyter und Python verwendeten Kernel, der die Kernfunktionen für das Kompilieren und Ausführen von Q #-Vorgängen bereitstellt.
+1. Installieren Sie `iqsharp`, einen von jupyter und Python verwendeten Kernel, der die Kernfunktionen für das Kompilieren und Ausführen von Q#-Vorgängen bereitstellt.
 
     ```bash
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
   
-1. Obwohl Sie q # mit python in jeder IDE verwenden können, wird dringend empfohlen, Visual Studio Code (vs Code)-IDE für Ihre Q # + python-Anwendungen zu verwenden. Wenn Sie Visual Studio Code und die QDK-Visual Studio Code Erweiterung verwenden, erhalten Sie Zugriff auf umfangreichere Funktionen.
+1. Obwohl Sie Q# mit python in jeder IDE verwenden können, wird dringend empfohlen, Visual Studio Code (vs Code)-IDE für Ihre Q# + python-Anwendungen zu verwenden. Wenn Sie Visual Studio Code und die QDK-Visual Studio Code Erweiterung verwenden, erhalten Sie Zugriff auf umfangreichere Funktionen.
 
     - Installieren von [vs Code](https://code.visualstudio.com/download) (Windows, Linux und Mac)
     - Installieren Sie die [QDK-Erweiterung für vs Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
@@ -81,7 +81,7 @@ Installieren Sie das QDK, um python-Host Programme zum Abrufen von Q #-Vorgänge
 
 
 > [!NOTE]
-> * Sie können auch python jupyter Notebooks verwenden, um das klassische python-Programm zu schreiben und Q #-Vorgänge aus den Zellen aufzurufen. Der Python-Code ist nur ein normales python-Programm.
+> * Sie können auch python jupyter Notebooks verwenden, um das klassische python-Programm zu schreiben und Q#-Vorgänge aus den Zellen aufzurufen. Der Python-Code ist nur ein normales python-Programm.
 
 ## <a name="whats-next"></a>Wie geht es weiter?
 

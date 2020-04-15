@@ -1,6 +1,6 @@
 ---
-title: 'Fortfahren mit Q #-Techniken'
-description: 'Untersuchen Sie erweiterte Themen in Q #, z. b. das Erstellen von generischen Funktionen und das Ausleihen von'
+title: 'Fortfahren mit Q#-Techniken'
+description: 'Untersuchen Sie erweiterte Themen in Q#, z. b. das Erstellen von generischen Funktionen und das Ausleihen von'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
@@ -15,17 +15,17 @@ ms.locfileid: "77906898"
 ---
 # <a name="going-further"></a>Weiter #
 
-Nachdem Sie nun erfahren haben, wie Sie interessante Quantum-Programme in Q # schreiben, werden in diesem Abschnitt noch einige erweiterte Themen vorgestellt, die sich in Zukunft als nützlich erweisen sollten.
+Nachdem Sie nun erfahren haben, wie Sie interessante Quantum-Programme in Q# schreiben, werden in diesem Abschnitt noch einige erweiterte Themen vorgestellt, die sich in Zukunft als nützlich erweisen sollten.
 
 
 ## <a name="generic-operations-and-functions"></a>Generische Vorgänge und Funktionen ##
 
 > [!TIP]
-> In diesem Abschnitt wird die grundlegende Vertrautheit mit [Generika C#in ](https://docs.microsoft.com/dotnet/csharp/programming-guide/generics/introduction-to-generics), [Generika in F# ](https://docs.microsoft.com/dotnet/fsharp/language-reference/generics/), [ C++ Vorlagen](https://docs.microsoft.com/cpp/cpp/templates-cpp)oder ähnlichen Ansätzen für die Metaprogrammierung in anderen Sprachen vorausgesetzt.
+> In diesem Abschnitt wird die grundlegende Vertrautheit mit [Generika C#in ](https://docs.microsoft.com/dotnet/csharp/programming-guide/generics/introduction-to-generics), [Generika in Q# ](https://docs.microsoft.com/dotnet/fsharp/language-reference/generics/), [ C++ Vorlagen](https://docs.microsoft.com/cpp/cpp/templates-cpp)oder ähnlichen Ansätzen für die Metaprogrammierung in anderen Sprachen vorausgesetzt.
 
 Viele Funktionen und Vorgänge, die wir möglicherweise definieren möchten, sind nicht wirklich stark von den Typen Ihrer Eingaben abhängig, sondern verwenden nur implizit ihre Typen über eine andere Funktion oder einen anderen Vorgang.
 Sehen Sie sich beispielsweise das *Karten* Konzept an, das vielen funktionalen Sprachen gemeinsam ist. bei Angabe einer Funktion $f (x) $ und einer Auflistung von Werten $\{x_1, x_2, \dots, x_n\}$ gibt MAP eine neue Auflistung $\{f (x_1), f (x_2), \dots, f (x_n)\}$ zurück.
-Um dies in Q # zu implementieren, können wir diese Funktionen als erste Klasse nutzen.
+Um dies in Q# zu implementieren, können wir diese Funktionen als erste Klasse nutzen.
 Sehen wir uns ein kurzes Beispiel für `Map`an, indem wir ★ als Platzhalter verwenden, während wir herausfinden, welche Typen wir benötigen.
 
 ```qsharp
@@ -65,16 +65,16 @@ Wenn ein neues Tupel oder ein neues UDT erstellt wird, muss nun auch eine neue `
 Obwohl dies für eine kleine Anzahl solcher Funktionen überlastet ist, da wir mehr und mehr Funktionen derselben Form wie `Map`erfassen, werden die Kosten für die Einführung neuer Typen in relativ kurzer Reihenfolge zu groß.
 
 Ein Großteil dieser Schwierigkeiten ergibt sich jedoch darin, dass wir dem Compiler nicht die Informationen gegeben haben, die er benötigt, um zu erkennen, wie die verschiedenen Versionen von `Map` verknüpft sind.
-Effektiv möchten wir, dass der Compiler `Map` als eine mathematische Funktion von q #- *Typen* zu q #-Funktionen behandelt.
+Effektiv möchten wir, dass der Compiler `Map` als eine mathematische Funktion von Q#- *Typen* zu Q#-Funktionen behandelt.
 Dieses Konzept wird formalisiert, indem Funktionen und Vorgänge *Typparameter*sowie ihre normalen tupelparameter enthalten können.
 In den obigen Beispielen möchten wir `Map`, dass im ersten Fall Typparameter `Int, Pauli` und im zweiten Fall `Double, String` werden.
 In den meisten Fällen können diese Typparameter so verwendet werden, als wären Sie normale Typen: Wir verwenden Werte von Typparametern, um Arrays und Tupel zu erstellen, Funktionen und Vorgänge aufzurufen und gewöhnliche oder änderbare Variablen zuzuweisen.
 
 > [!NOTE]
-> Der extremste Fall der indirekten Abhängigkeit ist die von Qubits, bei denen ein Q #-Programm nicht direkt auf die Struktur des `Qubit` Typs zurückgreifen kann, sondern solche Typen an andere Vorgänge und Funktionen übergeben **muss** .
+> Der extremste Fall der indirekten Abhängigkeit ist die von Qubits, bei denen ein Q#-Programm nicht direkt auf die Struktur des `Qubit` Typs zurückgreifen kann, sondern solche Typen an andere Vorgänge und Funktionen übergeben **muss** .
 
 Wenn Sie zum obigen Beispiel zurückkehren, sehen Sie, dass `Map` über Typparameter verfügen müssen, eine zum Darstellen der Eingabe für `fn` und eine, die die Ausgabe von `fn`darstellen soll.
-In f # wird dies durch Hinzufügen von spitzen Klammern (das `<>`, nicht von Klammern $ \braket{}$!) nach dem Namen einer Funktion oder eines Vorgangs in der Deklaration und durch Auflisten der einzelnen Typparameter geschrieben.
+In Q# wird dies durch Hinzufügen von spitzen Klammern (das `<>`, nicht von Klammern $ \braket{}$!) nach dem Namen einer Funktion oder eines Vorgangs in der Deklaration und durch Auflisten der einzelnen Typparameter geschrieben.
 Der Name jedes Typparameters muss mit einem Tick-`'`beginnen, was darauf hinweist, dass es sich um einen Typparameter handelt und nicht um einen normalen Typ (auch als *konkreter* Typ bezeichnet).
 Für `Map`schreiben wir daher Folgendes:
 
@@ -101,8 +101,8 @@ let paulis = Map(IntToPauli, ints);
 ```
 
 > [!TIP]
-> Das Schreiben von generischen Funktionen und Vorgängen ist eine Stelle, an der "Tupel-in-Tupel-out" eine sehr nützliche Methode für den Umgang mit Q #-Funktionen und-Vorgängen ist.
-> Da jede Funktion genau eine Eingabe annimmt und genau eine Ausgabe zurückgibt, entspricht eine Eingabe des Typs `'T -> 'U` *jeder beliebigen* Q #-Funktion.
+> Das Schreiben von generischen Funktionen und Vorgängen ist eine Stelle, an der "Tupel-in-Tupel-out" eine sehr nützliche Methode für den Umgang mit Q#-Funktionen und-Vorgängen ist.
+> Da jede Funktion genau eine Eingabe annimmt und genau eine Ausgabe zurückgibt, entspricht eine Eingabe des Typs `'T -> 'U` *jeder beliebigen* Q#-Funktion.
 > Ebenso kann jeder Vorgang an eine Eingabe des Typs `'T => 'U`übermittelt werden.
 
 Sehen Sie sich als zweites Beispiel die Herausforderung an, eine Funktion zu schreiben, die die Komposition zweier anderer Funktionen zurückgibt:
@@ -131,8 +131,8 @@ function Compose<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B)) : ('A -
 }
 ```
 
-Die Q #-Standardbibliotheken stellen eine Reihe von Typen parametrisierten Vorgängen und Funktionen bereit, um die Express-Ablauf Steuerung leichter zu gestalten.
-Diese werden im [Leitfaden der Q #-Standardbibliothek](xref:microsoft.quantum.libraries.standard.intro)erläutert.
+Die Q#-Standardbibliotheken stellen eine Reihe von Typen parametrisierten Vorgängen und Funktionen bereit, um die Express-Ablauf Steuerung leichter zu gestalten.
+Diese werden im [Leitfaden der Q#-Standardbibliothek](xref:microsoft.quantum.libraries.standard.intro)erläutert.
 
 ## <a name="borrowing-qubits"></a>Ausleihen von Qubits ##
 

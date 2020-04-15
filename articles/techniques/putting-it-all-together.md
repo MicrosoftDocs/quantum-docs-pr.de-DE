@@ -1,6 +1,6 @@
 ---
-title: 'F #-Techniken-alles vereinen'
-description: 'Gehen Sie durch ein einfaches Q #-Programm, das die Quantum-Teleportation veranschaulicht.'
+title: 'Q#-Techniken-alles vereinen'
+description: 'Gehen Sie durch ein einfaches Q#-Programm, das die Quantum-Teleportation veranschaulicht.'
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
@@ -14,7 +14,7 @@ ms.lasthandoff: 02/28/2020
 ms.locfileid: "77906830"
 ---
 # <a name="putting-it-all-together-teleportation"></a>Alles zusammen: teleportierung #
-Wir kehren zum Beispiel der in [Quantum](xref:microsoft.quantum.concepts.circuits)-Leitungen definierten Teleportations-Verbindung zurück. Wir werden diese Informationen verwenden, um die bisher gelernten Konzepte zu veranschaulichen. Eine Erläuterung der Quantum-Teleportation finden Sie unten für Personen, die mit der Theorie nicht vertraut sind, gefolgt von einer exemplarischen Vorgehensweise der Code Implementierung in f #. 
+Wir kehren zum Beispiel der in [Quantum](xref:microsoft.quantum.concepts.circuits)-Leitungen definierten Teleportations-Verbindung zurück. Wir werden diese Informationen verwenden, um die bisher gelernten Konzepte zu veranschaulichen. Eine Erläuterung der Quantum-Teleportation finden Sie unten für Personen, die mit der Theorie nicht vertraut sind, gefolgt von einer exemplarischen Vorgehensweise der Code Implementierung in Q#. 
 
 ## <a name="quantum-teleportation-theory"></a>Quantum-Teleportation: Theorie
 Die Quantum-Teleportation ist eine Technik zum Senden eines unbekannten Quantums (als "__Message__" bezeichnet) von einem Qubit an einem Speicherort an einem Ort an einem Qubit an einem anderen Speicherort (wir bezeichnen diese Qubits als __"This" bzw__. "__there__"). Wir können unsere __Nachricht__ mithilfe der Dirac-Notation als Vektor darstellen: 
@@ -109,7 +109,7 @@ Wir haben unsere Verbindung für Quantum-Teleportation:
 
 ![' Teleport (msg: Qubit, there: Qubit): Unit '](~/media/teleportation.svg)
 
-Wir können nun jeden der Schritte in dieser Quantum-Leitung in Q # übersetzen.
+Wir können nun jeden der Schritte in dieser Quantum-Leitung in Q# übersetzen.
 
 ### <a name="step-0-definition"></a>Schritt 0: Definition
 Bei der Durchführung von Teleportationen müssen wir die __Nachricht__ kennen, die gesendet werden soll, und an welche Stelle wir Sie senden möchten (__dort__). Aus diesem Grund definieren wir zunächst einen neuen teleportvorgang, der zwei Qubits als Argumente, `msg` und `there`erhält:

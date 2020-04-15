@@ -198,7 +198,7 @@ Durch diese Änderung treten bei Programmen, die eine einzelne „Open“-Anweis
 
 ### <a name="new-samples"></a>Neue Beispiele
 
-Wir haben ein [Beispiel für die Verwendung von Q# mit F#-Treibern](https://github.com/Microsoft/Quantum/pull/164) hinzugefügt.  
+Wir haben ein [Beispiel für die Verwendung von Q# mit Q#-Treibern](https://github.com/Microsoft/Quantum/pull/164) hinzugefügt.  
 
 **Besonderer Dank** gilt dem folgenden Mitwirkenden an der offenen Codebasis unter http://github.com/Microsoft/Quantum. Diese Beiträge ergänzen die umfangreichen Beispiele von Q#-Code:
 

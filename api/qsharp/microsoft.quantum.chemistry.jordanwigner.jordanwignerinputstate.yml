@@ -3,7 +3,7 @@ uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerinputstate
 name: JordanWignerInputState
 type: newtype
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: 'Format der Daten, die C# von an Q # übermittelt werden, um die Vorbereitung des Anfangs Zustands darzustellen. die Bedeutung der dargestellten Daten wird durch den Algorithmus bestimmt, der Sie empfängt.'
+summary: 'Format der Daten, die C# von an Q# übermittelt werden, um die Vorbereitung des Anfangs Zustands darzustellen. die Bedeutung der dargestellten Daten wird durch den Algorithmus bestimmt, der Sie empfängt.'
 syntax: newtype JordanWignerInputState = ((Double, Double), Int[]);
 metadata:
   ms.openlocfilehash: a4c234749d85c544dedce0feb4e9b7a4e468a120

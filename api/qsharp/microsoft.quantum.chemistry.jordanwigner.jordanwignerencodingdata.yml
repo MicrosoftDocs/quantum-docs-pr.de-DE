@@ -4,7 +4,7 @@ name: JordanWignerEncodingData
 type: newtype
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
 summary: >-
-  Format der Daten, die C# von an Q # übermittelt werden, um alle Informationen für die hamiltonan-Simulation darzustellen.
+  Format der Daten, die C# von an Q# übermittelt werden, um alle Informationen für die hamiltonan-Simulation darzustellen.
 
   Die Bedeutung der dargestellten Daten wird durch den Algorithmus bestimmt, der Sie empfängt.
 syntax: newtype JordanWignerEncodingData = (Int, Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms, (Int, Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[]), Double);

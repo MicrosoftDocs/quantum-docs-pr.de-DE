@@ -47,8 +47,8 @@ Sehen wir uns die Dateien an, aus denen sich die einzelnen Ordner bilden, betrac
 
 | Datei              | BESCHREIBUNG                                                |
 |-------------------|------------------------------------------------------------|
-| `CHSHGame.csproj` | Q #-Projekt, das zum Erstellen des Beispiels mit dem .net Core SDK verwendet wird |
-| `Game.qs`         | F #-Vorgänge und-Funktionen für das Beispiel                 |
+| `CHSHGame.csproj` | Q#-Projekt, das zum Erstellen des Beispiels mit dem .net Core SDK verwendet wird |
+| `Game.qs`         | Q#-Vorgänge und-Funktionen für das Beispiel                 |
 | `Host.cs`         | C#zum Ausführen des Beispiels verwendetes Host Programm                     |
 | `host.py`         | Zum Ausführen des Beispiels verwendetes python-Host Programm                 |
 | `README.md`       | Dokumentation zur Funktionsweise des Beispiels und zur Verwendung    |

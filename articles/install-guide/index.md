@@ -20,7 +20,7 @@ Es wird beschrieben, wie Sie das Microsoft Quantum Development Kit (QDK) install
 
 - Programmiersprache Q#
 - Bibliotheken zur Abstraktion komplexer Funktionen in Q#
-- API für die Sprachen Python und .NET (C#, F# und VB.NET) zum Ausführen von Quantenprogrammen, die in Q# geschrieben sind
+- API für die Sprachen Python und .NET (C#, Q# und VB.NET) zum Ausführen von Quantenprogrammen, die in Q# geschrieben sind
 - Tools für die Entwicklung
 
 Q#-Programme sind häufig mit einem Hostprogramm gekoppelt, das in einer .NET-Sprache (normalerweise C#) oder Python geschrieben ist. Dies ermöglicht es uns, Quantenvorgänge aus einem klassischen Programm aufzurufen.

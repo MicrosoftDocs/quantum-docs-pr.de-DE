@@ -1,6 +1,6 @@
 ---
 title: Unterschiedliche Eingaben für Eingaben
-description: 'Erfahren Sie mehr über die unterschiedliche e-How-Eingaben von Microsoft QDK, die ihren Q #-Code auf potenzielle Konflikte mit freigegebenen Qubits überprüft.'
+description: 'Erfahren Sie mehr über die unterschiedliche e-How-Eingaben von Microsoft QDK, die ihren Q#-Code auf potenzielle Konflikte mit freigegebenen Qubits überprüft.'
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
@@ -15,7 +15,7 @@ ms.locfileid: "77907102"
 ---
 # <a name="distinct-inputs-checker"></a>Unterschiedliche Eingaben für Eingaben
 
-Der `Distinct Inputs Checker` ist Teil des Ablauf [Verfolgungs Simulators](xref:microsoft.quantum.machines.qc-trace-simulator.intro)für Quantum-Computer. Es dient zur Erkennung potenzieller Fehler im Code. Sehen Sie sich den folgenden Q #-Code an, um die von diesem Paket erkannten Probleme zu veranschaulichen:
+Der `Distinct Inputs Checker` ist Teil des Ablauf [Verfolgungs Simulators](xref:microsoft.quantum.machines.qc-trace-simulator.intro)für Quantum-Computer. Es dient zur Erkennung potenzieller Fehler im Code. Sehen Sie sich den folgenden Q#-Code an, um die von diesem Paket erkannten Probleme zu veranschaulichen:
 
 ```qsharp
 operation ApplyBoth(

@@ -1,6 +1,6 @@
 ---
 title: Abrufen von Energiestandschätzungen
-description: 'Exemplarische Vorgehensweise: f #-Beispielprogramm, mit dem die Energiepegel Werte von molekularer Wasserstoff geschätzt werden'
+description: 'Exemplarische Vorgehensweise: Q#-Beispielprogramm, mit dem die Energiepegel Werte von molekularer Wasserstoff geschätzt werden'
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
@@ -119,7 +119,7 @@ operation GetEnergyByTrotterization (
 }
 ```
 
-Dieser Q #-Code kann jetzt vom Treiber Programm aufgerufen werden. Im folgenden erstellen wir einen vollständigen Simulator und führen `GetEnergyByTrotterization` aus, um die Energie des Energie Zustands zu erhalten.
+Dieser Q#-Code kann jetzt vom Treiber Programm aufgerufen werden. Im folgenden erstellen wir einen vollständigen Simulator und führen `GetEnergyByTrotterization` aus, um die Energie des Energie Zustands zu erhalten.
 
 ```csharp
 using (var qsim = new QuantumSimulator())

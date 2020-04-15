@@ -1,5 +1,5 @@
 ---
-title: 'Verwenden der Microsoft Q # Numerics-Bibliothek'
+title: 'Verwenden der Microsoft Q# Numerics-Bibliothek'
 description: Erfahren Sie mehr über die Typen und Vorgänge, die in der Microsoft Quantum-Numerics-Bibliothek verfügbar sind.
 author: thomashaener
 ms.author: thhaner
@@ -64,7 +64,7 @@ Für jeden der drei oben genannten Typen stehen eine Vielzahl von Vorgängen zur
     - Gegenseitige (1/x)
     - Messung (klassisches Double)
 
-Weitere Informationen und eine ausführliche Dokumentation zu den einzelnen Vorgängen finden Sie in der Referenz Dokumentation für die Q #-Bibliothek unter [docs.Microsoft.com](https://docs.microsoft.com/quantum) .
+Weitere Informationen und eine ausführliche Dokumentation zu den einzelnen Vorgängen finden Sie in der Referenz Dokumentation für die Q#-Bibliothek unter [docs.Microsoft.com](https://docs.microsoft.com/quantum) .
 
 ## <a name="sample-integer-addition"></a>Beispiel: Hinzufügen einer Ganzzahl
 
@@ -99,7 +99,7 @@ EvaluatePolynomialFxP([1.0, 2.0], x, y);
 Das Ergebnis $P (x) = 1 + 2x $ wird in `yFxP`gespeichert.
 
 Die zweite, `EvaluateEvenPolynomialFxP`und die dritte `EvaluateOddPolynomialFxP`sind spezialisierungsfunktionen für die Fälle der geraden bzw. ungeraden Funktionen. Das heißt, bei einer geraden/ungeraden Funktion $f (x) $ und $ $ P_ {even} (x) = a_0 + A_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, $ $ $f (x) $ ist für $P _ {even} (x) $ oder $P _ {Odd} (x): = x\cdot P_ {even} (x) $ gleich gut.
-In f # können diese beiden Fälle wie folgt behandelt werden:
+In Q# können diese beiden Fälle wie folgt behandelt werden:
 ```qsharp
 EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
 ```

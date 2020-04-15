@@ -1,6 +1,6 @@
 ---
 title: Erfahren Sie, wie Sie die Microsoft Quantum Development Kit (QDK) aktualisieren.
-description: 'Hier wird beschrieben, wie Sie die f #-Projekte und die Microsoft Quantum Development Kit auf die aktuelle Version aktualisieren.'
+description: 'Hier wird beschrieben, wie Sie die Q#-Projekte und die Microsoft Quantum Development Kit auf die aktuelle Version aktualisieren.'
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
@@ -21,12 +21,12 @@ Erfahren Sie, wie Sie die Microsoft Quantum Development Kit (QDK) auf die neuest
 In diesem Artikel wird davon ausgegangen, dass Sie das QDK bereits installiert haben. Wenn Sie zum ersten Mal installieren, finden Sie weitere Informationen im [Installationshandbuch](xref:microsoft.quantum.install).
 
 Es wird empfohlen, mit der neuesten QDK-Version auf dem neuesten Stand zu bleiben. Führen Sie dieses Update Handbuch aus, um ein Upgrade auf die neueste Version des QDK auszuführen. Der Prozess besteht aus zwei Teilen:
-1. Aktualisieren vorhandener Q #-Dateien und-Projekte, um Ihren Code mit einer beliebigen aktualisierten Syntax auszurichten
+1. Aktualisieren vorhandener Q#-Dateien und-Projekte, um Ihren Code mit einer beliebigen aktualisierten Syntax auszurichten
 2. Das QDK selbst für die ausgewählte Entwicklungsumgebung wird aktualisiert. 
 
-## <a name="updating-q-projects"></a>Aktualisieren von f #-Projekten 
+## <a name="updating-q-projects"></a>Aktualisieren von Q#-Projekten 
 
-Unabhängig davon, ob Sie oder C# python zum Hosten von q #-Vorgängen verwenden, befolgen Sie diese Anweisungen, um Ihre q #-Projekte zu aktualisieren.
+Unabhängig davon, ob Sie oder C# python zum Hosten von Q#-Vorgängen verwenden, befolgen Sie diese Anweisungen, um Ihre Q#-Projekte zu aktualisieren.
 
 1. Überprüfen Sie zunächst, ob Sie über die neueste Version des [.net Core SDK 3,1](https://dotnet.microsoft.com/download)verfügen. Führen Sie den folgenden Befehl an der Eingabeaufforderung aus:
 
@@ -36,7 +36,7 @@ Unabhängig davon, ob Sie oder C# python zum Hosten von q #-Vorgängen verwenden
 
     Überprüfen Sie, ob die Ausgabe `3.1.100` oder höher ist. Falls nicht, installieren Sie die [neueste Version](https://dotnet.microsoft.com/download) , und überprüfen Sie Sie erneut. Befolgen Sie dann die Anweisungen unten abhängig von Ihrem Setup (Visual Studio, Visual Studio Code oder direkt über die Befehlszeile).
 
-### <a name="update-q-projects-in-visual-studio"></a>Aktualisieren von f #-Projekten in Visual Studio
+### <a name="update-q-projects-in-visual-studio"></a>Aktualisieren von Q#-Projekten in Visual Studio
  
 1. Ein Update auf die neueste Version von Visual Studio 2019 finden Sie [hier](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) .
 2. Öffnen Sie die Projekt Mappe in Visual Studio
@@ -63,13 +63,13 @@ Unabhängig davon, ob Sie oder C# python zum Hosten von q #-Vorgängen verwenden
 Nun können Sie mit [Aktualisieren Ihrer Visual Studio-QDK-Erweiterung](#update-visual-studio-qdk-extension)fortfahren.
 
 
-### <a name="update-q-projects-in-visual-studio-code"></a>Aktualisieren von f #-Projekten in Visual Studio Code
+### <a name="update-q-projects-in-visual-studio-code"></a>Aktualisieren von Q#-Projekten in Visual Studio Code
 
 1. Öffnen Sie in Visual Studio Code den Ordner mit dem zu Aktualisier nenden Projekt.
 2. **Terminal** -> **neues Terminal** auswählen
 3. Befolgen Sie die Anweisungen zum Aktualisieren mithilfe der Befehlszeile (direkt unten).
 
-### <a name="update-q-projects-using-the-command-line"></a>Aktualisieren von f #-Projekten mithilfe der Befehlszeile
+### <a name="update-q-projects-using-the-command-line"></a>Aktualisieren von Q#-Projekten mithilfe der Befehlszeile
 
 1. Navigieren Sie zu dem Ordner, der die Projektdatei enthält.
 2. Führen Sie den folgenden Befehl aus:
@@ -100,21 +100,21 @@ Nun können Sie mit [Aktualisieren Ihrer Visual Studio-QDK-Erweiterung](#update-
     dotnet build [project_name].csproj
     ```
 
-Nachdem Sie Ihre Q #-Projekte aktualisiert haben, befolgen Sie die nachfolgenden Anweisungen, um das QDK selbst zu aktualisieren.
+Nachdem Sie Ihre Q#-Projekte aktualisiert haben, befolgen Sie die nachfolgenden Anweisungen, um das QDK selbst zu aktualisieren.
 
 ## <a name="updating-the-qdk"></a>Aktualisieren des QDK
 
 Der Aktualisierungsprozess für das QDK hängt von der Entwicklungssprache und-Umgebung ab.
 Wählen Sie unten Ihre Entwicklungsumgebung aus.
 
-* [Python: Aktualisieren der IQ #-Erweiterung](#update-iq-for-python)
-* [Jupyter-Notebooks: Aktualisieren der IQ #-Erweiterung](#update-iq-for-jupyter-notebooks)
+* [Python: Aktualisieren der IQ#-Erweiterung](#update-iq-for-python)
+* [Jupyter-Notebooks: Aktualisieren der IQ#-Erweiterung](#update-iq-for-jupyter-notebooks)
 * [Visual Studio: Aktualisieren der QDK-Erweiterung](#update-visual-studio-qdk-extension)
 * [VS Code: Aktualisieren der QDK-Erweiterung](#update-vs-code-qdk-extension)
 * [Befehlszeile und C#: Aktualisieren von Projektvorlagen](#c-using-the-dotnet-command-line-tool)
 
 
-### <a name="update-iq-for-python"></a>Aktualisieren von IQ # für python
+### <a name="update-iq-for-python"></a>Aktualisieren von IQ# für python
 
 1. Aktualisieren des `iqsharp` Kernel 
 
@@ -167,7 +167,7 @@ Wählen Sie unten Ihre Entwicklungsumgebung aus.
 
 6. Sie können jetzt die aktualisierte QDK-Version verwenden, um Ihre vorhandenen Quantum-Programme auszuführen.
 
-### <a name="update-iq-for-jupyter-notebooks"></a>Aktualisieren von IQ # für jupyter-Notebooks
+### <a name="update-iq-for-jupyter-notebooks"></a>Aktualisieren von IQ# für jupyter-Notebooks
 
 1. Aktualisieren des `iqsharp` Kernel
 
@@ -201,7 +201,7 @@ Wählen Sie unten Ihre Entwicklungsumgebung aus.
 
 ### <a name="update-visual-studio-qdk-extension"></a>Visual Studio-QDK-Erweiterung aktualisieren
 
-1. Aktualisieren der f # Visual Studio-Erweiterung
+1. Aktualisieren der Q# Visual Studio-Erweiterung
 
     - Visual Studio fordert Sie auf, Aktualisierungen der [Erweiterung von Visual Studio](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) zu akzeptieren.
     - Akzeptieren des Updates
@@ -221,7 +221,7 @@ Wählen Sie unten Ihre Entwicklungsumgebung aus.
 2. Aktualisieren Sie die Quantum-Projektvorlagen:
 
    - Navigieren Sie zu **Ansicht** -> **Befehlspalette**.
-   - Auswählen von " **Q #: Install Project Templates** "
+   - Auswählen von " **Q#: Install Project Templates** "
    - Nach wenigen Sekunden sollte ein Popup mit der Bestätigung angezeigt werden, dass die Projektvorlagen erfolgreich installiert wurden.
 
 ### <a name="c-using-the-dotnet-command-line-tool"></a>C#mit dem Befehlszeilen Tool "`dotnet`"
