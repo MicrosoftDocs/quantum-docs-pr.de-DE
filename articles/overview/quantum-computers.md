@@ -7,10 +7,10 @@ ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.computers
 ms.openlocfilehash: 9d8ba90a504f298f9465ebf564c43625a4d43168
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "73529950"
 ---
 # <a name="what-can-a-quantum-computer-do"></a>Was kann ein Quantencomputer?
@@ -37,7 +37,7 @@ Quantencomputer machen diese Vorgänge theoretisch lenkbar (per Shor-Algorithmus
 
 Bei Microsoft verfügen wir über das weltweit führende Team im Bereich Post-Quantenkryptografie und -sicherheit, das an der Entwicklung von quantenresistenten Algorithmen arbeitet.
 
-## <a name="optimization"></a>Optimierung
+## <a name="optimization"></a>Optimization
 
 Bei der Optimierung geht es darum, eine umfangreiche Suche in einem hochdimensionalen Bereich zur Erzielung einer Lösung durchzuführen, mit der eine bestimmte Kostenfunktion minimiert wird.   Auf einem Quantencomputer können wir Optimierungsalgorithmen beschleunigen, um Lösungen zu finden, die auf andere Weise nicht möglich wären. Beispiele für Anwendungsbereiche sind Transport/Logistik, Gesundheitswesen, Diagnostik und Materialwissenschaft. Dies kann erhebliche Auswirkungen auf die Effizienz der Branche haben.
 

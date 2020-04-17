@@ -7,10 +7,10 @@ ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.what
 ms.openlocfilehash: 668df50882272bfa56541f178e2f4d5fb35efcf5
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "77906779"
 ---
 # <a name="what-is-quantum-computing"></a>Was ist Quantencomputing?
@@ -39,7 +39,7 @@ Mehrere Qubits können außerdem **verschränkt** sein. Bei der Messung eines ve
 
 Quantenalgorithmen nutzen Quanteneigenschaften und -verhaltensweisen, um klassische Algorithmen zu beschleunigen oder völlig neue Möglichkeiten für die Modellierung physischer Systeme zu bieten.  Diese Algorithmen nutzen die Art der Informationscodierung durch Qubits sowie die Möglichkeit zur parallelen Verwendung mehrerer verschränkter Qubits in Superposition.  
 
-Bei klassischen Computern werden Informationen in Bits mit zwei möglichen Werten (0 oder 1) codiert.  Ein Qubit codiert zwei Werte gleichzeitig (0 und 1).  Zwei klassische Bits codieren einen von vier möglichen Werten: 00, 01, 10 oder 11. Zwei Qubits codieren dagegen gleichzeitig eine beliebige Superposition der vier Zustände. Bei einer Messung erhalten wir allerdings immer nur einen dieser Werte. Vier Qubits codieren gleichzeitig eine beliebige Superposition von 16 Werten. Dies setzt sich exponentiell so fort.  100 Qubits können mehr Informationen codieren, als heutzutage in den größten Computersystemen zur Verfügung stehen.  
+Bei klassischen Computern werden Informationen in Bits mit zwei möglichen Werten (1 oder 1) codiert.  Ein Qubit codiert zwei Werte gleichzeitig (0 und 1).  Zwei klassische Bits codieren einen von vier möglichen Werten: 00, 01, 10 oder 11. Zwei Qubits codieren dagegen gleichzeitig eine beliebige Superposition der vier Zustände. Bei einer Messung erhalten wir allerdings immer nur einen dieser Werte. Vier Qubits codieren gleichzeitig eine beliebige Superposition von 16 Werten. Dies setzt sich exponentiell so fort.  100 Qubits können mehr Informationen codieren, als heutzutage in den größten Computersystemen zur Verfügung stehen.  
 
 Wenn mehrere verschränkte Qubits zudem kohärent agieren, können sie mehrere Optionen gleichzeitig verarbeiten. Verschränkte Qubits können Informationen in einem Bruchteil der Zeit verarbeiten, die selbst die schnellsten nicht quantengestützten Systeme benötigen würden.
 
