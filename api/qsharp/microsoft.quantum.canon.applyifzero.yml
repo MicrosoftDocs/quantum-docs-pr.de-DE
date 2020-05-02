@@ -7,7 +7,7 @@ summary: >-
   Wendet einen Vorgang an, der von einem klassischen Ergebniswert von 0 (null) abhängt.
 
 
-  Wendet bei einem Vorgang `op` und einem Ergebniswert `result``op` auf das `target` an, wenn `result` `Zero`ist. Wenn `One`, geschieht nichts mit dem `target`.
+  `target` Bei einem Vorgang `op` und einem Ergebniswert `result`gilt `op` für, wenn `result` gleich ist `Zero`. Gibt `One`an, dass nichts passiert `target`.
 syntax: "operation ApplyIfZero (result : Result, (op : ('T => Unit), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit), target : 'T))"
@@ -44,9 +44,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: c9d524a4be9c3ce6179f59d59c8a83819a611966
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: def6af6461ea91bc1df4ce347a1a35c6fb31cb8a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213635"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672638"

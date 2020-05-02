@@ -7,9 +7,9 @@ summary: >-
   Wendet einen adjointable-Vorgang an, der auf einen klassischen Ergebniswert zurückzuführen ist.
 
 
-  Wendet bei einem Vorgang `op` und einem Ergebniswert `result``op` auf das `target` an, wenn `result` `One`ist. Wenn `Zero`, geschieht nichts mit dem `target`.
+  `target` Bei einem Vorgang `op` und einem Ergebniswert `result`gilt `op` für, wenn `result` gleich ist `One`. Gibt `Zero`an, dass nichts passiert `target`.
 
-  Das Suffix `A` gibt an, dass der anzuwendende Vorgang adjointable ist.
+  Das- `A` Suffix gibt an, dass der anzuwendende Vorgang adjointable ist.
 syntax: "operation ApplyIfOneA (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Adj), target : 'T))"
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: 5846b1178a8373f4b21faaa63ae9f6f86e514339
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 041b9f1f97ec5fe615b6ff83fe7c69bf5a7d0894
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217409"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672684"

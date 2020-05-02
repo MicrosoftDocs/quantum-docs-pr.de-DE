@@ -5,9 +5,9 @@ type: operation
 namespace: Microsoft.Quantum.Arithmetic
 summary: Das gleiche wie bei multiplyandaddbymodularinteger, jedoch wird davon ausgegangen, dass die Summen-und-Werte Ganzzahlen in QFT codieren.
 remarks: >-
-  Geht davon aus, dass für `phaseSummand` das höchste Bit auf 0 festgelegt ist.
+  Geht davon `phaseSummand` aus, dass das höchste Bit auf 0 festgelegt ist.
 
-  Außerdem wird davon ausgegangen, dass der Wert von `phaseSummand` kleiner als $N $ ist.
+  Außerdem wird davon ausgegangen, dass `phaseSummand` der Wert von kleiner als $N $ ist.
 syntax: 'operation MultiplyAndAddPhaseByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
@@ -36,9 +36,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
 metadata:
-  ms.openlocfilehash: 3728e95ad26768d486af79e7c4158a2a2715bbd2
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 029ff8fb767ae018b7462f19a5fe09e83e606c6e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871395"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672802"

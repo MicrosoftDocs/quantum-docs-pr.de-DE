@@ -7,8 +7,8 @@ summary: >-
   Addiert zwei in quantenregistern gespeicherte Fixed-Point-Nummern.
 
 
-  Bei zwei fest Komma Registern in den Zuständen $ \ket{f_1} $ und $ \ket{f_2} $ führt den Vorgang $ \ket{f_1} \ket{f_2} \mapsto \ket{f_1} \ket{f_1 + f_2} $ aus.
-remarks: Die aktuelle-Implementierung erfordert, dass die zwei fest Komma Zahlen dieselbe Punktposition aufweisen, die vom unwichtigsten Bit gezählt wird, d. h. $n _I $ und $p _I $ muss gleich sein.
+  Bei Angabe von zwei fixpointregistern in den Zuständen $ \ket{f_1} $ und $ \ket{f_2} $ wird der Vorgang "$ \ket{f_1} \ket{f_2} \mapsto \ket{f_1} \ket{f_1 + f_2} $" durchführt.
+remarks: Die aktuelle-Implementierung erfordert, dass die zwei fest Komma Zahlen die gleiche Punktposition aufweisen, die vom unbedeutenden Bit gezählt wird, d. h. $n _I $ und $p, dass _I $ gleich sein muss.
 syntax: 'operation AddFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
   content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint)'
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 142c7927519e59fb3df1661b3beadd32cda0d2c8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 75b6e15299b6e0394af8cb530ee7bc66dc07c336
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215420"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672899"

@@ -7,9 +7,9 @@ summary: >-
   Wendet einen adjointable-Vorgang an, der von einem klassischen Ergebniswert von 0 (null) abhängt.
 
 
-  Wendet bei einem Vorgang `op` und einem Ergebniswert `result``op` auf das `target` an, wenn `result` `Zero`ist. Wenn `One`, geschieht nichts mit dem `target`.
+  `target` Bei einem Vorgang `op` und einem Ergebniswert `result`gilt `op` für, wenn `result` gleich ist `Zero`. Gibt `One`an, dass nichts passiert `target`.
 
-  Das Suffix `A` gibt an, dass der anzuwendende Vorgang adjointable ist.
+  Das- `A` Suffix gibt an, dass der anzuwendende Vorgang adjointable ist.
 syntax: "operation ApplyIfZeroA (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Adj), target : 'T))"
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: 626bb5bbd18cceb409632ec0d27b48c6ea98fbbe
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b8b85714f173e10d3121d6f012fefa76b956686e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220724"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672612"
