@@ -18,9 +18,9 @@ functions:
 - uid: microsoft.quantum.convert.boolarrayaspauli
   summary: Gibt bei Angabe einer Bitzeichenfolge einen multiqubit-Pauli-Operator zurück, der als Array von Single-Qubit-Pauli-Operatoren dargestellt wird.
 - uid: microsoft.quantum.convert.boolarrayasresultarray
-  summary: Konvertiert einen `Bool[]`-Typ in einen `Result[]` Typ, wobei `true` `One` zugeordnet und `false` `Zero`zugeordnet wird.
+  summary: Konvertiert einen `Bool[]` Typ in einen `Result[]` -Typ, `true` wobei zugeordnet `One` ist und `false` zugeordnet `Zero`ist.
 - uid: microsoft.quantum.convert.boolasresult
-  summary: Konvertiert einen `Bool`-Typ in einen `Result` Typ, wobei `true` `One` zugeordnet und `false` `Zero`zugeordnet wird.
+  summary: Konvertiert einen `Bool` Typ in einen `Result` -Typ, `true` wobei zugeordnet `One` ist und `false` zugeordnet `Zero`ist.
 - uid: microsoft.quantum.convert.boolasstring
   summary: Konvertiert einen angegebenen booleschen Wert in eine entsprechende Zeichen folgen Darstellung.
 - uid: microsoft.quantum.convert.doubleasstring
@@ -49,18 +49,18 @@ functions:
 - uid: microsoft.quantum.convert.rangeasintarray
   summary: Erstellt ein Array `arr` von ganzen Zahlen, die nach Start. aufgelistet sind. Schritt. Schließlich.
 - uid: microsoft.quantum.convert.resultarrayasboolarray
-  summary: Konvertiert einen `Result[]`-Typ in einen `Bool[]` Typ, wobei `One` `true` zugeordnet und `Zero` `false`zugeordnet wird.
+  summary: Konvertiert einen `Result[]` Typ in einen `Bool[]` -Typ, `One` wobei zugeordnet `true` ist und `Zero` zugeordnet `false`ist.
 - uid: microsoft.quantum.convert.resultarrayasint
   summary: Erzeugt eine positive ganze Zahl aus einer Zeichenfolge, die im Little-Endian-Format vorliegt.
 - uid: microsoft.quantum.convert.resultasbool
-  summary: Konvertiert einen `Result`-Typ in einen `Bool` Typ, wobei `One` `true` zugeordnet und `Zero` `false`zugeordnet wird.
+  summary: Konvertiert einen `Result` Typ in einen `Bool` -Typ, `One` wobei zugeordnet `true` ist und `Zero` zugeordnet `false`ist.
 operations:
 - uid: microsoft.quantum.convert.call
   summary: Ruft eine Funktion mit einer angegebenen Eingabe auf.
 metadata:
-  ms.openlocfilehash: a0c347d8004b8f8bd35fc1b7f7eaf52e6230cee0
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d435979692fe94efb64af82f4a7a949cb2341ef8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210966"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677002"

@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.measureinteger
 name: MeasureInteger
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Misst den Inhalt eines Quantum-Registers und konvertiert ihn in eine ganze Zahl. Die Messung erfolgt in Bezug auf die standardmäßige Berechnungsbasis, d. h. auf die eigen Basis `PauliZ`.
+summary: Misst den Inhalt eines Quantum-Registers und konvertiert ihn in eine ganze Zahl. Die Messung erfolgt in Bezug auf die standardmäßige Berechnungsbasis, d. h. auf die eigen `PauliZ`Basis von.
 remarks: Durch diesen Vorgang wird das Eingabe Register auf den Zustand "$ \ket{00\cdots 0} $" zurückgesetzt, der für die Freigabe an einen Zielcomputer geeignet ist.
 syntax: 'operation MeasureInteger (target : Microsoft.Quantum.Arithmetic.LittleEndian) : Int'
 input:
@@ -15,15 +15,15 @@ input:
 output:
   content: Int
   types:
-  - summary: Eine ganze Zahl ohne Vorzeichen, die den gemessenen Wert `target`enthält.
+  - summary: Eine ganze Zahl ohne Vorzeichen, die den gemessenen Wert `target`von enthält.
     isPrimitive: true
     uid: Int
 seeAlso:
 - microsoft.quantum.canon.measureintegerbe
 metadata:
-  ms.openlocfilehash: 989302867cbfb6b429bf8e8d4b8a76a0c1c4e61d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cb7432ccf4c66b4f508b182e8c96bd73b13e2f08
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214876"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676773"

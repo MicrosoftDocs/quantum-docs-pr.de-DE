@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.squaresi
 name: SquareSI
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Eine quadratische Ganzzahl mit Vorzeichen `xs` und speichert das Ergebnis in `result`, das anfänglich NULL sein muss.
+summary: Eine quadratische Ganzzahl `xs` mit Vorzeichen und speichert `result`das Ergebnis in, das anfänglich NULL sein muss.
 remarks: Die-Implementierung basiert auf integersquare.
 syntax: 'operation SquareSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
 input:
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 71a3ffc190540ccfb51eb81febdce6a943dc99fb
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e4a212094c38d370e2489b586ee8014131bef9dc
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218412"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676600"

@@ -3,23 +3,23 @@ uid: microsoft.quantum.chemistry
 name: Microsoft.Quantum.Chemistry
 functions:
 - uid: microsoft.quantum.chemistry.htermstogenidx
-  summary: Konvertiert einen Index in einen "hamiltona"-Begriff in `HTerm[]` Datenformat in einen generatorindex.
+  summary: Konvertiert einen Index in einen hamiltona-Begriff `HTerm[]` im Datenformat in einen generatorindex.
 - uid: microsoft.quantum.chemistry.htermstogensys
-  summary: Konvertiert ein hamiltonan in `HTerm[]` Datenformat in ein Generatorsystem.
+  summary: Konvertiert ein hamiltonan im `HTerm[]` Datenformat in ein Generatorsystem.
 - uid: microsoft.quantum.chemistry.htermtogenidx
-  summary: Konvertiert einen hamiltona-Begriff in `HTerm` Datenformat in einen generatorindex.
+  summary: Konvertiert einen hamiltona-Begriff `HTerm` im Datenformat in einen generatorindex.
 - uid: microsoft.quantum.chemistry.isnotzero
-  summary: Überprüft, ob eine `Double` Zahl nicht ungefähr 0 (null) ist.
+  summary: Überprüft, ob `Double` eine Zahl nicht ungefähr 0 (null) ist.
 newtypes:
 - uid: microsoft.quantum.chemistry.hterm
   summary: >-
-    Das Format der Daten, C# die von an Q # übermittelt werden, um einen Begriff von "hamiltonan" darzustellen.
+    Das Format der Daten, die von c# an Q # übergeben werden, um einen Begriff von "hamiltonan" darzustellen.
 
     Die Bedeutung der dargestellten Daten wird durch den Algorithmus bestimmt, der Sie empfängt.
 metadata:
-  ms.openlocfilehash: 78d6e9f54c25f9d1a6af32c157d23069b8a4872b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fda6e5c8daebeae115046771e85e0e49d057e666
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210915"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677016"

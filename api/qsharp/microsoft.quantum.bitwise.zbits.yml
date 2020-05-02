@@ -4,7 +4,7 @@ name: ZBits
 type: function
 namespace: Microsoft.Quantum.Bitwise
 summary: Gibt eine ganze Zahl zurück, die die Z-Bits eines Arrays von Pauli-Operatoren darstellt.
-remarks: Die Funktion löst aus, wenn die Länge `paulis` Arrays größer als 63 ist.
+remarks: Die Funktion löst aus, wenn die Länge `paulis` des Arrays größer als 63 ist.
 syntax: 'function ZBits (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -17,15 +17,15 @@ input:
 output:
   content: Int
   types:
-  - summary: Eine ganze Zahl $x $ mit binärer Darstellung $ (P_{62}\,P_{61}\,\dots\,p_0) $, wobei $p _I = $0, wenn `paulis[i]` `PauliI` oder `PauliX` ist und $p _I = $1, wenn `paulis[i]` `PauliY` ist. oder `PauliZ`.
+  - summary: Eine ganze Zahl $x $ mit binärer Darstellung ${62}\,({61}\,P_ P_\,\dots p_0) $, wobei $p _I = `paulis[i]` $0 `PauliI` , `PauliX` wenn gleich oder ist und wobei $p `paulis[i]` _I `PauliY` = `PauliZ`$1 ist, wenn oder ist.
     isPrimitive: true
     uid: Int
 seeAlso:
 - xbits
 metadata:
-  ms.openlocfilehash: 21d3da075cb4b98e5604f72b8432536bb9d51753
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d7605a48451292792a97e9049125674c6716780f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217698"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676422"

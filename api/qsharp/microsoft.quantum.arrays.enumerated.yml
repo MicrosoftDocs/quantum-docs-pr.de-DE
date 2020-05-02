@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Gibt bei Angabe eines Arrays ein neues Array zurück, das die Elemente des ursprünglichen Arrays zusammen mit den Indizes der einzelnen Elemente enthält.
 examples: >-
-  Die folgenden `for` Schleifen sind gleichwertig:
+  Die folgenden `for` Schleifen sind äquivalent:
 
 
   ```Q#
@@ -41,9 +41,9 @@ typeParameters:
 - uid: "'TElement"
   summary: Der Typ der Elemente des Arrays.
 metadata:
-  ms.openlocfilehash: 471b62b28ef2014584de637d41158fb8ac7c629d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9cfb5a48974128f865ada49df3aa3152bf0f33ed
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220962"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676510"
