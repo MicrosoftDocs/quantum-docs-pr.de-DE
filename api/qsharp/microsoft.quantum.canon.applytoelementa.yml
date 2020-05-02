@@ -7,7 +7,7 @@ summary: >-
   Wendet einen Vorgang auf ein angegebenes Element eines Arrays an.
 
 
-  Wenn ein Vorgangs `op`, ein Index `index`und ein Array von Zielen `targets`, wendet `op(targets[index])`an.
+  Wenn ein Vorgang `op`, ein Index `index`und ein Array von Zielen `targets`, gilt, `op(targets[index])`gilt.
 syntax: "operation ApplyToElementA (op : ('T => Unit is Adj), index : Int, targets : 'T[]) : Unit"
 input:
   content: "(op : ('T => Unit is Adj), index : Int, targets : 'T[])"
@@ -48,9 +48,9 @@ seeAlso:
 - microsoft.quantum.canon.applytoelementc
 - microsoft.quantum.canon.applytoelementca
 metadata:
-  ms.openlocfilehash: 9350a002eea26f5eb9a2471c0d35b8b7b8447462
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 204580bc5c7f7346c3925cff736d7565d5449a83
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77908054"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82670039"
