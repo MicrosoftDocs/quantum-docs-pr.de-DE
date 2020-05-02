@@ -9,20 +9,20 @@ input:
   content: '(deterministicStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
   types:
   - name: deterministicStateOracle
-    summary: Ein Status Vorbereitungs-Oracle $A $ vom Typ `DeterministicStateOracle`.
+    summary: Ein Status Vorbereitungs-Oracle $A $ vom `DeterministicStateOracle`Typ.
     uid: microsoft.quantum.oracles.deterministicstateoracle
 output:
   content: Microsoft.Quantum.Oracles.StateOracle
   types:
-  - summary: Das gleiche Zustands Vorbereitungs-Oracle $A $, aber jetzt vom Typ `StateOracle`. Beachten Sie, dass der FlagIndex in diesem `StateOracle` eine Dummyvariable ist und keine Auswirkung hat.
+  - summary: Das gleiche Zustands Vorbereitungs-Oracle $A $, aber jetzt vom `StateOracle`Typ. Beachten Sie, dass der FlagIndex `StateOracle` in dieser eine Dummyvariable ist und keine Auswirkung hat.
     uid: microsoft.quantum.oracles.stateoracle
 seeAlso:
 - microsoft.quantum.canon.deterministicstateoracle
 - microsoft.quantum.canon.stateoracle
 metadata:
-  ms.openlocfilehash: 681d5a8a132819fa1b0c1af049418123d21ecec4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9431b58659bb50de872f73890a4a055c5534b2a0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228204"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685147"

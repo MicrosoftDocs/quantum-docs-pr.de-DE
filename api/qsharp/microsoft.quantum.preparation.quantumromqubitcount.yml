@@ -13,7 +13,7 @@ input:
     isPrimitive: true
     uid: Double
   - name: nCoeffs
-    summary: Die Anzahl der Koeffizienten, die in `QuantumROM`angegeben sind.
+    summary: Anzahl der in `QuantumROM`angegebenen Koeffizienten.
     isPrimitive: true
     uid: Int
 output:
@@ -23,7 +23,7 @@ output:
       ## <a name="first-parameter"></a>Erster Parameter
 
 
-      Ein Tupel `(x,(y,z))` wobei `x = y + z` die Gesamtzahl der zugeordneten Qubits ist, `y` die Anzahl der Qubits für das `LittleEndian` Register und `z` die Anzahl der Garbage Qubits ist.
+      Ein Tupel `(x,(y,z))` , `x = y + z` bei dem die Gesamtzahl der zugeordneten Qubits ist, `y` die Anzahl der Qubits `LittleEndian` für das Register `z` und die Anzahl der Garbage Qubits.
     types:
     - isPrimitive: true
       uid: Int
@@ -33,9 +33,9 @@ output:
       - isPrimitive: true
         uid: Int
 metadata:
-  ms.openlocfilehash: fdc1d18f088cd5d07558a6fac28b92af6c9884d3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 717de1097641dcbabf6441424e88d77b71e05738
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226385"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685121"

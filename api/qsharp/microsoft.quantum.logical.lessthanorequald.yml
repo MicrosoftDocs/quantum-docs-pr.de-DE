@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true` nur dann, wenn `a` kleiner oder gleich `b`ist.'
+  - summary: '`true`, `b`wenn kleiner oder `a` gleich ist.'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 9ec009d0f5294a3553ae8482490bf58ea95a11da
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 54ecd29273391dd51a605f6adaff264fbacbb035
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235531"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684670"

@@ -7,7 +7,7 @@ summary: Gibt eine Funktion zurück, die Fehler-Syndrom-Messungen den entspreche
 remarks: >-
   Durch das Durchlaufen aller Fehler der Gewichtung $1 $ erhalten wir eine Summe von insgesamt $3 \ mal 5 = 15 $ möglichen nicht trivialen syndromes.
 
-  In Verbindung mit der Identität wird eine Fehler Tabelle und ein entsprechendes-Syndrom erstellt. Für den 5-Qubit-Code, der für diese Tabelle angegeben ist: $X\_1: (0, 0, 0, 1); X\_2: (1, 0, 0, 0); X\_3: (1, 1, 0, 0); X\_4: (0, 1, 1, 0); X\_5: (0,0, 1, 1) $, $Z\_1: (1, 0, 1, 0); Z\_2: (0, 1, 0, 1); Z\_3: (0, 0, 1, 0); Z\_4: (1, 0, 0, 1); Z\_5: (0, 1, 0, 0) $ mit $Y _I $, das durch Hinzufügen der $X _I $ und $Z _I $-Syndrome erreicht wird. Beachten Sie, dass die Reihenfolge in der Wiederherstellung der Tabellen Suche angegeben wird, indem die bitvektoren in ganze Zahlen (mit Little Endian) umgerechnet werden.
+  In Verbindung mit der Identität wird eine Fehler Tabelle und ein entsprechendes-Syndrom erstellt. Für den 5-Qubit-Code, der für diese Tabelle\_angegeben ist: $X 1: (0, 0, 0, 1); X\_2: (1, 0, 0, 0); X\_3: (1, 1, 0, 0); X\_4: (0, 1, 1, 0); X\_5: (0,0, 1, 1) $, $Z\_1: (1, 0, 1, 0); Z\_2: (0, 1, 0, 1); Z\_3: (0,0, 1, 0); Z\_4: (1, 0, 0, 1); Z\_5: (0, 1, 0, 0) $ mit $Y _I $ durch Hinzufügen der $X _I $ und $Z _I $-Syndrome abgerufen werden. Beachten Sie, dass die Reihenfolge in der Wiederherstellung der Tabellen Suche angegeben wird, indem die bitvektoren in ganze Zahlen (mit Little Endian) umgerechnet werden.
 syntax: 'function FiveQubitCodeRecoveryFn () : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
 input:
   content: ()
@@ -15,14 +15,14 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
   types:
-  - summary: Eine Funktion vom Typ `RecoveryFn`, die eine Messungs Messung `Result[]` und die `Pauli[]` Operatoren zurückgibt, die den erkannten Fehler behebt.
+  - summary: Funktion des Typs `RecoveryFn` , die eine Messungs Messung `Result[]` annimmt und die `Pauli[]` Operatoren zurückgibt, die den erkannten Fehler korrigieren.
     uid: microsoft.quantum.errorcorrection.recoveryfn
 seeAlso:
 - recoveryfn
 metadata:
-  ms.openlocfilehash: efeabbeb6595d1440882eef73f152610a3ac74c5
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8de748ddaf446cfcf7b8694079bd84bfc171211c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211629"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684898"
