@@ -7,11 +7,11 @@ summary: >-
   Wendet einen einheitlichen Vorgang an, der auf einem klassischen Bit bedingt ist.
 
 
-  Wendet bei einem Vorgang `op` und einem Bitwert `bit``op` auf das `target` an, wenn `bit` `true`ist. Wenn `false`, geschieht nichts mit dem `target`.
+  Bei einem Vorgang `op` und einem Bitwert `bit`gilt `op` für das `target` , wenn `bit` gleich `true`ist. Gibt `false`an, dass nichts passiert `target`.
 
-  Das Suffix `CA` gibt an, dass der anzuwendende Vorgang einheitlich (steuerbar und adjointable) ist.
+  Das- `CA` Suffix gibt an, dass der anzuwendende Vorgang einheitlich (steuerbar und adjointable) ist.
 examples: >-
-  Im folgenden wird ein Register von Qubits auf einen Berechnungs Status vorbereitet, der durch eine klassische Bitzeichenfolge dargestellt wird, die als Array von `Bool` Werten angegeben ist:
+  Im folgenden wird ein Register von Qubits auf einen Berechnungs Status vorbereitet, der durch eine klassische Bitzeichenfolge dargestellt wird `Bool` , die als Array von Werten angegeben ist:
 
 
   ```Q#
@@ -67,9 +67,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: c78136688111a71e6a9a58972c9b9bb71603e0cf
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2b716ef4a7d429176aa1359fb22b3ce24be0d5f4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213754"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675056"
