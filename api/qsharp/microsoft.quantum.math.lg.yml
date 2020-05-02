@@ -15,13 +15,13 @@ input:
 output:
   content: Double
   types:
-  - summary: Der Logarithmus zur Basis 2 $y = \log_2 (x) $, sodass $x = 2 ^ y $ ist.
+  - summary: Der Logarithmus zur Basis 2 $y = \ Log_2 (x) $, sodass $x = 2 ^ y $ ist.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: b96476effbf0e854a79f3f0e61ca96fcd33db0fc
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2146f224a6c8da738333e3ed190e164c0b3e3969
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232675"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685323"

@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.MachineLearning
 summary: Gibt einen Standardsatz von Optionen für Trainings Klassifizierer zurück.
 examples: >-
-  Verwenden Sie den `w/`-Operator, um die Standardoptionen, aber mit zusätzlichen Messungen, zu verwenden:
+  Verwenden Sie den `w/` -Operator, um die Standardoptionen, aber mit zusätzlichen Messungen, zu verwenden:
 
 
   ```Q#
@@ -23,9 +23,9 @@ output:
   - summary: Ein angemessener Satz von Standard Schulungs Optionen, die beim Trainieren von Klassifizierungen verwendet werden.
     uid: microsoft.quantum.machinelearning.trainingoptions
 metadata:
-  ms.openlocfilehash: 6013d4f7268cfc422eedbe7d2070adbb167ad4ea
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 87f056e336ca78881421e669b3d282af8e679353
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77909465"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685440"
