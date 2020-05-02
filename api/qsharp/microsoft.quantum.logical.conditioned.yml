@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Logical
 summary: Gibt je nach dem Wert einer booleschen Bedingung einen von zwei Werten zurück.
 remarks: >-
-  Anders als der `?|`-Operator ist diese Funktion nicht kurz, sodass beide Eingaben vollständig ausgewertet werden.
+  Im Gegensatz `?|` zum-Operator ist diese Funktion nicht kurz, sodass beide Eingaben vollständig ausgewertet werden.
 
 
   Bis zu einem kurzen Schluss Verhalten sind die folgenden äquivalent:
@@ -27,23 +27,23 @@ input:
     isPrimitive: true
     uid: Bool
   - name: ifTrue
-    summary: Der Wert, der zurückgegeben werden soll, wenn `condition` `true`ist.
+    summary: Der Wert, der zurückgegeben `condition` werden `true`soll, wenn ist.
     uid: "'T"
     isLocal: true
   - name: ifFalse
-    summary: Der Wert, der zurückgegeben werden soll, wenn `condition` `false`ist.
+    summary: Der Wert, der zurückgegeben `condition` werden `false`soll, wenn ist.
     uid: "'T"
     isLocal: true
 output:
   content: "'T"
   types:
-  - summary: '`ifTrue`, wenn `condition` `true`ist, andernfalls `ifFalse`.'
+  - summary: '`ifTrue``true`, `condition` wenn den Wert `ifFalse` hat und andernfalls.'
     uid: "'T"
     isLocal: true
 metadata:
-  ms.openlocfilehash: f26e540b181ce405125dbf80cd97c3e177ad9531
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c5a255fe0434c7dfc9bf49f1a1c9c6be03cd8055
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233338"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674075"

@@ -9,19 +9,19 @@ summary: >-
 
   Bestätigt insbesondere, dass die Phase $ \phi $ eines Quantum-Zustands, der als $ \bruchteil {e ^ {i t}} {\sqrt{2}} (e ^ {i\phi} \ Ket{0} + e ^ {-i\phi} \ Ket{1}) $ für ein beliebiges echtes t ausgedrückt werden kann, den erwarteten Wert hat.
 examples: >-
-  Der folgende Assert-Vorgang ist erfolgreich: `qubit` befindet sich im Status $ \ket{\psi} = e ^ {i 0,5} \ sqrt {1/2} \ Ket{0}+ e ^ {i 0,5} \ sqrt {1/2} \ Ket{1}$;
+  Der folgende Assert ist erfolgreich `qubit` : befindet sich im Zustand $ \ket{\psi} = e ^ {i 0,5} \ sqrt {1/2}{0}\ Ket + e ^ {i 0,5} \ sqrt {1/2}{1}\ Ket $;
 
 
   - `AssertPhase(0.0,qubit,10e-10);`
 
 
-  `qubit` befindet sich im Status $ \ket{\psi} = e ^ {i 0,5} \ sqrt {1/2} \ Ket{0}+ e ^ {-i 0,5} \ sqrt {1/2} \ Ket{1}$;
+  `qubit`befindet sich im Status $ \ket{\psi} = e ^ {i 0,5} \ sqrt {1/2} \{0}Ket + e ^ {-i 0,5} \ sqrt {1/2} \{1}Ket $;
 
 
   - `AssertPhase(0.5,qubit,10e-10);`
 
 
-  `qubit` befindet sich im Status $ \ket{\psi} = e ^ {-i 2.2} \ sqrt {1/2} \ Ket{0}+ e ^ {i 0,2} \ sqrt {1/2} \ Ket{1}$;
+  `qubit`befindet sich im Status $ \ket{\psi} = e ^ {-i 2.2} \ sqrt {1/2} \{0}Ket + e ^ {i 0,2} \ sqrt {1/2} \{1}Ket $;
 
 
   - `AssertPhase(-1.2,qubit,10e-10);`
@@ -47,9 +47,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 2eaeb042f68a2a5c0cff65918653c37f26ab8d4b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ecfc39806fb1ffe504c76889fb36949b4fee2ed4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212241"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674321"
