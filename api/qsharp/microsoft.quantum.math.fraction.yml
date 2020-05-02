@@ -3,12 +3,12 @@ uid: microsoft.quantum.math.fraction
 name: Fraction
 type: newtype
 namespace: Microsoft.Quantum.Math
-summary: Stellt eine rationale Zahl der Formular `p/q`dar. Die ganzzahlige `p` ist das erste Element des Tupels, und `q` ist das zweite Element des Tupels.
+summary: Stellt eine rationale Zahl der Form `p/q`dar. " `p` Integer" ist das erste Element des Tupels `q` und ist das zweite Element des Tupels.
 syntax: newtype Fraction = (Int, Int);
 metadata:
-  ms.openlocfilehash: 5eee4a315cde3e04c93cc7b2a1d558ab9323273c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3059bc8bfb8e5f0cd92f373bc3999e25374dd777
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232947"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673800"

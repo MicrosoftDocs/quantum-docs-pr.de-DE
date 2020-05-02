@@ -20,12 +20,12 @@ functions:
 - uid: microsoft.quantum.errorcorrection.steanecoderecoveryz
   summary: Decoder für den Z-Teil der Gruppe "Stabilisator" des ⟦ 7, 1, 3 ⟧ Steane Quantum-Codes.
 - uid: microsoft.quantum.errorcorrection.tablelookuprecovery
-  summary: Für eine gegebene Tabelle von Pauli-Vorgängen für ein bestimmtes Register von Qubits gibt diese Funktion ein Objekt vom Typ zurück `RecoveryFn` das alle Informationen enthält, die erforderlich sind, um eine Table-Lookup-Decodierung in Bezug auf das angegebene Array von Pauli-Vorgängen auszuführen.
+  summary: Für eine gegebene Tabelle von Pauli-Vorgängen für ein bestimmtes Register von Qubits gibt diese Funktion ein Objekt vom `RecoveryFn` Typ zurück, das alle Informationen enthält, die erforderlich sind, um eine Table-Lookup-Decodierung in Bezug auf das angegebene Array von Pauli-Vorgängen auszuführen.
 operations:
 - uid: microsoft.quantum.errorcorrection.bitflipdecoder
-  summary: "\n> [!WARNING]\n> Veraltet\n\nBitflipdecoder ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.errorcorrection.decodefrombitflipcode\".\nVerwenden Sie @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nBitflipdecoder ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.errorcorrection.decodefrombitflipcode\".\nVerwenden Sie stattdessen @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"."
 - uid: microsoft.quantum.errorcorrection.bitflipencoder
-  summary: "\n> [!WARNING]\n> Veraltet\n\nBitflipcoder ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\".\nVerwenden Sie @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nBitflipcoder ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\".\nVerwenden Sie stattdessen @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"."
 - uid: microsoft.quantum.errorcorrection.decodefrombitflipcode
   summary: Decodiert aus dem [3, 1, 3]/⟦ 3, 1, 1 ⟧ Bit-Flip-Code.
 - uid: microsoft.quantum.errorcorrection.decodefromfivequbitcode
@@ -39,9 +39,9 @@ operations:
 - uid: microsoft.quantum.errorcorrection.encodeintosteanecode
   summary: Ein Codierungs Vorgang, der ein uncodiertes Quantum-Register einem codierten Quantum-Register unter dem Quantum-Code ⟦ 7, 1, 3 ⟧ Steane zuordnet.
 - uid: microsoft.quantum.errorcorrection.fivequbitcodedecoder
-  summary: "\n> [!WARNING]\n> Veraltet\n\nDer \"fvequbitcodedecoder\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\".\nVerwenden Sie @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nDer \"fvequbitcodedecoder\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\".\nVerwenden Sie stattdessen @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
 - uid: microsoft.quantum.errorcorrection.fivequbitcodeencoder
-  summary: "\n> [!WARNING]\n> Veraltet\n\n\"Fvequbitcodeencoder\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\".\nVerwenden Sie @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"Fvequbitcodeencoder\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\".\nVerwenden Sie stattdessen @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\"."
 - uid: microsoft.quantum.errorcorrection.injectpi4yrotation
   summary: Dreht ein einzelnes Qubit um die Y-Achse.
 - uid: microsoft.quantum.errorcorrection.knilldistill
@@ -49,16 +49,16 @@ operations:
 - uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
   summary: Misst den angegebenen Satz von Generatoren einer stabilistabilisgruppe.
 - uid: microsoft.quantum.errorcorrection.recover
-  summary: Führt eine einzelne Fehlerkorrektur durch einen durch einen `QECC` Typ beschriebenen quantumcode aus.
+  summary: Führt eine einzelne Fehlerkorrektur durch einen von einem `QECC` -Typ beschriebenen quantumcode aus.
 - uid: microsoft.quantum.errorcorrection.recovercss
-  summary: Führt eine einzelne Fehlerkorrektur durch einen durch einen `CSS` Typ beschriebenen quantumcode aus.
+  summary: Führt eine einzelne Fehlerkorrektur durch einen von einem `CSS` -Typ beschriebenen quantumcode aus.
 - uid: microsoft.quantum.errorcorrection.steanecodedecoder
-  summary: "\n> [!WARNING]\n> Veraltet\n\nSteanecodecodecoder ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.errorcorrection.decodefromsteanecode\".\nVerwenden Sie @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nSteanecodecodecoder ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.errorcorrection.decodefromsteanecode\".\nVerwenden Sie stattdessen @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
 - uid: microsoft.quantum.errorcorrection.steanecodeencoder
-  summary: "\n> [!WARNING]\n> Veraltet\n\nSteanecodebug ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.errorcorrection.encodeintosteanecode\".\nVerwenden Sie @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nSteanecodebug ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.errorcorrection.encodeintosteanecode\".\nVerwenden Sie stattdessen @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
 newtypes:
 - uid: microsoft.quantum.errorcorrection.css
-  summary: Stellt einen von seinem Encoder, Decoder und den zugehörigen Messverfahren für die `X` bzw. `Z` Fehlern definierten – Shor – Steane (CSS)-Code dar.
+  summary: Stellt einen von seinem Encoder, Decoder und den zugehörigen Mess Prozeduren für `X` den-bzw.- `Z` Fehler definierten hashbank – Shor – Steane (CSS)-Code dar.
 - uid: microsoft.quantum.errorcorrection.decodeop
   summary: >-
     Stellt einen Vorgang dar, der ein codiertes Register in ein physisches Register und die für die Aufzeichnung eines-Syndroms verwendeten Scratch-Qubits decodiert.
@@ -72,19 +72,19 @@ newtypes:
 
     Bei dem ersten Argument handelt es sich um das physische Register, das codiert wird, während das zweite Argument als das zu verwendende Scratch-Register angenommen wird.
 - uid: microsoft.quantum.errorcorrection.logicalregister
-  summary: Geben Sie für das Register von Physical Qubits `Qubit[]` ein, die die logischen Qubits codieren.
+  summary: Geben Sie für Register physischer Qubits `Qubit[]` ein, die die logischen Qubits codieren.
 - uid: microsoft.quantum.errorcorrection.qecc
   summary: Stellt einen Fehler Behebungs Code dar, wie er durch den Encoder, Decoder und die Mess Prozedur Messung definiert wurde.
 - uid: microsoft.quantum.errorcorrection.recoveryfn
   summary: Der Typ für die Funktion, die einer Sequenz von `Pauli[]` Vorgängen, die den erkannten Fehler beheben, ein Fehler-Syndrom zuordnet.
 - uid: microsoft.quantum.errorcorrection.syndrome
-  summary: Geben Sie für Messergebnis `Result[]` ein, die ein Fehler-Syndrom eines quantumcodes angeben.
+  summary: Geben Sie für Mess `Result[]` Ergebnisse ein, die ein Fehler-Syndrom eines quantumcodes angeben.
 - uid: microsoft.quantum.errorcorrection.syndromemeasop
   summary: Stellt einen Vorgang dar, der verwendet wird, um das-Syndrom eines Code Blocks mit Fehlerbehebung zu messen.
 metadata:
-  ms.openlocfilehash: 0a149810314453e816c7754dd535b2f3bb7d8e58
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: b4d7aaa55fee7e99b9c96ebf3cecb36706a66062
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870787"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673329"

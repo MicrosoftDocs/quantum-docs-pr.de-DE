@@ -13,7 +13,7 @@ summary: >-
 
 
   Wir gehen davon aus, dass $N $, $x $ positiv und die Stromversorgung nicht negativ ist.
-remarks: Nimmt Zeit proportional zur Anzahl der Bits in `power`, nicht an der `power` selbst.
+remarks: Nimmt Zeit proportional zur Anzahl der Bits in, `power`nicht an `power` sich selbst.
 syntax: 'function ExpModL (expBase : BigInt, power : BigInt, modulus : BigInt) : BigInt'
 input:
   content: '(expBase : BigInt, power : BigInt, modulus : BigInt)'
@@ -33,9 +33,9 @@ output:
   - isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: c314b3b34a1abf253dd9af205f766fad14abea49
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f694fa792e8aee5846ce6ec2393287eb64aca44d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233049"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673870"

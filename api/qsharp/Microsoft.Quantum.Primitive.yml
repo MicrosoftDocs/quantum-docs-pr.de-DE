@@ -3,66 +3,66 @@ uid: microsoft.quantum.primitive
 name: Microsoft.Quantum.Primitive
 functions:
 - uid: microsoft.quantum.primitive.message
-  summary: "\n> [!WARNING]\n> Veraltet\n\nDie Nachricht wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.message\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.message\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nDie Nachricht wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.message\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.message\"."
 operations:
 - uid: microsoft.quantum.primitive.assert
-  summary: "\n> [!WARNING]\n> Veraltet\n\nAssert ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.assert\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.assert\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nAssert ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.assert\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.assert\"."
 - uid: microsoft.quantum.primitive.assertprob
-  summary: "\n> [!WARNING]\n> Veraltet\n\nAssertprob ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.assertprob\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.assertprob\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nAssertprob ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.assertprob\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.assertprob\"."
 - uid: microsoft.quantum.primitive.ccnot
-  summary: "\n> [!WARNING]\n> Veraltet\n\nCcnot ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.ccnot\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.ccnot\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nCcnot ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.ccnot\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.ccnot\"."
 - uid: microsoft.quantum.primitive.cnot
-  summary: "\n> [!WARNING]\n> Veraltet\n\nCNOT ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.cnot\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.cnot\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nCNOT ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.cnot\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.cnot\"."
 - uid: microsoft.quantum.primitive.exp
-  summary: "\n> [!WARNING]\n> Veraltet\n\nExp wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.exp\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.exp\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nExp wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.exp\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.exp\"."
 - uid: microsoft.quantum.primitive.expfrac
-  summary: "\n> [!WARNING]\n> Veraltet\n\nExpfrac ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.expfrac\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.expfrac\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nExpfrac ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.expfrac\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.expfrac\"."
 - uid: microsoft.quantum.primitive.h
-  summary: "\n> [!WARNING]\n> Veraltet\n\nH ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.h\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.h\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nH ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.h\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.h\"."
 - uid: microsoft.quantum.primitive.i
-  summary: "\n> [!WARNING]\n> Veraltet\n\nIch ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.i\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.i\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nIch ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.i\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.i\"."
 - uid: microsoft.quantum.primitive.m
-  summary: "\n> [!WARNING]\n> Veraltet\n\nM ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.m\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.m\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nM ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.m\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.m\"."
 - uid: microsoft.quantum.primitive.measure
-  summary: "\n> [!WARNING]\n> Veraltet\n\nDas Measure wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.measure\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.measure\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nDas Measure wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.measure\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.measure\"."
 - uid: microsoft.quantum.primitive.multix
-  summary: "\n> [!WARNING]\n> Veraltet\n\nMultix wurde als veraltet markiert. Verwenden Sie stattdessen @ \"ApplyTo eachca (x, _)\".\nVerwenden Sie stattdessen @\"microsoft.quantum.canon.applytoeachca\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nMultix wurde als veraltet markiert. Verwenden Sie stattdessen @ \"ApplyTo eachca (x, _)\".\nVerwenden Sie stattdessen @\"microsoft.quantum.canon.applytoeachca\"."
 - uid: microsoft.quantum.primitive.r
-  summary: "\n> [!WARNING]\n> Veraltet\n\nR ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.r\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.r\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nR ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.r\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.r\"."
 - uid: microsoft.quantum.primitive.r1
-  summary: "\n> [!WARNING]\n> Veraltet\n\nR1 ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.r1\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.r1\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nR1 ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.r1\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.r1\"."
 - uid: microsoft.quantum.primitive.r1frac
-  summary: "\n> [!WARNING]\n> Veraltet\n\nR1Frac wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.r1frac\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.r1frac\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nR1Frac wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.r1frac\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.r1frac\"."
 - uid: microsoft.quantum.primitive.random
-  summary: "\n> [!WARNING]\n> Veraltet\n\nRandom ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.random\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.random\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nRandom ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.random\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.random\"."
 - uid: microsoft.quantum.primitive.reset
-  summary: "\n> [!WARNING]\n> Veraltet\n\nDas Zurücksetzen wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.reset\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.reset\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nDas Zurücksetzen wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.reset\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.reset\"."
 - uid: microsoft.quantum.primitive.resetall
-  summary: "\n> [!WARNING]\n> Veraltet\n\nResetAll ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.resetall\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.resetall\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nResetAll ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.resetall\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.resetall\"."
 - uid: microsoft.quantum.primitive.rfrac
-  summary: "\n> [!WARNING]\n> Veraltet\n\nRfrac ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.rfrac\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.rfrac\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nRfrac ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.rfrac\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.rfrac\"."
 - uid: microsoft.quantum.primitive.rx
-  summary: "\n> [!WARNING]\n> Veraltet\n\nRX ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.rx\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.rx\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nRX ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.rx\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.rx\"."
 - uid: microsoft.quantum.primitive.ry
-  summary: "\n> [!WARNING]\n> Veraltet\n\nRy ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.ry\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.ry\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nRy ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.ry\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.ry\"."
 - uid: microsoft.quantum.primitive.rz
-  summary: "\n> [!WARNING]\n> Veraltet\n\nDie RZ ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.rz\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.rz\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nDie RZ ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.rz\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.rz\"."
 - uid: microsoft.quantum.primitive.s
-  summary: "\n> [!WARNING]\n> Veraltet\n\nS ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.s\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.s\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nS ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.s\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.s\"."
 - uid: microsoft.quantum.primitive.swap
-  summary: "\n> [!WARNING]\n> Veraltet\n\nDer Austausch wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.swap\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.swap\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nDer Austausch wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.swap\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.swap\"."
 - uid: microsoft.quantum.primitive.t
-  summary: "\n> [!WARNING]\n> Veraltet\n\nT ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.t\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.t\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nT ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.t\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.t\"."
 - uid: microsoft.quantum.primitive.x
-  summary: "\n> [!WARNING]\n> Veraltet\n\nX ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.x\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.x\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nX ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.x\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.x\"."
 - uid: microsoft.quantum.primitive.y
-  summary: "\n> [!WARNING]\n> Veraltet\n\nY ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.y\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.y\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nY ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.y\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.y\"."
 - uid: microsoft.quantum.primitive.z
-  summary: "\n> [!WARNING]\n> Veraltet\n\nZ ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.z\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.z\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nZ ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.intrinsic.z\".\nVerwenden Sie stattdessen @\"microsoft.quantum.intrinsic.z\"."
 metadata:
-  ms.openlocfilehash: d3eef5b065a00cee2b31ea1a99e8814b5ca11ae0
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 541a5ef9f6c87e18526a3883b6c4570666c8eb0d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858240"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673071"

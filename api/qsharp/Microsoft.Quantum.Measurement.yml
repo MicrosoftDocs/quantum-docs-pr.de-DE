@@ -13,15 +13,15 @@ operations:
 - uid: microsoft.quantum.measurement.mresety
   summary: Misst ein einzelnes Qubit auf Y-Basis und setzt es auf den standardmäßigen Basiszustand | 0 〉 nach der Messung zurück.
 - uid: microsoft.quantum.measurement.mresetz
-  summary: Misst ein einzelnes Qubit auf `Z` Basis und setzt es auf den standardmäßigen Basiszustand | 0 〉 nach der Messung zurück.
+  summary: Misst ein einzelnes Qubit in der `Z` Basis und setzt es auf den standardmäßigen Basiszustand | 0 〉 nach der Messung zurück.
 - uid: microsoft.quantum.measurement.multim
   summary: Misst jedes Qubit in einem angegebenen Array standardmäßig.
 - uid: microsoft.quantum.measurement.settobasisstate
   summary: Legt ein Qubit auf einen angegebenen Berechnungsbasis Zustand fest, indem das Qubit gemessen und bei Bedarf ein bitflip angewendet wird.
 metadata:
-  ms.openlocfilehash: dc74db43b60728bf9924c05346bae4c6b329a265
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 8e0910bf53734ffe65aa12b06321ec9b3403133f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905759"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673143"
