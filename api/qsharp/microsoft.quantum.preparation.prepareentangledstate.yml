@@ -7,7 +7,7 @@ summary: >-
   Paar Weise entwinkel zwei Qubit-Register.
 
 
-  Das heißt, wenn zwei Register vorhanden sind, wird der vollständig entkoppelt Status $ \frac{1}{\sqrt{2}} \left (\ket{00} + \ket{11} \right) $ zwischen jedem Paar von Qubits in den entsprechenden Registern vorbereitet. dabei wird davon ausgegangen, dass jedes Register in "$ \ket{0\" beginnt. cdots 0} $ State.
+  Das heißt, wenn zwei Register vorhanden sind, wird der Status{1}"$ \frac {\sqrt{2}} \left (\ket{00} + \ket{11} \right) $" zwischen jedem Paar von Qubits in den entsprechenden Registern vorbereitet, wobei angenommen wird, dass jedes Register im Zustand "$ \ket{0\cdots 0} $" beginnt.
 syntax: 'operation PrepareEntangledState (left : Qubit[], right : Qubit[]) : Unit'
 input:
   content: '(left : Qubit[], right : Qubit[])'
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 8bbd7a3a87a55a930fda18669f75dc9a98aee981
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c761362c8793e4e08e7e702b2909f0253b8723d6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226623"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686542"

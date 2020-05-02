@@ -3,7 +3,7 @@ uid: microsoft.quantum.simulation.adiabaticstateenergyunitary
 name: AdiabaticStateEnergyUnitary
 type: operation
 namespace: Microsoft.Quantum.Simulation
-summary: Führt die Zustands Vorbereitung durch Anwenden einer `statePrepUnitary` auf den Eingabe Zustand, gefolgt von der Vorbereitung des adiabatischen Zustands mithilfe eines `adiabaticUnitary`und schließlich der Phasen Schätzung in Bezug auf `qpeUnitary`auf dem resultierenden Zustand mithilfe eines `phaseEstAlgorithm`aus.
+summary: Führt die Zustands Vorbereitung durch Anwenden `statePrepUnitary` eines auf den Eingabe Zustand, gefolgt von der adiabatischen Zustands Vorbereitung `adiabaticUnitary`mithilfe eines und schließlich der Phasen Schätzung in `qpeUnitary`Bezug auf den resultierenden Zustand mithilfe `phaseEstAlgorithm`von aus.
 syntax: 'operation AdiabaticStateEnergyUnitary (statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double), qubits : Qubit[]) : Double'
 input:
   content: '(statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double), qubits : Qubit[])'
@@ -33,7 +33,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: Ein Oracle, das einen einheitlichen Operator $U $ darstellt, der die Entwicklung für "Time $ \delta t $" unter einem Dynamical Generator mit dem "Ground State $ \ket{\phi} $" und "State State Energy $E = \phi\\, \delta t $" darstellt.
+    summary: Ein Oracle, das einen einheitlichen Operator $U $ darstellt, der die Entwicklung für "Time $ \delta t $" unter einem Dynamical Generator mit dem "Ground State $ \ket{\phi} $\\" und "Ground State Energy $E = \phi, \delta t $" darstellt.
     isOperation: true
     input:
       types:
@@ -75,9 +75,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 747e9f6d926863ce1add86d183ca2ed1dc43c8a4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2e8e3917b6f3f741fba3f03aeb467a8785b5325c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232029"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687112"

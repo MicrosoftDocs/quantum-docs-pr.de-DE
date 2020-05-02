@@ -4,15 +4,15 @@ name: BlockEncodingToReflection
 type: function
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  Konvertiert eine `BlockEncoding` in eine entsprechende `BLockEncodingReflection`.
+  Konvertiert einen `BlockEncoding` in eine- `BLockEncodingReflection`Entsprechung.
 
 
-  Das heißt, bei einem `BlockEncoding` einheitlichen $U $, der einen Operator $H $ of Interest codiert, konvertiert ihn in ein `BlockEncodingReflection` $U ' $, das denselben Operator codiert, aber auch $U ' ^ \dagger = U ' $ entspricht.
+  Das heißt, bei einem `BlockEncoding` einheitlichen $U $, der einen Operator $H $ of Interest codiert, konvertiert ihn in `BlockEncodingReflection` eine $U ' $, die denselben Operator codiert, aber auch $U ' ^ \dagger = U ' $ entspricht.
 
   Dadurch wird die Größe des zusätzlichen Registers $U $ um ein Qubit vergrößert.
 remarks: Dadurch wird die Größe des zusätzlichen Registers $U $ um ein Qubit vergrößert.
 syntax: 'function BlockEncodingToReflection (blockEncoding : Microsoft.Quantum.Simulation.BlockEncoding) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
-references: '- Hamiltona Simulation by qubitisierung Guang Hao Low, ISAL. Chuang https://arxiv.org/abs/1610.06546'
+references: '- Hamiltona Simulation by qubitisierung Guang Hao Low, ISAL. Chuanghttps://arxiv.org/abs/1610.06546'
 input:
   content: '(blockEncoding : Microsoft.Quantum.Simulation.BlockEncoding)'
   types:
@@ -22,15 +22,15 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.BlockEncodingReflection
   types:
-  - summary: Ein einheitlicher $U "$, das sich zusammen für das Registrieren `a` und `s`, dass $H $ blockiert und $U" ^ \dagger = U "entspricht.
+  - summary: Ein einheitlicher $U ' $, der sich zusammen `a` für `s` Register registriert und $H $ codiert und $U ' ^ \dagger = U ' $ entspricht.
     uid: microsoft.quantum.simulation.blockencodingreflection
 seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 47eba3c59ef30f89139830aa4d9b98d22d141d8f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e656a5ab9e187660a20420049374380ef9726647
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065621"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686919"
