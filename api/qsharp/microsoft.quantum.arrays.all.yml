@@ -4,7 +4,7 @@ name: All
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Bei Angabe eines Arrays und eines Prädikats, das für die Elemente des Arrays definiert ist, und überprüft, ob alle Elemente des Arrays dem Prädikat entsprechen.
-remarks: "Die-Funktion ist für generische Typen definiert, d. h., wenn wir über ein Array `'T[]` und eine Funktion verfügen `predicate: 'T -> Bool` können wir einen `Bool` Wert entwickeln, der angibt, ob alle Elemente `predicate`erfüllen."
+remarks: "Die-Funktion ist für generische Typen definiert, d. h., wenn ein `'T[]` Array und eine `predicate: 'T -> Bool` Funktion vorhanden sind, `Bool` können wir einen Wert entwickeln, der `predicate`angibt, ob alle Elemente erfüllen."
 examples: >-
   Der folgende Code überprüft, ob alle Elemente des Arrays ungleich 0 (null) sind:
 
@@ -28,7 +28,7 @@ input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: predicate
-    summary: Eine Funktion von `'T` zu `Bool`, die zum Überprüfen von Elementen verwendet wird.
+    summary: Eine Funktion von `'T` zu `Bool` , die zum Überprüfen von Elementen verwendet wird.
     isFunction: true
     input:
       types:
@@ -39,23 +39,23 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Ein Array von-Elementen über `'T`.
+    summary: Ein Array von-Elementen `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: Bool
   types:
-  - summary: Ein `Bool` Wert der-Funktion und der-Funktion des Prädikats, das auf alle-Elemente angewendet wird.
+  - summary: Ein `Bool` Wert der and-Funktion des Prädikats, das auf alle-Elemente angewendet wird.
     isPrimitive: true
     uid: Bool
 typeParameters:
 - uid: "'T"
   summary: Der Typ der `array` Elemente.
 metadata:
-  ms.openlocfilehash: bc21229d0468adcd41f6c460f5325cad9f09ba5c
-  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.openlocfilehash: 116a2a537c4712c968187785873c0546ec236762
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 03/26/2020
-  ms.locfileid: "80320784"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676584"

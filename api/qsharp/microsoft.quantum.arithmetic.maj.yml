@@ -7,7 +7,7 @@ summary: >-
   Dadurch wird der Vorgang für die direkte Mehrheit auf 3 Qubits angewendet.
 
 
-  Wenn wir den Zustand des Ziel-Qubit als $ \ket{z} $ bezeichnen, und Eingabe Zustände der Eingabe-Qubits als $ \ket{x} $ und $ \ket{y} $, dann führt dieser Vorgang die folgende Transformation aus: $ \ket{XYZ} \rightarrow \ket{x \oplus z} \ket{y \oplus z} \ket{\operatorname{Maj} ( x, y, z)} $.
+  Wenn wir den Zustand des Ziel-Qubit als $ \ket{z} $ und die Eingabe Zustände der Eingabe-Qubits als $ \ket{x} $ und $ \ket{y} $ bezeichnen, dieser Vorgang führt die folgende Transformation aus: $ \ket{XYZ} \rightarrow \ket{x \oplus z} \ket{y \oplus z} \ket{\operatorname{Maj} (x, y, z)} $.
 syntax: 'operation MAJ (input0 : Qubit, input1 : Qubit, target : Qubit) : Unit'
 input:
   content: '(input0 : Qubit, input1 : Qubit, target : Qubit)'
@@ -33,9 +33,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 253b6f6ee152f2aa5326a06fab120433b75a5f0b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 946ac81b0673cb7ea65aac0bc1a6df26ba09d8eb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218803"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676798"

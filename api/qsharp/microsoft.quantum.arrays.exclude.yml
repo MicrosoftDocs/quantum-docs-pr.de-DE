@@ -31,17 +31,17 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: Ein Array `output`, dass `output[0]` das erste Element von `array` ist, dessen Index nicht in `remove`angezeigt wird, sodass `output[1]` das zweite Element dieser Art ist usw.
+  - summary: Ein Array `output` , das `output[0]` das erste Element von `array` ist, dessen Index nicht in `remove`angezeigt wird, z `output[1]` . b. das zweite Element dieser Art usw.
     isArray: true
     uid: "'T"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: Der Typ der Array Elemente.
+  summary: Der Typ der Arrayelemente.
 metadata:
-  ms.openlocfilehash: 624021333e156a4da58509186bffa3074cf44f85
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 715610f2e8d0932a22d6dfdd0232e981a495fd6f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214298"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676481"

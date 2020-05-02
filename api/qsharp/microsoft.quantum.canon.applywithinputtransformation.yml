@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Canon
 summary: Bei einem Vorgang, der eine Eingabe akzeptiert, eine Funktion, die eine mit diesem Vorgang kompatible Ausgabe zurückgibt, sowie eine Eingabe für diese Funktion wendet den Vorgang mithilfe der-Funktion an, um die Eingabe in ein vom Vorgang erwartetes Formular umzuwandeln.
 examples: >-
-  Der folgende-Befehl verwendet @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian", um einen für @"Microsoft.Quantum.Arithmetic.BigEndian" Eingaben entworfenen Vorgang auf eine Eingabe des Typs @"Microsoft.Quantum.Arithmetic.LittleEndian"anzuwenden:
+  Der folgende-Befehl @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" verwendet, um einen für @"Microsoft.Quantum.Arithmetic.BigEndian" Eingaben entworfenen Vorgang auf eine Eingabe des @"Microsoft.Quantum.Arithmetic.LittleEndian"Typs anzuwenden:
 
 
   ```qsharp
@@ -54,9 +54,9 @@ seeAlso:
 - applywithinputtransformationca
 - transformedoperation
 metadata:
-  ms.openlocfilehash: f97f065cb140af86566c1f21d292a8748b1cc434
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 16a4fe250118c60a4ff6b206503baa1309b78bbd
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212683"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676299"

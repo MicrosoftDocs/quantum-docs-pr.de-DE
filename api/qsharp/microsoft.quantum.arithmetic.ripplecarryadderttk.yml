@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Arithmetic
 summary: >-
   Umkehrbarer, direkter Ripple-Carry-Wert: Addition von zwei Ganzzahlen.
 
-  Wenn zwei $n in "littleEndian" codierte ganzzahlige ganzzahlige Zahlen `xs` und `ys`und ein Qubit-Commit sind, berechnet der Vorgang die Summe der beiden Ganzzahlen, bei denen die $n minimal signifikanten Bits des Ergebnisses in `ys` enthalten sind und der Wert für das Ausführen von XoReD zum Qubit-`carry`.
+  Bei zwei $n ganzen Zahlen mit ganzen Zahlen, die in den `xs` littleEndian `ys`-Registern und, und einem Qubit-Wert codiert sind, berechnet der-Vorgang die Summe der beiden ganzen Zahlen, bei denen die $n $ geringsten `ys` signifikanten Bits des Ergebnisses in gespeichert sind und der Wert für das `carry`Ausführen von XoReD zum Qubit ist.
 remarks: Dieser Vorgang verfügt über die gleiche Funktionalität wie "ripplecarryadderd" und "ripplecarryaddercdkm", verwendet jedoch keine "Ancilla Qubits".
 syntax: 'operation RippleCarryAdderTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: >-
@@ -34,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 9c27164d8245c587b03c43606acebd0d156626bd
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8c1d67c4ffb7d2f75d70bc02be958fd08b6c6b14
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214485"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676657"

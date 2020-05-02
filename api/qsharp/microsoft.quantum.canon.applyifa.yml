@@ -7,11 +7,11 @@ summary: >-
   Wendet einen adjointable-Vorgang an, der auf einem klassischen Bit bedingt ist.
 
 
-  Wendet bei einem Vorgang `op` und einem Bitwert `bit``op` auf das `target` an, wenn `bit` `true`ist. Wenn `false`, geschieht nichts mit dem `target`.
+  Bei einem Vorgang `op` und einem Bitwert `bit`gilt `op` für das `target` , wenn `bit` gleich `true`ist. Gibt `false`an, dass nichts passiert `target`.
 
-  Das Suffix `A` gibt an, dass der anzuwendende Vorgang adjointable ist.
+  Das- `A` Suffix gibt an, dass der anzuwendende Vorgang adjointable ist.
 examples: >-
-  Im folgenden wird ein Register von Qubits auf einen Berechnungs Status vorbereitet, der durch eine klassische Bitzeichenfolge dargestellt wird, die als Array von `Bool` Werten angegeben ist:
+  Im folgenden wird ein Register von Qubits auf einen Berechnungs Status vorbereitet, der durch eine klassische Bitzeichenfolge dargestellt wird `Bool` , die als Array von Werten angegeben ist:
 
 
   ```Q#
@@ -65,9 +65,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: 2c62617251d7795f19fa67f7de01859679c94313
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fca10f4a39c8cdc3941d9a7d06e47e1c6dfefa74
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213873"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676338"

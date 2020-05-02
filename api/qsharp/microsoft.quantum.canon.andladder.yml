@@ -7,7 +7,7 @@ summary: >-
   Führt eine gesteuerte "and-Leiter" für ein Register der Ziel-Qubits aus.
 
 
-  Dieser Vorgang wendet eine Transformation an, die durch die folgende Zuordnung der Berechnungsbasis beschrieben wird: $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1, \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}} , \end{align} $ $, wobei $ \ket{x\_1, \dots, x\_n} $ auf die Berechnungsbasis Zustände von `controls`verweist, und WHERE $ \ket{y\_1, \dots, y\_{n-1}} $ bezieht sich auf die Berechnungsbasis Zustände der `targets`.
+  Durch diesen Vorgang wird eine Transformation angewendet, die von der folgenden Zuordnung der Berechnungsbasis beschrieben wird. $ $ \begin{align}\_\ket{x 1,\_\dots, x n}\_\ket{y 1,\_\dots, y {n-1}} \mapsto\_\ket{x 1,\_\dots, x n}\_\ket{y 1\_\oplus (x\_1 \land x 2),\_\dots, y {n-1}\_\oplus (x\_1 \land x 2 \land \cdots \land x\_{n-1}}, \end{align} $ $, wobei\_$ \ket{x 1\_, \dots, x n} $ bezieht sich `controls`auf die Berechnungsbasis Zustände von, und\_WHERE $ \ket{y\_1, \dots, y {n-1}} $ bezieht `targets`sich auf die Berechnungsbasis Zustände von.
 remarks: >-
   - Wird als Teil von <xref:microsoft.quantum.canon.applymulticontrolledc> und <xref:microsoft.quantum.canon.applymulticontrolledca>verwendet.
 
@@ -24,14 +24,14 @@ input:
     summary: >-
       Ein Register von Qubits, das als Steuerelemente für die-und-Leiter verwendet werden soll.
 
-      Mit diesem Vorgang bleiben die Berechnungsbasis Zustände `controls` invariant.
+      Mit `controls` diesem Vorgang bleiben die Berechnungsbasis Zustände invariant.
 
-      Die Länge `controls` muss mindestens 2 betragen und muss gleich 1 und der Länge `targets`sein.
+      Die Länge von `controls` muss mindestens 2 betragen und muss gleich 1 und der Länge von `targets`sein.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: targets
-    summary: Die Länge `targets` muss mindestens 1 betragen und gleich der Länge `controls` minus 1 sein.
+    summary: Die Länge von `targets` muss mindestens 1 betragen und gleich der Länge von `controls` minus 1 sein.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -43,9 +43,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: bf5b262ca55bea542218356918cf36eb95502967
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 4cc74315145176fd3a2258a3d92b2f2dfb4d66d3
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871038"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676388"
