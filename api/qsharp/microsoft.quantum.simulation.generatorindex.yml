@@ -4,19 +4,19 @@ name: GeneratorIndex
 type: newtype
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  Stellt einen einzelnen primitiven Begriff in der Menge aller dynamischen Generatoren dar, z. b. hermitian-Operatoren, für die eine Zuordnung von diesem Generator zur Zeit Weiterentwicklung durch diesen Generator über `EvolutionSet`vorhanden ist.
+  Stellt einen einzelnen primitiven Begriff in der Menge aller dynamischen Generatoren dar, z. b. "hermitian"-Operatoren, für die eine Zuordnung von diesem Generator zur Zeit Weiterentwicklung durch diesen `EvolutionSet`Generator vorhanden ist.
 
 
   Beim ersten Element (int [], Double []) handelt es sich um Indizes, die einen einzelnen Begriff aufweisen. beispielsweise wird die Pauli-Zeichenfolge XXY mit Koeffizient 0,5 von ([1, 1, 2], [0,5]) indiziert. Alternativ kann hamiltonane, die durch eine kontinuierliche Variable, wie z. b. X cos und Y Sin, parametrisiert werden, z. b. durch ([], [ge]) dargestellt werden. Das zweite Element indiziert das Subsystem, auf dem der Generator agiert.
 remarks: >-
   > [!WARNING]
 
-  > Die Interpretation eines `GeneratorIndex` ist nicht mit einem Verweis auf einen bestimmten Satz von Generatoren definiert.
+  > Die Interpretation eines `GeneratorIndex` ist nicht definiert, außer mit einem Verweis auf einen bestimmten Satz von Generatoren.
 
 
   ### <a name="examples"></a>Beispiele
 
-  Mit <xref:microsoft.quantum.simulation.paulievolutionset>wird der Operator $ \pi X_2 X_5 Y_9 $ wie folgt dargestellt:
+  Mithilfe <xref:microsoft.quantum.simulation.paulievolutionset>von wird der Operator $ \pi X_2 X_5 Y_9 $ wie folgt dargestellt:
 
 
   ```qsharp
@@ -29,9 +29,9 @@ seeAlso:
 - evolutionset
 - paulievolutionset
 metadata:
-  ms.openlocfilehash: dc5f5b96a6d1708e94de918a65cbd68e0af06192
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d633ecdc11075eb45a40a58bb2a1ca67af577c3c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067049"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82655161"
