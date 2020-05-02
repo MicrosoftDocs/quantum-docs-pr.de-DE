@@ -19,13 +19,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true` nur dann, wenn genau eine `a` und `b` `true`ist.'
+  - summary: '`true`nur dann, wenn genau eines von `a` und `b` ist `true`.'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: a876025d8b3a928e91d686b90f8ceccd65cc1e7c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: de35d7427d3de31e27465319bf8fa96ba2fb9aed
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235140"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682836"

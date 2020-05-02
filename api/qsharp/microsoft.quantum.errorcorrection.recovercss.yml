@@ -3,19 +3,19 @@ uid: microsoft.quantum.errorcorrection.recovercss
 name: RecoverCSS
 type: operation
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: Führt eine einzelne Fehlerkorrektur durch einen durch einen `CSS` Typ beschriebenen quantumcode aus.
+summary: Führt eine einzelne Fehlerkorrektur durch einen von einem `CSS` -Typ beschriebenen quantumcode aus.
 syntax: 'operation RecoverCSS (code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
 input:
   content: '(code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
   - name: code
-    summary: Ein Quantum CSS-Code zur Fehlerbehebung, der als `CSS` Typ verpackt ist, beschreibt die Codierung und Decodierung von Quantum-Daten und die Art und Weise, wie Fehler Syndrome gemessen werden müssen.
+    summary: Ein Quantum CSS-Fehler Behebungs Code, der `CSS` als Typ verpackt ist, beschreibt die Codierung und Decodierung von Quantum-Daten und die Art und Weise, wie Fehler-Syndrome gemessen werden müssen.
     uid: microsoft.quantum.errorcorrection.css
   - name: fnX
-    summary: Eine `RecoveryFn`, die jedes $X $ Error-Syndrom den `Pauli[]` Vorgängen zuordnet, die den erkannten Fehler beheben.
+    summary: Ein `RecoveryFn` , der die einzelnen $X $ Error-Syndrom `Pauli[]` den Vorgängen zuordnet, die den erkannten Fehler korrigieren.
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: fnZ
-    summary: Eine `RecoveryFn`, die jedes $Z $ Error-Syndrom den `Pauli[]` Vorgängen zuordnet, die den erkannten Fehler beheben.
+    summary: Ein `RecoveryFn` , der die einzelnen $Z $ Error-Syndrom `Pauli[]` den Vorgängen zuordnet, die den erkannten Fehler korrigieren.
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: logicalRegister
     summary: Ein Array von Qubits, in denen der stabilikocodecode definiert ist.
@@ -30,9 +30,9 @@ seeAlso:
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
 metadata:
-  ms.openlocfilehash: 4e07e66816c347aa9a7e1f06ebe88f65b2d040ce
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8c9504e985b224421d3eb66b0d7e9bc0ef8f2e96
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220265"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682271"

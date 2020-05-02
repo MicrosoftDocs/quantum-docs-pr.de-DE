@@ -3,7 +3,7 @@ uid: microsoft.quantum.simulation.addgeneratorsystems
 name: AddGeneratorSystems
 type: function
 namespace: Microsoft.Quantum.Simulation
-summary: Fügt zwei `GeneratorSystem`s hinzu, um eine neue `GeneratorSystem`zu erstellen.
+summary: Fügt zwei `GeneratorSystem`s hinzu, um einen `GeneratorSystem`neuen zu erstellen.
 syntax: 'function AddGeneratorSystems (generatorSystemA : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemB : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: '(generatorSystemA : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemB : Microsoft.Quantum.Simulation.GeneratorSystem)'
@@ -17,14 +17,14 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
-  - summary: Eine `GeneratorSystem`, die ein System darstellt, das die Summe der Eingabe Generator Systeme darstellt.
+  - summary: Ein `GeneratorSystem` , das ein System darstellt, das die Summe der Eingabe Generator Systeme darstellt.
     uid: microsoft.quantum.simulation.generatorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
 metadata:
-  ms.openlocfilehash: 33155c0af61281bc34b7af5ecb6afe404d3e427d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 09ce9de385a86207d69224ed3d90a3294f93fdb4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066063"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683076"

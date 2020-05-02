@@ -7,7 +7,7 @@ summary: >-
   Implementiert den Knill Magic State-Destillations Algorithmus.
 
 
-  Bei 15 ungefähren Kopien eines Magic State $ $ \begin{align} \cos\bruchteil {\pi}{8} \ket{0} + \sin \bruchteil {\pi}{8} \ket{1} \end{align} ergibt $ $ eine Kopie mit höherer Qualität.
+  Bei 15 ungefähren Kopien eines Magic State $ $ \begin{align} \cos\bruchteil {\pi}{8} \ket{0} + \sin \bruchteil {\pi}{8} \ket{1} \end{align} ergibt $ $ eine Kopie einer höheren Qualität.
 remarks: >-
   Wir folgen dem Algorithmus von "Knill".
 
@@ -20,20 +20,20 @@ input:
   content: '(roughMagic : Qubit[])'
   types:
   - name: roughMagic
-    summary: Ein Register von 15 Qubits, das ungefähre Kopien eines magischen Zustands enthält. Nach der Anwendung dieser Vorgehensweise wird `roughMagic[0]` eine Kopie der höheren Qualität enthalten, und der Rest des Registers wird auf den Status $ \ket{00\cdots 0} $ zurückgesetzt.
+    summary: Ein Register von 15 Qubits, das ungefähre Kopien eines magischen Zustands enthält. Die folgende Anwendung dieses Destillations Verfahrens `roughMagic[0]` enthält eine Kopie der höheren Qualität, und der Rest des Registers wird auf den Status $ \ket{00\cdots 0} $ zurückgesetzt.
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
   content: Bool
   types:
-  - summary: Wenn `true`, wird die Prozedur erfolgreich ausgeführt, und die Kopie der höheren Qualität sollte akzeptiert werden. Wenn `false`, ist die Prozedur fehlgeschlagen, und der Status des Registers sollte als nicht definiert angesehen werden.
+  - summary: Wenn `true`, dann wird die Prozedur erfolgreich ausgeführt, und die Kopie der höheren Qualität sollte akzeptiert werden. Gibt `false`an, dass die Prozedur fehlgeschlagen ist und der Status des Registers als nicht definiert angesehen werden soll.
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 81d87b3dcd6f669a63847e331865b1f2c389f3ce
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 5a8e4c43ff21491b35efedb8f60717979e44f0ed
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226725"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682361"

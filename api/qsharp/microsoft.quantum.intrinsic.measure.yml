@@ -7,9 +7,9 @@ summary: >-
   Führt eine gemeinsame Messung von einem oder mehreren Qubits in den angegebenen Pauli-Basen aus.
 
 
-  Das Ausgabe Ergebnis wird durch die Verteilung angegeben: \begin{align} \pr (\texttt{Zero} | \ket{\psi}) = \bruch12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align}, wobei $P _I $ das $i $ th-Element von @no__ t_0_ und WHERE $N = \texttt{verlän} (\texttt{Bases}) $.
+  Das Ausgabe Ergebnis wird durch die Verteilung angegeben: \begin{align} \pr (\texttt{Zero} | \ket{\psi}) = \bruch12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align}, wobei $P _I $ das $i $ th-Element `bases`von ist. und WHERE $N = \texttt{verlän} (\texttt{Bases}) $.
 
-  Das heißt, die Messung gibt eine `Result` $d $ zurück, sodass der Eigen Wert des beobachteten Mess Effekts $ (-1) ^ d $ ist.
+  Das heißt, die Messung gibt `Result` eine $d $ zurück, sodass der Eigen Wert des beobachteten Mess Effekts $ (-1) ^ d $ ist.
 remarks: Wenn die Längen Array-und Qubit-Arrays unterschiedlich lang sind, schlägt der Vorgang fehl.
 syntax: 'operation Measure (bases : Pauli[], qubits : Qubit[]) : Result'
 input:
@@ -28,13 +28,13 @@ input:
 output:
   content: Result
   types:
-  - summary: '`Zero`, wenn der Eigen Wert $ + $1 festgestellt wird, und `One`, wenn der Eigen Wert $-$1 festgestellt wird.'
+  - summary: '`Zero`, wenn der Eigen Wert $ + $1 festgestellt wird `One` , und, wenn der Eigen Wert $-$1 festgestellt wird.'
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 65390f851d82eb579d89072dc770f3ce077ce515
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a2f89d1eea48ac0a4dab7e35ef661d89a40ae84a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73234103"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682854"

@@ -13,19 +13,19 @@ input:
     isPrimitive: true
     uid: Double
   - name: generatorSystem
-    summary: Der `GeneratorSystem`, der multipliziert werden soll.
+    summary: Die zu multiplizierende `GeneratorSystem`.
     uid: microsoft.quantum.simulation.generatorsystem
 output:
   content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
-  - summary: Eine `GeneratorSystem` die ein System mit Koeffizienten darstellt, `multiplier` größer ist.
+  - summary: Ein `GeneratorSystem` , das ein System mit Koeffizienten darstellt, das `multiplier` größer ist.
     uid: microsoft.quantum.simulation.generatorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
 metadata:
-  ms.openlocfilehash: e96870c4e59773542924dcd247aedc498d3f3307
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: efdc509ce877e58db1fb365795f2913ce2556563
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065451"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682568"
