@@ -20,7 +20,7 @@ functions:
 - uid: microsoft.quantum.arrays.filtered
   summary: Bei Angabe eines Arrays und eines Prädikats, das für die Elemente des Arrays definiert ist, wird ein Array zurückgegeben, das aus den Elementen besteht, die das Prädikat erfüllen.
 - uid: microsoft.quantum.arrays.fold
-  summary: Iteriert eine Funktion, die durch ein Array `array``f`, wobei `f(f(f(initialState, array[0]), array[1]), ...)`zurückgegeben wird.
+  summary: Iteriert eine Funktion `f` durch ein Array `array`und gibt `f(f(f(initialState, array[0]), array[1]), ...)`zurück.
 - uid: microsoft.quantum.arrays.head
   summary: Gibt das erste Element des Arrays zurück.
 - uid: microsoft.quantum.arrays.indexof
@@ -69,9 +69,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: Gibt ein neues Array zurück, das aus den Bildern des ursprünglichen Arrays unter dem Vorgang besteht, wenn ein Array und ein Vorgang angegeben sind, der für die Elemente des Arrays definiert ist.
 metadata:
-  ms.openlocfilehash: 422564f632efd7a6d093d78358a15ee012f918f8
-  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.openlocfilehash: a9088a037953f62ab7193ea525a6e71d43fe2fb2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 03/26/2020
-  ms.locfileid: "80320736"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673389"

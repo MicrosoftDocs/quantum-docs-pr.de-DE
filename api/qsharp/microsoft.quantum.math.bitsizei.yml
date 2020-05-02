@@ -4,7 +4,7 @@ name: BitSizeI
 type: function
 namespace: Microsoft.Quantum.Math
 summary: >-
-  Bei einer nicht negativen ganzzahligen `a`wird die Anzahl der Bits zurückgegeben, die für die Darstellung `a`erforderlich sind.
+  Gibt für eine nicht negative ganze `a`Zahl die Anzahl der Bits zurück, die zur `a`Darstellung von erforderlich sind.
 
 
   Das heißt, die kleinste $n $ wird so zurückgegeben, dass $a < 2 ^ n $.
@@ -19,13 +19,13 @@ input:
 output:
   content: Int
   types:
-  - summary: Die bitgröße `a`.
+  - summary: Die bitgröße von `a`.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 5faf7961011c666b333cc9befc3da9af4872330d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8bbf4e02faeaca1731ce2461160ffcb374448948
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230176"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673976"

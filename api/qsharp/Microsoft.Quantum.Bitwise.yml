@@ -6,7 +6,7 @@ functions:
   summary: >-
     Gibt das bitweise and von zwei Ganzzahlen zurück.
 
-    Dies führt die gleiche Berechnung durch wie der integrierte `&&&`-Operator.
+    Dies führt die gleiche Berechnung durch wie der integrierte `&&&` Operator.
 - uid: microsoft.quantum.bitwise.leftshiftedi
   summary: Verschiebt die bitweise Darstellung einer Zahl nach links um eine angegebene Anzahl von Bits.
 - uid: microsoft.quantum.bitwise.leftshiftedl
@@ -15,12 +15,12 @@ functions:
   summary: >-
     Gibt das bitweise NOT einer Ganzzahl zurück.
 
-    Dies führt die gleiche Berechnung durch wie der integrierte `~~~`-Operator.
+    Dies führt die gleiche Berechnung durch wie der integrierte `~~~` Operator.
 - uid: microsoft.quantum.bitwise.or
   summary: >-
     Gibt das bitweise OR von zwei Ganzzahlen zurück.
 
-    Dies führt die gleiche Berechnung durch wie der integrierte `|||`-Operator.
+    Dies führt die gleiche Berechnung durch wie der integrierte `|||` Operator.
 - uid: microsoft.quantum.bitwise.parity
   summary: Gibt die bitweise Parität einer Ganzzahl zurück (1, wenn die binäre Darstellung eine ungerade Anzahl von Elementen enthält, andernfalls 0).
 - uid: microsoft.quantum.bitwise.rightshiftedi
@@ -33,14 +33,14 @@ functions:
   summary: >-
     Gibt das bitweise exklusive OR (XOR) zweier ganzer Zahlen zurück.
 
-    Dies führt die gleiche Berechnung durch wie der integrierte `^^^`-Operator.
+    Dies führt die gleiche Berechnung durch wie der integrierte `^^^` Operator.
 - uid: microsoft.quantum.bitwise.zbits
   summary: Gibt eine ganze Zahl zurück, die die Z-Bits eines Arrays von Pauli-Operatoren darstellt.
 summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält Funktionen zum agieren der bitweisen Darstellung klassischer Datentypen."
 metadata:
-  ms.openlocfilehash: c474d92e7a40f5491b21d80e00294fbdff96a62a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fb52d02d38d31b96b46dfc469ee07ee62e29a9d4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210949"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673379"

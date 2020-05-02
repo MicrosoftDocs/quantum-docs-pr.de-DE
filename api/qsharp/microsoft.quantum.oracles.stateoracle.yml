@@ -14,14 +14,14 @@ summary: >-
 
   - Das System registriert $s $, das den gewünschten Quantum-Status $ \ket{\psi}\_s $ speichert.
 remarks: >-
-  Dieses Oracle ist durch $ $ o\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_\_f \ket {\ PSI}{0}s + \sqrt{1-| \lambda | ^ 2} \ket \_-cdots definiert. , $ $ agiert auf der Grundlage des Berechnungs Zustands $ \ket{0}\_{f} \ket{0}\_s $, um den Ziel Status $ \ket{\psi}\_s $ mit Amplitude $ \lambda $ in der durch $ \ket{1}\_f $ gekennzeichneten Basis zu erstellen.
+  Dieses{0}\_Oracle ist definiert durch $ $ o\ket {{0}\_f} \ket s = \lambda\ket{1}\_f \ket {\ PSI\_} s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f \ cdots, $ $ agiert auf der Grundlage des Berechnungs Zustands $ \ket{0}\_{f} \ket{0}\_s $, um den Ziel Status $\_\ket{\psi} s $ mit Amplitude $ \lambda $ in der durch $ \ket{1}\_f $ gekennzeichneten Basis zu erstellen.
 
   Der erste Parameter ist ein Index für das Qubit-Register von $ \ket{0}\_f $. Der zweite Parameter umfasste beide Register.
 syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 1faa47c21e43355ed036498adf4e823ff3f8a0e4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fe7ced83927d709bcc6fe82d8866b221446c7d73
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067219"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673480"
