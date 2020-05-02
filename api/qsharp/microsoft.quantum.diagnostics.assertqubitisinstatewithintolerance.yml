@@ -7,7 +7,7 @@ summary: >-
   Bestätigt, dass ein Qubit im erwarteten Zustand ist.
 
 
-  `expected` stellt einen komplexen Vektor dar, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
+  `expected`stellt einen komplexen Vektor dar, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
 
   Das erste Element der Tupel, das jede $a $ darstellt, $b $ der reelle Teil der komplexen Zahl ist, während das zweite Element der imaginäre Teil ist.
 
@@ -37,7 +37,7 @@ remarks: >-
   ```
 
 
-  Die Toleranz ist die $L\_{\infty} $ Distance zwischen 3 dimensionalem Real Vector (x, x ₃, x ₄) definiert durch $ \langle\psi | \psi\rangle = x\_1 I + x\_2 x + x\_3 Y + x\_4 Z $ und Real Vector (Y 100 , y ₃, y ₄) definiert durch p = y ₁ I + y. X + y ₃ y + y ₄ Z WHERE p ist die Dichte Matrix, die dem Status des Registers entspricht.
+  Die Toleranz ist die $L\_{\infty} $ Distance zwischen 3 dimensionalem Real Vector (x, x ₃, x ₄) definiert durch $ \langle\psi | \psi\rangle = x\_1 I + x\_2 x + x\_3 Y + x\_4 Z $ und Real Vector (Y. y ₃, y ₄) definiert durch p = Y ₁ I + y. x + y ₃ y + y ₄ Z WHERE p ist die Dichte Matrix, die dem Status des Registers entspricht.
 
   Dies gilt nur unter der Annahme, dass TR (p) und TR (| ψ ⟩ ⟨ ψ |) gleich 1 sind (z. b. x ₁ = 1/2, y ₁ = 1/2).
 
@@ -60,7 +60,7 @@ input:
   content: '(expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double)'
   types:
   - name: expected
-    summary: Es wurden komplexe Verstärkung für $ \ket{0}$ und $ \ket{1}$ erwartet.
+    summary: Es wurden komplexe Verstärkung für "$ \ket{0}$" bzw.{1}"$ \ket $" erwartet.
     types:
     - uid: microsoft.quantum.math.complex
     - uid: microsoft.quantum.math.complex
@@ -81,9 +81,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 8b43bac19173c5ae5a11ff6879a03209c32e7c76
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 77d28c122a44f39924242dedb6bd6163974e18c1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227116"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82656597"
