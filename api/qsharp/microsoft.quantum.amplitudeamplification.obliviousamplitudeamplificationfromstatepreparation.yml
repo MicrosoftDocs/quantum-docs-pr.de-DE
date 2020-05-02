@@ -5,13 +5,13 @@ type: function
 namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: Pervirone Amplitude-Verstärkung durch Oracles für partielle Reflektionen.
 remarks: >-
-  Dies erzwingt strengere Bedingungen in Form der zusätzlichen Start-und Ziel Zustände als in `AmpAmpObliviousByReflectionPhases`.
+  Dies erzwingt strengere Bedingungen in Form der zusätzlichen Start-und Ziel Zustände als `AmpAmpObliviousByReflectionPhases`in.
 
-  Es wird davon ausgegangen, dass $A \ket{0}\_{0}"\_A = \ket{\text{Start}}\_{FA} $" den zusätzlichen Startstatus $ \ket{\text{Start}}\_{FA} $ von der Berechnungsbasis $ \ket{0}\_{0}f \ket $ vorbereitet.
+  Es wird davon ausgegangen, dass $A{0}\_\ket f{0}\_\ket A\_= \ket{\text{Start}} {Fa} $ den zusätzlichen Startstatus $\_\ket{\text{Start}} {FA} $ von der Berechnungsbasis $ \ket{0}\_f \ket{0}$ vorbereitet.
 
-  Es wird davon ausgegangen, dass der Ziel Status durch $ \ket{1}\_f $ gekennzeichnet ist.
+  Es wird davon ausgegangen, dass der Ziel Status durch "$ \ket{1}\_f $" gekennzeichnet ist.
 
-  Es wird davon ausgegangen, dass \begin{align} o\ket {\ Text {Start}}\_{FA} \ket{\psi}\_s = \lambda\ket{1}\_fi\ket {\ Text {Anything}}\_a\ket {\ Text {Target}}\_s U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_fi\cdots, \end{align} für einige einheitliche $U $.
+  Es wird davon ausgegangen, dass \begin{align} o\ket {\ Text {Start\_\_}} {FA} \ket{\psi} s = \lambda\ket{1}\_f \ket {\ Text {Anything\_}} a\ket {\ Text {Target\_}} s U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2}{0}\_\ket f \ cdots, \end{align} für einige einheitliche $U $.
 syntax: 'function ObliviousAmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int)'
@@ -23,7 +23,7 @@ input:
     summary: Einheitlicher Oracle-$A $, der den Status des zusätzlichen Starts vorbereitet
     uid: microsoft.quantum.oracles.deterministicstateoracle
   - name: signalOracle
-    summary: Einheitlicher Oracle-$O $ vom Typ `ObliviousOracle`, der gemeinsam mit dem Hilfssystem und dem System Register agiert
+    summary: Einheitlicher Oracle-$O $ vom `ObliviousOracle` Typ, der gemeinsam mit dem Hilfssystem und dem System Register agiert
     uid: microsoft.quantum.oracles.obliviousoracle
   - name: idxFlagQubit
     summary: Index für Single-Qubit-Flag-Register
@@ -50,9 +50,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: fa44068c55a1bb92f8827095889f9c3b4d6f1011
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: adc6f48a5d335eb9dc92dcb13425de900b5c8563
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872443"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680138"

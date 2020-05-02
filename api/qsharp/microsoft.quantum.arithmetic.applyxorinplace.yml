@@ -7,10 +7,10 @@ summary: >-
   Wendet eine bitweise XOR-Operation zwischen einer klassischen Ganzzahl und einer ganzen Zahl an, die durch ein Register von Qubits dargestellt wird.
 
 
-  Wendet `X` Vorgänge auf Qubits in einem Little-in-Register-Register auf der Grundlage von 1 Bits in einer ganzen Zahl an.
+  Wendet `X` Vorgänge auf Qubits in einem Little-d-Register auf der Grundlage von 1 Bits in einer ganzen Zahl an.
 
 
-  Wir bezeichnen `value` von a und lassen y eine Ganzzahl ohne Vorzeichen sein, die in `target`codiert ist. dann führt `InPlaceXorLE` einen Vorgang aus, der von der folgenden Zuordnung bereitgestellt wird: $ \ket{y}\rightarrow \ket{y\oplus a} $, wobei $ \oplus $ der bitweise exklusive OR-Operator ist.
+  `value` Beachten Sie, dass eine ganze Zahl ohne Vorzeichen ist, die in `target`codiert ist, und führen Sie dann `InPlaceXorLE` einen von der folgenden Zuordnung angegebenen Vorgang aus: $ \ket{y}\rightarrow \ket{y\oplus a} $, wobei $ \oplus $ der bitweise exklusive OR-Operator ist.
 syntax: 'operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -20,7 +20,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Ein Quantum-Register, das verwendet wird, um `value` in Little-in-ddian-Codierung zu speichern.
+    summary: Ein Quantum-Register, das zum Speichern `value` von in Little-d-Codierungen verwendet wird.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 9d3d837d92537cc5d51a80e8e1c83c230b7acc28
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 27568274d343242f3b3bd0eef8de6e48d546de1f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871174"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679911"

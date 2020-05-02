@@ -7,13 +7,13 @@ summary: >-
   Führt ein modulares Inkrement für ein Qubit-Register durch eine ganzzahlige Konstante aus.
 
 
-  Geben Sie `increment` durch $a $ an, `modulus` durch $N $ und eine ganze Zahl, die in `target` durch $y $ codiert ist.
+  `increment` Geben Sie $a $ an, indem Sie `modulus` $N $ und Integer in `target` durch $y $ codiert haben.
 
   Anschließend führt der Vorgang die folgende Transformation aus: \begin{align} \ket{y} \mapsto \ket{(y + a) \operatschmue{mod} N} \end{align} ganze Zahlen werden im Little-Endian-Format codiert.
 remarks: >-
   Geht davon aus, dass der Anfangswert von Target kleiner als $N $ und die Inkrement-$a $ kleiner als $N $ ist.
 
-  Beachten Sie, dass <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger> denselben Vorgang in `PhaseLittleEndian` Basis implementiert.
+  Beachten Sie <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger> , dass denselben Vorgang in der `PhaseLittleEndian` Basis implementiert.
 syntax: 'operation IncrementByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -27,7 +27,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Ganzzahliger $y $ in `LittleEndian` Format, dem `increment` $a $ hinzugefügt wird.
+    summary: Ganzzahliger $y `LittleEndian` $ im `increment` Format, dem $a $ hinzugefügt wird.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -40,9 +40,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.incrementphasebymodularinteger
 metadata:
-  ms.openlocfilehash: 975d4548eadbc61f8174b6719d067ffed32797dd
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 53faa65d67629d0e4c73efc03724cb4b4b30675d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871599"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679539"

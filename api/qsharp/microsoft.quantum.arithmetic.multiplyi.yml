@@ -3,11 +3,11 @@ uid: microsoft.quantum.arithmetic.multiplyi
 name: MultiplyI
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Multiplizieren von ganzzahligen `xs` nach ganzzahligen `ys` und Speichern des Ergebnisses in `result`, das anfänglich NULL sein muss.
+summary: Multiplizieren `xs` Sie Integer `ys` nach Ganzzahl, und `result`speichern Sie das Ergebnis in, das anfänglich NULL sein muss.
 remarks: >-
   Verwendet einen standardmäßigen Verschiebungs-und Add-Ansatz zum Implementieren der Multiplikation.
 
-  Die kontrollierte Version wurde verbessert, indem $x _I $ in ein Ancilla-Qubit kopiert wurde, das von den Steuerelement-Qubits abhängig ist, und dann die Addition für das Ancilla-Qubit gesteuert wurde.
+  Die kontrollierte Version wurde verbessert, indem $x _I $ in ein von den Steuerelement-Qubits vorgelegter Ancilla-Qubit kopiert und anschließend die Addition für das Ancilla-Qubit gesteuert wurde.
 syntax: 'operation MultiplyI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 5af23390ef67bf339e816e4e8af1d3f52847aaa7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fcb55b47c0d5ca82736e8c3da14190daffd2b414
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218735"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679486"

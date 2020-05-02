@@ -7,7 +7,7 @@ summary: >-
   Erhöht mithilfe von Phasen Drehungen ein unsigniertes Quantum-Register durch eine klassische Ganzzahl.
 
 
-  Nehmen wir an, dass `target` eine Ganzzahl ohne Vorzeichen $x $ in einer Little-in-Codierung codiert und `increment` gleich $a $ ist.
+  Angenommen, `target` das codiert eine Ganzzahl ohne Vorzeichen $x $ in einer Little-in-codiercodierung und `increment` ist gleich $a $.
 
   Anschließend implementiert dieser Vorgang die einheitliche $ \ket{x} \mapsto \ket{x + a} $, wobei die Addition Modulo $2 ^ n $ ist, wobei $n = \texttt{length (Target!)} $.
 remarks: >-
@@ -21,7 +21,7 @@ input:
   content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
   - name: increment
-    summary: Die ganze Zahl, um die die `target` inkrementiert wird.
+    summary: Die ganze Zahl, um `target` die die inkrementiert wird.
     isPrimitive: true
     uid: Int
   - name: target
@@ -39,9 +39,9 @@ seeAlso:
 - incrementbyintegerbe
 - incrementbyintegerle
 metadata:
-  ms.openlocfilehash: 379e643826ca54e123c8b855f4bba48a9d79a137
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2893d432b4043bbacb425f3ae42cbbdd3d4dc225
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219041"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679518"
