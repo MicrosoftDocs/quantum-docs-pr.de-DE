@@ -3,7 +3,7 @@ uid: microsoft.quantum.measurement.mresetz
 name: MResetZ
 type: operation
 namespace: Microsoft.Quantum.Measurement
-summary: Misst ein einzelnes Qubit auf `Z` Basis und setzt es auf den standardmäßigen Basiszustand | 0 〉 nach der Messung zurück.
+summary: Misst ein einzelnes Qubit in der `Z` Basis und setzt es auf den standardmäßigen Basiszustand | 0 〉 nach der Messung zurück.
 syntax: 'operation MResetZ (target : Qubit) : Result'
 input:
   content: '(target : Qubit)'
@@ -15,13 +15,13 @@ input:
 output:
   content: Result
   types:
-  - summary: Das Ergebnis der Messung `target` in der Pauli-$Z $.
+  - summary: Das Ergebnis der Messung `target` im Pauli-$Z $.
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: a0a07ec90e36b06640ff66340b7a3d979251b0ff
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 28b0de7e447156d327e165f4db01bdf625e984d6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231179"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681385"

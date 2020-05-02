@@ -10,16 +10,16 @@ summary: >-
   Die Eingabe für den Oracle-$O $ lautet wie folgt:
 
 
-  - Das Register, mit dem der gewünschte Quantum-Status $ \ket{\psi}\_s $ gespeichert wird.
+  - Das Register, mit dem der gewünschte quantenstatus $ \ket{\psi}\_s $ gespeichert wird.
 remarks: >-
-  Dieses Oracle, das durch $O \ket{0}= \ket{\psi} $ definiert ist, agiert auf der Grundlage des Berechnungs Zustands $ \ket{0}$, um den Status "$ \ket{\psi} $" zu erstellen.
+  Dieses durch $O \ket{0}= \ket{\psi} $ definierte Oracle agiert auf der Grundlage des Berechnungs Zustands $ \ket{0}$ zum Erstellen des Zustands $ \ket{\psi} $.
 
   Der erste Parameter ist das Qubit-Register von $ \ket{\psi} $.
 syntax: newtype DeterministicStateOracle = (Qubit[] => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: bc10b84502866d1f5e19b28e77e54c1b10d01b28
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 35d4b0243fac954c483a81ae1cccb46b44759ca0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231128"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681304"

@@ -9,24 +9,24 @@ input:
   content: '(idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle)'
   types:
   - name: idxFlagQubit
-    summary: 'Der Index für das Flag-Qubit des `stateOracle` $A $, der explizit für zwei Register agiert: das Flag $f $ und das System $s $, z. b. $A \ket{0}\_f\ket {\ PSI}\_s $.'
+    summary: 'Der Index für das Flag-Qubit des `stateOracle` $A $, das explizit für zwei Register agiert: das Flag $f $ und das System $s $, z. b. $A{0}\_\ket f\ket {\\_PSI} s $.'
     isPrimitive: true
     uid: Int
   - name: stateOracle
-    summary: Ein Status Vorbereitungs-Oracle $A $ vom Typ `StateOracle`.
+    summary: Ein Status Vorbereitungs-Oracle $A $ vom `StateOracle`Typ.
     uid: microsoft.quantum.oracles.stateoracle
 output:
   content: Microsoft.Quantum.Oracles.DeterministicStateOracle
   types:
-  - summary: Die gleiche Zustands Vorbereitung ist Oracle $A $, aber jetzt vom Typ `DeterministicStateOracle`, sodass Sie auf ein Register angewendet wird, bei dem $a, s $ nicht mehr explizit getrennt sind, z. b.  $A \ket{0\psi}\_{as} $.
+  - summary: Die gleiche Zustands Vorbereitung ist Oracle $A $, aber jetzt vom `DeterministicStateOracle`Typ, sodass Sie auf ein Register angewendet wird, bei dem $a, s $ nicht mehr explizit getrennt werden, z. b.  $A \ket{0\psi}\_{as} $.
     uid: microsoft.quantum.oracles.deterministicstateoracle
 seeAlso:
 - microsoft.quantum.canon.stateoracle
 - microsoft.quantum.canon.deterministicstateoracle
 metadata:
-  ms.openlocfilehash: 5eda40115d4d4ca7b4187f76b5e0807695913407
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cf6ddc1f1baff27c986f36d944e67192958a0d3f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231094"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681282"

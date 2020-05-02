@@ -7,7 +7,7 @@ summary: >-
   Wendet das Auslagerungs Gate auf ein paar von Qubits an.
 
 
-  \begin{align} \operatschmue{gatap} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix} , \end{align}
+  \begin{align} \operatorname{tauap} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \end{bmatrix}, \end{align}
 
 
   Dabei werden Zeilen und Spalten im Quantum-Konzept Handbuch als geordnet angezeigt.
@@ -45,9 +45,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 32a379b784d0be0084b00a80edf8607ccf760f9e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e8e2681cef50354ac0e6807304912fcddcc0361b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216355"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681768"

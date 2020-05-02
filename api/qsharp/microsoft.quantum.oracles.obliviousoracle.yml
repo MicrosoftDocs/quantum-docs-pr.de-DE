@@ -14,14 +14,14 @@ summary: >-
 
   - Das System registriert $s $, auf dem der gewünschte einheitliche $U $ angewendet wird, nach der Auswahl für Register $a $ befindet sich im Status $ \ket{t}\_a $.
 remarks: >-
-  Dieses durch $ $ o\ket {s} definierte Oracle-\_a\ket {\ PSI}\_s = \lambda\ket{t}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ agiert für den Ancilla-Status $ \ket{s}\_a $ bis Implementieren Sie den einheitlichen $U $ in jedem Systemstatus $ \ket{\psi}\_s $ mit Amplitude $ \lambda $ in der durch $ \ket{t} markierten\_a $.
+  Dieses Oracle ist durch $ $ o\ket {s}\_a\ket {\ PSI}\_s = \lambda\ket{t}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_definiert. a\cdots $ $ agiert für den Ancilla State $ \ket{s}\_a $, um die einheitliche $U $ in jedem Systemstatus $ \ket{\psi}\_s $ mit Amplitude $ \lambda $ in der durch $ \ket{t}\_a $ gekennzeichneten Basis zu implementieren.
 
-  Der erste Parameter ist das Qubit-Register von "$ \ket{s}"\_"$". Der zweite Parameter ist das Qubit-Register von $ \ket{\psi}\_s $.
+  Der erste Parameter ist das Qubit-Register von $ \ket{s}\_$. Der zweite Parameter ist das Qubit-Register von $ \ket{\psi}\_s $.
 syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: f06527701dfad61843df66faca5dd265525b6aa6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9d7a799a9069e6d7eb3470d62322f803a68eb2e6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231060"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681258"

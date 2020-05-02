@@ -9,23 +9,23 @@ input:
   content: '(ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle)'
   types:
   - name: ancillaOracle
-    summary: Ein Zustands Vorbereitungs-Oracle $A $ vom Typ `DeterministicStateOracle` der für Register $a $ fungiert.
+    summary: Ein Status Vorbereitungs-Oracle-$A $ `DeterministicStateOracle` vom Typ, der für Register $a $ fungiert.
     uid: microsoft.quantum.oracles.deterministicstateoracle
   - name: signalOracle
-    summary: Ein Oracle-$U $ vom Typ `ObliviousOracle` der gemeinsam auf Register $a, s $, agiert.
+    summary: Ein Oracle-$U $ vom `ObliviousOracle` Typ, der gemeinsam für Register $a, s $, verhält.
     uid: microsoft.quantum.oracles.obliviousoracle
 output:
   content: Microsoft.Quantum.Oracles.ObliviousOracle
   types:
-  - summary: Eine Oracle-$O = UA $ vom Typ `ObliviousOracle`.
+  - summary: Ein Oracle-$O = UA $ vom `ObliviousOracle`Typ.
     uid: microsoft.quantum.oracles.obliviousoracle
 seeAlso:
 - microsoft.quantum.canon.deterministicstateoracle
 - microsoft.quantum.canon.obliviousoracle
 metadata:
-  ms.openlocfilehash: 2fc80a583ef8990b0a9043e4847d926f37b48b77
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 036d89ed2a9b3a0db2637964e4fabec7352a67d9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231009"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681245"
