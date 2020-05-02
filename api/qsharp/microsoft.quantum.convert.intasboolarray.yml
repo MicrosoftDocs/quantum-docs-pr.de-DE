@@ -5,9 +5,9 @@ type: function
 namespace: Microsoft.Quantum.Convert
 summary: Erzeugt eine binäre Darstellung einer positiven ganzen Zahl unter Verwendung der Little-dendian-Darstellung für das zurückgegebene Array.
 remarks: >-
-  Der Eingabe `bits` muss zwischen 0 und 63 liegen.
+  Die Eingabe `bits` muss zwischen 0 und 63 liegen.
 
-  Der Eingabe `number` muss zwischen 0 und $2 ^ {\texttt{Bits}}-$1 liegen.
+  Die Eingabe `number` muss zwischen 0 und $2 ^ {\texttt{Bits}}-$1 liegen.
 syntax: 'function IntAsBoolArray (number : Int, bits : Int) : Bool[]'
 input:
   content: '(number : Int, bits : Int)'
@@ -17,20 +17,20 @@ input:
     isPrimitive: true
     uid: Int
   - name: bits
-    summary: Die Anzahl der Bits in der binären Darstellung der `number`.
+    summary: Die Anzahl der Bits in der binären Darstellung von `number`.
     isPrimitive: true
     uid: Int
 output:
   content: Bool[]
   types:
-  - summary: Ein Array von booleschen Werten, die `number`darstellen.
+  - summary: Ein Array von booleschen Werten, `number`die darstellen.
     isArray: true
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: e75eede507f04178755e886258e7eb73a6cc3dce
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: f14af582713f5d08e29b54a1e1758b4efbeea094
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858988"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82659187"
