@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   Bei einem Array von Vorgängen, die für eine einzelne Eingabe agieren, erzeugt einen neuen Vorgang, der jeden gegebenen Vorgang nacheinander ausführt.
 
-  Der Modifizierer `A` gibt an, dass alle Vorgänge im Array adjointable sind.
+  Der-Modifizierer `A` gibt an, dass alle Vorgänge im Array adjointable sind.
 examples: >-
   Die folgenden sind gleichwertig:
 
@@ -20,7 +20,7 @@ examples: >-
   ```
 
 
-  und der
+  and
 
 
   ```qsharp
@@ -67,9 +67,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.bound
 metadata:
-  ms.openlocfilehash: a4707b75fdedf6612343690f0b42368fe0979ead
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a965cd80372dbec05810739ed3774b886dc0aa53
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220622"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676000"

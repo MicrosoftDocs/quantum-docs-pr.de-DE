@@ -22,13 +22,13 @@ input:
     functors:
     - Adjoint
   - name: arg
-    summary: Die Eingabe, auf die der Vorgang `op` angewendet wird.
+    summary: Die Eingabe, auf die der `op` Vorgang angewendet wird.
     uid: "'T"
     isLocal: true
 output:
   content: (Unit => Unit is Adj)
   types:
-  - summary: Ein neuer Vorgang, der `op` mit Eingaben anwendet `arg`
+  - summary: Ein neuer Vorgang, der `op` mit Input angewendet wird.`arg`
     isOperation: true
     input:
       types:
@@ -47,9 +47,9 @@ seeAlso:
 - microsoft.quantum.canon.delayed
 - microsoft.quantum.canon.delay
 metadata:
-  ms.openlocfilehash: b1ac535cf5d46e1dbde7c9e9fb33a0f9cc33c24d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ee329ba4febb8b8bf9a0748a42d5c6522aa91be1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219483"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675641"
