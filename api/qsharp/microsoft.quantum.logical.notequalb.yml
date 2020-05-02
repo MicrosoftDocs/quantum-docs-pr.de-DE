@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true` nur dann, wenn `a` nicht gleich `b`ist.'
+  - summary: '`true`, `b`wenn nicht gleich `a` ist.'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 644d63676a7b472358c5cc5c0dd1fe6607fd3f67
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b98ea49e20a21b07d24d3d7880a94f512e292f7b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235378"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684587"
