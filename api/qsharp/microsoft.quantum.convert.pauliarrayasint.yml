@@ -10,7 +10,7 @@ remarks: >-
   \end{align} $ $
 
 
-  Wenn ein Array von Pauli-Operatoren `[P0, ..., Pn]`ist, gibt diese Funktion eine ganze Zahl mit binärer Erweiterung zurück, die durch Verkettung der Zuordnungen jedes Pauli-Operators in Big-Endian-Reihenfolge `bits(Pn) ... bits(P0)`gebildet wird.
+  Bei einem Array von Pauli- `[P0, ..., Pn]`Operatoren gibt diese Funktion eine ganze Zahl mit binärer Erweiterung zurück, die durch Verkettung der Zuordnungen der einzelnen Pauli-Operatoren `bits(Pn) ... bits(P0)`in Big-Endian-Reihenfolge gebildet wird.
 syntax: 'function PauliArrayAsInt (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -23,13 +23,13 @@ input:
 output:
   content: Int
   types:
-  - summary: Eine Ganzzahl, die `paulis`eindeutig identifiziert, wie unten beschrieben.
+  - summary: Eine Ganzzahl, `paulis`die eindeutig identifiziert, wie unten beschrieben.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0c211075d07147b1c1392fe3f3e4ceb110364bb3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 170218ccf1ec4ee1183a7a69ff1e0969f595cac4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230754"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677395"

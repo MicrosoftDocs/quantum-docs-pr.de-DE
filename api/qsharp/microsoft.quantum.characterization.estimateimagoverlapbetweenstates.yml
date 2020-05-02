@@ -4,7 +4,7 @@ name: EstimateImagOverlapBetweenStates
 type: operation
 namespace: Microsoft.Quantum.Characterization
 summary: Bei zwei Vorgängen, bei denen die Kopien eines Zustands vorbereitet werden, wird der Imaginärteil der Überschneidung zwischen den Zuständen, die von jedem Vorgang vorbereitet werden, geschätzt.
-remarks: Bei diesem Vorgang wird der Hadamard-Test verwendet, um den imaginären Teil von $ $ \begin{align} \braket{\psi zu suchen. V ^ {\dagger} U | \psi} \end{align} $ $, wobei $ \ket{\psi} $ der von `commonPreparation`vorbereitete Status ist, $U $ die einheitliche Darstellung der Aktion `preparation1`ist und $V $ `preparation2`entspricht.
+remarks: Bei diesem Vorgang wird der Hadamard-Test verwendet, um den imaginären Teil von $ $ \begin{align} \braket{\psi zu suchen. V ^ {\dagger} U | \psi} \end{align} $ $, wobei $ \ket{\psi} $ der von `commonPreparation`vorbereitete Status ist, $U $ die einheitliche Darstellung der Aktion von `preparation1`und wobei $V $ entspricht. `preparation2`
 syntax: 'operation EstimateImagOverlapBetweenStates (commonPreparation : (Qubit[] => Unit is Adj), preparation1 : (Qubit[] => Unit is Adj + Ctl), preparation2 : (Qubit[] => Unit is Adj + Ctl), nQubits : Int, nMeasurements : Int) : Double'
 references: '- Aharonov *et al.* [quant-ph/0511096](https://arxiv.org/abs/quant-ph/0511096).'
 input:
@@ -55,7 +55,7 @@ input:
     - Adjoint
     - Controlled
   - name: nQubits
-    summary: Die Anzahl der Qubits, auf denen `commonPreparation`, `preparation1`und `preparation2` alle agieren.
+    summary: Die Anzahl der Qubits, für `commonPreparation`die `preparation1`, und `preparation2` alle agieren.
     isPrimitive: true
     uid: Int
   - name: nMeasurements
@@ -71,9 +71,9 @@ seeAlso:
 - microsoft.quantum.characterization.estimaterealoverlapbetweenstates
 - microsoft.quantum.characterization.estimateoverlapbetweenstates
 metadata:
-  ms.openlocfilehash: 8d15c55627cc3cdf9167c7834fe8a1f1e0864fc1
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 6885830a644da147b0e9fe4e9efd3b553b15885e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872851"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677715"

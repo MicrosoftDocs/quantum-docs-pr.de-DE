@@ -4,7 +4,7 @@ name: IntAsDouble
 type: function
 namespace: Microsoft.Quantum.Convert
 summary: Konvertiert eine angegebene Ganzzahl in eine entsprechende Gleit Komma Zahl mit doppelter Genauigkeit.
-remarks: Weitere [ C# ](https://docs.microsoft.com/dotnet/api/system.convert.todouble?view=netframework-4.7.1#System_Convert_ToDouble_System_Int64_) Informationen finden Sie unter Convert. @ Double.
+remarks: Weitere Informationen finden Sie unter [c# Convert. dedouble](https://docs.microsoft.com/dotnet/api/system.convert.todouble?view=netframework-4.7.1#System_Convert_ToDouble_System_Int64_) .
 syntax: 'function IntAsDouble (a : Int) : Double'
 input:
   content: '(a : Int)'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: a81a6f63c00b6d7ab0632d3b55d07b06e0fdfd5a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 87ae45f7b96fb3c66ef8b49ab6ca297a7ca48871
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233491"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677462"

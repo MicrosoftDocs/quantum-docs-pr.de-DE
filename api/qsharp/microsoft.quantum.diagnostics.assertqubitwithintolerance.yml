@@ -3,8 +3,8 @@ uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
 name: AssertQubitWithinTolerance
 type: operation
 namespace: Microsoft.Quantum.Diagnostics
-summary: Bestätigt, dass die Qubit-`q` den erwarteten eigen Zustand des Pauli Z-Operators bis zu einer gegebenen Toleranz aufweist.
-remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> ermöglicht es, beliebige Qubit-Zustände anstelle von $Z $ eigen Zuständen zu bestätigen.
+summary: Bestätigt, dass das Qubit `q` den erwarteten Zustand des Pauli Z-Operators bis zu einer gegebenen Toleranz aufweist.
+remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance>ermöglicht das Assert von willkürlichen Qubit-Zuständen anstelle von $Z $ eigen Zuständen.
 syntax: 'operation AssertQubitWithinTolerance (expected : Result, q : Qubit, tolerance : Double) : Unit'
 input:
   content: '(expected : Result, q : Qubit, tolerance : Double)'
@@ -29,9 +29,9 @@ output:
 seeAlso:
 - assertqubitisinstatewithintolerance
 metadata:
-  ms.openlocfilehash: ccb44aed5612c369ff7c4e687e72fc65fba4180e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2749c682128e7c67506c2291d7a9e6034998731d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227082"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677245"
