@@ -4,13 +4,13 @@ name: ForEach
 type: operation
 namespace: Microsoft.Quantum.Arrays
 summary: Gibt ein neues Array zurück, das aus den Bildern des ursprünglichen Arrays unter dem Vorgang besteht, wenn ein Array und ein Vorgang angegeben sind, der für die Elemente des Arrays definiert ist.
-remarks: "Der-Vorgang wird für generische Typen definiert, d. h., wenn wir über ein Array `'T[]` und einen Vorgang verfügen `action : 'T -> 'U` können wir die Elemente des Arrays zuordnen und ein neues Array vom Typ `'U[]`."
+remarks: "Der Vorgang ist für generische Typen definiert, d. h., wenn wir ein `'T[]` Array und einen `action : 'T -> 'U` Vorgang haben, können wir die Elemente des Arrays zuordnen und ein neues Array vom `'U[]`Typ entwickeln."
 syntax: "operation ForEach (action : ('T => 'U), array : 'T[]) : 'U[]"
 input:
   content: "(action : ('T => 'U), array : 'T[])"
   types:
   - name: action
-    summary: Ein Vorgang von `'T` auf `'U`, der auf jedes Element angewendet wird.
+    summary: Ein Vorgang von `'T` bis `'U` , der auf jedes Element angewendet wird.
     isOperation: true
     input:
       types:
@@ -21,14 +21,14 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: Ein Array von-Elementen über `'T`.
+    summary: Ein Array von-Elementen `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: Ein Array `'U[]` von Elementen, die durch den `action` Vorgang zugeordnet werden.
+  - summary: Ein Array `'U[]` von-Elementen, die durch den `action` -Vorgang zugeordnet werden.
     isArray: true
     uid: "'U"
     isLocal: true
@@ -38,9 +38,9 @@ typeParameters:
 - uid: "'U"
   summary: Der Ergebnistyp des `action` Vorgangs.
 metadata:
-  ms.openlocfilehash: 6f61c37fb7a62bcbcfe91768725173e9a919e987
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: af4b6b469017e4cee581a9bdd96ef6171d9b1deb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871021"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681041"

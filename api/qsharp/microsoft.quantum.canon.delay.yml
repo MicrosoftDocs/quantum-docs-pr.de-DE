@@ -9,9 +9,9 @@ summary: >-
 
   Wenn ein Vorgang und eine Eingabe für diesen Vorgang vorhanden sind, wendet den Vorgang an, sobald eine zusätzliche Eingabe bereitgestellt wird.
 
-  Insbesondere der Ausdruck `Delay(op, arg, _)` ist ein Vorgang, der `op` auf `arg` anwendet, wenn er aufgerufen wird.
+  Der-Ausdruck `Delay(op, arg, _)` ist insbesondere ein Vorgang, der sich `op` auf `arg` bezieht, wenn aufgerufen wird.
 
-  Ausdruck `Delay(op,arg,_)` die die Anwendung von `op`verzögern kann.
+  Der `Delay(op,arg,_)` Ausdruck ermöglicht das Verzögern der Anwendung `op`von.
 syntax: "operation Delay (op : ('T => 'U), arg : 'T, aux : Unit) : 'U"
 input:
   content: "(op : ('T => 'U), arg : 'T, aux : Unit)"
@@ -51,9 +51,9 @@ seeAlso:
 - microsoft.quantum.canon.delayca
 - microsoft.quantum.canon.delayed
 metadata:
-  ms.openlocfilehash: 1759670182cff1153859c62e9c95d1be1f998674
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d6e9c821bdb21714ee914bc908f6f93222b5c3b6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226113"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680179"

@@ -15,7 +15,7 @@ examples: >-
   ```
 
 
-  und der
+  and
 
 
   ```qsharp
@@ -28,7 +28,7 @@ input:
   content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"
   types:
   - name: mapper
-    summary: Eine Funktion von `(Int, 'T)` zu `'U`, die zum Zuordnen von Elementen und deren Indizes verwendet wird.
+    summary: Eine Funktion von `(Int, 'T)` zu `'U` , die verwendet wird, um Elemente und ihre Indizes zuzuordnen.
     isFunction: true
     input:
       types:
@@ -41,14 +41,14 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: Ein Array von-Elementen über `'T`.
+    summary: Ein Array von-Elementen `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: Ein Array `'U[]` von Elementen, die von der `mapper`-Funktion zugeordnet werden.
+  - summary: Ein Array `'U[]` von-Elementen, die von der `mapper` -Funktion zugeordnet werden.
     isArray: true
     uid: "'U"
     isLocal: true
@@ -60,9 +60,9 @@ typeParameters:
 seeAlso:
 - mapped
 metadata:
-  ms.openlocfilehash: 08dacd9b53b151d5cadcef16db8b460d4326d746
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 64741df4a3d7b7937f13614ffc9c7c7ec1aa3f7b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214281"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680934"

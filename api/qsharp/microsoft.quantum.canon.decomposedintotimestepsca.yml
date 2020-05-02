@@ -5,15 +5,15 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: Gibt einen Vorgang zurück, der den Trotter – Suzuki Integrator für einen angegebenen Vorgang implementiert.
 remarks: >-
-  Bei einem Aufruf mit `order` gleich `1`, gibt diese Funktion einen Vorgang zurück, der durch die niedrigste Reihenfolge des Trotters simuliert werden kann – Suzuki Integrator $ $ \begin{align} S_1 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda}, \end{align} $ $, wobei die Notation von [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139) befolgt wurde und $ \lambda $ die Entwicklungszeit (dargestellt durch die erste Eingabe der zurückgegebenen Operation), und lassen Sie $\{H_j\}_ {j = 1} ^ {m} $ den Satz der (Schiefe-hermitian) Dynamical-Generatoren aufweisen, die integriert werden. Diese `op(j, lambda, _)` wird vom einheitlichen Operator $e ^ {H_j \lambda} $ simuliert.
+  Wenn diese Funktion `order` mit gleich `1`ist, gibt diese Funktion einen Vorgang zurück, der durch die niedrigste Reihenfolge (Trotter – Suzuki Integrator $ $ \begin{align} S_1 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda}) simuliert werden kann. \end{align} $ $, wobei die Notation von [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139) befolgt wurde und $ \lambda $ die Entwicklungszeit (dargestellt durch die erste Eingabe der zurückgegebenen Operation) ist\{.\}und lassen Sie $ H_j _ {j = 1} ^ {m} $ den Satz der (Schiefe-hermitian) Dynamical- `op(j, lambda, _)` Generatoren aufweisen, die integriert werden, sodass vom einheitlichen Operator $e ^ {H_j \lambda} $ simuliert wird.
 
 
-  Ebenso gilt: eine `order` `2` gibt den symmetrischen Trotter der zweiten Ordnung zurück – Suzuki Integrator $ $ \begin{align} S_2 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda/2} \ prod_ {j ' = m} ^{1} e ^ {H_ {j '} \lambda/2}.
+  Ebenso gibt ein `order` von `2` den symmetrischen Trotter der zweiten Ordnung zurück – Suzuki Integrator $ $ \begin{align} S_2 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda/2} \ prod_ {j ' = m} ^{1} e ^ {H_ {j '} \lambda/2}.
 
   \end{align} $ $
 
 
-  Höhere auch Werte von `order` werden mithilfe der rekursiven Konstruktion von [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139)implementiert.
+  Höhere gerade Werte von `order` werden mithilfe der rekursiven Konstruktion von [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139)implementiert.
 syntax: "function DecomposedIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
 references: '- [*D. W. Beeren, G. ahukas, R. Cleve, B. C. Sanders*](https://arxiv.org/abs/quant-ph/0508139)'
 input:
@@ -24,7 +24,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: op
-    summary: Ein Vorgang, bei dem eine Index Eingabe (Type `Int`) und eine Zeiteingabe (Typ `Double`) für die Zerlegung akzeptiert werden.
+    summary: Ein Vorgang, bei dem eine Index Eingabe ( `Int`Type) und eine Zeiteingabe ( `Double`Typ) für die Zerlegung akzeptiert werden.
     isOperation: true
     input:
       types:
@@ -51,7 +51,7 @@ input:
 output:
   content: ((Double, 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Gibt eine einheitliche-Klasse zurück, die den Trotter – Suzuki Integrator implementiert, wobei der erste Parameter `Double` die Größe der Integrationsschritte ist und der zweite Parameter das Ziel ist.
+  - summary: Gibt eine einheitliche-Klasse zurück, die den Trotter – Suzuki Integrator implementiert `Double` , wobei der erste Parameter die Größe des Integrations Schritts ist und der zweite Parameter das Ziel ist.
     isOperation: true
     input:
       types:
@@ -68,11 +68,11 @@ output:
     - Controlled
 typeParameters:
 - uid: "'T"
-  summary: Der Typ, auf den jeder Zeit Schritt reagieren soll. in der Regel werden entweder `Qubit[]` oder `Qubit`.
+  summary: Der Typ, auf den jeder Zeit Schritt reagieren soll. in der Regel `Qubit[]` entweder `Qubit`oder.
 metadata:
-  ms.openlocfilehash: 66b2d7ca6394f525e8ec0dcb3516776bf91bd0cb
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 1fdb15e9a28c24ac58f026a89779951b982edb27
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76873021"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680254"
