@@ -3,7 +3,7 @@ uid: microsoft.quantum.simulation.estimateenergywithadiabaticevolution
 name: EstimateEnergyWithAdiabaticEvolution
 type: operation
 namespace: Microsoft.Quantum.Simulation
-summary: Führt die Zustands Vorbereitung durch Anwenden einer `statePrepUnitary` auf einen automatisch zugeordneten Eingabe Zustand, gefolgt von der Vorbereitung des adiabatischen Zustands mithilfe eines `adiabaticUnitary`und schließlich der Phasen Schätzung in Bezug auf `qpeUnitary`auf dem resultierenden Zustand mithilfe eines `phaseEstAlgorithm`aus.
+summary: Führt die Zustands Vorbereitung durch Anwenden `statePrepUnitary` eines auf einen automatisch zugeordneten Eingabe Zustand, gefolgt von der adiabatischen Zustands `adiabaticUnitary`Vorbereitung mithilfe eines und schließlich der Phasen Schätzung `qpeUnitary`in Bezug auf den resultierenden Zustand `phaseEstAlgorithm`mithilfe von aus.
 syntax: 'operation EstimateEnergyWithAdiabaticEvolution (nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double)) : Double'
 input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double))'
@@ -37,7 +37,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: Ein Oracle, das einen einheitlichen Operator $U $ darstellt, der die Entwicklung für "Time $ \delta t $" unter einem Dynamical Generator mit dem "Ground State $ \ket{\phi} $" und "State State Energy $E = \phi\\, \delta t $" darstellt.
+    summary: Ein Oracle, das einen einheitlichen Operator $U $ darstellt, der die Entwicklung für "Time $ \delta t $" unter einem Dynamical Generator mit dem "Ground State $ \ket{\phi} $\\" und "Ground State Energy $E = \phi, \delta t $" darstellt.
     isOperation: true
     input:
       types:
@@ -74,9 +74,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: a5c97bb34307c5216720f82c5cf91ca21cf90739
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ffab30daf3028c12768d9c9f4cd16a8011a7931f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223291"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82655182"
