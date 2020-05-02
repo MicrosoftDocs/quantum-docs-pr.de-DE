@@ -7,7 +7,7 @@ summary: >-
   Erhöht mithilfe von Phasen Drehungen ein unsigniertes Quantum-Register durch eine klassische Ganzzahl.
 
 
-  Nehmen wir an, dass `target` eine Ganzzahl ohne Vorzeichen $x $ in einer Little-in-Codierung codiert und `increment` gleich $a $ ist.
+  Angenommen, `target` das codiert eine Ganzzahl ohne Vorzeichen $x $ in einer Little-in-codiercodierung und `increment` ist gleich $a $.
 
   Anschließend implementiert dieser Vorgang die einheitliche $ \ket{x} \mapsto \ket{x + a} $, wobei die Addition Modulo $2 ^ n $ ist, wobei $n = \texttt{length (Target!)} $.
 syntax: 'operation IncrementByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
@@ -15,7 +15,7 @@ input:
   content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: increment
-    summary: Die ganze Zahl, um die die `target` inkrementiert wird.
+    summary: Die ganze Zahl, um `target` die die inkrementiert wird.
     isPrimitive: true
     uid: Int
   - name: target
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d05ed867e62f4f7474319ffe23dcd23aa34675c5
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: c07015f69d9cab08b287c383230fe79b5d67d6a0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871157"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679554"

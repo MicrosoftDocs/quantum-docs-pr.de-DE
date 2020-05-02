@@ -9,7 +9,7 @@ input:
   content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: coefficients
-    summary: Koeffizienten der ungeraden Polynomen als doppeltes Array, d. h. das Array $ [a_0, A_1,..., a_k] $ für die ungeraden Polynoms $P (x) = a_0 x + A_1 x ^ 3 + \cdots + a_k x ^ {2K + 1} $.
+    summary: Koeffizienten des ungeraden Polynoms als doppeltes Array, d. h. das Array $ [a_0, A_1,..., a_k] $ für die ungeraden Polynoms $P (x) = a_0 x + A_1 x ^ 3 + \cdots + a_k x ^ {2K + 1} $.
     isArray: true
     isPrimitive: true
     uid: Double
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 3ae6ab137b2c257a98b0ec777c19212d8732f619
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ae149fe3ef12b5384bd08b62daabd6368e130399
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219109"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679650"
