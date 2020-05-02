@@ -4,14 +4,14 @@ name: JWOptimizedHTerms
 type: newtype
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
 summary: >-
-  Format der Daten, die C# von an Q # übermittelt werden, um die Begriffe der hamiltonan darzustellen.
+  Format der Daten, die von c# an Q # übergeben werden, um die Begriffe der hamiltonan darzustellen.
 
   Die Bedeutung der dargestellten Daten wird durch den Algorithmus bestimmt, der Sie empfängt.
 syntax: newtype JWOptimizedHTerms = (Microsoft.Quantum.Chemistry.HTerm[], Microsoft.Quantum.Chemistry.HTerm[], Microsoft.Quantum.Chemistry.HTerm[], Microsoft.Quantum.Chemistry.HTerm[]);
 metadata:
-  ms.openlocfilehash: 24db6a67c0450606bf43388bb460dfd4018bb580
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ce994e1a01a4c620ef7d1e1c54bb090194e48c96
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228493"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82666121"

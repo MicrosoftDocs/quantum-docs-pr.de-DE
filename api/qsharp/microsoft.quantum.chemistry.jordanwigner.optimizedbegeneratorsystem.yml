@@ -3,12 +3,12 @@ uid: microsoft.quantum.chemistry.jordanwigner.optimizedbegeneratorsystem
 name: OptimizedBEGeneratorSystem
 type: newtype
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: Eine Funktion, die `OptimizedBETermIndex` Daten für den Begriffs `n` bei Angabe eines ganzzahligen `n`zurückgibt, zusammen mit der Anzahl der Begriffe im ersten `Int` und der Summe der absoluten Werte aller Begriffs Koeffizienten im `Double`.
+summary: Eine Funktion, `OptimizedBETermIndex` die Daten für `n` den Begriff " `n`Integer" zurückgibt, und zwar zusammen mit der `Int` Anzahl der Begriffe in der ersten und der Summe der absoluten Werte aller Begriffs Koeffizienten `Double`in.
 syntax: newtype OptimizedBEGeneratorSystem = (Int, Double, (Int -> Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBETermIndex));
 metadata:
-  ms.openlocfilehash: 4f3375a952bbd72331742d77c3a6e2a56b1814c8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 76e4e810dc31779efcd281c9c132e7f4b97556b9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228476"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82665977"
