@@ -3,9 +3,9 @@ uid: microsoft.quantum.canon.embedpauli
 name: EmbedPauli
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Gibt bei einem Single-Qubit-Pauli-Operator und dem Index eines Qubit einen multiqubit-Pauli-Operator mit dem angegebenen Single-Qubit-Operator an diesem Index zurück und `PauliI` an jedem anderen Index.
+summary: Gibt bei einem Single-Qubit-Pauli-Operator und dem Index eines Qubits einen multiqubit-Pauli-Operator mit dem angegebenen Single-Qubit-Operator an diesem `PauliI` Index und an jedem anderen Index zurück.
 examples: >-
-  So rufen Sie das Array `[PauliI, PauliI, PauliX, PauliI]`ab:
+  So rufen Sie das `[PauliI, PauliI, PauliX, PauliI]`Array ab:
 
 
   ```qsharp
@@ -22,7 +22,7 @@ input:
     isPrimitive: true
     uid: Pauli
   - name: location
-    summary: Ein Index, der `output[location] == pauli`, wobei `output` die Ausgabe dieser Funktion ist.
+    summary: Ein Index `output[location] == pauli`, bei `output` dem die Ausgabe dieser Funktion ist.
     isPrimitive: true
     uid: Int
   - name: n
@@ -36,9 +36,9 @@ output:
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 1e852781f6dd85e5432f5613184f028db0e84b87
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: df9cff23b6a7255ec57e944fd1bed140ff18560a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219381"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675598"

@@ -5,14 +5,14 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Nimmt ein Array und eine Liste von Speicherorten an und erstellt ein neues Array, das aus den Elementen des ursprünglichen Arrays gebildet wird, die den angegebenen Speicherorten entsprechen.
 remarks: >-
-  Die-Funktion ist für generische Typen definiert, d. h., wenn ein Array `'T[]` und eine Liste mit Speicherorten `Int[]` definieren des Unterarrays vorhanden sind.
+  Die-Funktion ist für generische Typen definiert, d. h., wenn ein `'T[]` Array und eine Liste von `Int[]` Speicherorten vorhanden sind, die das Unterelement definieren.
 
   Die Erstellung des Unterarrays ist eine, die auf der Erstellung einer neuen Deep-Kopie des angegebenen Arrays basiert, anstatt Verweise beizubehalten.
 
 
-  Wenn `Length(indices) < Length(array)`, gibt diese Funktion eine Teilmenge von `array`zurück. Wenn `indices` jedoch wiederholte Elemente enthält, werden die entsprechenden Elemente `array` ebenfalls wiederholt.
+  Wenn `Length(indices) < Length(array)`, wird von dieser Funktion eine Teilmenge von `array`zurückgegeben. Wenn `indices` dagegen wiederholte Elemente enthält, werden die entsprechenden Elemente von `array` ebenfalls wiederholt.
 
-  Wenn `indices` und `array` die gleiche Länge aufweisen, stellt diese Funktion Permutationen von `array`bereit.
+  Wenn `indices` und `array` dieselbe Länge aufweisen, stellt diese Funktion Permutationen von `array`bereit.
 syntax: "function Subarray (indices : Int[], array : 'T[]) : 'T[]"
 input:
   content: "(indices : Int[], array : 'T[])"
@@ -23,14 +23,14 @@ input:
     isPrimitive: true
     uid: Int
   - name: array
-    summary: Ein Array von-Elementen über `'T`.
+    summary: Ein Array von-Elementen `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: Ein Array `out` von Elementen, deren Indizes dem Unterarray entsprechen, z. b. `out[idx] == array[indices[idx]]`.
+  - summary: Ein Array `out` von-Elementen, deren Indizes dem Unterarray entsprechen, z `out[idx] == array[indices[idx]]`. b..
     isArray: true
     uid: "'T"
     isLocal: true
@@ -38,9 +38,9 @@ typeParameters:
 - uid: "'T"
   summary: Der Typ der `array` Elemente.
 metadata:
-  ms.openlocfilehash: 1590e5c24dad56db8c6a0f5dc433bf060d8ac175
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2740a39d1b7c1c56aed4f9107c65d339c5fb4c1a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217851"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675111"

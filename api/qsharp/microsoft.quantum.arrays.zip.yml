@@ -31,7 +31,7 @@ input:
 output:
   content: ('T, 'U)[]
   types:
-  - summary: Ein Array, das Paare der Formular `(left[idx], right[idx])` für jede `idx`enthält. Wenn die beiden Arrays nicht die gleiche Länge aufweisen, ist die Ausgabe so lang wie die kürzere der Eingaben.
+  - summary: Ein Array, das Paare des Formulars `(left[idx], right[idx])` für jedes `idx`enthält. Wenn die beiden Arrays nicht die gleiche Länge aufweisen, ist die Ausgabe so lang wie die kürzere der Eingaben.
     isArray: true
     types:
     - uid: "'T"
@@ -47,9 +47,9 @@ seeAlso:
 - zip3
 - zip4
 metadata:
-  ms.openlocfilehash: 9af79a617722ead8102ea4631d96934bf253beda
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ae3a66ee226cdc0e26ec0cc0e87b1822bad45579
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217817"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675080"

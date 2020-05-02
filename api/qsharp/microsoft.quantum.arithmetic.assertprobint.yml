@@ -7,11 +7,11 @@ summary: >-
   Bestätigt, dass die Wahrscheinlichkeit eines bestimmten Zustands eines Quantum-Register über den erwarteten Wert verfügt.
 
 
-  Bei Angabe einer $n $-Qubit-Quantum State $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \alpha_j \ket{j} $ bestätigt, dass die Wahrscheinlichkeit $ | \alpha_j | ^ 2 $ des durch $j $ indizierten Zustands $ \ket{j} $ den erwarteten Wert hat.
+  Bestätigt bei einem $n $-Qubit-Quantum-Status $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \ alpha_j \ket{j} $, dass die Wahrscheinlichkeit $ | \ alpha_j | ^ 2 $ des durch $j $ indizierten Zustands $ \ket{j} $ den erwarteten Wert hat.
 examples: >-
-  Angenommen, das `qubits` Register codiert einen 3-Qubit-Quantum-Status $ \ket{\psi} = \ sqrt {1/8} \ Ket{0}+ \ sqrt {7/8} \ Ket{6}$ im Little-Endian-Format.
+  Angenommen, das `qubits` Register codiert einen 3-Qubit-Quantum-Status $ \ket{\psi} = \ sqrt {1/8}{0}\ Ket + \ sqrt {7/8}{6}\ Ket $ im Little-Endian-Format.
 
-  Dies bedeutet, dass die Zahl "$ \ket{0}\equiv\ket{0}\ket{0}\ket{0}$ und $ \ket{6}\equiv\ket{0}\ket{1}\ket{1}$" lautet. Die folgenden Bestätigungen werden erfolgreich ausgeführt:
+  Dies{0}bedeutet, dass die Zahl "$ \ket \equiv\ket{0}\ket{0}\ket{0}$" und "{6}$ \ket \equiv\ket{0}\ket{1}\ket{1}$" lautet. Die folgenden Bestätigungen werden erfolgreich ausgeführt:
 
 
   - `AssertProbInt(0,0.125,qubits,10e-10);`
@@ -26,7 +26,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: expected
-    summary: Der erwartete Wert von $ | \alpha_j | ^ 2 $.
+    summary: Der erwartete Wert von $ | \ alpha_j | ^ 2 $.
     isPrimitive: true
     uid: Double
   - name: qubits
@@ -42,9 +42,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 183f1252ba555c10e7011eea98a5cc98fae4495a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 247dcb78921bfe5df96c56b74e251d0413cfab3d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221438"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675252"
