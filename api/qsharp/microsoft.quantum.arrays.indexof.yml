@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Gibt den ersten Index des ersten Elements in einem Array zurück, das ein angegebenes Prädikat erfüllt. Wenn kein solches Element vorhanden ist, wird-1 zurückgegeben.
 examples: >-
-  Angenommen, `IsEven : Int -> Bool` ist eine Funktion, die `true` nur dann zurückgibt, wenn Ihre Eingabe gerade ist. Anschließend kann dies mit `IndexOf` verwendet werden, um das erste gerade Element in einem Array zu finden:
+  Angenommen, `IsEven : Int -> Bool` es handelt sich um eine `true` Funktion, die nur dann zurückgibt, wenn Ihre Eingabe gerade ist. Anschließend kann dies mit `IndexOf` verwendet werden, um das erste gerade Element in einem Array zu finden:
 
 
   ```Q#
@@ -38,13 +38,13 @@ input:
 output:
   content: Int
   types:
-  - summary: Entweder der kleinste Index `idx`, dass `predicate(arr[idx])` true ist, oder-1, wenn kein solches Element vorhanden ist.
+  - summary: Entweder der kleinste Index `idx` , der `predicate(arr[idx])` true ist, oder-1, wenn kein solches Element vorhanden ist.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 6f7fee40a558e7bb17b94c9dd58656c6f34ceac8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6fb95357096751e53f601a9c855ff656e2dd1b34
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218191"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680999"

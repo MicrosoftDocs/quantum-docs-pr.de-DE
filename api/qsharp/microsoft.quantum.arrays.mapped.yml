@@ -4,13 +4,13 @@ name: Mapped
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Bei Angabe eines Arrays und einer Funktion, die für die Elemente des Arrays definiert ist, wird ein neues Array zurückgegeben, das aus den Bildern des ursprünglichen Arrays unter der Funktion besteht.
-remarks: "Die-Funktion ist für generische Typen definiert, d. h., wenn wir über ein Array `'T[]` und eine Funktion verfügen `mapper: 'T -> 'U` können wir die Elemente des Arrays zuordnen und ein neues Array vom Typ `'U[]`."
+remarks: "Die-Funktion ist für generische Typen definiert, d. h., wenn ein `'T[]` Array und eine `mapper: 'T -> 'U` Funktion vorhanden sind, können wir die Elemente des Arrays zuordnen und ein neues Array `'U[]`vom Typ entwickeln."
 syntax: "function Mapped (mapper : ('T -> 'U), array : 'T[]) : 'U[]"
 input:
   content: "(mapper : ('T -> 'U), array : 'T[])"
   types:
   - name: mapper
-    summary: Eine Funktion von `'T` zu `'U`, die zum Zuordnen von Elementen verwendet wird.
+    summary: Eine Funktion von `'T` zu `'U` , die zum Zuordnen von Elementen verwendet wird.
     isFunction: true
     input:
       types:
@@ -21,14 +21,14 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: Ein Array von-Elementen über `'T`.
+    summary: Ein Array von-Elementen `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: Ein Array `'U[]` von Elementen, die von der `mapper`-Funktion zugeordnet werden.
+  - summary: Ein Array `'U[]` von-Elementen, die von der `mapper` -Funktion zugeordnet werden.
     isArray: true
     uid: "'U"
     isLocal: true
@@ -38,9 +38,9 @@ typeParameters:
 - uid: "'U"
   summary: Der Ergebnistyp der `mapper` Funktion.
 metadata:
-  ms.openlocfilehash: 3e9262d3d2b294ccfafac24b2b080b124c9e319c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 877899dad82374281090e189c727c2a662f12b7b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218123"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680949"

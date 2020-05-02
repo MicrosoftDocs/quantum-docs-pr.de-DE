@@ -29,16 +29,16 @@ input:
 output:
   content: "'T[][]"
   types:
-  - summary: Mehrere Arrays, bei denen das erste Array der erste `nElements[0]` `arr` und das zweite Array der nächste `nElements[1]` von `arr` usw. ist. Das letzte Array enthält alle verbleibenden Elemente.
+  - summary: Mehrere Arrays, bei denen das erste Array der `nElements[0]` erste `arr` und das zweite Array das nächste `nElements[1]` von `arr` usw. ist. Das letzte Array enthält alle verbleibenden Elemente.
     isArray: true
     types:
     - isArray: true
       uid: "'T"
       isLocal: true
 metadata:
-  ms.openlocfilehash: 6e26d4d49f50c8e9ee4c18681f88272a45d2ef20
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 319147f72f0ef13a942ab5440a51f60d6f2bae1f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218089"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680882"

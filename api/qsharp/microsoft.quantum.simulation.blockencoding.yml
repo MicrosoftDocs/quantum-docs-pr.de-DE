@@ -7,15 +7,15 @@ summary: >-
   Stellt eine einheitliche dar, bei der ein beliebiger Operator von Interesse im oberen linken Block codiert wird.
 
 
-  Das heißt, ein `BlockEncoding` ist ein einheitlicher $U $, wobei ein beliebiger Operator $H von "$ of Interest", der für das System Register `s` fungiert, in dem Block oben links codiert wird, der dem hilfstatus $ \ket{0}_A $ entspricht. Das heißt
+  Das heißt, ein `BlockEncoding` ist ein einheitlicher $U $, bei dem ein beliebiger Operator $H $ of Interest, der für `s` das System Register agiert, in dem Block oben links codiert wird, der{0}dem hilfstatus $ \ket _A $ entspricht. Dies bedeutet:
 
 
-  $ $ \begin{align} (\bra{0}_A \ otimes I_s) U (\ket{0}_A \ otimes I_s) = H \end{align} $ $.
+  $ $ \begin{align} (\bra{0}_A \otimes I_s) U (\ket{0}_A \otimes I_s) = H \end{align} $ $.
 syntax: newtype BlockEncoding = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 0991b1b54cdd8e908f60fc104edf588ae08e12e7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 400173be551747127198f8cee52390a2694dbfe4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066029"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681101"

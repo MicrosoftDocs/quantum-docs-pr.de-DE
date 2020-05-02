@@ -3,8 +3,8 @@ uid: microsoft.quantum.arithmetic.sum
 name: Sum
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Implementiert ein umkehrbares Summen Gate. Wenn ein in qu`carryIn` Bit codiertes und zwei Summen in `summand1` und `summand2`codiert sind, berechnet das bitweise XOR der `carryIn`, `summand1` und `summand2` im Qubit-`summand2`.
-remarks: Im Gegensatz zum `Carry` Vorgang wird das vorgangsbit nicht berechnet.
+summary: Implementiert ein umkehrbares Summen Gate. Berechnet das bitweise XOR `carryIn` von `summand1` `summand2` `carryIn` `summand1` und `summand2` im Qubit `summand2`, wenn ein in Qubit codiertes und zwei Summen in und codiert sind.
+remarks: Im Gegensatz zum- `Carry` Vorgang berechnet dies nicht das-Ausgangsbit.
 syntax: 'operation Sum (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit) : Unit'
 input:
   content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit)'
@@ -18,7 +18,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: summand2
-    summary: Zweites Summen-und Qubit-Wert, wird durch das untere Bit der Summe aus `summand1` und `summand2`ersetzt.
+    summary: Zweites Summen-und Qubit-Wert, wird durch das untere Bit der Summe `summand1` von `summand2`und ersetzt.
     isPrimitive: true
     uid: Qubit
 output:
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 125ee44b5debf5d8c83d7fb5176c4298bd702563
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d72ec97c01944b73ed459afcddbdfb3aa1cf3c49
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218395"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681056"
