@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Canon
 summary: Wendet einen Vorgang auf die ersten drei Qubits im Register an.
 remarks: >-
-  Dies entspricht:
+  Das entspricht:
 
 
   ```qsharp
@@ -47,9 +47,9 @@ seeAlso:
 - microsoft.quantum.canon.applytofirstthreequbitsa
 - microsoft.quantum.canon.applytofirstthreequbitsca
 metadata:
-  ms.openlocfilehash: 4b8c08d97d6131ad76758999d76b86d44d0263a4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 548163ee498bf672b8505080925348c5e58bac73
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213329"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82668412"
