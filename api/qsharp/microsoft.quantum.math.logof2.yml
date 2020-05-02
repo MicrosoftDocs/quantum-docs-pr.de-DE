@@ -11,13 +11,13 @@ input:
 output:
   content: Double
   types:
-  - summary: Gibt einen `Double` zurück, der gleich $0.6931471805599453 $ ist.
+  - summary: Gibt einen `Double` gleich $0.6931471805599453 $ zurück.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 4a2bbd6adff643a5240fd280a020be076190eed1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 26efec659acda2d93921ef6789b56ff2493d4531
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232505"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683287"
