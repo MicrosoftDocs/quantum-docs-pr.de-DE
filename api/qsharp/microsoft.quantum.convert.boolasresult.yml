@@ -3,25 +3,25 @@ uid: microsoft.quantum.convert.boolasresult
 name: BoolAsResult
 type: function
 namespace: Microsoft.Quantum.Convert
-summary: Konvertiert einen `Bool`-Typ in einen `Result` Typ, wobei `true` `One` zugeordnet und `false` `Zero`zugeordnet wird.
+summary: Konvertiert einen `Bool` Typ in einen `Result` -Typ, `true` wobei zugeordnet `One` ist und `false` zugeordnet `Zero`ist.
 syntax: 'function BoolAsResult (input : Bool) : Result'
 input:
   content: '(input : Bool)'
   types:
   - name: input
-    summary: '`Bool` zu konvertierende.'
+    summary: '`Bool`, das konvertiert werden soll.'
     isPrimitive: true
     uid: Bool
 output:
   content: Result
   types:
-  - summary: Eine `Result` die die `input`darstellt.
+  - summary: Die `Result`, die das `input` darstellt.
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 88019e17d91753f9aeafd273d2f38fef0f420be2
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 270809a4e5bdf8eae2c1dfc360c20fa707f39658
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212292"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82660758"
