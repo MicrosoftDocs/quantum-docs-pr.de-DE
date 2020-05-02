@@ -4,7 +4,7 @@ name: RandomIntPow2
 type: operation
 namespace: Microsoft.Quantum.Math
 summary: Generiert eine Zufallszahl, die einheitlich von allen ganzen Zahlen entnommen wird, die in einer bestimmten Anzahl von Bits dargestellt werden können.
-remarks: Diese Funktion ruft <xref:microsoft.quantum.intrinsic.random>auf, sodass Ihre Zufälligkeit von der Implementierung von `Random`abhängt.
+remarks: Diese Funktion ruft <xref:microsoft.quantum.intrinsic.random>auf, sodass die Zufälligkeit von der Implementierung von `Random`abhängt.
 syntax: 'operation RandomIntPow2 (maxBits : Int) : Int'
 input:
   content: '(maxBits : Int)'
@@ -20,9 +20,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: e690509a7dcd2b1ec51bdde85da6439a688e75e7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: dec46f725da2f805839f7c03306853c851700027
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219976"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681537"

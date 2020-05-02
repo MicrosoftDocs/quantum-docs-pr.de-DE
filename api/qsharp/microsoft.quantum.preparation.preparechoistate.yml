@@ -10,7 +10,7 @@ input:
   content: '(op : (Qubit[] => Unit), reference : Qubit[], target : Qubit[])'
   types:
   - name: op
-    summary: Der Vorgang $ \lambda $, dessen Metadaten– jamiłkowski State $J (\lambda)/2 ^ N $ vorbereitet werden soll, wobei $N $ die Anzahl der Qubits ist, auf der `op` agiert.
+    summary: Der Vorgang $ \lambda $, dessen Metadaten– jamiłkowski State $J (\lambda)/2 ^ N $ vorbereitet werden soll, wobei $N $ die Anzahl der Qubits ist `op` , die von verwendet werden.
     isOperation: true
     input:
       types:
@@ -27,7 +27,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: target
-    summary: Ein Register von Qubits, das anfänglich im $ \ket{00\cdots 0} $-Zustand ist, in dem `op` angewendet werden soll.
+    summary: Ein Register von Qubits, das anfänglich im $ \ket{00\cdots 0} $- `op` Zustand ist, in dem Sie angewendet werden sollen.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -41,9 +41,9 @@ seeAlso:
 - preparechoistatec
 - preparechoistateca
 metadata:
-  ms.openlocfilehash: f1f0ea6233d13ce1850b3b8dfb210ab6b0e378f8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c23954131c9ef7c609089e3f58b3577151409993
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228119"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681169"
