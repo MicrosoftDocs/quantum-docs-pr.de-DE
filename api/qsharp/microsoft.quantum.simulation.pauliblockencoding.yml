@@ -7,14 +7,14 @@ summary: >-
   Erstellt eine einheitliche Block Codierung für ein hamiltonan.
 
 
-  Die hamiltonan $H = \sum_{j}\alpha_j P_j $ wird durch eine Summe von Pauli-Begriffen $P _J $ beschrieben, die jeweils den tatsächlichen Koeffizienten $ \alpha_j $ haben.
-remarks: Dies wird durch vorbereiten und deren Vorbereitung des Zustands $ \ sum_ {j} \ sqrt {\ alpha_j/\ Alpha} \ Ket {j} $ und das Erstellen eines multiplizierten einheitlichen <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> und <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>erreicht.
+  Die hamiltonan $H = \ sum_ {j} \ alpha_j P_j $ wird durch eine Summe von Pauli-Begriffen $P _J $, jeweils mit dem tatsächlichen Koeffizienten $ \ alpha_j $, beschrieben.
+remarks: Dies wird erreicht, indem der Status $ \ sum_ {j} \sqrt{\ alpha_j/\alpha}\ket{j} $ vorbereitet und die Vorbereitung wieder vorbereitet wird, und das Erstellen <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> einer <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>multiplizierten, einheitlichen und-.
 syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystem
-    summary: Eine `GeneratorSystem`, die $H $ als Summe von Pauli-Begriffen beschreibt.
+    summary: Eine `GeneratorSystem` , die $H $ als Summe von Pauli-Begriffen beschreibt.
     uid: microsoft.quantum.simulation.generatorsystem
 output:
   content: (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)
@@ -23,7 +23,7 @@ output:
       ## <a name="first-parameter"></a>Erster Parameter
 
 
-      Die einnorm der Koeffizienten $ \alpha = \sum_{j} | \alpha_j | $.
+      Die einnorm der Koeffizienten $ \alpha = \ sum_ {j} | \ alpha_j | $.
 
 
       ## <a name="second-parameter"></a>Zweiter Parameter
@@ -35,9 +35,9 @@ output:
       uid: Double
     - uid: microsoft.quantum.simulation.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 352ab71457601c38b22e93f706cb59f50bf24151
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 75b614fa23f2e00a3a960224d79905106fb06070
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216134"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682542"

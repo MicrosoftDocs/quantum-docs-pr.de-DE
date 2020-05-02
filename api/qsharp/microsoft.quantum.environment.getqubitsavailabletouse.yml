@@ -12,17 +12,17 @@ output:
   content: Int
   types:
   - summary: >-
-      Die Anzahl der Qubits, die in einer `using` Anweisung zugeordnet werden können.
+      Die Anzahl der Qubits, die in einer `using` -Anweisung zugeordnet werden können.
 
-      Wenn der verwendete Zielcomputer diese Informationen nicht bereitstellt, wird `-1` zurückgegeben.
+      Wenn der verwendete Zielcomputer diese Informationen nicht bereitstellt, `-1` wird zurückgegeben.
     isPrimitive: true
     uid: Int
 seeAlso:
 - getqubitsavailabletoborrow
 metadata:
-  ms.openlocfilehash: 1cb1331aa26ec9755a9e379336f46387b61bb0ae
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 82d8c27064cbb234b32707aa31fb0869f66ce23c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230465"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682398"
