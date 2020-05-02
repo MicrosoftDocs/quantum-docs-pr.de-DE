@@ -9,7 +9,7 @@ input:
   content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, targetError : Double)'
   types:
   - name: qSharpData
-    summary: Hamiltona wird im `JordanWignerEncodingData`-Format beschrieben.
+    summary: Hamiltona wird nach `JordanWignerEncodingData` Format beschrieben.
     uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
   - name: targetError
     summary: Fehler bei der schrittweisen Vorbereitung des Zustands.
@@ -18,7 +18,7 @@ input:
 output:
   content: (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))
   types:
-  - summary: 'Ein Tupel, bei dem: `Int` die Anzahl der zugeordneten Qubits ist, `Double` die eine Norm von hamiltonkoeffizienten ist, und der Vorgang ist der durch die qubisierung erstellte Quantum Walk.'
+  - summary: 'Ein Tupel, in `Int` dem: die Anzahl der zugeordneten Qubits ist, `Double` die One-Norm von hamiltona-Koeffizienten ist, und der Vorgang ist der durch die qubisierung erstellte Quantum Walk.'
     types:
     - isPrimitive: true
       uid: Int
@@ -39,9 +39,9 @@ output:
         - Adjoint
         - Controlled
 metadata:
-  ms.openlocfilehash: 541d4f2196bc9ba06d02b83c500d539932b62463
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b6dff5ce49e6f0d106df31040c2e539fc1a24029
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231893"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82665096"
