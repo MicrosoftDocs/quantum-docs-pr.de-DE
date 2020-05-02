@@ -4,7 +4,7 @@ name: MultiplexerBruteForceFromGenerator
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Gibt einen mehrfach kontrollierten, einheitlichen Vorgang $U $ zurück, der eine einheitliche $V _J $ anwendet, wenn er durch den n-Qubit-Zahlen Status $ \ket{j} $ gesteuert wird.
+  Gibt einen mehrfach kontrollierten einheitlichen Vorgang $U $ zurück, der eine einheitliche $V _J $ anwendet, wenn dies durch den n-Qubit-Zahlen Status $ \ket{j} $ gesteuert wird.
 
 
   $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
@@ -13,7 +13,7 @@ input:
   content: '(unitaryGenerator : (Int, (Int -> (Qubit[] => Unit is Adj + Ctl))))'
   types:
   - name: unitaryGenerator
-    summary: Ein Tupel, bei dem das erste Element `Int` die Anzahl von uniflüssen $N $ und das zweite Element `(Int -> ('T => () is Adj + Ctl))` eine Funktion ist, die eine ganze Zahl $j $ in $ [0, N-1] $ annimmt und den einheitlichen Vorgang $V _J $ ausgibt.
+    summary: Ein Tupel, bei dem das `Int` erste Element die Anzahl von uniflüssen $N $ und das zweite Element `(Int -> ('T => () is Adj + Ctl))` eine Funktion ist, die eine ganze Zahl $j $ in $ [0, N-1] $ annimmt und den einheitlichen Vorgang $V _J $ ausgibt.
     types:
     - isPrimitive: true
       uid: Int
@@ -58,9 +58,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.multiplexerbruteforcefromgenerator
 metadata:
-  ms.openlocfilehash: 3a5fc9e4b21f14833f28513ad66baa20a4df3de4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cfd415245dd96508b015f8d6fa3dfe0c90fa9c0e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73222730"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678858"
