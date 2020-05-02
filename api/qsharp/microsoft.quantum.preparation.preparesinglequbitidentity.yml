@@ -7,7 +7,7 @@ summary: >-
   Bereitet ein Qubit im maximale gemischten Zustand vor.
 
 
-  Sie bereitet das angegebene Qubit im Zustand "$ \boldone/$2" vor, indem der%% amp; quot;%% amp; quot; {0} \omega (\rho) \mathrel{: =} \frac{1}{4} \sum_{\mu \in \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\ Dagger}, \end{align} $ $, wobei $ \sigma\_i $ der $i $ th-Pauli-Operator ist und $ \rho $ ein Dichte Operator ist, der einen gemischten Zustand darstellt.
+  Sie bereitet das angegebene Qubit im Zustand "$ \boldone/$2" vor, indem der%% amp; quot;%% amp; quot;%% amp; quot; \omega (\rho){1} {4} \mathrel{: = \{} \frac \ sum_ {\}\mu \\_auf 0 festgelegt wird. 1, 2\_, 3} \sigma {\mu} \rho \sigma {\mu} ^ {\dagger}, \end{align} $ $, wobei $ \sigma\_i $ der $i $ th-Pauli-Operator ist und $ \rho $ ein Dichte Operator ist, der einen gemischten Zustand darstellt.
 remarks: >-
   Der gemischte Status $ \boldone/$2, der das Ergebnis der Anwendung dieses Vorgangs auf einen Zustand beschreibt, beschreibt implizit einen Erwartungswert gegenüber zufälligen Entscheidungen, die in diesem Vorgang vorgenommen werden.
 
@@ -28,9 +28,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 944178e3a8473b2206de037031bd8def546425b8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4dd07e9e59575d60bca81c996ad5fc1a3a82b16d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226521"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686505"

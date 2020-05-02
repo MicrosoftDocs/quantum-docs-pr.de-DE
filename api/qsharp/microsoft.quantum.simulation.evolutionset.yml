@@ -7,12 +7,12 @@ summary: >-
   Stellt einen Satz von Gates dar, der leicht implementiert und zum Implementieren von Simulations Algorithmen verwendet werden kann.
 
 
-  Die Elemente in der Gruppe werden von einem <xref:microsoft.quantum.simulation.generatorindex>indiziert, und jede Menge wird von einer Funktion von `GeneratorIndex` bis <xref:microsoft.quantum.simulation.evolutionunitary>beschrieben. Dies sind Vorgänge, die durch eine reelle Zahl, die die Uhrzeit darstellt, parametrisiert werden.
+  Elemente in der Menge werden von einem <xref:microsoft.quantum.simulation.generatorindex>indiziert, und jeder Satz wird von einer Funktion von `GeneratorIndex` bis <xref:microsoft.quantum.simulation.evolutionunitary>beschrieben, die Vorgänge parametrisiert durch eine reelle Zahl, die die Zeit darstellt
 syntax: newtype EvolutionSet = (Microsoft.Quantum.Simulation.GeneratorIndex -> Microsoft.Quantum.Simulation.EvolutionUnitary);
 metadata:
-  ms.openlocfilehash: 2e3e717ca219f5e575f750a32f640215142b170c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0db782c1909c6121078f251f34bbffd5b49a4d8e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211085"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687005"

@@ -4,7 +4,7 @@ name: Random
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: >-
-  Der zufällige Vorgang nimmt ein Array von Double-Vorgängen als Eingabe an und gibt einen zufällig ausgewählten Index als `Int`in das Array zurück.
+  Der zufällige Vorgang nimmt ein Array von Doubles als Eingabe an und gibt einen zufällig ausgewählten Index als Eingabe in das Array zurück `Int`.
 
   Die Wahrscheinlichkeit für die Auswahl eines bestimmten Indexes ist proportional zum Wert des Array Elements an diesem Index.
 
@@ -21,13 +21,13 @@ input:
 output:
   content: Int
   types:
-  - summary: Eine ganze Zahl $i $ mit der Wahrscheinlichkeit $ \pr (i) = p_i/\sum_i p_i $, wobei $p _I $ das $i $ th-Element von `probs`ist.
+  - summary: Eine ganze Zahl $i $ mit der Wahrscheinlichkeitswert $ \pr (i) = p_i/\ sum_i p_i $, wobei $p _I $ das $i $ `probs`th-Element von ist.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: b2a5f6a0b1d2584e385bfa4de2b2c43fc1cf6509
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b269b780b5e8ad048d1563e3dca98524a5ed63d2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233933"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686819"

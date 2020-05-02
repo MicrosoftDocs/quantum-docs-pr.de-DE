@@ -10,12 +10,12 @@ summary: >-
   Der zurückgegebene Vorgang $U $ bereitet einen beliebigen Quantum-Status $ \ket{\psi} $ mit komplexen Koeffizienten $r _J e ^ {i t_j} $ aus dem $n $-Qubit-Berechnungsbasis Status $ \ket{0...0} $.
 
 
-  Die Aktion von U für ein neu zugeordneter Register wird durch $ $ \begin{align} u\ket {0... 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | r_j | ^ 2}} angegeben.
+  Die Aktion "U" für ein neu zugeordneter Register wird durch "$ $ \begin{align} u\ket {0..." angegeben. 0} = \ket{\psi} = \bruchteil {\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
 
   \end{align} $ $
-remarks: Negative Eingabe Koeffizienten $r _J < $0 werden als positiv mit dem Wert $ | r_j | $ behandelt. `coefficients` wird mit den Elementen $ (r_j, t_j) = (0,0, 0,0) $ aufgefüllt, wenn weniger als $2 ^ n $ angegeben werden.
+remarks: Negative Eingabe Koeffizienten $r _J < $0 werden als positiv mit dem Wert $ | r_j | $ behandelt. `coefficients`wird mit den Elementen $ (r_j, t_j) = (0,0, 0,0) $ aufgefüllt, wenn weniger als $2 ^ n $ angegeben werden.
 examples: >-
-  Der folgende Code Ausschnitt bereitet den Quantum-Status $ \ket{\psi} = e ^ {i 0,1} \ sqrt {1/8} \ Ket{0}+ \ sqrt {7/8} \ Ket{2}$ im Qubit-Register `qubitsLE`vor.
+  Im folgenden Code Ausschnitt wird der Quantum-Status $ \ket{\psi} = e ^ {i 0,1} \ sqrt {1/8} \{0}Ket + \ sqrt {7/8} \{2}Ket $ im Qubit- `qubitsLE`Register vorbereitet.
 
 
   ```qsharp
@@ -62,9 +62,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 42049c1ef8c1210bf31a9979a2a6d4d9223a9c85
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d42ff528c40346ddb5a487ca68c70544cac20aeb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226402"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686469"

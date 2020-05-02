@@ -7,11 +7,11 @@ summary: >-
   Verwendet die Quantum-Rom-Technik, um eine angegebene Dichte Matrix darzustellen.
 
 
-  Bei einer Liste mit $N $ Koeffizienten $ \alpha_j $ wird ein einheitlicher $U $ zurückgegeben, der die Quantum-Rom-Technik verwendet, um einen Näherungswert von $ \tilde\rho\sum_{j = 0} ^ {N-1} p_j\ket {j} \ Bra {j} $ der Reinigung der Dichte Matrix $ \rho = \sum_{j = 0} ^ {N-1} \bruchteil {| alpha_j |} {\sum_k | \alpha_k |} \ket{j}\bra{j} $. In dieser Näherung lautet der Fehler $ \epsilon $, dass $ | p_j-\bruch{| alpha_j |} {\sum_k | \alpha_k |} | \le \epsilon/N $ und $\|\tilde \rho-\rho\| \le \epsilon $. Anders ausgedrückt: $ $ \begin{align} u\ket{0}^ {\lceil\log_2 n\rceil} \ Ket{0}^ {m} = \sum_{j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\text{Garbage}_J}.
+  Eine Liste mit $N $ Koeffizienten $ \ alpha_j $, dadurch wird ein einheitlicher $U $ zurückgegeben, der die Quantum-Rom-Technik verwendet, um eine Näherung von $ \tilde \rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ der Reinigung der Dichte Matrix $ \rho = \ sum_ {j = 0} ^ {n-1} \bruchteil {| alpha_j |} zu erstellen. {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. In dieser Näherung ist der Fehler $ \epsilon $, dass $ | p_j-\bruch{| alpha_j |} {\ sum_k | \ alpha_k |} | \le \epsilon/N $ und $\|\tilde \rho-\rho\| \le \epsilon $. Anders ausgedrückt: $ $ \begin{align} u\ket{0}^ {\lceil\ Log_2 n\rceil} \ Ket{0}^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\text{Garbage} _J}.
 
   \end{align} $ $
 examples: >-
-  Der folgende Code Ausschnitt bereitet eine Reinigung des $3 $-Qubit-Zustands $ \rho = \sum_{j = 0} ^{4}\bruchteil {| alpha_j |} vor. {\sum_k | \alpha_k |} \ket{j}\bra{j} $, wobei $ \vec\alpha = (1.0, 2.0, 3.0, 4.0, 5.0) $ und der Fehler `1e-3`.
+  Der folgende Code Ausschnitt bereitet eine Reinigung des $3 $-Qubit-Zustands $ \rho = \ sum_ {j = 0} ^{4}\bruchteil {| alpha_j |} vor. {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $, wobei $ \vec\alpha = (1.0, 2.0, 3.0, 4.0, 5.0) $ und der Fehler lautet `1e-3`.
 
 
   ```qsharp
@@ -30,7 +30,7 @@ examples: >-
 
   ```
 syntax: 'function QuantumROM (targetError : Double, coefficients : Double[]) : ((Int, (Int, Int)), Double, ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl))'
-references: '- Codierung elektronischer Spektren in Quantum-Verbindungen mit linearer T-Komplexität Ryan babbush, Craig Gidney, Dominic W. Berry, Nathan Wiebe, Jarrod McClean, Alexandru paler, Austin Fowler, Hartmut netven https://arxiv.org/abs/1805.03662'
+references: '- Encoding Electronic Spectra in Quantum-Verbindungen mit linearer T-Komplexität Ryan babbush, Craig Gidney, Dominic W. Berry, Nathan Wiebe, Jarrod McClean, Alexandru paler, Austin Fowler, Hartmut netvenhttps://arxiv.org/abs/1805.03662'
 input:
   content: '(targetError : Double, coefficients : Double[])'
   types:
@@ -42,7 +42,7 @@ input:
     summary: >-
       Ein Array von $N $ Koeffizienten, das die Wahrscheinlichkeit von Basis Zuständen angibt.
 
-      Negative Zahlen $-\alpha_j $ werden als positiv $ | \alpha_j | $ behandelt.
+      Negative Zahlen $-\ alpha_j $ werden als positiv $ | \ alpha_j | $ behandelt.
     isArray: true
     isPrimitive: true
     uid: Double
@@ -53,13 +53,13 @@ output:
       ## <a name="first-parameter"></a>Erster Parameter
 
 
-      Ein Tupel `(x,(y,z))` wobei `x = y + z` die Gesamtzahl der zugeordneten Qubits ist, `y` die Anzahl der Qubits für das `LittleEndian` Register und `z` die Anzahl der Garbage Qubits ist.
+      Ein Tupel `(x,(y,z))` , `x = y + z` bei dem die Gesamtzahl der zugeordneten Qubits ist, `y` die Anzahl der Qubits `LittleEndian` für das Register `z` und die Anzahl der Garbage Qubits.
 
 
       ## <a name="second-parameter"></a>Zweiter Parameter
 
 
-      Die einnorm $ \sum_j | \alpha_j | $ des Koeffizienten-Arrays.
+      Die einnorm $ \ sum_j | \ alpha_j | $ des Koeffizienten-Arrays.
 
 
       ## <a name="third-parameter"></a>Dritter Parameter
@@ -92,9 +92,9 @@ output:
       - Adjoint
       - Controlled
 metadata:
-  ms.openlocfilehash: 33d21289b0b1ad64577677d5fa5ca622346224cc
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9bf373f0cb7c495f8c29a4426861c74fbb0ec7f6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226419"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686495"

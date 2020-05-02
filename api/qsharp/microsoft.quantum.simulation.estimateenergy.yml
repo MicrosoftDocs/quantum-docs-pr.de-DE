@@ -3,7 +3,7 @@ uid: microsoft.quantum.simulation.estimateenergy
 name: EstimateEnergy
 type: operation
 namespace: Microsoft.Quantum.Simulation
-summary: Führt die Zustands Vorbereitung durch Anwenden einer `statePrepUnitary` auf eine automatisch zugeordnete Eingabe Zustands-Phasen Schätzung in Bezug auf `qpeUnitary`des resultierenden Zustands mithilfe eines `phaseEstAlgorithm`aus.
+summary: Führt die Zustands Vorbereitung durch Anwenden `statePrepUnitary` eines auf eine automatisch zugeordnete Eingabe Zustands-Phasen Schätzung `qpeUnitary`in Bezug auf den resultierenden Zustand `phaseEstAlgorithm`mithilfe von aus.
 syntax: 'operation EstimateEnergy (nQubits : Int, statePrepUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double)) : Double'
 input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double))'
@@ -25,7 +25,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: Ein Oracle, das einen einheitlichen Operator $U $ darstellt, der die Entwicklung für "Time $ \delta t $" unter einem Dynamical Generator mit dem "Ground State $ \ket{\phi} $" und "State State Energy $E = \phi\\, \delta t $" darstellt.
+    summary: Ein Oracle, das einen einheitlichen Operator $U $ darstellt, der die Entwicklung für "Time $ \delta t $" unter einem Dynamical Generator mit dem "Ground State $ \ket{\phi} $\\" und "Ground State Energy $E = \phi, \delta t $" darstellt.
     isOperation: true
     input:
       types:
@@ -62,9 +62,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: aff8ac5575b6a5e08dc80263a7a8d4bfec59fa12
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d7f32999782763bbb6224afc2c764188c718379b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223325"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686879"

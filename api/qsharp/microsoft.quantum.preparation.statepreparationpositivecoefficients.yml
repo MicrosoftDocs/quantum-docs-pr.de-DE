@@ -7,15 +7,15 @@ summary: >-
   Gibt einen Vorgang zurück, der den gegebenen Quantum-Zustand vorbereitet.
 
 
-  Der zurückgegebene Vorgang $U $ bereitet einen beliebigen Quantum-Status $ \ket{\psi} $ mit positiven Koeffizienten $ \alpha_j\ge $0 aus dem $n $-Qubit-Berechnungsbasis Status $ \ket{0...0} $ vor.
+  Der zurückgegebene Vorgang $U $ bereitet einen beliebigen Quantum-Status $ \ket{\psi} $ mit positiven Koeffizienten $ \ alpha_j \ge $0 aus dem $n $-Qubit-Berechnungsbasis Status $ \ket{0...0} $ vor.
 
 
-  Die Aktion "U" für ein neu zugeordneter Register wird durch "$ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} \alpha_j \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | \alpha_j | ^ 2}}" angegeben.
+  Die Aktion "U" für ein neu zugeordneter Register wird durch "$ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \bruchteil {" angegeben. \ sum_ {j = 0} ^ {2 ^ n-1} \ alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ alpha_j | ^ 2}}.
 
   \end{align} $ $
-remarks: Negative Eingabe Koeffizienten $ \alpha_j < $0 werden als positiv mit dem Wert $ | \alpha_j | $ behandelt. `coefficients` werden mit den Elementen $ \alpha_j = $0,0 aufgefüllt, wenn weniger als $2 ^ n $ angegeben werden.
+remarks: Negative Eingabe Koeffizienten $ \ alpha_j < $0 werden als positiv mit dem Wert $ | \ alpha_j | $ behandelt. `coefficients`wird mit Elementen $ \ alpha_j = $0,0 aufgefüllt, wenn weniger als $2 ^ n $ angegeben werden.
 examples: >-
-  Der folgende Code Ausschnitt bereitet den Quantum-Status $ \ket{\psi} = \ sqrt {1/8} \ Ket{0}+ \ sqrt {7/8} \ Ket{2}$ im Qubit-Register `qubitsLE`vor.
+  Im folgenden Code Ausschnitt wird der Quantum-Status $ \ket{\psi} = \ sqrt {1/8} \{0}Ket + \ sqrt {7/8} \{2}Ket $ im Qubit- `qubitsLE`Register vorbereitet.
 
 
   ```qsharp
@@ -35,7 +35,7 @@ input:
   content: '(coefficients : Double[])'
   types:
   - name: coefficients
-    summary: Array von bis zu $2 ^ n $ Koeffizienten $ \alpha_j $. Der $j $ Th-Koeffizienten indiziert den im Little-Endian-Format codierten Zahlen Status $ \ket{j} $.
+    summary: Array von bis zu $2 ^ n $ Koeffizienten $ \ alpha_j $. Der $j $ Th-Koeffizienten indiziert den im Little-Endian-Format codierten Zahlen Status $ \ket{j} $.
     isArray: true
     isPrimitive: true
     uid: Double
@@ -55,9 +55,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 2a31449781d4b3bab1f2af40083df78bf6cc2083
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d419fd88ed037001cc51dbd354b5c89dbe334246
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226368"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686454"

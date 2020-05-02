@@ -3,7 +3,7 @@ uid: microsoft.quantum.simulation.timedependenttrottersimulationalgorithm
 name: TimeDependentTrotterSimulationAlgorithm
 type: function
 namespace: Microsoft.Quantum.Simulation
-summary: '`TimeDependentSimulationAlgorithm` Funktion, die eine Trotter – Suzuki-Zerlegung verwendet, um einen einheitlichen Operator zu nähern, der die zeitabhängige Schrodinger-Gleichung löst.'
+summary: '`TimeDependentSimulationAlgorithm`eine Funktion, die eine Trotter – Suzuki-Zerlegung verwendet, um einen einheitlichen Operator zu nähern, der die zeitabhängige Schrodinger-Gleichung löst.'
 syntax: 'function TimeDependentTrotterSimulationAlgorithm (trotterStepSize : Double, trotterOrder : Int) : Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm'
 input:
   content: '(trotterStepSize : Double, trotterOrder : Int)'
@@ -19,12 +19,12 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm
   types:
-  - summary: Ein `TimeDependentSimulationAlgorithm` Typ.
+  - summary: Ein `TimeDependentSimulationAlgorithm`-Typ.
     uid: microsoft.quantum.simulation.timedependentsimulationalgorithm
 metadata:
-  ms.openlocfilehash: dbac8ac91d7145216f9594f26e443f3a2660831e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3dc5c7a7037be2b30dfdc3b7eb7c5d32d2f9b4c5
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065247"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687249"

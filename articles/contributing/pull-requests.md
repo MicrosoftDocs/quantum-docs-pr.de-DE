@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 82af3b5123588cc06882f746ffcb0402ad3f0f2e
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907459"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82686852"
 ---
 # <a name="opening-pull-requests"></a>Öffnen von Pull Requests #
 
@@ -60,9 +60,9 @@ Mithilfe dieses Prozesses können wir die GitHub-Funktionalität nutzen, um Beit
 
 ## <a name="how-to-make-a-pull-request"></a>So erstellen Sie einen Pull Request ##
 
-Es gibt zwei Hauptmethoden, um eine Pull Request zu erstellen.
-Bei kleinen Änderungen, die nur eine einzelne Datei betreffen, kann die GitHub-Webschnittstelle verwendet werden, um eine Pull Request vollständig online zu machen.
-Für kompliziertere Beiträge ist es am häufigsten einfacher, Ihren lokalen Computer zu verwenden, um zuerst eine Pull Request vorzubereiten.
+Es gibt zwei Hauptmethoden, um eine Pull Request zu erstellen.  
+Bei kleinen Änderungen, die nur eine einzelne Datei betreffen, kann die GitHub-Webschnittstelle verwendet werden, um eine Pull Request vollständig online zu machen. Navigieren Sie einfach zu der Datei, die Sie bearbeiten möchten, und verwenden Sie das Bearbeitungs Symbol.  
+Für kompliziertere Beiträge ist es am häufigsten einfacher, das Repository auf Ihren lokalen Computer zu klonen, um zuerst eine Pull Request vorzubereiten.
 
 <!--
 ### Using the Web Interface ###

@@ -4,7 +4,7 @@ name: ModulusI
 type: function
 namespace: Microsoft.Quantum.Math
 summary: Berechnet den kanonischen Rückstand von `value` Modulo `modulus`.
-remarks: 'Diese Funktion verhält sich anders, als sich der Operator `%` C# verhält, und f # As im Ergebnis ist immer eine positive Ganzzahl zwischen 0 und `modulus - 1`, auch wenn der Wert negativ ist.'
+remarks: 'Diese Funktion verhält sich unterschiedlich, wie `%` sich der Operator in c# verhält, und f #, da im Ergebnis immer eine positive ganze `modulus - 1`Zahl zwischen 0 und ist, auch wenn der Wert negativ ist.'
 syntax: 'function ModulusI (value : Int, modulus : Int) : Int'
 input:
   content: '(value : Int, modulus : Int)'
@@ -20,13 +20,13 @@ input:
 output:
   content: Int
   types:
-  - summary: Ganzzahliger $r $ zwischen 0 und `modulus - 1`, sodass `value - r` durch Modulo teilbar ist.
+  - summary: Ganzzahliger $r $ zwischen `modulus - 1` 0 und `value - r` so, dass durch Modulo teilbar ist
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 1bb3877b4d66b5ad09dabbc072d7d9fb61813745
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d804caa4e5eba1e8d6293d33164255ea4768900c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212088"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686648"
