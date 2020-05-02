@@ -7,9 +7,9 @@ summary: >-
   Wendet einen für einen klassischen Ergebniswert bedingten Vorgang an, der 0 (null) ist.
 
 
-  Wendet bei einem Vorgang `op` und einem Ergebniswert `result``op` auf das `target` an, wenn `result` `Zero`ist. Wenn `One`, geschieht nichts mit dem `target`.
+  `target` Bei einem Vorgang `op` und einem Ergebniswert `result`gilt `op` für, wenn `result` gleich ist `Zero`. Gibt `One`an, dass nichts passiert `target`.
 
-  Das Suffix `C` gibt an, dass der anzuwendende Vorgang steuerbar ist.
+  Das- `C` Suffix gibt an, dass der anzuwendende Vorgang steuerbar ist.
 syntax: "operation ApplyIfZeroC (result : Result, (op : ('T => Unit is Ctl), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Ctl), target : 'T))"
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: 6bb3b5900df1a2afcd4bb42fde3b68397804da46
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 12484848b3208dcb0a52e1f2084bbc3a5f4ec359
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217375"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672597"

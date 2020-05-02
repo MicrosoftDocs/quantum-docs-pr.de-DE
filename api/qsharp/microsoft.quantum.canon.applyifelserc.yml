@@ -7,17 +7,17 @@ summary: >-
   Wendet je nach dem Wert eines klassischen Ergebnisses einen von zwei kontrollierbaren Vorgängen an.
 
 
-  Wendet bei einem Ergebnis `result`den Vorgang `zeroOp` mit `zeroInput` als Eingabe an, wenn `result` gleich `Zero`ist, und wendet `oneOp(oneInput)` beim `result == One`an.
+  Bei einem Ergebnis `result`wendet den Vorgang `zeroOp` mit als `zeroInput` Eingabe `result` an `Zero`, wenn gleich ist, und gilt `oneOp(oneInput)` , wenn `result == One`gleich ist.
 syntax: "operation ApplyIfElseRC (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U))"
   types:
   - name: result
-    summary: Das Messergebnis, mit dem bestimmt wird, ob `zeroOp` oder `oneOp` angewendet werden.
+    summary: Das Messergebnis, mit dem bestimmt `zeroOp` wird `oneOp` , ob oder angewendet wird.
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: Der beim `result == Zero`anzuwendende steuerbare Vorgang.
+    summary: Der zu verwendende kontrollierbare Vorgang `result == Zero`, wenn.
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Controlled
   - name: zeroInput
-    summary: Die Eingabe, die für `zeroOp` bereitgestellt werden soll, wenn `result == Zero`.
+    summary: Die Eingabe, die für `zeroOp` bereitgestellt `result == Zero`werden soll.
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: Der beim `result == One`anzuwendende steuerbare Vorgang.
+    summary: Der zu verwendende kontrollierbare Vorgang `result == One`, wenn.
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Controlled
   - name: oneInput
-    summary: Die Eingabe, die für `oneOp` bereitgestellt werden soll, wenn `result == One`.
+    summary: Die Eingabe, die für `oneOp` bereitgestellt `result == One`werden soll.
     uid: "'U"
     isLocal: true
 output:
@@ -57,9 +57,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: Der Eingabetyp des Vorgangs `zeroOp` bedingt angewendet werden.
+  summary: Der Eingabetyp des `zeroOp` Vorgangs, der bedingt angewendet werden soll.
 - uid: "'U"
-  summary: Der Eingabetyp des Vorgangs `oneOp` bedingt angewendet werden.
+  summary: Der Eingabetyp des `oneOp` Vorgangs, der bedingt angewendet werden soll.
 functors:
 - Controlled
 seeAlso:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: e2dd871aa42ed22ba088e6eaad9d9705dfb26254
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: aeb4c7f86ac1f41140bb14436d9dee39b4c4d98b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220928"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672740"

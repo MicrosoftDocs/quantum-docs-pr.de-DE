@@ -7,17 +7,17 @@ summary: >-
   Wendet abhängig vom Wert eines klassischen Bits einen von zwei einheitlichen Vorgängen an.
 
 
-  Bei einem Bit`bit`wendet den Vorgang `trueOp` mit `trueInput` als Eingabe an, wenn `bit` `true`ist, und wendet `falseOp(falseInput)` an, wenn `bit` `false`ist.
+  Wenn ein Bit `bit`angegeben ist, wendet `trueOp` den `trueInput` Vorgang mit als Eingabe `bit` an `true`, wenn den `falseOp(falseInput)` Wert `bit` hat `false`, und gilt, wenn den Wert hat.
 syntax: "operation ApplyIfElseBCA (bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U))"
   types:
   - name: bit
-    summary: Der boolesche Wert, der verwendet wird, um zu bestimmen, ob `trueOp` oder `falseOp` angewendet wird.
+    summary: Der boolesche Wert, der verwendet wird `trueOp` , `falseOp` um zu bestimmen, ob oder angewendet wird.
     isPrimitive: true
     uid: Bool
   - name: trueOp
-    summary: Der einheitliche Vorgang, der angewendet werden soll, wenn `bit` `true`ist.
+    summary: Der einheitliche Vorgang, der angewendet werden `bit` soll `true`, wenn ist.
     isOperation: true
     input:
       types:
@@ -31,11 +31,11 @@ input:
     - Adjoint
     - Controlled
   - name: trueInput
-    summary: Die Eingabe, die für `trueOp` bereitgestellt werden soll, wenn `bit` `true`ist.
+    summary: Die Eingabe, die für bereit `trueOp` gestellt `bit` werden `true`soll, wenn ist.
     uid: "'T"
     isLocal: true
   - name: falseOp
-    summary: Der einheitliche Vorgang, der angewendet werden soll, wenn `bit` `false`ist.
+    summary: Der einheitliche Vorgang, der angewendet werden `bit` soll `false`, wenn ist.
     isOperation: true
     input:
       types:
@@ -49,7 +49,7 @@ input:
     - Adjoint
     - Controlled
   - name: falseInput
-    summary: Die Eingabe, die für `falseOp` bereitgestellt werden soll, wenn `bit` `false`ist.
+    summary: Die Eingabe, die für bereit `falseOp` gestellt `bit` werden `false`soll, wenn ist.
     uid: "'U"
     isLocal: true
 output:
@@ -59,9 +59,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: Der Eingabetyp des Vorgangs `trueOp` bedingt angewendet werden.
+  summary: Der Eingabetyp des `trueOp` Vorgangs, der bedingt angewendet werden soll.
 - uid: "'U"
-  summary: Der Eingabetyp des Vorgangs `falseOp` bedingt angewendet werden.
+  summary: Der Eingabetyp des `falseOp` Vorgangs, der bedingt angewendet werden soll.
 functors:
 - Adjoint
 - Controlled
@@ -72,9 +72,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: 526170a58fcab51aa36abeee6bd1573dc5eeddbb
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 3f0d704d33fc1d3e964e804c2ff68cb893069445
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871327"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672769"

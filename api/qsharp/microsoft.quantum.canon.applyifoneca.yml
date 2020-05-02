@@ -7,9 +7,9 @@ summary: >-
   Wendet einen einheitlichen Vorgang an, der auf einen klassischen Ergebniswert zurückzuführen ist.
 
 
-  Wendet bei einem Vorgang `op` und einem Ergebniswert `result``op` auf das `target` an, wenn `result` `One`ist. Wenn `Zero`, geschieht nichts mit dem `target`.
+  `target` Bei einem Vorgang `op` und einem Ergebniswert `result`gilt `op` für, wenn `result` gleich ist `One`. Gibt `Zero`an, dass nichts passiert `target`.
 
-  Das Suffix `CA` gibt an, dass der anzuwendende Vorgang einheitlich (steuerbar und adjointable) ist.
+  Das- `CA` Suffix gibt an, dass der anzuwendende Vorgang einheitlich (steuerbar und adjointable) ist.
 syntax: "operation ApplyIfOneCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T))"
@@ -52,9 +52,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: 9756dcc29853d41e1d2a9fee5816254afa5e5d73
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f8837e549ec1fc70b76e8151a211c4bf9f71168e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217392"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672649"

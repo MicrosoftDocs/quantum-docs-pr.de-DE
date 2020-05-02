@@ -7,9 +7,9 @@ summary: >-
   Wendet einen einheitlichen Vorgang an, der auf einem klassischen Ergebniswert von 0 (null) liegt.
 
 
-  Wendet bei einem Vorgang `op` und einem Ergebniswert `result``op` auf das `target` an, wenn `result` `Zero`ist. Wenn `One`, geschieht nichts mit dem `target`.
+  `target` Bei einem Vorgang `op` und einem Ergebniswert `result`gilt `op` für, wenn `result` gleich ist `Zero`. Gibt `One`an, dass nichts passiert `target`.
 
-  Das Suffix `CA` gibt an, dass der anzuwendende Vorgang einheitlich (steuerbar und adjointable) ist.
+  Das- `CA` Suffix gibt an, dass der anzuwendende Vorgang einheitlich (steuerbar und adjointable) ist.
 syntax: "operation ApplyIfZeroCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T))"
@@ -52,9 +52,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: 9ec05f688c3895b2d68fc3f4717401e127fbe641
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 64e35b2fc198e7c3df862681e8c16870399f58c7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213601"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672584"

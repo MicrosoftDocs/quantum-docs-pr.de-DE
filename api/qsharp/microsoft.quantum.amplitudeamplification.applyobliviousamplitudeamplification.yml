@@ -5,12 +5,12 @@ type: operation
 namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: Durch die Angabe partieller Reflektionen wird die Verstärkung der Amplitude-Verstärkung unterstreicht
 remarks: >-
-  Bei einem bestimmten Zusatz Status $ \ket{\text{Start}}\_a $, einem bestimmten Zusatz Ziel Status $ \ket{\text{Target}}\_a $ und jedem Systemstatus $ \ket{\psi}\_s $, angenommen, \begin{align} o\ket {\ Text {Start}}\_a\ket {\ PSI}\_s = \lambda\ket{\text{Target}}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{\text{Target} ^ \perp}\_a\cdots \end{align} für einige einheitliche $U $.
+  Bei einem\_bestimmten Zusatz Status $ \ket{\text{Start}} a $, einem bestimmten Zusatz Ziel Status $ \ket{\text{Target}}\_a $ und jedem Systemstatus $ \ket{\psi}\_s $, angenommen, \begin{align} o\ket {\ Text {Start}}\_a\ket {\ PSI}\_s = \lambda\ket{\text{Target}}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{\text{Target} ^ \perp}\_a\cdots \end{align} für einige einheitliche $U $.
 
-  Durch eine Sequenz von Reflektionen über den Start-und den Ziel Status im Zusatz Register, die von den Anwendungen von `signalOracle` und dessen Adjoint getrennt werden, kann die Erfolgswahrscheinlichkeit der Anwendung U geändert werden.
+  Durch eine Sequenz von Reflektionen zu den Start-und Ziel Zuständen im Zusatz Register, die von Anwendungen von `signalOracle` und dessen Adjoint überschneidet werden, kann die Erfolgswahrscheinlichkeit der Anwendung U geändert werden.
 
 
-  In den meisten Fällen wird `auxiliaryRegister` im Status $ \ket{\text{Start}}\_a $ initialisiert.
+  In den meisten Fällen `auxiliaryRegister` wird im Status $ \ket{\text{Start}}\_a $ initialisiert.
 syntax: 'operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[]) : Unit'
 references: >-
   Finden Sie unter
@@ -32,7 +32,7 @@ input:
     summary: Reflektionsoperator zum Ziel Status des Zusatz Registers
     uid: microsoft.quantum.oracles.reflectionoracle
   - name: signalOracle
-    summary: Einheitlicher Oracle-$O $ vom Typ `ObliviousOracle`, der gemeinsam auf dem Hilfssystem und dem System Register agiert.
+    summary: Einheitlicher Oracle-$O $ vom `ObliviousOracle` Typ, der gemeinsam auf dem Hilfssystem und dem System Register agiert.
     uid: microsoft.quantum.oracles.obliviousoracle
   - name: auxiliaryRegister
     summary: Zusatz Register
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 3ed252d38ebe32900a7ac22079f46eaf04f2018d
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 7452686a76d9ff89c0eb79290e7dae23347778ac
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872545"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672961"
