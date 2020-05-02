@@ -4,7 +4,7 @@ name: AssertOperationsEqualInPlaceCompBasis
 type: operation
 namespace: Microsoft.Quantum.Diagnostics
 summary: >-
-  Überprüft, ob der Vorgang `givenU` gleich dem Vorgang `expectedU` der angegebenen Eingabe Größe ist, indem die Aktion der Vorgänge nur für die Vektoren von der Berechnungsbasis überprüft wird.
+  Überprüft, ob der `givenU` Vorgang mit dem Vorgang `expectedU` auf der angegebenen Eingabe Größe identisch ist, indem die Aktion der Vorgänge nur für die Vektoren von der Berechnungsbasis überprüft wird.
 
   Dies ist eine erforderliche, aber nicht ausreichende Bedingung für die Gleichheit von zwei uniflüssen.
 syntax: 'operation AssertOperationsEqualInPlaceCompBasis (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
@@ -12,7 +12,7 @@ input:
   content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
   types:
   - name: nQubits
-    summary: Die Anzahl der Qubits $n $, an denen die Vorgänge `givenU` und `expectedU` arbeiten.
+    summary: Die Anzahl der Qubits $n $, an denen `givenU` die `expectedU` Vorgänge ausgeführt werden.
     isPrimitive: true
     uid: Int
   - name: givenU
@@ -28,7 +28,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: expectedU
-    summary: Verweis Vorgang auf $n $ Qubits, mit dem `givenU` verglichen werden soll.
+    summary: Verweis Vorgang auf $n $ Qubits, `givenU` der mit verglichen werden soll.
     isOperation: true
     input:
       types:
@@ -47,9 +47,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 5841b6dc60047c051b38305c177f54d3eb84e087
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c3a98dee80b9e41ea3c27e1e52c3046751307912
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066556"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677273"

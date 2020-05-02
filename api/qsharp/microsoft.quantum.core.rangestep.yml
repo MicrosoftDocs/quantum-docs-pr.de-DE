@@ -4,7 +4,7 @@ name: RangeStep
 type: function
 namespace: Microsoft.Quantum.Core
 summary: Gibt die ganze Zahl zurück, die angibt, wie der nächste Wert eines Bereichs berechnet wird.
-remarks: Das erste Element eines Bereichs Ausdrucks ist `start`, sein zweites Element `start+step`, das dritte Element `start+step+step`usw., bis `end` weitergegeben wird.
+remarks: Das erste Element eines Bereichs Ausdrucks ist `start`, sein zweites Element `start+step`, das dritte Element ist `start+step+step`usw., bis `end` erfolgreich ist.
 syntax: 'function RangeStep (range : Range) : Int'
 input:
   content: '(range : Range)'
@@ -19,9 +19,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0195f0f2eb03c163ae08cc789867627286a44097
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 30f67fba4e263f3b01bec1c360198728087783f2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066607"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677326"

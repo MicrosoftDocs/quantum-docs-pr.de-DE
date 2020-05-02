@@ -17,20 +17,20 @@ input:
   content: '(range : Range)'
   types:
   - name: range
-    summary: Eine `Range` von Werten `start..step..end` die in ein Array konvertiert werden sollen.
+    summary: Eine `Range` von Werten `start..step..end` , die in ein Array konvertiert werden sollen.
     isPrimitive: true
     uid: Range
 output:
   content: Int[]
   types:
-  - summary: Ein neues Array von ganzen Zahlen, das den Werten entspricht, die durch `range`durchlaufen werden.
+  - summary: Ein neues Array von ganzen Zahlen, das den Werten entspricht, die `range`durch durchlaufen werden.
     isArray: true
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: a6765698daf8838312c1501e8bbf1e43f609b068
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f909319a624459b2453db2ac73d3ceaec38f6911
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232335"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677371"
