@@ -3,13 +3,7 @@ uid: microsoft.quantum.intrinsic.ry
 name: Ry
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
-summary: >-
-  Wendet eine Drehung zum $y $-Achse um einen angegebenen Winkel an.
-
-
-  \begin{align} R_y (\orta) \mathrel{: =} e ^ {-i \-Ta \sigma_y/2} = \begin{bmatrix} \cos \bruchteil {\thta}{2} &-\sin \bruchteil {\Der Ta}{2}\\\\ \sin \bruchteil {\thta}{2} & \cos \bruchteil {\thta}{2} \end{bmatrix}.
-
-  \end{align}
+summary: "Wendet eine Drehung zum $y $-Achse um einen angegebenen Winkel an.\n\n\\begin{align} R_y (\\orta) \\mathrel{: =} e ^ {-i \\erta \\ sigma_y/2} = \\begin{bmatrix} \\cos \\bruchteil {\\thta}{2} &-\\sin \\bruchteil {\\thta}{2} \\\\ \\\\ \\sin \\bruchteil {\\thta}{2} & \\cos \\bruchteil {\\thta}{2} \\end{bmatrix}.  \n\\end{align}"
 remarks: >-
   Äquivalent zu:
 
@@ -40,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 6afb1d43c942ca1541b4a0a978d9d1e3289a9bc2
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1f37b16752b9001a5e87f5d16dd0c857264a64a4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216423"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683641"

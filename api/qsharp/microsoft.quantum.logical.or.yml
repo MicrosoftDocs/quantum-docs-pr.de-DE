@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Logical
 summary: Gibt die boolesche Disjunktion von zwei Werten zurück.
 remarks: >-
-  Anders als der `or`-Operator ist diese Funktion nicht kurz, sodass beide Eingaben vollständig ausgewertet werden.
+  Im Gegensatz `or` zum-Operator ist diese Funktion nicht kurz, sodass beide Eingaben vollständig ausgewertet werden.
 
 
   Bis zu einem kurzen Schluss Verhalten sind die folgenden äquivalent:
@@ -33,13 +33,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true` nur dann, wenn entweder `a` oder `b` `true`sind.'
+  - summary: '`true`nur dann, wenn entweder `a` oder `b` ist `true`.'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 7324679482e300b868902e9bf1c17cc9cc0da10d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fb3d62473ec3fd7c40b44bfa919b69d54c5d0218
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235157"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683562"

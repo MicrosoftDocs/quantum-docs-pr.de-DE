@@ -3,7 +3,7 @@ uid: microsoft.quantum.math.pi
 name: PI
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Stellt das Verhältnis des Umfangs eines Kreises zu seinem Durchschnitt, angegeben durch die Konstante, fest.
+summary: Stellt das Verhältnis eines Kreisumfangs zum Kreisdurchmesser durch die Konstante π dar.
 remarks: Weitere Informationen finden Sie unter [System. Math. PI](https://docs.microsoft.com/dotnet/api/system.math.pi) .
 syntax: 'function PI () : Double'
 input:
@@ -15,9 +15,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: c7b0985cfe132351f9bee9e70d1fcfafd40b757d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 692fd1dc9f4801098ab2e2c97362af9fa24603ec
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211374"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684165"

@@ -7,7 +7,7 @@ summary: >-
   Wendet den Exponentialwert eines multiqubit-Pauli-Operators an.
 
 
-  \begin{align} e ^ {i \orta [P_0 \otimes P_1 \cdots P_ {N-1}]}, \end{align}, wobei $P _I $ das $i $ th-Element von `paulis`und WHERE $N = $`Length(paulis)`ist.
+  \begin{align} e ^ {i \orta [P_0 \otimes P_1 \cdots P_ {N-1}]}, \end{align}, wobei $P _I $ das $i $ th-Element `paulis`von und $N = $`Length(paulis)`ist.
 syntax: 'operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : Unit'
 input:
   content: '(paulis : Pauli[], theta : Double, qubits : Qubit[])'
@@ -35,9 +35,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d301f6281d5c8a07479417fab1e25c66e2251a25
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d66b1b03a751be2629d2c363f538d9afa0310c73
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067321"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683825"
