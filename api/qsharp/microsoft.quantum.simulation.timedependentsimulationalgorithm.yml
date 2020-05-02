@@ -7,14 +7,14 @@ summary: >-
   Stellt einen zeitabhängigen Simulations Algorithmus dar.
 
 
-  Eine zeitabhängige Simulationstechnik konvertiert eine <xref:microsoft.quantum.simulation.evolutionschedule>
+  Eine zeitabhängige Simulationstechnik konvertiert ein<xref:microsoft.quantum.simulation.evolutionschedule>
 
   zur einheitlichen Zeit-Evolution für einige Zeitintervalle.
 syntax: newtype TimeDependentSimulationAlgorithm = ((Double, Microsoft.Quantum.Simulation.EvolutionSchedule, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 0af6aa57fceb45254fa4cf13b97dad81f44fa237
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2467e0756a80ef14461dea16f5b84d2dff74825c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219925"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687273"
