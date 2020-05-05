@@ -1,0 +1,28 @@
+- href: chemistry.broombridge.md
+  name: Magic-Befehl „%chemistry.broombridge“
+- href: chemistry.encode.md
+  name: Magic-Befehl „%chemistry.encode“
+- href: chemistry.fh.add_terms.md
+  name: Magic-Befehl „%chemistry.fh.add_term“
+- href: chemistry.fh.load.md
+  name: Magic-Befehl „%chemistry.fh.load“
+- href: chemistry.inputstate.load.md
+  name: Magic-Befehl „%chemistry.inputstate.load“
+- href: config.md
+  name: Magic-Befehl „%config“
+- href: estimate.md
+  name: Magic-Befehl „%estimate“
+- href: lsmagic.md
+  name: Magic-Befehl „%lsmagic“
+- href: package.md
+  name: Magic-Befehl „%package“
+- href: performance.md
+  name: Magic-Befehl „%performance“
+- href: simulate.md
+  name: Magic-Befehl „%simulate“
+- href: toffoli.md
+  name: Magic-Befehl „%toffoli“
+- href: who.md
+  name: Magic-Befehl „%who“
+- href: workspace.md
+  name: Magic-Befehl „%workspace“
