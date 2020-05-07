@@ -20,8 +20,6 @@
       href: install-guide/toc.yml
     - name: Aktualisieren des QDK
       href: install-guide/update.md
-    - name: 'Erstellen eines Q#-Projekts'
-      href: how-to-guides/create-qsharp-project.md
 - name: Tutorials
   items:
     - name: Quanten-Zufallszahlengenerator
