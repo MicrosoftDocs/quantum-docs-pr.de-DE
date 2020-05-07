@@ -1,6 +1,6 @@
 - name: Microsoft Quantum-Dokumentation
   href: index.yml
-- name: Erste Schritte mit Quantencomputing
+- name: Übersicht
   items:
     - name: Was ist Quantencomputing?
       href: overview/what-is-quantum-computing.md
@@ -12,7 +12,7 @@
       href: overview/what-is-qsharp.md
     - name: Wie kann ich mehr erfahren?
       href: overview/how-to-learn-quantum-computing.md
-- name: Abrufen des Quantum Development Kit
+- name: Schnellstarts
   items:
     - name: Erste Schritte mit dem QDK
       href: welcome.md
@@ -22,21 +22,19 @@
       href: install-guide/update.md
     - name: 'Erstellen eines Q#-Projekts'
       href: how-to-guides/create-qsharp-project.md
-- name: 'Q#-Schulungsressourcen'
+- name: Tutorials
   items:
-    - name: Schnellstarts
-      items:
-        - name: Quanten-Zufallszahlengenerator
-          href: quickstarts/qrng.md
-        - name: 'Erkunden der Verschränkung mit Q#'
-          href: quickstart.md
-        - name: Implementieren des Grover-Suchalgorithmus
-          href: quickstarts/search.md
+    - name: Quanten-Zufallszahlengenerator
+      href: quickstarts/qrng.md
+    - name: 'Erkunden der Verschränkung mit Q#'
+      href: quickstart.md
+    - name: Implementieren des Grover-Suchalgorithmus
+      href: quickstarts/search.md
     - name: 'Erlernen von Q# mit den Quanten-Katas'
       href: intro-to-katas.md
     - name: 'Q#-Codebeispiele'
       href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
-- name: Eingehende Einführung in das QDK
+- name: 'Q#-Benutzerhandbuch'
   items:
     - name: Verfahren der Quantenentwicklung
       topicHref: techniques/index.md
@@ -46,15 +44,21 @@
       href: language/toc.yml
     - name: Quantensimulatoren und Ressourcenschätzungen
       href: machines/toc.yml
-- name: 'Q#-Bibliotheken'
-  href: libraries/toc.yml
-- name: Quantencomputingkonzepte
-  href: concepts/toc.yml
-- name: Weitere Informationsquellen
-  href: for-more-info.md
-- name: Mitwirken am QDK
-  href: contributing/toc.yml
-  topicHref: contributing/index.md
-- name: 'QDK: Versionshinweise'
-  topicHref: relnotes/index.md
-  href: relnotes/toc.yml
+- name: Konzepte
+  items:
+    - name: Quantencomputingkonzepte
+      href: concepts/toc.yml
+    - name: 'Q#-Bibliotheken'
+      href: libraries/toc.yml
+- name: Ressourcen
+  items:
+    - name: Glossar
+      href: concepts/Glossary.md
+    - name: Mitwirken am QDK
+      href: contributing/toc.yml
+      topicHref: contributing/index.md
+    - name: 'QDK: Versionshinweise'
+      topicHref: relnotes/index.md
+      href: relnotes/toc.yml
+    - name: Weitere Informationsquellen
+      href: for-more-info.md
