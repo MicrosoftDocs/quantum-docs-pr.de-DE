@@ -1,86 +1,89 @@
 ---
-title: 'F #-Programme ohne Treiber und Host Sprache ausführen'
+title: 'Entwickeln mit f #-Befehlszeilen Anwendungen'
 author: KittyYeungQ
 ms.author: kitty
 ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: e83acaf10af952da06abf4737ad2ec91f1cf1b8e
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: e829862521951c50cb42eebf261c803071a95275
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706800"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426435"
 ---
-# <a name="q-command-line-applications"></a><span data-ttu-id="af00b-102">F #-Befehlszeilen Anwendungen</span><span class="sxs-lookup"><span data-stu-id="af00b-102">Q# Command Line Applications</span></span>
+# <a name="develop-with-q-command-line-applications"></a><span data-ttu-id="558b7-102">Entwickeln mit f #-Befehlszeilen Anwendungen</span><span class="sxs-lookup"><span data-stu-id="558b7-102">Develop with Q# command line applications</span></span>
 
-<span data-ttu-id="af00b-103">F #-Programme können eigenständig, ohne Treiber in einer Host Sprache wie c#, F # oder python ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="af00b-103">Q# programs can be executed on their own, without a driver in a host language like C#, F#, or Python.</span></span>
+<span data-ttu-id="558b7-103">F #-Programme können eigenständig, ohne Treiber in einer Host Sprache wie c#, F # oder python ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="558b7-103">Q# programs can be executed on their own, without a driver in a host language like C#, F#, or Python.</span></span>
 
-## <a name="pre-requisites"></a><span data-ttu-id="af00b-104">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="af00b-104">Pre-requisites</span></span>
+## <a name="pre-requisites"></a><span data-ttu-id="558b7-104">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="558b7-104">Pre-requisites</span></span>
 
-- [<span data-ttu-id="af00b-105">.NET Core SDK 3.1 oder höher</span><span class="sxs-lookup"><span data-stu-id="af00b-105">.NET Core SDK 3.1 or later</span></span>](https://www.microsoft.com/net/download)
+- [<span data-ttu-id="558b7-105">.NET Core SDK 3.1 oder höher</span><span class="sxs-lookup"><span data-stu-id="558b7-105">.NET Core SDK 3.1 or later</span></span>](https://www.microsoft.com/net/download)
 
-## <a name="installation"></a><span data-ttu-id="af00b-106">Installation</span><span class="sxs-lookup"><span data-stu-id="af00b-106">Installation</span></span>
+## <a name="installation"></a><span data-ttu-id="558b7-106">Installation</span><span class="sxs-lookup"><span data-stu-id="558b7-106">Installation</span></span>
 
-<span data-ttu-id="af00b-107">Obwohl Sie in jeder IDE q #-Befehlszeilen Anwendungen erstellen können, wird dringend empfohlen, Visual Studio Code (vs Code) oder die Visual Studio-IDE für Ihre Q #-Anwendungen zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="af00b-107">While you can build Q# command line applications in any IDE, we highly recommend using Visual Studio Code (VS Code) or Visual Studio IDE for your Q# applications.</span></span> <span data-ttu-id="af00b-108">Wenn Sie vs Code oder Visual Studio und die QDK-Visual Studio Code Erweiterung verwenden, erhalten Sie Zugriff auf umfangreichere Funktionen.</span><span class="sxs-lookup"><span data-stu-id="af00b-108">By using VS Code or Visual Studio and the QDK Visual Studio Code extension you gain access to richer functionality.</span></span>
+<span data-ttu-id="558b7-107">Obwohl Sie in jeder IDE q #-Befehlszeilen Anwendungen erstellen können, empfiehlt es sich, für Ihre Q #-Anwendungen Visual Studio Code (vs Code) oder die Visual Studio-IDE zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="558b7-107">While you can build Q# command line applications in any IDE, we recommend using Visual Studio Code (VS Code) or Visual Studio IDE for your Q# applications.</span></span> <span data-ttu-id="558b7-108">Die Entwicklung in diesen Tools ermöglicht den Zugriff auf umfangreiche Funktionen.</span><span class="sxs-lookup"><span data-stu-id="558b7-108">Developing in these tools provides access to rich functionality.</span></span>
 
-- <span data-ttu-id="af00b-109">Installieren von [vs Code](https://code.visualstudio.com/download) (Windows, Linux und Mac)</span><span class="sxs-lookup"><span data-stu-id="af00b-109">Install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac)</span></span>
-- <span data-ttu-id="af00b-110">Installieren Sie die [QDK-Erweiterung für vs Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode) oder</span><span class="sxs-lookup"><span data-stu-id="af00b-110">Install the [QDK extension for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode) OR</span></span>
-- <span data-ttu-id="af00b-111">[Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 mit aktivierter plattformübergreifender .NET Core-Entwicklungsworkload</span><span class="sxs-lookup"><span data-stu-id="af00b-111">[Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3, with the .NET Core cross-platform development workload enabled</span></span>
-- <span data-ttu-id="af00b-112">Herunterladen und Installieren der [Visual Studio-Erweiterung](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)</span><span class="sxs-lookup"><span data-stu-id="af00b-112">Download and install the [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)</span></span>
+<span data-ttu-id="558b7-109">So konfigurieren Sie vs Code:</span><span class="sxs-lookup"><span data-stu-id="558b7-109">To configure VS Code:</span></span>
+
+1. <span data-ttu-id="558b7-110">Herunterladen und Installieren von [vs Code](https://code.visualstudio.com/download) (Windows, Linux und Mac).</span><span class="sxs-lookup"><span data-stu-id="558b7-110">Download and install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac).</span></span>
+2. <span data-ttu-id="558b7-111">Installieren Sie das [Microsoft QDK für vs Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).</span><span class="sxs-lookup"><span data-stu-id="558b7-111">Install the [Microsoft QDK for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).</span></span>
+
+<span data-ttu-id="558b7-112">So konfigurieren Sie Visual Studio:</span><span class="sxs-lookup"><span data-stu-id="558b7-112">To configure Visual Studio:</span></span>
+
+1. <span data-ttu-id="558b7-113">Laden Sie [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16,3 oder höher herunter, und installieren Sie es, wenn die Arbeitsauslastung der plattformübergreifenden .net Core-Entwicklung aktiviert ist</span><span class="sxs-lookup"><span data-stu-id="558b7-113">Download and install [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 or greater, with the .NET Core cross-platform development workload enabled.</span></span>
+2. <span data-ttu-id="558b7-114">Laden Sie [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)herunter, und installieren Sie es.</span><span class="sxs-lookup"><span data-stu-id="558b7-114">Download and install the [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).</span></span>
 
 
-## <a name="develop-with-q-using-vs-code"></a><span data-ttu-id="af00b-113">Entwickeln mit Q # mithilfe von vs Code</span><span class="sxs-lookup"><span data-stu-id="af00b-113">Develop with Q# using VS Code</span></span>
+## <a name="develop-with-q-using-vs-code"></a><span data-ttu-id="558b7-115">Entwickeln mit Q # mithilfe von vs Code</span><span class="sxs-lookup"><span data-stu-id="558b7-115">Develop with Q# using VS Code</span></span>
 
-<span data-ttu-id="af00b-114">Installieren Sie die Quantum-Projektvorlagen:</span><span class="sxs-lookup"><span data-stu-id="af00b-114">Install the Quantum project templates:</span></span>
+<span data-ttu-id="558b7-116">Installieren Sie die f #-Projektvorlagen:</span><span class="sxs-lookup"><span data-stu-id="558b7-116">Install the Q# project templates:</span></span>
 
-- <span data-ttu-id="af00b-115">Gehe zu **Anzeige** -> -**Befehls Palette**</span><span class="sxs-lookup"><span data-stu-id="af00b-115">Go to **View** -> **Command Palette**</span></span>
-- <span data-ttu-id="af00b-116">Auswählen von " **Q #: Install Project Templates** "</span><span class="sxs-lookup"><span data-stu-id="af00b-116">Select **Q#: Install project templates**</span></span>
+1. <span data-ttu-id="558b7-117">Öffnen Sie Visual Studio Code.</span><span class="sxs-lookup"><span data-stu-id="558b7-117">Open VS Code.</span></span>
+2. <span data-ttu-id="558b7-118">Klicken **View**Sie auf  ->  **Befehls Palette**anzeigen.</span><span class="sxs-lookup"><span data-stu-id="558b7-118">Click **View** -> **Command Palette**.</span></span>
+3. <span data-ttu-id="558b7-119">Wählen Sie **Q #: Projektvorlagen installieren**.</span><span class="sxs-lookup"><span data-stu-id="558b7-119">Select **Q#: Install project templates**.</span></span>
 
-<span data-ttu-id="af00b-117">Sie haben das Quantum Development Kit jetzt installiert und können es in Ihren eigenen Anwendungen und Bibliotheken verwenden.</span><span class="sxs-lookup"><span data-stu-id="af00b-117">You now have the Quantum Development Kit installed and ready to use in your own applications and libraries.</span></span>
-- <span data-ttu-id="af00b-118">Erstellen eines neuen Projekts:</span><span class="sxs-lookup"><span data-stu-id="af00b-118">Create a new project:</span></span>
-  - <span data-ttu-id="af00b-119">Gehe zu **Anzeige** -> -**Befehls Palette**</span><span class="sxs-lookup"><span data-stu-id="af00b-119">Go to **View** -> **Command Palette**</span></span>
-  - <span data-ttu-id="af00b-120">Wählen Sie **Q #: Neues Projekt erstellen** aus.</span><span class="sxs-lookup"><span data-stu-id="af00b-120">Select **Q#: Create New Project**</span></span>
-  - <span data-ttu-id="af00b-121">**Eigenständige Konsolenanwendung** auswählen</span><span class="sxs-lookup"><span data-stu-id="af00b-121">Select **Standalone console application**</span></span>
-  - <span data-ttu-id="af00b-122">Navigieren Sie im Dateisystem zu dem Speicherort, an dem Sie die Anwendung erstellen möchten.</span><span class="sxs-lookup"><span data-stu-id="af00b-122">Navigate to the location on the file system where you would like to create the application</span></span>
-  - <span data-ttu-id="af00b-123">Klicken Sie nach Abschluss der Projekterstellung auf die Schaltfläche **Open new project...** (Neues Projekt öffnen).</span><span class="sxs-lookup"><span data-stu-id="af00b-123">Click on the **Open new project...** button, once the project has been created</span></span>
+<span data-ttu-id="558b7-120">Wenn die **Projektvorlagen erfolgreich installiert** wurden, kann das QDK mit ihren eigenen Anwendungen und Bibliotheken verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="558b7-120">When **Project templates installed successfully** displays, the QDK is ready to use with your own applications and libraries.</span></span>
+
+<span data-ttu-id="558b7-121">So erstellen Sie ein neues Projekt:</span><span class="sxs-lookup"><span data-stu-id="558b7-121">To create a new project:</span></span>
+
+1. <span data-ttu-id="558b7-122">Klicken **View**Sie auf  ->  **Befehls Palette** anzeigen, und wählen Sie **Q #: Neues Projekt erstellen**aus.</span><span class="sxs-lookup"><span data-stu-id="558b7-122">Click **View** -> **Command Palette** and select **Q#: Create New Project**.</span></span>
+2. <span data-ttu-id="558b7-123">Klicken Sie auf **eigenständige Konsolenanwendung**.</span><span class="sxs-lookup"><span data-stu-id="558b7-123">Click **Standalone console application**.</span></span>
+3. <span data-ttu-id="558b7-124">Navigieren Sie zum Speicherort, um das Projekt zu speichern, und klicken Sie auf **Projekt erstellen**.</span><span class="sxs-lookup"><span data-stu-id="558b7-124">Navigate to the location to save the project and click **Create Project**.</span></span>
+4. <span data-ttu-id="558b7-125">Wenn das Projekt erfolgreich erstellt wurde, klicken Sie auf **Neues Projekt öffnen...** in der unteren rechten Ecke.</span><span class="sxs-lookup"><span data-stu-id="558b7-125">When the project is successfully created, click **Open new project...** in the lower right.</span></span>
         
-- <span data-ttu-id="af00b-124">Untersuchen des Projekts</span><span class="sxs-lookup"><span data-stu-id="af00b-124">Inspect the project</span></span>
-  - <span data-ttu-id="af00b-125">Sie sollten sehen, dass eine Datei `Program.qs` mit dem Namen created erstellt wurde. Hierbei handelt es sich um ein Q #-Programm, das einen einfachen Vorgang zum Drucken einer Meldung an die Konsole definiert.</span><span class="sxs-lookup"><span data-stu-id="af00b-125">You should see that a file called `Program.qs` created, which is a Q# program that defines a simple operation to print a message to the console.</span></span>
+<span data-ttu-id="558b7-126">Überprüfen Sie das Projekt.</span><span class="sxs-lookup"><span data-stu-id="558b7-126">Inspect the project.</span></span> <span data-ttu-id="558b7-127">Es sollte eine Quelldatei mit dem Namen angezeigt `Program.qs` werden, bei der es sich um ein Q #-Programm handelt, das einen einfachen Vorgang zum Drucken einer Meldung an die Konsole definiert.</span><span class="sxs-lookup"><span data-stu-id="558b7-127">You should see a source file named `Program.qs`, which is a Q# program that defines a simple operation to print a message to the console.</span></span>
 
-- <span data-ttu-id="af00b-126">Führen Sie die Anwendung aus.</span><span class="sxs-lookup"><span data-stu-id="af00b-126">Run the application:</span></span>
-  - <span data-ttu-id="af00b-127">Zum **Terminal** -> **neuen Terminal** wechseln</span><span class="sxs-lookup"><span data-stu-id="af00b-127">Go to **Terminal** -> **New Terminal**</span></span>
-  - <span data-ttu-id="af00b-128">Geben Sie `dotnet run` ein.</span><span class="sxs-lookup"><span data-stu-id="af00b-128">Enter `dotnet run`</span></span>
-  - <span data-ttu-id="af00b-129">Im Ausgabefenster sollte der folgende Text angezeigt werden: `Hello quantum world!`.</span><span class="sxs-lookup"><span data-stu-id="af00b-129">You should see the following text in the output window `Hello quantum world!`</span></span>
+<span data-ttu-id="558b7-128">So führen Sie die Anwendung aus:</span><span class="sxs-lookup"><span data-stu-id="558b7-128">To run the application:</span></span>
+1. <span data-ttu-id="558b7-129">Klicken Sie auf **Terminal**  ->  **neues Terminal**.</span><span class="sxs-lookup"><span data-stu-id="558b7-129">Click **Terminal** -> **New Terminal**.</span></span>
+2. <span data-ttu-id="558b7-130">Geben Sie an der Eingabeaufforderung ein `dotnet run` .</span><span class="sxs-lookup"><span data-stu-id="558b7-130">At the terminal prompt, enter `dotnet run`.</span></span>
+3. <span data-ttu-id="558b7-131">Im Ausgabefenster sollte der folgende Text angezeigt werden: `Hello quantum world!`.</span><span class="sxs-lookup"><span data-stu-id="558b7-131">You should see the following text in the output window `Hello quantum world!`</span></span>
 
 
 > [!NOTE]
-> * <span data-ttu-id="af00b-130">Arbeitsbereiche mit mehreren Stammordnern werden von der Visual Studio Code-Erweiterung derzeit nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="af00b-130">Workspaces with multiple root folders are not currently supported by the Visual Studio Code extension.</span></span> <span data-ttu-id="af00b-131">Wenn Sie innerhalb eines VS Code-Arbeitsbereichs über mehrere Projekte verfügen, müssen alle Projekte in demselben Stammordner enthalten sein.</span><span class="sxs-lookup"><span data-stu-id="af00b-131">If you have multiple projects within one VS Code workspace, all projects need to be contained within the same root folder.</span></span>
+> <span data-ttu-id="558b7-132">Arbeitsbereiche mit mehreren Stamm Ordnern werden zurzeit von der vs Code Q #-Erweiterung nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="558b7-132">Workspaces with multiple root folders are not currently supported by the VS Code Q# extension.</span></span> <span data-ttu-id="558b7-133">Wenn Sie innerhalb eines VS Code-Arbeitsbereichs über mehrere Projekte verfügen, müssen alle Projekte in demselben Stammordner enthalten sein.</span><span class="sxs-lookup"><span data-stu-id="558b7-133">If you have multiple projects within one VS Code workspace, all projects need to be contained within the same root folder.</span></span>
 
-## <a name="develop-with-q-using-visual-studio"></a><span data-ttu-id="af00b-132">Entwickeln mit Q # mithilfe von Visual Studio</span><span class="sxs-lookup"><span data-stu-id="af00b-132">Develop with Q# using Visual Studio</span></span>
+## <a name="develop-with-q-using-visual-studio"></a><span data-ttu-id="558b7-134">Entwickeln mit Q # mithilfe von Visual Studio</span><span class="sxs-lookup"><span data-stu-id="558b7-134">Develop with Q# using Visual Studio</span></span>
 
-<span data-ttu-id="af00b-133">Überprüfen der Installation durch die Erstellung einer `Hello World`-Anwendung</span><span class="sxs-lookup"><span data-stu-id="af00b-133">Verify the installation by creating a `Hello World` application</span></span>
+<span data-ttu-id="558b7-135">Überprüfen Sie die Visual Studio-Installation, indem Sie eine Q #- `Hello World` Anwendung erstellen.</span><span class="sxs-lookup"><span data-stu-id="558b7-135">Verify your Visual Studio installation by creating a Q# `Hello World` application.</span></span>
 
-- <span data-ttu-id="af00b-134">Erstellen einer neuen Q#-Anwendung</span><span class="sxs-lookup"><span data-stu-id="af00b-134">Create a new Q# application</span></span>
-  - <span data-ttu-id="af00b-135">Wechseln Sie zu **Datei** -> **Neues** -> **Projekt** .</span><span class="sxs-lookup"><span data-stu-id="af00b-135">Go to **File** -> **New** -> **Project**</span></span>
-  - <span data-ttu-id="af00b-136">Geben Sie im Suchfeld als Suchbegriff `Q#` ein.</span><span class="sxs-lookup"><span data-stu-id="af00b-136">Type `Q#` in the search box</span></span>
-  - <span data-ttu-id="af00b-137">Wählen Sie **Q#-Anwendung** aus.</span><span class="sxs-lookup"><span data-stu-id="af00b-137">Select **Q# Application**</span></span>
-  - <span data-ttu-id="af00b-138">Klicken Sie auf **Weiter**.</span><span class="sxs-lookup"><span data-stu-id="af00b-138">Select **Next**</span></span>
-  - <span data-ttu-id="af00b-139">Wählen Sie einen Namen und Speicherort für Ihre Anwendung aus.</span><span class="sxs-lookup"><span data-stu-id="af00b-139">Choose a name and location for your application</span></span>
-  - <span data-ttu-id="af00b-140">Klicken Sie auf **Erstellen**</span><span class="sxs-lookup"><span data-stu-id="af00b-140">Select **Create**</span></span>
+<span data-ttu-id="558b7-136">So erstellen Sie eine neue f #-Anwendung:</span><span class="sxs-lookup"><span data-stu-id="558b7-136">To create a new Q# application:</span></span>
+1. <span data-ttu-id="558b7-137">Öffnen Sie Visual Studio, und klicken Sie auf **Datei**  ->  **neu**  ->  **Projekt**.</span><span class="sxs-lookup"><span data-stu-id="558b7-137">Open Visual Studio and click **File** -> **New** -> **Project**.</span></span>
+2. <span data-ttu-id="558b7-138">Geben `Q#` Sie in das Suchfeld ein, wählen Sie **Q # Application** aus, und klicken Sie auf **weiter**.</span><span class="sxs-lookup"><span data-stu-id="558b7-138">Type `Q#` in the search box, select **Q# Application** and click **Next**.</span></span>
+3. <span data-ttu-id="558b7-139">Geben Sie einen Namen und Speicherort für die Anwendung ein, und klicken Sie auf **Erstellen**.</span><span class="sxs-lookup"><span data-stu-id="558b7-139">Enter a name and location for your application and click **Create**.</span></span>
 
-- <span data-ttu-id="af00b-141">Untersuchen des Projekts</span><span class="sxs-lookup"><span data-stu-id="af00b-141">Inspect the project</span></span>
-  - <span data-ttu-id="af00b-142">Sie sollten sehen, dass eine Datei `Program.qs` mit dem Namen erstellt wurde. Hierbei handelt es sich um ein Q #-Programm, das einen einfachen Vorgang zum Drucken einer Meldung an die Konsole definiert.</span><span class="sxs-lookup"><span data-stu-id="af00b-142">You should see that a file called `Program.qs` has been created, which is a Q# program that defines a simple operation to print a message to the console.</span></span>
 
-- <span data-ttu-id="af00b-143">Ausführen der Anwendung</span><span class="sxs-lookup"><span data-stu-id="af00b-143">Run the application</span></span>
-  - <span data-ttu-id="af00b-144">**Debuggen** -> **Starten ohne Debugging** auswählen</span><span class="sxs-lookup"><span data-stu-id="af00b-144">Select **Debug** -> **Start Without Debugging**</span></span>
-  - <span data-ttu-id="af00b-145">Der Text `Hello quantum world!` sollte in einem Konsolenfenster ausgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="af00b-145">You should see the text `Hello quantum world!` printed to a console window.</span></span>
+<span data-ttu-id="558b7-140">Überprüfen Sie das Projekt.</span><span class="sxs-lookup"><span data-stu-id="558b7-140">Inspect the project.</span></span> <span data-ttu-id="558b7-141">Es sollte eine Quelldatei mit dem Namen angezeigt `Program.qs` werden, bei der es sich um ein Q #-Programm handelt, das einen einfachen Vorgang zum Drucken einer Meldung an die Konsole definiert.</span><span class="sxs-lookup"><span data-stu-id="558b7-141">You should see a source file named `Program.qs`, which is a Q# program that defines a simple operation to print a message to the console.</span></span>
+
+<span data-ttu-id="558b7-142">So führen Sie die Anwendung aus:</span><span class="sxs-lookup"><span data-stu-id="558b7-142">To run the application:</span></span>
+1. <span data-ttu-id="558b7-143">Wählen Sie **Debuggen**  ->  **Starten ohne Debugging**aus.</span><span class="sxs-lookup"><span data-stu-id="558b7-143">Select **Debug** -> **Start Without Debugging**.</span></span>
+2. <span data-ttu-id="558b7-144">Der Text `Hello quantum world!` sollte in einem Konsolenfenster ausgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="558b7-144">You should see the text `Hello quantum world!` printed to a console window.</span></span>
 
 > [!NOTE]
-> * <span data-ttu-id="af00b-146">Falls Sie über mehrere Projekte innerhalb einer Visual Studio-Projektmappe verfügen, müssen sich alle darin enthaltenen Projekte in demselben Ordner wie die Projektmappe oder in einem ihrer Unterordner befinden.</span><span class="sxs-lookup"><span data-stu-id="af00b-146">If you have multiple projects within one Visual Studio solution, all projects contained in the solution need to be in the same folder as the solution, or in one of its subfolders.</span></span>  
+> <span data-ttu-id="558b7-145">Wenn Sie mehrere Projekte in einer Visual Studio-Projekt Mappe haben, müssen sich alle in der Projekt Mappe enthaltenen Projekte im selben Ordner wie die Projekt Mappe oder in einem ihrer Unterordner befinden.</span><span class="sxs-lookup"><span data-stu-id="558b7-145">If you have multiple projects within one Visual Studio solution, all projects contained in the solution need to be in the same folder as the solution, or in one of its sub-folders.</span></span>  
 
 
-## <a name="whats-next"></a><span data-ttu-id="af00b-147">Ausblick</span><span class="sxs-lookup"><span data-stu-id="af00b-147">What's next?</span></span>
+## <a name="next-steps"></a><span data-ttu-id="558b7-146">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="558b7-146">Next steps</span></span>
 
-<span data-ttu-id="af00b-148">Nachdem Sie das Quantum Development Kit in Ihrer bevorzugten Umgebung installiert haben, können Sie [Ihr erstes Quantenprogramm](xref:microsoft.quantum.write-program) schreiben und ausführen.</span><span class="sxs-lookup"><span data-stu-id="af00b-148">Now that you have installed the Quantum Development Kit in your preferred environment, you can write and run [your first quantum program](xref:microsoft.quantum.write-program).</span></span>
+<span data-ttu-id="558b7-147">Nachdem Sie das Quantum Development Kit in Ihrer bevorzugten Umgebung installiert haben, können Sie [Ihr erstes Quantenprogramm](xref:microsoft.quantum.quickstarts.qrng) schreiben und ausführen.</span><span class="sxs-lookup"><span data-stu-id="558b7-147">Now that you have installed the Quantum Development Kit in your preferred environment, you can write and run [your first quantum program](xref:microsoft.quantum.quickstarts.qrng).</span></span>
