@@ -1,19 +1,19 @@
 ---
-title: Entwickeln mit Q# und C#
+title: Entwickeln mit Q# und .Net
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 5bcb036b0b32e64d43f90e9a068d9dcc237890ba
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: 155367dbb1373f00e2b0bd732a5319b32462c9f9
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680159"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426499"
 ---
-# <a name="using-q-with-c-and-f"></a>Verwenden von f # mit\# C und F\#
+# <a name="develop-with-q-and-net"></a>Entwickeln mit Q# und .Net
 
 F # ist für .NET-Sprachen wie c# und F # konzipiert.
 In dieser Anleitung erfahren Sie, wie Sie Q # mit einem in einer .NET-Sprache geschriebenen Host Programm verwenden.
@@ -29,20 +29,20 @@ Der erste Schritt besteht im Erstellen von Projekten für die q #-Bibliothek und
 ### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 - Erstellen einer neuen Q #-Bibliothek
-  - Wechseln Sie zu **Datei** -> **Neues** -> **Projekt** .
+  - Wechseln Sie zu **Datei**  ->  **Neues**  ->  **Projekt** .
   - Geben Sie "Q #" in das Suchfeld ein.
   - **Q #-Bibliothek** auswählen
   - Klicken Sie auf **Weiter**.
   - Auswählen eines Namens und eines Speicher Orts für die Bibliothek
   - Stellen Sie sicher, dass "Projekt und Projekt Mappe in demselben Verzeichnis platzieren" nicht **aktiviert** ist.
-  - Klicken Sie auf **Erstellen**
+  - Klicken Sie auf **Erstellen**.
 - Erstellen eines neuen c#-oder F #-Host Programms
   - Gehe zu **Datei** → **neu** → **Projekt**
   - Wählen Sie "Konsolen-app (.net Core") "für c# oder F aus. #
   - Klicken Sie auf **Weiter**.
   - Wählen *Sie Unterprojekt*Mappe die Option zur Projekt Mappe hinzufügen aus.
   - Wählen Sie einen Namen für das Host Programm aus.
-  - Klicken Sie auf **Erstellen**
+  - Klicken Sie auf **Erstellen**.
 
 ### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code oder Befehlszeile](#tab/tabid-cmdline)
 
@@ -84,7 +84,7 @@ Beispielsweise enthält das [.net-Interoperabilitäts](https://github.com/micros
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 
-Um diesen Vorgang von .net in einem Quantum-Simulator aufzurufen, können Sie `Run` die-Methode `RunAlgorithm` der .NET-Klasse verwenden, die vom Q #-Compiler generiert wird:
+Um diesen Vorgang von .net in einem Quantum-Simulator aufzurufen, können Sie die- `Run` Methode der .NET-Klasse verwenden, die `RunAlgorithm` vom Q #-Compiler generiert wird:
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
@@ -96,6 +96,6 @@ Um diesen Vorgang von .net in einem Quantum-Simulator aufzurufen, können Sie `R
 
 ***
     
-## <a name="whats-next"></a>Ausblick
+## <a name="next-steps"></a>Nächste Schritte
 
-Nun, da Sie das Quantum Development Kit sowohl für Q #-Befehlszeilen Programme als auch für die Interoperabilität mit .net eingerichtet haben, können Sie [Ihr erstes Quantum-Programm](xref:microsoft.quantum.write-program)schreiben und ausführen.
+Nun, da Sie das Quantum Development Kit sowohl für Q #-Befehlszeilen Programme als auch für die Interoperabilität mit .net eingerichtet haben, können Sie [Ihr erstes Quantum-Programm](xref:microsoft.quantum.quickstarts.qrng)schreiben und ausführen.

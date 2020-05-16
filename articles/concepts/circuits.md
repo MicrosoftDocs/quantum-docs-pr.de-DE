@@ -6,25 +6,25 @@ uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 80d9df00159090768ea442e519c34043a99b050c
-ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
+ms.openlocfilehash: 43f14d67db76dabda34bf881ccbfae0bfd1784ff
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79022749"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426627"
 ---
 # <a name="quantum-circuits"></a>Quantum-Verbindungen
-Beachten Sie für einen Moment die einheitliche Transformation $ \text{CNOT} _{01}(h\otimes 1) $.
+Beachten Sie für einen Moment die einheitliche Transformation $ \text{CNOT} _ {01} (h\otimes 1) $.
 Diese Gate-Sequenz ist von grundlegender Bedeutung für das Quantum Computing, da Sie einen maximalen entbickten zwei-Qubit-Zustand erstellt:
 
-$ $ \mathrm{CNOT}_{01}(h\otimes 1) \ket{00} = \frac{1}{\sqrt{2}} \left (\ket{00} + \ket{11} \right), $ $
+$ $ \mathrm{CNOT}_ {01} (h\otimes 1) \ket {00} = \frac {1} {\sqrt {2} } \left (\ket {00} + \ket {11} \right), $ $
 
 Vorgänge mit dieser oder einer größeren Komplexität sind bei Quantum-Algorithmen und der Quantum-Fehlerkorrektur universell. Daher sollte Sie als eine einfache Methode für die Visualisierung bezeichnet werden, die als *Quantum*-Verbindungs Diagramm bezeichnet wird.
 Das Verbindungs Diagramm zum Vorbereiten dieses maximale entkoppelt Quantum-Zustands lautet wie folgt:
 
 <!--- ![](.\media\1.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![Leitungs Diagramm für einen maximalen entzweitigen zwei-Qubit-Status](~/media/1.svg)
+![Leitungs Diagramm für einen maximalen entzweitigen zwei-Qubit-Zustand](~/media/1.svg)
 
 ## <a name="quantum-circuit-diagram-conventions"></a>Konventionen für das Quantum Circuit-Diagramm
 Diese visuelle Sprache für Quantum-Vorgänge kann leichter verdaulich sein als das Schreiben der äquivalenten Matrix, sobald Sie die Konventionen zum Ausdrücken einer Quantum-Verbindung verstanden haben.
@@ -47,7 +47,7 @@ Das heißt,
 
 <!--- ![](.\media\3.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![Diagramm der von von links nach rechts angewendeten Quantum-Gates](~/media/3.svg)
+![Diagramm der von links nach rechts angewendeten Quantum-Gates](~/media/3.svg)
 
 ist die einheitliche Matrix $CBA $.
 Die Matrix Multiplikation befolgt die gegenteilige Konvention: die ganz rechts gerichtete Matrix wird zuerst angewendet. In Quantum-Verbindungs Diagrammen wird jedoch das am weitesten links öffnende Gate zuerst angewendet.
@@ -72,7 +72,7 @@ Dies bedeutet, dass Sie eine intuitions Informationen über den Datenfluss für 
 
 ## <a name="controlled-gates"></a>Kontrollierte Gates
 Das andere Konstrukt, das in Multi-Qubit-Quantum-Verbindungs Diagramme integriert ist, ist Control.
-Die Aktion eines Quorums einzeln gesteuerten Tors, die $ \lambda (G) $ bezeichnet, wobei der Wert eines einzelnen Qubits die Anwendung von $G $ steuert. sehen Sie sich das folgende Beispiel einer Product State Input $ \lambda (G) (\alpha \ket{0} + \beta \ket{1}) \ket{\psi} = \alpha \ket{0} \ket{\psi} + \beta \ket{1} g\ket {\ PSI} $ an.
+Die Aktion eines Quorums einzeln gesteuerten Tors, die $ \lambda (G) $, wenn ein einzelner Qubit-Wert die Anwendung von $G $ steuert, kann dies durch betrachten des folgenden Beispiels einer Product State Input $ \lambda (G) (\alpha \ket {0} + \beta \ket {1} ) \ket{\psi} = \alpha \ket {0} \ket{\psi} + \beta \ket {1} g\ket {\ PSI} $ verstanden werden.
 Dies heißt, dass das gesteuerte Gate $G $ auf das Register anwendet, das $ \psi $ if enthält, und nur, wenn das Steuerelement Qubit den Wert $1 $ annimmt.
 Im Allgemeinen werden solche kontrollierten Vorgänge in Leitungs Diagrammen als
 
@@ -118,11 +118,11 @@ Ebenso wird die unter Leitung
 bietet ein klassisch kontrolliertes Gate, bei dem $G $ auf das klassische Steuerungs Bit angewendet wird, das den Wert $1 $ hat.
 
 ## <a name="teleportation-circuit-diagram"></a>Teleportations-Verbindungs Diagramm
-[Quantum-Teleportation](xref:microsoft.quantum.techniques.puttingittogether) ist möglicherweise der beste Quantum-Algorithmus für die Veranschaulichung dieser Komponenten.
-Die Quantum-Teleportation ist eine Methode zum Verschieben von Daten innerhalb eines Quantum-Computers (oder sogar zwischen entfernten Quantum-Computern in einem Quantum-Netzwerk) durch die Verwendung von jede Verflechtungen und Messungen.
+Quantum-Teleportation ist möglicherweise der beste Quantum-Algorithmus für die Veranschaulichung dieser Komponenten.
+Sie können sich mit der entsprechenden [quanturequantum](xref:microsoft.quantum.overview.katas) -Teleportation vertraut machen. Dies ist eine Methode zum Verschieben von Daten innerhalb eines Quantum-Computers (oder sogar zwischen entfernten Quantum-Computern in einem Quantum-Netzwerk) durch die Verwendung von jede Verflechtungen und Messungen.
 Interessanterweise ist es in der Lage, einen Quantenzustand, z. b. den Wert in einem bestimmten Qubit, von einem Qubit zu einem anderen zu verschieben, ohne dass Sie wissen, was der Qubit-Wert ist.
 Dies ist erforderlich, damit das Protokoll gemäß den Gesetzen der Quantum-Mechanik funktioniert.
 Die Verbindung mit der Quantum-Teleportation ist unten angegeben. Außerdem wird eine Version der Verbindung mit Anmerkungen bereitgestellt, um zu veranschaulichen, wie die Quantum-Verbindung gelesen wird.
 
 <!--- ![](.\media\tp2.svg){ width=50% } --->
-![Quantum-Teleportations-Verbindungs](~/media/tp2.svg)
+![Quantum-Teleportations-Leitung](~/media/tp2.svg)

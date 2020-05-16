@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.pauli
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 08babbcb0d6c6c4d83622489bc4ecc811e64829a
-ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+ms.openlocfilehash: 3ce9c0ea13d62bd662f3ccc450c385799ddb264b
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80320859"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426568"
 ---
 # <a name="pauli-measurements"></a>Pauli-Messungen
 
@@ -21,8 +21,8 @@ Bei der Arbeit mit Q # sind die gängigsten Arten von Messungen wahrscheinlich *
 In solchen Fällen ist es üblich, das Messen eines Pauli-Operators zu erörtern, im Allgemeinen ein Operator wie $X, Y, Z $ oder $Z \otimes Z, x\otimes X, x\otimes Y $ und so weiter.
 
 > [!TIP]
-> In Q # werden multiqubit-Pauli-Operatoren in der Regel durch Arrays vom Typ `Pauli[]`dargestellt.
-> Wenn Sie z. b. $X \otimes Z \otimes Y $ darstellen möchten, können Sie das Array `[PauliX, PauliZ, PauliY]`verwenden.
+> In Q # werden multiqubit-Pauli-Operatoren in der Regel durch Arrays des Typs dargestellt `Pauli[]` .
+> Wenn Sie z. b. $X \otimes Z \otimes Y $ darstellen möchten, können Sie das Array verwenden `[PauliX, PauliZ, PauliY]` .
 
 Die Erörterung von Messungen in Form von Pauli-Operatoren ist vor allem im Unterfeld der Quantum-Fehlerkorrektur üblich.
 In f # wird eine ähnliche Konvention befolgt. Wir erläutern nun diese Alternative Ansicht von Messungen.
@@ -36,12 +36,12 @@ Um diese Teilbereiche zu beschreiben, benötigen wir eine Sprache für die Besch
 Eine Möglichkeit, die beiden Teilbereiche zu beschreiben, besteht darin, Sie durch eine Matrix anzugeben, die nur zwei eindeutige Eigenwerte aufweist, die von der Konvention auf $ \pm $1 übernommen werden.
 Um ein einfaches Beispiel für das Beschreiben von Teilbereichen auf diese Weise zu beschreiben, sollten Sie $Z $:
 
-$ $ \begin{align} Z & = \begin{bmatrix} 1 & 0 \\\\ 0 &-1 \end{bmatrix}.
+$ $ \begin{align} Z & = \begin{bmatrix} 1 & 0 \\ \\ 0 &-1 \end{bmatrix}.
 \end{align} $ $
 
-Wenn Sie die diagonalen Elemente der "Pauli-$Z $"-Matrix lesen, sehen Sie, dass $Z $ zwei Eigenvektoren, $ \ket{0}$ und $ \ket{1}$ mit den entsprechenden eigen Werten $ \pm $1 hat.
-Wenn wir also das Qubit Messen und `Zero` abrufen (entsprechend dem State $ \ket{0}$), wissen wir, dass der Status des Qubit ein $ + $1-eigen Status des $Z $-Operators ist.
-Ebenso wissen wir, wenn wir `One`erhalten, dass der Status des Qubit ein $-$1-eigen Status $Z $ ist.
+Wenn Sie die diagonalen Elemente der "Pauli-$Z $"-Matrix lesen, sehen Sie, dass $Z $ zwei Eigenvektoren ($ \ket {0} $ und $ \ket {1} $) mit den entsprechenden eigen Werten $ \pm $1 hat.
+Wenn wir also das Qubit Messen und Abrufen `Zero` (entsprechend dem Status $ \ket {0} $), wissen wir, dass der Status des Qubit ein $ + $1-eigen Status des $Z $-Operators ist.
+Ebenso wissen wir, wenn wir `One` , dass der Status unseres Qubit ein $-$1-eigen Status $Z $ ist.
 Dieser Prozess wird in der Sprache von Pauli-Messungen als "Messen von Pauli $Z $" bezeichnet und ist vollständig mit der Durchführung einer Berechnungsbasis Messung identisch.
 
 Eine beliebige $2 \ Times $2-Matrix, bei der es sich um eine einheitliche Transformation von $Z $ handelt, erfüllt auch diese Kriterien.
@@ -56,12 +56,12 @@ Diese Messungen werden zur einfacheren Verwendung unten angegeben.
 | $X $               | $H $                    |
 | $Y $               | $HS ^ {\dagger} $         |
 
-Das heißt, dass bei Verwendung dieser Sprache "Measure $Y $" dem Anwenden von $HS ^ \dagger $ entspricht und dann auf Berechnungsbasis gemessen wird, wobei [`S`](xref:microsoft.quantum.intrinsic.s) ein System interner Quantum-Vorgang ist, der manchmal als "Phasen Gate" bezeichnet wird und durch die einheitliche Matrix simuliert werden kann.
+Das heißt, dass bei Verwendung dieser Sprache "Measure $Y $" dem Anwenden von $HS ^ \dagger $ entspricht und dann auf Berechnungsbasis gemessen wird, wobei ein System interner [`S`](xref:microsoft.quantum.intrinsic.s) Quantum-Vorgang ist, der manchmal als "Phasen Gate" bezeichnet wird und durch die einheitliche Matrix simuliert werden kann.
 
-$ $ \begin{align} S = \begin{bmatrix} 1 & 0 \\\\ 0 & i \end{bmatrix}.
+$ $ \begin{align} S = \begin{bmatrix} 1 & 0 \\ \\ 0 & i \end{bmatrix}.
 \end{align} $ $
 
-Dies entspricht auch dem Anwenden von $HS ^ \dagger $ auf den Quantum State Vector und der anschließenden Messung $Z $, sodass der folgende Vorgang dem `Measure([PauliY], [q])`entspricht:
+Dies entspricht auch dem Anwenden von $HS ^ \dagger $ auf den Quantum State Vector und der anschließenden Messung $Z $, sodass der folgende Vorgang Äquivalent zu folgendem ist `Measure([PauliY], [q])` :
 
 ```Q#
 operation MeasureY(qubit : Qubit) : Result {
@@ -76,24 +76,24 @@ operation MeasureY(qubit : Qubit) : Result {
 }
 ```
 
-Der richtige Zustand wird dann durch umwandeln auf die Berechnungsbasis gefunden, was das Anwenden $SH $ auf den Quantum-Status Vektor bedeutet. im obigen Code Ausschnitt wird die Transformation zurück zur Berechnungsbasis automatisch durch die Verwendung des `within … apply`-Blocks verarbeitet.
+Der richtige Zustand wird dann durch umwandeln auf die Berechnungsbasis gefunden, was das Anwenden $SH $ auf den Quantum-Status Vektor bedeutet. im obigen Code Ausschnitt wird die Transformation zurück zur Berechnungsbasis automatisch durch die Verwendung des- `within … apply` Blocks verarbeitet.
 
-In f # wird das Ergebnis---, das heißt, die klassischen Informationen, die aus der Interaktion mit dem Status---extrahiert werden, werden durch einen `Result` Wert $j \in \\{\texttt{Zero}, \texttt{One}\\} $ angegeben, der angibt, ob das Ergebnis im $ (-1) ^ j $ eigen Raum des ggf
+In f # wird das Ergebnis---, das heißt, die klassischen Informationen, die aus der Interaktion mit dem Status---extrahiert werden, werden durch einen `Result` Wert $j \in \\ {\texttt{Zero}, \texttt{One}} $ angegeben, der \\ angibt, ob das Ergebnis im $ (-1) ^ j $ eigen Leerraum des Pauli-Operators gemessen ist.
 
 
 ## <a name="multiple-qubit-measurements"></a>Multiple-Qubit-Messungen
 
 Die Messungen von multiqubit-Pauli-Operatoren sind ähnlich definiert, wie in:
 
-$ $ Z\otimes Z = \begin{bmatrix}1 & 0 & 0 & 0\\\\ 0 &-1 & 0 & 0\\\\ 0 & 0 &-1 & 0\\\\ 0 & 0 & 0 & 1 \ Ende {bmatrix}.
+$ $ Z\otimes Z = \begin{bmatrix}1 &0 &0&0 \\ \\ 0&-1&0&0 \\ \\ 0&0&-1&0 \\ \\ 0&0&0&1 \ Ende {bmatrix}.
 $$
 
 Folglich bilden die tensorflow-Produkte von zwei "Pauli-$Z $"-Operatoren eine Matrix aus zwei Leerzeichen, die aus "$ + $1" und "$-$1 Eigenwerte" bestehen
 Wie bei einem Single-Qubit-Fall bilden beide einen halben Raum, was bedeutet, dass die Hälfte des zugänglichen Vektor Raums zum $ + $1-eigen Raum und die verbleibende Hälfte bis zum $-$1-eigen Raum gehört.
 Im Allgemeinen ist es einfach, von der Definition des tensorflow-Produkts aus zu sehen, dass ein beliebiges tensorflow-Produkt von Pauli-$Z $-Operatoren und die Identität auch diesem entspricht.
-Beispiel:
+Ein auf ein Objekt angewendeter
 
-$ $ \begin{align} Z \otimes \boldone = \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 &-1 & 0 \\\\ 0 & 0 & 0 &-1 \end{bmatrix}.
+$ $ \begin{align} Z \otimes \boldone = \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 &-1 & 0 \\ \\ 0 & 0 & 0 &-1 \end{bmatrix}.
 \end{align} $ $
 
 Wie zuvor beschreibt jede einheitliche Transformation dieser Matrizen auch zwei halb Bereiche mit der Bezeichnung "$ \pm $1 Eigenwerte".
@@ -101,7 +101,7 @@ Beispielsweise $X \otimes X = h\otimes h (z\otimes Z) h\otimes h $ aus der Ident
 Ähnlich wie der One-Qubit-Fall können alle zwei-Qubit-Pauli-Messungen als $U ^ \dagger (z\otimes \id) U $ für $4 \ mal $4 einheitliche Matrizen $U $ geschrieben werden. Die Transformationen in der folgenden Tabelle werden aufgelistet.
 
 > [!NOTE]
-> In der folgenden Tabelle wird $ \operatorname{curap} $ verwendet, um die Matrix $ $ \begin{align} \operatorname{tauap} & = \left (\begin{Matrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{Matrix}\right) \end{align} $ $ zum Simulieren des intrinsischen Vorgangs [`SWAP`](xref:microsoft.quantum.intrinsic)verwendet.
+> In der folgenden Tabelle wird $ \operatorname{curap} $ verwendet, um die Matrix $ $ \begin{align} \operatorname{tauap} & = \left (\begin{matrid) anzugeben. x} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \end{Matrix}\right) \end{align} $ $ zum Simulieren des systeminternen Vorgangs verwendet [`SWAP`](xref:microsoft.quantum.intrinsic) .
 
 |Pauli-Messung     |Einheitliche Transformation  |
 |----------------------|------------------------|
@@ -112,31 +112,31 @@ Beispielsweise $X \otimes X = h\otimes h (z\otimes Z) h\otimes h $ aus der Ident
 | $ \boldone \otimes Z $ | $ \operatschmue{tauap} $ |
 | $ \boldone \otimes X $ | $ (H\otimes \boldone) \operatschmue{Swap} $ |
 | $ \boldone \otimes Y $ | $ (HS ^ \dagger\otimes \boldone) \operatorname{tauap} $ |
-| $Z \otimes Z $ | $ \operatschmue{CNOT}\_{10}$ |
-| $X \otimes Z $ | $ \operatschmue{CNOT}\_{10}(h\otimes \boldone) $ |
-| $Y \otimes Z $ | $ \operatschmue{CNOT}\_{10}(HS ^ \dagger\otimes \boldone) $ |
-| $Z \otimes X $ | $ \operatschmue{CNOT}\_{10}(\boldone\otimes H) $ |
-| $X \otimes X $ | $ \operatschmue{CNOT}\_{10}(h\otimes H) $ |
-| $Y \otimes X $ | $ \operatschmue{CNOT}\_{10}(HS ^ \dagger\otimes H) $ |
-| $Z \otimes Y $ | $ \operatschmue{CNOT}\_{10}(\boldone \otimes HS ^ \dagger) $ |
-| $X \otimes Y $ | $ \operatschmue{CNOT}\_{10}(h\otimes HS ^ \dagger) $ |
-| $Y \otimes Y $ | $ \operatschmue{CNOT}\_{10}(HS ^ \dagger\otimes HS ^ \dagger) $ |
+| $Z \otimes Z $ | $ \operatschmue{CNOT} \_ {10} $ |
+| $X \otimes Z $ | $ \operatschmue{CNOT} \_ {10} (h\otimes \boldone) $ |
+| $Y \otimes Z $ | $ \operatschmue{CNOT} \_ {10} (HS ^ \dagger\otimes \boldone) $ |
+| $Z \otimes X $ | $ \operatschmue{CNOT} \_ {10} (\boldone\otimes H) $ |
+| $X \otimes X $ | $ \operatschmue{CNOT} \_ {10} (h\otimes H) $ |
+| $Y \otimes X $ | $ \operatschmue{CNOT} \_ {10} (HS ^ \dagger\otimes H) $ |
+| $Z \otimes Y $ | $ \operatschmue{CNOT} \_ {10} (\boldone \otimes HS ^ \dagger) $ |
+| $X \otimes Y $ | $ \operatschmue{CNOT} \_ {10} (h\otimes HS ^ \dagger) $ |
+| $Y \otimes Y $ | $ \operatschmue{CNOT} \_ {10} (HS ^ \dagger\otimes HS ^ \dagger) $ |
 
 Hier wird der [`CNOT`](xref:microsoft.quantum.intrinsic.cnot) Vorgang aus folgendem Grund angezeigt.
 Jedes Pauli-Maß, das "$ \boldone $ Matrix" nicht enthält, entspricht einem einheitlichen $Z \otimes Z $ durch die oben genannte Argumentation.
 Die Eigenwerte $Z \otimes Z $ hängen nur von der Parität der Qubits ab, aus denen die einzelnen Berechnungsbasis Vektor bestehen, und die kontrollierten Vorgänge dienen dazu, diese Parität zu berechnen und im ersten Bit zu speichern.
 Nachdem das erste Bit gemessen wurde, können wir die Identität des resultierenden halb Raums wiederherstellen, was dem Messen des Pauli-Operators entspricht.
 
-Ein weiterer Hinweis: in diesem Fall ist es möglicherweise verlockend zu vermuten, dass die Messung $Z \otimes Z $ mit der sequenziellen Messung $Z \otimes \mathbb{1}$ und dann $ \mathbb{1} \otimes z $ übereinstimmt. diese Annahme wäre false.
+Ein weiterer Hinweis: Obwohl es möglicherweise verlockend ist, anzunehmen, dass die Messung $Z \otimes Z $ mit der sequenziellen Messung $Z \otimes \mathbb {1} $ und then $ \mathbb {1} \otimes z $ übereinstimmt, wäre diese Annahme falsch.
 Der Grund hierfür ist, dass die Messung $Z \otimes Z $ den Quantum-Zustand entweder in den "$ + $1"-oder "$-$1"-Zustand dieser Operatoren projiziert.
-Messen von $Z \otimes \mathbb{1}$ und dann $ \mathbb{1} \otimes Z $ projiziert den Quantum-Status Vektor zuerst auf einen halben Bereich von $Z \otimes \mathbb{1}$ und dann auf einen halben Bereich von $ \mathbb{1} \otimes z $.
+Durch Messen $Z \otimes \mathbb {1} $ und dann $ \mathbb {1} \otimes z $ wird der Quantum-Status Vektor zuerst auf einen halben Bereich $Z \otimes \mathbb {1} $ und dann auf einen halben Bereich von $ \mathbb {1} \otimes z $ projiziert.
 Da es vier Berechnungsbasis Vektoren gibt, verringert die Durchführung beider Messungen den Zustand auf einen Viertel Raum und reduziert ihn somit auf einen einzelnen Berechnungsbasis Vektor.
 
 ## <a name="correlations-between-qubits"></a>Korrelationen zwischen Qubits
 Eine weitere Möglichkeit zum Messen von tensorflow-Produkten von Pauli-Matrizen, wie $X \otimes X $ oder $Z \otimes Z $, besteht darin, dass mit diesen Messungen Informationen untersucht werden können, die in den Korrelationen zwischen den beiden Qubits gespeichert sind.
 Durch Messen $X \otimes \id $ können Sie Informationen untersuchen, die lokal im ersten Qubit gespeichert sind.
 Obwohl beide Arten von Messungen in Quantum Computing gleichermaßen wertvoll sind, beleuchtet das erste die Leistungsfähigkeit von Quantum Computing.
-Es wird deutlich, dass die Informationen, die Sie erlernen möchten, bei der Quantum-Verarbeitung nicht in einem einzelnen Qubit gespeichert werden, sondern nicht lokal in allen Qubits gespeichert werden. Daher wird dies nur durch eine gemeinsame Messung (z. b. $Z \otimes Z $) bewirkt. Informationen werden zu einem Manifest.
+Es ist offensichtlich, dass die Informationen, die Sie erlernen möchten, bei der Quantenberechnung nicht in einem einzelnen Qubit gespeichert, sondern nicht lokal in allen Qubits gespeichert werden. Daher wird dies nur durch eine gemeinsame Messung (z. b. $Z \otimes Z $) zum Manifest.
 
 Beispielsweise möchten wir bei der Fehlerkorrektur häufig ermitteln, welche Fehler aufgetreten sind, wenn Sie nichts über den Zustand erfahren möchten, den wir zu schützen versuchen.
 Das Beispiel für [bitflip-Code](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code) zeigt ein Beispiel dafür, wie Sie dies mithilfe von Messungen wie $Z \otimes z \otimes \id $ und $ \id \otimes z \otimes z $ erreichen können.
@@ -150,7 +150,7 @@ In Q # geben solche Messungen $j $ zurück, wenn die Messung ein Ergebnis im Eig
 Die Verwendung von Pauli-Messungen als integriertes Feature in Q # ist hilfreich, da die Messung solcher Operatoren lange Ketten von gesteuerten und nicht-Transformationen und Basis Transformationen erfordert, um die Diagonalisierung $U $ Gate zu beschreiben, die erforderlich ist, um den Vorgang als tensorflow-Produkt $Z $ und $ \id $ auszudrücken.
 Wenn Sie festlegen können, dass Sie eine dieser vordefinierten Messungen durchführen möchten, müssen Sie sich keine Gedanken darüber machen, wie Sie Ihre Basis so transformieren, dass eine Berechnungsbasis Messung die erforderlichen Informationen bereitstellt.
 Q # behandelt alle notwendigen Basis Transformationen automatisch.
-Weitere Informationen finden Sie in den [`Measure`](xref:microsoft.quantum.intrinsic.measure) -und [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) Vorgängen.
+Weitere Informationen finden Sie unter den [`Measure`](xref:microsoft.quantum.intrinsic.measure) -und- [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) Vorgängen.
 
 ## <a name="the-no-cloning-theorem"></a>Das No-Klon-Theorem
 
@@ -162,18 +162,18 @@ Eine solche Einschränkung wird durch das *No-Klon-Theorem*angegeben.
 Das No-Klon-Theorem weist einen passenden Namen auf.
 Sie lässt das Klonen generischer Quantenzustände durch einen Quantum-Computer nicht zu.
 Der Beweis für das Theorem ist erstaunlich einfach.
-Obwohl ein vollständiger Nachweis für das No-Klon-Theorem für unsere Erörterung etwas zu technisch ist, liegt der Nachweis im Fall von zusätzlichen Qubits in unserem Bereich. (zusätzliche Qubits sind für den temporären Speicherplatz während einer Berechnung verwendeter Qubits und können in f # problemlos verwendet und verwaltet werden. Weitere Informationen finden Sie unter <xref:microsoft.quantum.techniques.qubits>).
+Obwohl ein vollständiger Nachweis für das No-Klon-Theorem für unsere Erörterung etwas zu technisch ist, liegt der Nachweis im Fall von zusätzlichen Qubits in unserem Bereich. (zusätzliche Qubits sind für den temporären Speicherplatz während einer Berechnung verwendeter Qubits und können problemlos in Q # verwendet werden, siehe [geliehene Qubits](xref:microsoft.quantum.guide.qubits#borrowed-qubits)).
 
 Bei solch einem Quantum-Computer muss der Klon Vorgang durch eine einheitliche Matrix beschrieben werden.
 Die Messung wird nicht zugelassen, da der Quantum-Zustand beschädigt wird, den wir klonen wollen.
-Um den Klon Vorgang zu simulieren, soll für die einheitliche Matrix die Eigenschaft $ $ U \ket{\psi} \ket{0} = \ket{\psi} \ket{\psi} $ $ für jeden Status $ \ket{\psi} $ verwendet werden.
+Um den Klon Vorgang zu simulieren, soll für die einheitliche Matrix die Eigenschaft $ $ U \ket{\psi} \ket {0} = \ket{\psi} \ket{\psi} $ $ für jeden Status $ \ket{\psi} $ verwendet werden.
 Die Linearität-Eigenschaft der Matrix Multiplikation impliziert dann, dass für jeden zweiten Quantum-Status $ \ket{\phi} $,
 
-$ $ \begin{align} U \left [\frac{1}{\sqrt{2}} \left (\ket{\phi} + \ket{\psi} \right) \right] \ket{0} & = \frac{1}{\sqrt{2}} u\ket {\ Phi} \ Ket{0} + \frac{1}{\sqrt{2}} u\ket {\ PSI} \ Ket{0} \\\\ & = \frac{1}{\sqrt{2}} \left (\ket{\phi} \ket{\phi} + \ket{\psi} \ket{\psi} \right) \\\\ & \nE \left (\frac{1}{\sqrt{2}} \left (\ket{\phi} + \ket{\psi} \right) \right) \otimes \ Left (\frac{1}{\sqrt{2}} \left (\ket{\phi} + \ket{\psi} \right) \right).
+$ $ \begin{align} U \left [\frac {1} {\sqrt {2} } \left (\ket{\phi} + \ket{\psi} \right) \right] \ket {0} & = \frac {1} {\sqrt {2} } u\ket {\ Phi} \ Ket {0} + \frac {1} {\sqrt {2} } u\ket {\ PSI} \ Ket {0} \\ \\ & = \frac {1} {\sqrt {2} } \left (\ket{\phi} \ket{\phi} + \ket{\psi} \ket{\psi} \right) \\ \\ & \nE \left (\frac {1} {\sqrt {2} } \left (\ket{\phi} + \ket{\psi} \right) \right) \otimes \left (\frac {1} {\sqrt {2} } \left (\ket{\phi} + \ket{\psi} \right) \right).
 \end{align} $ $
 
 Dies stellt die grundlegende Intuition hinter dem No-Klon-Theorem bereit: jedes Gerät, das einen unbekannten Quantum-Zustand kopiert, muss Fehler in mindestens einigen der von ihm kopierte Zustände auslösen.
-Während die Hauptannahme, dass der Cloner für den Eingabe Status linear agiert, durch Hinzufügen und Messen von hilfssbits verletzt werden kann, können solche Interaktionen auch Informationen über das System durch die maßstatistik und eine exakte Vermeidung von auch in solchen Fällen Klonen.
+Während die Hauptannahme, dass der Cloner den Eingabe Status linear verarbeitet, durch Hinzufügen und Messen von hilfssbits verletzt werden kann, können solche Interaktionen auch Informationen über das System durch die maßstatistik und das exakte Klonen in solchen Fällen vermeiden.
 Einen ausführlicheren Nachweis für das No-Klon-Theorem finden Sie unter, [um weitere Informationen](xref:microsoft.quantum.more-information)zu erhalten.
 
 Das No-Clone-Theorem ist wichtig für ein qualitativ hochwertiges Verständnis von Quantum Computing, denn wenn Sie Quantum-Zustände ingünstig Klonen könnten, erhalten Sie eine nahezu magische Möglichkeit, von Quantum-Zuständen zu lernen.

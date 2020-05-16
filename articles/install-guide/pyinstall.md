@@ -1,19 +1,19 @@
 ---
-title: Entwickeln mit Q# und Python
+title: 'Entwickeln mit Q # und python'
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: e1b8a0c68b3ac0c059c6de6e478593321764ff88
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: a8c5b9c25c069f98ef8eefd6cfbc36bf3376931c
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680149"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426361"
 ---
-# <a name="develop-with-q--python"></a>Entwickeln mit Q# und Python
+# <a name="develop-with-q-and-python"></a>Entwickeln mit Q # und python
 
 Installieren Sie das QDK, um python-Host Programme zum Abrufen von Q #-Vorgängen zu entwickeln.
 
@@ -24,7 +24,7 @@ Installieren Sie das QDK, um python-Host Programme zum Abrufen von Q #-Vorgänge
     - [.NET Core SDK 3.1 oder höher](https://www.microsoft.com/net/download)
 
 
-1. Installieren Sie `qsharp` das Paket, ein Python-Paket, das Interop zwischen Q # und python ermöglicht.
+1. Installieren Sie das `qsharp` Paket, ein Python-Paket, das Interop zwischen Q # und python ermöglicht.
 
     ```bash
     pip install qsharp
@@ -83,6 +83,6 @@ Installieren Sie das QDK, um python-Host Programme zum Abrufen von Q #-Vorgänge
 > [!NOTE]
 > * Sie können auch python jupyter Notebooks verwenden, um das klassische python-Programm zu schreiben und Q #-Vorgänge aus den Zellen aufzurufen. Der Python-Code ist nur ein normales python-Programm.
 
-## <a name="whats-next"></a>Ausblick
+## <a name="next-steps"></a>Nächste Schritte
 
-Nachdem Sie das Quantum Development Kit in Ihrer bevorzugten Umgebung installiert haben, können Sie [Ihr erstes Quantenprogramm](xref:microsoft.quantum.write-program) schreiben und ausführen.
+Nachdem Sie das Quantum Development Kit in Ihrer bevorzugten Umgebung installiert haben, können Sie [Ihr erstes Quantenprogramm](xref:microsoft.quantum.quickstarts.qrng) schreiben und ausführen.
