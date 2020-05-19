@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 91f12ef6bd15e27c8920471442c66ff3b1e71122
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: f365d471d9af73828b78c4fab8579557310a5288
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82677089"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426778"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Versionshinweise für das Microsoft Quantum Development Kit
 
@@ -48,7 +48,7 @@ Dieses Release enthält kleinere Fehlerbehebungen für die Version 0.11.2003.250
 
 Dieses Release enthält Folgendes:
 
-- Neue Unterstützung für Zugriffsmodifizierer in Q#. Weitere Informationen finden Sie unter [Dateistrukturen](xref:microsoft.quantum.language.file-structure#internal-declarations).
+- Neue Unterstützung für Zugriffsmodifizierer in Q#. Weitere Informationen finden Sie unter [Dateistrukturen](xref:microsoft.quantum.guide.filestructure).
 - Aktualisiert auf .NET Core SDK 3.1
 
 Hier finden Sie die vollständige Liste geschlossener Pull Requests für [Bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [Compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [Runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [Beispiele](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) und [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
@@ -86,7 +86,7 @@ Hier finden Sie die vollständige Liste geschlossener Pull Requests für [Biblio
 
 Dieses Release enthält Folgendes:
 
-- Neues Testattribut für Q#-Komponententests. Informationen finden Sie in der aktualisierten [API-Dokumentation](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) und im aktualisierten [Leitfaden zum Testen und Debuggen](xref:microsoft.quantum.techniques.testing-and-debugging).
+- Neues Testattribut für Q#-Komponententests. Informationen finden Sie in der aktualisierten [API-Dokumentation](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) und im aktualisierten [Leitfaden zum Testen und Debuggen](xref:microsoft.quantum.guide.testingdebugging).
 - Stapelüberwachung im Fall eines Q#-Programmausführungsfehlers hinzugefügt
 - Unterstützung für Breakpoints in Visual Studio Code aufgrund einer Aktualisierung der [OmniSharp-C#-Erweiterung für Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 
@@ -133,7 +133,7 @@ Hier finden Sie die vollständige Liste geschlossener Pull Requests für [Biblio
 
 Dieses Release enthält Folgendes:
 
-- Unterstützung für [Konjugationsanweisungen](xref:microsoft.quantum.language.statements#conjugations) in Q#
+- Unterstützung für [Konjugationsanweisungen](xref:microsoft.quantum.guide.operationsfunctions#conjugations) in Q#
 - neue Codeaktionen im Compiler wie beispielsweise „Ersetzen durch“, „Add documentation“ (Dokumentation hinzufügen) und Updates für einfache Arrayelemente
 - Installationsvorlagen und neue Projektbefehle für die Visual Studio Code-Erweiterung
 - neue Varianten des ApplyIf-Kombinators wie beispielsweise [Microsoft.Quantum.Canon.ApplyIfOne](xref:microsoft.quantum.canon.applyifone)
@@ -150,7 +150,7 @@ Hier werden die Änderungen sowie Anweisungen zum Aktualisieren vorhandener Prog
 
 Dieses Release enthält Folgendes:
 
-- neue Indizierungsspeicherorte für das Aufteilen von Arrays (weitere Informationen in der [Sprachreferenz](xref:microsoft.quantum.language.expressions#array-slices))
+- neue Indizierungsspeicherorte für das Aufteilen von Arrays (weitere Informationen in der [Sprachreferenz](xref:microsoft.quantum.guide.expressions#array-slices))
 - Dockerfiles, die über die [Microsoft-Containerregistrierung](https://github.com/microsoft/ContainerRegistry) gehostet werden (weitere Informationen unter [IQ#-Repository](https://github.com/microsoft/iqsharp/blob/master/README.md))
 - wichtige Änderungen für den [Ablaufverfolgungssimulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), Updates für Konfigurationseinstellungen und Namensänderungen (siehe [.NET-API-Browser für die aktualisierten Namen](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration))
 
@@ -171,10 +171,10 @@ Hier werden die Änderungen sowie Anweisungen zum Aktualisieren vorhandener Prog
 
 ### <a name="q-language-syntax"></a>Q#-Sprachsyntax
 Mit diesem Release wird eine neue Q#-Sprachsyntax hinzugefügt:
-* benannte Elemente für [benutzerdefinierte Typen](xref:microsoft.quantum.language.type-model#user-defined-types)  
+* benannte Elemente für [benutzerdefinierte Typen](xref:microsoft.quantum.guide.types#user-defined-types)  
 * benutzerdefinierte Typkonstruktoren für die Verwendung als Funktionen
-* Unterstützung für [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions) und [apply-and-reassign]((xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols)) in benutzerdefinierten Typen
-* optionales Blockieren von Fehlerbehebungen im Zusammenhang mit [repeat-until-success](xref:microsoft.quantum.language.statements#repeat-until-success-loop)-Schleifen
+* Unterstützung für [copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) und [apply-and-reassign](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) in benutzerdefinierten Typen
+* optionales Blockieren von Fehlerbehebungen im Zusammenhang mit [repeat-until-success](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop)-Schleifen
 * Unterstützung für while-Schleifen in Funktionen (nicht in Vorgängen)
 
 ### <a name="library"></a>Bibliothek 
@@ -202,10 +202,10 @@ Hier werden die Änderungen sowie Anweisungen zum Aktualisieren vorhandener Prog
 
 ### <a name="q-language-syntax"></a>Q#-Sprachsyntax
 Mit diesem Release wird eine neue Q#-Sprachsyntax hinzugefügt:
-* Fügen Sie eine [schnelle Methode zum Ausdrücken von Spezialisierungen von Quantenvorgängen](xref:microsoft.quantum.language.type-model#functors) (Steuerelement und Adjunkte) mit `+`-Operatoren hinzu.  Die frühere Syntax ist veraltet.  Programme, die die alte Syntax verwenden (z. B. `: adjoint`), funktionieren auch weiterhin, es wird jedoch eine Warnung zur Kompilierzeit generiert.  
-* Fügen Sie einen neuen Operator für [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions) hinzu. `w/` kann zum Ausdrücken von Arrayerstellungen als Änderung eines vorhandenen Arrays verwendet werden.
-* Fügen Sie die allgemeine [apply-and-update](xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols)-Anweisung hinzu (z. B. `+=`/`w/=`).
-* Fügen Sie eine Methode zum Angeben eines kurzen Namens für Namespaces in [offenen Direktiven](xref:microsoft.quantum.language.file-structure#open-directives) hinzu.
+* Fügen Sie eine [schnelle Methode zum Ausdrücken von Spezialisierungen von Quantenvorgängen](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations) (Steuerelement und Adjunkte) mit `+`-Operatoren hinzu.  Die frühere Syntax ist veraltet.  Programme, die die alte Syntax verwenden (z. B. `: adjoint`), funktionieren auch weiterhin, es wird jedoch eine Warnung zur Kompilierzeit generiert.  
+* Fügen Sie einen neuen Operator für [copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) hinzu. `w/` kann zum Ausdrücken von Arrayerstellungen als Änderung eines vorhandenen Arrays verwendet werden.
+* Fügen Sie die allgemeine Anweisung [apply-and-update](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) hinzu (z. B. `+=`, `w/=`).
+* Fügen Sie eine Methode zum Angeben eines kurzen Namens für Namespaces in [offenen Direktiven](xref:microsoft.quantum.guide.filestructure#open-directives) hinzu.
 
 Mit diesem Release ist es nicht mehr möglich, ein Arrayelement auf der linken Seite einer set-Anweisung anzugeben.  Dies liegt daran, dass diese Syntax impliziert, dass Arrays veränderbar sind, wenn das Ergebnis des Vorgangs tatsächlich immer das Erstellen eines neuen Arrays mit der Änderung war.  Stattdessen wird ein Compilerfehler mit dem Vorschlag generiert, den neuen copy-and-update-Operator (`w/`) zu verwenden, um das gleiche Ergebnis zu erzielen.  
 
@@ -280,7 +280,7 @@ Dieses Release enthält Folgendes:
 
 - Problembehebung für das von der Community gemeldete DumpRegister-Issue ([#148](https://github.com/Microsoft/Quantum/issues/148))
 
-- Möglichkeit, innerhalb einer [using-Anweisung](xref:microsoft.quantum.language.statements) zurückzukehren
+- Möglichkeit, innerhalb einer [using-Anweisung](xref:microsoft.quantum.guide.qubits#allocating-qubits) zurückzukehren
 
 - überarbeiteter [Leitfaden zu den ersten Schritten](xref:microsoft.quantum.install)
 
@@ -303,7 +303,7 @@ Dieses Release enthält Folgendes:
 
 Dieses Release enthält Folgendes:
 
-- Unterstützung für den neuen primitiven Typ „BigInt“, der eine ganze Zahl mit Vorzeichen beliebiger Größe darstellt.  Weitere Informationen zum [BigInt-Typ](xref:microsoft.quantum.language.type-model) finden Sie hier.
+- Unterstützung für den neuen primitiven Typ „BigInt“, der eine ganze Zahl mit Vorzeichen beliebiger Größe darstellt.  Weitere Informationen zum [BigInt-Typ](xref:microsoft.quantum.guide.types) finden Sie hier.
 - neuer spezieller und schneller Toffoli-Simulator, mit dem X-, CNOT- und mehrfach gesteuerte X-Quantenvorgänge mit einer großen Anzahl von Qubits simuliert werden können.  Weitere Informationen zum [Toffoli-Simulator](xref:microsoft.quantum.machines.toffoli-simulator) finden Sie hier.
 - einfache Ressourcenschätzung zum Schätzen der erforderlichen Ressourcen für das Ausführen einer bestimmten Instanz eines Q#-Vorgangs auf einem Quantencomputer.  Weitere Informationen zur [Ressourcenschätzung](xref:microsoft.quantum.machines.resources-estimator) finden Sie hier.
 
@@ -427,7 +427,7 @@ In diesem Update wurden neue Debugfunktionen hinzugefügt:
 * Die Wahrscheinlichkeit zum Messen von $\ket{1}$ für ein einzelnes Qubit wird in Visual Studio nun automatisch im Debugfenster für den QuantumSimulator-Zielcomputer angezeigt.
 * In Visual Studio wurde die Anzeige von Variableneigenschaften in den Debugfenstern **Auto** und **Lokal** verbessert. 
 
-Erfahren Sie mehr über das [Testen und Debuggen](xref:microsoft.quantum.techniques.testing-and-debugging).
+Erfahren Sie mehr über das [Testen und Debuggen](xref:microsoft.quantum.guide.testingdebugging).
 
 ### <a name="community-contributions"></a>Beiträge der Community
 

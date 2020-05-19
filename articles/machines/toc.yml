@@ -1,10 +1,10 @@
 - name: Übersicht
   href: index.md
-- name: Quantensimulator
+- name: Simulator für den vollständigen Zustand
   href: full-state-simulator.md
 - name: Ressourcenschätzung
   href: resources-estimator.md
-- name: Ablaufverfolgungssimulator für Quantencomputer
+- name: Ablaufverfolgungssimulator
   topicHref: qc-trace-simulator/index.md
   href: qc-trace-simulator/toc.yml
 - name: Toffoli-Simulator

@@ -1,0 +1,12 @@
+- name: 'Q#-Dateistruktur'
+  href: file-structure.md
+- name: Vorgänge und Funktionen
+  href: operations-functions.md
+- name: Variables
+  href: variables.md
+- name: Arbeiten mit Qubits
+  href: working-with-qubits.md
+- name: Ablaufsteuerung
+  href: control-flow.md
+- name: Testen und Debuggen
+  href: testing-debugging.md
