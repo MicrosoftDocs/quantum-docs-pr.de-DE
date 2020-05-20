@@ -1,19 +1,19 @@
 ---
-title: 'Typen in Q #'
+title: Typen in Q#
 description: 'Erfahren Sie mehr über die verschiedenen Typen, die in der Programmiersprache Q # verwendet werden.'
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: 58370193bd62e306197a9e07c28f8611f043e55c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4a551ee90a0abb6e42953cf04c7f5a8ca3573f26
+ms.sourcegitcommit: 682a4a5f5dd23ca58a4addf62aea4086bb308552
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431137"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609140"
 ---
-# <a name="types-in-q"></a>Typen in Q #
+# <a name="types-in-q"></a>Typen in Q#
 
 Auf dieser Seite wird das Q #-Typmodell und die Syntax zum Angeben von und arbeiten mit Typen beschrieben.
 Auf der nächsten Seite, [typausdrücke](xref:microsoft.quantum.guide.expressions), wird erläutert, wie Ausdrücke dieser Typen erstellt und verwendet werden.
@@ -35,7 +35,7 @@ Die Sprache Q # stellt mehrere *primitive Typen*bereit, von denen andere Typen e
    Sorte.
 - Der `Double` -Typ stellt eine Gleit Komma Zahl mit doppelter Genauigkeit dar, z. b.: `0.0` , `-1.3` , `4e-7` .
 - Der- `Bool` Typ stellt einen booleschen Wert dar, der entweder oder sein kann `true` `false` .
-- Der- `Range` Typ stellt eine Sequenz von ganzen Zahlen dar, die durch angegeben wird, `start..step..stop` wobei der Schritt "Options" ist. 
+- Der- `Range` Typ stellt eine Sequenz von ganzen Zahlen dar, die durch angegeben wird, `start..step..stop` wobei der Schritt optional ist. 
    Dies `start .. stop` entspricht `start..1..stop` , und stellt z. b. `1..2..7` die Sequenz $ \{ 1, 3, 5, 7 \} $ dar.
 - Der- `String` Typ ist eine Sequenz von Unicode-Zeichen, die für den Benutzer nach der Erstellung nicht transparent ist.
   Dieser Typ wird verwendet, um Nachrichten an einen klassischen Host zu melden, wenn ein Fehler oder ein Diagnose Ereignis vorliegt.
@@ -125,7 +125,7 @@ Diese Eigenschaft wird als Übereinstimmung mit einem _Singleton-Tupel_bezeichne
 
 Eine benutzerdefinierte Typdeklaration besteht aus dem Schlüsselwort `newtype` , gefolgt vom Namen des benutzerdefinierten Typs, einer `=` , einer gültigen Typspezifikation und einem abschließenden Semikolon.
 
-Zum Beispiel:
+Beispiel:
 
 ```qsharp
 newtype PairOfInts = (Int, Int);

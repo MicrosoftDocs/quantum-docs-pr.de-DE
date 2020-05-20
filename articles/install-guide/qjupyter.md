@@ -1,19 +1,19 @@
 ---
-title: 'Entwickeln mit Q # jupyter Notebooks'
+title: Entwickeln mit Q#-Jupyter-Notebooks
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 3302a9bd0652b2dea86b844058bf8303ee7a4a7f
-ms.sourcegitcommit: c85c1b439807ac576d3a11aadca307d57b059673
+ms.openlocfilehash: 0c4dc856c94b0a694fb99607eda64cec4d5c221d
+ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551038"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83660769"
 ---
-# <a name="develop-with-q-jupyter-notebooks"></a>Entwickeln mit Q # jupyter Notebooks
+# <a name="develop-with-q-jupyter-notebooks"></a>Entwickeln mit Q#-Jupyter-Notebooks
 
 Installieren Sie das QDK zum Entwickeln von q #-Vorgängen für q # jupyter-Notebooks.
 
@@ -45,9 +45,9 @@ IQ# (ausgesprochen „i-q-sharp“) ist eine hauptsächlich von Jupyter und Pyth
         jupyter notebook
         ```
 
-    - Um das jupyter Notebook zu öffnen, und fügen Sie die von der Befehlszeile bereitgestellte URL in Ihren Browser ein.
+    - Um das Jupyter Notebook zu öffnen, kopieren Sie die von der Befehlszeile bereitgestellte URL in Ihren Browser, und fügen Sie Sie ein.
 
-    - Erstellen Sie ein Jupyter-Notebook mit einem Q#-Kernel, und fügen Sie in der ersten Notebookzelle den folgenden Code hinzu:
+    - Erstellen Sie eine Jupyter Notebook mit einem Q #-Kernel, und fügen Sie der ersten Notebook-Zelle den folgenden Code hinzu:
 
         ```qsharp
         operation SayHello () : Unit {
@@ -57,17 +57,21 @@ IQ# (ausgesprochen „i-q-sharp“) ist eine hauptsächlich von Jupyter und Pyth
 
     - Führen Sie diese Zelle des Notebooks aus:
 
-        ![Zelle im Jupyter-Notebook mit Q#-Code](~/media/install-guide-jupyter.png)
+        ![Jupyter Notebook Zelle mit Q #-Code](~/media/install-guide-jupyter.png)
 
-        In der Ausgabe der Zelle sollte `SayHello` angezeigt werden. Bei der Ausführung in Jupyter-Notebooks wird der Q#-Code kompiliert, und das Notebook gibt den Namen der gefundenen Vorgänge aus.
+        In der Ausgabe der Zelle sollte `SayHello` angezeigt werden. Bei Ausführung in Jupyter Notebook wird der Q #-Code kompiliert, und das Notebook gibt den Namen der gefundenen Vorgänge aus.
 
 
     - Führen Sie in einer neuen Zelle den soeben erstellten Vorgang (in einem Simulator) mithilfe des Befehls aus `%simulate` :
 
-        ![Zelle im Jupyter-Notebook mit %simulate-Magic](~/media/install-guide-jupyter-simulate.png)
+        ![Jupyter Notebook Zelle mit "% simulieren" Magic](~/media/install-guide-jupyter-simulate.png)
 
         Die Meldung sollte zusammen mit dem Ergebnis des aufgerufenen Vorgangs auf dem Bildschirm angezeigt werden (hier sehen wir das leere Tupel, `()` da der Vorgang einfach einen Typ zurückgibt `Unit` ).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nachdem Sie das Quantum Development Kit in Ihrer bevorzugten Umgebung installiert haben, können Sie [Ihr erstes Quantenprogramm](xref:microsoft.quantum.quickstarts.qrng) schreiben und ausführen.
+Nachdem Sie das QDK für Q # jupyter Notebooks installiert haben, können Sie [Ihr erstes Quantum-Programm](xref:microsoft.quantum.quickstarts.qrng) schreiben und ausführen, indem Sie den Q #-Code direkt in die Jupyter Notebook Umgebung schreiben.
+
+Weitere Beispiele für das, was Sie mit Q # jupyter-Notebooks tun können, finden Sie unter:
+- Einführung [in Q # und Jupyter Notebook](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/). Dort finden Sie eine q #-Jupyter Notebook, die zeigt, wie q # in dieser Umgebung verwendet wird.
+- [Quantum Katas](xref:microsoft.quantum.overview.katas), eine Open Source-Sammlung von Lernprogrammen für das Selbststudium und Sätze von programmierübungen in Form von Q # jupyter-Notebooks. Das [Quantum Katas Tutorial](https://github.com/microsoft/QuantumKatas#tutorial-topics) ist ein guter Ausgangspunkt. Die Quantum-Katas sind darauf ausgerichtet, Ihnen Elemente von Quantum Computing und Q #-Programmierung gleichzeitig zu vermitteln. Sie sind ein gutes Beispiel für die Art von Inhalten, die Sie mit Q # jupyter Notebooks erstellen können.
