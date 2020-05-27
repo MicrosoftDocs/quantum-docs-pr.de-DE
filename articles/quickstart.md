@@ -1,23 +1,25 @@
 ---
-title: Quantengrundlagen mit Q#
+title: Erkunden der Verschränkung mit Q#
 description: Erfahren Sie, wie Sie ein Quantenprogramm in Q# schreiben. Entwickeln Sie eine Bell-Zustandsanwendung mithilfe des Quantum Development Kit (QDK)
 author: natke
 ms.author: nakersha
 ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 8d3b2d7c8da39a961f4eedcc5989ad3a1e134ade
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: 7836e39227fa2282c6e2faa039f6e625103d5403
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "77906728"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426840"
 ---
-# <a name="quantum-basics-with-q"></a>Quantengrundlagen mit Q#
+# <a name="tutorial-explore-entanglement-with-q"></a>Tutorial: Erkunden der Verschränkung mit Q\#
 
-In dieser Schnellstartanleitung wird veranschaulicht, wie Sie ein Q#-Programm schreiben, mit dem Qubits bearbeitet und gemessen werden können. Darüber hinaus werden die Auswirkungen der Überlagerung und Verschränkung dargestellt.  Es wird beschrieben, wie Sie das QDK installieren und das Programm erstellen und mit einem Quantensimulator ausführen.  
+In diesem Tutorial erfahren Sie, wie Sie ein Q#-Programm schreiben, mit dem Qubits bearbeitet und gemessen werden können. Darüber hinaus werden die Auswirkungen von Superposition und Verschränkung veranschaulicht.
+Es wird beschrieben, wie Sie das QDK installieren und das Programm erstellen und mit einem Quantensimulator ausführen.  
 
-Sie schreiben eine Anwendung mit dem Namen „Bell“, um die Quantenverschränkung zu veranschaulichen.  Der Name „Bell“ bezieht sich auf die Bell-Zustände. Hierbei handelt es sich um spezifische Quantenzustände von zwei Qubits, die zum Darstellen der einfachsten Beispiele für Überlagerungen und Quantenverschränkungen verwendet werden. 
+Sie schreiben eine Anwendung mit dem Namen „Bell“, um die Quantenverschränkung zu veranschaulichen.
+Der Name „Bell“ bezieht sich auf die Bell-Zustände. Hierbei handelt es sich um spezifische Quantenzustände von zwei Qubits, die zum Darstellen der einfachsten Beispiele für Überlagerungen und Quantenverschränkungen verwendet werden.
 
 ## <a name="pre-requisites"></a>Voraussetzungen
 
@@ -30,7 +32,7 @@ Sie können den Vorgang auch ohne Installation des QDK durchführen, indem Sie s
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>Veranschaulichen des Qubit-Verhaltens mit Q#
 
-Denken Sie an unsere einfache [Qubit-Definition](xref:microsoft.quantum.overview.what#the-qubit) zurück.  Klassische Bits enthalten einen einzelnen binären Wert (0 oder 1). Der Zustand eines Qubits kann dagegen eine **Superposition** sein (also 0 und 1 gleichzeitig).  Vom Konzept her können Sie sich ein Qubit als eine Richtung im Raum vorstellen (auch als Vektor bezeichnet).  Ein Qubit kann eine beliebige der möglichen Richtungen aufweisen. Die beiden **klassischen Zustände** sind die beiden Richtungen, die für die einhundertprozentige Chance einer Messung von 0 und die einhundertprozentige Chance einer Messung von 1 stehen.  Diese Darstellung wird formal durch die [Bloch-Kugel](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere) visualisiert.
+Denken Sie an unsere einfache [Qubit-Definition](xref:microsoft.quantum.overview.understanding) zurück.  Klassische Bits enthalten einen einzelnen binären Wert (0 oder 1). Der Zustand eines Qubits kann dagegen eine **Superposition** sein (also 0 und 1 gleichzeitig).  Vom Konzept her können Sie sich ein Qubit als eine Richtung im Raum vorstellen (auch als Vektor bezeichnet).  Ein Qubit kann eine beliebige der möglichen Richtungen aufweisen. Die beiden **klassischen Zustände** sind die beiden Richtungen, die für die einhundertprozentige Chance einer Messung von 0 und die einhundertprozentige Chance einer Messung von 1 stehen.  Diese Darstellung wird formal durch die [Bloch-Kugel](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere) visualisiert.
 
 
 Mit dem Messvorgang wird ein binäres Ergebnis erzeugt und ein Qubit-Zustand geändert. Bei der Messung wird ein binärer Wert erzeugt (0 oder 1).  Das Qubit geht von einem Überlagerungszustand (beliebige Richtung) in einen der klassischen Zustände über.  Danach führt die Wiederholung der gleichen Messung ohne Eingriff zu demselben binären Ergebnis.  
@@ -498,7 +500,7 @@ Herzlichen Glückwunsch, Sie haben Ihr erstes Quantenprogramm geschrieben!
 
 ## <a name="whats-next"></a>Wie geht es weiter?
 
-In der Schnellstartanleitung zur [Grover-Suche](xref:microsoft.quantum.quickstarts.search) wird veranschaulicht, wie Sie die Grover-Suche erstellen und ausführen. Dies ist einer der beliebtesten Algorithmen des Quantencomputings und ein schönes Beispiel für ein Q#-Programm, das zum Lösen echter Probleme im Bereich des Quantencomputings eingesetzt werden kann.  
+Im Tutorial zur [Grover-Suche](xref:microsoft.quantum.quickstarts.search) wird veranschaulicht, wie Sie die Grover-Suche erstellen und ausführen. Dies ist einer der beliebtesten Algorithmen des Quantencomputings und ein schönes Beispiel für ein Q#-Programm, das zum Lösen echter Probleme im Bereich des Quantencomputings eingesetzt werden kann.  
 
 Der [Artikel zum Einstieg in das Quantum Development Kit](xref:microsoft.quantum.welcome) enthält Informationen zu weiteren Möglichkeiten, wie Sie Q# und die Quantenprogrammierung erlernen können.
 
