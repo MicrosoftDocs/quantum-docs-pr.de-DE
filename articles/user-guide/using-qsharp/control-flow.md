@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: c534e016fcb8b50e66c11ca29c253ba0512acc6e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 1f1b641563fe35879abeee32b4f0aeeb7001b1a0
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430950"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84326539"
 ---
 # <a name="control-flow-in-q"></a>Ablauf Steuerung in Q #
 
@@ -44,7 +44,7 @@ Wenn die ursprüngliche if-Bedingung und alle else-if-Klauseln als false ausgewe
 Beachten Sie, dass der ausgeführte Block in seinem eigenen Bereich ausgeführt wird.
 Bindungen, die innerhalb eines- `if` ,-oder-Blocks erstellt werden, `elif` `else` sind nach dem Ende nicht sichtbar.
 
-Ein auf ein Objekt angewendeter
+Beispiel:
 
 ```qsharp
 if (result == One) {
@@ -174,7 +174,7 @@ Aufruf Bare Elemente, die einen beliebigen anderen Typ zurückgeben, erfordern e
 Es gibt keine maximale Anzahl von Return-Anweisungen innerhalb eines Vorgangs.
 Der Compiler gibt möglicherweise eine Warnung aus, wenn Anweisungen einer Return-Anweisung in einem-Block folgen.
 
-Ein auf ein Objekt angewendeter
+Beispiel:
 ```qsharp
 return 1;
 ```
@@ -196,7 +196,7 @@ Die Zeichenfolge wird als Fehlermeldung an den klassischen Treiber zurückgegebe
 Es gibt keine Einschränkung für die Anzahl der Fail-Anweisungen innerhalb eines Vorgangs.
 Der Compiler gibt möglicherweise eine Warnung aus, wenn-Anweisungen einer Fail-Anweisung innerhalb eines-Blocks folgen.
 
-Ein auf ein Objekt angewendeter
+Beispiel:
 ```qsharp
 fail $"Impossible state reached";
 ```
@@ -329,5 +329,6 @@ Wichtige programmgesteuerte Features, die in diesem Vorgang gezeigt werden, sind
 Weitere Informationen zu den-und-Vorgängen finden Sie unter [Testen und Debuggen](xref:microsoft.quantum.guide.testingdebugging) [`Assert`](xref:microsoft.quantum.intrinsic.assert) [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) .
 
 
-## <a name="whats-next"></a>Wie geht es weiter?
+## <a name="next-steps"></a>Nächste Schritte
+
 Erfahren Sie mehr über das [Testen und Debuggen](xref:microsoft.quantum.guide.testingdebugging) in f #.

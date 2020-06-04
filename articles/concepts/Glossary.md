@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: cbc473eb14d8afd255a7072475dc054e18b98e3e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 042e4e27ef4e42cfc0c24fbb0ae2232cf1bbfe36
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426705"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327610"
 ---
 # <a name="quantum-computing-glossary"></a>Quantum Computing-Glossar
 
@@ -55,7 +55,7 @@ Der Faktor, um den die Größe eines [eigen Vektors](xref:microsoft.quantum.glos
 
 Ein Vektor, dessen Richtung durch eine angegebene Transformation unverändert bleibt und dessen Größe durch einen Faktor geändert wird, der dem [eigen Wert](xref:microsoft.quantum.glossary#eigenvalue)dieses Vektors entspricht. Wenn eine quadratische Matrix $M $ und ein eigen Wert $c $ ist, dann $MV = CV $, wobei $v $ ein eigen Vektor der Matrix ist und eine komplexe Zahl beliebiger Argumente sein kann. Weitere Informationen finden Sie unter [Advanced Matrix Concepts](xref:microsoft.quantum.concepts.matrix-advanced).
 
-## <a name="entanglement"></a>Jede Verflechtungen
+## <a name="entanglement"></a>Verschränkung
 
 Quantum-Partikel (z. b. [Qubits](xref:microsoft.quantum.glossary#qubit)) können verbunden oder *entkoppelt* werden, sodass Sie nicht unabhängig voneinander beschrieben werden können. Die Messergebnisse werden auch dann korreliert, wenn Sie unendlich weit entfernt sind. "Entanglement" ist für die [Messung](xref:microsoft.quantum.glossary#measurement) des [Status](xref:microsoft.quantum.glossary#quantum-state) eines Qubit unabdingbar.  Weitere Informationen finden Sie unter [Advanced Matrix Concepts](xref:microsoft.quantum.concepts.matrix-advanced).
 
@@ -120,7 +120,11 @@ Ein Satz von drei einheitlichen Matrizen, die als `X` , `Y` und Quantum-Vorgäng
 
 ## <a name="quantum-circuit-diagram"></a>Quantum-Verbindungs Diagramm
 
-Eine Methode, mit der die Abfolge von [Vorgängen](xref:microsoft.quantum.glossary#operation) (oder [Gates](xref:microsoft.quantum.glossary#gate)) für einfache Quantum-Programme grafisch dargestellt wird, z. b. ein Beispiel für ein Verbindungs ![ Diagramm ](~/media/qpe.png) Weitere Informationen finden Sie unter [Quantum](xref:microsoft.quantum.concepts.circuits)-Verbindungen.
+Eine Methode zur grafischen Darstellung der Abfolge von [Vorgängen](xref:microsoft.quantum.glossary#operation) (oder [Gates](xref:microsoft.quantum.glossary#gate)) für einfache Quantum-Programme, z. b. 
+
+![Beispiel für ein Verbindungs Diagramm](~/media/qpe.png). 
+
+Weitere Informationen finden Sie unter [Quantum](xref:microsoft.quantum.concepts.circuits)-Verbindungen.
 
 ## <a name="quantum-libraries"></a>Quantum-Bibliotheken
 
@@ -144,7 +148,7 @@ Ein Quantum-Algorithmus, der probabilistisch erfolgreich ist. Bei einem Fehler w
 
 ## <a name="superposition"></a>Superposition
 
-Das Konzept von Quantum Computing, dass ein [Qubit](xref:microsoft.quantum.glossary#qubit) eine lineare Kombination aus zwei Zuständen ist, $ \ket{\0} $ und $ \ket{\1} $, bis es [gemessen](xref:microsoft.quantum.glossary#measurement)wird.  Weitere Informationen finden Sie Untergrund Legendes zu [Quantum Computing](xref:microsoft.quantum.overview.understanding).
+Das Konzept von Quantum Computing, dass ein [Qubit](xref:microsoft.quantum.glossary#qubit) eine lineare Kombination aus zwei Zuständen ist, $ \ket {0} $ und $ \ket {1} $, bis es [gemessen](xref:microsoft.quantum.glossary#measurement)wird.  Weitere Informationen finden Sie Untergrund Legendes zu [Quantum Computing](xref:microsoft.quantum.overview.understanding).
 
 ## <a name="target-machine"></a>Zielcomputer
 

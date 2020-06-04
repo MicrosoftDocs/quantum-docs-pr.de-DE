@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
-ms.openlocfilehash: e89b9ccfe2a0796e01eedfc99f7ce71038d85f38
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 0deb0729a88c49798f32a22a943b935d383c570b
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430933"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327542"
 ---
 # <a name="working-with-qubits"></a>Arbeiten mit Qubits
 
@@ -30,7 +30,7 @@ Die-Anweisung besteht aus dem Schlüsselwort `using` , gefolgt von einer öffnen
 Die Bindung folgt demselben Muster wie `let` -Anweisungen: entweder ein einzelnes Symbol oder ein Tupel von Symbolen, gefolgt von einem Gleichheitszeichen `=` und entweder ein einzelner Wert oder ein entsprechendes Tupel von *Initialisierern*.
 
 Initialisierer sind entweder für ein einzelnes Qubit, das als angegeben ist, `Qubit()` oder ein Array von Qubits verfügbar, `Qubit[n]` wobei `n` ein `Int` Ausdruck ist.
-Ein auf ein Objekt angewendeter
+Beispiel:
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -59,7 +59,7 @@ Diese Qubits befinden sich in der Regel nicht in einem sauberen Zustand, d. h., 
 Diese werden häufig als "modifizierte" Qubits bezeichnet, da ihr Zustand unbekannt ist und sogar mit anderen Teilen des Arbeitsspeichers des Quantums Computers entkoppelt werden kann.
 
 Die Bindung folgt demselben Muster und denselben Regeln wie in einer- `using` Anweisung.
-Ein auf ein Objekt angewendeter
+Beispiel:
 ```qsharp
 borrowing (qubit = Qubit()) {
     // ...
@@ -221,5 +221,6 @@ Der Grund hierfür ist, dass wir aus der Struktur der Verbindung wissen, wie Sie
 
 Es ist aufschlussreich, diesen Code mit einer anderen Funktion zu vergleichen, die `MultiControlledXClean` das gleiche Ziel hat, eine Multiplikation gesteuerte Operation zu implementieren, bei der `X` jedoch mithilfe des-Mechanismus mehrere saubere Qubits verwendet werden `using` . 
 
-## <a name="whats-next"></a>Wie geht es weiter?
+## <a name="next-steps"></a>Nächste Schritte
+
 Erfahren Sie mehr über die [Ablauf Steuerung](xref:microsoft.quantum.guide.controlflow) in f #.

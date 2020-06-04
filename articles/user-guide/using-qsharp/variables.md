@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
-ms.openlocfilehash: 407b4ff3570816eb7bdc323a5c5b77dac2d951af
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 456c05d4ca66a747e0cc514a30c6bbb33610f481
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430899"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327780"
 ---
 # <a name="variables-in-q"></a>Variablen in Q #
 
@@ -26,7 +26,7 @@ Ein Wert eines beliebigen Typs in Q # kann einer Variablen für die Wiederverwen
 
 Eine unveränderliche Bindung besteht aus dem Schlüsselwort `let` , gefolgt von einem Symbol oder einem symboltupel, einem Gleichheitszeichen `=` , einem Ausdruck, an den die Symbole gebunden werden, und einem abschließenden Semikolon.
 
-Beispiel:
+Zum Beispiel:
 
 ```qsharp
 let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];
@@ -55,7 +55,7 @@ Hier finden Sie einige Beispiele für Methoden zur Neubindung von Anweisungen.
 
 ### <a name="apply-and-reassign-statements"></a>Apply-and-REASSIGN-Anweisungen
 
-Eine bestimmte Art von `set` -Anweisung, auf die als *Apply-and-REASSIGN* -Anweisung verwiesen wird, stellt eine bequeme Methode für die Verkettung dar, wenn die Rechte Seite aus der Anwendung eines binären Operators besteht und das Ergebnis an das linke Argument des Operators gebunden werden soll. Ein auf ein Objekt angewendeter
+Eine bestimmte Art von `set` -Anweisung, auf die als *Apply-and-REASSIGN* -Anweisung verwiesen wird, stellt eine bequeme Methode für die Verkettung dar, wenn die Rechte Seite aus der Anwendung eines binären Operators besteht und das Ergebnis an das linke Argument des Operators gebunden werden soll. Beispiel:
 ```qsharp
 mutable counter = 0;
 for (i in 1 .. 2 .. 10) {
@@ -161,7 +161,7 @@ Eine Zuweisung dieses Formulars heißt, dass die Elemente dieses Tupels *deaktiv
 Wenn die Rechte Seite der Bindung ein Tupel ist, kann dieses Tupel bei der Zuweisung dekonstruiert werden.
 Solche Dekonstruktionen können geschaltete Tupel einschließen, und jede vollständige oder partielle Dekonstruktion ist gültig, solange die Form des Tupels auf der rechten Seite mit der Form des symboltupels kompatibel ist.
 
-Zum Beispiel:
+Beispiel:
 
 ```qsharp
 let (i, f) = (5, 0.1); // i is bound to 5 and f to 0.1
@@ -196,7 +196,7 @@ let n = 8;
 ...                 // n is 8
 ```
 
-und
+and
 
 ```qsharp
 if (a == b) {
@@ -232,5 +232,6 @@ if (a == b) {
 ...
 ```
 
-## <a name="whats-next"></a>Wie geht es weiter?
+## <a name="next-steps"></a>Nächste Schritte
+
 Erfahren Sie mehr über das [Arbeiten mit Qubits](xref:microsoft.quantum.guide.qubits) in f #.

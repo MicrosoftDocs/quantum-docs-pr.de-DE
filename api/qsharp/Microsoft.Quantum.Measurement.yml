@@ -9,19 +9,19 @@ operations:
 - uid: microsoft.quantum.measurement.measurewithscratch
   summary: Misst den angegebenen Pauli-Operator mithilfe eines expliziten Scratch-Qubit, um die Messung auszuführen.
 - uid: microsoft.quantum.measurement.mresetx
-  summary: Misst ein einzelnes Qubit in der X-Basis und setzt es auf den standardmäßigen Basiszustand | 0 〉 nach der Messung zurück.
+  summary: Misst ein einzelnes Qubit in der X-Basis und setzt es nach der Messung auf einen festgelegten Anfangszustand zurück.
 - uid: microsoft.quantum.measurement.mresety
-  summary: Misst ein einzelnes Qubit auf Y-Basis und setzt es auf den standardmäßigen Basiszustand | 0 〉 nach der Messung zurück.
+  summary: Misst ein einzelnes Qubit in der Y-Basis und setzt es nach der Messung auf einen festgelegten Anfangszustand zurück.
 - uid: microsoft.quantum.measurement.mresetz
-  summary: Misst ein einzelnes Qubit in der `Z` Basis und setzt es auf den standardmäßigen Basiszustand | 0 〉 nach der Messung zurück.
+  summary: Misst ein einzelnes Qubit in der Z-Basis und setzt es nach der Messung auf einen festgelegten Anfangszustand zurück.
 - uid: microsoft.quantum.measurement.multim
   summary: Misst jedes Qubit in einem angegebenen Array standardmäßig.
 - uid: microsoft.quantum.measurement.settobasisstate
   summary: Legt ein Qubit auf einen angegebenen Berechnungsbasis Zustand fest, indem das Qubit gemessen und bei Bedarf ein bitflip angewendet wird.
 metadata:
-  ms.openlocfilehash: 8e0910bf53734ffe65aa12b06321ec9b3403133f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 894c0bb7f0b57e9fe04837b89cd57345745df6c5
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673143"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326624"

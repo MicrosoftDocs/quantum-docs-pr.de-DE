@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.ispermutation
+name: IsPermutation
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: >-
+  Gibt nur dann true aus, wenn ein bestimmtes Array eine Permutation darstellt.
+
+
+  Gibt bei Angabe eines Arrays `array` der Länge `n` nur dann true zurück, wenn jede Ganzzahl von in `0` `n - 1` genau einmal in angezeigt wird `array` , sodass `array` als permutations für Elemente interpretiert werden kann `n` .
+remarks: Ein Array der Länge 0 (null) ist trivial eine Permutation.
+examples: >-
+  Der folgende f #-Code gibt die Meldung "alle Diagnosen erfolgreich abgeschlossen" aus:
+
+
+  ```Q#
+
+  Fact(IsPermutation([2, 0, 1], "");
+
+  Contradiction(IsPermutation([5, 0, 1], "[5, 0, 1] isn't a permutation");
+
+  Message("All diagnostics completed successfully.");
+
+  ```
+syntax: 'function IsPermutation (permuation : Int[]) : Bool'
+input:
+  content: '(permuation : Int[])'
+  types:
+  - name: permuation
+    isArray: true
+    isPrimitive: true
+    uid: Int
+output:
+  content: Bool
+  types:
+  - isPrimitive: true
+    uid: Bool
+metadata:
+  ms.openlocfilehash: 259c7a073a02b8cae196853e66cd30d7fe3a9436
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84328407"

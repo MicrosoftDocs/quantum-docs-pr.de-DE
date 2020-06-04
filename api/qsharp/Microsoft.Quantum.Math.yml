@@ -3,9 +3,9 @@ uid: microsoft.quantum.math
 name: Microsoft.Quantum.Math
 functions:
 - uid: microsoft.quantum.math.abscomplex
-  summary: Gibt den absoluten Wert einer komplexen Zahl vom Typ `Complex`zurück.
+  summary: Gibt den absoluten Wert einer komplexen Zahl vom Typ zurück `Complex` .
 - uid: microsoft.quantum.math.abscomplexpolar
-  summary: Gibt den absoluten Wert einer komplexen Zahl vom Typ `ComplexPolar`zurück.
+  summary: Gibt den absoluten Wert einer komplexen Zahl vom Typ zurück `ComplexPolar` .
 - uid: microsoft.quantum.math.absd
   summary: Gibt den absoluten Wert einer Gleitkommazahl mit doppelter Genauigkeit zurück.
 - uid: microsoft.quantum.math.absi
@@ -13,9 +13,9 @@ functions:
 - uid: microsoft.quantum.math.absl
   summary: Gibt den absoluten Wert einer großen Ganzzahl zurück.
 - uid: microsoft.quantum.math.abssquaredcomplex
-  summary: Gibt den quadratischen absoluten Wert einer komplexen Zahl vom Typ `Complex`zurück.
+  summary: Gibt den quadratischen absoluten Wert einer komplexen Zahl vom Typ zurück `Complex` .
 - uid: microsoft.quantum.math.abssquaredcomplexpolar
-  summary: Gibt den quadratischen absoluten Wert einer komplexen Zahl vom Typ `ComplexPolar`zurück.
+  summary: Gibt den quadratischen absoluten Wert einer komplexen Zahl vom Typ zurück `ComplexPolar` .
 - uid: microsoft.quantum.math.arccos
   summary: Gibt einen Winkel zurück, dessen Kosinus die angegebene Zahl ist.
 - uid: microsoft.quantum.math.arccosh
@@ -31,35 +31,31 @@ functions:
 - uid: microsoft.quantum.math.arctanh
   summary: Berechnet den umgekehrten hyperbolischen Tangens einer Zahl.
 - uid: microsoft.quantum.math.argcomplex
-  summary: Gibt die Phase einer komplexen Zahl vom Typ `Complex`zurück.
+  summary: Gibt die Phase einer komplexen Zahl vom Typ zurück `Complex` .
 - uid: microsoft.quantum.math.argcomplexpolar
-  summary: Gibt die Phase einer komplexen Zahl vom Typ `ComplexPolar`zurück.
+  summary: Gibt die Phase einer komplexen Zahl vom Typ zurück `ComplexPolar` .
 - uid: microsoft.quantum.math.bitsizei
   summary: >-
-    Gibt für eine nicht negative ganze `a`Zahl die Anzahl der Bits zurück, die zur `a`Darstellung von erforderlich sind.
+    Gibt für eine nicht negative ganze `a` Zahl die Anzahl der Bits zurück, die zur Darstellung von erforderlich sind `a` .
 
 
     Das heißt, die kleinste $n $ wird so zurückgegeben, dass $a < 2 ^ n $.
 - uid: microsoft.quantum.math.bitsizel
   summary: >-
-    Gibt für eine nicht negative ganze `a`Zahl die Anzahl der Bits zurück, die zur `a`Darstellung von erforderlich sind.
+    Gibt für eine nicht negative ganze `a` Zahl die Anzahl der Bits zurück, die zur Darstellung von erforderlich sind `a` .
 
 
     Das heißt, die kleinste $n $ wird so zurückgegeben, dass $a < 2 ^ n $.
 - uid: microsoft.quantum.math.ceiling
   summary: Gibt die kleinste Ganzzahl zurück, die größer oder gleich der angegebenen Zahl ist.
 - uid: microsoft.quantum.math.complexascomplexpolar
-  summary: Konvertiert eine komplexe Zahl vom Typ `Complex` in eine komplexe Zahl vom Typ `ComplexPolar`.
+  summary: Konvertiert eine komplexe Zahl vom Typ `Complex` in eine komplexe Zahl vom Typ `ComplexPolar` .
 - uid: microsoft.quantum.math.complexpolarascomplex
-  summary: Konvertiert eine komplexe Zahl vom Typ `ComplexPolar` in eine komplexe Zahl vom Typ `Complex`.
-- uid: microsoft.quantum.math.complexpolartocomplex
-  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nComplexpolar to Complex ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.complexpolarascomplex\"."
-- uid: microsoft.quantum.math.complextocomplexpolar
-  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nComplex| complexpolar ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.math.complexascomplexpolar\"."
+  summary: Konvertiert eine komplexe Zahl vom Typ `ComplexPolar` in eine komplexe Zahl vom Typ `Complex` .
 - uid: microsoft.quantum.math.continuedfractionconvergenti
-  summary: Sucht den fortgesetzten Bruchteil konvergent, `fraction` der sich am nächsten befindet, wenn der Nenner kleiner oder gleich ist.`denominatorBound`
+  summary: Sucht den fortgesetzten Bruchteil konvergent, der sich am nächsten befindet, wenn `fraction` der Nenner kleiner oder gleich ist.`denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
-  summary: Sucht den fortgesetzten Bruchteil konvergent, `fraction` der sich am nächsten befindet, wenn der Nenner kleiner oder gleich ist.`denominatorBound`
+  summary: Sucht den fortgesetzten Bruchteil konvergent, der sich am nächsten befindet, wenn `fraction` der Nenner kleiner oder gleich ist.`denominatorBound`
 - uid: microsoft.quantum.math.cos
   summary: Gibt den Kosinus des angegebenen Winkels zurück.
 - uid: microsoft.quantum.math.cosh
@@ -145,9 +141,9 @@ functions:
 - uid: microsoft.quantum.math.modpowl
   summary: Führt eine modulare Division für eine Zahl aus, die mit einer anderen Zahl ausgelöst wird.
 - uid: microsoft.quantum.math.modulusi
-  summary: Berechnet den kanonischen Rückstand von `value` Modulo `modulus`.
+  summary: Berechnet den kanonischen Rückstand von `value` Modulo `modulus` .
 - uid: microsoft.quantum.math.modulusl
-  summary: Berechnet den kanonischen Rückstand von `value` Modulo `modulus`.
+  summary: Berechnet den kanonischen Rückstand von `value` Modulo `modulus` .
 - uid: microsoft.quantum.math.negationc
   summary: Gibt die unäre Negation einer Eingabe zurück.
 - uid: microsoft.quantum.math.negationcp
@@ -174,16 +170,16 @@ functions:
   summary: Gibt die Summe von zwei Eingaben zurück.
 - uid: microsoft.quantum.math.pnorm
   summary: >-
-    Gibt die `L(p)` Norm eines Vektors von `Double`s zurück.
+    Gibt die `L(p)` Norm eines Vektors von `Double` s zurück.
 
 
-    Das heißt, wenn ein Array $x $ vom Typ `Double[]`ist, wird der $p $-Norm $\|x\|\_p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $ zurückgegeben.
+    Das heißt, wenn ein Array $x $ vom Typ ist `Double[]` , wird der $p $-Norm $ \| x \| \_ p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $ zurückgegeben.
 - uid: microsoft.quantum.math.pnormalized
   summary: >-
-    Normalisiert einen Vektor von `Double`s in der `L(p)` Norm.
+    Normalisiert einen Vektor von `Double` s in der `L(p)` Norm.
 
 
-    Das heißt, wenn ein Array $x $ vom Typ `Double[]`ist, wird ein Array zurückgegeben, in dem alle Elemente durch die $p $-\|Norm\|$ x _P $ dividiert werden.
+    Das heißt, wenn ein Array $x $ vom Typ ist `Double[]` , wird ein Array zurückgegeben, in dem alle Elemente durch die $p $-Norm $ \| x _P $ dividiert werden \| .
 - uid: microsoft.quantum.math.powc
   summary: Gibt eine Zahl zurück, die zu einer angegebenen Potenz ausgelöst wird.
 - uid: microsoft.quantum.math.powcp
@@ -230,7 +226,7 @@ functions:
   summary: Berechnet den ganzzahligen Teil einer Zahl.
 newtypes:
 - uid: microsoft.quantum.math.bigfraction
-  summary: Stellt eine rationale Zahl der Form `p/q`dar. " `p` Integer" ist das erste Element des Tupels `q` und ist das zweite Element des Tupels.
+  summary: Stellt eine rationale Zahl der Form dar `p/q` . "Integer" `p` ist das erste Element des Tupels und `q` ist das zweite Element des Tupels.
 - uid: microsoft.quantum.math.complex
   summary: >-
     Stellt eine komplexe Zahl durch seine reellen und imaginären Komponenten dar.
@@ -243,7 +239,7 @@ newtypes:
 
     Die Polar Darstellung einer komplexen Zahl ist $c = r e ^ {i t} $.
 - uid: microsoft.quantum.math.fraction
-  summary: Stellt eine rationale Zahl der Form `p/q`dar. " `p` Integer" ist das erste Element des Tupels `q` und ist das zweite Element des Tupels.
+  summary: Stellt eine rationale Zahl der Form dar `p/q` . "Integer" `p` ist das erste Element des Tupels und `q` ist das zweite Element des Tupels.
 summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält klassische mathematische Funktionen und Datentypen."
 operations:
 - uid: microsoft.quantum.math.randomint
@@ -255,9 +251,9 @@ operations:
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: Gibt einen der Single-Qubit-Pauli-Operatoren gleichmäßig nach dem Zufallsprinzip zurück.
 metadata:
-  ms.openlocfilehash: 2ad787a0d29e98e25c733d1fdcf0a79fcc8c2803
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 03b75e3dbaa8be699e58fcbcd13db4fbf1c82f12
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673157"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326490"

@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 02/28/2020
 ms.topic: article
 uid: microsoft.quantum.guide.basics
-ms.openlocfilehash: fd0ea47f00b1456ec460808ef7d451c8427677cd
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: e77b52d1a6eb7e2f62ab12dedd75d00ac8fec4be
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431154"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327321"
 ---
 # <a name="q-basics"></a>F #-Grundlagen
 
@@ -91,7 +91,7 @@ let count = 5;
 ```
 
 Ein etwas interessanteres Beispiel ist die `for` -Anweisung, die Iterationen unterstützt und einen- *Anweisungsblock*enthält.
-Angenommen `qubits` ist das Symbol, das an ein Register von Qubits gebunden ist (technisch gesehen vom Typ `Qubit[]` , d. h. ein Array von `Qubit` Typen). Then
+Angenommen `qubits` ist das Symbol, das an ein Register von Qubits gebunden ist (technisch gesehen vom Typ `Qubit[]` , d. h. ein Array von `Qubit` Typen). Aktion
 ```qsharp
 for (qubit in qubits) {
     H(qubit);
@@ -106,8 +106,7 @@ Ausdrucks Auswertungs Anweisungen erfordern ein abschließendes Semikolon.
 Fast jeder Aspekt eines Q #-Programms wird mithilfe von-Anweisungen erstellt, sodass keine einzelne Seite alle Informationen im Zusammenhang mit diesen Informationen umfassen kann.
 Die lexikalische Struktur und die Formatierung werden jedoch auf der Seite " [f #-Dateistruktur](xref:microsoft.quantum.guide.filestructure) ", der Symbol Bindungs Zuweisung und dem Bereich unter [Variablen in q #](xref:microsoft.quantum.guide.variables)und Ablauf Steuerungs Schleifen, wie z `for` . b. der [Ablauf Steuerung in q #](xref:microsoft.quantum.guide.controlflow), beschrieben.
 
-
-## <a name="whats-next"></a>Ausblick
+## <a name="next-steps"></a>Nächste Schritte
 Im weiteren Verlauf dieses Handbuchs erfahren Sie, wie Sie mit Q # komplexe Quantum-Programme über die grundlegenden Bausteine von Vorgängen, Funktionen und Typen erstellen.
 
 Um zu beginnen, können Sie mit dem Kennenlernen von [Typen in f #](xref:microsoft.quantum.guide.types)beginnen.

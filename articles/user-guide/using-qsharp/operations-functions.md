@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
-ms.openlocfilehash: bc9695b85b68807801225ccbc903a4622b450768
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 9e924b973c4f22a59dd862df3f4f0d70278a1b4e
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431069"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327797"
 ---
 # <a name="operations-and-functions-in-q"></a>Vorgänge und Funktionen in Q #
 
@@ -151,7 +151,7 @@ Die tatsächliche Implementierung jeder Spezialisierung kann entweder *implizit*
 
 ### <a name="implicitly-specifying-implementations"></a>Implizit angeben von Implementierungen
 
-In diesem Fall besteht der Text der Vorgangs Deklaration ausschließlich aus der Standard Implementierung. Zum Beispiel:
+In diesem Fall besteht der Text der Vorgangs Deklaration ausschließlich aus der Standard Implementierung. Beispiel:
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -418,7 +418,7 @@ Jede f #-Quelldatei kann eine beliebige Anzahl von Funktionen definieren.
 Funktionsnamen müssen innerhalb eines Namespace eindeutig sein und können keinen Konflikt mit Vorgangs-oder Typnamen aufweisen.
 
 Das Definieren einer Funktion funktioniert ähnlich wie ein Vorgang, mit dem Unterschied, dass für eine Funktion keine Adjoint-oder kontrollierten Spezialisierungs Funktionen definiert werden können.
-Beispiel:
+Zum Beispiel:
 
 ```qsharp
 function Square(x : Double) : (Double) {
@@ -670,5 +670,6 @@ Es gibt jedoch zwei wichtige Kommentare zur Verwendung der Rekursion:
 - Bei der Ausführung auf einem eigentlichen Quantum-Gerät kann der Stapel Speicher eingeschränkt sein, sodass die Tiefe Rekursion zu einem Laufzeitfehler führen kann.
   Insbesondere der Q #-Compiler und die Common Language Runtime erkennen und optimieren die Endrekursion nicht.
 
-## <a name="whats-next"></a>Wie geht es weiter?
+## <a name="next-steps"></a>Nächste Schritte
+
 Erfahren Sie mehr über [Variablen](xref:microsoft.quantum.guide.variables) in f #.

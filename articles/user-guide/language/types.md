@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: 4a551ee90a0abb6e42953cf04c7f5a8ca3573f26
-ms.sourcegitcommit: 682a4a5f5dd23ca58a4addf62aea4086bb308552
+ms.openlocfilehash: f7a3ac3813966c0ef695068297ce4d9949ead554
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609140"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327287"
 ---
 # <a name="types-in-q"></a>Typen in Q#
 
@@ -63,7 +63,8 @@ Beachten Sie im zweiten Beispiel, dass dies eine potenziell Jagged Array von Arr
 Q # bietet keine Unterstützung für rechteckige mehrdimensionale Arrays.
 
 Ein Arraywert kann in Q #-Quellcode mithilfe von eckigen Klammern um die Elemente eines Arrays geschrieben werden, wie in `[PauliI, PauliX, PauliY, PauliZ]` .
-Der Typ eines Arrayliterals hängt von dem allgemeinen Basistyp aller Elemente im Array ab. 
+Der Typ eines Arrayliterals hängt von dem allgemeinen Basistyp aller Elemente im Array ab. Daher wird beim Versuch, ein Array mit Elementen zu erstellen, die keinen gemeinsamen Basistyp haben, ein Fehler ausgegeben.  
+Ein Beispiel hierfür finden Sie unter [Arrays von callables](xref:microsoft.quantum.guide.expressions#arrays-of-callables) .
 
 > [!WARNING]
 > Die Elemente eines Arrays können nicht geändert werden, nachdem das Array erstellt wurde.
@@ -195,7 +196,7 @@ function PrintedMessage(value : Nested) : Unit {
 Der Unwrap-Operator entpackt genau eine Ebene der Umbruch.
 Mehrere Unwrap-Operatoren können verwendet werden, um auf einen multipliziert-umschließenden Wert zuzugreifen.
 
-Beispiel:
+Zum Beispiel:
 
 ```qsharp
 newtype WrappedInt = Int;
@@ -291,7 +292,8 @@ Beim Aufrufen eines typparametrisierten Aufruf baren Typs müssen alle Argumente
 
 Q # stellt keinen Mechanismus zum Einschränken der möglichen Typen bereit, die durch einen Typparameter ersetzt werden könnten.
 
-## <a name="whats-next"></a>Wie geht es weiter?
+## <a name="next-steps"></a>Nächste Schritte
+
 Nachdem Sie alle Typen gesehen haben, die die Q #-Sprache bilden, können Sie [in q # Ausdrücke eingeben](xref:microsoft.quantum.guide.expressions) , um zu erfahren, wie Sie Ausdrücke dieser verschiedenen Typen erstellen und bearbeiten.
 
 

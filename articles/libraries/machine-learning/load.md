@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.load
-ms.openlocfilehash: 15e63ced6223759a332ce22a43c133a7899f482a
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: efa4a65a489446cbef48507d0b02a932da74c71c
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77909958"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327661"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>Laden und klassifizieren ihrer eigenen Datasets
 
@@ -25,7 +25,7 @@ Insbesondere wird empfohlen, die Vorlage zum Laden der Daten zu verwenden, damit
 
 Angenommen, wir haben ein Trainings Dataset $ (x, y) $ der Größe $N = $2, wobei jede Instanz $x _I $ von $x $ drei Features hat: $x _ {I1} $, $x _ {I2} $ und $x _ {I3} $.
 Das Validierungs DataSet hat die gleiche Struktur.
-Diese Datensätze können durch eine `data.json` Datei dargestellt werden, die der folgenden ähnelt:
+Diese Datensätze können durch eine Datei dargestellt werden `data.json` , die der folgenden ähnelt:
 
 ```json
 {
@@ -84,10 +84,10 @@ Angenommen, wir verfügen über ein kleines DataSet mit den Höhen und Gewichtun
 Der Prozess lautet wie folgt:
 
 - Zuerst müssen wir das Dataset in Schulungen und Validierung aufteilen. In diesem Fall können wir einfach die ersten drei Beispiele für das Training und die restlichen Beispiele für die Überprüfung verwenden. Im Allgemeinen empfiehlt es sich, das Trainings-und Validierungs Dataset nach dem Zufallsprinzip zu testen, um unerwünschte Bias in den Trainingsdaten zu vermeiden.
-- Zweitens muss jeder Klasse eine numerische Bezeichnung zugewiesen werden. Beachten Sie, dass die QML-Bibliothek momentan nur binäre Klassifizierungs Probleme zulässt. Daher wird die Bezeichnung 0 der Klasse `Dog` und die Zahl 1 der Klasse `Cat`zugewiesen.
+- Zweitens muss jeder Klasse eine numerische Bezeichnung zugewiesen werden. Beachten Sie, dass die QML-Bibliothek momentan nur binäre Klassifizierungs Probleme zulässt. Daher weisen wir die Bezeichnung 0 der `Dog` -Klasse und die Zahl 1 der-Klasse zu `Cat` .
 - Zum Schluss füllen wir die Vorlage mithilfe der Daten aus dem DataSet aus. Beachten Sie, dass Sie für große Datasets ein kleines Skript erstellen sollten, um die Vorlage automatisch aus dem jeweiligen Dataset zu generieren. Dieses Skript hängt vom ursprünglichen Format des Datasets ab.
 
-Für das DataSet lautet die `data.json` Datei:
+Für unser DataSet `data.json` lautet die Datei:
 
 ```json
 {
@@ -149,12 +149,12 @@ Python stellt das [integrierte `json` Paket](https://docs.python.org/3.7/library
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
-Die .net Core-Plattform stellt das [`System.Text.Json` Paket](https://www.nuget.org/packages/System.Text.Json) zum Arbeiten mit JSON-serialisierten Daten bereit:
+Die .net Core-Plattform stellt das [ `System.Text.Json` Paket](https://www.nuget.org/packages/System.Text.Json) zum Arbeiten mit JSON-serialisierten Daten bereit:
 
 :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="10,64-82":::
 
 ***
 
-## <a name="whats-next"></a>Wie geht es weiter?
+## <a name="next-steps"></a>Nächste Schritte
 
 Nun können Sie Ihre eigenen Experimente mit ihren eigenen Datasets ausführen. Probieren Sie verschiedene Klassifizierungen und Datasets aus, und tragen Sie zur Community bei, die ihre Ergebnisse gemeinsam nutzen!

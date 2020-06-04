@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 93432cef9711b6780192cd59e92b09647a264b5c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431205"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327304"
 ---
 # <a name="type-expressions-in-q"></a>Typausdrücke in Q #
 
@@ -63,7 +63,7 @@ Das heißt, die Verschiebung eines Schritts nach links oder rechts ist identisch
 
 Die ganzzahlige Division und der ganzzahlige Modulo folgen dem Verhalten für negative Zahlen wie c#.
 Das heißt, dass `a % b` immer dasselbe Vorzeichen wie hat `a` und `b * (a / b) + a % b` immer gleich ist `a` .
-Zum Beispiel:
+Beispiel:
 
  `A` | `B` | `A / B` | `A % B`
 ---------|----------|---------|---------
@@ -117,7 +117,7 @@ Zeichen folgen in Q # sind entweder Literale oder interpoliert Zeichen folgen.
 
 Zeichenfolgenliterale ähneln in den meisten Sprachen einfachen Zeichenfolgenliteralen: eine Sequenz von Unicode-Zeichen, die in doppelten Anführungszeichen eingeschlossen sind `"` .
 Innerhalb einer Zeichenfolge kann der umgekehrte Schrägstrich `\` verwendet werden, um ein doppeltes Anführungszeichen mit Escapezeichen zu versehen und eine neue Zeile als einzufügen, als `\n` und als `\r` Tabstopp Zeichen `\t` .
-Beispiel:
+Zum Beispiel:
 
 ```qsharp
 "\"Hello world!\", she said.\n"
@@ -209,7 +209,7 @@ Der `!` Operator hat eine höhere Rangfolge als alle anderen Operatoren, außer 
 
 Die Rangfolge des `!` Operators hat eine Beeinträchtigung, die möglicherweise nicht offensichtlich ist.
 Wenn eine Funktion oder ein Vorgang einen Wert zurückgibt, der dann entpackt wird, muss der Funktions-oder Vorgangs Ausdruck in Klammern eingeschlossen werden, damit das Argument Tupel an den-Ausdruck gebunden wird, anstatt an den Unwrap-Vorgang.
-Zum Beispiel:
+Beispiel:
 
 ```qsharp
 let f = (Foo(arg))!;    // Calls Foo(arg), then unwraps the result
@@ -221,7 +221,6 @@ let g = Foo(arg)!;      // Syntax error
 Ein Arrayliteral ist eine Sequenz von einem oder mehreren Element Ausdrücken, die durch Kommas getrennt sind und in und eingeschlossen ist `[` `]` .
 Alle-Elemente müssen mit demselben Typ kompatibel sein.
 
-
 Bei zwei Arrays desselben Typs kann der binäre `+` Operator verwendet werden, um ein neues Array zu bilden, bei dem es sich um die Verkettung der beiden Arrays handelt.
 Beispielsweise `[1,2,3] + [4,5,6]` ist `[1,2,3,4,5,6]` .
 
@@ -229,6 +228,9 @@ Beispielsweise `[1,2,3] + [4,5,6]` ist `[1,2,3,4,5,6]` .
 
 Bei Angabe eines Typs und eines `Int` Ausdrucks `new` kann der Operator verwendet werden, um ein neues Array mit der angegebenen Größe zuzuordnen.
 Beispielsweise `new Int[i + 1]` würde ein neues `Int` Array mit- `i + 1` Elementen zuordnen.
+
+Leere Array Literale, `[]` , sind nicht zulässig.
+Wenn Sie stattdessen verwenden `new ★[0]` , wobei `★` als Platzhalter für einen geeigneten Typ verwendet, ermöglicht das Erstellen des gewünschten Arrays der Länge 0 (null).
 
 Die Elemente eines neuen Arrays werden mit einem typabhängigen Standardwert initialisiert.
 In den meisten Fällen ist dies eine Variation von 0 (null).
@@ -373,8 +375,7 @@ Wenn z. b. `Op1` , `Op2` und `Op3` alle sind, unterstützt, unterstützt und unt
 - `[Op1, Op3]`ist ein Array von `(Qubit[] => Unit is Adj)` Vorgängen.
 - `[Op2, Op3]`ist ein Array von `(Qubit[] => Unit is Ctl)` Vorgängen.
 
-Leere Array Literale, `[]` , sind nicht zulässig.
-Wenn Sie stattdessen verwenden `new ★[0]` , wobei `★` als Platzhalter für einen geeigneten Typ verwendet, ermöglicht das Erstellen des gewünschten Arrays der Länge 0 (null).
+Während `(Qubit[] => Unit is Adj)` und `(Qubit[] => Unit is Ctl)` Vorgänge den allgemeinen Basistyp haben `(Qubit[] => Unit)` , beachten Sie jedoch, dass Arrays *of* dieser Operatoren keinen gemeinsamen Basistyp aufweisen. Beispielsweise `[[Op1], [Op2]]` gibt derzeit einen Fehler aus, da versucht wird, ein Array der nicht kompatiblen Array Typen und zu `(Qubit[] => Unit is Adj)[]` Erstellen `(Qubit[] => Unit is Ctl)[]` .
 
 
 ## <a name="conditional-expressions"></a>Bedingte Ausdrücke
@@ -473,10 +474,10 @@ Klammern für Vorgangs-und Funktionsaufrufe werden auch vor jedem Operator gebun
 
 Operatoren in Rangfolge, vom höchsten zum niedrigsten:
 
-Operator | Ständigkeit | BESCHREIBUNG | Operanden Typen
+Operator | Ständigkeit | Beschreibung | Operanden Typen
 ---------|----------|---------|---------------
- nachträ`!` | Unär | Aufheben der Umschließung | Ein beliebiger benutzerdefinierter Typ
- `-`, `~~~`, `not` | Unär | Numerische negative, bitweise Komplement logische Negation | `Int`, `BigInt` oder `Double` für `-` , `Int` `BigInt` `~~~` `Bool` für`not`
+ nachträ`!` | Unäroperatoren | Aufheben der Umschließung | Ein beliebiger benutzerdefinierter Typ
+ `-`, `~~~`, `not` | Unäroperatoren | Numerische negative, bitweise Komplement logische Negation | `Int`, `BigInt` oder `Double` für `-` , `Int` `BigInt` `~~~` `Bool` für`not`
  `^` | Binary | Ganzzahlige Potenz | `Int`oder `BigInt` für die Basisklasse `Int` für den Exponenten
  `/`, `*`, `%` | Binary | Division, Multiplikation, ganzzahliger Modulo | `Int`, `BigInt` oder `Double` für `/` und `*` `Int` oder `BigInt` für`%`
  `+`, `-` | Binary | Addition oder Zeichenfolge und Array Verkettung, Subtraktion | `Int`, `BigInt` oder `Double` , zusätzlich `String` oder ein beliebiger Arraytyp für`+`
@@ -492,5 +493,6 @@ Operator | Ständigkeit | BESCHREIBUNG | Operanden Typen
  `?` `|` | TERNÄRE | Bedingt | `Bool`für die linke Seite
 `w/` `<-` | TERNÄRE | Kopieren und aktualisieren | Weitere Informationen finden Sie unter [Copy-and-Update-Ausdrücke](#copy-and-update-expressions)
 
-## <a name="whats-next"></a>Wie geht es weiter?
+## <a name="next-steps"></a>Nächste Schritte
+
 Nun, da Sie mit Ausdrücken in q # arbeiten können, können Sie sich mit den [Vorgängen und Funktionen in q #](xref:microsoft.quantum.guide.operationsfunctions) vertraut machen, um zu erfahren, wie Sie Vorgänge und Funktionen definieren und aufzurufen.
