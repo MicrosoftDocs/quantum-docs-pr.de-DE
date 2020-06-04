@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.understanding
-ms.openlocfilehash: 65fa85a80021124444fd352f9492d03cbefcb859
-ms.sourcegitcommit: a03d79ca3f0774161a9f86a15528d36e1291acce
+ms.openlocfilehash: aa3de9290250e82bc2f3ea5f1d35a16095469f7e
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83433009"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327729"
 ---
 # <a name="understanding-quantum-computing"></a>Grundlegendes zu Quantencomputing
 
@@ -69,5 +69,4 @@ Diese Konzepte kratzen zwar lediglich an der Oberfläche der Quantenmechanik, si
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-> [!div class="nextstepaction"]
-> [Quantencomputer und -simulatoren](xref:microsoft.quantum.overview.simulators)
+[Quantencomputer und -simulatoren](xref:microsoft.quantum.overview.simulators)
