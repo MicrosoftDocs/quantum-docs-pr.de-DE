@@ -6,6 +6,8 @@ functions:
   summary: Bestätigt, dass zwei Arrays von booleschen Werten gleich sind.
 - uid: microsoft.quantum.diagnostics.allequalityfacti
   summary: Bestätigt, dass zwei Arrays von ganzzahligen Werten gleich sind.
+- uid: microsoft.quantum.diagnostics.contradiction
+  summary: Deklariert, dass eine klassische Bedingung false ist.
 - uid: microsoft.quantum.diagnostics.dumpmachine
   summary: Sichert den Status des aktuellen Ziel Computers.
 - uid: microsoft.quantum.diagnostics.dumpregister
@@ -34,21 +36,21 @@ functions:
   summary: Bestätigt, dass ein klassischer Gleit Komma Wert den erwarteten Wert bis zu einer kleinen Toleranz von 1E-10 aufweist.
 operations:
 - uid: microsoft.quantum.diagnostics.assertallzero
-  summary: Bestätigen Sie, dass die angegebenen Qubits alle in "{0}$ \ket $ State" sind.
+  summary: Bestätigen Sie, dass die angegebenen Qubits alle in "$ \ket {0} $ State" sind.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
-  summary: Bestätigen Sie, dass die angegebenen Qubits alle in ${0}\ket $ State bis zu einer gegebenen Toleranz aufweisen.
+  summary: Bestätigen Sie, dass die angegebenen Qubits alle in $ \ket {0} $ State bis zu einer gegebenen Toleranz aufweisen.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     Bei zwei Vorgängen wird von bestätigt, dass Sie für alle Eingabe Zustände identisch agieren.
 
 
-    Diese Assertionen werden implementiert, indem die Aktion der Vorgänge für alle Zustände der Form $V _0 \otimes... \otimes v_ {n-1} $, wobei $V _K $ einem der Zustände $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ und $ \ket{i} $ (+ 1 eigen Status des Pauli Y-Operators) entspricht.
+    Diese Assertionen werden implementiert, indem die Aktion der Vorgänge für alle Zustände der Form $V _0 \otimes... \otimes v_ {n-1} $, wobei $V _K $ einem der Zustände $ \ket {0} $, $ \ket {1} $, $ \ket{+} $ und $ \ket{i} $ (+ 1 eigen Status des Pauli Y-Operators) entspricht.
 
 
     Diese Assertion verwendet $n $ Qubits und erfordert mehrere Aufrufe der zu vergleichenden Vorgänge.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
   summary: >-
-    Überprüft, ob der `givenU` Vorgang mit dem Vorgang `expectedU` auf der angegebenen Eingabe Größe identisch ist, indem die Aktion der Vorgänge nur für die Vektoren von der Berechnungsbasis überprüft wird.
+    Überprüft, ob der Vorgang mit `givenU` dem Vorgang `expectedU` auf der angegebenen Eingabe Größe identisch ist, indem die Aktion der Vorgänge nur für die Vektoren von der Berechnungsbasis überprüft wird.
 
     Dies ist eine erforderliche, aber nicht ausreichende Bedingung für die Gleichheit von zwei uniflüssen.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
@@ -62,7 +64,7 @@ operations:
 
     Diese Assertion kann beispielsweise verwendet werden, um sicherzustellen, dass eine optimierte Version eines Vorgangs identisch mit der naive Implementierung verhält oder dass ein Vorgang, der für einen Bereich von nicht-Quantum-Eingaben agiert, mit bekannten Fällen übereinstimmt.
 - uid: microsoft.quantum.diagnostics.assertqubit
-  summary: Bestätigt, dass sich das `q` Qubit im erwarteten eigen Zustand des Pauli Z-Operators befindet.
+  summary: Bestätigt, dass sich das Qubit `q` im erwarteten eigen Zustand des Pauli Z-Operators befindet.
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
   summary: >-
     Bestätigt, dass ein Qubit im erwarteten Zustand ist.
@@ -74,7 +76,7 @@ operations:
 
     Das letzte Argument definiert die Toleranz, mit der die-Assertionen durchgeführt werden.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
-  summary: Bestätigt, dass das Qubit `q` den erwarteten Zustand des Pauli Z-Operators bis zu einer gegebenen Toleranz aufweist.
+  summary: Bestätigt, dass das Qubit den `q` erwarteten Zustand des Pauli Z-Operators bis zu einer gegebenen Toleranz aufweist.
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
   summary: Vom Compiler erkanntes Attribut, über das ein alternativer Name definiert werden kann, der beim Laden eines Typs oder Aufruf baren zu Testzwecken verwendet werden kann.
@@ -82,9 +84,9 @@ newtypes:
   summary: Vom Compiler erkanntes Attribut, das zum Markieren eines Komponententests verwendet wird.
 summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält Funktionen und Vorgänge, die für Diagnosezwecke nützlich sind, einschließlich Assert-Vorgänge und Anspruchs Funktionen."
 metadata:
-  ms.openlocfilehash: 5e580bb50983d5c0e65d3284408bae04a5e92756
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2c619ac283653d87f2917d7c780ed9fe6ccfa965
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676955"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326590"
