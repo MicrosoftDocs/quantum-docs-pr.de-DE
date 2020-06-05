@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: ddd889fdfabb505d7118c1eff551a6fbfa757309
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 1d2538fd164c4c61c2712978d3b5c57b0eb766e6
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327644"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422171"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Basic-Klassifizierung: klassifizieren von Daten mit dem QDK
 
@@ -86,7 +86,7 @@ Der folgende Code wird in einer Datei mit dem Namen gespeichert `Training.qs` .
 Die wichtigsten im obigen Code definierten Funktionen und Vorgänge sind:
 
 - `ClassifierStructure() : ControlledRotation[]`: in dieser Funktion legen wir die Struktur unseres Verbindungs Modells fest, indem wir die Ebenen der kontrollierten Gates hinzufügen, die wir in Erwägung gezogen haben. Dieser Schritt entspricht der Deklaration von Neuronen-Ebenen in einem sequenziellen Deep Learning-Modell.
-- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)`: dieser Vorgang ist der Kernteil des Codes und definiert das Training. Hier laden wir die Beispiele aus dem DataSet, das in der Bibliothek enthalten ist, legen die Hyperparameter und die ursprünglichen Parameter für das Training fest und beginnen mit dem Training, indem wir den `TrainSequentialClassifier` in der Bibliothek enthaltenen Vorgang aufrufen. Es gibt die Parameter und die Verschiebung aus, die den Klassifizierer bestimmen.
+- `TrainHalfMoonModel() : (Double[], Double)`: dieser Vorgang ist der Kernteil des Codes und definiert das Training. Hier laden wir die Beispiele aus dem DataSet, das in der Bibliothek enthalten ist, legen die Hyperparameter und die ursprünglichen Parameter für das Training fest und beginnen mit dem Training, indem wir den `TrainSequentialClassifier` in der Bibliothek enthaltenen Vorgang aufrufen. Es gibt die Parameter und die Verschiebung aus, die den Klassifizierer bestimmen.
 - `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: dieser Vorgang definiert den Validierungsprozess zum Auswerten des Modells. Hier laden wir die Beispiele für die Überprüfung, die Anzahl der Messungen pro Stichprobe und die Toleranz. Er gibt die Anzahl der fehl Klassifizierungen für den ausgewählten Batch von Beispielen für die Validierung aus.
 
 ## <a name="next-steps"></a>Nächste Schritte

@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
-ms.openlocfilehash: f0b87936c9baf07555e76f295da58c0a6b9ecd17
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 05d3292e1c6e3c8c1163c460f2aaa51c591aa1d5
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84328594"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422239"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Tutorial: schreiben und Simulieren von Programmen auf Qubit-Ebene in Q\#
 
@@ -386,7 +386,7 @@ Im Detail für die erste Zeile des Eingabe Zustands $ \ket {000} $:
 * **`    ---`**: Eine grafische Darstellung der Amplitude-Phase.
 * **`[ 0.0000 rad ]`**: der numerische Wert der Phase (im Bogenmaße).
 
-Sowohl die Größe als auch die Phase werden mit grafischer Darstellung angezeigt. Die Größen Darstellung ist einfach: Sie zeigt einen Balken an `*` , und je höher die Wahrscheinlichkeit ist, desto größer ist der Balken. Informationen zu den möglichen Symbol Darstellungen auf der Grundlage von Winkel Bereichen finden Sie [im Abschnitt](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions) dumpmachine.
+Sowohl die Größe als auch die Phase werden mit grafischer Darstellung angezeigt. Die Größen Darstellung ist einfach: Sie zeigt einen Balken an `*` , und je höher die Wahrscheinlichkeit ist, desto größer ist der Balken. Informationen zu den einzelnen Phasen finden Sie unter [Testen und Debuggen: Dumpfunktionen](xref:microsoft.quantum.guide.testingdebugging#dump-functions) für die möglichen Symbol Darstellungen auf der Grundlage von Winkel Bereichen.
 
 
 Die gedruckte Ausgabe zeigt also, dass unsere programmierten Gates unseren Zustand von
