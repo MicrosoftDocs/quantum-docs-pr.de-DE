@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.algebra
-ms.openlocfilehash: 9f156a3cc092e295317061dda5e8aa29e9d5ca1e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4750643d16ad8af6240df42c1b93353565561429
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430848"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327593"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Lineare Algebra für Quantencomputing
 
@@ -67,7 +67,7 @@ $$
 
 Das Ergebnis ist eine vierdimensionale Matrix, wobei jedes Element eine Wahrscheinlichkeit darstellt. $ac$ ist beispielsweise die Wahrscheinlichkeit, dass die beiden Qubits nach dem Kollaps 0 und 0 sind, $ad$ ist die Wahrscheinlichkeit für 0 und 1 und so weiter. 
 
-Ein einzelner Qubit-Zustand $\begin{bmatrix} a \\\\  b \end{bmatrix}$ muss die Anforderung $|a|^2 + |b|^2 = 1$ erfüllen, um einen Quantenzustand darzustellen. Analog dazu muss ein Zustand mit zwei Qubits $\begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$ die folgende Anforderung erfüllen: $|a|^2 + |b|^2 + |c|^2+ |d|^2 = 1$.
+Ein einzelner Qubit-Zustand $\begin{bmatrix} a \\\\  b \end{bmatrix}$ muss die Anforderung $|a|^2 + |b|^2 = 1$ erfüllen, um einen Quantenzustand darzustellen. Analog dazu muss ein Zustand mit zwei Qubits $\begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$ die folgende Anforderung erfüllen: $|ac|^2 + |ad|^2 + |bc|^2+ |bd|^2 = 1$.
 
 ## <a name="summary"></a>Zusammenfassung
 
@@ -75,5 +75,4 @@ Lineare Algebra ist die Standardsprache zur Beschreibung von Quantencomputing un
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-> [!div class="nextstepaction"]
-> [Installieren des QDK](xref:microsoft.quantum.install)
+[Installieren des QDK](xref:microsoft.quantum.install)
