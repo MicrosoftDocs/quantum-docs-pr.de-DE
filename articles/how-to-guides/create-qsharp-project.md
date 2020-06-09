@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: 8019b32a3290e2d45124ebb1eb75395f6cb758db
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 8af8e3288aab731520ede984d5f89644de292385
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327525"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578210"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Erstellen eines Q #-Projekts in Ihrer Entwicklungsumgebung
 
@@ -62,13 +62,13 @@ Wählen Sie in den folgenden Abschnitten Ihre Entwicklungsumgebung und Sprache a
 
 1. Führen Sie das Programm aus:
 
-    ```bash
+    ```
     python host.py
     ```
 
 1. Überprüfen Sie die Ausgabe. Ihr Programm sollte die folgenden Zeilen ausgeben:
 
-    ```bash
+    ```
     Hello from quantum world!
     0
     ```
@@ -83,7 +83,7 @@ Sie können nun mit der Entwicklung des Quantums Programm fortfahren.
 
 1. Führen Sie den folgenden Befehl aus, um den Notebookserver zu starten:
 
-    ```bash
+    ```
     jupyter notebook
     ```
 
@@ -179,7 +179,7 @@ Nun können Sie die Quantum-Entwicklung mit Visual Studio Code fortsetzen.
 
 1. Navigieren Sie zum neuen Anwendungsverzeichnis.
 
-    ```bash
+    ```
     cd <project name>
     ```
 

@@ -7,12 +7,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 3245f587493ce12cfec15c8f932fd092d85f688e
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 89db1a671767b0cc083a251918bbeeed2b39b883
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327566"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578180"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Aktualisieren des Microsoft Quantum Development Kit (QDK)
 
@@ -175,7 +175,7 @@ Wählen Sie unten Ihre Entwicklungsumgebung aus.
 
     Die folgende Ausgabe wird angezeigt.
 
-    ```bash
+    ```
     iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```
@@ -184,19 +184,19 @@ Wählen Sie unten Ihre Entwicklungsumgebung aus.
 
 3. Aktualisieren des `qsharp` Pakets
 
-    ```bash
+    ```
     pip install qsharp --upgrade
     ```
 
 4. Überprüfen der `qsharp` Version
 
-    ```bash
+    ```
     pip show qsharp
     ```
 
     Die folgende Ausgabe wird angezeigt.
 
-    ```bash
+    ```
     Name: qsharp
     Version: 0.10.1912.501
     Summary: Python client for Q#, a domain-specific quantum programming language
@@ -205,7 +205,7 @@ Wählen Sie unten Ihre Entwicklungsumgebung aus.
 
 5. Führen Sie den folgenden Befehl am Speicherort der `.qs` Dateien aus.
 
-    ```bash
+    ```
     python -c "import qsharp; qsharp.reload()"
     ```
 
@@ -228,7 +228,7 @@ Wählen Sie unten Ihre Entwicklungsumgebung aus.
 
     Die Ausgabe sollte in etwa wie folgt aussehen:
 
-    ```bash
+    ```
     iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```

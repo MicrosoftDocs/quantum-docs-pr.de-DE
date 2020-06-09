@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 35499daae0cd0ae329e39b43b0d8dd5a00183871
-ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
+ms.openlocfilehash: f18d005012dc1c52aab456f1c7b194d182cab786
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83660731"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578163"
 ---
 # <a name="develop-with-q-and-python"></a>Entwickeln mit Q # und python
 
@@ -26,13 +26,13 @@ Installieren Sie das QDK, um python-Host Programme zum Abrufen von Q #-Vorgänge
 
 1. Installieren Sie das `qsharp` Paket, ein Python-Paket, das Interop zwischen Q # und python ermöglicht.
 
-    ```bash
+    ```
     pip install qsharp
     ```
 
 1. Installieren Sie IQ #, einen von jupyter und Python verwendeten Kernel, der die Kernfunktionen für das Kompilieren und Ausführen von Q #-Vorgängen bereitstellt.
 
-    ```bash
+    ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
@@ -69,15 +69,15 @@ Installieren Sie das QDK, um python-Host Programme zum Abrufen von Q #-Vorgänge
 
     - Führen Sie das Programm aus:
 
-        ```bash
+        ```
         python hello_world.py
         ```
 
     - Überprüfen Sie die Ausgabe. Ihr Programm sollte die folgenden Zeilen ausgeben:
 
-        ```bash
+        ```
         Hello from quantum world!
-       ```
+        ```
 
 
 > [!NOTE]
