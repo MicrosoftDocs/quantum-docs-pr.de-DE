@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 9a54c1d7a4403a98f945181fdad8ba8a7fdb1175
-ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
+ms.openlocfilehash: 6b24ebe9f0b5fd3318e8adfe1a62bafaf9d1961e
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84422222"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578133"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Versionshinweise für das Microsoft Quantum Development Kit
 
@@ -25,6 +25,12 @@ Updateanweisungen finden Sie im [Updatehandbuch](xref:microsoft.quantum.update).
 
 *Veröffentlichungsdatum: 4. Juni 2020*
 
+In diesem Release wird ein Fehler behoben, der die Kompilierung von Q#-Projekten beeinträchtigte.
+
+## <a name="version-0112006207"></a>Version 0.11.2006.207
+
+*Veröffentlichungsdatum: 3. Juni 2020*
+
 Dieses Release enthält Folgendes:
 
 - Bei Q#-Notebooks und Python-Hostprogrammen tritt nicht länger ein Fehler auf, wenn ein Q#-Einstiegspunkt vorhanden ist.
@@ -33,6 +39,9 @@ Dieses Release enthält Folgendes:
 - Einige veraltete Funktionen und Vorgänge wurden gemäß dem in den [API-Prinzipien](xref:microsoft.quantum.contributing.api-design) beschriebenen Zeitplan entfernt. Q #-Programme und -Bibliotheken, die in Version 0.11.2004.2825 ohne Warnungen erstellt werden, funktionieren weiterhin unverändert.
 
 Hier finden Sie die vollständige Liste geschlossener Pull Requests für [Bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [Compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [Runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [Beispiele](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) und [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
+
+> [!NOTE]
+> Diese Version enthält einen Fehler, der die Kompilierung von Q#-Projekten beeinträchtigt. Wir empfehlen das Upgrade auf ein neueres Release.
 
 ## <a name="version-01120042825"></a>Version 0.11.2004.2825
 
