@@ -6,19 +6,19 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: dfb2b1779e3ddc77fc74697bc4dc2904b1a0c70f
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 948b385948f0b362e7c12500662132883959a798
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426929"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630230"
 ---
 # <a name="q-style-guide"></a>F #-Stil Handbuch #
 ## <a name="general-conventions"></a>Allgemeine Konventionen ##
 
 Die in diesem Handbuch empfohlenen Konventionen dienen dazu, Programme und Bibliotheken, die in Q # geschrieben wurden, einfacher zu lesen und zu verstehen.
 
-## <a name="guidance"></a>Empfehlungen
+## <a name="guidance"></a>Leitfaden
 
 Wir empfehlen Folgendes:
 
@@ -49,7 +49,7 @@ Dieser Unterschied schlägt vor, dass wir Vorgänge als Verben und Funktionen al
 > Aus dieser Sicht sollten benutzerdefinierte Typen als Nomen benannt werden, damit der Typ selbst und die Konstruktorfunktion konsistente Namen aufweisen.
 
 Stellen Sie in angemessener Weise sicher, dass Vorgangs Namen mit Verben beginnen, die die Auswirkungen des Vorgangs eindeutig angeben.
-Zum Beispiel:
+Beispiel:
 
 - `MeasureInteger`
 - `EstimateEnergy`
@@ -280,7 +280,7 @@ Wir empfehlen Folgendes:
 
 ***
 
-### <a name="user-defined-type-named-items"></a>Benutzerdefinierter Typ benannte Elemente ###
+### <a name="user-defined-type-named-items"></a>Benannte Elemente des benutzerdefinierten Typs ###
 
 Benannte Elemente in benutzerdefinierten Typen sollten als benannt werden `CamelCase` , auch als Eingabe für UDT-Konstruktoren.
 Dadurch können benannte Elemente bei Verwendung der accessornotation (z. b. `callable::Apply` ) oder der Copy-and-Update-Notation () eindeutig von Verweisen auf lokale Variablen getrennt werden `set arr w/= Data <- newData` .

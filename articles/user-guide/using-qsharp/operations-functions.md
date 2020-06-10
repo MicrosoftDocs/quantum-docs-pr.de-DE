@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
-ms.openlocfilehash: 9e924b973c4f22a59dd862df3f4f0d70278a1b4e
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 6cfc1b14d86e86a1cbf0109d5e81dfe50c3a80bf
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327797"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630210"
 ---
 # <a name="operations-and-functions-in-q"></a>Vorgänge und Funktionen in Q #
 
@@ -273,7 +273,7 @@ is Ctl + Adj {
         CNOT(here, there);
     }
 
-    controlled (cs, ...) { // user defined implementation for the controlled specialization
+    controlled (cs, ...) { // user-defined implementation for the controlled specialization
         Controlled H(cs, here);
         Controlled X(cs + [here], there);
     }
@@ -418,7 +418,7 @@ Jede f #-Quelldatei kann eine beliebige Anzahl von Funktionen definieren.
 Funktionsnamen müssen innerhalb eines Namespace eindeutig sein und können keinen Konflikt mit Vorgangs-oder Typnamen aufweisen.
 
 Das Definieren einer Funktion funktioniert ähnlich wie ein Vorgang, mit dem Unterschied, dass für eine Funktion keine Adjoint-oder kontrollierten Spezialisierungs Funktionen definiert werden können.
-Zum Beispiel:
+Beispiel:
 
 ```qsharp
 function Square(x : Double) : (Double) {

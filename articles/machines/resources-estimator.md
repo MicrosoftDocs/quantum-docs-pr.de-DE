@@ -6,19 +6,19 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 01d242ed405bdd326f65e534f82ff378a464ee7d
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: b0c800c3946d2e4ba4457127fb9495dc9dcf2934
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426875"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630130"
 ---
 # <a name="the-resources-estimator-target-machine"></a>Der Zielcomputer für die Ressourcenschätzung
 
 Wie der Name schon sagt, schätzt die Ressourcen, die erforderlich sind, `ResourcesEstimator` um eine bestimmte Instanz eines Q #-Vorgangs auf einem Quantum-Computer auszuführen.
 Dies wird erreicht, indem der Quantum-Vorgang ausgeführt wird, ohne den Zustand eines Quantum-Computers zu simulieren. aus diesem Grund können Ressourcen für Q #-Vorgänge geschätzt werden, die Tausende von Qubits verwenden, wenn der klassische Teil des Codes in angemessener Zeit ausgeführt werden kann.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 `ResourcesEstimator`Ist nur ein anderer Typ von Zielcomputer und kann daher zum Ausführen beliebiger Q #-Vorgänge verwendet werden. 
 
@@ -42,7 +42,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-Wie das Beispiel zeigt, `ResourcesEstimator` stellt das eine `ToTSV()` Methode zum Generieren einer Tabelle mit durch Tabstopps getrennten Werten (TSV) bereit, die in einer Datei gespeichert oder zur Analyse in die Konsole geschrieben werden kann. Die Ausgabe des obigen Programms sollte in etwa wie folgt aussehen:
+Wie das Beispiel zeigt, `ResourcesEstimator` stellt eine `ToTSV()` Methode zum Generieren einer Tabelle mit durch Tabstopps getrennten Werten (TSV) bereit, die in einer Datei gespeichert oder zur Analyse in die Konsole geschrieben werden kann. Die Ausgabe des obigen Programms sollte in etwa wie folgt aussehen:
 
 ```Output
 Metric          Sum

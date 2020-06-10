@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: b32644382bb88fb11da00d0d7d78bbd797a0eaaa
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327304"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84629993"
 ---
 # <a name="type-expressions-in-q"></a>Typausdrücke in Q #
 
@@ -117,7 +117,7 @@ Zeichen folgen in Q # sind entweder Literale oder interpoliert Zeichen folgen.
 
 Zeichenfolgenliterale ähneln in den meisten Sprachen einfachen Zeichenfolgenliteralen: eine Sequenz von Unicode-Zeichen, die in doppelten Anführungszeichen eingeschlossen sind `"` .
 Innerhalb einer Zeichenfolge kann der umgekehrte Schrägstrich `\` verwendet werden, um ein doppeltes Anführungszeichen mit Escapezeichen zu versehen und eine neue Zeile als einzufügen, als `\n` und als `\r` Tabstopp Zeichen `\t` .
-Zum Beispiel:
+Beispiel:
 
 ```qsharp
 "\"Hello world!\", she said.\n"
@@ -201,7 +201,7 @@ Anders als Literale sind die einzigen Ausdrücke eines benutzerdefinierten Typs 
 In Q # ist der Unwrap-Operator ein nach gestelltes Ausrufezeichen `!` .
 Wenn beispielsweise `IntPair` ein benutzerdefinierter Typ mit dem zugrunde liegenden Typ `(Int, Int)` und `s` eine Variable mit Wert ist `IntPair(2, 3)` , `s!` wäre `(2, 3)` .
 
-Für benutzerdefinierte Typen, die in Bezug auf andere benutzerdefinierte Typen definiert sind. der Unwrap-Operator kann wiederholt werden. gibt beispielsweise `s!!` den doppelt entpackten Wert von an `s` .
+Bei benutzerdefinierten Typen, die in Bezug auf andere benutzerdefinierte Typen definiert sind, kann der Unwrap-Operator wiederholt werden. gibt beispielsweise `s!!` den doppelt entpackten Wert von an `s` .
 Wenn also `WrappedPair` ein benutzerdefinierter Typ mit dem zugrunde liegenden Typ `IntPair` und `t` eine Variable mit Wert ist `WrappedPair(IntPair(1,2))` , dann ist `t!!` `(1,2)` .
 
 Der `!` Operator hat eine höhere Rangfolge als alle anderen Operatoren, außer `[]` für die Array Indizierung und die Slicing.
@@ -474,7 +474,7 @@ Klammern für Vorgangs-und Funktionsaufrufe werden auch vor jedem Operator gebun
 
 Operatoren in Rangfolge, vom höchsten zum niedrigsten:
 
-Operator | Ständigkeit | Beschreibung | Operanden Typen
+Betreiber | Ständigkeit | BESCHREIBUNG | Operanden Typen
 ---------|----------|---------|---------------
  nachträ`!` | Unäroperatoren | Aufheben der Umschließung | Ein beliebiger benutzerdefinierter Typ
  `-`, `~~~`, `not` | Unäroperatoren | Numerische negative, bitweise Komplement logische Negation | `Int`, `BigInt` oder `Double` für `-` , `Int` `BigInt` `~~~` `Bool` für`not`
