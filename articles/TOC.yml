@@ -1,59 +1,14 @@
 - name: Microsoft Quantum-Dokumentation
   href: index.yml
 - name: Übersicht
-  items:
-    - name: Einführung in Quantencomputing
-      href: overview/overview.md
-    - name: Wichtige Begriffe
-      items:
-        - name: Grundlegendes zu Quantencomputing
-          href: overview/understanding-quantum-computing.md
-        - name: Quantencomputer und -simulatoren
-          href: overview/quantum-computers-and-simulators.md
-        - name: 'Was sind Q# und das QDK?'
-          href: overview/what-is-qsharp-and-qdk.md
-        - name: Lineare Algebra für Quantencomputing
-          href: overview/algebra-for-quantum-computing.md
+  href: overview/toc.yml
 - name: Schnellstarts
-  expanded: true
-  items:
-    - name: Erste Schritte mit dem QDK
-      href: welcome.md
-    - name: Installieren des QDK
-      href: install-guide/toc.yml
-    - name: Aktualisieren des QDK
-      href: install-guide/update.md
+  href: quickstarts/toc.yml
 - name: Tutorials
-  items:
-    - name: Quanten-Zufallszahlengenerator
-      href: quickstarts/qrng.md
-    - name: 'Erkunden der Verschränkung mit Q#'
-      href: quickstart.md
-    - name: Implementieren des Grover-Suchalgorithmus
-      href: quickstarts/search.md
-    - name: Programmierung auf Qubit-Ebene
-      href: tutorials/qft-tutorial.md
-    - name: 'Erlernen von Q# mit den Quanten-Katas'
-      href: intro-to-katas.md
-    - name: 'Q#-Codebeispiele'
-      href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
-- name: 'Q#-Benutzerhandbuch'
+  href: tutorials/toc.yml
+- name: Q#-Benutzerhandbuch
   href: user-guide/toc.yml
 - name: Konzepte
-  items:
-    - name: Quantencomputingkonzepte
-      href: concepts/toc.yml
-    - name: 'Q#-Bibliotheken'
-      href: libraries/toc.yml
+  href: concepts/toc.yml
 - name: Ressourcen
-  items:
-    - name: Glossar
-      href: concepts/Glossary.md
-    - name: Mitwirken am QDK
-      href: contributing/toc.yml
-      topicHref: contributing/index.md
-    - name: 'QDK: Versionshinweise'
-      topicHref: relnotes/index.md
-      href: relnotes/toc.yml
-    - name: Weitere Informationsquellen
-      href: for-more-info.md
+  href: resources/toc.yml
