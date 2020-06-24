@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 224bd5165f508f6cd1fdb85fb5c14ba2e23e59ea
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: 1ac235bef473efa82b096cae4159e2c724ba7c0e
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630366"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269489"
 ---
 # <a name="multiple-qubits"></a>Mehrere Qubits
 
@@ -138,7 +145,7 @@ $$
 
 Es ist auch möglich, nur ein Qubit mit einem zwei-Qubit-Quantum-Zustand zu messen. In Fällen, in denen nur eine der Qubits gemessen wird, unterscheiden sich die Auswirkungen der Messung ganz leicht, da der gesamte Zustand nicht in den Status "Compute-Basis" reduziert wird, sondern nur auf ein unter System reduziert wird.  Anders ausgedrückt: in solchen Fällen, in denen nur ein Qubit gemessen wird, reduziert nur eines der Subsysteme, aber nicht alle.  
 
-Um dies zu sehen, sollten Sie das erste Qubit des folgenden Zustands Messen, das durch Anwenden der Hadamard-Transformations $H $ auf zwei Qubits gebildet wird, die anfänglich auf den Status "0" festgelegt sind: $ $ H ^ {\otimes 2 } \left (\begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } \otimes \begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } \right) = \bruchteil {1 } {2 } \begin{ bmatrix } 1 & 1 & 1 & 1 \\ \\ 1 &-1 & 1 &-1 \\ \\ 1 & 1 &-1 &-1 \\ \\ 1 &-1 &-1 & 1 \end{ bmatrix } \begin{ bmatrix } 1 \\\\ 0 \\\\ 0 \\\\ 0 \end { bmatrix } = \bruchteil {1 } {2 } \begin{} 1 1 1 1 bmatrix \\\\ \\\\ \\\\ \end { bmatrix } \mapsto \begin{Cases } \text{Ergebnis} = 0 & \bruchteil {1 } {\sqrt{2} } \begin{ bmatrix } 1 \\\\ 1 \\\\ 0 \\\\ 0 \ End{ bmatrix } \\ \\ \text{Ergebnis} = 1 & \bruchteil {1 } {\sqrt{2} } \begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1 \end{ bmatrix } \\ \\ \end{Cases } .
+Um dies zu sehen, sollten Sie das erste Qubit des folgenden Zustands Messen, das durch Anwenden der Hadamard-Transformations $H $ auf zwei Qubits gebildet wird, die anfänglich auf den Status "0" festgelegt sind: $ $ H ^ {\otimes 2 } \left (\begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } \otimes \begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } \right) = \bruchteil {1 } {2 } \begin{ bmatrix } 1 & 1 & 1 & 1 \\ \\ 1 &-1 & 1 &-1 \\ \\ 1 & 1 &-1 &-1 \\ \\ 1 &-1 &-1 & 1 \ End{ bmatrix } \begin{ bmatrix } 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \bruchteil {1 } {2 } \begin{} 1 1 1 1 bmatrix \\\\ \\\\ \\\\ \end{bmatrix} \mapsto \begin{Cases } \text{Ergebnis} = 0 & \bruchteil {1 } {\sqrt{2} } \begin{ bmatrix } 1 \\\\ 1 \\\\ 0 \\\\ 0 \ End{ bmatrix } \\ \\ \text{Ergebnis} = 1 & \bruchteil {1 } {\sqrt{2} } \begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1 \end{ bmatrix } \\ \\ \end{Cases } .
 Beide Ergebnisse haben eine Wahrscheinlichkeit von 50%.  Das Ergebnis, das 50% Wahrscheinlichkeit für beides ergibt, kann aus der Tatsache intuitiv werden, dass der anfängliche Quantum-Status Vektor beim Austauschen von $0 $ mit $1 $ auf dem ersten Qubit invariante ist.
 
 Die mathematische Regel zum Messen des ersten oder zweiten Qubits ist einfach.  Wenn wir $e _K $ der $k ^ {\rM Th } $ computevektor, und lassen Sie $S $ alle $e _K $ , damit das betreffende Qubit den Wert $1 $ für diesen Wert von $k annimmt $ .  Wenn z. b. das erste Qubit gemessen werden soll, besteht $S aus $ $e _1 \equiv 10 $ und $e _3 \equiv 11 $ .  Wenn Sie an der zweiten Qubit-$S interessiert sind, $ besteht auch die $e _2 \equiv 01 $ und $e _3 \equiv 11 $ .  Anschließend ist die Wahrscheinlichkeit, dass das gewählte Qubit als $1 gemessen wird, $ für den Status Vektor $ \psi festgelegt.$
@@ -167,12 +174,12 @@ $$
 Beachten Sie, dass es sich hierbei nur um die Summe der beiden Wahrscheinlichkeiten handelt, die für die Messung der Ergebnisse $10 $ und $11 $ alle zu messenden Qubits erwartet werden.
 In unserem Beispiel ergibt dies
 
-$ $ \bruchteil {1 } {4 } \left | \begin{ bmatrix } 0&0&1&0 \end { bmatrix } \begin{ bmatrix } 1 1 1 1 \\\\ \\\\ \\\\ \end { bmatrix } \right | ^ 2 + \bruchteil {1 } {4 } \left | \begin{ bmatrix } 0&0&0&1 \end { bmatrix } \begin{ bmatrix } 1 \\\\ 1 1 1 \\\\ \\\\ \end { bmatrix } \right | ^ 2 = \bruchteil {1 } {2 } .
+$ $ \bruchteil {1 } {4 } \left | \begin{ bmatrix } 0&0&1&0 \end{bmatrix} \begin{ bmatrix } 1 \\\\ 1 1 1 \\\\ \\\\ \end{bmatrix} \right | ^ 2 + \bruchteil {1 } {4 } \left | \begin{ bmatrix } 0&0&0&1 \end{bmatrix} \begin{ bmatrix } 1 \\\\ 1 \\\\ 1 \\\\ 1 \end{bmatrix} \right | ^ 2 = \bruchteil {1 } {2 } .
 $$
 
 was mit unserer Intuition übereinstimmt, gibt Aufschluss über die Wahrscheinlichkeit.  Ebenso kann der Zustand geschrieben werden:
 
-$ $ \frac { \bruchteil {E_1 } {2 } + \bruch{e_3 } {2 } } {\sqrt { \bruchteil {1 } {2 } }} = \bruchteil {1 } {\sqrt{2} } \begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1 \end {bmatrix}
+$ $ \frac { \bruch{E_1 } {2 } + \bruch{e_3 } {2 } } {\sqrt { \bruchteil {1 } {2 } }} = \bruchteil {1 } {\sqrt{2} } \begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1\end{bmatrix}
 $$
 
 auch in Übereinstimmung mit unserer Intuition.

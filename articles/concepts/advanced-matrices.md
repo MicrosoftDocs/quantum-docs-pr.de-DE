@@ -9,6 +9,13 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
+- $$
+- $$
+- $$
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +84,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 8d3c646715f13c454e51b9295cbfdabf6a236ffc
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: 71923247121eae6a1d4e26d2664d8e547370ba3a
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630148"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269455"
 ---
 # <a name="advanced-matrix-concepts"></a>Erweiterte Matrix Konzepte #
 
@@ -104,7 +114,7 @@ $$
 
 Die Vektoren
 
-$ $ \begin{ bmatrix } 1 \\ \\ 0 \\ \\ 0 \end{ bmatrix } , \begin{ bmatrix } 0 \\ \\ 1 \\ \\ 0 \end { bmatrix } und \begin{ bmatrix } 0 \\ \\ 0 \\ \\ 1 \end {bmatrix}$$
+$ $ \begin{ bmatrix } 1 \\ \\ 0 \\ \\ 0 \end{ bmatrix } , \begin{ bmatrix } 0 \\ \\ 1 \\ \\ 0 \end{bmatrix} und \begin{ bmatrix } 0 \\ \\ 0 \\ \\ 1\end{bmatrix}$$
 
 sind Eigenvektoren dieser Matrix mit eigen Werten $d _1 $ , $d _2 $ , bzw. $d _3 $ . Wenn $d _1 $ , $d _2 $ und $d _3 unter $ schiedliche Zahlen sind, sind diese Vektoren (und ihre vielfache) die einzigen Eigenvektoren der Matrix $D $ . Im Allgemeinen ist es für eine diagonal Matrix leicht, die Eigenwerte und Eigenvektoren zu lesen. Bei den eigen Werten handelt es sich um alle Zahlen, die auf der Diagonal angezeigt werden, und ihre jeweiligen Eigenvektoren sind die Einheits Vektoren, bei denen ein Eintrag gleich $1 $ und die restlichen Einträge gleich $0 sind $ .
 

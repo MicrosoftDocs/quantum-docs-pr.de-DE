@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 958910452109fc722999acddd70894c458e38357
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: f9dddfa25e9fd1e3d8aaf92b2e3b17c96ed8b72a
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630379"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269505"
 ---
 # <a name="dirac-notation"></a>Dirac-Notation
 
@@ -123,7 +130,7 @@ $$
 
 Sehen Sie sich als Beispiel für die Dirac-Notation die Klammer $ \braket{0 | 1 $ an, bei der } es sich um das innere Produkt zwischen $0 $ und $1 handelt $ .  Sie kann als 
 
-$ $ \braket{0 | 1 } = \begin{ bmatrix } 1 & 0 \end{ bmatrix } \begin{ bmatrix } 0 \\\\ 1 \end { bmatrix } = 0. $ $
+$ $ \braket{0 | 1 } = \begin{ bmatrix } 1 & 0 \end{ bmatrix } \begin{ bmatrix } 0 \\\\ 1 \end{bmatrix} = 0. $ $
 
 Dies bedeutet, dass $ \ket{0$ } und $ \ket{1$ } orthogonale Vektoren sind, d. h. $ \braket{0 | 1 } = \braket{1 | 0 } = 0 $ .  Auch in der Definition $ \braket{0 | 0 } = \braket{1| 1 } = 1 $ . Dies bedeutet, dass die beiden Berechnungsbasis Vektoren auch " *orthonormal*" genannt werden können.
 Diese orthonormal-Eigenschaften sind im folgenden Beispiel nützlich. Wenn der Status "$ \ket { \psi } = {\bruchteil {3 } {5 } } \ket{1+ } {\bruchteil {4 } {5 } } \ket{0$" lautet, da " } $ \braket{1 | 0 } = 0" $ die Wahrscheinlichkeit der Messung von $1 $ ist  
@@ -173,7 +180,7 @@ Die Tatsache, dass das negative Vorzeichen in der Berechnung der Wahrscheinlichk
 ## <a name="ketbra-or-outer-product"></a>ketbra oder äußeres Produkt
 Das abschließende Element, das in der Dirac-Notation diskutiert werden sollte, ist das *ketbra* -oder Outer-Produkt  Das äußere Produkt wird in Dirac-Notationen als "$ \ket { \psi } \bra { \ Phi $" dargestellt } und auch als "ketbras" bezeichnet, da die BHS und die Ken in umgekehrter Reihenfolge als Klammer vorkommen.  Das äußere Produkt wird über die Matrix Multiplikation als "$ \ket { \psi } \bra { \phi } = \psi \phi ^ \dagger" $ für Quantum State Vektoren $ \psi $ und $ \phi definiert $ .  Das einfachste und wohl häufigste Beispiel für diese Notation ist
 
-$ $ \ket{0 } \bra{0 } = \begin{ bmatrix } 1 \\\\ 0 \end{ bmatrix } \begin{ bmatrix } 1&0 \end{ bmatrix } = \begin{ bmatrix } 1 &0 \\\\ 0 &0 \end { bmatrix } \qquad } \ket{1\bra{1= } \begin{ bmatrix } 0 \\\\ 1 \end{ bmatrix } \begin{ bmatrix } 0&1 \end{ bmatrix } = \begin{ bmatrix } 0 #b4 0 \\\\ 0 &1 \end { bmatrix } .
+$ $ \ket{0 } \bra{0 } = \begin{ bmatrix } 1 \\\\ 0 \end{ bmatrix } \begin{ bmatrix } 1&0 \end{ bmatrix } = \begin{ bmatrix } 1 &0 \\\\ 0 &0 \end{bmatrix} \qquad } \ket{1\bra{1= } \begin{ bmatrix } 0 \\\\ 1 \end{ bmatrix } \begin{ bmatrix } 0&1 \end{ bmatrix } = \begin{ bmatrix } 0 #b4 0 \\\\ 0 &1 \end{bmatrix} .
 $$
 
 Ketbras werden oft als Projektoren bezeichnet, da Sie einen Quantum-Zustand auf einen festgelegten Wert projizieren.  Da diese Vorgänge nicht einheitlich sind (und nicht einmal die Norm eines Vektors behalten), sollte ein Quantum-Computer nicht deterministisch einen Projektor anwenden.  Projektoren führen jedoch eine schöne Aufgabe aus, die Aktion zu beschreiben, die die Messung in einem Quantum-Status aufweist.  Wenn wir z. b. den Status $ \ket { \psi } $ auf $0 Messen, $ ist die resultierende Transformation, die der Zustand als Ergebnis der Messung hat,

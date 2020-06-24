@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 6c09531cd8bee8f5efb472c95c575daed04d3040
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: f9d4e14742b7d06a6e90af0902b31fbdf17aedab
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630202"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269540"
 ---
 # <a name="vectors-and-matrices"></a>Vektoren und Matrizen
 
@@ -189,9 +196,9 @@ Dies wird in einigen Beispielen besser veranschaulicht:
 $ $ \begin{bmatrix}
         a \\ \\ b \end{ bmatrix } \otimes \begin{ bmatrix } c \\ \\ d \\ \\ e \end{ bmatrix } = \begin{bmatrix}
         a \begin{ bmatrix } c \\ \\ d \\ \\ e \end{bmatrix}
-        \\\\[1.5 em] b \begin{ bmatrix } c \\ \\ d \\ \\ e \end {bmatrix}
+        \\\\[1.5 em] b \begin{ bmatrix } c \\ \\ d \\ \\ e\end{bmatrix}
     Schließlichbmatrix}
-    = \begin{ bmatrix } a c \\ \\ a d \\ \\ a e \\ \\ b c \\ \\ b d \\ \\ be \end {bmatrix}
+    = \begin{ bmatrix } a c \\ \\ a d \\ \\ a e \\ \\ b c \\ \\ b d \\ \\\end{bmatrix}
 $$
 
 und
@@ -201,13 +208,13 @@ $ $ \begin{bmatrix}
     \otimes \begin{bmatrix}
         e \ f \\ \\ \ h \end{bmatrix}
      = \begin{bmatrix}
-    a \begin {bmatrix}
+    ein\begin{bmatrix}
     e \ f \\\\ \ h \end{bmatrix}
-    b \begin {bmatrix}
+    b\begin{bmatrix}
     e \ f \\\\ \ h \end{bmatrix}
-    \\\\[1em] c \begin {bmatrix}
+    \\\\[1em] c\begin{bmatrix}
     e \ f \\\\ \ h \end{bmatrix}
-    d \begin {bmatrix}
+    d\begin{bmatrix}
     e \ f \\\\ \ h \end{bmatrix}
     Schließlichbmatrix}
     = \begin{bmatrix}
@@ -217,5 +224,5 @@ $$
 Eine abschließende, nützliche, in Bezug auf die tensorflow-Produkte für alle Vektor $v $ oder Matrix $M $ $v ^ {\otimes n } $ oder $M ^ {\otimes n } $ ist für ein $n $ wiederholten tensorflow-Produkt eine kurze Hand.  Beispiel:
 
 \begin{align}
-& \begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } ^ {\otimes 1 } = \begin{ bmatrix } 1 \\ \\ 0 \ End{ bmatrix } , \qquad \begin { bmatrix } 1 \\ \\ 0 \end{ bmatrix } ^ {\otimes 2 } = \begin{ bmatrix } 1 \\ \\ 0 0 \\ \\ \\ \\ 0 \ End{ bmatrix } , \qquad \begin { bmatrix } 1 \\ \\ -1 \end{ bmatrix } ^ {\otimes 2 } = \begin{ bmatrix } 1 \\ \\ -1 \\ \\ -1 \\ \\ 1 \ End{ bmatrix } , \\ \\ & \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } ^ {\otimes 1 } = \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } , \qquad \begin { bmatrix } 0 & 1 \\ \\ 1 & 0 \ End{ bmatrix } ^ {\otimes 2 } = \begin{ bmatrix } 0 #b4 0&0&1 \\ \\ 0 &0&1&0 \\ \\ 0 &1&0&0 \\\\ 1 &0&0&0 \end { bmatrix } .
+& \begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } ^ {\otimes 1 } = \begin{ bmatrix } 1 \\ \\ 0 \ End{ bmatrix } , \qquad \begin{bmatrix} 1 \\ \\ 0 \end{ bmatrix } ^ {\otimes 2 } = \begin{ bmatrix } 1 \\ \\ 0 0 \\ \\ \\ \\ 0 \ End{ bmatrix } , \qquad \begin{bmatrix} 1 \\ \\ -1 \end{ bmatrix } ^ {\otimes 2 } = \begin{ bmatrix } 1 \\ \\ -1 \\ \\ -1 \\ \\ 1 \ End{ bmatrix } , \\ \\ & \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } ^ {\otimes 1 } = \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } , \qquad \begin{bmatrix} 0 & 1 \\ \\ 1 & 0 \ End{ bmatrix } ^ {\otimes 2 } = \begin{ bmatrix } 0 #b4 0&0&1 \\ \\ 0 &0&1&0 \\ \\ 0 &1&0&0 \\\\ 1 &0&0&0 \end{bmatrix} .
 \end{align}
