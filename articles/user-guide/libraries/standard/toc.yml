@@ -1,0 +1,22 @@
+- name: Einleitung
+  href: prelude.md
+- name: Klassische Mathematik
+  href: math.md
+- name: Typkonvertierungen
+  href: convert.md
+- name: Ablaufsteuerung höherer Ordnung
+  href: control-flow.md
+- name: Datenstrukturen und -modellierung
+  href: data-structures.md
+- name: Quantenalgorithmen
+  href: algorithms.md
+- name: Diagnose
+  href: diagnostics.md
+- name: Eigenschaften
+  href: characterization.md
+- name: Fehlerkorrektur
+  href: error-correction.md
+- name: Anwendungen
+  href: applications.md
+- name: OSS-Lizenzierung
+  href: licensing.md
