@@ -6,19 +6,19 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: b0c800c3946d2e4ba4457127fb9495dc9dcf2934
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: cbb1c274b64738cc4b47869563d7d02eb717afbc
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274886"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415255"
 ---
 # <a name="the-resources-estimator-target-machine"></a>Der Zielcomputer für die Ressourcenschätzung
 
 Wie der Name schon sagt, schätzt die Ressourcen, die erforderlich sind, `ResourcesEstimator` um eine bestimmte Instanz eines Q #-Vorgangs auf einem Quantum-Computer auszuführen.
 Dies wird erreicht, indem der Quantum-Vorgang ausgeführt wird, ohne den Zustand eines Quantum-Computers zu simulieren. aus diesem Grund können Ressourcen für Q #-Vorgänge geschätzt werden, die Tausende von Qubits verwenden, wenn der klassische Teil des Codes in angemessener Zeit ausgeführt werden kann.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Zweck
 
 `ResourcesEstimator`Ist nur ein anderer Typ von Zielcomputer und kann daher zum Ausführen beliebiger Q #-Vorgänge verwendet werden. 
 
@@ -98,8 +98,8 @@ Im folgenden finden Sie eine Liste der Metriken, die von geschätzt werden `Reso
 * __Measure__: die Anzahl der ausgeführten Messungen.
 * __R__: die Anzahl der ausgeführten einzelnen Qubit-Drehungen, ausgenommen T, Clifford und Pauli Gates.
 * __T__: die Anzahl der t-Gates und ihre konjugierte, einschließlich t Gate, T_x = h. T. h und T_y = HY. T. HY, ausgeführt.
-* __Tiefe__: Tiefe der vom Q #-Vorgang ausgeführten Quantum-Leitung. Standardmäßig werden nur T Gates in der Tiefe gezählt. Weitere Informationen finden Sie unter [tiefen Zähler](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) .
-* __Width__: maximale Anzahl von Qubits, die während der Ausführung des Q #-Vorgangs zugeordnet wurden.
+* __Tiefe__: die untere Grenze für die Tiefe der vom Q #-Vorgang ausgeführten Quantum-Leitung. Standardmäßig werden nur T Gates in der Tiefe gezählt. Weitere Informationen finden Sie unter [tiefen Zähler](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) .
+* __Width__: die untere Grenze für die maximale Anzahl von Qubits, die während der Ausführung des Q #-Vorgangs zugeordnet werden. Möglicherweise ist es nicht möglich, sowohl __Tiefe__ als auch __Breite__ Untergrenzen gleichzeitig zu erreichen.
 * __Borrowedwidth__: maximale Anzahl von im Q #-Vorgang geliehenen Qubits.
 
 
@@ -130,7 +130,7 @@ operation Teleport(source : Qubit, target : Qubit) : Unit {
 Wenn die `ResourcesEstimator` gefunden `AssertProb` wird, wird diese Messung auf dem Wert aufgezeichnet, `PauliZ` `source` und es `q` sollte ein Ergebnis von `Zero` mit der Wahrscheinlichkeit 0,5 angegeben werden. Wenn Sie zu einem späteren Zeitpunkt ausgeführt wird `M` , werden die aufgezeichneten Werte der Ergebnis Wahrscheinlichkeiten gefunden, und es `M` wird `Zero` oder `One` mit der Wahrscheinlichkeit 0,5 zurückgegeben.
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 Der baut `ResourcesEstimator` auf dem Quantum-Computer-Ablauf [Verfolgungs Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)auf, der einen umfassenderen Satz an Metriken, die Möglichkeit zum Melden von Metriken für das vollständige Aufruf Diagramm und Features wie die unter [schiedliche Eingabe](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) Prüfung bereitstellt, um Fehler in Q #-Programmen zu finden. Weitere Informationen finden Sie in der Dokumentation des Ablauf [Verfolgungs Simulators](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .
 

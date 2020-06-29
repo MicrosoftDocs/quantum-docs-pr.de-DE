@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: b32644382bb88fb11da00d0d7d78bbd797a0eaaa
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+ms.openlocfilehash: 1821df6a3a51a62b44f3ccd96b127577c5db990a
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84629993"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415387"
 ---
 # <a name="type-expressions-in-q"></a>Typausdrücke in Q #
 
@@ -20,11 +20,11 @@ ms.locfileid: "84629993"
 Numerische Ausdrücke sind Ausdrücke vom Typ `Int` , `BigInt` oder `Double` .
 Das heißt, Sie sind entweder ganzzahlige oder Gleit Komma Zahlen.
 
-`Int`Literale in Q # werden einfach als Sequenz von Ziffern geschrieben.
-Hexadezimale und binäre ganze Zahlen werden mit dem `0x` `0b` Präfix und bzw. unterstützt.
+`Int`Literale in Q # werden als Sequenz von Ziffern geschrieben.
+Hexadezimale und binäre ganzzahlige Werte werden unterstützt `0x` `0b` bzw. mit dem Präfix und geschrieben.
 
-`BigInt`Literale in Q # werden mit einem nachfolgenden- `l` oder- `L` Suffix geschrieben.
-Hexadezimale große ganze Zahlen werden mit dem Präfix "0x" unterstützt.
+`BigInt`Literale in Q # verfügen über ein nach gestelltes- `l` oder- `L` Suffix.
+Hexadezimale Big Integerwerte werden unterstützt und mit einem Präfix "0x" geschrieben.
 Daher sind die folgenden alle gültigen Verwendungsmöglichkeiten von `BigInt` Literalen:
 
 ```qsharp
@@ -34,35 +34,35 @@ let bigOne = bigZero + 1L;
 ```
 
 `Double`Literale in Q # sind Gleit Komma Zahlen, die mithilfe von Dezimalziffern geschrieben werden.
-Sie können mit einem Dezimaltrennzeichen () `.` und/oder einem exponentiellen Teil geschrieben werden, der mit "e" oder "e" angegeben wird (nach dem nur ein mögliches negatives Vorzeichen und Dezimalziffern gültig sind).
+Sie können mit oder ohne Dezimaltrennzeichen, oder mit einem `.` exponentiellen Teil geschrieben werden, der mit "e" oder "e" angegeben wird (nach dem nur ein mögliches negatives Vorzeichen und Dezimalziffern gültig sind).
 Die folgenden `Double` Literale sind gültig: `0.0` , `1.2e5` , `1e-5` .
 
-Wenn ein Array Ausdruck eines beliebigen Elementtyps vorhanden ist, `Int` kann ein Ausdruck mithilfe der [`Length`](xref:microsoft.quantum.core.length) integrierten Funktion gebildet werden, wobei der Array Ausdruck in Klammern eingeschlossen ist, `(` und `)` .
-Wenn beispielsweise `a` an ein Array gebunden ist, dann `Length(a)` ist ein ganzzahliger Ausdruck.
+Wenn ein Array Ausdruck eines beliebigen Elementtyps vorhanden ist, können Sie `Int` mithilfe der integrierten Funktion einen Ausdruck bilden [`Length`](xref:microsoft.quantum.core.length) , wobei der Array Ausdruck in Klammern eingeschlossen ist.
+Wenn z. b `a` . an ein Array gebunden ist, dann `Length(a)` ist ein ganzzahliger Ausdruck.
 Wenn `b` ein Array von Arrays ganzer Zahlen ist, `Int[][]` dann `Length(b)` ist die Anzahl der Unterarrays in `b` , und `Length(b[1])` die Anzahl von ganzen Zahlen im zweiten Unterarray in `b` .
 
 Bei zwei numerischen Ausdrücken desselben Typs können die binären Operatoren, `+` , `-` `*` und `/` verwendet werden, um einen neuen numerischen Ausdruck zu bilden.
 Der Typ des neuen Ausdrucks ist mit den Typen der einzelnen Ausdrücke identisch.
 
-Bei zwei ganzzahligen Ausdrücken kann der binäre Operator `^` (Power) verwendet werden, um einen neuen ganzzahligen Ausdruck zu bilden.
-Auf ähnliche Weise `^` kann mit zwei doppelten Ausdrücken verwendet werden, um einen neuen doppelten Ausdruck zu bilden.
-Schließlich `^` kann mit einer großen Ganzzahl auf der linken Seite und einer Ganzzahl auf der rechten Seite verwendet werden, um einen neuen großen ganzzahligen Ausdruck zu bilden.
+Verwenden Sie bei zwei ganzzahligen Ausdrücken den binären Operator `^` (Power), um einen neuen ganzzahligen Ausdruck zu bilden.
+Auf ähnliche Weise können Sie auch `^` mit zwei doppelten Ausdrücken verwenden, um einen neuen doppelten Ausdruck zu bilden.
+Schließlich können Sie `^` mit einer großen Ganzzahl auf der linken Seite und einer Ganzzahl auf der rechten Seite verwenden, um einen neuen großen ganzzahligen Ausdruck zu bilden.
 In diesem Fall muss der zweite Parameter in 32 Bits passen. Wenn dies nicht der Fall ist, wird ein Laufzeitfehler ausgelöst.
 
-Bei zwei ganzzahligen oder großen ganzzahligen Ausdrücken kann ein neuer Integer-Ausdruck oder ein großer ganzzahliger Ausdruck mit den `%` Operatoren (Modulus), (bitweiser `&&&` and), `|||` (bitweiser or) oder `^^^` (Bitweiser XOR) gebildet werden.
+Bei zwei ganzzahligen oder großen ganzzahligen Ausdrücken bilden Sie mithilfe der `%` Operatoren (Modulus), `&&&` (Bitweises and), `|||` (bitweiser or) oder `^^^` (Bitweiser XOR) einen neuen Integer-oder Big Integer-Ausdruck.
 
-Beim Ausdruck "Integer" oder "Big Integer" auf der linken Seite und einem ganzzahligen Ausdruck auf der rechten Seite `<<<` können die Operatoren (arithmetischer Left Shift) oder `>>>` (arithmetischer rechts Schiebe Operator) zum Erstellen eines neuen Ausdrucks mit dem gleichen Typ wie der linke Ausdruck verwendet werden.
+Verwenden Sie auf der linken Seite entweder einen ganzzahligen Ausdruck oder einen großen ganzzahligen Ausdruck und einen ganzzahligen Ausdruck auf der rechten Seite, `<<<` `>>>` um einen neuen Ausdruck mit dem gleichen Typ wie den linken Ausdruck zu erstellen.
 
 Der zweite Parameter (die UMSCHALT Menge) in einen Verschiebungs Vorgang muss größer oder gleich 0 (null) sein. das Verhalten für negative Verschiebungs Beträge ist nicht definiert.
 Der Verschiebungs Betrag für einen der Verschiebungs Vorgänge muss ebenfalls in 32 Bits passen. Wenn dies nicht der Fall ist, wird ein Laufzeitfehler ausgelöst.
-Wenn die zu Verschiebe Zahl eine ganze Zahl ist, wird der Verschiebungs Betrag interpretiert, d `mod 64` . h. eine Verschiebung von 1 und eine Schicht von 65 haben dieselbe Wirkung.
+Wenn die verschobene Zahl eine ganze Zahl ist, wird der Verschiebungs Betrag interpretiert, d `mod 64` . h. eine Verschiebung von 1 und eine UMSCHALT 65 haben dieselbe Wirkung.
 
 Bei ganzzahligen und großen ganzzahligen Werten sind Verschiebungen arithmetisch.
-Wenn Sie einen negativen Wert entweder nach links oder rechts verschieben, ergibt dies eine negative Zahl.
-Das heißt, die Verschiebung eines Schritts nach links oder rechts ist identisch mit der Multiplikation bzw. Division durch 2.
+Wenn Sie einen negativen Wert entweder nach links oder nach rechts verschieben, ergibt dies eine negative Zahl.
+Das heißt, dass ein Schritt nach links oder rechts verschoben wird, entspricht dem multiplizieren bzw. aufteilen durch 2.
 
 Die ganzzahlige Division und der ganzzahlige Modulo folgen dem Verhalten für negative Zahlen wie c#.
-Das heißt, dass `a % b` immer dasselbe Vorzeichen wie hat `a` und `b * (a / b) + a % b` immer gleich ist `a` .
+Das heißt, dass `a % b` immer das gleiche Vorzeichen wie hat `a` und `b * (a / b) + a % b` immer gleich ist `a` .
 Beispiel:
 
  `A` | `B` | `A / B` | `A % B`
@@ -72,12 +72,12 @@ Beispiel:
  -5 | 2 | -2 | -1
  -5 | -2 | 2 | -1
 
-Große ganzzahlige Division und Modulo funktionieren auf dieselbe Weise.
+Die Division von großen ganzzahligen und Modulo funktioniert auf dieselbe Weise.
 
-Wenn ein beliebiger numerischer Ausdruck vorhanden ist, kann ein neuer Ausdruck mit dem `-` unären Operator gebildet werden.
-Der neue Ausdruck hat denselben Typ wie der konstituierende Ausdruck.
+Wenn ein beliebiger numerischer Ausdruck vorhanden ist, können Sie mit dem unären Operator einen neuen Ausdruck bilden `-` .
+Der neue Ausdruck ist derselbe Typ wie der konstituierende Ausdruck.
 
-Bei allen ganzzahligen oder großen ganzzahligen Ausdrücken kann ein neuer Ausdruck desselben Typs mit dem `~~~` unären Operator (bitweiser Komplement) gebildet werden.
+Wenn Sie einen ganzzahligen Ausdruck oder einen großen ganzzahligen Ausdruck verwenden, können Sie einen neuen Ausdruck desselben Typs mit dem `~~~` unären Operator (bitweiser Komplement) bilden.
 
 ## <a name="boolean-expressions"></a>Boolesche Ausdrücke
 
@@ -97,26 +97,25 @@ let t = x == y;               // This will cause a compiler error.
 ```
 
 Der Gleichheits Vergleich für `Qubit` Werte ist die Identitäts Gleichheit, d. h., ob die beiden Ausdrücke dasselbe Qubit identifizieren.
-Der Zustand der beiden Qubits wird von diesem Vergleich nicht verglichen, auf Sie zugegriffen, gemessen oder geändert.
+Die Zustände der beiden Qubits werden von diesem Vergleich nicht verglichen, auf Sie zugegriffen, gemessen oder geändert.
 
 Der Gleichheits Vergleich für `Double` Werte kann aufgrund von Rundungs Effekten irreführend sein.
-Beispielsweise `49.0 * (1.0/49.0) != 1.0` .
+Beispielsweise `49.0 * (1.0/49.0) != 1.0`.
 
 Bei zwei numerischen Ausdrücken können die binären Operatoren,, `>` `<` `>=` und `<=` verwendet werden, um einen neuen booleschen Ausdruck zu erstellen, der true ist, wenn der erste Ausdruck größer als, kleiner als, größer als oder gleich oder kleiner oder gleich dem zweiten Ausdruck ist.
 
-Bei zwei booleschen Ausdrücken `and` `or` können die binären Operatoren und verwendet werden, um einen neuen booleschen Ausdruck zu erstellen, der true ist, wenn beide Ausdrücke den Wert true haben.
+Verwenden Sie bei zwei booleschen Ausdrücken den `and` binären-Operator, um einen neuen booleschen Ausdruck zu erstellen, der true ist, wenn beide Ausdrücke True sind. Ebenso erstellt die Verwendung des- `or` Operators einen Ausdruck, der true ist, wenn einer der beiden Ausdrücke True ist.
 
 Bei jedem booleschen Ausdruck kann der `not` unäre Operator verwendet werden, um einen neuen booleschen Ausdruck zu erstellen, der true ist, wenn der konstituierende Ausdruck false ist.
 
-## <a name="string-expressions"></a>Zeichen folgen Ausdrücke
+## <a name="string-expressions"></a>Zeichenfolgenausdrücke
 
-Q # ermöglicht die Verwendung von Zeichen folgen in der `fail` Anweisung (erläutert in der [Ablauf Steuerung](xref:microsoft.quantum.guide.controlflow#fail-statement)) und in der [`Message`](xref:microsoft.quantum.intrinsic.message) Standardfunktion.
-Das spezifische Verhalten der letzteren hängt von dem verwendeten Simulator ab, schreibt jedoch in der Regel eine Meldung in die Host Konsole, wenn Sie während eines Q #-Programms aufgerufen wird.
+Q # ermöglicht die Verwendung von Zeichen folgen in der `fail` Anweisung (in der [Ablauf Steuerung](xref:microsoft.quantum.guide.controlflow#fail-statement)erläutert) und in der [`Message`](xref:microsoft.quantum.intrinsic.message) Standardfunktion. Das spezifische Verhalten der letzteren hängt vom verwendeten Simulator ab, schreibt jedoch in der Regel eine Meldung in die Host Konsole, wenn Sie während eines Q #-Programms aufgerufen wird.
 
 Zeichen folgen in Q # sind entweder Literale oder interpoliert Zeichen folgen.
 
-Zeichenfolgenliterale ähneln in den meisten Sprachen einfachen Zeichenfolgenliteralen: eine Sequenz von Unicode-Zeichen, die in doppelten Anführungszeichen eingeschlossen sind `"` .
-Innerhalb einer Zeichenfolge kann der umgekehrte Schrägstrich `\` verwendet werden, um ein doppeltes Anführungszeichen mit Escapezeichen zu versehen und eine neue Zeile als einzufügen, als `\n` und als `\r` Tabstopp Zeichen `\t` .
+Zeichenfolgenliterale ähneln in den meisten Sprachen einfachen Zeichenfolgenliteralen: eine Sequenz von Unicode-Zeichen, die in doppelten Anführungszeichen eingeschlossen sind `" "` .
+Verwenden Sie innerhalb einer Zeichenfolge den umgekehrten Schrägstrich, `\` um ein doppeltes Anführungszeichen () mit Escapezeichen `\"` zu versehen, oder um eine neue Zeile ( `\n` ), ein Wagen Rücklauf Zeichen ( `\r` ) oder eine Registerkarte ( `\t` ) einzufügen.
 Beispiel:
 
 ```qsharp
@@ -124,32 +123,32 @@ Beispiel:
 ```
 ### <a name="interpolated-strings"></a>Interpolierte Zeichenfolgen
 
-Die Q #-Syntax für Zeichen folgen Interpolationen ist eine Teilmenge der c#-Syntax, aber wir fassen hier die wichtigsten Punkte zusammen, die Sie für Q # betreffen.
-Die wichtigsten Unterschiede werden im folgenden erläutert.
+Die Q #-Syntax für Zeichen folgen Interpolationen ist eine Teilmenge der c#-Syntax. Im folgenden finden Sie die wichtigsten Punkte, die sich auf Q # beziehen:
 
-Wenn Sie ein Zeichenfolgenliteral als interpolierte Zeichenfolge ermitteln möchten, stellen Sie ihm ein `$`-Symbol voran.
-Zwischen dem `$` und dem `"` , das einen zeichenfolgenliteralvorgang startet, darf kein Leerraum vorhanden sein.
+* Wenn Sie ein Zeichenfolgenliteral als interpolierte Zeichenfolge ermitteln möchten, stellen Sie ihm ein `$`-Symbol voran. Zwischen dem `$` und dem `"` , das einen zeichenfolgenliteralvorgang startet, darf kein Leerraum vorhanden sein.
 
-Im folgenden finden Sie ein einfaches Beispiel, in dem die-Funktion verwendet wird [`Message`](xref:microsoft.quantum.intrinsic.message) , um das Ergebnis einer Maßeinheit zusammen mit anderen Q #-Ausdrücken in die Konsole zu schreiben.
+* Im folgenden finden Sie ein einfaches Beispiel, in dem die-Funktion verwendet wird [`Message`](xref:microsoft.quantum.intrinsic.message) , um das Ergebnis einer Maßeinheit zusammen mit anderen Q #-Ausdrücken in die Konsole zu schreiben.
 
 ```qsharp
     let num = 8;       // some Q# expression
     let res = M(q);
     Message($"Number: {num}, Result: {res}");
 ```
-Jeder gültige Q #-Ausdruck kann in einer interinterierten Zeichenfolge angezeigt werden.
+
+* Jeder gültige Q #-Ausdruck kann in einer interinterierten Zeichenfolge angezeigt werden.
+
+* Ausdrücke in einer interinterierten Zeichenfolge Folgen der Q #-Syntax, nicht der c#-Syntax. Der wichtigste Unterschied besteht darin, dass Q # keine ausführlichen (mehrzeiligen) interpoliert-Zeichen folgen unterstützt.
 
 Weitere Informationen zur c#-Syntax finden Sie unter [*interpoliert*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings).
-Der wichtigste Unterschied besteht darin, dass Q # keine ausführlichen (mehrzeiligen) interpoliert-Zeichen folgen unterstützt.
-Ausdrücke in einer interinterierten Zeichenfolge Folgen der Q #-Syntax, nicht der c#-Syntax.
 
 ## <a name="range-expressions"></a>Bereichs Ausdrücke
 
-Bei allen drei `Int` Ausdrücken `start` `step` ist, und `stop` `start .. step .. stop` ein Bereichs Ausdruck, dessen erstes Element `start` , zweites Element `start+step` , drittes Element `start+step+step` , usw. ist, bis `stop` übergeben wird.
-Ein Bereich kann leer sein, wenn z.b. `step` positiv und ist `stop < start` .
-Das letzte Element des Bereichs `stop` ist, wenn der Unterschied zwischen `start` und ein ganzzahliges `stop` Vielfaches von ist, d. h `step` ., der Bereich ist an beiden Enden inklusiv.
+Bei den drei `Int` Ausdrücken `start` , `step` und `stop` ist der Ausdruck `start .. step .. stop` ein Bereichs Ausdruck, dessen erstes Element `start` , zweites Element `start+step` , drittes Element `start+step+step` , usw. ist, bis Sie übergeben werden `stop` .
+Ein Bereich kann leer sein, wenn z. b `step` . positiv und ist `stop < start` .
 
-`Int`Bei zwei Ausdrücken `start` und `stop` `start .. stop` ist ein Bereichs Ausdruck, der gleich ist `start .. 1 .. stop` .
+Der Bereich ist an beiden Enden inklusiv. Das heißt, wenn der Unterschied zwischen `start` und `stop` ein ganzzahliges Vielfache von ist `step` , ist das letzte Element des Bereichs `stop` .
+
+`Int`Bei zwei Ausdrücken `start` und `stop` ist der Ausdruck `start .. stop` ein Bereichs Ausdruck, der gleich ist `start .. 1 .. stop` .
 Beachten Sie, dass der implizierte Wert `step` + 1 ist, auch wenn `stop` kleiner als ist `start` . in einem solchen Fall ist der Bereich leer.
 
 Einige Beispiel Bereiche sind:
@@ -184,7 +183,7 @@ Das gleiche gilt für `Zero` und `0` .
 
 ## <a name="tuple-expressions"></a>Tupelausdrücke
 
-Ein tupelliteral ist eine Sequenz von Element Ausdrücken des entsprechenden Typs, die durch Kommas getrennt sind und in und eingeschlossen sind `(` `)` .
+Ein tupelliteralelement ist eine Sequenz von Element Ausdrücken des entsprechenden Typs, die durch Kommas getrennt sind und in Klammern eingeschlossen sind.
 Beispielsweise `(1, One)` ist ein `(Int, Result)` Ausdruck.
 
 Abgesehen von Literalen sind die einzigen Tupelausdrücke Symbole, die an Tupelwerte, Array Elemente von tupelarrays und Aufruf Bare Aufrufe gebunden sind, die Tupel zurückgeben.
@@ -192,20 +191,20 @@ Abgesehen von Literalen sind die einzigen Tupelausdrücke Symbole, die an Tupelw
 ## <a name="user-defined-type-expressions"></a>Benutzerdefinierte typausdrücke
 
 Ein Literalwert eines benutzerdefinierten Typs besteht aus dem Typnamen, gefolgt von einem tupelliteraltyp mit dem basistupeltyp des Typs.
-Wenn beispielsweise `IntPair` ein benutzerdefinierter Typ ist, der auf basiert `(Int, Int)` , dann `IntPair(2, 3)` wäre ein gültiges Literale dieses Typs.
+Wenn z. b. `IntPair` ein benutzerdefinierter Typ ist `(Int, Int)` , der auf basiert, dann `IntPair(2, 3)` ist ein gültiges Literale dieses Typs.
 
 Anders als Literale sind die einzigen Ausdrücke eines benutzerdefinierten Typs Symbole, die an Werte dieses Typs gebunden sind, Array Elemente von Arrays dieses Typs und Aufruf Bare Aufrufe, die diesen Typ zurückgeben.
 
 ## <a name="unwrap-expressions"></a>Entpacken von Ausdrücken
 
 In Q # ist der Unwrap-Operator ein nach gestelltes Ausrufezeichen `!` .
-Wenn beispielsweise `IntPair` ein benutzerdefinierter Typ mit dem zugrunde liegenden Typ `(Int, Int)` und `s` eine Variable mit Wert ist `IntPair(2, 3)` , `s!` wäre `(2, 3)` .
+Wenn z. b `IntPair` . ein benutzerdefinierter Typ mit dem zugrunde liegenden Typ `(Int, Int)` und `s` eine Variable mit Wert ist `IntPair(2, 3)` , dann `s!` ist `(2, 3)` .
 
-Bei benutzerdefinierten Typen, die in Bezug auf andere benutzerdefinierte Typen definiert sind, kann der Unwrap-Operator wiederholt werden. gibt beispielsweise `s!!` den doppelt entpackten Wert von an `s` .
-Wenn also `WrappedPair` ein benutzerdefinierter Typ mit dem zugrunde liegenden Typ `IntPair` und `t` eine Variable mit Wert ist `WrappedPair(IntPair(1,2))` , dann ist `t!!` `(1,2)` .
+Bei benutzerdefinierten Typen, die in Bezug auf andere benutzerdefinierte Typen definiert sind, können Sie den Unwrap-Operator wiederholen. `s!!`Gibt z. b. den doppelt entpackten Wert von an `s` .
+Wenn `WrappedPair` ein benutzerdefinierter Typ mit dem zugrunde liegenden Typ ist `IntPair` und `t` eine Variable mit dem Wert ist, `WrappedPair(IntPair(1,2))` dann `t!!` ist `(1,2)` .
 
 Der `!` Operator hat eine höhere Rangfolge als alle anderen Operatoren, außer `[]` für die Array Indizierung und die Slicing.
-`!`und `[]` binden Sie Positions bedingt, d. h., Sie `a[i]![3]` sollten als gelesen werden `((a[i])!)[3]` : nehmen `i` Sie das ' th '-Element von `a` , entpacken Sie es, und dann das dritte Element des nicht umschließenden Werts (der ein Array sein muss).
+`!`und `[]` binden Sie Positions bedingt, `a[i]![3]` d. h., wird gelesen als `((a[i])!)[3]` : nehmen Sie das `i` th-Element von `a` , entpacken Sie es, und holen Sie dann das dritte Element des entpackten Werts (der ein Array sein muss).
 
 Die Rangfolge des `!` Operators hat eine Beeinträchtigung, die möglicherweise nicht offensichtlich ist.
 Wenn eine Funktion oder ein Vorgang einen Wert zurückgibt, der dann entpackt wird, muss der Funktions-oder Vorgangs Ausdruck in Klammern eingeschlossen werden, damit das Argument Tupel an den-Ausdruck gebunden wird, anstatt an den Unwrap-Vorgang.
@@ -218,27 +217,26 @@ let g = Foo(arg)!;      // Syntax error
 
 ## <a name="array-expressions"></a>Array Ausdrücke
 
-Ein Arrayliteral ist eine Sequenz von einem oder mehreren Element Ausdrücken, die durch Kommas getrennt sind und in und eingeschlossen ist `[` `]` .
+Ein Arrayliteral ist eine Sequenz von einem oder mehreren Element Ausdrücken, die durch Kommas getrennt sind und in eckige Klammern eingeschlossen sind `[]` .
 Alle-Elemente müssen mit demselben Typ kompatibel sein.
 
-Bei zwei Arrays desselben Typs kann der binäre `+` Operator verwendet werden, um ein neues Array zu bilden, bei dem es sich um die Verkettung der beiden Arrays handelt.
-Beispielsweise `[1,2,3] + [4,5,6]` ist `[1,2,3,4,5,6]` .
+Verwenden Sie bei zwei Arrays desselben Typs den binären Operator, `+` um ein neues Array zu bilden, das die Verkettung der beiden Arrays ist.
+Beispiel: `[1,2,3] + [4,5,6]` = `[1,2,3,4,5,6]`
 
 ### <a name="array-creation"></a>Array Erstellung
 
-Bei Angabe eines Typs und eines `Int` Ausdrucks `new` kann der Operator verwendet werden, um ein neues Array mit der angegebenen Größe zuzuordnen.
-Beispielsweise `new Int[i + 1]` würde ein neues `Int` Array mit- `i + 1` Elementen zuordnen.
+Verwenden Sie bei Angabe eines Typs und eines `Int` Ausdrucks den- `new` Operator, um ein neues Array mit der angegebenen Größe zuzuweisen.
+`new Int[i + 1]`Weist z. b. ein neues `Int` Array mit- `i + 1` Elementen zu.
 
-Leere Array Literale, `[]` , sind nicht zulässig.
-Wenn Sie stattdessen verwenden `new ★[0]` , wobei `★` als Platzhalter für einen geeigneten Typ verwendet, ermöglicht das Erstellen des gewünschten Arrays der Länge 0 (null).
+Leere Array Literale, wie z `[]` . b., sind nicht zulässig.
+Stattdessen können Sie ein Array der Länge 0 (null) erstellen, indem Sie verwenden `new T[0]` , wobei `T` ein Platzhalter für einen geeigneten Typ ist.
 
-Die Elemente eines neuen Arrays werden mit einem typabhängigen Standardwert initialisiert.
+Die Elemente eines neuen Arrays initialisieren einen typabhängigen Standardwert.
 In den meisten Fällen ist dies eine Variation von 0 (null).
 
 Bei Qubits und callables, bei denen es sich um Verweise auf Entitäten handelt, gibt es keinen angemessenen Standardwert.
-Daher ist für diese Typen der Standardwert ein ungültiger Verweis, der nicht verwendet werden kann, ohne dass ein Laufzeitfehler verursacht wird.
-Dies ähnelt einem NULL-Verweis in Sprachen wie c# oder Java.
-Arrays, die Qubits oder callables enthalten, müssen ordnungsgemäß mit nicht standardmäßigen Werten initialisiert werden, bevor ihre Elemente problemlos verwendet werden können. Geeignete Initialisierungs Routinen finden Sie unter <xref:microsoft.quantum.arrays> .
+Daher ist für diese Typen der Standardwert ein ungültiger Verweis, den Sie nicht ohne einen Laufzeitfehler verwenden können, ähnlich wie bei einem NULL-Verweis in Sprachen wie c# oder Java.
+Arrays, die Qubits oder callables enthalten, müssen mit nicht standardmäßigen Werten initialisiert werden, bevor Sie Ihre Elemente sicher verwenden können. Geeignete Initialisierungs Routinen finden Sie unter <xref:microsoft.quantum.arrays> .
 
 Die Standardwerte für jeden Typ lauten:
 
@@ -256,17 +254,17 @@ type | Standard
  `Callable` | _Ungültige Aufruf Bare_
  `Array['T]` | `'T[0]`
 
-Tupeltypen werden Element für Element initialisiert.
+Tupeltypen initialisieren Element für Element.
 
 
 ### <a name="array-elements"></a>Array Elemente
 
-Bei einem Array Ausdruck und einem `Int` Ausdruck kann ein neuer Ausdruck mit dem `[` und dem `]` Array Element Operator gebildet werden.
-Der neue Ausdruck hat denselben Typ wie der Elementtyp des Arrays.
-Wenn beispielsweise `a` an ein Array von s gebunden ist `Double` , dann `a[4]` ist ein- `Double` Ausdruck.
+Wenn ein Array Ausdruck und ein `Int` Ausdruck angegeben sind, erstellen Sie einen neuen Ausdruck mit dem Array Element-Operator `[]` .
+Der neue Ausdruck ist derselbe Typ wie der Elementtyp des Arrays.
+Wenn z. b. `a` an ein Array vom Typ gebunden ist `Double` , dann `a[4]` ist ein- `Double` Ausdruck.
 
-Wenn der Array Ausdruck kein einfacher Bezeichner ist, muss er in Klammern eingeschlossen werden, um ein Element auszuwählen.
-Wenn `a` und Beispiels `b` Weise beide Arrays von s sind `Int` , würde ein Element aus der Verkettung wie folgt ausgedrückt werden:
+Wenn es sich bei dem Array Ausdruck nicht um einen einfachen Bezeichner handelt, müssen Sie ihn in Klammern einschließen, um ein Element auszuwählen.
+Wenn z. b. `a` und `b` beide Arrays vom Typ sind `Int` , wird ein Element aus der Verkettung folgendermaßen ausgedrückt:
 
 ```qsharp
 (a + b)[13]
@@ -278,14 +276,14 @@ Das heißt, das erste Element eines Arrays `a` ist immer `a[0]` .
 
 ### <a name="array-slices"></a>Array Slices
 
-Bei einem Array Ausdruck und einem- `Range` Ausdruck kann ein neuer Ausdruck mit dem und dem `[` `]` Array Slice-Operator gebildet werden.
-Der neue Ausdruck hat denselben Typ wie das Array und enthält die Array Elemente, die von den Elementen des-Elements indiziert werden `Range` , in der Reihenfolge, die durch definiert wird `Range` .
-Wenn beispielsweise `a` an ein Array von s gebunden ist `Double` , dann `a[3..-1..0]` ist ein- `Double[]` Ausdruck, der die ersten vier Elemente von enthält, `a` jedoch in umgekehrter Reihenfolge, wie Sie in angezeigt werden `a` .
+Wenn ein Array Ausdruck und ein `Range` Ausdruck angegeben sind, erstellen Sie einen neuen Ausdruck mithilfe des Array Slice-Operators `[ ]` .
+Der neue Ausdruck hat denselben Typ wie das Array und enthält die Array Elemente, die von den Elementen des-Elements indiziert `Range` werden, in der Reihenfolge, die von definiert wird `Range` .
+Wenn z. b. `a` an ein Array vom Typ gebunden ist `Double` , dann `a[3..-1..0]` ist ein-Ausdruck, `Double[]` der die ersten vier Elemente von enthält, `a` jedoch in umgekehrter Reihenfolge, wie Sie in angezeigt werden `a` .
 
 Wenn das `Range` leer ist, ist das resultierende Array in der Länge 0 (null).
 
-Ebenso wie beim Verweisen auf Array Elemente muss der Array Ausdruck, wenn es sich nicht um einen einfachen Bezeichner handelt, in Klammern eingeschlossen werden, um Sie in Slices aufzuteilen.
-Wenn `a` und `b` beide Arrays von `Int` s sind, würde ein Slice aus der Verkettung folgendermaßen ausgedrückt werden:
+Ebenso wie beim Verweisen auf Array Elemente müssen Sie, wenn der Array Ausdruck kein einfacher Bezeichner ist, ihn in Klammern einschließen, um ihn in Slices aufzuteilen.
+Wenn z. b. `a` und `b` beide Arrays vom Typ sind `Int` , wird ein Slice aus der Verkettung folgendermaßen ausgedrückt:
 
 ```qsharp
 (a+b)[1..2..7]
@@ -293,15 +291,17 @@ Wenn `a` und `b` beide Arrays von `Int` s sind, würde ein Slice aus der Verkett
 
 #### <a name="inferred-startend-values"></a>Abherleitet anfangs-/Endwerte
 
-Ab unserer Version 0,8 unterstützen wir Kontext Ausdrücke für die Bereichs Aufteilung. Insbesondere können Bereichs Start-und Endwerte im Kontext eines Bereichs aufteilen-Ausdrucks weggelassen werden. In diesem Fall wendet der Compiler die folgenden Regeln an, um die vorgesehenen Trennzeichen für den Bereich abzuleiten. 
+Ab unserer [Version 0,8](xref:microsoft.quantum.relnotes)unterstützen wir Kontext Ausdrücke für die Bereichs Aufteilung. Vor allem können Sie Bereichs Start-und Endwerte im Kontext eines Bereichs aufteilen-Ausdrucks weglassen. In diesem Fall wendet der Compiler die folgenden Regeln an, um die vorgesehenen Trennzeichen für den Bereich abzuleiten:
 
-Wenn z. b. der Bereichs Start Wert weggelassen wird, wird der abherleitet Startwert 
-- ist 0 (null), wenn kein Schritt angegeben oder der angegebene Schritt positiv ist. 
-- die Länge des aufgeschnittenen Arrays minus 1, wenn der angegebene Schritt negativ ist. 
+* Wenn der Bereichs *Start* Wert weggelassen wird, wird der abherleitet Startwert
+  * ist 0 (null), wenn kein Schritt angegeben oder der angegebene Schritt positiv ist.  
+  * die Länge des aufgeschnittenen Arrays minus 1, wenn der angegebene Schritt negativ ist.
 
-Wenn der Wert für den Bereichs Endpunkt weggelassen wird, wird der abherende Endwert 
-- die Länge des aufgeschnittenen Arrays minus 1, wenn kein Schritt angegeben oder der angegebene Schritt positiv ist. 
-- ist 0 (null), wenn der angegebene Schritt negativ ist. 
+* Wenn der Wert für den Bereichs *Endpunkt* weggelassen wird, wird der abherende Endwert
+  * die Länge des aufgeschnittenen Arrays minus 1, wenn kein Schritt angegeben oder der angegebene Schritt positiv ist.
+  * ist 0 (null), wenn der angegebene Schritt negativ ist.
+
+Beispiele:
 
 ```qsharp
 let arr = [1,2,3,4,5,6];
@@ -318,18 +318,21 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### <a name="copy-and-update-expressions"></a>Copy-und Update-Ausdrücke
 
-Da es sich bei allen Q #-Typen um Werttypen handelt – wobei die Qubits eine etwas besondere Rolle einnehmen – wird formal eine "Kopie" erstellt, wenn ein Wert an ein Symbol gebunden ist oder wenn ein Symbol erneut erstellt wird. Dies heißt, dass das Verhalten von Q # identisch ist, wenn eine Kopie bei der Zuweisung erstellt wurde.
-Natürlich werden in der Praxis nur die relevanten Teile bei Bedarf neu erstellt. 
+Da es sich bei allen Q #-Typen um Werttypen handelt (wobei die Qubits eine etwas besondere Rolle einnehmen), wird formal eine "Kopie" erstellt, wenn ein Wert an ein Symbol gebunden ist oder wenn ein Symbol erneut erstellt wird. Das Verhalten von Q # ist also das gleiche wie bei der Erstellung einer Kopie mit einem Zuweisungs Operator. 
 
-Dies gilt insbesondere für Arrays.
-Insbesondere ist es nicht möglich, Array Elemente zu aktualisieren. Zum Ändern eines vorhandenen Arrays muss ein *Kopier-und Aktualisierungs* Mechanismus genutzt werden.
+Natürlich werden in der Praxis nur die relevanten Teile nach Bedarf neu erstellt. Dies wirkt sich darauf aus, wie Arrays kopiert werden, da Array Elemente nicht aktualisiert werden können. Zum Ändern eines vorhandenen Arrays muss ein *Kopier-und Aktualisierungs* Mechanismus genutzt werden.
 
-Neue Arrays können über *Kopier-und Update* Ausdrücke aus vorhandenen erstellt werden.
-Ein Copy-and-Update-Ausdruck ist ein Ausdruck der Form `expression1 w/ expression2 <- expression3` , wobei `expression1` für einen Typ vom Typ sein muss `T[]` `T` .
-Die zweite `expression2` definiert die Indizes der Elemente, die im Vergleich zum Array in geändert werden sollen, `expression1` und muss entweder vom Typ `Int` oder vom Typ sein `Range` .
-Wenn `expression2` vom Typ ist `Int` , `expression3` muss vom Typ sein `T` . Wenn `expression2` vom Typ ist `Range` , `expression3` muss vom Typ sein `T[]` .
+Sie können ein neues Array aus einem vorhandenen Array mithilfe von *Copy-und Update-* Ausdrücken erstellen, die die Operatoren `w/` und verwenden `<-` .
+Ein Copy-and-Update-Ausdruck ist ein Ausdruck der Form `expression1 w/ expression2 <- expression3` , wobei
 
-Ein Copy-and-Update-Ausdruck erstellt `arr w/ idx <- value` ein neues Array, bei dem alle Elemente auf das entsprechende Element in festgelegt `arr` sind, mit Ausnahme der Elemente in `idx` , die auf die 1 (n) in festgelegt sind `value` . Wenn z. b. `arr` ein Array enthält `[0,1,2,3]` , dann 
+* `expression1`muss `T[]` für einen Typ vom Typ sein `T` .
+* `expression2`definiert, welche Indizes in dem in angegebenen Array `expression1` geändert werden. `expression2`muss entweder vom Typ `Int` oder vom Typ sein `Range` .
+* `expression3`der Wert (n), der zum Aktualisieren von Elementen in verwendet wird `expression1` , basierend auf den in angegebenen Indizes `expression2` . Wenn `expression2` vom Typ ist `Int` , `expression3` muss vom Typ sein `T` . Wenn `expression2` vom Typ ist `Range` , `expression3` muss vom Typ sein `T[]` .
+
+Beispielsweise erstellt der Copy-and-Update-Ausdruck `arr w/ idx <- value` ein neues Array mit allen Elementen, die auf die entsprechenden Elemente in festgelegt sind `arr` , mit Ausnahme der durch angegebenen Elemente `idx` , die auf den Wert (e) in festgelegt ist `value` . 
+
+`arr`Das angegebene enthält das Array. `[0,1,2,3]` 
+
 - `arr w/ 0 <- 10`ist das Array `[10,1,2,3]` .
 - `arr w/ 2 <- 10`ist das Array `[0,1,10,3]` .
 - `arr w/ 0..2..3 <- [10,12]`ist das Array `[10,1,12,3]` .
@@ -338,7 +341,7 @@ Ein Copy-and-Update-Ausdruck erstellt `arr w/ idx <- value` ein neues Array, bei
 
 Ähnliche Ausdrücke sind für benannte Elemente in benutzerdefinierten Typen vorhanden. 
 
-Beachten Sie beispielsweise den-Typ. 
+Nehmen Sie z. b. den Typ. 
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
@@ -365,50 +368,46 @@ for (i in 1..N) {
 
 ### <a name="arrays-of-callables"></a>Arrays von callables 
 
-Beachten Sie, dass weitere Details zu Aufruf baren Typen unten und auf der nächsten Seite, [Vorgänge und Funktionen in f #](xref:microsoft.quantum.guide.operationsfunctions)gefunden werden können.
+Sie können auch ein Array von callables erstellen.
 
-Wenn der allgemeine Elementtyp ein Vorgang oder Funktionstyp ist, müssen alle Elemente die gleichen Eingabe-und Ausgabetypen aufweisen.
-Der Elementtyp des Arrays unterstützt alle Funktoren, die von allen Elementen unterstützt werden.
-Wenn z. b. `Op1` , `Op2` und `Op3` alle sind, unterstützt, unterstützt und unterstützt jedoch `Qubit[] => Unit` `Op1` `Adjoint` `Op2` `Controlled` `Op3` beide:
+* Wenn der allgemeine Elementtyp ein Vorgang oder Funktionstyp ist, müssen alle Elemente die gleichen Eingabe-und Ausgabetypen aufweisen.
+* Der Elementtyp des Arrays unterstützt alle [Funktoren](xref:microsoft.quantum.guide.operationsfunctions) , die von allen Elementen unterstützt werden.
+Wenn z. b. `Op1` , `Op2` und `Op3` alle Vorgänge sind, unterstützt, unterstützt und unterstützt jedoch `Qubit[] => Unit` `Op1` `Adjoint` `Op2` `Controlled` `Op3` beide:
+  * `[Op1, Op2]`ist ein Array von `(Qubit[] => Unit)` Vorgängen.
+  * `[Op1, Op3]`ist ein Array von `(Qubit[] => Unit is Adj)` Vorgängen.
+  * `[Op2, Op3]`ist ein Array von `(Qubit[] => Unit is Ctl)` Vorgängen.
 
-- `[Op1, Op2]`ist ein Array von `(Qubit[] => Unit)` Vorgängen.
-- `[Op1, Op3]`ist ein Array von `(Qubit[] => Unit is Adj)` Vorgängen.
-- `[Op2, Op3]`ist ein Array von `(Qubit[] => Unit is Ctl)` Vorgängen.
+Während die Vorgänge `(Qubit[] => Unit is Adj)` und `(Qubit[] => Unit is Ctl)` den gemeinsamen Basistyp aufweisen `(Qubit[] => Unit)` , verwenden *Arrays* dieser Vorgänge jedoch keinen gemeinsamen Basistyp.
 
-Während `(Qubit[] => Unit is Adj)` und `(Qubit[] => Unit is Ctl)` Vorgänge den allgemeinen Basistyp haben `(Qubit[] => Unit)` , beachten Sie jedoch, dass Arrays *of* dieser Operatoren keinen gemeinsamen Basistyp aufweisen. Beispielsweise `[[Op1], [Op2]]` gibt derzeit einen Fehler aus, da versucht wird, ein Array der nicht kompatiblen Array Typen und zu `(Qubit[] => Unit is Adj)[]` Erstellen `(Qubit[] => Unit is Ctl)[]` .
+Beispielsweise gibt `[[Op1], [Op2]]` derzeit einen Fehler aus, da versucht wird, ein Array der beiden inkompatiblen Array Typen und zu erstellen `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` .
 
+Weitere Informationen zu callables finden Sie unter [Aufruf Bare Ausdrücke](#callable-expressions) auf dieser Seite oder [in den Vorgängen und Funktionen in f #](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## <a name="conditional-expressions"></a>Bedingte Ausdrücke
 
-Bei zwei anderen Ausdrücken desselben Typs und eines booleschen Ausdrucks kann der bedingte Ausdruck mit dem Fragezeichen `?` und dem senkrechten Strich gebildet werden `|` .
-Beispielsweise `a==b ? c | d` .
-In diesem Beispiel ist der Wert des bedingten Ausdrucks, wenn den `c` Wert `a==b` true hat und wenn der Wert `d` false ist.
+Wenn zwei Ausdrücke desselben Typs und ein boolescher Ausdruck verwendet werden, bilden Sie einen Bedingungs Ausdruck mithilfe des Fragezeichens, `?` und des vertikalen Balkens `|` . Gibt `a==b ? c | d` an, dass der Wert des bedingten Ausdrucks ist, wenn den Wert `c` `a==b` true hat und wenn der Wert `d` false ist.
 
 ### <a name="conditional-expressions-with-callables"></a>Bedingte Ausdrücke mit callables
 
-Die beiden Ausdrücke können zu Vorgängen ausgewertet werden, die über die gleichen Eingaben und Ausgaben verfügen, aber unterschiedliche Funktions tüktoren unterstützen.
-In diesem Fall ist der Typ des bedingten Ausdrucks ein Vorgang mit diesen Eingaben und Ausgaben, der alle von beiden Ausdrücken unterstützten Funktoren unterstützt.
+Bedingte Ausdrücke können zu Vorgängen ausgewertet werden, die über die gleichen Eingaben und Ausgaben verfügen, aber unterschiedliche Funktions tüktoren unterstützen. In diesem Fall ist der Typ des bedingten Ausdrucks ein Vorgang mit Eingaben und Ausgaben, die alle von beiden Ausdrücken unterstützten Funktoren unterstützen.
 Wenn z. b. `Op1` , `Op2` und `Op3` alle sind, unterstützt, unterstützt und unterstützt jedoch `Qubit[]=>Unit` `Op1` `Adjoint` `Op2` `Controlled` `Op3` beide:
 
 - `flag ? Op1 | Op2`ist ein- `(Qubit[] => Unit)` Vorgang.
 - `flag ? Op1 | Op3`ist ein- `(Qubit[] => Unit is Adj)` Vorgang.
 - `flag ? Op2 | Op3`ist ein- `(Qubit[] => Unit is Ctl)` Vorgang.
 
-Wenn einer der beiden möglichen Ergebnis Ausdrücke einen Funktions-oder einen Vorgangs aufzurufen enthält, findet dieser Vorgang nur statt, wenn das Ergebnis das Ergebnis ist, das der Wert des Aufrufes ist.
-`a==b ? C(qs) | D(qs)`Wenn Beispiels `a==b` Weise true ist, wird der `C` Vorgang aufgerufen, und wenn false ist, wird nur `D` aufgerufen.
-Dies ähnelt der Kurzschluss in anderen Sprachen.
+Wenn einer der beiden möglichen Ergebnis Ausdrücke einen Funktions-oder einen Vorgangs aufzurufen enthält, findet dieser Vorgang nur statt, wenn das Ergebnis das Ergebnis ist, das der Wert des Aufrufes ist. Wenn z. b. `a==b ? C(qs) | D(qs)` `a==b` true ist, wird der `C` Vorgang aufgerufen, und wenn false ist, wird nur der `D` Vorgang aufgerufen. Diese Vorgehensweise ähnelt der *Kurzschluss* in anderen Sprachen.
 
 ## <a name="callable-expressions"></a>Aufruf Bare Ausdrücke
 
-Ein Aufruf bares Literalelement ist der Name eines Vorgangs oder einer Funktion, der im Kompilierungs Bereich definiert ist.
-Beispielsweise ist ein vorgangsliteral, `X` das auf den `X` -Standard Bibliotheks Vorgang verweist, und `Message` ist ein Funktionsliteral, das auf die Standard Bibliotheks `Message` Funktion verweist.
+Ein Aufruf bares Literalelement ist der Name eines Vorgangs oder einer Funktion, der im Kompilierungs Bereich definiert ist. Beispielsweise ist ein vorgangsliteral, `X` das auf den `X` -Standard Bibliotheks Vorgang verweist, und `Message` ist ein Funktionsliteral, das auf die Standard Bibliotheks `Message` Funktion verweist.
 
 Wenn ein Vorgang das `Adjoint` Funktor unterstützt, `Adjoint op` ist ein Vorgangs Ausdruck.
 Entsprechend `Controlled` `Controlled op` ist ein Vorgangs Ausdruck, wenn der Vorgang das Funktor unterstützt.
-Die Typen dieser Ausdrücke werden bei Aufrufen von [Vorgangs Spezialisierungs](xref:microsoft.quantum.guide.operationsfunctions#calling-operation-specializations)Vorgängen angegeben.
+Weitere Informationen zu den Typen dieser Ausdrücke finden Sie unter [Aufrufen von Vorgangs Spezialisierungs](xref:microsoft.quantum.guide.operationsfunctions#calling-operation-specializations)Vorgängen.
 
-Funktoren ( `Adjoint` und `Controlled` ) werden genauer gebunden als alle anderen Operatoren, mit Ausnahme des Unwrap `!` -Operators und der Array Indizierung mit [] '.
-Folglich sind die folgenden Vorgänge zulässig, vorausgesetzt, dass die Vorgänge die verwendeten Funktoren unterstützen:
+Funktoren ( `Adjoint` und `Controlled` ) werden genauer gebunden als alle anderen Operatoren, mit Ausnahme des Unwrap `!` -Operators und der Array Indizierung mit `[ ]` .
+Daher sind die folgenden Elemente gültig, vorausgesetzt, dass die-Vorgänge die verwendeten Funktoren unterstützen:
 
 ```qsharp
 Adjoint Op(qs)
@@ -419,27 +418,25 @@ Adjoint WrappedOp!(qs)
 
 ### <a name="type-parameterized-callable-expressions"></a>Typparametrisierte Aufruf Bare Ausdrücke
 
-Ein Aufruf bares Literale kann als Wert verwendet werden, z. b. um einer Variablen zuzuweisen oder um Sie an eine andere Aufruf Bare zu übergeben.
-In diesem Fall müssen Sie, wenn die Aufruf Bare [Typparameter](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)aufweist, als Teil des Aufruf baren Werts angegeben werden.
-Ein Aufruf barer Wert darf keine nicht angegebenen Typparameter aufweisen.
+Sie können ein Aufruf bares Literalzeichen als Wert verwenden, um es z. b. einer Variablen zuzuweisen oder es an eine andere Aufruf Bare zu übergeben. Wenn die Aufruf Bare [Typparameter](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)enthält, müssen Sie in diesem Fall die Parameter als Teil des Aufruf baren Werts angeben.
 
-Wenn beispielsweise `Fun` eine Funktion mit der Signatur ist `'T1->Unit` :
+Ein Aufruf barer Wert darf keine nicht angegebenen Typparameter aufweisen. Wenn z. b. `Fun` eine Funktion mit der Signatur ist `'T1->Unit` :
 
 ```qsharp
 let f = Fun<Int>;            // f is (Int->Unit).
 let g = Fun;                 // This causes a compilation error.
-SomeOtherFun(Fun<Double>);   // A (Double->Unit) is passed to SomOtherFun.
+SomeOtherFun(Fun<Double>);   // A (Double->Unit) is passed to SomeOtherFun.
 SomeOtherFun(Fun);           // This also causes a compilation error.
 ```
 
 ## <a name="callable-invocation-expressions"></a>Aufruf Bare Aufruf Ausdrücke
 
-Bei einem Aufruf baren Ausdruck (Operation oder Funktion) und einem Tupelausdruck des Eingabetyps der Aufruf baren Signatur kann ein Aufruf Ausdruck gebildet werden, indem der Tupelausdruck an den Aufruf baren Ausdruck angefügt wird.
+Wenn ein Aufruf barer Ausdruck (Vorgang oder Funktion) und ein Tupelausdruck des Eingabetyps der Aufruf baren Signatur angegeben werden, können Sie einen *Aufruf Ausdruck* bilden, indem Sie den Tupelausdruck an den Aufruf baren Ausdruck anhängen.
 Der Typ des Aufruf Ausdrucks ist der Ausgabetyp der Signatur des Callable-Ausdrucks.
 
 Wenn z. b `Op` . ein Vorgang mit der Signatur ist `((Int, Qubit) => Double)` , `Op(3, qubit1)` ist ein Ausdruck vom Typ `Double` .
 Ebenso ist, wenn `Sin` eine Funktion mit der Signatur ist `(Double -> Double)` , `Sin(0.1)` ein Ausdruck vom Typ `Double` .
-Wenn schließlich `Builder` eine Funktion mit der Signatur ist `(Int -> (Int -> Int))` , dann `Builder(3)` ist eine Funktion von in bis int.
+Wenn schließlich `Builder` eine Funktion mit der Signatur ist `(Int -> (Int -> Int))` , dann `Builder(3)` ist eine Funktion von `Int` zu `Int` .
 
 Zum Aufrufen des Ergebnisses eines Aufruf baren Ausdrucks ist ein zusätzliches Paar von Klammern um den Aufruf baren Ausdruck erforderlich.
 Um also das Ergebnis des Aufrufs `Builder` aus dem vorherigen Absatz aufzurufen, ist die korrekte Syntax:
@@ -448,12 +445,12 @@ Um also das Ergebnis des Aufrufs `Builder` aus dem vorherigen Absatz aufzurufen,
 (Builder(3))(2)
 ```
 
-Wenn Sie einen [vom Typ parametrisierten](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) Aufruf baren aufrufen, können die tatsächlichen Typparameter in spitzen Klammern `<` und `>` nach dem Aufruf baren Ausdruck angegeben werden.
-Dies ist in der Regel unnötig, da der Q #-Compiler die eigentlichen Typen ableiten wird.
+Wenn Sie einen [vom Typ parametrisierten](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) Aufruf baren aufrufen, können Sie die tatsächlichen Typparameter innerhalb von spitzen Klammern `< >` nach dem Aufruf baren Ausdruck angeben.
+Diese Aktion ist in der Regel unnötig, weil der Q #-Compiler die eigentlichen Typen leitet.
 Es *ist* jedoch für die [partielle Anwendung](xref:microsoft.quantum.guide.operationsfunctions#partial-application) erforderlich, wenn ein typparametrisiertes Argument nicht angegeben wird.
-Dies ist manchmal auch nützlich, wenn die Übergabe von Vorgängen mit unterschiedlichen Funktoren unterstützt wird.
+Dies ist auch nützlich, wenn die Übergabe von Vorgängen mit unterschiedlichen Funktoren unterstützt wird.
 
-Wenn beispielsweise `Func` die Signatur aufweist und die Signatur und die Signatur `('T1, 'T2, 'T1) -> 'T2` aufweisen, `Op1` `Op2` `(Qubit[] => Unit is Adj)` `Op3` `(Qubit[] => Unit)` um `Func` mit `Op1` als erstes Argument, `Op2` als zweites und `Op3` als drittes aufzurufen:
+Wenn z. b. die Signatur hat und die Signatur und die Signatur aufweisen, muss `Func` `('T1, 'T2, 'T1) -> 'T2` `Op1` `Op2` `(Qubit[] => Unit is Adj)` `Op3` `(Qubit[] => Unit)` `Func` mit `Op1` als erstes Argument, `Op2` als zweites und `Op3` als drittes aufgerufen werden:
 
 ```qsharp
 let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3);
@@ -464,17 +461,17 @@ Die Typspezifikation ist erforderlich `Op3` , da und `Op1` unterschiedliche Type
 
 ## <a name="operator-precedence"></a>Operatorrangfolge
 
-Alle binären Operatoren sind mit Ausnahme von rechts assoziativ `^` .
+* Alle binären Operatoren sind mit Ausnahme von rechts assoziativ `^` .
 
-Eckige Klammern `[` und `]` , für das Aufteilen von Arrays und Indizierung, binden vor jedem Operator.
+* Eckige Klammern (für das Aufteilen `[ ]` und Indizieren von Arrays) werden vor jedem Operator gebunden.
 
-Die Funktoren `Adjoint` und die `Controlled` Bindung nach der Array Indizierung, aber vor allen anderen Operatoren.
+* Die Funktoren `Adjoint` und die `Controlled` Bindung nach der Array Indizierung, aber vor allen anderen Operatoren.
 
-Klammern für Vorgangs-und Funktionsaufrufe werden auch vor jedem Operator gebunden, aber nach der Array Indizierung und den Funktoren.
+* Klammern für Vorgangs-und Funktionsaufrufe werden auch vor jedem Operator gebunden, aber nach der Array Indizierung und den Funktoren.
 
-Operatoren in Rangfolge, vom höchsten zum niedrigsten:
+Q #-Operatoren in Rangfolge, vom höchsten zum niedrigsten:
 
-Betreiber | Ständigkeit | BESCHREIBUNG | Operanden Typen
+Operator | Ständigkeit | BESCHREIBUNG | Operanden Typen
 ---------|----------|---------|---------------
  nachträ`!` | Unäroperatoren | Aufheben der Umschließung | Ein beliebiger benutzerdefinierter Typ
  `-`, `~~~`, `not` | Unäroperatoren | Numerische negative, bitweise Komplement logische Negation | `Int`, `BigInt` oder `Double` für `-` , `Int` `BigInt` `~~~` `Bool` für`not`
@@ -495,4 +492,4 @@ Betreiber | Ständigkeit | BESCHREIBUNG | Operanden Typen
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nun, da Sie mit Ausdrücken in q # arbeiten können, können Sie sich mit den [Vorgängen und Funktionen in q #](xref:microsoft.quantum.guide.operationsfunctions) vertraut machen, um zu erfahren, wie Sie Vorgänge und Funktionen definieren und aufzurufen.
+Nun, da Sie mit Ausdrücken in q # arbeiten können, fahren Sie mit den [Vorgängen und Funktionen in q #](xref:microsoft.quantum.guide.operationsfunctions) fort, um zu erfahren, wie Sie Vorgänge und Funktionen definieren und aufzurufen.

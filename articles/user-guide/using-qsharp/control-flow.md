@@ -6,43 +6,41 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: 1f1b641563fe35879abeee32b4f0aeeb7001b1a0
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 0cf62a128170bd0c28ff77f00fc23414567b1ea4
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84326539"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415302"
 ---
 # <a name="control-flow-in-q"></a>Ablauf Steuerung in Q #
 
-Innerhalb einer Operation oder Funktion wird jede Anweisung in der richtigen Reihenfolge ausgeführt, ähnlich wie bei den gängigsten, imperativen, klassischen Sprachen.
-Diese Ablauf Steuerung kann jedoch auf drei verschiedene Arten geändert werden:
+Innerhalb eines Vorgangs oder einer Funktion wird jede Anweisung in der richtigen Reihenfolge ausgeführt, ähnlich wie andere gängige imperative klassische Sprachen.
+Allerdings können Sie die Ablauf Steuerung auf drei verschiedene Arten ändern:
 
-- `if`Äußerungen
-- `for`Loops
-- `repeat`-`until`Loops
+* `if`Äußerungen
+* `for`Loops
+* `repeat-until-success`Loops
 
-Wir verzögern die Erörterung der letzteren weiter [unten](#repeat-until-success-loop).
-Die `if` `for` Ablaufsteuerungs-Konstrukte und sind jedoch für die meisten klassischen Programmiersprachen in einem vertrauten Sinn.
+Die `if` `for` Ablaufsteuerungskonstrukte und sind für die meisten klassischen Programmiersprachen vertraut. [`Repeat-until-success`](#repeat-until-success-loop)Schleifen werden später in diesem Artikel erläutert.
 
-Wichtig ist, `for` dass Schleifen und `if` Anweisungen sogar in Vorgängen verwendet werden können, für die Spezialisierungs Vorgänge automatisch generiert werden. In diesem Fall kehrt das Adjoint einer `for` Schleife die Richtung um und übernimmt das Adjoint der einzelnen Iterationen.
-Dies folgt dem Prinzip "Schuh-und-SOCKS": Wenn Sie das Einfügen von SOCKS und dann auf Schuhe rückgängig machen möchten, müssen Sie die einfügende Schuhe rückgängig machen und dann auf SOCKS setzen.
-Es funktioniert ausgesprochen weniger gut, wenn Sie versuchen, die SOCKS zu wiederholen, während Sie Ihre Schuhe noch nicht nutzen!
+Wichtig ist, `for` dass Schleifen und `if` Anweisungen in Vorgängen verwendet werden können, für die [Spezialisierungs](xref:microsoft.quantum.guide.operationsfunctions) Vorgänge automatisch generiert werden. In diesem Szenario kehrt das Adjoint einer `for` Schleife die Richtung um und übernimmt das Adjoint der einzelnen Iterationen.
+Diese Aktion folgt dem Prinzip "Schuh-und-SOCKS": Wenn Sie das Einfügen von SOCKS und den Schuhen rückgängig machen möchten, müssen Sie die einfügende Schuhe rückgängig machen und dann auf die SOCKS setzen. 
 
 ## <a name="if-else-if-else"></a>If, else-if, Else
 
 Die- `if` Anweisung unterstützt die bedingte Ausführung.
-Sie besteht aus dem Schlüsselwort `if` , einer offenen Klammer `(` , einem booleschen Ausdruck, einer schließenden Klammer `)` und einem Anweisungsblock (der _Then_ -Block).
-Auf diese kann eine beliebige Anzahl von else-if-Klauseln folgen, von denen jede aus dem Schlüsselwort `elif` , einer offenen Klammer `(` , einem booleschen Ausdruck, einer schließenden Klammer `)` und einem Anweisungsblock besteht (der _else-if-_ Block).
+Er besteht aus dem Schlüsselwort `if` , einem booleschen Ausdruck in Klammern und einem Anweisungsblock (der _Then_ -Block).
+Optional kann eine beliebige Anzahl von else-if-Klauseln befolgt werden, von denen jeder aus dem Schlüsselwort `elif` , einem booleschen Ausdruck in Klammern und einem Anweisungsblock (der _else-if-_ Block) besteht.
 Schließlich kann die Anweisung optional mit einer Else-Klausel abgeschlossen werden, die aus dem Schlüsselwort `else` gefolgt von einem anderen Anweisungsblock (dem _else_ -Block) besteht.
 
-Die `if` Bedingung wird ausgewertet, und wenn der Wert true ist, wird der then-Block ausgeführt.
-Wenn die Bedingung false ist, wird die erste else-if-Bedingung ausgewertet. Wenn der Wert true ist, wird der Else-If-Block ausgeführt.
-Andernfalls wird der zweite Else-If-Block getestet, dann der dritte, usw., bis entweder eine-Klausel mit einer true-Bedingung gefunden wird oder keine else-if-Klauseln mehr vorhanden sind.
-Wenn die ursprüngliche if-Bedingung und alle else-if-Klauseln als false ausgewertet werden, wird der Else-Block ausgeführt, wenn ein solcher angegeben wurde.
+Die `if` Bedingung wird ausgewertet, und wenn der Wert *true*ist, wird der *Then* -Block ausgeführt.
+Wenn die Bedingung *false*ist, wird die erste else-if-Bedingung ausgewertet. Wenn dies zutrifft, wird der *else-if-* Block ausgeführt.
+Andernfalls wertet der zweite Else-If-Block aus, und dann der dritte, usw., bis entweder eine-Klausel mit einer true-Bedingung gefunden wird oder keine else-if-Klauseln mehr vorhanden sind.
+Wenn die ursprüngliche *if* -Bedingung und alle else-if-Klauseln als *false*ausgewertet werden, wird der *else* -Block ausgeführt, falls angegeben.
 
 Beachten Sie, dass der ausgeführte Block in seinem eigenen Bereich ausgeführt wird.
-Bindungen, die innerhalb eines- `if` ,-oder-Blocks erstellt werden, `elif` `else` sind nach dem Ende nicht sichtbar.
+Bindungen, die innerhalb eines- `if` ,-oder-Blocks erstellt werden, `elif` `else` sind nach Beendigung des-Blocks nicht sichtbar.
 
 Beispiel:
 
@@ -67,20 +65,20 @@ if (i == 1) {
 }
 ```
 
-## <a name="for-loop"></a>For-Schleife
+## <a name="for-loop"></a>for-Schleife
 
-Die- `for` Anweisung unterstützt Iterationen über einen ganzzahligen Bereich oder über ein Array.
-Die-Anweisung besteht aus dem Schlüsselwort `for` , einer offenen Klammer `(` , gefolgt von einem Symbol oder einem Symbol Tupel, dem Schlüsselwort `in` , einem Ausdruck vom Typ `Range` oder Array, einer schließenden Klammer `)` und einem Anweisungsblock.
+Die- `for` Anweisung unterstützt Iterationen über einen ganzzahligen Bereich oder ein Array.
+Die-Anweisung besteht aus dem `for` -Schlüsselwort, gefolgt von einem Symbol-oder Symbol-Tupel, dem-Schlüsselwort `in` und einem Ausdruck vom Typ `Range` oder Array, alle in Klammern und einem Anweisungsblock.
 
-Der Anweisungsblock (der Hauptteil der Schleife) wird wiederholt ausgeführt, wobei die definierten Symbole (die Schleifen Variablen) an jeden Wert im Bereich oder Array gebunden sind.
-Beachten Sie, dass der Text nicht ausgeführt wird, wenn der Bereichs Ausdruck zu einem leeren Bereich oder Array ausgewertet wird.
+Der Anweisungsblock (der Hauptteil der Schleife) wird wiederholt ausgeführt, wobei das definierte Symbol (die Schleifenvariable) an jeden Wert im Bereich oder Array gebunden ist.
+Beachten Sie Folgendes: Wenn der Bereichs Ausdruck einen leeren Bereich oder ein leeres Array ergibt, wird der Text überhaupt nicht ausgeführt.
 Der Ausdruck wird vor der Eingabe der Schleife vollständig ausgewertet und ändert sich nicht, während die Schleife ausgeführt wird.
 
 Die Schleifenvariable wird an jedem Eingang an den Schleifen Text gebunden, und die Bindung am Ende des Texts wird aufgehoben.
-Insbesondere wird die Schleifenvariable nicht gebunden, nachdem die for-Schleife abgeschlossen wurde.
-Die Bindung der deklarierten Symbole ist unveränderlich und folgt denselben Regeln wie andere Variablen Bindungen. 
+Die Schleifenvariable wird nicht gebunden, nachdem die for-Schleife abgeschlossen wurde.
+Die Bindung der Schleifen Variablen ist unveränderlich und folgt denselben Regeln wie andere Variablen Bindungen. 
 
-Für einige Beispiele ist das unter `qubits` drücken ein Register von Qubits (d. h. vom Typ `Qubit[]` ). 
+In diesen Beispielen `qubits` ist ein Register von Qubits (d. h. vom Typ `Qubit[]` ). 
 
 ```qsharp
 // ...
@@ -101,15 +99,15 @@ for ((index, measured) in results) { // iterates over the tuple values in result
     }
 }
 ```
-Beachten Sie, dass wir am Ende den binären Operator "arithmetischer Shift-Left", "Details", `<<<` die in [numerischen Ausdrücken](xref:microsoft.quantum.guide.expressions#numeric-expressions) gefunden werden können, verwendet haben.
 
+Beachten Sie, dass wir am Ende den binären Operator "arithmetischer Shift-Left" () verwendet haben `<<<` . Weitere Informationen finden Sie unter [numerische Ausdrücke](xref:microsoft.quantum.guide.expressions#numeric-expressions).
 
 ## <a name="repeat-until-success-loop"></a>Repeat-Until-Success-Schleife
 
 Die Q #-Sprache ermöglicht eine klassische Ablauf Steuerung, die von den Ergebnissen der Messung von Qubits abhängig ist.
-Diese Funktion ermöglicht es wiederum, leistungsfähige, probabilistische Mini Anwendungen zu implementieren, die die berechnungskosten für die Implementierung von uniflüssen reduzieren können.
-Beispielsweise ist es einfach, so genannte *Wiederholungs-bis-Erfolg-* Muster (RUS) in Q # zu implementieren.
-Diese RUS-Muster sind probabilistische Programme, deren Kosten in Bezug auf elementare Gates *erwartungsgemäß* sind, aber für die die echten Kosten von einem tatsächlichen Testlauf und einem tatsächlichen Austausch der verschiedenen möglichen Verzweigungen abhängen.
+Diese Funktion ermöglicht es wiederum, leistungsstarke probabilistische Mini Anwendungen zu implementieren, die die berechnungskosten für die Implementierung von uniflüssen reduzieren können.
+Beispiele hierfür sind die RUS *-Muster (Repeat-Until-Success* ) in f #.
+Diese RUS-Muster sind probabilistische Programme, die zu den *erwarteten* niedrigen Kosten in Bezug auf elementare Gates gehören. die anfallenden Kosten hängen von der tatsächlichen Durchführung und der Überführung der zahlreichen möglichen Verzweigungen ab.
 
 Zum Vereinfachen von Wiederholungs-bis-Erfolg-Mustern (RUS) unterstützt Q # die-Konstrukte.
 
@@ -125,31 +123,33 @@ fixup {
 
 dabei `expression` ist ein beliebiger gültiger Ausdruck, der zu einem Wert vom Typ ausgewertet wird `Bool` .
 Der Schleifen Text wird ausgeführt, und anschließend wird die Bedingung ausgewertet.
-Wenn die Bedingung true ist, wird die-Anweisung abgeschlossen. Andernfalls wird das Fixup ausgeführt, und die Anweisung wird erneut ausgeführt, beginnend mit dem Schleifen Text.
+Wenn die Bedingung true ist, wird die-Anweisung abgeschlossen. Andernfalls wird der Fixup ausgeführt, und die Anweisung wird erneut ausgeführt, beginnend mit dem Schleifen Text.
 
-Alle drei Teile einer Wiederholung/bis-Schleife (der Text, der Test und das Fixup) werden als einzelner Bereich *für jede Wiederholung*behandelt, sodass im Text gebundene Symbole im Test und im Fixup verfügbar sind.
-Wenn die Ausführung der Fixup-Anweisung abgeschlossen ist, wird der Bereich für die-Anweisung beendet, sodass im Text-oder Fixup-Bereich vorgenommene Symbol Bindungen in nachfolgenden Wiederholungen nicht verfügbar sind.
+Alle drei Teile einer RUS-Schleife (der Text, der Test und das Fixup) werden als einzelner Bereich *für jede Wiederholung*behandelt, sodass im Text gebundene Symbole sowohl im Test als auch im Fixup verfügbar sind.
+Wenn Sie die Ausführung des Fixup abschließen, wird der Gültigkeitsbereich für die-Anweisung beendet, sodass Symbol Bindungen, die während des Texts oder Fixup erstellt werden, in nachfolgenden Wiederholungen nicht verfügbar sind.
 
 Außerdem ist die- `fixup` Anweisung häufig hilfreich, aber nicht immer erforderlich.
 In Fällen, in denen er nicht benötigt wird, wird das Konstrukt
+
 ```qsharp
 repeat {
     // do stuff
 }
 until (expression);
 ```
+
 ist auch ein gültiges RUS-Muster.
 
-Am unteren Rand dieser Seite werden einige [Beispiele für RUS-Schleifen](#repeat-until-success-examples)vorgestellt.
+Weitere Beispiele und Details finden Sie in diesem Artikel unter [Wiederholungs-bis-Erfolg-Beispiele](#repeat-until-success-examples) .
 
 > [!TIP]   
-> Vermeiden Sie die Verwendung von Wiederholungs-bis-Erfolg-Schleifen innerhalb von Funktionen. Die entsprechende Funktionalität wird von while-Schleifen in Funktionen bereitgestellt. 
+> Vermeiden Sie die Verwendung von Wiederholungs-bis-Erfolg-Schleifen innerhalb von Funktionen. Verwenden Sie *while* -Schleifen, um die entsprechende Funktionalität in Funktionen bereitzustellen. 
 
 ## <a name="while-loop"></a>While-Schleife
 
-Wiederholungs-bis-Erfolg-Muster verfügen über eine sehr Quantum-spezifische-Anmerkung. Sie werden häufig in bestimmten Klassen von Quantum-Algorithmen verwendet. Dies ist daher das dedizierte Sprachkonstrukt in f #. Allerdings müssen Schleifen, die basierend auf einer Bedingung unterbrechen und deren Ausführungsdauer zur Kompilierzeit nicht bekannt ist, mit bestimmter Sorgfalt in einer Quantum-Laufzeit behandelt werden. Die Verwendung in Funktionen andererseits ist nicht problematisch, da diese nur Code enthalten, der auf herkömmlicher (nicht Quantum-) Hardware ausgeführt wird. 
+Wiederholungs-bis-Erfolg-Muster verfügen über eine sehr Quantum-spezifische-Anmerkung. Sie werden häufig in bestimmten Klassen von Quantum-Algorithmen verwendet. Dies ist also das dedizierte Sprachkonstrukt in f #. Schleifen, die basierend auf einer Bedingung unterbrechen und deren Ausführungsdauer zur Kompilierzeit somit unbekannt ist, werden jedoch mit einer bestimmten Sorgfalt in einer Quantum-Laufzeit behandelt. Die Verwendung innerhalb von Funktionen ist jedoch nicht problematisch, da diese Schleifen nur Code enthalten, der auf herkömmlicher (nicht Quantum-) Hardware ausgeführt wird. 
 
-F # unterstützt daher die Verwendung von while-Schleifen nur innerhalb von Functions. Eine- `while` Anweisung besteht aus dem Schlüsselwort `while` , einer offenen Klammer `(` , einer Bedingung (d. h. einem booleschen Ausdruck), einer schließenden Klammer `)` und einem Anweisungsblock.
+F # unterstützt daher die Verwendung von while-Schleifen innerhalb von Functions. Eine- `while` Anweisung besteht aus dem Schlüsselwort `while` , einem booleschen Ausdruck in Klammern und einem Anweisungsblock.
 Der Anweisungsblock (der Text der Schleife) wird ausgeführt, solange die Bedingung als ausgewertet wird `true` .
 
 ```qsharp
@@ -161,18 +161,10 @@ while (index < Length(arr) && item < 0) {
 }
 ```
 
-
 ## <a name="return-statement"></a>Return-Anweisung
 
 Die Return-Anweisung beendet die Ausführung eines Vorgangs oder einer Funktion und gibt einen Wert an den Aufrufer zurück.
 Er besteht aus dem Schlüsselwort `return` , gefolgt von einem Ausdruck des entsprechenden Typs und einem abschließenden Semikolon.
-
-Ein Aufruf bares Element, das ein leeres Tupel zurückgibt, `()` erfordert keine Return-Anweisung.
-Wenn eine frühe Beendigung gewünscht ist, `return ()` kann in diesem Fall verwendet werden.
-Aufruf Bare Elemente, die einen beliebigen anderen Typ zurückgeben, erfordern eine abschließende Return-Anweisung.
-
-Es gibt keine maximale Anzahl von Return-Anweisungen innerhalb eines Vorgangs.
-Der Compiler gibt möglicherweise eine Warnung aus, wenn Anweisungen einer Return-Anweisung in einem-Block folgen.
 
 Beispiel:
 ```qsharp
@@ -180,23 +172,27 @@ return 1;
 ```
 oder
 ```qsharp
-return ();
-```
-oder
-```qsharp
 return (results, qubits);
 ```
 
+* Ein Aufruf bares Element, das ein leeres Tupel zurückgibt, `()` erfordert keine Return-Anweisung.
+* Verwenden Sie, um eine frühe Beendigung des Vorgangs oder der Funktion anzugeben `return ();` .
+Aufruf Bare Elemente, die einen beliebigen anderen Typ zurückgeben, erfordern eine abschließende Return-Anweisung.
+* Es gibt keine maximale Anzahl von Return-Anweisungen innerhalb eines Vorgangs.
+Der Compiler gibt möglicherweise eine Warnung aus, wenn Anweisungen einer Return-Anweisung in einem-Block folgen.
+
+   
 ## <a name="fail-statement"></a>Fail-Anweisung
 
 Die Fail-Anweisung beendet die Ausführung eines Vorgangs und gibt einen Fehlerwert an den Aufrufer zurück.
 Er besteht aus dem Schlüsselwort `fail` , gefolgt von einer Zeichenfolge und einem abschließenden Semikolon.
-Die Zeichenfolge wird als Fehlermeldung an den klassischen Treiber zurückgegeben.
+Die-Anweisung gibt die Zeichenfolge an den klassischen Treiber als Fehlermeldung zurück.
 
 Es gibt keine Einschränkung für die Anzahl der Fail-Anweisungen innerhalb eines Vorgangs.
 Der Compiler gibt möglicherweise eine Warnung aus, wenn-Anweisungen einer Fail-Anweisung innerhalb eines-Blocks folgen.
 
 Beispiel:
+
 ```qsharp
 fail $"Impossible state reached";
 ```
@@ -207,9 +203,9 @@ fail $"Syndrome {syn} is incorrect";
 
 ## <a name="repeat-until-success-examples"></a>Beispiele für Wiederholung bis zum Erfolg
 
-### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a>RUS-Muster für einzelne Qubit-Drehung über eine irrationale Achse 
+### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a>RUS-Muster für Single-Qubit-Drehung über eine irrationale Achse 
 
-In einem typischen Anwendungsfall implementiert der folgende Q #-Vorgang eine Drehung um eine irrationale Achse von $ (I + 2i Z)/\sqrt {5} $ in der Bloch-Kugel. Dies wird mit einem bekannten RUS-Muster erreicht:
+In einem typischen Anwendungsfall implementiert der folgende Q #-Vorgang eine Drehung um eine irrationale Achse von $ (I + 2i Z)/\sqrt {5} $ in der Bloch-Kugel. Die Implementierung verwendet ein bekanntes RUS-Muster:
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -232,9 +228,9 @@ operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
 }
 ```
 
-### <a name="rus-loop-with-mutable-variable-in-scope"></a>RUS-Schleife mit änderbarer Variable im Gültigkeitsbereich
+### <a name="rus-loop-with-a-mutable-variable-in-scope"></a>RUS-Schleife mit einer änderbaren Variablen im Gültigkeitsbereich
 
-Dieses Beispiel zeigt die Verwendung einer änderbaren Variablen `finished` , die sich im Gültigkeitsbereich der gesamten Repeat-Until-Fixup-Schleife befindet und die vor der Schleife initialisiert und im fixupschritt aktualisiert wird.
+Dieses Beispiel zeigt die Verwendung einer änderbaren Variablen, `finished` die innerhalb des Gültigkeits Bereichs der gesamten Repeat-Until-Fixup-Schleife liegt und die vor der Schleife initialisiert und im fixupschritt aktualisiert wird.
 
 ```qsharp
 mutable iter = 1;
@@ -251,7 +247,7 @@ fixup {
 
 ### <a name="rus-without-fixup"></a>RUS ohne`fixup`
 
-Der folgende Code ist z. b. eine probabilistische Verbindung, die ein wichtiges Drehungs Gate implementiert $V _3 = (\boldone + 2 i Z)/\sqrt {5} $ mithilfe der `H` -und- `T` Gates.
+Dieses Beispiel zeigt eine RUS-Schleife ohne den fixupschritt. Der Code ist eine probabilistische Verbindung, die ein wichtiges Drehungs Gate implementiert $V _3 = (\boldone + 2 i)/\sqrt {5} $ mithilfe von `H` und `T` Gates.
 Die Schleife wird im Durchschnitt in $ \frac {8} {5} $ Wiederholungen beendet.
 Weitere Informationen finden Sie [*unter Repeat-Until-Success: nicht deterministische Zerlegung von Single-Qubit-uniflüssen*](https://arxiv.org/abs/1311.1074) ("Petznick" und "svore", 2014).
 
@@ -277,8 +273,14 @@ using (qubit = Qubit()) {
 
 ### <a name="rus-to-prepare-a-quantum-state"></a>RUS zum Vorbereiten eines Quantum-Zustands
 
-Schließlich zeigen wir ein Beispiel für ein RUS-Muster zum Vorbereiten eines Quantum-Zustands $ \frac {1} {\sqrt {3} } \left (\sqrt {2} \ket {0} + \ket {1} \right) $, beginnend ab dem $ \ket{+} $-Status.
-Siehe auch das [Beispiel für Komponententests, das mit der Standardbibliothek bereitgestellt](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs)wird:
+Im folgenden finden Sie ein Beispiel für ein RUS-Muster zum Vorbereiten des Quantums $ \frac {1} {\sqrt {3} } \left (\sqrt {2} \ket {0} + \ket {1} \right) $, beginnend mit dem Status $ \ket{+} $.
+
+Wichtige programmgesteuerte Features, die in diesem Vorgang angezeigt werden, sind:
+
+* Ein komplexerer `fixup` Teil der Schleife, der Quantum-Vorgänge einschließt. 
+* Die Verwendung von- `AssertProb` Anweisungen, um die Wahrscheinlichkeit zu ermitteln, dass der Quantenzustand an bestimmten angegebenen Punkten im Programm gemessen wird.
+
+Weitere Informationen zu den [`Assert`](xref:microsoft.quantum.intrinsic.assert) -und- [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) Vorgängen finden Sie unter [Testen und Debuggen](xref:microsoft.quantum.guide.testingdebugging).
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {
@@ -325,9 +327,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-Wichtige programmgesteuerte Features, die in diesem Vorgang gezeigt werden, sind ein komplexerer `fixup` Teil der-Schleife, der Quantum-Vorgänge einschließt, und die Verwendung von- `AssertProb` Anweisungen, um die Wahrscheinlichkeit zu ermitteln, dass der Quantum-Zustand an bestimmten angegebenen Punkten im Programm gemessen wird.
-Weitere Informationen zu den-und-Vorgängen finden Sie unter [Testen und Debuggen](xref:microsoft.quantum.guide.testingdebugging) [`Assert`](xref:microsoft.quantum.intrinsic.assert) [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) .
-
+Weitere Informationen finden Sie unter [Beispiel für Komponententests mit der Standardbibliothek](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
 
 ## <a name="next-steps"></a>Nächste Schritte
 

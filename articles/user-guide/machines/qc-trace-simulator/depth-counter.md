@@ -6,17 +6,17 @@ ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
-ms.openlocfilehash: d532a9f512b8c87d83d62ed26e3bb67e1b6f668b
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 0029a00e6a3563dc542daeda2afa7cabf42441fb
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274936"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415260"
 ---
 # <a name="depth-counter"></a>Tiefen Counter
 
 Der `Depth Counter` ist ein Teil des Ablauf [Verfolgungs Simulators](xref:microsoft.quantum.machines.qc-trace-simulator.intro)für Quantum-Computer.
-Es wird verwendet, um die Anzahl der tiefen jedes in einem Quantum-Programm aufgerufenen Vorgangs zu erfassen. Alle Vorgänge von <xref:microsoft.quantum.intrinsic> werden als einzelne Qubit-Drehungen, T Gates, Single Qubit Clifford Gates, CNOT Gates und Messungen von Multi-Qubit Pauli Observables ausgedrückt. Benutzer können die Tiefe für jeden der primitiven Vorgänge über das- `gateTimes` Feld von festlegen <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .
+Es wird verwendet, um Zähler zu erfassen, die die untere Grenze der Tiefe jedes in einem Quantum-Programm aufgerufenen Vorgangs darstellen. Alle Vorgänge von <xref:microsoft.quantum.intrinsic> werden als einzelne Qubit-Drehungen, T Gates, Single Qubit Clifford Gates, CNOT Gates und Messungen von Multi-Qubit Pauli Observables ausgedrückt. Benutzer können die Tiefe für jeden der primitiven Vorgänge über das- `gateTimes` Feld von festlegen <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .
 
 Standardmäßig haben alle Vorgänge eine Tiefe von 0, außer dem T-Gate, das Tiefe 1 hat. Dies bedeutet, dass standardmäßig nur die T-Tiefe der Vorgänge berechnet wird (was häufig wünschenswert ist). Gesammelte Statistiken werden über alle Ränder des Vorgangs Aufruf Diagramms aggregiert. 
 
@@ -61,6 +61,6 @@ Zum Schluss können Sie, um alle im CSV-Format gesammelten Statistiken auszugebe
 string csvSummary = sim.ToCSV()[MetricsCountersNames.depthCounter];
 ```
 
-## <a name="see-also"></a>Weitere Informationen ##
+## <a name="see-also"></a>Siehe auch ##
 
 - Übersicht über den Ablauf [Verfolgungs Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) für Quantum-Computer
