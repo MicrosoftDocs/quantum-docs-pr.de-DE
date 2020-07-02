@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.algebra
-ms.openlocfilehash: 4750643d16ad8af6240df42c1b93353565561429
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 4cf6cce870c7661a7fffc21dcb60dd53cf281ddd
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327593"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415439"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Lineare Algebra für Quantencomputing
 
@@ -62,8 +62,7 @@ In den obigen Beispielen wurde der Zustand eines einzelnen Qubits mithilfe einer
 
 Da jedes Qubit wie bereits erwähnt ein Vektorraum ist, können sie nicht einfach multipliziert werden. Stattdessen wird ein **Tensorprodukt** verwendet. Hierbei handelt es sich um eine verwandte Operation, die auf der Grundlage einzelner Vektorräume einen neuen Vektorraum erstellt und durch das Symbol $\otimes$ dargestellt wird. So wird beispielsweise das Tensorprodukt der beiden Qubit-Zustände $\begin{bmatrix} a \\\\  b \end{bmatrix}$ und $\begin{bmatrix} c \\\\  d \end{bmatrix}$ wie folgt berechnet:
 
-$$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}
-$$
+$$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix} $$
 
 Das Ergebnis ist eine vierdimensionale Matrix, wobei jedes Element eine Wahrscheinlichkeit darstellt. $ac$ ist beispielsweise die Wahrscheinlichkeit, dass die beiden Qubits nach dem Kollaps 0 und 0 sind, $ad$ ist die Wahrscheinlichkeit für 0 und 1 und so weiter. 
 
