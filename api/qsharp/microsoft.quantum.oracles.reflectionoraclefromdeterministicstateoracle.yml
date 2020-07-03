@@ -7,7 +7,7 @@ summary: >-
   Erstellt Reflektion über einen angegebenen Zustand aus einem Oracle.
 
 
-  Bei einem durch eine einheitliche Matrix $O $ dargestellten determinalen Zustands Vorbereitungs-Oracle ist das Ergebnis dieser Funktion ein Oracle, das eine Reflektion auf den Status $ \ket{\psi} $ anwendet, der von Oracle $O $; vorbereitet wurde. Das heißt, der Status $ \ket{\psi} $, sodass $O \ket{0} = \ket{\psi} $.
+  Bei einem durch eine einheitliche Matrix $O $ dargestellten deterministischen Zustands Vorbereitungs-Oracle ist das Ergebnis dieser Funktion ein Oracle, das eine Reflektion auf den Status $ \ket{\psi} $ anwendet, der von Oracle $O $; vorbereitet wurde. Das heißt, der Status $ \ket{\psi} $, sodass $O \ket {0} = \ket{\psi} $.
 syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
   content: '(oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
@@ -24,9 +24,9 @@ seeAlso:
 - microsoft.quantum.oracles.deterministicstateoracle
 - microsoft.quantum.oracles.reflectionoracle
 metadata:
-  ms.openlocfilehash: ecd14c8fbf54c6ba224693ea02f469379f66d1bc
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 580e4f0a38888faf0fbea99f680c82a5172f82a4
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673498"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884506"

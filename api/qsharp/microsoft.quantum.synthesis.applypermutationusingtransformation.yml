@@ -1,0 +1,61 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.synthesis.applypermutationusingtransformation
+name: ApplyPermutationUsingTransformation
+type: operation
+namespace: Microsoft.Quantum.Synthesis
+summary: >-
+  Pertrauert die Verstärkung in einem Quantum-Zustand, wenn eine permutations mithilfe der Transformations basierten Synthese verwendet wird.
+
+
+  Diese Prozedur implementiert den unidirektionalen Transformations basierten Synthese Ansatz.  Input ist eine permutations $ \pi $ over $2 ^ n $ Elements $ \{ 0, \dots, 2 ^ n-1 \} $, was eine $n $-Variable umkehrbare boolesche Funktion darstellt.
+
+  Der Algorithmus führt iterativ die folgenden Schritte aus:
+
+
+  1. Suchen Sie den kleinsten $x $, sodass $x \nE \pi (x) = y $.
+
+  2. Suchen von multigesteuerten Toffoli-Vorgängen, die auf die Ausgaben angewendet werden, machen $ \pi (x) = x $ und ändern $ \pi (x ') $ nicht für alle $x ' < x $
+examples: >-
+  So können Sie einen `SWAP` Vorgang synthetisieren:
+
+
+  ```Q#
+
+  using (qubits = Qubit[2]) {
+    ApplyPermutationUsingTransformation([0, 2, 1, 3], LittleEndian(qubits));
+  }
+
+  ```
+syntax: 'operation ApplyPermutationUsingTransformation (perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+references: >-
+  - [*D. Michael Miller*, *Dmitri Maslov*, *Gerhard W. Dueck*, proc. DAC 2003, IEEE, pp. 318-323, 2003](https://doi.org/10.1145/775832.775915)
+
+  - [*Mathias soeken*, *Gerhard W. Dueck*, *D. Michael Miller*, proc. RC 2016, Springer, pp. 307-321, 2016](https://doi.org/10.1007/978-3-319-40578-0_22)
+input:
+  content: '(perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: perm
+    summary: Eine permutations von $2 ^ n $ Elementen, beginnend bei 0.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: qubits
+    summary: Eine Liste von $n $ Qubits, auf die die permutations angewendet wird.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.synthesis.applypermutationusingdecomposition
+metadata:
+  ms.openlocfilehash: e611197ba2fbfc0271c17664acc23b4de2c90ff6
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886581"

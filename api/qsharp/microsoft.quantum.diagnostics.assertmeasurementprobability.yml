@@ -1,0 +1,63 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertmeasurementprobability
+name: AssertMeasurementProbability
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: Bestätigt, dass das Messen der angegebenen Qubits in der angegebenen Pauli-Basis das angegebene Ergebnis mit der angegebenen Wahrscheinlichkeit innerhalb einiger Toleranz hat.
+remarks: Beachten Sie, dass die unter-und kontrollierten Versionen dieses Vorgangs die Bedingung nicht überprüfen.
+examples: >-
+  ```qsharp
+
+  using (register = Qubit()) {
+      H(register);
+      AssertProb([PauliZ], [register], One, 0.5,
+          "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
+  }
+
+  ```
+syntax: 'operation AssertMeasurementProbability (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
+  types:
+  - name: bases
+    summary: Ein Maßeffekt zur Bestätigung der Wahrscheinlichkeit von, ausgedrückt als Multi-Qubit-Pauli-Operator.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: qubits
+    summary: Ein Register, für das die-Assertion durchführen werden soll.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: result
+    summary: Erwartetes Ergebnis von `Measure(bases, qubits)` .
+    isPrimitive: true
+    uid: Result
+  - name: prob
+    summary: Die Wahrscheinlichkeit, mit der das angegebene Ergebnis erwartet wird.
+    isPrimitive: true
+    uid: Double
+  - name: msg
+    summary: Eine Meldung, die gemeldet werden soll, wenn die Übersetzung fehlschlägt.
+    isPrimitive: true
+    uid: String
+  - name: tol
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.diagnostics.assertmeasurement
+metadata:
+  ms.openlocfilehash: 6663722ae72cc8dd984e6422029db5a0bfad5d39
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85887034"

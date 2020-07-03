@@ -6,9 +6,9 @@ namespace: Microsoft.Quantum.Core
 summary: Vom Compiler erkanntes Attribut, das zum Markieren des Einstiegs Punkts einer ausführbaren Datei verwendet wird.
 syntax: newtype EntryPoint = Unit;
 metadata:
-  ms.openlocfilehash: e049fff21ee94e6ba02774274fbc83704bd0950c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 82abb7cee1ee120334495da55b1bd096218a4a0e
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82658062"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885329"

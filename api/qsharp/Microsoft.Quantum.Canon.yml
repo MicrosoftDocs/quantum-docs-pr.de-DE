@@ -198,6 +198,10 @@ operations:
   summary: Berechnet die Parität eines Registers von Qubits direkt.
 - uid: microsoft.quantum.canon.applycnotchainwithtarget
   summary: Berechnet die Parität eines Arrays von Qubits in einem Ziel-Qubit.
+- uid: microsoft.quantum.canon.applycontrolledonbitstring
+  summary: Wendet einen einheitlichen Vorgang für das Ziel Register an, der in einem durch eine bestimmte Bitmaske angegebenen Zustand gesteuert wird.
+- uid: microsoft.quantum.canon.applycontrolledonint
+  summary: Wendet einen einheitlichen Vorgang auf das Ziel Register an, wenn der Steuerelement Registrierungs Zustand einer angegebenen positiven ganzen Zahl entspricht.
 - uid: microsoft.quantum.canon.applydiagonalunitary
   summary: Wendet ein Array komplexer Phasen auf numerische Basiszustände eines Register von Qubits an.
 - uid: microsoft.quantum.canon.applyfermionicswap
@@ -565,6 +569,14 @@ operations:
 
 
     $R = \boldone-(1-e ^ {i \phi}) \ket{1\cdots 1} \bra{1\cdots 1} $.
+- uid: microsoft.quantum.canon.repeat
+  summary: Wiederholt einen Vorgang mit einer angegebenen Anzahl von vorkommen.
+- uid: microsoft.quantum.canon.repeata
+  summary: Wiederholt einen Vorgang mit einer angegebenen Anzahl von vorkommen.
+- uid: microsoft.quantum.canon.repeatc
+  summary: Wiederholt einen Vorgang mit einer angegebenen Anzahl von vorkommen.
+- uid: microsoft.quantum.canon.repeatca
+  summary: Wiederholt einen Vorgang mit einer angegebenen Anzahl von vorkommen.
 - uid: microsoft.quantum.canon.swapreverseregister
   summary: Verwendet Swap-Gates zum Umkehren der Reihenfolge der Qubits in einem Register.
 newtypes:
@@ -573,9 +585,9 @@ newtypes:
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nResultstack ist veraltet."
 metadata:
-  ms.openlocfilehash: 97975236f3824d63c0cc75e5be847c5eef47485b
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: ab6e8a58dd163e4a9b2ea299e544a4e487d61e23
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326675"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884681"

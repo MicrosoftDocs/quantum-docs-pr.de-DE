@@ -4,10 +4,10 @@ name: T
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: >-
-  Wendet das-/8-Gate auf ein einzelnes Qubit an.
+  Wendet das T-Gate auf ein einzelnes Qubit an.
 
 
-  \begin{ALIGN} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ 0 & e ^ {i \pi/4} \end{bmatrix}.
+  Dieser Vorgang kann durch die einheitliche Matrix \begin{ALIGN} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ 0 & e ^ {i \pi/4} \end{bmatrix}. simuliert werden.
 
   \end{align}
 syntax: 'operation T (qubit : Qubit) : Unit'
@@ -27,9 +27,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: f654748925ec76cfececadd9fe2de8698449f6f8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d149038bea705d10a67197e0eeece33ef98e6c36
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685426"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885689"

@@ -3,28 +3,23 @@ uid: microsoft.quantum.intrinsic.assert
 name: Assert
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
-summary: Bestätigt, dass das Messen der angegebenen Qubits in der angegebenen Pauli-Basis immer das angegebene Ergebnis hat.
-remarks: Beachten Sie, dass die unter-und kontrollierten Versionen dieses Vorgangs die Bedingung nicht überprüfen.
+summary: Assert ist veraltet. Verwenden Sie stattdessen @"microsoft.quantum.diagnostics.assertmeasurement".
 syntax: 'operation Assert (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, msg : String)'
   types:
   - name: bases
-    summary: Ein Maßeffekt zur Bestätigung der Wahrscheinlichkeit von, ausgedrückt als Multi-Qubit-Pauli-Operator.
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: qubits
-    summary: Ein Register, für das die-Assertion durchführen werden soll.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: result
-    summary: Das erwartete Ergebnis von `Measure(bases, qubits)`.
     isPrimitive: true
     uid: Result
   - name: msg
-    summary: Eine Meldung, die gemeldet werden soll, wenn die Übersetzung fehlschlägt.
     isPrimitive: true
     uid: String
 output:
@@ -35,12 +30,10 @@ output:
 functors:
 - Adjoint
 - Controlled
-seeAlso:
-- assertprob
 metadata:
-  ms.openlocfilehash: ececd74240ef9340666795142719faeeb0cbef7b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 56e41923bfeaa5ecf10bd47130260c78fbce7970
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674185"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885732"
