@@ -6,19 +6,19 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: f8e398b5c9932a5079222fed7ad20e54de814eb8
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 3ddb5d67b972f69df1774b476a10e74dd16d97b7
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274798"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884190"
 ---
 # <a name="q-style-guide"></a>F #-Stil Handbuch #
 ## <a name="general-conventions"></a>Allgemeine Konventionen ##
 
 Die in diesem Handbuch empfohlenen Konventionen dienen dazu, Programme und Bibliotheken, die in Q # geschrieben wurden, einfacher zu lesen und zu verstehen.
 
-## <a name="guidance"></a>Anleitungen
+## <a name="guidance"></a>Leitfaden
 
 Wir empfehlen Folgendes:
 
@@ -105,6 +105,31 @@ Wir empfehlen Folgendes:
 | ☑ | `newtype GeneratorTerm` | Die Verwendung des Substantiv Ausdrucks verweist eindeutig auf das Ergebnis des Aufrufs des UDT-Konstruktors. |
 | ☒ | <s>`@Attribute() newtype RunOnce()`</s> | Die Verwendung des Verb Ausdrucks deutet darauf hin, dass der UDT-Konstruktor ein Vorgang ist. |
 | ☑ | `@Attribute() newtype Deprecated(Reason : String)` | Die Verwendung des nominalen Ausdrucks kommuniziert mit der Verwendung des-Attributs. |
+
+***
+
+### <a name="entry-points"></a>Einstiegspunkte
+
+Beim Definieren eines Einstiegs Punkts in ein q #-Programm erkennt der q #-Compiler das- [ `@EntryPoint()` Attribut](xref:microsoft.quantum.core.entrypoint) , sodass die Einstiegspunkte einen bestimmten Namen aufweisen (z. b. `main` , `Main` oder `__main__` ).
+Das heißt, aus der Perspektive eines Q #-Entwicklers sind Einstiegspunkte normale Vorgänge, die mit kommentiert werden `@EntryPoint()` .
+Außerdem können q #-Einstiegspunkte Einstiegspunkte für eine gesamte Anwendung sein (d. h. in ausführbaren f #-Dateien), oder es kann sich um eine Schnittstelle zwischen einem q #-Programm und dem Host Programm für eine Anwendung handeln (d.h. bei Verwendung von q # mit Python oder .net), sodass der Name "Main" irreführend sein kann, wenn er auf einen Q #
+
+Wir empfehlen die Verwendung von Benennungs Einstiegspunkten, um die Verwendung des `@EntryPoint()` Attributs anhand der allgemeinen Ratschläge für Benennungs Vorgänge widerzuspiegeln, die oben aufgeführt sind.
+
+
+# <a name="guidance"></a>[Leitfaden](#tab/guidance)
+
+Wir empfehlen Folgendes:
+
+- Benennen Sie keine Einstiegspunkt Vorgänge als "Main".
+- Name der Einstiegspunkt Vorgänge als normale Vorgänge.
+
+# <a name="examples"></a>[Beispiele](#tab/examples)
+
+|   | Name | BESCHREIBUNG |
+|---|------|-------------|
+| ☑ | `@EntryPoint() operation RunSimulation` | Kommuniziert den Zweck des Einstiegs Punkts über den Vorgangs Namen eindeutig. |
+| ☒ | <s>`@EntryPoint() operation Main`</s> | Die Verwendung von `Main` kommuniziert nicht eindeutig mit dem Zweck des Einstiegs Punkts und ist mit dem- `@EntryPoint()` Attribut redundant. |
 
 ***
 

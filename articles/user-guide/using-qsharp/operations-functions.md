@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
-ms.openlocfilehash: 6cfc1b14d86e86a1cbf0109d5e81dfe50c3a80bf
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+ms.openlocfilehash: 08eaf150a38afd789f8a23f567ff111d002bac07
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630210"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884215"
 ---
 # <a name="operations-and-functions-in-q"></a>Vorgänge und Funktionen in Q #
 
@@ -19,16 +19,16 @@ ms.locfileid: "84630210"
 
 Vorgänge sind das Kernstück von Q #.
 Nach der Deklaration können Sie entweder von klassischen .NET-Anwendungen aus aufgerufen werden, z. b. durch die Verwendung eines Simulators oder durch andere Vorgänge in Q #.
-Jeder in Q # definierte Vorgang kann dann eine beliebige Anzahl anderer Vorgänge aufzurufen, einschließlich der integrierten systeminternen Vorgänge, die von der Sprache definiert werden. Die spezielle Methode, mit der diese systeminternen Vorgänge definiert werden, hängt vom Zielcomputer ab.
+Jeder in Q # definierte Vorgang kann eine beliebige Anzahl anderer Vorgänge, einschließlich der integrierten systeminternen Vorgänge, die von der Sprache definiert sind, aufzurufen. Die spezielle Art und Weise, in der Q # diese systeminternen Vorgänge definiert, hängt vom Zielcomputer ab.
 Bei der Kompilierung wird jeder Vorgang als .NET-Klassentyp dargestellt, der den Ziel Computern bereitgestellt werden kann.
 
 Jede f #-Quelldatei kann eine beliebige Anzahl von Vorgängen definieren.
 Vorgangs Namen müssen innerhalb eines Namespace eindeutig sein und können keinen Konflikt mit Typ-oder Funktionsnamen verursachen.
 
-Eine Vorgangs Deklaration besteht aus dem Schlüsselwort `operation` , gefolgt von dem Symbol, das den Namen des Vorgangs enthält, einem typisierten bezeichnertupel, das die Argumente für den Vorgang definiert, einem Doppelpunkt `:` , einer Typanmerkung, die den Ergebnistyp des Vorgangs beschreibt, optional einer Anmerkung mit den Vorgangs Merkmalen, einer öffnenden geschweifte Klammer `{` , dem Text der Vorgangs Deklaration und einer `}`
+Eine Vorgangs Deklaration besteht aus dem Schlüsselwort `operation` , gefolgt von dem Symbol, das den Namen des Vorgangs enthält, einem typisierten bezeichnertupel, das die Argumente für den Vorgang definiert, einem Doppelpunkt `:` , einer Typanmerkung, die den Ergebnistyp des Vorgangs beschreibt, optional einer Anmerkung mit den Vorgangs Merkmalen, einer geöffneten geschweiften Klammer und dem Text der Vorgangs Deklaration in geschweiften `{ }`
 
 Jeder Vorgang nimmt eine Eingabe an, erzeugt eine Ausgabe und gibt die Implementierung für eine oder mehrere Vorgangs Spezialisierungs Vorgänge an.
-Weitere Informationen zu den möglichen Spezialisierungsmöglichkeiten und zum Definieren/anrufen finden Sie weiter unten.
+Die möglichen Spezialisierungsmöglichkeiten und die Vorgehensweise zum Definieren und anrufen werden in den verschiedenen Abschnitten dieses Artikels beschrieben.
 Sehen Sie sich den folgenden Vorgang an, der nur eine Standard Textzeile definiert und ein einzelnes Qubit als Eingabe annimmt und dann den integrierten <xref:microsoft.quantum.intrinsic.x> Vorgang für diese Eingabe aufruft:
 
 ```qsharp
@@ -37,15 +37,15 @@ operation BitFlip(target : Qubit) : Unit {
 }
 ```
 
-Das Schlüsselwort `operation` beginnt mit der Vorgangs Definition, gefolgt vom Namen `BitFlip` .
-Als nächstes wird der Typ der Eingabe als definiert `Qubit` , zusammen mit einem Namen `target` für den Verweis auf die Eingabe innerhalb des neuen Vorgangs.
-Ebenso definiert das, `Unit` dass die Ausgabe des Vorgangs leer ist.
-Dies wird ähnlich wie `void` in c# und anderen imperativen Sprachen verwendet und entspricht `unit` in F # und anderen funktionalen Sprachen.
+Das Schlüsselwort `operation` beginnt mit der Vorgangs Definition, gefolgt vom Namen; hier, `BitFlip` .
+Als nächstes wird der Typ der Eingabe definiert ( `Qubit` ), zusammen mit einem Namen, `target` , um auf die Eingabe innerhalb des neuen Vorgangs zu verweisen.
+Schließlich `Unit` definiert, dass die Ausgabe des Vorgangs leer ist.
+`Unit`wird ähnlich wie `void` in c# und anderen imperativen Sprachen verwendet und entspricht `unit` in F # und anderen funktionalen Sprachen.
 
 Vorgänge können auch interessantere Typen als zurückgeben `Unit` .
-Der- <xref:microsoft.quantum.intrinsic.m> Vorgang gibt beispielsweise eine Ausgabe vom Typ zurück `Result` , die angibt, dass eine Messung durchgeführt wurde. Die Ausgabe kann entweder von einem Vorgang an einen anderen Vorgang übergeben werden, oder Sie kann mit dem `let` Schlüsselwort verwendet werden, um eine neue Variable zu definieren.
+Der- <xref:microsoft.quantum.intrinsic.m> Vorgang gibt beispielsweise eine Ausgabe vom Typ zurück `Result` , die angibt, dass eine Messung durchgeführt wurde.  Sie können Sie von einem Vorgang an einen anderen Vorgang übergeben oder mit dem- `let` Schlüsselwort verwenden, um eine neue Variable zu definieren.
 
-Dies ermöglicht die Darstellung der klassischen Berechnung, die mit Quantum-Vorgängen auf niedriger Ebene interagiert, wie z. b. in einer über [geordneten Codierung](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding):
+Mit diesem Ansatz können Sie die klassische Berechnung darstellen, die mit Quantum-Vorgängen auf niedriger Ebene interagiert, wie z. b. in einer über [geordneten Codierung](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding):
 
 ```qsharp
 operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
@@ -62,16 +62,15 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 > [!NOTE]
 > Jeder Vorgang in Q # nimmt genau eine Eingabe an und gibt genau eine Ausgabe zurück.
-> Anschließend werden mehrere Eingaben und Ausgaben mithilfe von *Tupeln*dargestellt, die mehrere Werte in einem einzelnen Wert zusammenfassen.
-> Informell gesagt, dass Q # eine "tupelin tupelout"-Sprache ist.
-> Nach diesem Konzept `()` sollte dann als "leeres" Tupel mit dem Typ gelesen werden `Unit` .
-
+> Mehrere Eingaben und Ausgaben werden mithilfe von *Tupeln*dargestellt, die mehrere Werte in einem einzelnen Wert zusammenfassen.
+> In dieser Hinsicht ist Q # eine "Tupel-in-tupelout"-Sprache.
+> Im Anschluss an dieses Konzept sollte ein Satz leerer Klammern, `()` , als leeres Tupel mit dem-Typ gelesen werden `Unit` .
 
 ## <a name="controlled-and-adjoint-operations"></a>Kontrollierte und Adjoint-Vorgänge
 
 *Wenn ein* Vorgang eine einheitliche Transformation implementiert, wie dies bei vielen Vorgängen in Q # der Fall ist, ist es möglich, zu definieren, wie der Vorgang beim angleichen oder *Steuern*agiert. Eine *Adjoint* -Spezialisierung eines Vorgangs gibt an, wie die "Umkehrung" des Vorgangs agiert, während eine *kontrollierte* Spezialisierung angibt, wie ein Vorgang funktioniert, wenn die Anwendung auf den Zustand eines bestimmten Quantum-Registers angewendet wird.
 
-Adjoints von Quantum-Vorgängen sind für viele Aspekte von Quantum Computing von entscheidender Bedeutung. Weiter unten im Abschnitt " [Konjugationen](#conjugations) " finden Sie eine solche Situation, die zusammen mit einer nützlichen Q #-Programmiertechnik erläutert wird.
+Adjoints von Quantum-Vorgängen sind für viele Aspekte von Quantum Computing von entscheidender Bedeutung. Ein Beispiel für eine solche Situation, die zusammen mit einer nützlichen Q #-Programmiertechnik erläutert wird, finden Sie unter " [Konjugationen](#conjugations) " in diesem Artikel. 
 
 Bei der kontrollierten Version eines Vorgangs handelt es sich um einen neuen Vorgang, der den Basis Vorgang effektiv anwendet, wenn sich alle Steuerelement-Qubits in einem angegebenen Zustand befinden.
 Wenn sich die Steuerelement-Qubits in der superposition befinden, wird der Basis Vorgang einheitlich auf den entsprechenden Teil der superposition angewendet.
@@ -84,8 +83,7 @@ Natürlich könnte auch eine *kontrollierte Adjoint* -Spezialisierung vorhanden 
 > Wenn Sie einen Vorgang nacheinander anwenden und dessen Adjoint in einen Zustand versetzt wird, bleibt der Zustand unverändert, wie in der Tatsache veranschaulicht, dass $UU ^ \dagger = U ^ \dagger U = \id $ die Identitätsmatrix ist.
 > Die einheitliche Darstellung eines kontrollierten Vorgangs ist etwas flexibler, aber weitere Informationen finden Sie unter [Quantum Computing Concepts: Multiple Qubits](xref:microsoft.quantum.concepts.multiple-qubits).
 
-Im folgenden Abschnitt wird beschrieben, wie Sie diese verschiedenen Spezialisierungs Informationen in Ihrem Q #-Code aufzurufen.
-Im folgenden wird ausführlich erläutert, wie Sie Vorgänge für deren Unterstützung definieren.
+Im folgenden Abschnitt wird beschrieben, wie Sie diese verschiedenen Spezialisierungs Informationen in Ihrem Q #-Code aufzurufen und wie Sie Vorgänge zur Unterstützung definieren.
 
 ### <a name="calling-operation-specializations"></a>Aufrufen von Vorgangs Spezialisierungs Vorgängen
 
@@ -95,33 +93,32 @@ Die zwei standardfunktoren in Q # sind `Adjoint` und `Controlled` .
 Funktoren haben Zugriff auf die Implementierung des Basis Vorgangs, wenn die Implementierung des neuen Vorgangs definiert wird.
 Daher können Funktoren komplexere Funktionen als herkömmliche Funktionen höherer Ebene ausführen. Funktoren haben keine Darstellung im Q #-Typsystem. Daher ist es derzeit nicht möglich, Sie an eine Variable zu binden oder Sie als Argumente zu übergeben. 
 
-Ein Funktor wird verwendet, indem er auf einen Vorgang angewendet und ein neuer Vorgang zurückgegeben wird.
-Beispielsweise wird der Vorgang, der sich aus der Anwendung des `Adjoint` funktors auf den Vorgang ergibt, `Y` als geschrieben `Adjoint Y` .
-Der neue Vorgang kann dann wie jeder andere Vorgang aufgerufen werden.
-Damit ein Vorgang die Anwendung des `Adjoint` -und/oder- `Controlled` funktors unterstützt, muss der Rückgabetyp unbedingt sein `Unit` . 
+Verwenden Sie ein Funktor, indem Sie es auf einen Vorgang anwenden, der einen neuen Vorgang zurückgibt.
+Wenn Sie das Funktor beispielsweise auf den-Vorgang anwenden, wird `Adjoint` `Y` der neue-Vorgang zurückgegeben `Adjoint Y` . Sie können den neuen Vorgang wie jeden anderen Vorgang aufrufen.
+Damit ein Vorgang die Anwendung des-oder- `Adjoint` `Controlled` funktors unterstützt, muss der Rückgabetyp notwendigerweise sein `Unit` . 
 
 #### <a name="adjoint-functor"></a>`Adjoint`Funktionselement
 
-Folglich `Adjoint Y(q1)` wendet das Adjoint-Funktor auf den `Y` -Vorgang an, um einen neuen-Vorgang zu generieren, und wendet diesen neuen Vorgang auf an `q1` .
+Folglich `Adjoint Y(q1)` wendet das `Adjoint` Funktor auf den `Y` Vorgang an, um einen neuen Vorgang zu generieren, und wendet diesen neuen Vorgang auf an `q1` .
 Der neue Vorgang hat dieselbe Signatur und denselben Typ wie der Basis Vorgang `Y` .
-Der neue-Vorgang ermöglicht insbesondere auch `Adjoint` , und lässt nur dann zu, wenn `Controlled` der Basis Vorgang durchgeführt wurde.
-Der Adjoint-Funktor ist eine eigene Umkehrung. Das heißt, `Adjoint Adjoint Op` ist immer identisch mit `Op` .
+Insbesondere unterstützt der neue-Vorgang auch `Adjoint` , und unterstützt nur dann, wenn `Controlled` der Basis Vorgang durchgeführt wurde.
+Das `Adjoint` Funktor ist eine eigene Umkehrung, d. h `Adjoint Adjoint Op` ., ist immer identisch mit `Op` .
 
 #### <a name="controlled-functor"></a>`Controlled`Funktionselement
 
-Entsprechend `Controlled X(controls, target)` wendet den gesteuerten Funktor auf den `X` -Vorgang an, um einen neuen-Vorgang zu generieren, und wendet diesen neuen-Vorgang auf `controls` und an `target` .
+Ebenso `Controlled X(controls, target)` wendet das `Controlled` Funktor auf den `X` -Vorgang an, um einen neuen-Vorgang zu generieren, und wendet diesen neuen-Vorgang auf `controls` und an `target` .
 
 > [!NOTE]
-> In Q # nehmen kontrollierte Versionen immer ein Array von Steuerelement-Qubits auf, und der angegebene Zustand ist immer, wenn alle Steuerelement-Qubits den Status "Compu()" (" `PauliZ` `One` $ \ket $") aufweisen {1} .
-> Das Steuern auf der Grundlage anderer Zustände kann erreicht werden, indem der entsprechende einheitliche Vorgang auf die Steuerungs Qubits vor dem kontrollierten Vorgang angewendet und dann nach dem kontrollierten Vorgang die Umkehrung des einheitlichen Vorgangs angewendet wird.
-> Wenn Sie z. b `X` . einen Vorgang vor und nach einer kontrollierten Operation auf ein Steuerelement-Qubit anwenden, führt der Vorgang zu einer Steuerung des `Zero` Zustands ($ \ket {0} $) für dieses Qubit. Wenn Sie einen `H` Vorgang vor und nach anwenden, wird die Kontrolle über den `PauliX` `One` Zustand, d. h.-1 eigen Wert von Pauli X, $ \ket {-} \mathrel{: =} (\ket {0} -\ket {1} )/\sqrt {2} $ anstelle des `PauliZ` `One` Zustands.
+> In Q # nehmen kontrollierte Versionen immer ein Array von Steuerungs-Qubits auf, und die Steuerung basiert immer auf allen Steuerelement-Qubits, die sich im Status "Compu()" befinden `PauliZ` `One` , "$ \ket {1} $".
+> Das Steuern auf der Grundlage anderer Zustände wird erreicht, indem der entsprechende einheitliche Vorgang auf die Steuerungs Qubits vor dem kontrollierten Vorgang angewendet und dann die Umkehrung des einheitlichen Vorgangs nach dem kontrollierten Vorgang angewendet wird.
+> Wenn Sie z. b `X` . einen Vorgang vor und nach einer kontrollierten Operation auf ein Steuerelement-Qubit anwenden, steuert der Vorgang den `Zero` Zustand ($ \ket {0} $) für dieses Qubit. Anwenden eines `H` Vorgangs vor und nach der Steuerung des `PauliX` `One` Zustands, d. h.-1 eigen Wert von Pauli X, $ \ket {-} \mathrel{: =} (\ket {0} -\ket {1} )/\sqrt {2} $ anstelle des- `PauliZ` `One` Zustands.
 
-Bei einem Vorgangs Ausdruck kann ein neuer Vorgangs Ausdruck mithilfe des `Controlled` funktors gebildet werden.
+Bei Angabe eines Vorgangs Ausdrucks können Sie mithilfe des-funktors einen neuen Vorgangs Ausdruck bilden `Controlled` .
 Die Signatur des neuen Vorgangs basiert auf der Signatur des ursprünglichen Vorgangs.
 Der Ergebnistyp ist identisch, aber der Eingabetyp ist ein zwei Tupel mit einem Qubit-Array, das die Steuerelement-Qubit (s) als erstes Element und die Argumente des ursprünglichen Vorgangs als zweites Element enthält.
 Der neue-Vorgang unterstützt `Controlled` , und unterstützt `Adjoint` nur dann, wenn der ursprüngliche Vorgang durchgeführt wurde.
 
-Wenn für den ursprünglichen Vorgang nur ein einzelnes Argument verwendet wurde, wird hier die entsprechgabe von Singleton-Tupeln berücksichtigt.
+Wenn für den ursprünglichen Vorgang nur ein einzelnes Argument benötigt wurde, wird hier die [entsprechgabe von Singleton-Tupeln](xref:microsoft.quantum.guide.types) berücksichtigt.
 Beispiels `Controlled X` Weise ist die gesteuerte Version des `X` Vorgangs. 
 `X`weist den Typ auf `(Qubit => Unit is Adj + Ctl)` , `Controlled X` hat also `((Qubit[], (Qubit)) => Unit is Adj + Ctl)` den Typ; aufgrund der Äquivalenz von Singleton-Tupeln ist dies identisch mit `((Qubit[], Qubit) => Unit is Adj + Ctl)` .
 
@@ -130,7 +127,7 @@ Beispiels `Controlled Rz` Weise ist die gesteuerte Version des `Rz` Vorgangs.
 `Rz`weist den Typ auf `((Double, Qubit) => Unit is Adj + Ctl)` , hat also den `Controlled Rz` Typ `((Qubit[], (Double, Qubit)) => Unit is Adj + Ctl)` .
 Daher ist `Controlled Rz(controls, (0.1, target))` ein gültiger Aufruf von `Controlled Rz` (Beachten Sie die Klammern `0.1, target` ).
 
-Als weiteres Beispiel `CNOT(control, target)` kann als implementiert werden `Controlled X([control], target)` . Wenn ein Ziel von 2 Steuerungs Qubits (ccnot) gesteuert werden soll, können wir die- `Controlled X([control1, control2], target)` Anweisung verwenden.
+Als weiteres Beispiel `CNOT(control, target)` kann als implementiert werden `Controlled X([control], target)` . Wenn ein Ziel von zwei Steuerungs Qubits (ccnot) gesteuert werden soll, verwenden Sie eine- `Controlled X([control1, control2], target)` Anweisung.
 
 #### `Controlled Adjoint` 
 
@@ -139,14 +136,14 @@ Das `Controlled` -und das- `Adjoint` funktorin werden angewendet, sodass es kein
 
 ## <a name="defining-controlled-and-adjoint-implementations"></a>Definieren von kontrollierten und Adjoint-Implementierungen
 
-In den ersten Beispielen oben werden die Vorgänge `BitFlip` und `DecodeSuperdense` mit Signaturen `(Qubit => Unit)` `((Qubit, Qubit) => (Result, Result))` bzw. definiert.
+In der ersten Vorgangs Deklaration in den vorherigen Beispielen wurden die Vorgänge `BitFlip` und `DecodeSuperdense` mit Signaturen `(Qubit => Unit)` `((Qubit, Qubit) => (Result, Result))` bzw. definiert.
 Wie z. b. `DecodeSuperdense` Messungen, ist es kein einheitlicher Vorgang. Daher könnten weder die kontrollierten noch die nicht zusammenhängenden Spezialisierungs Maßnahmen vorhanden sein `Unit` .
-Da jedoch `BitFlip` einfach der einheitliche <xref:microsoft.quantum.intrinsic.x> Vorgang durchführt, können wir ihn mit beiden Spezialisierungs Vorgängen definieren.
+Wenn Sie jedoch `BitFlip` einfach den einheitlichen <xref:microsoft.quantum.intrinsic.x> Vorgang ausführen, können Sie ihn mit beiden Spezialisierungs Vorgängen definieren.
 
-Hier wird ausführlich erläutert, wie Sie das vorhanden sein von spezialisierern in Ihre f #-Vorgangs Deklarationen einschließen, sodass Sie in Verbindung mit den `Adjoint` -und/oder-Funktoren aufgerufen werden können `Controlled` .
-Im [folgenden](#circumstances-for-validly-defining-specializations)werden einige der Situationen beschrieben, in denen es entweder gültig oder nicht gültig ist, bestimmte Spezialisierungs-zu deklarieren.
+In diesem Abschnitt wird erläutert, wie Sie das vorhanden sein von Spezialisierungs Funktionen in Ihre f #-Vorgangs Deklarationen einschließen, sodass Sie in Verbindung mit dem-oder dem-funktors aufgerufen werden können `Adjoint` `Controlled` .
+Weitere Informationen zu einigen Situationen, in denen es entweder gültig oder nicht zulässig ist, bestimmte Spezialisierungs Informationen zu deklarieren, finden Sie unter Umstände für die Überprüfung [von Spezialisierungs](#circumstances-for-validly-defining-specializations) Informationen in diesem Artikel.
 
-Vorgangs Merkmale definieren, welche Arten von functoren auf den deklarierten Vorgang angewendet werden können und welche Auswirkungen Sie haben. Das vorhanden sein dieser Spezialisierungsmöglichkeiten kann als Teil der Vorgangs Signatur deklariert werden, insbesondere über eine Anmerkung mit den Vorgangs Merkmalen: entweder `is Adj` , `is Ctl` oder `is Adj + Ctl` .
+Vorgangs Merkmale definieren, welche Arten von Funktions tüktoren Sie auf den deklarierten Vorgang anwenden können und welche Auswirkungen Sie haben. Das vorhanden sein dieser Spezialisierungsmöglichkeiten kann als Teil der Vorgangs Signatur deklariert werden, insbesondere über eine Anmerkung mit den Vorgangs Merkmalen: entweder `is Adj` , `is Ctl` oder `is Adj + Ctl` .
 Die tatsächliche Implementierung jeder Spezialisierung kann entweder *implizit* oder *explizit* definiert werden.
 
 ### <a name="implicitly-specifying-implementations"></a>Implizit angeben von Implementierungen
@@ -164,7 +161,7 @@ Hier wird die entsprechende Implementierung für jede solche implizit deklariert
 
 Ein-Rückruf würde also dazu führen, dass `Adjoint PrepareEntangledPair` der Compiler das Adjoint von `CNOT` und dann das Adjoint von implementiert `H` .
 Diese einzelnen Vorgänge sind beide selbst Adjoint, sodass der resultierende `Adjoint PrepareEntangledPair` Vorgang einfach aus der Anwendung `CNOT(here, there)` und dann besteht `H(here)` .
-Daher können wir dieses Beispiel verwenden, um das `DecodeSuperdense` obige Beispiel mit einem kompakteren zu schreiben, indem wir das Adjoint von verwenden `PrepareEntangledPair` , um den entzickten Zustand wieder in ein nicht verwinkelter Qubits-paar umzuwandeln:
+Daher können Sie das `DecodeSuperdense` im vorherigen Beispiel mit einem kompakteren schreiben, indem Sie das Adjoint von verwenden, `PrepareEntangledPair` um den entzickten Zustand wieder in ein nicht verwinkelter Qubits-paar umzuwandeln:
 
 ```qsharp
 operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
@@ -186,8 +183,8 @@ Daher ist es häufig hilfreich, die verschiedenen Implementierungen explizit anz
 
 ### <a name="explicitly-specifying-implementations"></a>Explizite Angabe von Implementierungen
 
-Wenn die Implementierung nicht vom Compiler generiert werden kann, kann Sie explizit angegeben werden. Solche expliziten Spezialisierungs Deklarationen können aus einer geeigneten *Generierungs Direktive* oder einer benutzerdefinierten Implementierung bestehen.
-Hier finden Sie die vollständige Palette der Möglichkeiten, mit folgenden Beispielen.
+Wenn der Compiler die Implementierung nicht generieren kann, können Sie ihn explizit angeben. Solche expliziten Spezialisierungs Deklarationen können aus einer geeigneten *Generierungs Direktive* oder einer benutzerdefinierten Implementierung bestehen.
+Im folgenden finden Sie die vollständige Palette der Möglichkeiten mit einigen Beispielen für eine explizite Spezialisierung. 
 
 
 #### <a name="explicit-specialization-declarations"></a>Explizite Spezialisierungs Deklarationen
@@ -201,24 +198,24 @@ F #-Vorgänge können die folgenden expliziten Spezialisierungs Deklarationen en
   Diese Spezialisierung kann auch benannt werden `adjoint controlled` , da die beiden Funktoren in den Weg gehen.
 
 
-Eine Vorgangs Spezialisierung besteht aus dem Spezialisierungs Kennzeichen (z. b. `body` oder `adjoint` usw.), gefolgt von einem der folgenden:
+Eine Vorgangs Spezialisierung besteht aus dem Spezialisierungs Kennzeichen (z. b. `body` oder `adjoint` ), gefolgt von einem der folgenden:
 
-- Eine explizite Deklaration, wie unten beschrieben.
+- Eine explizite Deklaration, wie im folgenden beschrieben.
 - Eine- *Direktive* , die dem Compiler mitteilt, *wie* die Spezialisierung generiert werden soll, einer der folgenden:
-  - `intrinsic`Gibt an, dass die Spezialisierung vom Zielcomputer bereitgestellt wird.
-  - `distribute`, die mit den `controlled` Spezialisierungs-und-Spezialisierungs-verwendet werden kann `controlled adjoint` .
+  - `intrinsic`Gibt an, dass der Zielcomputer die Spezialisierung bereitstellt.
+  - `distribute`wird mit den `controlled` -und- `controlled adjoint` Spezialisierungs-verwendet.
     Bei Verwendung mit `controlled` wird angegeben, dass der Compiler die Spezialisierung berechnen soll, indem er `Controlled` auf alle Vorgänge in angewendet wird `body` .
     Bei Verwendung mit `controlled adjoint` wird angegeben, dass der Compiler die Spezialisierung berechnen soll, indem er `Controlled` auf alle Vorgänge in der Spezialisierung anwendet `adjoint` .
-  - `invert`Gibt an, dass der Compiler die `adjoint` Spezialisierung durch Umkehren der berechnen soll `body` , d. h., die Reihenfolge der Vorgänge wird umgekehrt und das Adjoint-Attribut auf jeden angewendet.
+  - `invert`Gibt an, dass der Compiler die `adjoint` Spezialisierung durch Umkehren von berechnen soll, indem `body` z. b. die Reihenfolge der Vorgänge umkehren und das Adjoint-Attribut auf jedes angewendet wird.
     Wenn Sie mit verwendet `adjoint controlled` wird, gibt dies an, dass der Compiler die Spezialisierung durch Umkehren der `controlled` Spezialisierung berechnen soll.
   - `self`, um anzugeben, dass die Adjoint-Spezialisierung mit der Spezialisierung identisch ist `body` .
-    Dies gilt für die `adjoint` Spezialisierungs-und- `adjoint controlled` Spezialisierungs-.
+    `self`Die Verwendung von ist für die `adjoint` -und- `adjoint controlled` Spezialisierung zulässig.
     Für `adjoint controlled` `self` impliziert, dass die `adjoint controlled` Spezialisierung mit der Spezialisierung identisch ist `controlled` .
   - `auto`, um anzugeben, dass der Compiler eine entsprechende anzuwendende Direktive auswählen soll.
-    `auto`darf nicht für die Spezialisierung verwendet werden `body` .
+    Sie können `auto` für die Spezialisierung nicht verwenden `body` .
 
 Die-Direktiven und `auto` alle erfordern ein Schließ Endes Semikolon `;` .
-Die- `auto` Direktive wird in die folgende Generierungs Direktive aufgelöst, wenn eine explizite Deklaration von `body` bereitgestellt wird:
+Die- `auto` Direktive wird in die folgende generierte-Direktive aufgelöst, wenn eine explizite Deklaration von `body` bereitgestellt wird:
 
 - Die `adjoint` Spezialisierung wird gemäß der-Direktive generiert `invert` .
 - Die `controlled` Spezialisierung wird gemäß der-Direktive generiert `distribute` .
@@ -244,7 +241,7 @@ is Adj + Ctl {
 ```
 Beachten Sie, dass das Adjoint des Pauli X-Vorgangs mit der-Direktive definiert ist, `self` da definitionsgemäß `X` eine eigene Umkehrung ist.
 
-Der `PrepareEntangledPair` oben genannte Code entspricht beispielsweise dem folgenden Code, der explizite Spezialisierungs Deklarationen enthält: 
+Im vorherigen `PrepareEntangledPair` Beispiel entspricht der Code dem folgenden Code, der explizite Spezialisierungs Deklarationen enthält: 
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -263,7 +260,7 @@ Das Schlüsselwort `auto` gibt an, dass der Compiler bestimmen soll, wie die Spe
 
 #### <a name="user-defined-specialization-implementation"></a>Implementierung benutzerdefinierter Spezialisierungen
 
-Wenn der Compiler die Implementierung für eine bestimmte Spezialisierung nicht automatisch generieren kann oder wenn eine effizientere Implementierung angegeben werden kann, kann die Implementierung auch manuell definiert werden.
+Wenn der Compiler die Implementierung für eine bestimmte Spezialisierung nicht automatisch generieren kann oder wenn eine effizientere Implementierung angegeben werden kann, können Sie die Implementierung manuell definieren.
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit
@@ -282,7 +279,7 @@ is Ctl + Adj {
     controlled adjoint invert; 
 }
 ```
-Im obigen Beispiel gibt an, `adjoint invert;` dass die Adjoint-Spezialisierung durch das Umkehren der Text Implementierung generiert werden soll, und `controlled adjoint invert;` gibt an, dass die kontrollierte Adjoint-Spezialisierung generiert werden soll, indem die angegebene Implementierung der kontrollierten Spezialisierung umgekehrt wird.
+Im vorherigen Beispiel gibt an, `adjoint invert;` dass die Adjoint-Spezialisierung durch das Umkehren der Text Implementierung generiert werden soll, und `controlled adjoint invert;` gibt an, dass die kontrollierte Adjoint-Spezialisierung generiert werden soll, indem die angegebene Implementierung der kontrollierten Spezialisierung umgekehrt wird.
 
 Wenn eine oder mehrere Spezialisierungen neben dem Standardtext explizit deklariert werden müssen, muss die Implementierung für den Standardtext ebenfalls in eine passende Spezialisierungs Deklaration integriert werden:
 
@@ -305,9 +302,9 @@ operation CountOnes(qubits: Qubit[]) : Int {
 
 #### <a name="operation-declarations-with-adjointcontrolled"></a>Vorgangs Deklarationen mit Adjoint/kontrolliertem
 
-Es ist zulässig, einen Vorgang ohne Adjoint oder kontrollierte Versionen anzugeben. Beispielsweise haben Messvorgänge keine, da Sie nicht invertierbar oder steuerbar sind.
+Es ist zulässig, einen Vorgang ohne Adjoint oder kontrollierte Versionen anzugeben. Beispielsweise haben Messungs Vorgänge keinen, weil Sie nicht invertierbar oder steuerbar sind.
 
-Ein-Vorgang unterstützt die- `Adjoint` und/oder- `Controlled` Funktoren, wenn die-Deklaration eine implizite oder explizite Deklaration der jeweiligen Spezialisierungs Elemente enthält.
+Ein-Vorgang unterstützt die `Adjoint` -und- `Controlled` Funktoren, wenn seine Deklaration eine implizite oder explizite Deklaration der jeweiligen Spezialisierungs Elemente enthält.
 
 Eine explizit deklarierte Adjoint/gesteuerte Spezialisierung impliziert das vorhanden sein einer Adjoint/kontrollierten Spezialisierung. 
 
@@ -317,24 +314,23 @@ Bei einem Vorgang, dessen Text Aufrufe von anderen Vorgängen enthält, die das 
 
 #### <a name="controlled-adjoint"></a>Kontrollierter Adjoint
 
-Die kontrollierte Adjoint-Version eines Vorgangs gibt an, wie eine Quantum-gesteuerte Version des Adjoint-Vorgangs des Vorgangs implementiert wird.
+Die kontrollierte Adjoint-Version eines Vorgangs gibt an, wie eine durch eine Quantum gesteuerte Version des Adjoint-Vorgangs des Vorgangs implementiert wird.
 Es ist zulässig, einen Vorgang ohne kontrollierte Adjoint-Version anzugeben. Messvorgänge haben beispielsweise keine kontrollierte Adjoint-Version, da Sie weder steuerbar noch invertierbar sind.
 
-Eine kontrollierte Adjoint-Spezialisierung für einen Vorgang muss nur dann vorhanden sein, wenn sowohl ein Adjoint-als auch eine gesteuerte Spezialisierung vorhanden sind. In diesem Fall wird das vorhanden sein der kontrollierten Adjoint-Spezialisierung abgeleitet, und vom Compiler wird eine entsprechende Spezialisierung generiert, wenn keine Implementierung explizit definiert wurde. 
+Eine kontrollierte Adjoint-Spezialisierung für einen Vorgang muss nur dann vorhanden sein, wenn sowohl ein Adjoint-als auch eine gesteuerte Spezialisierung vorhanden sind. In diesem Fall wird das vorhanden sein der kontrollierten Adjoint-Spezialisierung abgeleitet. Wenn keine Implementierung explizit definiert ist, generiert die Kompilierung eine entsprechende Spezialisierung.
 
 Bei einem Vorgang, dessen Text Aufrufe von anderen Vorgängen enthält, die nicht über eine kontrollierte Adjoint-Version verfügen, ist das automatische Erstellen einer Adjoint-Spezialisierung nach der- `invert` ,- `distribute` oder- `auto` Direktive nicht möglich.
 
 
 ### <a name="type-compatibility"></a>Typkompatibilität
 
-Ein Vorgang mit zusätzlichen Funktoren, die unterstützt werden, kann überall dort verwendet werden, wo ein Vorgang mit weniger Funktoren, jedoch mit derselben Signatur erwartet wird.
-Beispielsweise kann ein Vorgang des Typs `(Qubit => Unit is Adj)` überall dort verwendet werden, wo ein Vorgang des Typs `(Qubit => Unit)` erwartet wird.
+Verwenden Sie einen Vorgang mit zusätzlichen Funktoren, die überall unterstützt werden, wenn Sie einen Vorgang mit weniger Funktoren, aber derselben Signatur verwenden. Verwenden Sie beispielsweise einen Vorgang des Typs an einer beliebigen Stelle, an `(Qubit => Unit is Adj)` der Sie einen Vorgang des Typs verwenden `(Qubit => Unit)` .
 
-Q # ist in Bezug auf Aufruf Bare Rückgabe Typen *kovariant* : ein Aufruf bares Element, das einen Typ zurückgibt, `'A` ist mit einem Aufruf baren Element mit dem gleichen Eingabetyp und einem Ergebnistyp kompatibel, der `'A` mit kompatibel ist.
+Q # ist in Bezug auf Aufruf Bare Rückgabe Typen *kovariant* : ein Aufruf bares Element, das einen Typ zurückgibt, `'A` ist mit einem Aufruf baren Element mit dem gleichen Eingabetyp und einem Ergebnistyp kompatibel, der mit kompatibel ist `'A` .
 
 Q # ist in Bezug auf Eingabetypen *kontra Variant* : ein Aufruf bares Element, das einen Typ `'A` als Eingabe annimmt, ist mit einem Aufruf baren mit demselben Ergebnistyp und einem Eingabetyp kompatibel, der mit kompatibel ist `'A` .
 
-Das heißt, dass die folgenden Definitionen gegeben sind:
+Das heißt, wenn die folgenden Definitionen definiert sind,
 
 ```qsharp
 operation Invert(qubits : Qubit[]) : Unit 
@@ -354,22 +350,22 @@ function ConjugateUnitaryWith(
 : (Qubit[] => Unit is Adj + Ctl) {...}
 ```
 
-Folgendes gilt:
+Sie können
 
-- Die-Funktion `ConjugateInvertWith` kann mit einem `inner` Argument von oder aufgerufen `Invert` werden `ApplyUnitary` .
-- Die Funktion `ConjugateUnitaryWith` kann mit einem `inner` Argument von aufgerufen werden `ApplyUnitary` , aber nicht `Invert` .
-- Ein Wert vom Typ `(Qubit[] => Unit is Adj + Ctl)` kann von zurückgegeben werden `ConjugateInvertWith` .
+- Rufen Sie die Funktion `ConjugateInvertWith` mit einem `inner` Argument von `Invert` oder auf `ApplyUnitary` .
+- Rufen Sie die Funktion `ConjugateUnitaryWith` mit einem `inner` Argument von auf `ApplyUnitary` , jedoch nicht `Invert` .
+- Gibt einen Wert vom Typ `(Qubit[] => Unit is Adj + Ctl)` aus zurück `ConjugateInvertWith` .
 
 > [!IMPORTANT]
 > F # 0,3 hat einen signifikanten Unterschied im Verhalten von benutzerdefinierten Typen eingeführt.
 
 Benutzerdefinierte Typen werden als umschließende Version des zugrunde liegenden Typs und nicht als Untertyp behandelt.
-Dies bedeutet, dass ein Wert eines benutzerdefinierten Typs nicht verwendbar ist, wenn ein Wert des zugrunde liegenden Typs erwartet wird.
+Dies bedeutet, dass ein Wert eines benutzerdefinierten Typs nicht verwendbar ist, wenn Sie erwarten, dass ein Wert des zugrunde liegenden Typs ist.
 
 
 ### <a name="conjugations"></a>Konjugationen
 
-Im Gegensatz zu klassischen Bits ist das Freigeben von Quantum-Speicher etwas komplizierter, da das Blind Zurücksetzen von Qubits unerwünschte Auswirkungen auf die verbleibende Berechnung haben kann, wenn die Qubits noch entkoppelt sind. Dies kann vermieden werden, indem Berechnungen vor der Freigabe des Arbeitsspeichers ordnungsgemäß durchgeführt werden. Ein gängiges Muster in Quantum Computing ist daher Folgendes: 
+Im Gegensatz zu klassischen Bits ist das Freigeben von Quantum-Speicher etwas komplizierter, da das Blind Zurücksetzen von Qubits unerwünschte Auswirkungen auf die verbleibende Berechnung haben kann, wenn die Qubits noch entkoppelt sind. Diese Auswirkungen können vermieden werden, indem Berechnungen vor der Freigabe des Arbeitsspeichers ordnungsgemäß durchgeführt werden. Ein gängiges Muster in Quantum Computing ist daher Folgendes: 
 
 ```qsharp
 operation ApplyWith<'T>(
@@ -384,7 +380,7 @@ operation ApplyWith<'T>(
 }
 ```
 
-Ab unserer Version 0,9 wird eine Konjugations Anweisung unterstützt, die die oben beschriebene Transformation implementiert. Mit dieser Anweisung kann der Vorgang `ApplyWith` folgendermaßen implementiert werden:
+Ab Version 0,9 unterstützt Q # eine Konjugations Anweisung, die die vorherige Transformation implementiert. Mit dieser Anweisung kann der Vorgang `ApplyWith` folgendermaßen implementiert werden:
 
 ```qsharp
 operation ApplyWith<'T>(
@@ -401,7 +397,7 @@ operation ApplyWith<'T>(
     }
 }
 ```
-Eine solche Konjugation-Anweisung wird deutlich nützlicher, wenn die äußere und die innere Transformation nicht als Vorgänge verfügbar sind, sondern eher durch einen Block, der aus mehreren Anweisungen besteht, beschreibbar ist. 
+Eine solche Konjugations Anweisung ist weitaus nützlicher, wenn die äußeren und inneren Transformationen nicht als Vorgänge verfügbar sind, sondern eher durch einen Block, der aus mehreren Anweisungen besteht, beschreibbar ist. 
 
 Die umgekehrte Transformation für die-Anweisungen, die im-Block innerhalb von definiert sind, wird automatisch vom Compiler generiert und nach Abschluss von Apply-Block ausgeführt.
 Da alle änderbaren Variablen, die als Teil des Blocks innerhalb von verwendet werden, im Apply-Block nicht wieder hergestellt werden können, ist die generierte Transformation garantiert das Adjoint der Berechnung im within-Block. 
@@ -412,10 +408,10 @@ Da alle änderbaren Variablen, die als Teil des Blocks innerhalb von verwendet w
 Funktionen sind rein deterministische, klassische Routinen in Q #, die sich von Vorgängen unterscheiden, da Sie keine Auswirkungen auf die Berechnung eines Ausgabe Werts haben können.
 Insbesondere können Funktionen keine Vorgänge aufzurufen. reagieren, zuordnen oder ausleihen von Qubits Stichproben von Zufallszahlen oder hängt anderweitig von dem Zustand ab, der über den Eingabe Wert zu einer Funktion hinausgeht.
 Folglich sind Q #-Funktionen *rein*, da Sie die gleichen Eingabewerte immer denselben Ausgabe Werten zuordnen.
-Dadurch kann der Q #-Compiler sicher neu anordnen, wie und wann Funktionen beim Erstellen von Vorgangs speziationen aufgerufen werden.
+Durch dieses Verhalten kann der Q #-Compiler sicher neu anordnen, wie und wann Funktionen beim Erstellen von Vorgangs speziationen aufgerufen werden.
 
 Jede f #-Quelldatei kann eine beliebige Anzahl von Funktionen definieren.
-Funktionsnamen müssen innerhalb eines Namespace eindeutig sein und können keinen Konflikt mit Vorgangs-oder Typnamen aufweisen.
+Funktionsnamen müssen innerhalb eines Namespace eindeutig sein und können nicht mit Vorgangs-oder Typnamen in Konflikt stehen.
 
 Das Definieren einer Funktion funktioniert ähnlich wie ein Vorgang, mit dem Unterschied, dass für eine Funktion keine Adjoint-oder kontrollierten Spezialisierungs Funktionen definiert werden können.
 Beispiel:
@@ -444,8 +440,7 @@ function DotProduct(a : Double[], b : Double[]) : Double {
 
 ### <a name="classical-logic-in-functions--good"></a>Klassische Logik in Functions = = Good
 
-Wenn dies möglich ist, ist es hilfreich, Klassische Logik in Bezug auf Funktionen anstelle von Vorgängen zu schreiben, damit Sie von innerhalb von Vorgängen leichter verwendet werden kann.
-Wenn Sie z. b. die `Square` obige Deklaration als *Vorgang*geschrieben hätten, wäre der Compiler nicht in der Lage, zu garantieren, dass der Aufruf mit derselben Eingabe konsistent die gleichen Ausgaben erzeugt.
+Wenn dies möglich ist, ist es hilfreich, Klassische Logik in Bezug auf Funktionen anstelle von Vorgängen zu schreiben, damit Vorgänge Sie leichter verwenden können. Wenn Sie z. b. die vorherige `Square` Deklaration als *Vorgang*geschrieben haben, konnte der Compiler nicht garantieren, dass der Aufruf mit derselben Eingabe konstant die gleichen Ausgaben erzeugt.
 
 Um den Unterschied zwischen Funktionen und Vorgängen zu unterstreichen, sollten Sie das Problem der klassischen Stichprobenentnahme einer Zufallszahl aus einem f #-Vorgang in Erwägung gezogen
 
@@ -458,23 +453,23 @@ operation U(target : Qubit) : Unit {
 ```
 
 Jedes Mal `U` , wenn aufgerufen wird, wird eine andere Aktion für ausgeführt `target` .
-Insbesondere kann der Compiler nicht garantieren, dass, wenn wir eine `adjoint auto` Spezialisierung-Deklaration hinzugefügt `U` haben, `U(target); Adjoint U(target);` als Identität agiert (d. h. als No-OP).
-Dies verstößt gegen die Definition des Adjoint, das in [Vektoren und Matrizen](xref:microsoft.quantum.concepts.vectors)aufgetreten ist, sodass das automatische Generieren einer Adjoint-Spezialisierung in einem Vorgang, bei dem der Vorgang aufgerufen wurde, <xref:microsoft.quantum.math.randomreal> die vom Compiler bereitgestellten Garantien unterbrechen würde <xref:microsoft.quantum.math.randomreal> . ist ein Vorgang, für den keine Adjoint-oder kontrollierte Version vorhanden ist.
+Insbesondere kann der Compiler nicht garantieren, dass, wenn Sie eine `adjoint auto` Spezialisierung-Deklaration hinzufügen `U` , `U(target); Adjoint U(target);` als Identität agiert (d. h. als No-OP).
+Dies verstößt gegen die Definition des in [Vektoren und Matrizen](xref:microsoft.quantum.concepts.vectors)definierten Adjoint, sodass der Compiler die automatische Generierung einer Adjoint-Spezialisierung in einem Vorgang gestattet, bei dem Sie den Vorgang aufzurufen, <xref:microsoft.quantum.math.randomreal> die vom Compiler bereitgestellten Garantien sprengen würde <xref:microsoft.quantum.math.randomreal> . ist ein Vorgang, für den keine Adjoint-oder kontrollierte Version vorhanden ist.
 
-Das Zulassen von Funktionsaufrufen wie `Square` ist jedoch sicher, dass der Compiler sicher sein kann, dass nur die Eingabe in beibehalten werden muss, damit die `Square` Ausgabe stabil bleibt.
+Auf der anderen Seite können Funktionsaufrufe wie z. b. `Square` sicher sein, und der Compiler wird sichergestellt, dass nur die Eingabe in beibehalten werden muss, damit die `Square` Ausgabe stabil bleibt.
 Daher ist es einfach, diese Logik in anderen Funktionen und Vorgängen zu verwenden, damit Sie so viel Klassische Logik wie möglich in Functions isolieren kann.
 
 
 ## <a name="generic-type-parameterized-callables"></a>Generische (typparametrisierte) callables
 
-Viele Funktionen und Vorgänge, die wir möglicherweise definieren möchten, sind nicht wirklich stark von den Typen Ihrer Eingaben abhängig, sondern verwenden nur implizit ihre Typen über eine andere Funktion oder einen anderen Vorgang.
+Viele Funktionen und Vorgänge, die Sie möglicherweise definieren möchten, sind nicht wirklich stark von den Typen Ihrer Eingaben abhängig, sondern verwenden nur implizit ihre Typen über eine andere Funktion oder einen anderen Vorgang.
 Sehen Sie sich beispielsweise das *Karten* Konzept an, das vielen funktionalen Sprachen gemeinsam ist. bei Angabe einer Funktion $f (x) $ und einer Auflistung von Werten $ \{ x_1, x_2, \dots, x_n \} $ gibt MAP eine neue Auflistung $ \{ f (x_1), f (x_2), \dots, f (x_n) \} $ zurück.
-Um dies in Q # zu implementieren, können wir diese Funktionen als erste Klasse nutzen.
-Sehen wir uns ein kurzes Beispiel für an `Map` , indem wir ★ als Platzhalter verwenden, während wir herausfinden, welche Typen wir benötigen.
+Um dies in Q # zu implementieren, nutzen Sie die Tatsache, dass Functions die erste Klasse ist.
+Im folgenden finden Sie ein kurzes Beispiel für die `Map` Verwendung von `T` als Platzhalter, während Sie herausfinden, welche Typen Sie benötigen.
 
 ```qsharp
-function Map(fn : (★ -> ★), values : ★[]) : ★[] {
-    mutable mappedValues = new ★[Length(values)];
+function Map(fn : (T -> T), values : T[]) : T[] {
+    mutable mappedValues = new T[Length(values)];
     for (idx in 0..Length(values) - 1) {
         set mappedValues w/= idx <- fn(values[idx]);
     }
@@ -482,7 +477,7 @@ function Map(fn : (★ -> ★), values : ★[]) : ★[] {
 }
 ```
 
-Beachten Sie, dass diese Funktion unabhängig von den tatsächlichen Typen, die wir ersetzen, sehr gut aussieht.
+Beachten Sie, dass diese Funktion unabhängig von den tatsächlichen Typen, in denen Sie ersetzen, sehr ähnlich aussieht.
 Eine Zuordnung von Ganzzahlen zu Paulis sieht beispielsweise genauso wie eine Zuordnung von Gleit Komma Zahlen zu Zeichen folgen aus:
 
 ```qsharp
@@ -503,25 +498,25 @@ function MapDoublesToStrings(fn : (Double -> String), values : Double[]) : Strin
 }
 ```
 
-Im Prinzip könnten wir eine Version von `Map` für jedes Paar von Typen schreiben, auf die wir stoßen, aber dies führt zu einer Reihe von Schwierigkeiten.
-Wenn beispielsweise ein Fehler in gefunden wird `Map` , müssen wir sicherstellen, dass die Korrektur in allen Versionen von einheitlich angewendet wird `Map` .
-Wenn wir ein neues Tupel oder einen neuen UDT erstellen, müssen wir nun auch ein neues erstellen, `Map` um zusammen mit dem neuen Typ zu gelangen.
-Diese Funktion ist zwar für eine kleine Anzahl solcher Funktionen übertragbar, da wir jedoch mehr und mehr Funktionen der gleichen Form wie erfassen `Map` , werden die Kosten für die Einführung neuer Typen in einer relativ kurzen Reihenfolge nicht zu groß.
+Im Prinzip können Sie eine Version von `Map` für jedes Paar von Typen schreiben, das auftreten, aber dies führt zu mehreren Schwierigkeiten.
+Wenn Sie beispielsweise einen Fehler in feststellen `Map` , müssen Sie sicherstellen, dass die Korrektur in allen Versionen von einheitlich angewendet wird `Map` .
+Wenn Sie ein neues Tupel oder einen neuen UDT erstellen, müssen Sie nun auch ein neues erstellen, `Map` um zusammen mit dem neuen Typ zu wechseln.
+Diese Funktion ist zwar für eine kleine Anzahl solcher Funktionen übertragbar, da Sie jedoch mehr und mehr Funktionen der gleichen Form wie erfassen `Map` , werden die Kosten für die Einführung neuer Typen in einer relativ kurzen Reihenfolge nicht sehr groß.
 
-Ein Großteil dieser Schwierigkeiten ergibt sich jedoch darin, dass wir dem Compiler nicht die Informationen gegeben haben, die er benötigt, um zu erkennen, wie die verschiedenen Versionen von `Map` verknüpft sind.
-Effektiv möchten wir, dass der Compiler `Map` als eine mathematische Funktion von q #- *Typen* zu q #-Funktionen behandelt.
+Ein Großteil dieser Schwierigkeit ergibt sich jedoch aus der Tatsache, dass Sie dem Compiler nicht die erforderlichen Informationen zur Erkennung der verschiedenen Versionen von erhalten haben `Map` .
+Effektiv möchten Sie, dass der Compiler `Map` als eine mathematische Funktion von q #- *Typen* zu q #-Funktionen behandelt.
 
-Dieses Konzept wird formalisiert, indem Funktionen und Vorgänge *Typparameter*sowie ihre normalen tupelparameter enthalten können.
-In den obigen Beispielen möchten wir uns vorstellen, `Map` dass im `Int, Pauli` ersten Fall Typparameter und `Double, String` im zweiten Fall vorhanden sind.
-In den meisten Fällen können diese Typparameter so verwendet werden, als wären Sie normale Typen: Wir verwenden Werte von Typparametern, um Arrays und Tupel zu erstellen, Funktionen und Vorgänge aufzurufen und gewöhnliche oder änderbare Variablen zuzuweisen.
+Q # formalisiert dieses Konzept, indem es Funktionen und Operationen *Typparameter*sowie ihre normalen tupelparameter zulässt.
+In den vorherigen Beispielen möchten Sie sich vorstellen, `Map` dass im `Int, Pauli` ersten Fall Typparameter und `Double, String` im zweiten Fall vorhanden sind.
+Verwenden Sie zum größten Teil diese Typparameter, als wären Sie normale Typen. Verwenden Sie Werte von Typparametern, um Arrays und Tupel zu erstellen, Funktionen und Vorgänge aufzurufen und gewöhnliche oder änderbare Variablen zuzuweisen.
 
 > [!NOTE]
 > Der extremste Fall der indirekten Abhängigkeit ist die von Qubits, bei denen ein Q #-Programm nicht direkt auf die Struktur des `Qubit` Typs zurückgreifen kann, sondern solche Typen an andere Vorgänge und Funktionen übergeben **muss** .
 
-Wenn Sie zum obigen Beispiel zurückkehren, sehen Sie, dass wir über `Map` Typparameter verfügen müssen, eine zur Darstellung der Eingabe `fn` und eine, die die Ausgabe darstellt `fn` .
+Wenn Sie zum vorherigen Beispiel zurückkehren, sehen Sie, dass `Map` über Typparameter verfügen muss, eines für die Darstellung der Eingabe `fn` und eines zum Darstellen der Ausgabe `fn` .
 In f # wird dies durch Hinzufügen von spitzen Klammern (d `<>` . h. nicht Klammer $ \braket {} $!) nach dem Namen einer Funktion oder eines Vorgangs in der Deklaration und durch Auflisten der einzelnen Typparameter geschrieben.
 Der Name jedes Typparameters muss mit einem Tick beginnen `'` , was darauf hinweist, dass es sich um einen Typparameter handelt und nicht um einen normalen Typ (auch als *konkreter* Typ bezeichnet).
-Für `Map` schreiben wir daher Folgendes:
+Daher `Map` wird geschrieben:
 
 ```qsharp
 function Map<'Input, 'Output>(fn : ('Input -> 'Output), values : 'Input[]) : 'Output[] {
@@ -533,14 +528,14 @@ function Map<'Input, 'Output>(fn : ('Input -> 'Output), values : 'Input[]) : 'Ou
 }
 ```
 
-Beachten Sie, dass die Definition von `Map<'Input, 'Output>` sehr ähnlich wie die Versionen ist, die wir bereits geschrieben haben.
-Der einzige Unterschied besteht darin, dass wir den Compiler explizit informiert haben, der `Map` nicht direkt davon abhängt `'Input` , was und `'Output` sind, sondern für alle zwei Typen funktionieren, indem Sie Sie indirekt durch verwenden `fn` .
-Nachdem wir `Map<'Input, 'Output>` auf diese Weise definiert haben, können wir Sie als normale Funktion bezeichnen:
+Beachten Sie, dass die Definition von `Map<'Input, 'Output>` den previoius-Versionen sehr ähnlich aussieht.
+Der einzige Unterschied besteht darin, dass Sie den Compiler explizit informiert haben, der `Map` nicht direkt davon abhängt `'Input` , was und `'Output` sind, sondern für alle zwei Typen funktionieren, indem Sie Sie indirekt durch verwenden `fn` .
+Wenn Sie `Map<'Input, 'Output>` auf diese Weise definiert haben, können Sie Sie wie eine normale Funktion nennen:
 
 ```qsharp
 // Represent Z₀ Z₁ X₂ Y₃ as a list of ints.
 let ints = [3, 3, 1, 2];
-// Here, we assume IntToPauli : Int -> Pauli
+// Here, assume IntToPauli : Int -> Pauli
 // looks up PauliI by 0, PauliX by 1, so forth.
 let paulis = Map(IntToPauli, ints);
 ```
@@ -548,7 +543,7 @@ let paulis = Map(IntToPauli, ints);
 > [!TIP]
 > Das Schreiben von generischen Funktionen und Vorgängen ist eine Stelle, an der "Tupel-in-Tupel-out" eine sehr nützliche Methode für den Umgang mit Q #-Funktionen und-Vorgängen ist.
 > Da jede Funktion genau eine Eingabe annimmt und genau eine Ausgabe zurückgibt, gleicht eine Eingabe vom Typ `'T -> 'U` *jede beliebige* Q #-Funktion ab.
-> Ebenso kann jeder Vorgang an eine Eingabe des Typs übermittelt werden `'T => 'U` .
+> Entsprechend können Sie jeden Vorgang an eine Eingabe vom Typ übergeben `'T => 'U` .
 
 Sehen Sie sich als zweites Beispiel die Herausforderung an, eine Funktion zu schreiben, die die Komposition zweier anderer Funktionen zurückgibt:
 
@@ -562,9 +557,9 @@ function Compose(outerFn : (B -> C), innerFn : (A -> B)) : (A -> C) {
 }
 ```
 
-Hier müssen wir genau angeben, was `A` , `B` und `C` sind, und damit das-Hilfsprogramm der neuen Funktion stark einschränken `Compose` .
+Hier müssen Sie genau angeben, was `A` , `B` und `C` sind, und so das Dienstprogramm der neuen Funktion stark einschränken `Compose` .
 Schließlich ist `Compose` nur von `A` , `B` und `C` *über* `innerFn` und abhängig `outerFn` .
-Als Alternative können wir Typparameter hinzufügen, `Compose` die angeben, dass Sie für *alle* `A` , `B` und funktionieren, solange `C` diese Parameter mit den von und erwarteten entsprechen `innerFn` `outerFn` :
+Als Alternative können Sie auch Typparameter hinzufügen, `Compose` die angeben, dass Sie für *alle* `A` , und funktioniert `B` , solange `C` diese Parameter den von und erwarteten entsprechen `innerFn` `outerFn` :
 
 ```qsharp
 function ComposeImpl<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B), input : 'A) : 'C {
@@ -593,9 +588,9 @@ operation FirstClassExample(target : Qubit) : Unit {
 }
 ```
 
-Der Wert der Variablen `ourH` im obigen Code Ausschnitt ist dann der Vorgang <xref:microsoft.quantum.intrinsic.h> , sodass dieser Wert wie jeder andere Vorgang aufgerufen werden kann.
-Dies ermöglicht es uns, Vorgänge zu schreiben, die Vorgänge als Teil Ihrer Eingabe ausführen und so die Konzepte der Ablauf Steuerung auf höherer Ordnung bilden.
-Beispielsweise könnten wir uns vorstellen, einen Vorgang zu "quadrieren", indem wir ihn zweimal auf das gleiche Ziel-Qubit anwenden.
+Der Wert der Variablen `ourH` im vorherigen Code Ausschnitt ist dann der Vorgang <xref:microsoft.quantum.intrinsic.h> , sodass Sie diesen Wert wie jeder andere Vorgang abrufen können.
+Mit dieser Fähigkeit können Sie Vorgänge schreiben, die Vorgänge als Teil Ihrer Eingabe ausführen und so die Konzepte der Ablauf Steuerung in höherer Ordnung bilden.
+Beispielsweise können Sie sich vorstellen, einen Vorgang zu "quadrieren", indem Sie ihn zweimal auf das gleiche Ziel-Qubit anwenden.
 
 ```qsharp
 operation ApplyTwice(op : (Qubit => Unit), target : Qubit) : Unit {
@@ -606,9 +601,9 @@ operation ApplyTwice(op : (Qubit => Unit), target : Qubit) : Unit {
 
 ### <a name="returning-operations-from-a-function"></a>Zurückgeben von Vorgängen aus einer Funktion
 
-Wir betonen, dass wir auch Vorgänge als Teil der Ausgaben zurückgeben können, sodass wir einige Arten von klassischer bedingter Logik als klassische Funktion isolieren können, die eine Beschreibung eines Quantum-Programms in Form eines Vorgangs zurückgibt.
+Es ist wichtig zu betonen, dass Sie auch Vorgänge als Teil der Ausgaben zurückgeben können, sodass Sie einige Arten von klassischer bedingter Logik als klassische Funktion isolieren können, die eine Beschreibung eines Quantum-Programms in Form eines Vorgangs zurückgibt.
 Als einfaches Beispiel sehen Sie sich das Beispiel für die teleportung an, in dem die Partei, die eine zwei-Bit-klassische Nachricht empfängt, die Nachricht verwenden muss, um Ihr Qubit in den richtigen teleportierten Zustand zu decodieren.
-Wir könnten dies im Hinblick auf eine Funktion schreiben, die diese beiden klassischen Bits annimmt und den richtigen Decodierungs Vorgang zurückgibt.
+Sie könnten dies im Hinblick auf eine Funktion schreiben, die diese beiden klassischen Bits annimmt und den richtigen Decodierungs Vorgang zurückgibt.
 
 ```qsharp
 function TeleporationDecoderForMessage(hereBit : Result, thereBit : Result)
@@ -626,14 +621,14 @@ function TeleporationDecoderForMessage(hereBit : Result, thereBit : Result)
 }
 ```
 
-Diese neue Funktion ist tatsächlich eine Funktion, denn wenn wir Sie mit denselben Werten von `hereBit` und nennen `thereBit` , erhalten wir immer denselben Vorgang.
+Diese neue Funktion ist tatsächlich eine Funktion, wenn Sie Sie mit den gleichen Werten von und aufzurufen `hereBit` `thereBit` , und Sie erhalten immer denselben Vorgang.
 Daher kann der Decoder sicher innerhalb von Vorgängen ausgeführt werden, ohne dass es darum geht, zu bedenken, wie die Decodierungs Logik mit den Definitionen der verschiedenen Vorgangs Spezialisierungs Maßnahmen interagiert.
-Das heißt, wir haben die klassische Logik innerhalb einer Funktion isoliert und dem Compiler dadurch sichergestellt, dass der Funktions aufrufbedarf mit Straffreiheit neu angeordnet werden kann, solange die Eingabe beibehalten wird.
+Das heißt, die klassische Logik innerhalb einer Funktion ist isoliert, sodass dem Compiler gewährleistet wird, dass der Funktions aufrufbedarf mit Straffreiheit neu angeordnet werden kann, solange die Eingabe beibehalten wird.
 
 
 ## <a name="partial-application"></a>Partielle Anwendung
 
-Wir können mit Funktionen, die Vorgänge mithilfe einer *partiellen Anwendung*zurückgeben, wesentlich mehr tun, in der wir einen oder mehrere Teile der Eingabe für eine Funktion oder einen Vorgang bereitstellen können, ohne Sie tatsächlich aufrufen zu müssen. Wenn Sie z. b. das `ApplyTwice` obige Beispiel verwenden, können Sie angeben, dass Sie nicht sofort angeben möchten, auf welchem Qubit der Eingabevorgang angewendet werden soll:
+Sie können mit Funktionen, die Vorgänge mithilfe einer *partiellen Anwendung*zurückgeben, wesentlich mehr tun, bei der Sie einen oder mehrere Teile der Eingabe für eine Funktion oder einen Vorgang bereitstellen, ohne Sie tatsächlich aufrufen zu müssen. Im vorherigen `ApplyTwice` Beispiel können Sie angeben, dass Sie nicht sofort angeben möchten, auf welchem Qubit der Eingabevorgang angewendet werden soll:
 
 ```qsharp
 operation PartialApplicationExample(op : (Qubit => Unit), target : Qubit) : Unit {
@@ -642,11 +637,11 @@ operation PartialApplicationExample(op : (Qubit => Unit), target : Qubit) : Unit
 }
 ```
 
-In diesem Fall enthält die lokale Variable `twiceOp` den teilweise angewendeten Vorgang `ApplyTwice(op, _)` , bei dem Teile der Eingabe, die noch nicht angegeben wurden, durch angegeben werden `_` .
-Wenn `twiceOp` in der nächsten Zeile tatsächlich aufgerufen wird, übergeben wir als Eingabe an den teilweise angewendeten Vorgang alle verbleibenden Teile der Eingabe für den ursprünglichen Vorgang.
-Folglich ist der obige Code Ausschnitt tatsächlich identisch mit dem `ApplyTwice(op, target)` direkten Aufruf von, da wir eine neue lokale Variable eingeführt haben, die es uns ermöglicht, den Aufruf zu verzögern, während einige Teile der Eingabe bereitgestellt werden.
+In diesem Fall enthält die lokale Variable `twiceOp` den teilweise angewendeten Vorgang `ApplyTwice(op, _)` , wobei `_` Teile der Eingabe angibt, die noch nicht angegeben wurden.
+Wenn Sie `twiceOp` in der nächsten Zeile aufzurufen, übergeben Sie als Eingabe an den teilweise angewendeten Vorgang alle verbleibenden Teile der Eingabe für den ursprünglichen Vorgang.
+Folglich ist der vorherige Code Ausschnitt tatsächlich identisch mit dem `ApplyTwice(op, target)` direkten Aufruf von, da Sie eine neue lokale Variable eingeführt haben, damit Sie den Aufruf bei der Bereitstellung einiger Teile der Eingabe verzögern können.
 
-Da ein Vorgang, der teilweise angewendet wurde, erst aufgerufen wird, wenn die gesamte Eingabe bereitgestellt wurde, können wir Vorgänge auf sichere Weise sogar aus Funktionen anwenden.
+Da ein Vorgang, der teilweise angewendet wurde, erst aufgerufen wird, wenn die gesamte Eingabe bereitgestellt wurde, können Sie Vorgänge auf sichere Weise sogar aus Funktionen anwenden.
 
 ```qsharp
 function SquareOperation(op : (Qubit => Unit)) : (Qubit => Unit) {
@@ -654,20 +649,19 @@ function SquareOperation(op : (Qubit => Unit)) : (Qubit => Unit) {
 }
 ```
 
-Im Prinzip könnte die klassische Logik in `SquareOperation` viel stärker einbezogen werden, aber Sie ist weiterhin vom Rest eines Vorgangs isoliert, indem die Garantien, die der Compiler über Funktionen bereitstellen kann.
-Diese Vorgehensweise wird in der Q #-Standardbibliothek verwendet, um die klassische Ablauf Steuerung so auszudrücken, dass Sie in quantenprogrammen problemlos verwendet werden kann.
+Im Prinzip könnte die klassische Logik in `SquareOperation` viel stärker einbezogen werden, aber Sie ist weiterhin vom Rest eines Vorgangs isoliert, indem die Garantien, die der Compiler über Funktionen bereitstellen kann. Die Q #-Standardbibliothek verwendet diesen Ansatz, um eine klassische Ablauf Steuerung auf eine Weise auszudrücken, die von Quantum-Programmen problemlos verwendet werden kann.
 
 
 ## <a name="recursion"></a>Rekursion
 
 F #-callables dürfen direkt oder indirekt rekursiv sein.
-Das heißt, ein Vorgang oder eine Funktion kann sich selbst aufrufen, oder es kann eine andere Aufruf Bare aufgerufen werden, die den Aufruf baren Vorgang direkt oder indirekt aufruft.
+Das heißt, ein Vorgang oder eine Funktion kann sich selbst aufrufen, oder Sie kann eine andere Aufruf Bare aufrufen, die den Aufruf baren Vorgang direkt oder indirekt aufruft.
 
 Es gibt jedoch zwei wichtige Kommentare zur Verwendung der Rekursion:
 
 - Die Verwendung von Rekursion bei Vorgängen beeinträchtigt wahrscheinlich bestimmte Optimierungen.
-  Dies kann erhebliche Auswirkungen auf die Ausführungszeit des Algorithmus haben.
-- Bei der Ausführung auf einem eigentlichen Quantum-Gerät kann der Stapel Speicher eingeschränkt sein, sodass die Tiefe Rekursion zu einem Laufzeitfehler führen kann.
+  Diese Störungen können erhebliche Auswirkungen auf die Ausführungszeit des Algorithmus haben.
+- Bei der Ausführung auf einem eigentlichen Quantum-Gerät ist der Stapel Speicherplatz möglicherweise eingeschränkt, sodass die Tiefe Rekursion zu einem Laufzeitfehler führen kann.
   Insbesondere der Q #-Compiler und die Common Language Runtime erkennen und optimieren die Endrekursion nicht.
 
 ## <a name="next-steps"></a>Nächste Schritte
