@@ -8,7 +8,7 @@ summary: >-
 
 
   Wenn ein Quantum-Register anfänglich im Status $ \ sum_i \ alpha_i \ket{i} $, wobei jede $ \ket{i} $ ein Basiszustand ist, der eine ganze Zahl $i $ darstellt, gibt den Status des Registers zum Basisstatus für eine gegebene Ganzzahl $ \ket{j} $, $ $ \ sum_i (-1) ^ {\ delta_ {IJ}} \ alpha_i \ket{i} $ $ an.
-remarks: Dieser Vorgang wird direkt implementiert, ohne dass zusätzliche hilfsqubits explizit zugeordnet werden.
+remarks: Dieser Vorgang wird direkt implementiert, ohne dass zusätzliche Qubits explizit zugeordnet werden müssen.
 syntax: 'operation ReflectAboutInteger (index : Int, reg : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(index : Int, reg : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 656a2d30b7895e8482e113ac792fac0012b07445
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7d63f4f3d4f05aa91305c057badbe329f3561bbd
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679401"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884658"

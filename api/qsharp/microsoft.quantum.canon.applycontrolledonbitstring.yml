@@ -1,0 +1,60 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applycontrolledonbitstring
+name: ApplyControlledOnBitString
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Wendet einen einheitlichen Vorgang für das Ziel Register an, der in einem durch eine bestimmte Bitmaske angegebenen Zustand gesteuert wird.
+remarks: >-
+  Das von angegebene Muster `bits` ist möglicherweise kürzer als `controlRegister` . in diesem Fall werden zusätzliche Steuerungs-Qubits ignoriert (d. h., Sie werden nicht für "$ \ket {0} $" und "$ \ket $" gesteuert {1} ).
+
+  Wenn `bits` länger als ist `controlRegister` , wird ein Fehler ausgelöst.
+
+
+  Beispielsweise `bits = [0,1,0,0,1]` bedeutet, dass `oracle` nur dann angewendet wird, wenn `controlRegister` sich im Zustand $ \ket {0} \ket {1} \ket \ket {0} {0} \ket {1} $ befindet.
+syntax: "operation ApplyControlledOnBitString (bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit"
+input:
+  content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T)"
+  types:
+  - name: bits
+    summary: Die Bitzeichenfolge, für die der angegebene einheitliche Vorgang gesteuert werden soll.
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+  - name: oracle
+    summary: Der auf das Ziel Register anzuwendende einheitliche Vorgang.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: controlRegister
+    summary: Ein Quantum-Register, das die Anwendung von steuert `oracle` .
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targetRegister
+    summary: Das Ziel Register, das an als Eingabe an die übermittelt werden soll `oracle` .
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: cb0aaffb9710f98a3ed22d7a7c97828b05f6ae2c
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886748"

@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertmeasurement
+name: AssertMeasurement
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: Bestätigt, dass das Messen der angegebenen Qubits in der angegebenen Pauli-Basis immer das angegebene Ergebnis hat.
+remarks: Beachten Sie, dass die unter-und kontrollierten Versionen dieses Vorgangs die Bedingung nicht überprüfen.
+syntax: 'operation AssertMeasurement (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[], result : Result, msg : String)'
+  types:
+  - name: bases
+    summary: Ein Maßeffekt zur Bestätigung der Wahrscheinlichkeit von, ausgedrückt als Multi-Qubit-Pauli-Operator.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: qubits
+    summary: Ein Register, für das die-Assertion durchführen werden soll.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: result
+    summary: Das erwartete Ergebnis von `Measure(bases, qubits)` .
+    isPrimitive: true
+    uid: Result
+  - name: msg
+    summary: Eine Meldung, die gemeldet werden soll, wenn die Übersetzung fehlschlägt.
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.diagnostics.assertmeasurementprobability
+metadata:
+  ms.openlocfilehash: e8c74cdeb9ba196b337b56ec377a1158cd331ac7
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886788"

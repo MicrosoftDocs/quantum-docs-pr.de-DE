@@ -39,6 +39,10 @@ operations:
   summary: Bestätigen Sie, dass die angegebenen Qubits alle in "$ \ket {0} $ State" sind.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
   summary: Bestätigen Sie, dass die angegebenen Qubits alle in $ \ket {0} $ State bis zu einer gegebenen Toleranz aufweisen.
+- uid: microsoft.quantum.diagnostics.assertmeasurement
+  summary: Bestätigt, dass das Messen der angegebenen Qubits in der angegebenen Pauli-Basis immer das angegebene Ergebnis hat.
+- uid: microsoft.quantum.diagnostics.assertmeasurementprobability
+  summary: Bestätigt, dass das Messen der angegebenen Qubits in der angegebenen Pauli-Basis das angegebene Ergebnis mit der angegebenen Wahrscheinlichkeit innerhalb einiger Toleranz hat.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     Bei zwei Vorgängen wird von bestätigt, dass Sie für alle Eingabe Zustände identisch agieren.
@@ -84,9 +88,9 @@ newtypes:
   summary: Vom Compiler erkanntes Attribut, das zum Markieren eines Komponententests verwendet wird.
 summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält Funktionen und Vorgänge, die für Diagnosezwecke nützlich sind, einschließlich Assert-Vorgänge und Anspruchs Funktionen."
 metadata:
-  ms.openlocfilehash: 2c619ac283653d87f2917d7c780ed9fe6ccfa965
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: c8e1cd7f3458e736a47749dd057174eb4961c31d
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326590"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884580"

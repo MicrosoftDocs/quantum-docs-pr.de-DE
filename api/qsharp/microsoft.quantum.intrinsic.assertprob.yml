@@ -3,42 +3,26 @@ uid: microsoft.quantum.intrinsic.assertprob
 name: AssertProb
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
-summary: Bestätigt, dass das Messen der angegebenen Qubits in der angegebenen Pauli-Basis das angegebene Ergebnis mit der angegebenen Wahrscheinlichkeit innerhalb einiger Toleranz hat.
-remarks: Beachten Sie, dass die unter-und kontrollierten Versionen dieses Vorgangs die Bedingung nicht überprüfen.
-examples: >-
-  ```qsharp
-
-  using (register = Qubit()) {
-      H(register);
-      AssertProb([PauliZ], [register], One, 0.5,
-          "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
-  }
-
-  ```
+summary: Assertprob ist veraltet. Verwenden Sie stattdessen @"microsoft.quantum.diagnostics.assertmeasurementprobability".
 syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
   types:
   - name: bases
-    summary: Ein Maßeffekt zur Bestätigung der Wahrscheinlichkeit von, ausgedrückt als Multi-Qubit-Pauli-Operator.
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: qubits
-    summary: Ein Register, für das die-Assertion durchführen werden soll.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: result
-    summary: Erwartetes Ergebnis von `Measure(bases, qubits)`.
     isPrimitive: true
     uid: Result
   - name: prob
-    summary: Die Wahrscheinlichkeit, mit der das angegebene Ergebnis erwartet wird.
     isPrimitive: true
     uid: Double
   - name: msg
-    summary: Eine Meldung, die gemeldet werden soll, wenn die Übersetzung fehlschlägt.
     isPrimitive: true
     uid: String
   - name: tol
@@ -52,12 +36,10 @@ output:
 functors:
 - Adjoint
 - Controlled
-seeAlso:
-- assert
 metadata:
-  ms.openlocfilehash: 6317476e89feb3a5fecac15afd52541859fc2f21
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: db29d52b79b1e7b5a980f3e3196c5b2547132103
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674156"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885719"

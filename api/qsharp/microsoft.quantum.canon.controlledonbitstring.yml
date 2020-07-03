@@ -9,20 +9,22 @@ summary: >-
 
   Die Ausgabe dieser Funktion ist ein Vorgang, der durch eine einheitliche Transformation $U $ dargestellt werden kann, sodass \begin{align} U \ket{b_0 B_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 B_1 \cdots b_ {n-1}} \otimes \begin{Cases} V \ket{\psi} & \textrm{if} (b_0 B_1 \cdots b_ {n-1}) = \texttt{Bits} \\ \\ \ket{\psi} & \textrm{otherwits} \end{Cases}, \end{align}, wobei $V $ eine einheitliche Transformation ist, die die Aktion des `oracle` Vorgangs darstellt.
 remarks: >-
-  Die Länge von `bits` und `controlRegister` muss gleich sein.
+  Das von angegebene Muster `bits` ist möglicherweise kürzer als `controlRegister` . in diesem Fall werden zusätzliche Steuerungs-Qubits ignoriert (d. h., Sie werden nicht für "$ \ket {0} $" und "$ \ket $" gesteuert {1} ).
+
+  Wenn `bits` länger als ist `controlRegister` , wird ein Fehler ausgelöst.
 
 
-  Bei einem booleschen Array `bits` und einem einheitlichen Vorgang `oracle`ist die Ausgabe dieser Funktion ein Vorgang, der die folgenden Schritte ausführt:
+  Bei einem booleschen Array `bits` und einem einheitlichen Vorgang `oracle` ist die Ausgabe dieser Funktion ein Vorgang, der die folgenden Schritte ausführt:
 
 
-  * wenden Sie `X` einen Vorgang auf jedes Qubit des Steuer `false` Element Registrierungs Elements an, das dem `bits`-Element von entspricht.
+  * wenden `X` Sie einen Vorgang auf jedes Qubit des Steuerelement Registrierungs Elements an, das dem- `false` Element von entspricht `bits` .
 
-  * auf `Controlled oracle` das Steuerelement und die Ziel Register anwenden;
+  * `Controlled oracle`auf das Steuerelement und die Ziel Register anwenden;
 
-  * wenden Sie `X` einen Vorgang auf jedes Qubit des Steuer `false` Element Registrierungs Elements an, das dem `bits` -Element des-Elements entspricht, um das Steuerelement in den ursprünglichen Zustand zurückzukehren.
+  * wenden `X` Sie einen Vorgang auf jedes Qubit des Steuerelement Registrierungs Elements an, das dem- `false` Element des-Elements entspricht, `bits` um das Steuerelement in den ursprünglichen Zustand zurückzukehren.
 
 
-  Die `Controlled` Ausgabe des funktors ist ein `ControlledOnBitString` Sonderfall von, `bits` `[true, ..., true]`wobei gleich ist.
+  Die Ausgabe des `Controlled` funktors ist ein Sonderfall von `ControlledOnBitString` , wobei `bits` gleich ist `[true, ..., true]` .
 examples: >-
   Die folgenden Code Ausschnitte sind gleichwertig:
 
@@ -34,7 +36,7 @@ examples: >-
   ```
 
 
-  and
+  und
 
 
   ```qsharp
@@ -48,7 +50,7 @@ examples: >-
   ```
 
 
-  Der folgende Code bereitet den Status $ \frac{1}{2}(\ket{00} -\ket{01} + \ket{10} + \ket{11}) $:
+  Der folgende Code bereitet den Status $ \frac {1} {2} (\ket {00} -\ket {01} + \ket {10} + \ket {11} ) $:
 
 
   ```qsharp
@@ -85,7 +87,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Ein einheitlicher Vorgang, der `oracle` für das Ziel Register gilt, wenn der Steuerelement Registrierungs Zustand der Bitmaske `bits`entspricht.
+  - summary: Ein einheitlicher Vorgang, `oracle` der für das Ziel Register gilt, wenn der Steuerelement Registrierungs Zustand der Bitmaske entspricht `bits` .
     isOperation: true
     input:
       types:
@@ -102,9 +104,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: d5a6223c130150f42f83044aec19b1d5a875bb1d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 98bb8a9d5770e34257cd2fbc5456bcf70139af07
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680353"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885510"

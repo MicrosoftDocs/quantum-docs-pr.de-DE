@@ -1,7 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arrays
 name: Microsoft.Quantum.Arrays
-summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält Funktionen zum Erstellen und Bearbeiten von Daten Arrays."
 functions:
 - uid: microsoft.quantum.arrays.all
   summary: Bei Angabe eines Arrays und eines Prädikats, das für die Elemente des Arrays definiert ist, und überprüft, ob alle Elemente des Arrays dem Prädikat entsprechen.
@@ -67,13 +66,16 @@ functions:
   summary: Bei drei Arrays gibt ein neues Array von 3-Tupeln zurück, sodass jedes 3-Tupel ein Element aus jedem ursprünglichen Array enthält.
 - uid: microsoft.quantum.arrays.zip4
   summary: Bei Angabe von vier Arrays wird ein neues Array von 4-Tupeln zurückgegeben, sodass jedes 4-Tupel ein Element aus jedem ursprünglichen Array enthält.
+summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält Funktionen zum Erstellen und Bearbeiten von Daten Arrays."
 operations:
+- uid: microsoft.quantum.arrays.drawmany
+  summary: Wiederholt einen Vorgang für eine bestimmte Anzahl von Samplings und sammelt die Ausgaben in einem Array.
 - uid: microsoft.quantum.arrays.foreach
   summary: Gibt ein neues Array zurück, das aus den Bildern des ursprünglichen Arrays unter dem Vorgang besteht, wenn ein Array und ein Vorgang angegeben sind, der für die Elemente des Arrays definiert ist.
 metadata:
-  ms.openlocfilehash: 92eb956a1387a9765354f45e27eb084c6d73f51b
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 32aeecb419739a89792bdf1e9761e3821abcf380
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326709"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884686"
