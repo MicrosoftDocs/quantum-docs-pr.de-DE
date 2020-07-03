@@ -49,7 +49,7 @@
       "feedback_product_url": "https://github.com/Microsoft/quantum/issues",
       "titleSuffix": "Microsoft Quantum",
       "breadcrumb_path": "/quantum/breadcrumb/toc.json",
-      "extendBreadcrumb": true
+      "extendBreadcrumb": true,
       "disable_contribution_on_translation_quality": [
         "MT",
         "MTE75",
