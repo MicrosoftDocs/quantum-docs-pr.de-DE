@@ -6,18 +6,40 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 6513acd5b9cdce15ce61ed2c0454f46e6a6d9bd0
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 7fbbb81b1ee51bff74b287745bf4447004a0254c
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274085"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885531"
 ---
 # <a name="develop-with-q-and-python"></a>Entwickeln mit Q# und Python
 
 Installieren Sie das QDK, um Python-Hostprogramme zum Aufrufen von Q#-Vorgängen zu entwickeln.
 
-1. Voraussetzungen
+## <a name="install-the-qsharp-python-package"></a>Installieren des `qsharp`-Python-Pakets
+
+### <a name="install-using-conda-recommended"></a>[Installation mithilfe von Conda (empfohlen)](#tab/tabid-conda)
+
+1. Installieren Sie [Miniconda](https://docs.conda.io/en/latest/miniconda.html) oder [Anaconda](https://www.anaconda.com/products/individual#Downloads).
+
+1. Öffnen Sie eine Anaconda-Eingabeaufforderung.
+
+   - Wenn Sie PowerShell oder pwsh verwenden möchten: Öffnen Sie eine Shell, führen Sie `conda init powershell`aus, schließen Sie die Shell, und öffnen Sie sie erneut.
+
+1. Erstellen und aktivieren Sie eine neue Conda-Umgebung namens `qsharp-env` mit den erforderlichen Paketen (einschließlich Jupyter Notebook und IQ#), indem Sie die folgenden Befehle ausführen:
+
+    ```
+    conda create -n qsharp-env -c quantum-engineering qsharp notebook
+
+    conda activate qsharp-env
+    ```
+
+1. Führen Sie `python -c "import qsharp"` über das gleiche Terminal aus, um die Installation zu überprüfen und den lokalen Paketcache mit allen erforderlichen QDK-Komponenten aufzufüllen.
+
+### <a name="install-using-net-cli-and-pip-advanced"></a>[Installieren mit der .NET-CLI und PIP (erweitert)](#tab/tabid-dotnetcli)
+
+1. Voraussetzungen:
 
     - [Python](https://www.python.org/downloads/) 3.6 oder höher
     - Der [PIP](https://pip.pypa.io/en/stable/installing)-Python-Paket-Manager
@@ -45,53 +67,50 @@ Installieren Sie das QDK, um Python-Hostprogramme zum Aufrufen von Q#-Vorgängen
     > ```
     > Ersetzen Sie hierbei `/path/to/dotnet-iqsharp` durch den absoluten Pfad zum Tool `dotnet-iqsharp` in Ihrem Dateisystem.
     > Normalerweise finden Sie dies unter `.dotnet/tools` in Ihrem Benutzerprofilordner.
-  
-1. Sie können Q# mit Python zwar in einer beliebigen IDE verwenden, aber wir empfehlen Ihnen dringend die Nutzung von Visual Studio Code (VS Code) als IDE für Ihre Q#/Python-Anwendungen. Wenn Sie Visual Studio Code und die QDK-Erweiterung für Visual Studio Code verwenden, haben Sie Zugriff auf einen größeren Funktionsumfang.
+    
+***
 
-    - Führen Sie die Installation von [VS Code](https://code.visualstudio.com/download) durch (Windows, Linux und Mac).
-    - Installieren Sie die [QDK-Erweiterung für VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
+Das ist alles! Sie verfügen nun sowohl über das `qsharp`-Python-Paket als auch den IQ#-Kernel für Jupyter, der die Kernfunktionen für das Kompilieren und Ausführen von Q#-Vorgängen in Python bereitstellt und Ihnen die Verwendung von Q#-Jupyter Notebooks ermöglicht.
 
-1. Überprüfen der Installation durch die Erstellung einer `Hello World`-Anwendung
+## <a name="choose-your-ide"></a>Auswählen Ihrer IDE
 
-    - Erstellen Sie einen minimalen Q#-Vorgang, indem Sie eine Datei mit dem Namen `Operation.qs` erstellen und ihr den folgenden Code hinzufügen:
+Sie können Q# mit Python zwar in einer beliebigen IDE verwenden, aber wir empfehlen Ihnen dringend die Nutzung von Visual Studio Code (VS Code) als IDE für Ihre Q#/Python-Anwendungen. Mit der QDK-Erweiterung für Visual Studio Code erhalten Sie Zugriff auf umfangreichere Funktionen wie Warnungen, Syntaxhervorhebung, Projektvorlagen usw.
 
-        ```qsharp
-        namespace HelloWorld {
-            open Microsoft.Quantum.Intrinsic;
-            open Microsoft.Quantum.Canon;
+Wenn Sie VS Code verwenden möchten, gehen Sie wie folgt vor:
 
-            operation SayHello() : Unit {
-                Message("Hello from quantum world!");
-            }
-        }
-        ```
+- Führen Sie die Installation von [VS Code](https://code.visualstudio.com/download) durch (Windows, Linux und Mac).
+- Installieren Sie die [QDK-Erweiterung für VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
 
-    - Erstellen Sie ein Python-Programm mit dem Namen `hello_world.py`, um den Q#-Vorgang `SayHello()` aufzurufen:
+Wenn Sie einen anderen Editor verwenden möchten, sind Sie nach Ausführung der obigen Anweisungen dafür bereit.
 
-        ```python
-        import qsharp
+## <a name="write-your-first-q-program"></a>Schreiben Ihres ersten Q#-Programms
 
-        from HelloWorld import SayHello
+Nun können Sie Ihre Installation des `qsharp`-Python-Pakets überprüfen, indem Sie ein einfaches Q#-Programm schreiben und ausführen.
 
-        SayHello.simulate()
-        ```
+1. Erstellen Sie einen minimalen Q#-Vorgang, indem Sie eine Datei mit dem Namen `Operation.qs` erstellen und ihr den folgenden Code hinzufügen:
 
-    - Führen Sie das Programm aus:
+    :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="3-14":::
 
-        ```
-        python hello_world.py
-        ```
+1. Erstellen Sie im gleichen Ordner wie `Operation.qs` ein Python-Programm namens `host.py`, um den Q#-Vorgang `SampleQuantumRandomNumberGenerator()` zu simulieren:
 
-    - Überprüfen Sie die Ausgabe. Ihr Programm sollte die folgenden Zeilen ausgeben:
+    ```python
+    import qsharp
+    from Qrng import SampleQuantumRandomNumberGenerator
 
-        ```
-        Hello from quantum world!
-        ```
+    SampleQuantumRandomNumberGenerator.simulate()
+    ```
 
+1. Führen Sie das Programm in der Umgebung aus, die Sie während der Installation erstellt haben (d. h. in der Conda- oder Python-Umgebung, in der Sie `qsharp` installiert haben):
+
+    ```
+    python host.py
+    ```
+
+1. Das Ergebnis des von Ihnen aufgerufenen Vorgangs sollte angezeigt werden. Da in diesem Fall ein zufälliges Ergebnis durch den Vorgang generiert wird, wird entweder `Zero` oder `One` auf dem Bildschirm angezeigt. Wenn Sie das Programm wiederholt ausführen, sollte jedes Ergebnis ungefähr die Hälfte der Zeit angezeigt werden.
 
 > [!NOTE]
-> * Sie können auch Python-Jupyter Notebooks verwenden, um klassische Python-Programme zu schreiben und Q#-Vorgänge aus den Zellen aufzurufen. Beim Python-Code handelt es sich nur um ein normales Python-Programm.
+> * Beim Python-Code handelt es sich nur um ein normales Python-Programm. Sie können eine beliebige Python-Umgebung verwenden, einschließlich Python-basierter Jupyter Notebooks, um das Python-Programm zu schreiben und Q#-Vorgänge aufzurufen. Das Python-Programm kann Q#-Vorgänge aus allen QS-Dateien importieren, die sich im gleichen Ordner wie der Python-Code selbst befinden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nachdem Sie das Quantum Development Kit in Ihrer bevorzugten Umgebung installiert haben, können Sie [Ihr erstes Quantenprogramm](xref:microsoft.quantum.quickstarts.qrng) schreiben und ausführen.
+Nachdem Sie das Quantum Development Kit in Ihrer bevorzugten Umgebung installiert haben, können Sie dieses Tutorial durchführen, um [Ihr erstes Quantenprogramm](xref:microsoft.quantum.quickstarts.qrng) zu schreiben und auszuführen.

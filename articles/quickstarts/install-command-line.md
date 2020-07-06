@@ -6,12 +6,12 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 4311ebf9f72254485a20ba721ea2ce19163f4371
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 15015d1673f47faf5a13dde516f834916b4319d6
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274120"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884287"
 ---
 # <a name="develop-with-q-command-line-applications"></a>Entwickeln mit Q#-Befehlszeilenanwendungen
 
@@ -23,7 +23,7 @@ Q#-Programme können allein ohne Treiber in einer Hostsprache wie C#, F# oder Py
 
 ## <a name="installation"></a>Installation
 
-Sie können Q#-Befehlszeilenanwendungen zwar in einer beliebigen IDE erstellen, aber wir empfehlen Ihnen, für Ihre Q#-Anwendungen Visual Studio Code (VS Code) oder Visual Studio als IDE zu nutzen. Bei der Entwicklung in diesen Tools haben Sie Zugriff auf einen großen Funktionsumfang.
+Sie können Q#-Befehlszeilenanwendungen zwar in einer beliebigen IDE erstellen, aber wir empfehlen Ihnen, für Ihre Q#-Anwendungen Visual Studio Code (VS Code) oder Visual Studio als IDE zu nutzen. Die Entwicklung in diesen Umgebungen umfasst die umfangreichen Funktionen der QDK-Erweiterung, einschließlich Warnungen, Syntaxhervorhebung, Projektvorlagen und mehr.
 
 Gehen Sie zum Konfigurieren von VS Code wie folgt vor:
 
@@ -35,8 +35,17 @@ Gehen Sie zum Konfigurieren von Visual Studio wie folgt vor:
 1. Laden Sie [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 oder höher herunter, und installieren Sie die Anwendung mit aktivierter plattformübergreifender .NET Core-Entwicklungsworkload.
 2. Laden Sie das [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) herunter, und installieren Sie es.
 
+Geben Sie Folgendes in die Befehlszeile ein, um das QDK für eine andere Umgebung zu installieren:
 
-## <a name="develop-with-q-using-vs-code"></a>Entwickeln mit Q# mithilfe von VS Code
+```dotnetcli
+dotnet new -i Microsoft.Quantum.ProjectTemplates
+```
+
+## <a name="develop-with-q"></a>Entwickeln mit Q#
+
+Folgen Sie den Anweisungen auf der Registerkarte, die Ihrer Umgebung entspricht.
+
+### <a name="vs-code"></a>[VS-Code](#tab/tabid-vscode)
 
 Installieren Sie die Q#-Projektvorlagen:
 
@@ -64,7 +73,7 @@ So führen Sie die Anwendung aus:
 > [!NOTE]
 > Arbeitsbereiche mit mehreren Stammordnern werden von der VS Code-Q#-Erweiterung derzeit nicht unterstützt. Wenn Sie innerhalb eines VS Code-Arbeitsbereichs über mehrere Projekte verfügen, müssen alle Projekte in demselben Stammordner enthalten sein.
 
-## <a name="develop-with-q-using-visual-studio"></a>Entwickeln mit Q# mithilfe von Visual Studio
+### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs)
 
 Überprüfen Sie Ihre Visual Studio-Installation, indem Sie eine Q#-Anwendung vom Typ `Hello World` erstellen.
 
@@ -83,6 +92,30 @@ So führen Sie die Anwendung aus:
 > [!NOTE]
 > Falls Sie über mehrere Projekte innerhalb einer Visual Studio-Projektmappe verfügen, müssen sich alle darin enthaltenen Projekte in demselben Ordner wie die Projektmappe bzw. in einem der Unterordner befinden.  
 
+### <a name="other-editors-with-the-command-line"></a>[Andere Editoren mit der Befehlszeile](#tab/tabid-cmdline)
+
+Überprüfen Sie Ihre Installation, indem Sie eine Q#-Anwendung vom Typ `Hello World` erstellen.
+
+1. Erstellen einer neuen Anwendung:
+    ```dotnetcli
+    dotnet new console -lang Q# -o runSayHello
+    ```
+
+2. Navigieren Sie zum Anwendungsverzeichnis:
+    ```dotnetcli
+    cd runSayHello
+    ```
+
+    Dieses Verzeichnis sollte nun eine Datei namens `Program.qs` enthalten. Dabei handelt es sich um ein Q#-Programm, mit dem ein einfacher Vorgang zum Ausgeben einer Meldung in der Konsole definiert wird. Sie können diese Vorlage mit einem Text-Editor ändern und mit ihren eigenen Quantum-Anwendungen überschreiben. 
+
+3. Führen Sie das Programm aus:
+    ```dotnetcli
+    dotnet run
+    ```
+
+4. Der folgende Text sollte angezeigt werden: `Hello quantum world!`
+
+***
 
 ## <a name="next-steps"></a>Nächste Schritte
 

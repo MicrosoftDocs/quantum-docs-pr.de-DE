@@ -7,12 +7,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 8d39716c4d4c96ad87862b4b185895aab66cd210
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 457083ea4756d64375834e5a276c2d91031138fe
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274076"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885141"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Aktualisieren des Microsoft Quantum Development Kit (QDK)
 
@@ -151,14 +151,32 @@ Nachdem Ihre Q#-Projekte nun aktualisiert wurden, sollten Sie die Anleitung unte
 Der Prozess zur Aktualisierung des QDK variiert je nach Entwicklungssprache und -umgebung.
 Wählen Sie unten Ihre Entwicklungsumgebung aus.
 
-* [Python: Aktualisieren der IQ#-Erweiterung](#update-iq-for-python)
-* [Jupyter Notebooks: Aktualisieren der IQ#-Erweiterung](#update-iq-for-jupyter-notebooks)
+* [Python: Aktualisieren des `qsharp`-Pakets](#update-the-qsharp-python-package)
+* [Jupyter Notebooks: Aktualisieren des IQ#-Kernels](#update-the-iq-jupyter-kernel)
 * [Visual Studio: Aktualisieren der QDK-Erweiterung](#update-visual-studio-qdk-extension)
 * [VS Code: Aktualisieren der QDK-Erweiterung](#update-vs-code-qdk-extension)
 * [Befehlszeile und C# : Aktualisieren der Projektvorlagen](#c-using-the-dotnet-command-line-tool)
 
 
-### <a name="update-iq-for-python"></a>Aktualisieren von IQ# für Python
+### <a name="update-the-qsharp-python-package"></a>Aktualisieren des `qsharp`-Python-Pakets
+
+Die Aktualisierungsprozedur hängt davon ab, ob Sie ursprünglich mithilfe von Conda oder mithilfe der .NET-CLI und PIP installiert haben.
+
+#### <a name="update-using-conda-recommended"></a>[Aktualisieren mithilfe von Conda (empfohlen)](#tab/tabid-conda)
+
+1. Aktivieren Sie die Conda-Umgebung, in der Sie das `qsharp`-Paket installiert haben, und führen Sie dann den folgenden Befehl aus, um das Paket zu aktualisieren:
+
+    ```
+    conda update -c quantum-engineering qsharp
+    ```
+
+1. Führen Sie am Speicherort Ihrer `.qs`-Dateien den folgenden Befehl aus:
+
+    ```
+    python -c "import qsharp; qsharp.reload()"
+    ```
+
+#### <a name="update-using-net-cli-and-pip-advanced"></a>[Aktualisieren mit der .NET-CLI und PIP (erweitert)](#tab/tabid-dotnetcli)
 
 1. Aktualisieren Sie den `iqsharp`-Kernel. 
 
@@ -167,7 +185,7 @@ Wählen Sie unten Ihre Entwicklungsumgebung aus.
     dotnet iqsharp install
     ```
 
-2. Überprüfen Sie die `iqsharp`-Version.
+1. Überprüfen Sie die `iqsharp`-Version.
 
     ```dotnetcli
     dotnet iqsharp --version
@@ -176,19 +194,19 @@ Wählen Sie unten Ihre Entwicklungsumgebung aus.
     Die folgende Ausgabe wird angezeigt.
 
     ```
-    iqsharp: 0.10.1912.501
-    Jupyter Core: 1.2.20112.0
+    iqsharp: 0.12.20070124
+    Jupyter Core: 1.4.0.0
     ```
 
-    Es ist kein Problem, wenn Ihre `iqsharp`-Version höher ist. Dies sollte dem [aktuellen Release](xref:microsoft.quantum.relnotes) entsprechen.
+    Keine Sorge, wenn Ihre `iqsharp`-Version höher ist. Sie sollte mit dem [aktuellen Release](xref:microsoft.quantum.relnotes) identisch sein.
 
-3. Aktualisieren Sie das `qsharp`-Paket.
+1. Aktualisieren des `qsharp`-Pakets:
 
     ```
     pip install qsharp --upgrade
     ```
 
-4. Überprüfen Sie die `qsharp`-Version.
+1. Überprüfen der `qsharp`-Version:
 
     ```
     pip show qsharp
@@ -198,29 +216,49 @@ Wählen Sie unten Ihre Entwicklungsumgebung aus.
 
     ```
     Name: qsharp
-    Version: 0.10.1912.501
+    Version: 0.12.20070124
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
 
-5. Führen Sie am Speicherort Ihrer `.qs`-Dateien den folgenden Befehl aus.
+1. Führen Sie am Speicherort Ihrer `.qs`-Dateien den folgenden Befehl aus:
 
     ```
     python -c "import qsharp; qsharp.reload()"
     ```
 
-6. Sie können jetzt die aktualisierte QDK-Version verwenden, um Ihre vorhandenen Quantenprogramme auszuführen.
+***
 
-### <a name="update-iq-for-jupyter-notebooks"></a>Aktualisieren von IQ# für Jupyter Notebooks
+Sie können jetzt das aktualisierte `qsharp`-Python-Paket verwenden, um Ihre vorhandenen Quantenprogramme auszuführen.
 
-1. Aktualisieren Sie den `iqsharp`-Kernel.
+### <a name="update-the-iq-jupyter-kernel"></a>Aktualisieren des IQ#-Jupyter-Kernels
+
+Die Aktualisierungsprozedur hängt davon ab, ob Sie ursprünglich mithilfe von Conda oder mithilfe der .NET-CLI und PIP installiert haben.
+
+#### <a name="update-using-conda-recommended"></a>[Aktualisieren mithilfe von Conda (empfohlen)](#tab/tabid-conda)
+
+1. Aktivieren Sie die Conda-Umgebung, in der Sie das `qsharp`-Paket installiert haben, und führen Sie dann den folgenden Befehl aus, um das Paket zu aktualisieren:
+
+    ```
+    conda update -c quantum-engineering qsharp
+    ```
+
+1. Führen Sie den folgenden Befehl in einer Zelle in allen Ihren vorhandenen Q#-Jupyter Notebooks aus:
+
+    ```
+    %workspace reload
+    ```
+
+#### <a name="update-using-net-cli-and-pip-advanced"></a>[Aktualisieren mit der .NET-CLI und PIP (erweitert)](#tab/tabid-dotnetcli)
+
+1. Aktualisieren des `Microsoft.Quantum.IQSharp`-Pakets:
 
     ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
-2. Überprüfen Sie die `iqsharp`-Version.
+1. Überprüfen der `iqsharp`-Version:
 
     ```dotnetcli
     dotnet iqsharp --version
@@ -229,19 +267,21 @@ Wählen Sie unten Ihre Entwicklungsumgebung aus.
     Die Ausgabe sollte in etwa wie folgt aussehen:
 
     ```
-    iqsharp: 0.10.1912.501
-    Jupyter Core: 1.2.20112.0
+    iqsharp: 0.12.20070124
+    Jupyter Core: 1.4.0.0
     ```
 
-    Es ist kein Problem, wenn Ihre `iqsharp`-Version höher ist. Dies sollte dem [aktuellen Release](xref:microsoft.quantum.relnotes) entsprechen.
+    Keine Sorge, wenn Ihre `iqsharp`-Version höher ist. Sie sollte mit dem [aktuellen Release](xref:microsoft.quantum.relnotes) identisch sein.
 
-3. Führen Sie den folgenden Befehl in einer Zelle im Jupyter Notebook aus:
+1. Führen Sie den folgenden Befehl in einer Zelle in allen Ihren vorhandenen Q#-Jupyter Notebooks aus:
 
     ```
     %workspace reload
     ```
 
-4. Sie können jetzt ein vorhandenes Jupyter Notebook öffnen und mit dem aktualisierten QDK ausführen.
+***
+
+Sie können jetzt den aktualisierten IQ#-Kernel verwenden, um Ihre vorhandenen Q#-Jupyter Notebooks auszuführen.
 
 ### <a name="update-visual-studio-qdk-extension"></a>Aktualisieren der Visual Studio-QDK-Erweiterung
 
