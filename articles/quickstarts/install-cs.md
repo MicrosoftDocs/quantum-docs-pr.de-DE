@@ -68,7 +68,7 @@ Wenn Sie einen anderen Editor als Visual Studio oder VS Code verwenden, befolgen
   - Wählen Sie **Q#-Bibliothek** aus.
   - Wählen Sie **Weiter** aus.
   - Wählen Sie einen Namen und Speicherort für Ihre Bibliothek aus.
-  - Stellen Sie sicher, dass die Option „Place project and solution in same directory“ (Projekt und Projektmappe in demselben Verzeichnis anordnen) **deaktiviert** ist.
+  - Stellen Sie sicher, dass die Option „Place project and solution in same directory“ (Projekt und Projektmappe im selben Verzeichnis anordnen) **deaktiviert** ist.
   - Klicken Sie auf **Erstellen**
 - Erstellen eines neuen C#- oder F#-Hostprogramms
   - Navigieren Sie zu **Datei** > **Neu** > **Projekt**.
