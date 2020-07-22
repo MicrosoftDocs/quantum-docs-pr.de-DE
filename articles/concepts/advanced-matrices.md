@@ -1,149 +1,142 @@
 ---
-title: Erweiterte Matrixkonzepte
-description: Erfahren Sie mehr über Eigenvektoren, Eigenwerte und Matrix exponentiale, die grundlegenden Tools, die zum beschreiben und Simulieren von Quantum-Algorithmen verwendet werden.
-author: QuantumWriter
-uid: microsoft.quantum.concepts.matrix-advanced
-ms.author: nawiebe@microsoft.com
-ms.date: 12/11/2017
-ms.topic: article
-no-loc:
-- $
-- $
-- $
-- $
-- $
-- $
-- $$
-- $$
-- $$
-- '\cdots'
-- bmatrix
-- '\ddots'
-- '\equiv'
-- '\sum'
-- '\begin'
-- '\end'
-- '\sqrt'
-- '\otimes'
-- '{'
-- '}'
-- '\text'
-- '\phi'
-- '\kappa'
-- '\psi'
-- '\alpha'
-- '\beta'
-- '\gamma'
-- '\delta'
-- '\omega'
-- '\bra'
-- '\ket'
-- '\boldone'
-- '\\\\'
-- '\\'
-- =
-- '\frac'
-- '\text'
-- '\mapsto'
-- '\dagger'
-- '\to'
-- "\begin{cases}"
-- "\end{cases}"
-- '\operatorname'
-- '\braket'
-- '\id'
-- '\expect'
-- '\defeq'
-- '\variance'
-- '\dd'
-- '&'
-- "\begin{align}"
-- "\end{align}"
-- '\Lambda'
-- '\lambda'
-- '\Omega'
-- '\mathrm'
-- '\left'
-- '\right'
-- '\qquad'
-- '\times'
-- '\big'
-- '\langle'
-- '\rangle'
-- '\bigg'
-- '\Big'
-- '|'
-- '\mathbb'
-- '\vec'
-- '\in'
-- '\texttt'
-- '\ne'
-- <
-- '>'
-- '\leq'
-- '\geq'
-- ~~
-- "~"
-- "\begin{bmatrix}"
-- "\end{bmatrix}"
-- '\_'
-ms.openlocfilehash: 71923247121eae6a1d4e26d2664d8e547370ba3a
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85269455"
+<span data-ttu-id="805c9-101">Title: Erweiterte Matrix Konzepte Description: erfahren Sie mehr über Eigenvektoren, Eigenwerte und Matrix exponentiale, die grundlegenden Tools, die zum beschreiben und Simulieren von Quantum-Algorithmen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="805c9-101">title: Advanced matrix concepts description: Learn about eigenvectors, eigenvalues, and matrix exponentials, the fundamental tools used to describe and simulate quantum algorithms.</span></span>
+<span data-ttu-id="805c9-102">Autor: quantumwriter UID: Microsoft. Quantum. Concepts. Matrix-Advanced ms. Author: nawiebe@microsoft.com ms. Date: 12/11/2017 ms. Topic: article NO-LOC:</span><span class="sxs-lookup"><span data-stu-id="805c9-102">author: QuantumWriter uid: microsoft.quantum.concepts.matrix-advanced ms.author: nawiebe@microsoft.com ms.date: 12/11/2017 ms.topic: article no-loc:</span></span>
+- <span data-ttu-id="805c9-103">"$$"</span><span class="sxs-lookup"><span data-stu-id="805c9-103">"$$"</span></span>
+- <span data-ttu-id="805c9-104">"$$"</span><span class="sxs-lookup"><span data-stu-id="805c9-104">"$$"</span></span>
+- <span data-ttu-id="805c9-105">"$"</span><span class="sxs-lookup"><span data-stu-id="805c9-105">"$"</span></span>
+- <span data-ttu-id="805c9-106">"$"</span><span class="sxs-lookup"><span data-stu-id="805c9-106">"$"</span></span>
+- <span data-ttu-id="805c9-107">"$"</span><span class="sxs-lookup"><span data-stu-id="805c9-107">"$"</span></span>
+- <span data-ttu-id="805c9-108">"$$"</span><span class="sxs-lookup"><span data-stu-id="805c9-108">"$$"</span></span>
+- <span data-ttu-id="805c9-109">"$$$"</span><span class="sxs-lookup"><span data-stu-id="805c9-109">"$$$"</span></span>
+- <span data-ttu-id="805c9-110">"$$$"</span><span class="sxs-lookup"><span data-stu-id="805c9-110">"$$$"</span></span>
+- <span data-ttu-id="805c9-111">"$$$"</span><span class="sxs-lookup"><span data-stu-id="805c9-111">"$$$"</span></span>
+- <span data-ttu-id="805c9-112">"\cdots"</span><span class="sxs-lookup"><span data-stu-id="805c9-112">"\cdots"</span></span>
+- <span data-ttu-id="805c9-113">"bmatrix"</span><span class="sxs-lookup"><span data-stu-id="805c9-113">"bmatrix"</span></span>
+- <span data-ttu-id="805c9-114">"\ddots"</span><span class="sxs-lookup"><span data-stu-id="805c9-114">"\ddots"</span></span>
+- <span data-ttu-id="805c9-115">"\equiv"</span><span class="sxs-lookup"><span data-stu-id="805c9-115">"\equiv"</span></span>
+- <span data-ttu-id="805c9-116">"\sum"</span><span class="sxs-lookup"><span data-stu-id="805c9-116">"\sum"</span></span>
+- <span data-ttu-id="805c9-117">"\begin"</span><span class="sxs-lookup"><span data-stu-id="805c9-117">"\begin"</span></span>
+- <span data-ttu-id="805c9-118">"\end"</span><span class="sxs-lookup"><span data-stu-id="805c9-118">"\end"</span></span>
+- <span data-ttu-id="805c9-119">"\sqrt"</span><span class="sxs-lookup"><span data-stu-id="805c9-119">"\sqrt"</span></span>
+- <span data-ttu-id="805c9-120">"\otimes"</span><span class="sxs-lookup"><span data-stu-id="805c9-120">"\otimes"</span></span>
+- <span data-ttu-id="805c9-121">"{"</span><span class="sxs-lookup"><span data-stu-id="805c9-121">"{"</span></span>
+- <span data-ttu-id="805c9-122">"}"</span><span class="sxs-lookup"><span data-stu-id="805c9-122">"}"</span></span>
+- <span data-ttu-id="805c9-123">"\text"</span><span class="sxs-lookup"><span data-stu-id="805c9-123">"\text"</span></span>
+- <span data-ttu-id="805c9-124">"\phi"</span><span class="sxs-lookup"><span data-stu-id="805c9-124">"\phi"</span></span>
+- <span data-ttu-id="805c9-125">"\kappa"</span><span class="sxs-lookup"><span data-stu-id="805c9-125">"\kappa"</span></span>
+- <span data-ttu-id="805c9-126">"\psi"</span><span class="sxs-lookup"><span data-stu-id="805c9-126">"\psi"</span></span>
+- <span data-ttu-id="805c9-127">"\alpha"</span><span class="sxs-lookup"><span data-stu-id="805c9-127">"\alpha"</span></span>
+- <span data-ttu-id="805c9-128">"\beta"</span><span class="sxs-lookup"><span data-stu-id="805c9-128">"\beta"</span></span>
+- <span data-ttu-id="805c9-129">"\gamma"</span><span class="sxs-lookup"><span data-stu-id="805c9-129">"\gamma"</span></span>
+- <span data-ttu-id="805c9-130">"\delta"</span><span class="sxs-lookup"><span data-stu-id="805c9-130">"\delta"</span></span>
+- <span data-ttu-id="805c9-131">"\omega"</span><span class="sxs-lookup"><span data-stu-id="805c9-131">"\omega"</span></span>
+- <span data-ttu-id="805c9-132">"\bra"</span><span class="sxs-lookup"><span data-stu-id="805c9-132">"\bra"</span></span>
+- <span data-ttu-id="805c9-133">"\ket"</span><span class="sxs-lookup"><span data-stu-id="805c9-133">"\ket"</span></span>
+- <span data-ttu-id="805c9-134">"\boldone"</span><span class="sxs-lookup"><span data-stu-id="805c9-134">"\boldone"</span></span>
+- <span data-ttu-id="805c9-135">"\\\\"</span><span class="sxs-lookup"><span data-stu-id="805c9-135">"\\\\"</span></span>
+- <span data-ttu-id="805c9-136">"\\"</span><span class="sxs-lookup"><span data-stu-id="805c9-136">"\\"</span></span>
+- <span data-ttu-id="805c9-137">"="</span><span class="sxs-lookup"><span data-stu-id="805c9-137">"="</span></span>
+- <span data-ttu-id="805c9-138">"\frac"</span><span class="sxs-lookup"><span data-stu-id="805c9-138">"\frac"</span></span>
+- <span data-ttu-id="805c9-139">"\text"</span><span class="sxs-lookup"><span data-stu-id="805c9-139">"\text"</span></span>
+- <span data-ttu-id="805c9-140">"\mapsto"</span><span class="sxs-lookup"><span data-stu-id="805c9-140">"\mapsto"</span></span>
+- <span data-ttu-id="805c9-141">"\dagger"</span><span class="sxs-lookup"><span data-stu-id="805c9-141">"\dagger"</span></span>
+- <span data-ttu-id="805c9-142">"\to"</span><span class="sxs-lookup"><span data-stu-id="805c9-142">"\to"</span></span>
+- <span data-ttu-id="805c9-143">"\begin{cases}"</span><span class="sxs-lookup"><span data-stu-id="805c9-143">"\begin{cases}"</span></span>
+- <span data-ttu-id="805c9-144">"\end{cases}"</span><span class="sxs-lookup"><span data-stu-id="805c9-144">"\end{cases}"</span></span>
+- <span data-ttu-id="805c9-145">"\operatorname"</span><span class="sxs-lookup"><span data-stu-id="805c9-145">"\operatorname"</span></span>
+- <span data-ttu-id="805c9-146">"\braket"</span><span class="sxs-lookup"><span data-stu-id="805c9-146">"\braket"</span></span>
+- <span data-ttu-id="805c9-147">"\id"</span><span class="sxs-lookup"><span data-stu-id="805c9-147">"\id"</span></span>
+- <span data-ttu-id="805c9-148">"\expect"</span><span class="sxs-lookup"><span data-stu-id="805c9-148">"\expect"</span></span>
+- <span data-ttu-id="805c9-149">"\defeq"</span><span class="sxs-lookup"><span data-stu-id="805c9-149">"\defeq"</span></span>
+- <span data-ttu-id="805c9-150">"\variance"</span><span class="sxs-lookup"><span data-stu-id="805c9-150">"\variance"</span></span>
+- <span data-ttu-id="805c9-151">"\dd"</span><span class="sxs-lookup"><span data-stu-id="805c9-151">"\dd"</span></span>
+- <span data-ttu-id="805c9-152">"&"</span><span class="sxs-lookup"><span data-stu-id="805c9-152">"&"</span></span>
+- <span data-ttu-id="805c9-153">"\begin{align}"</span><span class="sxs-lookup"><span data-stu-id="805c9-153">"\begin{align}"</span></span>
+- <span data-ttu-id="805c9-154">"\end{align}"</span><span class="sxs-lookup"><span data-stu-id="805c9-154">"\end{align}"</span></span>
+- <span data-ttu-id="805c9-155">"\Lambda"</span><span class="sxs-lookup"><span data-stu-id="805c9-155">"\Lambda"</span></span>
+- <span data-ttu-id="805c9-156">"\lambda"</span><span class="sxs-lookup"><span data-stu-id="805c9-156">"\lambda"</span></span>
+- <span data-ttu-id="805c9-157">"\Omega"</span><span class="sxs-lookup"><span data-stu-id="805c9-157">"\Omega"</span></span>
+- <span data-ttu-id="805c9-158">"\mathrm"</span><span class="sxs-lookup"><span data-stu-id="805c9-158">"\mathrm"</span></span>
+- <span data-ttu-id="805c9-159">"\left"</span><span class="sxs-lookup"><span data-stu-id="805c9-159">"\left"</span></span>
+- <span data-ttu-id="805c9-160">"\right"</span><span class="sxs-lookup"><span data-stu-id="805c9-160">"\right"</span></span>
+- <span data-ttu-id="805c9-161">"\qquad"</span><span class="sxs-lookup"><span data-stu-id="805c9-161">"\qquad"</span></span>
+- <span data-ttu-id="805c9-162">"\times"</span><span class="sxs-lookup"><span data-stu-id="805c9-162">"\times"</span></span>
+- <span data-ttu-id="805c9-163">"\big"</span><span class="sxs-lookup"><span data-stu-id="805c9-163">"\big"</span></span>
+- <span data-ttu-id="805c9-164">"\langle"</span><span class="sxs-lookup"><span data-stu-id="805c9-164">"\langle"</span></span>
+- <span data-ttu-id="805c9-165">"\rangle"</span><span class="sxs-lookup"><span data-stu-id="805c9-165">"\rangle"</span></span>
+- <span data-ttu-id="805c9-166">"\bigg"</span><span class="sxs-lookup"><span data-stu-id="805c9-166">"\bigg"</span></span>
+- <span data-ttu-id="805c9-167">"\Big"</span><span class="sxs-lookup"><span data-stu-id="805c9-167">"\Big"</span></span>
+- <span data-ttu-id="805c9-168">"|"</span><span class="sxs-lookup"><span data-stu-id="805c9-168">"|"</span></span>
+- <span data-ttu-id="805c9-169">"\mathbb"</span><span class="sxs-lookup"><span data-stu-id="805c9-169">"\mathbb"</span></span>
+- <span data-ttu-id="805c9-170">"\vec"</span><span class="sxs-lookup"><span data-stu-id="805c9-170">"\vec"</span></span>
+- <span data-ttu-id="805c9-171">"\in"</span><span class="sxs-lookup"><span data-stu-id="805c9-171">"\in"</span></span>
+- <span data-ttu-id="805c9-172">"\texttt"</span><span class="sxs-lookup"><span data-stu-id="805c9-172">"\texttt"</span></span>
+- <span data-ttu-id="805c9-173">"\ne"</span><span class="sxs-lookup"><span data-stu-id="805c9-173">"\ne"</span></span>
+- <span data-ttu-id="805c9-174">"<"</span><span class="sxs-lookup"><span data-stu-id="805c9-174">"<"</span></span>
+- <span data-ttu-id="805c9-175">">"</span><span class="sxs-lookup"><span data-stu-id="805c9-175">">"</span></span>
+- <span data-ttu-id="805c9-176">"\leq"</span><span class="sxs-lookup"><span data-stu-id="805c9-176">"\leq"</span></span>
+- <span data-ttu-id="805c9-177">"\geq"</span><span class="sxs-lookup"><span data-stu-id="805c9-177">"\geq"</span></span>
+- <span data-ttu-id="805c9-178">"~~"</span><span class="sxs-lookup"><span data-stu-id="805c9-178">"~~"</span></span>
+- <span data-ttu-id="805c9-179">"~"</span><span class="sxs-lookup"><span data-stu-id="805c9-179">"~"</span></span>
+- <span data-ttu-id="805c9-180">"\begin{bmatrix}"</span><span class="sxs-lookup"><span data-stu-id="805c9-180">"\begin{bmatrix}"</span></span>
+- <span data-ttu-id="805c9-181">"\end{bmatrix}"</span><span class="sxs-lookup"><span data-stu-id="805c9-181">"\end{bmatrix}"</span></span>
+- <span data-ttu-id="805c9-182">"\_"</span><span class="sxs-lookup"><span data-stu-id="805c9-182">"\_"</span></span>
+
 ---
-# <a name="advanced-matrix-concepts"></a><span data-ttu-id="2b2ed-103">Erweiterte Matrix Konzepte</span><span class="sxs-lookup"><span data-stu-id="2b2ed-103">Advanced Matrix Concepts</span></span> #
+# <a name="advanced-matrix-concepts"></a><span data-ttu-id="805c9-183">Erweiterte Matrix Konzepte</span><span class="sxs-lookup"><span data-stu-id="805c9-183">Advanced Matrix Concepts</span></span> #
 
-<span data-ttu-id="2b2ed-104">Wir erweitern nun unsere Manipulation von Matrizen auf [*Eigenwerte, Eigenvektoren*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) und [*exponentiale*](https://en.wikipedia.org/wiki/Matrix_exponential) , die einen grundlegenden Satz von Tools bilden, die wir zum beschreiben und Implementieren von Quantum-Algorithmen benötigen.</span><span class="sxs-lookup"><span data-stu-id="2b2ed-104">We now extend our manipulation of Matrices to [*Eigenvalues, Eigenvectors*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) and [*Exponentials*](https://en.wikipedia.org/wiki/Matrix_exponential) which form a fundamental set of tools we need to describe and implement quantum algorithms.</span></span>
+<span data-ttu-id="805c9-184">Wir erweitern nun unsere Manipulation von Matrizen auf [*Eigenwerte, Eigenvektoren*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) und [*exponentiale*](https://en.wikipedia.org/wiki/Matrix_exponential) , die einen grundlegenden Satz von Tools bilden, die wir zum beschreiben und Implementieren von Quantum-Algorithmen benötigen.</span><span class="sxs-lookup"><span data-stu-id="805c9-184">We now extend our manipulation of Matrices to [*Eigenvalues, Eigenvectors*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) and [*Exponentials*](https://en.wikipedia.org/wiki/Matrix_exponential) which form a fundamental set of tools we need to describe and implement quantum algorithms.</span></span>
 
-## <a name="eigenvalues-and-eigenvectors"></a><span data-ttu-id="2b2ed-105">Eigenwerte und Eigenvektoren</span><span class="sxs-lookup"><span data-stu-id="2b2ed-105">Eigenvalues and Eigenvectors</span></span> ##
+## <a name="eigenvalues-and-eigenvectors"></a><span data-ttu-id="805c9-185">Eigenwerte und Eigenvektoren</span><span class="sxs-lookup"><span data-stu-id="805c9-185">Eigenvalues and Eigenvectors</span></span> ##
 
-<span data-ttu-id="2b2ed-106">Let $M $ eine quadratische Matrix und $v $ ein Vektor sein, der nicht der NULL-Vektor ist (d. h. der Vektor, der alle Einträge gleich $0 ist $ ).</span><span class="sxs-lookup"><span data-stu-id="2b2ed-106">Let $M$ be a square matrix and $v$ be a vector that is not the all zeros vector (i.e., the vector with all entries equal to $0$).</span></span>
+<span data-ttu-id="805c9-186">Let $ M $ ist eine quadratische Matrix $ , und v $ ist ein Vektor, der nicht der Nullen aller Nullen ist (d. h. der Vektor mit allen Einträgen gleich $ 0 $ ).</span><span class="sxs-lookup"><span data-stu-id="805c9-186">Let $M$ be a square matrix and $v$ be a vector that is not the all zeros vector (i.e., the vector with all entries equal to $0$).</span></span>
 
-<span data-ttu-id="2b2ed-107">Wir sagen $v $ einen [*eigen Vektor*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) $M, $ wenn $MV = CV $ für eine bestimmte Anzahl $c ist $ .</span><span class="sxs-lookup"><span data-stu-id="2b2ed-107">We say $v$ is an [*eigenvector*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) of  $M$ if $Mv = cv$ for some number $c$.</span></span> <span data-ttu-id="2b2ed-108">Wir sagen $c $ der [*eigen Wert*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) , der dem Eigen Vektor $v entspricht $ .</span><span class="sxs-lookup"><span data-stu-id="2b2ed-108">We say $c$ is the [*eigenvalue*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) corresponding to the eigenvector $v$.</span></span> <span data-ttu-id="2b2ed-109">Im Allgemeinen kann eine Matrix $M $ einen Vektor in einen anderen Vektor umwandeln, aber ein eigen Vektor ist ein besonderes Zeichen, da er unverändert bleibt, außer dass er mit einer Zahl multipliziert wird.</span><span class="sxs-lookup"><span data-stu-id="2b2ed-109">In general a matrix $M$ may transform a vector into any other vector, but an eigenvector is special because it is left unchanged except for being multiplied by a number.</span></span> <span data-ttu-id="2b2ed-110">Beachten Sie Folgendes: Wenn $v $ ein eigen Vektor mit einem eigen Wert $c ist $ , dann $ ist $AV auch ein eigenständiger Vektor (für alle nicht-NULL-$a $ ) mit demselben eigen Wert.</span><span class="sxs-lookup"><span data-stu-id="2b2ed-110">Note that if $v$ is an eigenvector with eigenvalue $c$, then $av$ is also an eigenvector (for any nonzero $a$) with the same eigenvalue.</span></span>
+<span data-ttu-id="805c9-187">Wir sagen $ , $ dass v ein [*eigen Vektor*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) von M ist, $ $ Wenn $ mv = CV $ für eine bestimmte Zahl $ c $ .</span><span class="sxs-lookup"><span data-stu-id="805c9-187">We say $v$ is an [*eigenvector*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) of  $M$ if $Mv = cv$ for some number $c$.</span></span> <span data-ttu-id="805c9-188">Wir sagen $ , dass c $ der [*eigen Wert*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) ist, der dem Eigen Vektor $ v entspricht $ .</span><span class="sxs-lookup"><span data-stu-id="805c9-188">We say $c$ is the [*eigenvalue*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) corresponding to the eigenvector $v$.</span></span> <span data-ttu-id="805c9-189">Im Allgemeinen kann eine Matrix $ M $ einen Vektor in einen anderen Vektor umwandeln, aber ein eigen Vektor ist ein besonderes Zeichen, da er unverändert bleibt, außer dass er mit einer Zahl multipliziert wird.</span><span class="sxs-lookup"><span data-stu-id="805c9-189">In general a matrix $M$ may transform a vector into any other vector, but an eigenvector is special because it is left unchanged except for being multiplied by a number.</span></span> <span data-ttu-id="805c9-190">Beachten Sie Folgendes: Wenn $ v $ ein eigen Vektor mit dem Eigen Wert $ c ist $ , dann $ $ ist AV auch ein eigenständiger Vektor (bei jedem Wert ungleich 0 (NULL $ $ )) mit demselben eigen Wert.</span><span class="sxs-lookup"><span data-stu-id="805c9-190">Note that if $v$ is an eigenvector with eigenvalue $c$, then $av$ is also an eigenvector (for any nonzero $a$) with the same eigenvalue.</span></span>
 
-<span data-ttu-id="2b2ed-111">Beispielsweise ist für die Identitätsmatrix jeder Vektor $v $ ein eigen Vektor mit dem Eigen Wert $1 $ .</span><span class="sxs-lookup"><span data-stu-id="2b2ed-111">For example, for the identity matrix, every vector $v$ is an eigenvector with eigenvalue $1$.</span></span>
+<span data-ttu-id="805c9-191">Beispielsweise ist für die Identitätsmatrix jeder Vektor $ v $ ein eigen Vektor mit dem Eigen Wert $ 1 $ .</span><span class="sxs-lookup"><span data-stu-id="805c9-191">For example, for the identity matrix, every vector $v$ is an eigenvector with eigenvalue $1$.</span></span>
 
-<span data-ttu-id="2b2ed-112">Nehmen Sie als weiteres Beispiel eine [*diagonale Matrix*](https://en.wikipedia.org/wiki/Diagonal_matrix) $D $ , die nur Einträge ungleich 0 (null) auf der Diagonal aufweist:</span><span class="sxs-lookup"><span data-stu-id="2b2ed-112">As another example, consider a [*diagonal matrix*](https://en.wikipedia.org/wiki/Diagonal_matrix) $D$ which only has nonzero entries on the diagonal:</span></span>
+<span data-ttu-id="805c9-192">Sehen Sie sich als weiteres Beispiel eine [*diagonale Matrix*](https://en.wikipedia.org/wiki/Diagonal_matrix) $ D $ an, die nur Einträge ungleich 0 (null) auf der Diagonal aufweist:</span><span class="sxs-lookup"><span data-stu-id="805c9-192">As another example, consider a [*diagonal matrix*](https://en.wikipedia.org/wiki/Diagonal_matrix) $D$ which only has nonzero entries on the diagonal:</span></span>
 
-<span data-ttu-id="2b2ed-113">$ $ \begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="2b2ed-113">$$ \begin{bmatrix}</span></span>
-<span data-ttu-id="2b2ed-114">d_1 & 0 & 0 \\ \\ 0 & d_2 & 0 \\ \\ 0 & 0 & D_3 \ End{ bmatrix } .</span><span class="sxs-lookup"><span data-stu-id="2b2ed-114">d_1 & 0 & 0 \\\\ 0 & d_2 & 0 \\\\ 0 & 0 & d_3 \end{bmatrix}.</span></span>
+$$
+\begin{bmatrix}
+<span data-ttu-id="805c9-193">d_1 & 0 & 0 \\\\ 0 & d_2 & 0 \\\\ 0 & 0 & D_3 \end{bmatrix} .</span><span class="sxs-lookup"><span data-stu-id="805c9-193">d_1 & 0 & 0 \\\\ 0 & d_2 & 0 \\\\ 0 & 0 & d_3 \end{bmatrix}.</span></span>
 $$
 
-<span data-ttu-id="2b2ed-115">Die Vektoren</span><span class="sxs-lookup"><span data-stu-id="2b2ed-115">The vectors</span></span>
+<span data-ttu-id="805c9-194">Die Vektoren</span><span class="sxs-lookup"><span data-stu-id="805c9-194">The vectors</span></span>
 
-<span data-ttu-id="2b2ed-116">$ $ \begin{ bmatrix } 1 \\ \\ 0 \\ \\ 0 \end{ bmatrix } , \begin{ bmatrix } 0 \\ \\ 1 \\ \\ 0 \end{bmatrix} und \begin{ bmatrix } 0 \\ \\ 0 \\ \\ 1\end{bmatrix}$$</span><span class="sxs-lookup"><span data-stu-id="2b2ed-116">$$\begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix}0 \\\\ 1 \\\\ 0\end{bmatrix} and \begin{bmatrix}0 \\\\ 0 \\\\ 1\end{bmatrix}$$</span></span>
+$$<span data-ttu-id="805c9-195">\begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix} , \begin{bmatrix} 0 \\\\ 1 \\\\ 0 \end{bmatrix} und \begin{bmatrix} 0 \\\\ 0 \\\\ 1\end{bmatrix}$$</span><span class="sxs-lookup"><span data-stu-id="805c9-195">\begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix}0 \\\\ 1 \\\\ 0\end{bmatrix} and \begin{bmatrix}0 \\\\ 0 \\\\ 1\end{bmatrix}$$</span></span>
 
-<span data-ttu-id="2b2ed-117">sind Eigenvektoren dieser Matrix mit eigen Werten $d _1 $ , $d _2 $ , bzw. $d _3 $ .</span><span class="sxs-lookup"><span data-stu-id="2b2ed-117">are eigenvectors of this matrix with eigenvalues  $d_1$, $d_2$, and $d_3$, respectively.</span></span> <span data-ttu-id="2b2ed-118">Wenn $d _1 $ , $d _2 $ und $d _3 unter $ schiedliche Zahlen sind, sind diese Vektoren (und ihre vielfache) die einzigen Eigenvektoren der Matrix $D $ .</span><span class="sxs-lookup"><span data-stu-id="2b2ed-118">If $d_1$, $d_2$, and $d_3$ are distinct numbers, then these vectors (and their multiples) are the only eigenvectors of the matrix $D$.</span></span> <span data-ttu-id="2b2ed-119">Im Allgemeinen ist es für eine diagonal Matrix leicht, die Eigenwerte und Eigenvektoren zu lesen.</span><span class="sxs-lookup"><span data-stu-id="2b2ed-119">In general, for a diagonal matrix it is easy to read off the eigenvalues and eigenvectors.</span></span> <span data-ttu-id="2b2ed-120">Bei den eigen Werten handelt es sich um alle Zahlen, die auf der Diagonal angezeigt werden, und ihre jeweiligen Eigenvektoren sind die Einheits Vektoren, bei denen ein Eintrag gleich $1 $ und die restlichen Einträge gleich $0 sind $ .</span><span class="sxs-lookup"><span data-stu-id="2b2ed-120">The eigenvalues are all the numbers appearing on the diagonal, and their respective eigenvectors are the unit vectors with one entry equal to $1$ and the remaining entries equal to $0$.</span></span>
+<span data-ttu-id="805c9-196">sind Eigenvektoren dieser Matrix mit eigen Werten $ d_1 $ , $ d_2 $ und $ D_3 $ .</span><span class="sxs-lookup"><span data-stu-id="805c9-196">are eigenvectors of this matrix with eigenvalues  $d_1$, $d_2$, and $d_3$, respectively.</span></span> <span data-ttu-id="805c9-197">Wenn $ d_1 $ , $ d_2 $ und $ D_3 unter $ schiedliche Zahlen sind, sind diese Vektoren (und ihre vielfache) die einzigen Eigenvektoren der Matrix $ d $ . Im Allgemeinen ist es für eine diagonal Matrix leicht, die Eigenwerte und Eigenvektoren zu lesen.</span><span class="sxs-lookup"><span data-stu-id="805c9-197">If $d_1$, $d_2$, and $d_3$ are distinct numbers, then these vectors (and their multiples) are the only eigenvectors of the matrix $D$. In general, for a diagonal matrix it is easy to read off the eigenvalues and eigenvectors.</span></span> <span data-ttu-id="805c9-198">Die Eigenwerte sind alle Zahlen, die auf der Diagonal angezeigt werden, und ihre jeweiligen Eigenvektoren sind die Einheits Vektoren, bei denen ein Eintrag gleich $ 1 $ und die restlichen Einträge gleich $ 0 sind $ .</span><span class="sxs-lookup"><span data-stu-id="805c9-198">The eigenvalues are all the numbers appearing on the diagonal, and their respective eigenvectors are the unit vectors with one entry equal to $1$ and the remaining entries equal to $0$.</span></span>
 
-<span data-ttu-id="2b2ed-121">Beachten Sie im obigen Beispiel, dass die Eigenvektoren von $D $ eine Grundlage für $3 $ -dimensionale Vektoren bilden.</span><span class="sxs-lookup"><span data-stu-id="2b2ed-121">Note in the above example that the eigenvectors of $D$ form a basis for $3$-dimensional vectors.</span></span> <span data-ttu-id="2b2ed-122">Eine Basis ist ein Satz von Vektoren, sodass jeder Vektor als lineare Kombination von Ihnen geschrieben werden kann.</span><span class="sxs-lookup"><span data-stu-id="2b2ed-122">A basis is a set of vectors such that any vector can be written as a linear combination of them.</span></span> <span data-ttu-id="2b2ed-123">Die expliziten $v _1 $ , $v _2 $ und $v _3 $ bilden eine Grundlage, wenn ein Vektor $v $ als $v = A_1 V_1 + a_2 V_2 + a_3 V_3 $a $a $ _1 $ , $a _2 $ und _3 geschrieben werden kann $ .</span><span class="sxs-lookup"><span data-stu-id="2b2ed-123">More explicitly, $v_1$, $v_2$, and $v_3$ form a basis if any vector $v$ can be written as $v=a_1 v_1 + a_2 v_2 + a_3 v_3$ for some numbers $a_1$, $a_2$, and $a_3$.</span></span>
+<span data-ttu-id="805c9-199">Beachten Sie im obigen Beispiel, dass die Eigenvektoren von $ D $ eine Grundlage für $ drei $ dimensionale Vektoren bilden.</span><span class="sxs-lookup"><span data-stu-id="805c9-199">Note in the above example that the eigenvectors of $D$ form a basis for $3$-dimensional vectors.</span></span> <span data-ttu-id="805c9-200">Eine Basis ist ein Satz von Vektoren, sodass jeder Vektor als lineare Kombination von Ihnen geschrieben werden kann.</span><span class="sxs-lookup"><span data-stu-id="805c9-200">A basis is a set of vectors such that any vector can be written as a linear combination of them.</span></span> <span data-ttu-id="805c9-201">Explizitere, $ V_1 $ , $ V_2 $ und $ V_3 $ bilden eine Grundlage, wenn ein Vektor $ v $ als $ v = A_1 V_1 + a_2 V_2 + a_3 V_3 geschrieben werden kann A_1 $ $ $ , $ a_2 $ und $ a_3 $ .</span><span class="sxs-lookup"><span data-stu-id="805c9-201">More explicitly, $v_1$, $v_2$, and $v_3$ form a basis if any vector $v$ can be written as $v=a_1 v_1 + a_2 v_2 + a_3 v_3$ for some numbers $a_1$, $a_2$, and $a_3$.</span></span>
 
-<span data-ttu-id="2b2ed-124">Beachten Sie, dass eine hermitische Matrix (auch als selbst Adjoint bezeichnet) eine komplexe quadratische Matrix ist, die mit ihrer eigenen komplexen konjugierung identisch ist, während eine einheitliche Matrix eine komplexe Quadrat Matrix ist, deren Umkehrung gleich der komplexen konjugierung ist.</span><span class="sxs-lookup"><span data-stu-id="2b2ed-124">Recall that a Hermitian matrix (also called self-adjoint) is a complex square matrix equal to its own complex conjugate, while a unitary matrix is a complex square matrix whose inverse is equal to its complex conjugate.</span></span>
-<span data-ttu-id="2b2ed-125">Bei hermischen und einheitlichen Matrizen, bei denen es sich im Wesentlichen um die einzigen Matrizen in Quantum Computing handelt, gibt es ein allgemeines Ergebnis, das als " [*Spectral Theorem*](https://en.wikipedia.org/wiki/Spectral_theorem)" bezeichnet wird, das Folgendes bestätigt: für jede hermitische oder einheitliche Matrix $M gibt $ es eine einheitliche $U, $ sodass $M = U ^ \dagger D U $ für einige diagonal Matrix $D $ .</span><span class="sxs-lookup"><span data-stu-id="2b2ed-125">For Hermitian and unitary matrices, which are essentially the only matrices encountered in quantum computing, there is a general result known as the [*spectral theorem*](https://en.wikipedia.org/wiki/Spectral_theorem), which asserts the following: For any Hermitian or unitary matrix $M$, there exists a unitary $U$ such that $M=U^\dagger D U$ for some diagonal matrix $D$.</span></span> <span data-ttu-id="2b2ed-126">Außerdem sind die diagonalen Einträge von $D $ die Eigenwerte $M $ .</span><span class="sxs-lookup"><span data-stu-id="2b2ed-126">Furthermore, the diagonal entries of $D$ will be the eigenvalues of $M$.</span></span>
+<span data-ttu-id="805c9-202">Denken Sie daran, dass es sich bei einer hermischen Matrix (auch als "selbst Adjoint" bezeichnet) um eine komplexe quadratische Matrix handelt, die der eigenen komplexen konjugierung entspricht, während eine einheitliche Matrix eine komplexe Quadrat Matrix ist, deren Umkehrung gleich der zugehörigen Adjoint-oder komplexen konjugierte ist.</span><span class="sxs-lookup"><span data-stu-id="805c9-202">Recall that a Hermitian matrix (also called self-adjoint) is a complex square matrix equal to its own complex conjugate transpose, while a unitary matrix is a complex square matrix whose inverse is equal to its adjoint or complex conjugate transpose.</span></span>
+<span data-ttu-id="805c9-203">Für hermitian-und einheitliche Matrizen, die im Grunde die einzigen Matrizen bei der Quantenberechnung sind, gibt es ein allgemeines Ergebnis, das als "Spectral"- [*Theorem*](https://en.wikipedia.org/wiki/Spectral_theorem)bezeichnet wird, das Folgendes bestätigt: für jede hermitische oder einheitliche Matrix $ m gibt $ es eine einheitliche $ U, bei der $ $ m = u ^ \dagger d U $ für eine diagonale Matrix $ D ist $ . Außerdem sind die diagonalen Einträge von $ D $ die Eigenwerte von $ M $ .</span><span class="sxs-lookup"><span data-stu-id="805c9-203">For Hermitian and unitary matrices, which are essentially the only matrices encountered in quantum computing, there is a general result known as the [*spectral theorem*](https://en.wikipedia.org/wiki/Spectral_theorem), which asserts the following: For any Hermitian or unitary matrix $M$, there exists a unitary $U$ such that $M=U^\dagger D U$ for some diagonal matrix $D$. Furthermore, the diagonal entries of $D$ will be the eigenvalues of $M$.</span></span>
 
-<span data-ttu-id="2b2ed-127">Wir wissen bereits, wie die Eigenwerte und Eigenvektoren einer Diagonalen Matrix $D berechnet werden $ .</span><span class="sxs-lookup"><span data-stu-id="2b2ed-127">We already know how to compute the eigenvalues and eigenvectors of a diagonal matrix $D$.</span></span> <span data-ttu-id="2b2ed-128">Bei Verwendung dieses Theorem wissen wir, dass $ $ $ $ $U ^ \dagger v ein eigenständiger Vektor von $ $M $ mit einem eigen Wert $c $ ist, wenn $v ein $D eigen Wert $c ist, d. h. $DV = CV.</span><span class="sxs-lookup"><span data-stu-id="2b2ed-128">Using this theorem we know that if $v$ is an eigenvector of $D$ with eigenvalue $c$, i.e., $Dv = cv$, then $U^\dagger v$ will be an eigenvector of $M$ with eigenvalue $c$.</span></span> <span data-ttu-id="2b2ed-129">Dies liegt daran, dass</span><span class="sxs-lookup"><span data-stu-id="2b2ed-129">This is because</span></span>
+<span data-ttu-id="805c9-204">Wir wissen bereits, wie Sie die Eigenwerte und Eigenvektoren einer Diagonalen Matrix D berechnen können $ $ . Bei Verwendung dieses Theorem wissen wir, dass bei $ v $ ein eigen Vektor von $ D $ mit dem Eigen Wert $ c $ , d. h. $ DV = CV $ , $ U ^ \dagger v $ ein eigen Vektor von $ M $ mit dem Eigen Wert $ c ist $ .</span><span class="sxs-lookup"><span data-stu-id="805c9-204">We already know how to compute the eigenvalues and eigenvectors of a diagonal matrix $D$. Using this theorem we know that if $v$ is an eigenvector of $D$ with eigenvalue $c$, i.e., $Dv = cv$, then $U^\dagger v$ will be an eigenvector of $M$ with eigenvalue $c$.</span></span> <span data-ttu-id="805c9-205">Dies liegt daran, dass</span><span class="sxs-lookup"><span data-stu-id="805c9-205">This is because</span></span>
 
-<span data-ttu-id="2b2ed-130">$ $M (u ^ \dagger v) = u ^ \dagger d U (U ^ \dagger v) = u ^ \dagger D (u u ^ \dagger) v = u ^ \dagger d v = c U ^ \dagger v. $ $</span><span class="sxs-lookup"><span data-stu-id="2b2ed-130">$$M(U^\dagger v) = U^\dagger D U  (U^\dagger v) =U^\dagger D (U  U^\dagger) v = U^\dagger D v = c U^\dagger v.$$</span></span>
+$$<span data-ttu-id="805c9-206">M (u ^ \dagger v) = u ^ \dagger d U (u ^ \dagger v) = u ^ \dagger d (u u ^ \dagger ) v = U ^ \dagger d v = c U ^ \dagger v.$$</span><span class="sxs-lookup"><span data-stu-id="805c9-206">M(U^\dagger v) = U^\dagger D U  (U^\dagger v) =U^\dagger D (U  U^\dagger) v = U^\dagger D v = c U^\dagger v.$$</span></span>
 
-## <a name="matrix-exponentials"></a><span data-ttu-id="2b2ed-131">Matrix exponentiale</span><span class="sxs-lookup"><span data-stu-id="2b2ed-131">Matrix Exponentials</span></span>
-<span data-ttu-id="2b2ed-132">Eine [*Matrix Exponentialwert*](https://en.wikipedia.org/wiki/Matrix_exponential) kann auch exakt mit der Exponentialfunktion definiert werden.</span><span class="sxs-lookup"><span data-stu-id="2b2ed-132">A [*matrix exponential*](https://en.wikipedia.org/wiki/Matrix_exponential) can also be defined in exact analogy to the exponential function.</span></span>  <span data-ttu-id="2b2ed-133">Das exponentielle Matrix einer Matrix $A $ kann als</span><span class="sxs-lookup"><span data-stu-id="2b2ed-133">The matrix exponential of a matrix $A$ can be expressed as</span></span>
+## <a name="matrix-exponentials"></a><span data-ttu-id="805c9-207">Matrix exponentiale</span><span class="sxs-lookup"><span data-stu-id="805c9-207">Matrix Exponentials</span></span>
+<span data-ttu-id="805c9-208">Eine [*Matrix Exponentialwert*](https://en.wikipedia.org/wiki/Matrix_exponential) kann auch exakt mit der Exponentialfunktion definiert werden.</span><span class="sxs-lookup"><span data-stu-id="805c9-208">A [*matrix exponential*](https://en.wikipedia.org/wiki/Matrix_exponential) can also be defined in exact analogy to the exponential function.</span></span>  <span data-ttu-id="805c9-209">Die Matrix Exponentialwert einer Matrix $ a $ kann als</span><span class="sxs-lookup"><span data-stu-id="805c9-209">The matrix exponential of a matrix $A$ can be expressed as</span></span>
 
-<span data-ttu-id="2b2ed-134">$ $ e ^ A = \boldone + A + \bruchteil {a ^ 2 } {2!} + \bruchteil {a ^ 3 } {3!} + \cdots $ $</span><span class="sxs-lookup"><span data-stu-id="2b2ed-134">$$ e^A=\boldone + A + \frac{A^2}{2!}+\frac{A^3}{3!}+\cdots $$</span></span>
+$$
+<span data-ttu-id="805c9-210">e ^ A = \boldone + a + \frac { a ^ 2 } { 2! } + \frac { A ^ 3 } { 3!}+\cdots</span><span class="sxs-lookup"><span data-stu-id="805c9-210">e^A=\boldone + A + \frac{A^2}{2!}+\frac{A^3}{3!}+\cdots</span></span>
+$$
 
-<span data-ttu-id="2b2ed-135">Dies ist wichtig, da die Evolution für die Quantum-mechanische Zeit durch eine einheitliche Matrix der Form $e ^ {IB } $ für hermitian Matrix $B beschrieben wird $ .</span><span class="sxs-lookup"><span data-stu-id="2b2ed-135">This is important because quantum mechanical time evolution is described by a unitary matrix of the form $e^{iB}$ for Hermitian matrix $B$.</span></span>  <span data-ttu-id="2b2ed-136">Aus diesem Grund ist das Durchführen von Matrix Exponentialzahlen ein wesentlicher Bestandteil von Quantum Computing, da f # systeminterne Routinen zum Beschreiben dieser Vorgänge bietet.</span><span class="sxs-lookup"><span data-stu-id="2b2ed-136">For this reason, performing matrix exponentials is a fundamental part of quantum computing and as such Q# offers intrinsic routines for describing these operations.</span></span>
-<span data-ttu-id="2b2ed-137">In der Praxis gibt es viele Möglichkeiten, eine Matrix auf einem klassischen Computer exponentiell zu berechnen, und in der Regel wird eine solche exponentialweise mit der Peril in Bezug gesetzt.</span><span class="sxs-lookup"><span data-stu-id="2b2ed-137">There are many ways in practice to compute a matrix exponential on a classical computer, and in general numerically approximating such an exponential is fraught with peril.</span></span>  <span data-ttu-id="2b2ed-138">Weitere Informationen finden Sie unter [*Cleve Moler und Charles Van Loan. "Neun zweifelhafte Möglichkeiten, den Exponentialwert einer Matrix zu berechnen." Siam Review 20,4 (1978): 801-836*](https://doi.org/10.1137/S00361445024180) , um weitere Informationen zu den beteiligten Problemen zu finden.</span><span class="sxs-lookup"><span data-stu-id="2b2ed-138">See [*Cleve Moler and Charles Van Loan. "Nineteen dubious ways to compute the exponential of a matrix." SIAM review 20.4 (1978): 801-836*](https://doi.org/10.1137/S00361445024180) for more information about the challenges involved.</span></span>
+<span data-ttu-id="805c9-211">Dies ist wichtig, da die Evolution für die Quantum-mechanische Zeit durch eine einheitliche Matrix der Form $ e ^ { IB } $ für hermitian Matrix $ B $ beschrieben wird.  Aus diesem Grund ist das Durchführen von Matrix Exponentialzahlen ein wesentlicher Bestandteil von Quantum Computing, da f # systeminterne Routinen zum Beschreiben dieser Vorgänge bietet.</span><span class="sxs-lookup"><span data-stu-id="805c9-211">This is important because quantum mechanical time evolution is described by a unitary matrix of the form $e^{iB}$ for Hermitian matrix $B$.  For this reason, performing matrix exponentials is a fundamental part of quantum computing and as such Q# offers intrinsic routines for describing these operations.</span></span>
+<span data-ttu-id="805c9-212">In der Praxis gibt es viele Möglichkeiten, eine Matrix auf einem klassischen Computer exponentiell zu berechnen, und in der Regel wird eine solche exponentialweise mit der Peril in Bezug gesetzt.</span><span class="sxs-lookup"><span data-stu-id="805c9-212">There are many ways in practice to compute a matrix exponential on a classical computer, and in general numerically approximating such an exponential is fraught with peril.</span></span>  <span data-ttu-id="805c9-213">Weitere Informationen finden Sie unter [*Cleve Moler und Charles Van Loan. "Neun zweifelhafte Möglichkeiten, den Exponentialwert einer Matrix zu berechnen." Siam Review 20,4 (1978): 801-836*](https://doi.org/10.1137/S00361445024180) , um weitere Informationen zu den beteiligten Problemen zu finden.</span><span class="sxs-lookup"><span data-stu-id="805c9-213">See [*Cleve Moler and Charles Van Loan. "Nineteen dubious ways to compute the exponential of a matrix." SIAM review 20.4 (1978): 801-836*](https://doi.org/10.1137/S00361445024180) for more information about the challenges involved.</span></span>
 
-<span data-ttu-id="2b2ed-139">Die einfachste Möglichkeit, um zu verstehen, wie die exponentielle einer Matrix berechnet werden kann, ist die Eigenwerte und Eigenvektoren dieser Matrix.</span><span class="sxs-lookup"><span data-stu-id="2b2ed-139">The easiest way to understand how to compute the exponential of a matrix is through the eigenvalues and eigenvectors of that matrix.</span></span>  <span data-ttu-id="2b2ed-140">Insbesondere das oben beschriebene Spektral Theorem besagt, dass für jede hermitische oder einheitliche Matrix $A $ eine einheitliche Matrix $U $ und eine diagonale Matrix $D $ , dass $A = U ^ \dagger D U ist $ .  Aufgrund der Eigenschaften von Unitarity haben wir diese $A ^ 2 = u ^ \dagger d ^ 2 U $ und ebenso für alle Power $p $ $A ^ p = u ^ \dagger d ^ p u $ .  Wenn wir dies in die Operator Definition des Operator exponentiell ersetzen, erhalten wir Folgendes:</span><span class="sxs-lookup"><span data-stu-id="2b2ed-140">Specifically, the spectral theorem discussed above says that for every Hermitian or unitary matrix $A$ there exists a unitary matrix $U$ and a diagonal matrix $D$ such that $A=U^\dagger D U$.  Because of the properties of unitarity we have that $A^2 = U^\dagger D^2 U$ and similarly for any power $p$ $A^p = U^\dagger D^p U$.  If we substitute this into the operator definition of the operator exponential we obtain:</span></span>
+<span data-ttu-id="805c9-214">Die einfachste Möglichkeit, um zu verstehen, wie die exponentielle einer Matrix berechnet werden kann, ist die Eigenwerte und Eigenvektoren dieser Matrix.</span><span class="sxs-lookup"><span data-stu-id="805c9-214">The easiest way to understand how to compute the exponential of a matrix is through the eigenvalues and eigenvectors of that matrix.</span></span>  <span data-ttu-id="805c9-215">Insbesondere das oben beschriebene Spektral Theorem besagt, dass für jede hermitische oder einheitliche Matrix $ a $ eine einheitliche Matrix $ U $ und eine diagonale Matrix D vorhanden ist, die u $ $ $ = ^ \dagger d u ist $ .  Aufgrund der Eigenschaften von Unitarity haben wir $ eine ^ 2 = u ^ \dagger d ^ 2 u $ und ebenso für alle Power $ p $ $ A ^ p = u ^ \dagger d ^ p u $ .  Wenn wir dies in die Operator Definition des Operator exponentiell ersetzen, erhalten wir Folgendes:</span><span class="sxs-lookup"><span data-stu-id="805c9-215">Specifically, the spectral theorem discussed above says that for every Hermitian or unitary matrix $A$ there exists a unitary matrix $U$ and a diagonal matrix $D$ such that $A=U^\dagger D U$.  Because of the properties of unitarity we have that $A^2 = U^\dagger D^2 U$ and similarly for any power $p$ $A^p = U^\dagger D^p U$.  If we substitute this into the operator definition of the operator exponential we obtain:</span></span>
 
-<span data-ttu-id="2b2ed-141">$ $ e ^ A = U ^ \dagger \left (\boldone + D + \bruchteil {d ^ 2 } {2!} + \cdots \right) U = u ^ \dagger \begin{ bmatrix } \exp (D_ {11 } ) & 0 & \cdots &0 \\\\ 0 & \exp (D_ {22 } ) & \cdots & 0 \\\\ \vdots & \vdots & \ddots & \vdots \\\\ 0&0 & \cdots & \exp (D_ {NN } ) \end{ bmatrix } U. $ $</span><span class="sxs-lookup"><span data-stu-id="2b2ed-141">$$ e^A= U^\dagger \left(\boldone +D +\frac{D^2}{2!}+\cdots \right)U= U^\dagger \begin{bmatrix}\exp(D_{11}) & 0 &\cdots &0\\\\ 0 & \exp(D_{22})&\cdots& 0\\\\ \vdots &\vdots &\ddots &\vdots\\\\ 0&0&\cdots&\exp(D_{NN}) \end{bmatrix} U. $$</span></span>
+$$
+<span data-ttu-id="805c9-216">e ^ A = U ^ \dagger \left ( \boldone + d + \frac { d ^ 2 } { 2! } + \cdots \right ) U = u ^ \dagger \begin{bmatrix} \exp (D_ { 11 } ) & 0 & \cdots & 0 \\\\ 0 & \exp (D_ { 22 } ) & \cdots & 0 \\\\ \vdots & \vdots & \ddots & \vdots \\\\ 0 & 0 & \cdots & \exp (D_ { NN } ) \end{bmatrix} U.$$</span><span class="sxs-lookup"><span data-stu-id="805c9-216">e^A= U^\dagger \left(\boldone +D +\frac{D^2}{2!}+\cdots \right)U= U^\dagger \begin{bmatrix}\exp(D_{11}) & 0 &\cdots &0\\\\ 0 & \exp(D_{22})&\cdots& 0\\\\ \vdots &\vdots &\ddots &\vdots\\\\ 0&0&\cdots&\exp(D_{NN}) \end{bmatrix} U. $$</span></span>
 
-<span data-ttu-id="2b2ed-142">Anders ausgedrückt: Wenn Sie in die eigenständige Matrix der Matrix umwandeln $A $ dann entspricht das Berechnen der Matrix exponentiell dem Berechnen des normalen exponentiellen Werts der Eigenwerte der Matrix.</span><span class="sxs-lookup"><span data-stu-id="2b2ed-142">In other words, if you transform to the eigenbasis of the matrix $A$ then computing the matrix exponential is equivalent to computing the ordinary exponential of the eigenvalues of the matrix.</span></span>  <span data-ttu-id="2b2ed-143">Wie viele Vorgänge in Quantum Computing das Durchführen von Matrix Exponentialzahlen umfassen, wird dieser Trick der Transformation in die eigenständige Basis einer Matrix, um die Ausführung des Operator exponentialmäßig zu vereinfachen, häufig angezeigt und ist die Grundlage für viele Quantum-Algorithmen, wie z. b. Trotter – Quantum-Simulationsmethoden, die später in diesem Handbuch</span><span class="sxs-lookup"><span data-stu-id="2b2ed-143">As many operations in quantum computing involve performing matrix exponentials, this trick of transforming into the eigenbasis of a matrix to simplify performing the operator exponential appears frequently and is the basis behind many quantum algorithms such as Trotter–Suzuki-style quantum simulation methods discussed later in this guide.</span></span>
+<span data-ttu-id="805c9-217">Anders ausgedrückt: Wenn Sie in die eigenständige Matrix der Matrix umwandeln, $ $ entspricht das Berechnen der Matrix exponentiell dem Berechnen des normalen exponentiellen Werts der Eigenwerte der Matrix.</span><span class="sxs-lookup"><span data-stu-id="805c9-217">In other words, if you transform to the eigenbasis of the matrix $A$ then computing the matrix exponential is equivalent to computing the ordinary exponential of the eigenvalues of the matrix.</span></span>  <span data-ttu-id="805c9-218">Wie viele Vorgänge in Quantum Computing das Durchführen von Matrix Exponentialzahlen umfassen, wird dieser Trick der Transformation in die eigenständige Basis einer Matrix, um die Ausführung des Operator exponentialmäßig zu vereinfachen, häufig angezeigt und ist die Grundlage für viele Quantum-Algorithmen, wie z. b. Trotter – Quantum-Simulationsmethoden, die später in diesem Handbuch</span><span class="sxs-lookup"><span data-stu-id="805c9-218">As many operations in quantum computing involve performing matrix exponentials, this trick of transforming into the eigenbasis of a matrix to simplify performing the operator exponential appears frequently and is the basis behind many quantum algorithms such as Trotter–Suzuki-style quantum simulation methods discussed later in this guide.</span></span>
 
-<span data-ttu-id="2b2ed-144">Eine weitere nützliche Eigenschaft ist, wenn $B $ sowohl einheitlich als auch hermitian ist, d. h. $B = b ^ {-1 } = b ^ \dagger, $ dann $B ^ 2 = \boldone $ .</span><span class="sxs-lookup"><span data-stu-id="2b2ed-144">Another useful property is if $B$ is both unitary and Hermitian, i.e., $B=B^{-1}=B^\dagger$ then $B^2=\boldone$.</span></span> <span data-ttu-id="2b2ed-145">Durch Anwenden dieser Regel auf die oben genannte Erweiterung der Matrix und durch Gruppierung der $ \boldone $ -und $B $ Begriffe werden die Werte für jeden echten Wert $x $ der Identität angezeigt.</span><span class="sxs-lookup"><span data-stu-id="2b2ed-145">By applying this rule to the above expansion of the matrix exponential and by grouping the $\boldone$ and the $B$ terms together, it can be see that for any real value $x$ the identity</span></span>
+<span data-ttu-id="805c9-219">Eine weitere nützliche Eigenschaft ist $ , wenn b $ sowohl einheitlich als auch hermitian ist, d. h. $ b = b ^ { -1 } = b ^, \dagger $ dann $ b ^ 2 = \boldone $ .</span><span class="sxs-lookup"><span data-stu-id="805c9-219">Another useful property is if $B$ is both unitary and Hermitian, i.e., $B=B^{-1}=B^\dagger$ then $B^2=\boldone$.</span></span> <span data-ttu-id="805c9-220">Durch Anwenden dieser Regel auf die oben genannte Erweiterung der Matrix und durch Gruppierung der $ \boldone $ und der $ B- $ Begriffe können Sie sehen, dass für jeden echten Wert $ x $ die Identität vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="805c9-220">By applying this rule to the above expansion of the matrix exponential and by grouping the $\boldone$ and the $B$ terms together, it can be see that for any real value $x$ the identity</span></span>
 
-<span data-ttu-id="2b2ed-146">$ $e ^ {IBX } = \boldone \cos (x) + ib\sin (x) $ $</span><span class="sxs-lookup"><span data-stu-id="2b2ed-146">$$e^{iBx}=\boldone \cos(x)+ iB\sin(x)$$</span></span>
+$$<span data-ttu-id="805c9-221">e ^ { IBX } = \boldone \cos (x) + ib\sin (x)$$</span><span class="sxs-lookup"><span data-stu-id="805c9-221">e^{iBx}=\boldone \cos(x)+ iB\sin(x)$$</span></span>
 
 
-<span data-ttu-id="2b2ed-147">bestand.</span><span class="sxs-lookup"><span data-stu-id="2b2ed-147">holds.</span></span> <span data-ttu-id="2b2ed-148">Dieser Trick ist besonders nützlich, da er es in Bezug auf die in den Aktionen vorhandenen Aktions Matrix gibt, selbst wenn die Dimension von $B $ exponentiell groß ist, für den Sonderfall, wenn $B $ sowohl einheitlich als auch hermitian ist.</span><span class="sxs-lookup"><span data-stu-id="2b2ed-148">This trick is especially useful because it allows to reason about the actions matrix exponentials have, even if the dimension of $B$ is exponentially large, for the special case when $B$ is both unitary and Hermitian.</span></span>
+<span data-ttu-id="805c9-222">bestand.</span><span class="sxs-lookup"><span data-stu-id="805c9-222">holds.</span></span> <span data-ttu-id="805c9-223">Dieser Trick ist besonders nützlich, weil er die in den Aktions Matrix exponentialweise vorhandenen Aktionen zulässt, auch wenn die Dimension von $ B $ exponentiell groß ist, für den Sonderfall, wenn $ b $ sowohl einheitlich als auch hermitian ist.</span><span class="sxs-lookup"><span data-stu-id="805c9-223">This trick is especially useful because it allows to reason about the actions matrix exponentials have, even if the dimension of $B$ is exponentially large, for the special case when $B$ is both unitary and Hermitian.</span></span>

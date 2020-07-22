@@ -3,20 +3,22 @@ title: Abrufen von Energiestandschätzungen
 description: 'Exemplarische Vorgehensweise: f #-Beispielprogramm, mit dem die Energiepegel Werte von molekularer Wasserstoff geschätzt werden'
 author: guanghaolow
 ms.author: gulow
-ms.date: 10/23/2018
+ms.date: 07/02/2020
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: 3242d8c6dc6fad2bd99055027dd7ce4ec3510ff4
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: b26538980366cf4cbe01fc2ef59580ae182f1e8a
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275158"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871567"
 ---
-# <a name="obtaining-energy-level-estimates"></a><span data-ttu-id="aa878-103">Abrufen von Energiestandschätzungen</span><span class="sxs-lookup"><span data-stu-id="aa878-103">Obtaining energy level estimates</span></span>
-<span data-ttu-id="aa878-104">Das Einschätzen der Werte von Energie Stufen ist eine der Hauptanwendungen der Quantum-Chemie.</span><span class="sxs-lookup"><span data-stu-id="aa878-104">Estimating the values of energy levels is one of the principal applications of quantum chemistry.</span></span> <span data-ttu-id="aa878-105">Hier wird erläutert, wie dies für das kanonische Beispiel für den molekularen Wasserstoff ausgeführt werden kann.</span><span class="sxs-lookup"><span data-stu-id="aa878-105">Here, we outline how this may be performed for the canonical example of molecular Hydrogen.</span></span> <span data-ttu-id="aa878-106">Das in diesem Abschnitt referenzierte Beispiel befindet sich `MolecularHydrogen` im Repository "Chemistry Samples".</span><span class="sxs-lookup"><span data-stu-id="aa878-106">The sample referenced in this section is `MolecularHydrogen` in the chemistry samples repository.</span></span> <span data-ttu-id="aa878-107">Ein visuelles Beispiel, in dem die Ausgabe dargestellt wird, ist die `MolecularHydrogenGUI` Demo.</span><span class="sxs-lookup"><span data-stu-id="aa878-107">A more visual example that plots the output is the `MolecularHydrogenGUI` demo.</span></span>
+# <a name="obtaining-energy-level-estimates"></a><span data-ttu-id="9c071-103">Abrufen von Energiestandschätzungen</span><span class="sxs-lookup"><span data-stu-id="9c071-103">Obtaining energy level estimates</span></span>
+<span data-ttu-id="9c071-104">Das Einschätzen der Werte von Energie Stufen ist eine der Hauptanwendungen der Quantum-Chemie.</span><span class="sxs-lookup"><span data-stu-id="9c071-104">Estimating the values of energy levels is one of the principal applications of quantum chemistry.</span></span> <span data-ttu-id="9c071-105">In diesem Artikel wird beschrieben, wie Sie dies für das kanonische Beispiel für den molekularen Wasserstoff durchführen können.</span><span class="sxs-lookup"><span data-stu-id="9c071-105">This article outlines how you can perform this for the canonical example of molecular hydrogen.</span></span> <span data-ttu-id="9c071-106">Das in diesem Abschnitt referenzierte Beispiel befindet sich [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) im Repository "Chemistry Samples".</span><span class="sxs-lookup"><span data-stu-id="9c071-106">The sample referenced in this section is [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) in the chemistry samples repository.</span></span> <span data-ttu-id="9c071-107">Ein visuelles Beispiel, in dem die Ausgabe dargestellt wird, ist die [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) Demo.</span><span class="sxs-lookup"><span data-stu-id="9c071-107">A more visual example that plots the output is the [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) demo.</span></span>
 
-<span data-ttu-id="aa878-108">Der erste Schritt ist das Erstellen der hamiltona, die den molekularen Wasserstoff darstellt.</span><span class="sxs-lookup"><span data-stu-id="aa878-108">Our first step is to construct the Hamiltonian representing molecular Hydrogen.</span></span> <span data-ttu-id="aa878-109">Obwohl dies über das nwchem-Tool erstellt werden kann, fügen wir der in diesem Beispiel hinzu.</span><span class="sxs-lookup"><span data-stu-id="aa878-109">Though this can be constructed through the NWChem tool, we manually add Hamiltonian terms for brevity in this sample.</span></span>
+## <a name="estimating-the-energy-values-of-molecular-hydrogen"></a><span data-ttu-id="9c071-108">Schätzen der Energiewerte von molekularer Wasserstoff</span><span class="sxs-lookup"><span data-stu-id="9c071-108">Estimating the energy values of molecular hydrogen</span></span>
+
+<span data-ttu-id="9c071-109">Der erste Schritt ist das Erstellen der hamiltona, die den molekularen Wasserstoff darstellt.</span><span class="sxs-lookup"><span data-stu-id="9c071-109">The first step is to construct the Hamiltonian representing molecular hydrogen.</span></span> <span data-ttu-id="9c071-110">Obwohl Sie dies mithilfe des nwchem-Tools erstellen können, werden in diesem Beispiel die hamiltona-Begriffe manuell hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="9c071-110">Although you can construct this using the NWChem tool, for brevity, this sample adds the Hamiltonian terms manually.</span></span>
 
 ```csharp
     // These orbital integrals are represented using the OrbitalIntegral
@@ -35,11 +37,11 @@ ms.locfileid: "85275158"
         new OrbitalIntegral(new int[] { }, energyOffset)
     };
 
-    // We initialize a fermion Hamiltonian data structure and add terms to it.
+    // Initialize a fermion Hamiltonian data structure and add terms to it.
     var fermionHamiltonian = new OrbitalIntegralHamiltonian(orbitalIntegrals).ToFermionHamiltonian();
 ```
 
-<span data-ttu-id="aa878-110">Zum Simulieren der hamiltona müssen wir die Fermion-Operatoren in Qubit-Operatoren konvertieren.</span><span class="sxs-lookup"><span data-stu-id="aa878-110">Simulating the Hamiltonian requires us to convert the fermion operators to qubit operators.</span></span> <span data-ttu-id="aa878-111">Diese Konvertierung erfolgt wie folgt über die Jordanien-Wigner-Codierung.</span><span class="sxs-lookup"><span data-stu-id="aa878-111">This conversion is performed through the Jordan-Wigner encoding as follows.</span></span>
+<span data-ttu-id="9c071-111">Zum Simulieren der hamiltona müssen die Fermion-Operatoren in Qubit-Operatoren umgerechnet werden.</span><span class="sxs-lookup"><span data-stu-id="9c071-111">Simulating the Hamiltonian requires converting the fermion operators to qubit operators.</span></span> <span data-ttu-id="9c071-112">Diese Konvertierung erfolgt wie folgt über die Jordanien-Wigner-Codierung:</span><span class="sxs-lookup"><span data-stu-id="9c071-112">This conversion is performed through the Jordan-Wigner encoding as follows:</span></span>
 
 ```csharp
     // The Jordan-Wigner encoding converts the fermion Hamiltonian, 
@@ -49,8 +51,8 @@ ms.locfileid: "85275158"
     // computer.
     var jordanWignerEncoding = fermionHamiltonian.ToPauliHamiltonian(Pauli.QubitEncoding.JordanWigner);
 
-    // We also need to create an input quantum state to this Hamiltonian.
-    // Let us use the Hartree-Fock state.
+    // You also need to create an input quantum state to this Hamiltonian.
+    // Use the Hartree-Fock state.
     var fermionWavefunction = fermionHamiltonian.CreateHartreeFockState(nElectrons);
 
     // This Jordan-Wigner data structure also contains a representation 
@@ -60,7 +62,7 @@ ms.locfileid: "85275158"
     var qSharpData = QSharpFormat.Convert.ToQSharpFormat(qSharpHamiltonianData, qSharpWavefunctionData);
 ```
 
-<span data-ttu-id="aa878-112">Wir übergeben nun das-Objekt `qSharpData` , das den hamiltonan der-Funktion darstellt, `TrotterStepOracle` in [Simulating hamiltonan Dynamics](xref:microsoft.quantum.libraries.standard.algorithms).</span><span class="sxs-lookup"><span data-stu-id="aa878-112">We now pass the `qSharpData` representing the Hamiltonian to the `TrotterStepOracle` function in [Simulating Hamiltonian dynamics](xref:microsoft.quantum.libraries.standard.algorithms).</span></span> <span data-ttu-id="aa878-113">`TrotterStepOracle`gibt eine Quantum-Operation zurück, die der Real-Time-Evolution der hamiltonan entspricht.</span><span class="sxs-lookup"><span data-stu-id="aa878-113">`TrotterStepOracle` returns a quantum operation that approximates the real time-evolution of the Hamiltonian.</span></span>
+<span data-ttu-id="9c071-113">Als Nächstes übergeben `qSharpData` Sie, das den hamiltonan die Funktion darstellt `TrotterStepOracle` .</span><span class="sxs-lookup"><span data-stu-id="9c071-113">Next, pass `qSharpData`, which represents the Hamiltonian, to the `TrotterStepOracle` function.</span></span> <span data-ttu-id="9c071-114">`TrotterStepOracle`gibt eine Quantum-Operation zurück, die der echtzeitentwicklung der hamiltonan entspricht.</span><span class="sxs-lookup"><span data-stu-id="9c071-114">`TrotterStepOracle` returns a quantum operation that approximates the real-time evolution of the Hamiltonian.</span></span> <span data-ttu-id="9c071-115">Weitere Informationen finden Sie unter [Simulieren von hamiltona Dynamics](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms).</span><span class="sxs-lookup"><span data-stu-id="9c071-115">For more information, see [Simulating Hamiltonian dynamics](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms).</span></span>
 
 ```qsharp
 // qSharpData passed from driver
@@ -74,13 +76,13 @@ let integratorOrder = 4;
 
 // `oracle` is an operation that applies a single time-step of evolution for duration `stepSize`.
 // `rescale` is just `1.0/stepSize` -- the number of steps required to simulate unit-time evolution.
-// `nQubits` is the number of qubits that must be allocated to run the `oracle` operatrion.
+// `nQubits` is the number of qubits that must be allocated to run the `oracle` operation.
 let (nQubits, (rescale, oracle)) =  TrotterStepOracle (qSharpData, stepSize, integratorOrder);
 ```
 
-<span data-ttu-id="aa878-114">Wir können nun die Phasen Schätz Algorithmen der Standardbibliothek verwenden, um die Grund Zustands Energie mithilfe der obigen Simulation zu erlernen.</span><span class="sxs-lookup"><span data-stu-id="aa878-114">We can now use the standard library's phase estimation algorithms to learn the ground state energy using the above simulation.</span></span> <span data-ttu-id="aa878-115">Dies erfordert, dass eine gute Näherung für den Quantum-Grundzustand vorbereitet wird.</span><span class="sxs-lookup"><span data-stu-id="aa878-115">This requires preparing a good approximation to the quantum ground state.</span></span> <span data-ttu-id="aa878-116">Vorschläge für solche Näherungen werden im Schema bereitgestellt `Broombridge` , aber diese Vorschläge sind nicht vorhanden. der Standardansatz fügt eine Reihe von Elektronen hinzu, `hamiltonian.NElectrons` um die diagonalen eindimensionalen Werte für einen grünen Wert zu minimieren.</span><span class="sxs-lookup"><span data-stu-id="aa878-116">Suggestions for such approximations are provided in the `Broombridge` schema, but absent these suggestions, the default approach adds a number of `hamiltonian.NElectrons` electrons to  greedily minimize the diagonal one-electron term energies.</span></span> <span data-ttu-id="aa878-117">Die Funktionen und Vorgänge der Phasen Schätzung befinden sich im [Microsoft. Quantum. Charakterisierung-Namespace](xref:microsoft.quantum.characterization in DocFX notation).</span><span class="sxs-lookup"><span data-stu-id="aa878-117">The phase estimation functions and operations are located in the [Microsoft.Quantum.Characterization namespace](xref:microsoft.quantum.characterization in DocFX notation).</span></span>
+<span data-ttu-id="9c071-116">An diesem Punkt können Sie die [Phasen Schätz Algorithmen](xref:microsoft.quantum.libraries.characterization) der Standardbibliothek verwenden, um die Grund Zustands Energie mithilfe der vorherigen Simulation zu erlernen.</span><span class="sxs-lookup"><span data-stu-id="9c071-116">At this point, you can use the standard library's [phase estimation algorithms](xref:microsoft.quantum.libraries.characterization) to learn the ground state energy using the previous simulation.</span></span> <span data-ttu-id="9c071-117">Dies erfordert, dass eine gute Näherung für den Quantum-Grundzustand vorbereitet wird.</span><span class="sxs-lookup"><span data-stu-id="9c071-117">This requires preparing a good approximation to the quantum ground state.</span></span> <span data-ttu-id="9c071-118">Vorschläge für solche Näherungen werden im Schema bereitgestellt [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) .</span><span class="sxs-lookup"><span data-stu-id="9c071-118">Suggestions for such approximations are provided in the [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) schema.</span></span> <span data-ttu-id="9c071-119">Ohne diese Vorschläge fügt der Standardansatz jedoch eine Reihe von Elektronen hinzu, `hamiltonian.NElectrons` um die diagonalen 1-Elektronen-ergriffsenergien zu minimieren.</span><span class="sxs-lookup"><span data-stu-id="9c071-119">However, absent these suggestions, the default approach adds a number of `hamiltonian.NElectrons` electrons to greedily minimize the diagonal one-electron term energies.</span></span> <span data-ttu-id="9c071-120">Die Funktionen und Vorgänge der Phasen Schätzung werden in der docfx-Notation im [Microsoft. Quantum. Charakterisierung](xref:microsoft.quantum.characterization) -Namespace bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="9c071-120">The phase estimation functions and operations are provided in DocFX notation in the [Microsoft.Quantum.Characterization](xref:microsoft.quantum.characterization) namespace.</span></span>
 
-<span data-ttu-id="aa878-118">Der folgende Code Ausschnitt zeigt, wie die Real-Time-Evolution-Ausgabe durch die Simulations Bibliothek der Chemie in die Quantum-Phasen Schätzung integriert werden kann.</span><span class="sxs-lookup"><span data-stu-id="aa878-118">The following snippet shows how the real time-evolution output by the chemistry simulation library may be integrated with quantum phase estimation.</span></span>
+<span data-ttu-id="9c071-121">Der folgende Code Ausschnitt zeigt, wie die echtzeitentwicklung durch die Simulations Bibliothek für die Chemie in die Quantum-Phasen-Schätzung integriert wird.</span><span class="sxs-lookup"><span data-stu-id="9c071-121">The following snippet shows how the real-time evolution output by the chemistry simulation library integrates with quantum phase estimation.</span></span>
 
 ```qsharp
 operation GetEnergyByTrotterization (
@@ -93,42 +95,42 @@ operation GetEnergyByTrotterization (
     // `qSharpData`
     let (nSpinOrbitals, fermionTermData, statePrepData, energyOffset) = qSharpData!;
     
-    // We use a Product formula, also known as `Trotterization` to
+    // Using a Product formula, also known as `Trotterization`, to
     // simulate the Hamiltonian.
     let (nQubits, (rescaleFactor, oracle)) = 
         TrotterStepOracle(qSharpData, trotterStepSize, trotterOrder);
     
-    // The operation that creates the trial state is defined below.
+    // The operation that creates the trial state is defined here.
     // By default, greedy filling of spin-orbitals is used.
     let statePrep = PrepareTrialState(statePrepData, _);
     
-    // We use the Robust Phase Estimation algorithm
+    // Using the Robust Phase Estimation algorithm
     // of Kimmel, Low and Yoder.
     let phaseEstAlgorithm = RobustPhaseEstimation(nBitsPrecision, _, _);
     
     // This runs the quantum algorithm and returns a phase estimate.
     let estPhase = EstimateEnergy(nQubits, statePrep, oracle, phaseEstAlgorithm);
     
-    // We obtain the energy estimate by rescaling the phase estimate
+    // Now, obtain the energy estimate by rescaling the phase estimate
     // with the trotterStepSize. We also add the constant energy offset
     // to the estimated energy.
     let estEnergy = estPhase * rescaleFactor + energyOffset;
     
-    // We return both the estimated phase, and the estimated energy.
+    // Return both the estimated phase and the estimated energy.
     return (estPhase, estEnergy);
 }
 ```
 
-<span data-ttu-id="aa878-119">Dieser Q #-Code kann jetzt vom Treiber Programm aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="aa878-119">This Q# code may now be invoke from the driver program.</span></span> <span data-ttu-id="aa878-120">Im folgenden wird ein vollständiger Simulator erstellt und ausgeführt `GetEnergyByTrotterization` , um die Energie des Energie Zustands zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="aa878-120">In the following, we create a full-state simulator and run `GetEnergyByTrotterization` to obtain the ground state energy.</span></span>
+<span data-ttu-id="9c071-122">Sie können jetzt den Q #-Code aus dem Host Programm aufrufen.</span><span class="sxs-lookup"><span data-stu-id="9c071-122">You can now invoke the Q# code from the host program.</span></span> <span data-ttu-id="9c071-123">Mit dem folgenden c#-Code wird ein vollständiger Simulator erstellt und ausgeführt `GetEnergyByTrotterization` , um die Energie des Mittel Zustands zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="9c071-123">The following C# code creates a full-state simulator and runs `GetEnergyByTrotterization` to obtain the ground state energy.</span></span>
 
 ```csharp
 using (var qsim = new QuantumSimulator())
 {
-    // We specify the bits of precision desired in the phase estimation 
+    // Specify the bits of precision desired in the phase estimation 
     // algorithm
     var bits = 7;
 
-    // We specify the step-size of the simulated time-evolution. This needs to
+    // Specify the step size of the simulated time evolution. The step size needs to
     // be small enough to avoid aliasing of phases, and also to control the
     // error of simulation.
     var trotterStep = 0.4;
@@ -136,10 +138,10 @@ using (var qsim = new QuantumSimulator())
     // Choose the Trotter integrator order
     Int64 trotterOrder = 1;
 
-    // As the quantum algorithm is probabilistic, let us run a few trials.
+    // As the quantum algorithm is probabilistic, run a few trials.
 
     // This may be compared to true value of
-    Console.WriteLine("Exact molecular Hydrogen ground state energy: -1.137260278.\n");
+    Console.WriteLine("Exact molecular hydrogen ground state energy: -1.137260278.\n");
     Console.WriteLine("----- Performing quantum energy estimation by Trotter simulation algorithm");
     for (int i = 0; i < 5; i++)
     {
@@ -149,4 +151,7 @@ using (var qsim = new QuantumSimulator())
 }
 ```
 
-<span data-ttu-id="aa878-121">Beachten Sie, dass zwei Parameter zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="aa878-121">Note that two parameters are returned.</span></span> <span data-ttu-id="aa878-122">`energyEst`Gibt an, wie hoch die Energie im Mittelwert ist, und sollte `-1.137` im Durchschnitt liegen.</span><span class="sxs-lookup"><span data-stu-id="aa878-122">`energyEst` is the estimate of the ground state energy, and should be around `-1.137` on average.</span></span> <span data-ttu-id="aa878-123">`phaseEst`ist die vom Phasen Schätz Algorithmus zurückgegebene RAW-Phase und ist nützlich, wenn ein Aliasing aufgrund eines `trotterStep` zu großen Werts auftritt.</span><span class="sxs-lookup"><span data-stu-id="aa878-123">`phaseEst` is the raw phase returned by the phase estimation algorithm, and is useful to diagnose when aliasing occurs due to a `trotterStep` that is too large.</span></span>
+<span data-ttu-id="9c071-124">Der-Vorgang gibt zwei Parameter zurück:</span><span class="sxs-lookup"><span data-stu-id="9c071-124">The operation returns two parameters:</span></span> 
+
+- <span data-ttu-id="9c071-125">`energyEst`Gibt an, wie hoch die Energie des Mittelwerts ist und wie `-1.137` im Durchschnitt liegen sollte.</span><span class="sxs-lookup"><span data-stu-id="9c071-125">`energyEst` is the estimate of the ground state energy and should be close to `-1.137` on average.</span></span> 
+- <span data-ttu-id="9c071-126">`phaseEst`die vom Phasen Schätz Algorithmus zurückgegebene RAW-Phase.</span><span class="sxs-lookup"><span data-stu-id="9c071-126">`phaseEst` is the raw phase returned by the phase estimation algorithm.</span></span> <span data-ttu-id="9c071-127">Dies ist nützlich für die Diagnose von Aliasing, wenn es aufgrund eines `trotterStep` zu großen Werts auftritt.</span><span class="sxs-lookup"><span data-stu-id="9c071-127">This useful for diagnosing aliasing when it occurs due to a `trotterStep` value that is too large.</span></span>
