@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 3ddb5d67b972f69df1774b476a10e74dd16d97b7
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 26de7d5f639ea1b4df24232127b6f95cee3a041e
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884190"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871381"
 ---
 # <a name="q-style-guide"></a>F #-Stil Handbuch #
 ## <a name="general-conventions"></a>Allgemeine Konventionen ##
@@ -64,7 +64,7 @@ Andere Verben können auch in diesem Fall nützlich sein, wie in `IterateThrough
 | ---- | ------ |
 | Anwenden | Ein als Eingabe bereitgestellter Vorgang wird aufgerufen. |
 | Assert | Eine Hypothese über das Ergebnis einer möglichen Quantum-Messung wird von einem Simulator geprüft. |
-| Schätzung | Ein klassischer Wert wird zurückgegeben, der eine Schätzung darstellt, die aus einer oder mehreren Messungen gezeichnet wird. |
+| Schätzungen | Ein klassischer Wert wird zurückgegeben, der eine Schätzung darstellt, die aus einer oder mehreren Messungen gezeichnet wird. |
 | "Measure" | Eine Quantum-Messung wird ausgeführt, und das Ergebnis wird an den Benutzer zurückgegeben. |
 | Vorbereiten | Ein bestimmtes Register von Qubits wird in einem bestimmten Zustand initialisiert. |
 | Beispiel | Ein klassischer Wert wird nach dem Zufallsprinzip aus einer Verteilung zurückgegeben. |
@@ -386,9 +386,8 @@ Der mit dem Quantum Development Kit bereitgestellte Compiler extrahiert diese Ko
 Entsprechend verwendet der mit dem Quantum Development Kit bereitgestellte Sprachserver diese Kommentare, um Benutzern Hilfe zu bieten, wenn Sie mit dem Mauszeiger auf Symbole in Ihrem Q #-Code zeigen.
 Durch die Verwendung von Dokumentations Kommentaren können Benutzer den Code sinnvoll machen, indem Sie einen nützlichen Verweis auf Details bereitstellen, die nicht ohne weiteres mit den anderen Konventionen in diesem Dokument ausgedrückt werden.
 
-<div class="nextstepaction">
-    [Referenz zur Dokumentations Kommentar Syntax](xref:microsoft.quantum.guide.filestructure#documentation-comments)
-</div>
+> [!div class="nextstepaction"]
+> [Syntax Referenz für Dokumentations Kommentare](xref:microsoft.quantum.guide.filestructure#documentation-comments).
 
 Um diese Funktionalität für Benutzer effektiv nutzen zu können, empfiehlt es sich, beim Schreiben von Dokumentations Kommentaren einige Punkte zu berücksichtigen.
 

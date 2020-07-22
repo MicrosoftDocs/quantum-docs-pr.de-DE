@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: d10f81a1e49235be8e02661dcd6d3c839485af6e
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 4b5e7b657f0e11fb4a14308c20859f4007729146
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885050"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871551"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Versionshinweise für das Microsoft Quantum Development Kit
 
@@ -21,6 +21,17 @@ Installationsanweisungen finden Sie im [Installationshandbuch](xref:microsoft.qu
 
 Updateanweisungen finden Sie im [Updatehandbuch](xref:microsoft.quantum.update).
 
+
+## <a name="version-01220072031"></a>Version 0.12.20072031
+
+*Veröffentlichungsdatum: 21. Juli, 2020*
+
+Dieses Release enthält Folgendes:
+
+- Geöffnete Namespaces in Q # Notebooks sind jetzt für alle zukünftigen Zellen Ausführungen verfügbar. Dies ermöglicht beispielsweise, dass Namespaces einmal in einer Zelle am Anfang des Notebooks geöffnet werden, anstatt relevante Namespaces in jeder codezelle öffnen zu müssen. Mit einem neuen `%lsopen` Magic-Befehl wird die Liste der aktuell geöffneten Namespaces angezeigt.
+
+Hier finden Sie die vollständige Liste geschlossener Pull Requests für [Bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [Compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [Runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [Beispiele](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) und [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
+
 ## <a name="version-01220070124"></a>Version 0.12.20070124
 
 *Veröffentlichungsdatum: 2. Juli, 2020*
@@ -28,7 +39,7 @@ Updateanweisungen finden Sie im [Updatehandbuch](xref:microsoft.quantum.update).
 Dieses Release enthält Folgendes:
 
 - Neues `qdk-chem` Tool zum Umrechnen von Legacy-Serialisierungsformaten für elektronische Strukturprobleme (z. b. fcidump) in [broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)
-- Neue Funktionen und Vorgänge im- [ `Microsoft.Quantum.Synthesis` Namespace](xref:microsoft.quantum.synthesis) für die Konsistenz Anwendung klassischer Oracles mithilfe von Transformations-und Zerlegungs Algorithmen.
+- Neue Funktionen und Vorgänge im- [`Microsoft.Quantum.Synthesis`](xref:microsoft.quantum.synthesis) Namespace für die Konsistenz Anwendung klassischer Oracles mithilfe von Transformations-und Zerlegungs Algorithmen.
 - Mit IQ # können jetzt Argumente für `%simulate` , `%estimate` und andere Magic-Befehle angezeigt werden. Weitere Informationen finden Sie in der [ `%simulate` Magic-Befehlsreferenz](xref:microsoft.quantum.iqsharp.magic-ref.simulate) .
 - Neue Phasen Anzeigeoptionen in IQ #. Weitere Informationen finden Sie in der [ `%config` Magic-Befehlsreferenz](xref:microsoft.quantum.iqsharp.magic-ref.config) .
 - IQ # und das `qsharp` Python-Paket werden nun über die Configuration Manager-Pakete ([qsharp](https://anaconda.org/quantum-engineering/qsharp) und [iqsharp](https://anaconda.org/quantum-engineering/iqsharp)) bereitgestellt, um die lokale Installation der Q # jupyter-und python-Funktionalität in einer Configuration Manager-Umgebung zu vereinfachen. Weitere Informationen finden Sie unter [q # jupyter Notebooks](xref:microsoft.quantum.install.jupyter) und [f # mit python](xref:microsoft.quantum.install.python) -Installations Handbüchern.
@@ -446,7 +457,7 @@ Dieses Release umfasst lediglich eine schnelle Behebung von [Problem #48 auf Gi
 
 *Veröffentlichungsdatum: 22. Juni 2018*
 
-Dieses Release enthält mehrere Beiträge der Community sowie eine verbesserte Debugfunktionen und Leistungsverbesserungen.  Genauer gesagt:
+Dieses Release enthält mehrere Beiträge der Community sowie eine verbesserte Debugfunktionen und Leistungsverbesserungen.  Dies gilt insbesondere in folgenden Fällen:
 
 * Leistungsverbesserungen für kleine und große Simulationen für den QuantumSimulator-Zielcomputer
 * Verbesserte Debugfunktionen

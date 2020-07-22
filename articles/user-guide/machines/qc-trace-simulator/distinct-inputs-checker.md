@@ -1,21 +1,25 @@
 ---
-title: Unterschiedliche Eingaben für Eingaben
-description: 'Erfahren Sie mehr über die unterschiedliche e-How-Eingaben von Microsoft QDK, die ihren Q #-Code auf potenzielle Konflikte mit freigegebenen Qubits überprüft.'
+title: Unterschiedliche Inputs-Eingaben-Quantum Development Kit
+description: 'Erfahren Sie mehr über die unterschiedliche unterschiedliche Inputs-Eingaben von Microsoft QDK, die den Quantum-Ablauf Verfolgungs Simulator zum Überprüfen Ihres Q #-Codes auf potenzielle Konflikte mit freigegebenen Qubits'
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 11a0573242c8afb12f242aa3be5f9cff18290452
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 49a1ccc5f37acfeaa1ee08bd974be45a40a76f93
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274931"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871143"
 ---
-# <a name="distinct-inputs-checker"></a>Unterschiedliche Eingaben für Eingaben
+# <a name="quantum-trace-simulator-distinct-inputs-checker"></a>Quantum-Ablauf Verfolgungs Simulator: unterschiedliche Eingaben für Eingaben
 
-Der `Distinct Inputs Checker` ist ein Teil des Ablauf [Verfolgungs Simulators](xref:microsoft.quantum.machines.qc-trace-simulator.intro)für Quantum-Computer. Es dient zur Erkennung potenzieller Fehler im Code. Sehen Sie sich den folgenden Q #-Code an, um die von diesem Paket erkannten Probleme zu veranschaulichen:
+Die unterschiedliche Inputs-Prüfung ist Teil des quantumlaufverfolgungs- [Simulators](xref:microsoft.quantum.machines.qc-trace-simulator.intro)für Quantum Development Kit. Sie können es verwenden, um potenzielle Fehler im Code zu erkennen, die durch Konflikte mit freigegebenen Qubits verursacht werden. 
+
+## <a name="conflicts-with-shared-qubits"></a>Konflikte mit freigegebenen Qubits
+
+Sehen Sie sich den folgenden Q #-Code an, um die Probleme zu veranschaulichen, die von der unterschiedlichen Eingaben Prüfung erkannt werden:
 
 ```qsharp
 operation ApplyBoth(
@@ -29,7 +33,9 @@ operation ApplyBoth(
 }
 ```
 
-Wenn der Benutzer dieses Programm ansieht, geht er davon aus, dass die Reihenfolge, in der `op1` und `op2` aufgerufen werden, keine Rolle spielt, da `q1` und `q2` unterschiedliche Qubits und Vorgänge sind, die auf unterschiedliche Qubits-Aufgaben reagieren. Wir sehen uns nun ein Beispiel an, in dem dieser Vorgang verwendet wird:
+Wenn Sie sich dieses Programm ansehen, können Sie davon ausgehen, dass die Reihenfolge, in der es aufruft `op1` und `op2` keine Rolle spielt, da `q1` und `q2` unterschiedliche Qubits und Vorgänge sind, die auf unterschiedliche Qubits-Vorgänge reagieren. 
+
+Sehen Sie sich nun das folgende Beispiel an:
 
 ```qsharp
 operation ApplyWithNonDistinctInputs() : Unit {
@@ -41,11 +47,21 @@ operation ApplyWithNonDistinctInputs() : Unit {
 }
 ```
 
-Nun `op1` `op2` werden und sowohl mit partieller Anwendung als auch mit einem Qubit verwendet. Wenn der Benutzer `ApplyBoth` im obigen Beispiel aufruft, hängt das Ergebnis des Vorgangs von der Reihenfolge von `op1` und innerhalb von ab `op2` `ApplyBoth` . Dies ist definitiv nicht das, was der Benutzer erwarten würde. Der `Distinct Inputs Checker` erkennt solche Situationen, wenn er aktiviert ist, und löst aus `DistinctInputsCheckerException` . Weitere Informationen finden Sie in der API-Dokumentation zu [distinctinputscheckerexception](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException) .
+Beachten Sie, dass `op1` und `op2` sowohl mit einer partiellen Anwendung als auch mit einem Qubit abgerufen werden. Wenn Sie `ApplyBoth` in diesem Beispiel aufzurufen, hängt das Ergebnis des Vorgangs von der Reihenfolge von und innerhalb von ab, `op1` `op2` `ApplyBoth` was Sie erwarten. Wenn Sie die unterschiedliche Eingaben-Überprüfung aktivieren, werden derartige Situationen erkannt, und es wird eine ausgelöst `DistinctInputsCheckerException` . Weitere Informationen finden Sie unter <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> in der Q #-API-Bibliothek.
 
-## <a name="using-the-distinct-inputs-checker-in-your-c-program"></a>Verwenden der unterschiedlichen Eingabe Prüfung in Ihrem c#-Programm
+## <a name="invoking-the-distinct-inputs-checker"></a>Aufrufen der unterschiedlichen Eingabe Prüfung
 
-Im folgenden finden Sie ein Beispiel für c#-Treibercode für die Verwendung des Ablauf Verfolgungs Simulators für Quantum-Computer mit `Distinct Inputs Checker` aktiviertem:
+Zum Ausführen des Quantum-Ablauf Verfolgungs Simulators mit der unterschiedlichen Eingabe Prüfung müssen Sie eine- <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> Instanz erstellen, die `UseDistinctInputsChecker` -Eigenschaft auf **true**festlegen und dann eine neue- <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> Instanz mit `QCTraceSimulatorConfiguration` als Parameter erstellen. 
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UseDistinctInputsChecker = true;
+var sim = new QCTraceSimulator(config);
+```
+
+## <a name="using-the-distinct-inputs-checker-in-a-c-host-program"></a>Verwenden der unterschiedlichen Eingabe Prüfung in einem c#-Host Programm
+
+Im folgenden finden Sie ein Beispiel für ein c#-Host Programm, das den Quantum-Ablauf Verfolgungs Simulator mit aktivierter unterschiedlicher Eingabe Prüfung verwendet:
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -59,7 +75,7 @@ namespace Quantum.MyProgram
         static void Main(string[] args)
         {
             var traceSimCfg = new QCTraceSimulatorConfiguration();
-            traceSimCfg.useDistinctInputsChecker = true; //enables distinct inputs checker
+            traceSimCfg.UseDistinctInputsChecker = true; //enables distinct inputs checker
             QCTraceSimulator sim = new QCTraceSimulator(traceSimCfg);
             var res = MyQuantumProgram.Run().Result;
             System.Console.WriteLine("Press any key to continue...");
@@ -69,8 +85,9 @@ namespace Quantum.MyProgram
 }
 ```
 
-Die `QCTraceSimulatorConfiguration` -Klasse speichert die Konfiguration des Ablauf Verfolgungs Simulators für Quantum-Computer und kann als Argument für den- `QCTraceSimulator` Konstruktor angegeben werden. Wenn `useDistinctInputsChecker` auf true festgelegt ist, `Distinct Inputs Checker` wird aktiviert. Weitere Informationen finden Sie in der API-Dokumentation zu [qctracesimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) und [qctracesimulatorconfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?) .
-
 ## <a name="see-also"></a>Weitere Informationen
 
-- Übersicht über den Ablauf [Verfolgungs Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) für Quantum-Computer
+- Übersicht über den Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .
+- Die <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API-Referenz.
+- Die <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API-Referenz.
+- Die <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> API-Referenz.

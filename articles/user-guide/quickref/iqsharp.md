@@ -5,37 +5,47 @@ author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 uid: microsoft.quantum.guide.quickref.iqsharp
-ms.openlocfilehash: 0cd1a2289132e2760a21fd9d4f4083696353e271
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 2fb542df8723fa437c82b4a1dfada77e22c1d6e4
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431018"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870538"
 ---
 # <a name="iq-magic-commands"></a>IQ#-Magic-Befehle
 
 ### <a name="general"></a>Allgemein
 
-- `%config`: Legt Konfigurationseinstellungen fest oder ruft Sie ab.
-- `%estimate`: Führt eine bestimmte Funktion oder einen Vorgang auf dem quantumschlag-Zielcomputer aus.
-- `%lsmagic`: Gibt eine Liste aller zurzeit verfügbaren Magic-Befehle zurück.
-- `%package`: Bietet die Möglichkeit, ein nuget-Paket zu laden.
-- `%performance`: Meldet die aktuellen Leistungsmetriken für diesen Kernel.
-- `%simulate`: Führt eine bestimmte Funktion oder einen Vorgang auf dem quantumschlag-Zielcomputer aus.
-- `%toffoli`: Führt eine angegebene Funktion oder einen Vorgang auf dem Bereitstellungs Zielcomputer für den Dienst des Dienst-Simulators aus.
-- `%who`: Stellt Aktionen bereit, die sich auf den aktuellen Arbeitsbereich beziehen.
-- `%workspace`: Gibt eine Liste aller Vorgänge und Funktionen zurück, die in der aktuellen Sitzung definiert sind, entweder interaktiv oder aus dem aktuellen Arbeitsbereich geladen.
+- [`%config`](xref:microsoft.quantum.iqsharp.magic-ref.config): Ermöglicht das Festlegen oder Abfragen von Konfigurationsoptionen.
+- [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate): Führt eine bestimmte Funktion oder einen Vorgang auf dem resourcesestimator-Zielcomputer aus.
+- [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic): Gibt eine Liste aller zurzeit verfügbaren Magic-Befehle zurück.
+- [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package): Bietet die Möglichkeit, ein nuget-Paket zu laden.
+- [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance): Meldet die aktuellen Leistungsmetriken für diesen Kernel.
+- [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate): Führt eine bestimmte Funktion oder einen Vorgang auf dem quantumschlag-Zielcomputer aus.
+- [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli): Führt eine bestimmte Funktion oder einen Vorgang auf dem Zielcomputer "tffolisimulator" aus.
+- [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who): Listet die Q #-Vorgänge auf, die in der aktuellen Sitzung verfügbar sind.
+- [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace): Stellt Aktionen bereit, die sich auf den aktuellen Arbeitsbereich beziehen.
 
-### <a name="chemistry"></a>Chemi
+### <a name="azure-quantum-integration"></a>Azure-Quantum-Integration
 
-- `%chemistry.broombridge`: Lädt und gibt die Darstellung der broombridge-elektronischen Strukturprobleme aus einer bestimmten YAML-Datei zurück.
-- `%chemistry.encode`: Codiert ein Fermion-hamiltonan in ein Format, das von Q # verwendet werden können.
-- `%chemistry.fh.add_terms`: Fügt einem Fermion-hamiltonan Bedingungen hinzu.
-- `%chemistry.fh.load`: Lädt den Fermion-hamiltonan für ein elektronisches Strukturproblem. Das Problem wird aus einer Datei geladen oder als Argument übergeben.
-- `%chemistry.inputstate.load`: Lädt das Problem der elektronischen broombridge-Struktur und gibt den ausgewählten Eingabe Status zurück.
+- [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect): Stellt eine Verbindung mit einem Azure Quantum Workspace her oder zeigt den aktuellen Verbindungsstatus an.
+- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Führt einen Auftrag in einem Azure Quantum-Arbeitsbereich aus.
+- [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs): Hiermit wird eine Liste der Aufträge im aktuellen Azure Quantum-Arbeitsbereich angezeigt.
+- [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output): Zeigt die Ergebnisse für einen Auftrag im aktuellen Azure Quantum-Arbeitsbereich an.
+- [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status): Zeigt den Status eines Auftrags im aktuellen Azure Quantum-Arbeitsbereich an.
+- [`%azure.submit`](xref:microsoft.quantum.iqsharp.magic-ref.azure.submit): Übermittelt einen Auftrag an einen Azure Quantum-Arbeitsbereich.
+- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Hiermit wird das aktive Ausführungs Ziel für die Q #-Auftrags Übermittlung in einem Azure Quantum-Arbeitsbereich festgelegt oder angezeigt.
 
-### <a name="from-microsoftquantumkatas-package"></a>Aus dem Paket "Microsoft. Quantum. Katas"
+### <a name="chemistry-from-microsoftquantumchemistry-package"></a>Chemie (aus dem Microsoft. Quantum. Chemistry-Paket)
 
-- `%kata`: Führt einen einzelnen Test aus und meldet, ob der Test erfolgreich abgeschlossen wurde.
-- `%check_kata`: Überprüft die Verweis Implementierung für den Test einer einzelnen Kata.
+- [`%chemistry.broombridge`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.broombridge): Lädt und gibt die Darstellung der broombridge-elektronischen Strukturprobleme aus einer bestimmten YAML-Datei zurück.
+- [`%chemistry.encode`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.encode): Codiert ein Fermion-hamiltonan in ein Format, das von Q # verwendet werden können.
+- [`%chemistry.fh.add_terms`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.add_terms): Fügt einem Fermion-hamiltonan Bedingungen hinzu.
+- [`%chemistry.fh.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.load): Lädt den Fermion-hamiltonan für ein elektronisches Strukturproblem. Das Problem wird aus einer Datei geladen oder als Argument übergeben.
+- [`%chemistry.inputstate.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load): Lädt das Problem der elektronischen broombridge-Struktur und gibt den ausgewählten Eingabe Status zurück.
+
+### <a name="katas-from-microsoftquantumkatas-package"></a>Katas (aus dem Microsoft. Quantum. Katas-Paket)
+
+- [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata): Führt einen einzelnen Test aus und meldet, ob der Test erfolgreich abgeschlossen wurde.
+- [`%check_kata`](xref:microsoft.quantum.iqsharp.magic-ref.check_kata): Überprüft die Verweis Implementierung für den Test einer einzelnen Kata.
     Insbesondere ersetzt Sie die Verweis Implementierung für eine einzelne Aufgabe in der Zelle und meldet, ob der Test erfolgreich ausgeführt wurde.

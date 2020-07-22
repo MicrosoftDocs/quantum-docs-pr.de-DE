@@ -6,12 +6,12 @@ ms.author: mamykhai@microsoft.com
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: cd619607af9e2b601f3bec1304c5729d84312f35
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: db6e49e94e5ceb3b1b0b2d6ab57391618084072b
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884087"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870973"
 ---
 # <a name="testing-and-debugging"></a>Testen und Debuggen
 
@@ -50,7 +50,7 @@ Diese Datei enthält zunächst einen Beispiel Komponenten Test, `AllocateQubit` 
     operation AllocateQubit () : Unit {
 
         using (qubit = Qubit()) {
-            Assert([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
+            AssertMeasurement([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
         
         Message("Test passed");
@@ -177,7 +177,7 @@ Hier wird der-Vorgang verwendet <xref:microsoft.quantum.environment.getqubitsava
 Da dies von dem globalen Status des Programms und seiner Ausführungsumgebung abhängt, muss unsere Definition von `AssertQubitsAreAvailable` ebenfalls ein Vorgang sein.
 Der globale Status kann jedoch verwendet werden, um einen einfachen `Bool` Wert als Eingabe für die Funktion zu erhalten `Fact` .
 
-[Der Auftakt](xref:microsoft.quantum.libraries.standard.prelude), auf dem diese Ideen aufbauen, bietet zwei besonders nützliche Assertionen, die <xref:microsoft.quantum.intrinsic.assert> <xref:microsoft.quantum.intrinsic.assertprob> beide als Vorgänge für modelliert werden `()` . Diese Assertionen akzeptieren jeweils einen Pauli-Operator, der ein bestimmtes Maß an Interesse, ein Quantum-Register, für das eine Messung durchgeführt wird, und ein hypothetisches Ergebnis beschreibt.
+[Der Auftakt](xref:microsoft.quantum.libraries.standard.prelude), auf dem diese Ideen aufbauen, bietet zwei besonders nützliche Assertionen, die <xref:microsoft.quantum.diagnostics.assertmeasurement> <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> beide als Vorgänge für modelliert werden `()` . Diese Assertionen akzeptieren jeweils einen Pauli-Operator, der ein bestimmtes Maß an Interesse, ein Quantum-Register, für das eine Messung durchgeführt wird, und ein hypothetisches Ergebnis beschreibt.
 Zielcomputer, die bei der Simulation arbeiten, werden nicht durch [das No-Klon-Theorem](https://en.wikipedia.org/wiki/No-cloning_theorem)gebunden und können solche Messungen ausführen, ohne das Register zu beeinträchtigen, das an solche Assertionen weitergeleitet wird.
 Ein Simulator kann dann, ähnlich wie bei der `PositivityFact` vorherigen Funktion, die Berechnung abbrechen, wenn das hypothetische Ergebnis in der Praxis nicht beachtet wird:
 
@@ -185,14 +185,14 @@ Ein Simulator kann dann, ähnlich wie bei der `PositivityFact` vorherigen Funkti
 using (register = Qubit()) 
 {
     H(register);
-    Assert([PauliX], [register], Zero);
+    AssertMeasurement([PauliX], [register], Zero);
     // Even though we do not have access to states in Q#,
     // we know by the anthropic principle that the state
     // of register at this point is |+〉.
 }
 ```
 
-Bei physischer Quantum-Hardware, bei der das No-Klon-Theorem die Untersuchung eines Quantum-Zustands verhindert, werden die `Assert` -und- `AssertProb` Vorgänge einfach `()` ohne andere Auswirkungen zurückgegeben.
+Bei physischer Quantum-Hardware, bei der das No-Klon-Theorem die Untersuchung eines Quantum-Zustands verhindert, werden die `AssertMeasurement` -und- `AssertMeasurementProbability` Vorgänge einfach `()` ohne andere Auswirkungen zurückgegeben.
 
 Der- <xref:microsoft.quantum.diagnostics> Namespace stellt mehrere weitere Funktionen der- `Assert` Familie bereit, mit denen Sie erweiterte Bedingungen überprüfen können. 
 

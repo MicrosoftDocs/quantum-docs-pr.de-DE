@@ -1,25 +1,29 @@
 ---
-title: Vollständiger Zustands Simulator
+title: Full State Quantum Simulator-Quantum Development Kit
 description: 'Erfahren Sie, wie Sie Ihre Q #-Programme auf dem Microsoft Quantum Development Kit vollständigen Status Simulator ausführen.'
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
-ms.date: 12/7/2017
+ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.full-state-simulator
-ms.openlocfilehash: f73abbc4366b003e4b22366ed83ca9c897737307
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 563fdbd2a45461d112e4c46651eddd75c6fc3db2
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274946"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871177"
 ---
-# <a name="quantum-development-kit-full-state-simulator"></a>Vollständiger Status Simulator für das Quantum Development Kit
+# <a name="quantum-development-kit-qdk-full-state-simulator"></a>Vollständiger Status Simulator für das Quantum Development Kit (QDK)
 
-Das Quantum Development Kit bietet einen vollständigen Quantum-Simulator ähnlich dem [Liq $ UI | \rangle $](http://stationq.github.io/Liquid/) von Microsoft Research.
-Dieser Simulator kann zum Ausführen und Debuggen von in Q # geschriebenen Quantenalgorithmen auf dem Computer verwendet werden.
+Das QDK bietet einen vollständigen Status Simulator, der einen Quantum-Computer auf dem lokalen Computer simuliert. Mithilfe des vollständigen Zustands Simulators können Sie in f # geschriebene Quantum-Algorithmen ausführen und Debuggen, wobei bis zu 30 Qubits verwendet werden. Der vollständige Zustands Simulator ähnelt dem Quantum-Simulator, der in der [Liq $ UI | \rangle $](http://stationq.github.io/Liquid/) Platform von Microsoft Research verwendet wird.
 
-Dieser Quantum-Simulator wird über die-Klasse verfügbar gemacht `QuantumSimulator` . Um den Simulator zu verwenden, erstellen Sie einfach eine Instanz dieser Klasse, und übergeben Sie Sie an die- `Run` Methode des Quantum-Vorgangs, den Sie zusammen mit den restlichen Parametern ausführen möchten:
+## <a name="invoking-and-running-the-full-state-simulator"></a>Aufrufen und Ausführen des vollständigen Zustands Simulators
 
+Sie machen den vollständigen Zustands Simulator über die- `QuantumSimulator` Klasse verfügbar. Weitere Informationen finden Sie unter [Möglichkeiten zum Ausführen eines Q #-Programms](xref:microsoft.quantum.guide.host-programs).
+
+### <a name="invoking-the-simulator-from-c"></a>Aufrufen des Simulators von C #
+
+Erstellen Sie eine Instanz der `QuantumSimulator` -Klasse, und übergeben Sie Sie dann an die- `Run` Methode eines Quantum-Vorgangs zusammen mit allen weiteren Parametern.
 ```csharp
     using (var sim = new QuantumSimulator())
     {
@@ -28,13 +32,35 @@ Dieser Quantum-Simulator wird über die-Klasse verfügbar gemacht `QuantumSimula
     }
 ```
 
-## <a name="idisposable"></a>IDisposable
+Da die- `QuantumSimulator` Klasse die- <xref:System.IDisposable> Schnittstelle implementiert, muss die-Methode aufgerufen werden, `Dispose` Wenn die Instanz des Simulators nicht mehr benötigt wird. Die beste Möglichkeit hierfür ist das Einschließen der simulatordeklaration und der Vorgänge in einer [using](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using-statement) -Anweisung, die automatisch die- `Dispose` Methode aufruft.
 
-Die- `QuantumSimulator` Klasse implementiert <xref:System.IDisposable> . daher `Dispose` sollte die-Methode aufgerufen werden, sobald die Instanz des Simulators nicht mehr verwendet wird. Die beste Möglichkeit hierfür ist das Einschließen des Simulators innerhalb einer- `using` Anweisung, wie im obigen Beispiel.
+### <a name="invoking-the-simulator-from-python"></a>Aufrufen des Simulators aus python
 
-## <a name="seed"></a>Seed
+Verwenden Sie die Methode " [simulieren ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) " aus der q #-Python-Bibliothek mit dem importierten q #-Vorgang:
 
-`QuantumSimulator`Verwendet einen Zufallszahlengenerator, um die Quantum-Zufälligkeit zu simulieren. Zu Testzwecken ist es manchmal sinnvoll, deterministische Ergebnisse zu haben. Dies kann erreicht werden, indem ein Ausgangswert für den Zufallszahlengenerator im `QuantumSimulator` Konstruktor des Konstruktors über den-Parameter bereitgestellt wird `randomNumberGeneratorSeed` :
+```python
+qubit_result = myOperation.simulate()
+```
+
+### <a name="invoking-the-simulator-from-the-command-line"></a>Aufrufen des Simulators über die Befehlszeile
+
+Wenn ein Q #-Programm über die Befehlszeile ausgeführt wird, ist der vollständige Zustands Simulator der Standardziel Computer. Optional können Sie den Parameter **--Simulator** (oder **-s** ) verwenden, um den gewünschten Zielcomputer anzugeben. Beide der folgenden Befehle führen ein Programm mithilfe des vollständigen Zustands Simulators aus. 
+
+```dotnetcli
+dotnet run
+dotnet run -s QuantumSimulator
+```
+
+### <a name="invoking-the-simulator-from-juptyer-notebooks"></a>Aufrufen des Simulators aus juptyer Notebooks
+
+Verwenden [Sie den](xref:microsoft.quantum.iqsharp.magic-ref.simulate) Befehl "IQ # Magic", um den Q #-Vorgang auszuführen.
+
+```
+%simulate myOperation
+```
+## <a name="seeding-the-simulator"></a>Seeding des Simulators
+
+Standardmäßig verwendet der vollständige Zustands Simulator einen Zufallszahlengenerator, um die Quantum-Zufälligkeit zu simulieren. Zu Testzwecken ist es manchmal sinnvoll, deterministische Ergebnisse zu haben. In einem c#-Programm können Sie dies erreichen, indem Sie über den-Parameter einen Ausgangswert für den Zufallszahlengenerator im `QuantumSimulator` Konstruktor bereitstellen `randomNumberGeneratorSeed` .
 
 ```csharp
     using (var sim = new QuantumSimulator(randomNumberGeneratorSeed: 42))
@@ -44,7 +70,12 @@ Die- `QuantumSimulator` Klasse implementiert <xref:System.IDisposable> . daher `
     }
 ```
 
-## <a name="threads"></a>Threads
+## <a name="configuring-threads"></a>Konfigurieren von Threads
 
-`QuantumSimulator`Verwendet [OpenMP](http://www.openmp.org/) , um die erforderliche lineare Algebra zu parallelisieren. OpenMP verwendet standardmäßig alle verfügbaren Hardwarethreads, weshalb Programme mit wenigen Qubits häufig langsam ausgeführt werden, stellt die Koordination die tatsächliche Arbeit in den Schatten. Dies kann korrigiert werden, indem die Umgebungsvariable `OMP_NUM_THREADS` auf eine kleine Zahl festgelegt wird. Als grobe Faustregel gilt, dass 1 Thread für etwa 4 Qubits genügt und dann für jeden weiteren Qubit ein weiterer Thread benötigt wird. Dies hängt jedoch stark von Ihrem Algorithmus ab.
+Der vollständige Zustands Simulator verwendet [OpenMP](http://www.openmp.org/) , um die erforderliche lineare Algebra zu parallelisieren. Standardmäßig verwendet OpenMP alle verfügbaren Hardwarethreads, was bedeutet, dass Programme mit einer kleinen Anzahl von Qubits häufig langsam ausgeführt werden, da die erforderliche Koordination die eigentliche Arbeit vergrenzt. Sie können dieses Problem beheben, indem Sie die Umgebungsvariable `OMP_NUM_THREADS` auf eine kleine Zahl festlegen. Konfigurieren Sie als Faustregel einen Thread für bis zu vier Qubits und dann einen zusätzlichen Thread pro Qubit. Möglicherweise müssen Sie die Variable abhängig von Ihrem Algorithmus anpassen.
 
+## <a name="see-also"></a>Weitere Informationen
+
+- [Quantum-Ressourcenschätzung](xref:microsoft.quantum.machines.resources-estimator)
+- [Quantum-zu-ffoli-Simulator](xref:microsoft.quantum.machines.toffoli-simulator)
+- [Quantum-Ablauf Verfolgungs Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
