@@ -1,5 +1,5 @@
 - name: Einführung in Quantum Machine Learning
-  href: introduction.md
+  href: intro.md
 - name: Grundlegende Klassifizierung
   href: basic-classification.md
 - name: Entwerfen Ihres eigenen Klassifizierers
