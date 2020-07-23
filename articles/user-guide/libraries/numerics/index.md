@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.intro
-ms.openlocfilehash: efd1a712616534ac281433fc008f0983271881d7
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9552f3683e1df8cb10d19d0b3f85223df056f83d
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273643"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871347"
 ---
 # <a name="introduction-to-the-quantum-numerics-library"></a>Einführung in die numerische Quantenbibliothek
 
@@ -33,9 +33,10 @@ Aus diesem Grund bietet das Quantum Development Kit Unterstützung für eine gan
 
 Neben der bisher erwähnten Ganzzahlarithmetik bietet die numerische Bibliothek Funktionen mit
 
- - ganzen Zahlen mit/ohne Vorzeichen (Multiplikation, Quadrierung, Division mit Rest, Inversion usw.) mit einer oder zwei ganzzahligen Quantenzahlen als Eingabe
- - Festkommawerten (Addition, Subtraktion, Multiplikation, Quadrierung, 1/x, Polynomauswertung) mit einer oder zwei Festkomma-Quantenzahlen als Eingabe
+- ganzen Zahlen mit/ohne Vorzeichen (Multiplikation, Quadrierung, Division mit Rest, Inversion usw.) mit einer oder zwei ganzzahligen Quantenzahlen als Eingabe
+- Festkommawerten (Addition, Subtraktion, Multiplikation, Quadrierung, 1/x, Polynomauswertung) mit einer oder zwei Festkomma-Quantenzahlen als Eingabe
 
 ## <a name="getting-started"></a>Erste Schritte
 
-Informationen zu den ersten Schritten mit der numerischen Bibliothek finden Sie im [Installationshandbuch](xref:microsoft.quantum.numerics.installation) sowie weitere Informationen unter [Verwenden der numerischen Bibliothek](xref:microsoft.quantum.numerics.usage).
+> [!div class="nextstepaction"]
+> [Erfahren Sie mehr zur Verwendung der numerischen Bibliothek](xref:microsoft.quantum.numerics.usage)

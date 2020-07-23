@@ -3,6 +3,8 @@
 - name: Standardbibliotheken
   topicHref: standard/index.md
   href: standard/toc.yml
+- name: Verwenden von zusätzlichen Q#-Bibliotheken
+  href: additional-libraries.md
 - name: Quantenchemiebibliothek
   topicHref: chemistry/index.md
   href: chemistry/toc.yml
