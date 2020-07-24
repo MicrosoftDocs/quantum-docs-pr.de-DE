@@ -6,12 +6,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 8a878e8f930f4b898f4de35751e4a39cc8716cec
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: bbd1f58ba7de205e452be7bac72b5fd78e7acd56
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884251"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871449"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Entwickeln mit Q#-Jupyter Notebooks
 
@@ -28,7 +28,7 @@ IQ# (ausgesprochen „i-q-sharp“) ist eine hauptsächlich von Jupyter und Pyth
 
 ### <a name="install-using-conda-recommended"></a>[Installation mithilfe von Conda (empfohlen)](#tab/tabid-conda)
 
-1. Installieren Sie [Miniconda](https://docs.conda.io/en/latest/miniconda.html) oder [Anaconda](https://www.anaconda.com/products/individual#Downloads).
+1. Installieren Sie [Miniconda](https://docs.conda.io/en/latest/miniconda.html) oder [Anaconda](https://www.anaconda.com/products/individual#Downloads). **Hinweis:** Eine 64-Bit-Installation ist erforderlich.
 
 1. Öffnen Sie eine Anaconda-Eingabeaufforderung.
 

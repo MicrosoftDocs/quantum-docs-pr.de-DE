@@ -6,12 +6,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 7fbbb81b1ee51bff74b287745bf4447004a0254c
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: ec5e66e0c85d89888a8ff1e7d6bf18bf89ff44ac
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885531"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871585"
 ---
 # <a name="develop-with-q-and-python"></a>Entwickeln mit Q# und Python
 
@@ -21,7 +21,7 @@ Installieren Sie das QDK, um Python-Hostprogramme zum Aufrufen von Q#-Vorgängen
 
 ### <a name="install-using-conda-recommended"></a>[Installation mithilfe von Conda (empfohlen)](#tab/tabid-conda)
 
-1. Installieren Sie [Miniconda](https://docs.conda.io/en/latest/miniconda.html) oder [Anaconda](https://www.anaconda.com/products/individual#Downloads).
+1. Installieren Sie [Miniconda](https://docs.conda.io/en/latest/miniconda.html) oder [Anaconda](https://www.anaconda.com/products/individual#Downloads). **Hinweis:** Eine 64-Bit-Installation ist erforderlich.
 
 1. Öffnen Sie eine Anaconda-Eingabeaufforderung.
 
