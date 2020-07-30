@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7ed92c29020ccf389faa099f5bd80516af525578
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9d763d11ef9c08cc0941cade217dbb2942ef4bf9
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275021"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436524"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum-Charakterisierung und-Statistiken #
 
@@ -96,7 +96,7 @@ Der genaue Bayessche Rückschluss ist in der Praxis unlösbar.
 Um dies zu sehen, möchten wir eine $n $-Bit-Variable $x $ erlernen.
 Die vorherige Distribution $ \pr (x) $ unterstützt mehr als $2 ^ n $ hypothetische Werte von $x $.
 Dies bedeutet Folgendes: Wenn wir eine sehr genaue Schätzung $x $ benötigen, ist für die Bayes-Phasen Schätzung möglicherweise eine nicht benötigte Arbeitsspeicher-und Verarbeitungszeit erforderlich.
-Während einige Anwendungen, wie z. b. die Quantum-Simulation, die erforderliche Genauigkeit nicht ausschließt, schließt andere Anwendungen, wie z. b. der Shor-Algorithmus, nicht den exakten bayesschen Rückschluss innerhalb des Phasen Schätz Schritts aus.  Aus diesem Grund werden auch Implementierungen für ungefähre Bayes-Methoden bereitgestellt, wie z. b. die [Random Walk-Phasen Schätzung (rwpe)](xref:microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation) und auch nicht-Bayes-Ansätze, wie z. b. eine [robuste Phasen Schätzung](xref:microsoft.quantum.characterization.robustphaseestimation).
+Während einige Anwendungen, wie z. b. die Quantum-Simulation, die erforderliche Genauigkeit nicht ausschließt, schließt andere Anwendungen, wie z. b. der Shor-Algorithmus, nicht den exakten bayesschen Rückschluss innerhalb des Phasen Schätz Schritts aus.  Aus diesem Grund werden auch Implementierungen für ungefähre Bayes-Methoden bereitgestellt, wie z. b. die [Random Walk-Phasen Schätzung (rwpe)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) und auch nicht-Bayes-Ansätze, wie z. b. eine [robuste Phasen Schätzung](xref:microsoft.quantum.characterization.robustphaseestimation).
 
 ### <a name="robust-phase-estimation"></a>Stabile Phasen Schätzung ###
 
