@@ -6,12 +6,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: ec5e66e0c85d89888a8ff1e7d6bf18bf89ff44ac
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: 4d148435f01d975e690828dd02335758fc71dfe4
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871585"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436553"
 ---
 # <a name="develop-with-q-and-python"></a>Entwickeln mit Q# und Python
 
@@ -97,7 +97,7 @@ Nun können Sie Ihre Installation des `qsharp`-Python-Pakets überprüfen, indem
     import qsharp
     from Qrng import SampleQuantumRandomNumberGenerator
 
-    SampleQuantumRandomNumberGenerator.simulate()
+    print(SampleQuantumRandomNumberGenerator.simulate())
     ```
 
 1. Führen Sie das Programm in der Umgebung aus, die Sie während der Installation erstellt haben (d. h. in der Conda- oder Python-Umgebung, in der Sie `qsharp` installiert haben):
@@ -106,7 +106,7 @@ Nun können Sie Ihre Installation des `qsharp`-Python-Pakets überprüfen, indem
     python host.py
     ```
 
-1. Das Ergebnis des von Ihnen aufgerufenen Vorgangs sollte angezeigt werden. Da in diesem Fall ein zufälliges Ergebnis durch den Vorgang generiert wird, wird entweder `Zero` oder `One` auf dem Bildschirm angezeigt. Wenn Sie das Programm wiederholt ausführen, sollte jedes Ergebnis ungefähr die Hälfte der Zeit angezeigt werden.
+1. Das Ergebnis des von Ihnen aufgerufenen Vorgangs sollte angezeigt werden. Da in diesem Fall ein zufälliges Ergebnis durch den Vorgang generiert wird, wird entweder `0` oder `1` auf dem Bildschirm angezeigt. Wenn Sie das Programm wiederholt ausführen, sollte jedes Ergebnis ungefähr die Hälfte der Zeit angezeigt werden.
 
 > [!NOTE]
 > * Beim Python-Code handelt es sich nur um ein normales Python-Programm. Sie können eine beliebige Python-Umgebung verwenden, einschließlich Python-basierter Jupyter Notebooks, um das Python-Programm zu schreiben und Q#-Vorgänge aufzurufen. Das Python-Programm kann Q#-Vorgänge aus allen QS-Dateien importieren, die sich im gleichen Ordner wie der Python-Code selbst befinden.
