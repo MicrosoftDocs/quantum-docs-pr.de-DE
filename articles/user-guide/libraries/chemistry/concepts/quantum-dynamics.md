@@ -6,12 +6,15 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.quantumdynamics
-ms.openlocfilehash: 9cb74ccd4b7806a90c0701300860d777fa8e5d75
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: e63ec497f2a7747e172d5fbdc249fe4064c482b6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275089"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869493"
 ---
 # <a name="quantum-dynamics"></a>Quantum Dynamics
 

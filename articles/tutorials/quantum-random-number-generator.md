@@ -1,30 +1,33 @@
 ---
 title: Erstellen eines Quanten-Zufallszahlengenerators
-description: Enthält eine Beschreibung der Erstellung eines Q#-Projekts, mit dem grundlegende Quantenkonzepte wie die Überlagerung veranschaulicht werden, indem ein Quanten-Zufallszahlengenerator erstellt wird.
+description: Erstellen Sie ein Q# Projekt, das grundlegende Quantum-Konzepte wie Superposition veranschaulicht, indem Sie einen Quantum-Zufallszahlengenerator erstellen.
 author: bromeg
 ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: 18e8975e513a87c0a67a6dbb5586cc7dab5a93fb
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8db892091794cb1166e41744572d8938d975abf2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274750"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869765"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Tutorial: Implementieren eines Quanten-Zufallszahlengenerators in Q\#
 
-Ein einfaches Beispiel für einen Quantenalgorithmus, der in Q# geschrieben ist, ist ein Quanten-Zufallszahlengenerator. Für diesen Algorithmus wird das Prinzip der Quantenmechanik genutzt, um eine Zufallszahl zu generieren.
+Ein einfaches Beispiel für einen in geschriebenen Quantum-Algorithmus Q# ist ein Quantum-Zufallszahlengenerator. Für diesen Algorithmus wird das Prinzip der Quantenmechanik genutzt, um eine Zufallszahl zu generieren.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 - Das Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
-- Erstellen Sie ein Q#-Projekt [mithilfe von Q# über die Befehlszeile](xref:microsoft.quantum.install.standalone) oder mit einem [Python-Hostprogramm](xref:microsoft.quantum.install.python) bzw. [C#-Hostprogramm](xref:microsoft.quantum.install.cs).
+- Erstellen Q# Sie ein Projekt für [ Q# die Verwendung von über die Befehlszeile](xref:microsoft.quantum.install.standalone)oder mit einem [python-Host Programm](xref:microsoft.quantum.install.python) oder [c#-Host Programm](xref:microsoft.quantum.install.cs).
 
-## <a name="write-a-q-operation"></a>Schreiben einer Q#-Operation
+## <a name="write-a-no-locq-operation"></a>Schreiben eines- Q# Vorgangs
 
-### <a name="q-operation-code"></a>Q#-Operationscode
+### <a name="no-locq-operation-code"></a>Q#Vorgangs Code
 
 1. Ersetzen Sie den Inhalt der Datei „Program.qs“ durch den folgenden Code:
 
@@ -32,7 +35,7 @@ Ein einfaches Beispiel für einen Quantenalgorithmus, der in Q# geschrieben ist,
 
 Wie im Artikel [Grundlegendes zu Quantencomputing](xref:microsoft.quantum.overview.understanding) erklärt, stellt ein Qubit eine Einheit mit Quanteninformationen dar, die sich in einem Superpositionszustand befinden kann. Für ein Qubit kann sich bei einer Messung nur 0 oder 1 ergeben. Während der Ausführung steht der Zustand des Qubits aber für die Wahrscheinlichkeit, dass sich für eine Messung entweder 0 oder 1 ergibt. Dieser Wahrscheinlichkeitszustand wird als Überlagerung bezeichnet. Wir können diese Wahrscheinlichkeit verwenden, um Zufallszahlen zu generieren.
 
-In unserer Q#-Operation führen wir den nativen Q#-Datentyp `Qubit` ein. Wir können `Qubit` nur mit einer `using`-Anweisung zuordnen. Nach der Zuordnung befindet sich ein Qubit immer im Zustand `Zero`. 
+In unserem Q# Vorgang stellen wir den `Qubit` DataType, den systemeigenen, bereit Q# . Wir können `Qubit` nur mit einer `using`-Anweisung zuordnen. Nach der Zuordnung befindet sich ein Qubit immer im Zustand `Zero`. 
 
 Mit der Operation `H` können wir das `Qubit` in den Zustand der Überlagerung versetzen. Zum Messen eines Qubits und Lesen seines Werts verwenden Sie die intrinsische Operation `M`.
 
@@ -61,13 +64,13 @@ Da das Ergebnis der Messung völlig zufällig ist, erhalten wir ein zufälliges 
 
 ## <a name="creating-a-complete-random-number-generator"></a>Erstellen eines vollständigen Zufallszahlengenerators
 
-Sie besitzen nun einen Q#-Vorgang, der zufällige Bits generiert, und können damit einen vollständigen Quanten-Zufallszahlengenerator erstellen. Sie können die Q#-Befehlszeilenanwendungen oder ein Hostprogramm verwenden.
+Nachdem wir nun über einen-Vorgang verfügen, mit Q# dem zufällige Bits generiert werden, können wir damit einen kompletten Quantum-Zufallszahlengenerator erstellen. Wir können die Q# Befehlszeilen Anwendungen verwenden oder ein Host Programm verwenden.
 
 
 
-### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Q#-Befehlszeilenanwendungen mit Visual Studio oder Visual Studio Code](#tab/tabid-qsharp)
+### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Q#Befehlszeilen Anwendungen mit Visual Studio oder Visual Studio Code](#tab/tabid-qsharp)
 
-Fügen Sie zum Erstellen der vollständigen Q#-Befehlszeilenanwendung Ihrem Q#-Programm den folgenden Einstiegspunkt hinzu: 
+Q#Fügen Sie dem Programm den folgenden Einstiegspunkt hinzu, um die vollständige Befehlszeilen Anwendung zu erstellen Q# : 
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
@@ -91,7 +94,7 @@ dotnet run --no-build
 
 ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Python mit Visual Studio Code oder Befehlszeile](#tab/tabid-python)
 
-Um Ihr neues Q#-Programm aus Python auszuführen, speichern Sie den folgenden Code als `host.py`:
+Um Ihr neues Q# Programm aus python auszuführen, speichern Sie den folgenden Code `host.py` :
 
 :::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
 
@@ -105,7 +108,7 @@ Preparing Q# environment...
 
 ### <a name="c-with-visual-studio-code-or-visual-studio"></a>[C# mit Visual Studio Code oder Visual Studio](#tab/tabid-csharp)
 
-Um Ihr neues Q#-Programm aus C# auszuführen, ändern Sie `Driver.cs`, so dass es den folgenden C#-Code beinhaltet:
+Um Q# das neue Programm aus c# auszuführen, ändern `Driver.cs` Sie, um den folgenden c#-Code einzuschließen:
 
 :::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
 

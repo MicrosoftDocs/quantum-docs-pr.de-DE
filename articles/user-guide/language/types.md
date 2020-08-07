@@ -1,37 +1,41 @@
 ---
-title: Typen in Q#
-description: 'Erfahren Sie mehr über die verschiedenen Typen, die in der Programmiersprache Q # verwendet werden.'
+title: Typen inQ#
+description: Erfahren Sie mehr über die verschiedenen Typen, die in der Q# Programmiersprache verwendet werden.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: e37ce6e3a2dfad5395cdecf06178d64ec51b79f1
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b034af0b1d3b967b5680403341813407e4412f93
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415284"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869595"
 ---
-# <a name="types-in-q"></a>Typen in Q#
+# <a name="types-in-no-locq"></a>Typen inQ#
 
-Dieser Artikel beschreibt das Q #-Typmodell und die Syntax zum Angeben von und arbeiten mit-Typen. Ausführliche Informationen zum Erstellen und Verarbeiten von Ausdrücken dieser Typen finden Sie unter [typausdrücke](xref:microsoft.quantum.guide.expressions).
+In diesem Artikel werden das Q# Typmodell und die Syntax zum Angeben von und arbeiten mit Typen beschrieben. Ausführliche Informationen zum Erstellen und Verarbeiten von Ausdrücken dieser Typen finden Sie unter [typausdrücke](xref:microsoft.quantum.guide.expressions).
 
-Beachten Sie, dass Q # eine *stark typisierte* Sprache ist, sodass der Compiler durch eine sorgfältige Verwendung dieser Typen bei der Kompilierung starke Garantien für Q #-Programme bereitstellen kann.
-Um die bestmöglichen Garantien zu gewährleisten, müssen Konvertierungen zwischen Typen in Q # explizit mithilfe von Aufrufen von Funktionen erfolgen, die diese Konvertierung Ausdrücken. Q # bietet eine Reihe von Funktionen, die Teil des- <xref:microsoft.quantum.convert> Namespace sind.
+Beachten Sie, dass Q# eine *stark typisierte* Sprache ist, sodass der Compiler durch eine sorgfältige Verwendung dieser Typen bei der Kompilierung starke Garantien für Programme bereitstellen kann Q# .
+Um die bestmöglichen Garantien zu gewährleisten, müssen Konvertierungen zwischen Typen in Q# explizit mithilfe von Aufrufen von Funktionen erfolgen, die diese Konvertierung Ausdrücken. 
+Q#stellt eine Vielzahl solcher Funktionen als Teil des- <xref:microsoft.quantum.convert> Namespace bereit.
 Auf der anderen Seite werden Upcasts in kompatible Typen implizit durchgeführt. 
 
-Q # stellt beide primitiven Typen bereit, die direkt verwendet werden, und eine Vielzahl von Möglichkeiten, um neue Typen aus anderen Typen zu entwickeln.
+Q#stellt beide primitiven Typen bereit, die direkt verwendet werden, und eine Vielzahl von Möglichkeiten, um neue Typen aus anderen Typen zu entwickeln.
 Wir beschreiben alle in den restlichen Abschnitten dieses Artikels.
 
 ## <a name="primitive-types"></a>Primitive Typen
 
-Die Sprache q # stellt die folgenden *primitiven Typen*bereit, die Sie alle direkt in Q #-Programmen verwenden können. Sie können diese primitiven Typen auch verwenden, um neue Typen zu erstellen.
+Die Q# Sprache stellt die folgenden *primitiven Typen*bereit, die Sie alle direkt in Programmen verwenden können Q# . Sie können diese primitiven Typen auch verwenden, um neue Typen zu erstellen.
 
 - Der- `Int` Typ stellt eine 64-Bit-Ganzzahl mit Vorzeichen dar, z `2` . b., `107` , `-5` .
 - Der- `BigInt` Typ stellt eine Ganzzahl mit Vorzeichen beliebiger Größe dar, z `2L` . b., `107L` , `-5L` .
    Dieser Typ basiert auf .net.<xref:System.Numerics.BigInteger>
-   Sorte.
+   umgewandelt.
 
 - Der `Double` -Typ stellt eine Gleit Komma Zahl mit doppelter Genauigkeit dar, z `0.0` . b `-1.3` .,, `4e-7` .
 - Der- `Bool` Typ stellt einen booleschen Wert von `true` oder dar `false` .
@@ -40,7 +44,7 @@ Die Sprache q # stellt die folgenden *primitiven Typen*bereit, die Sie alle dire
 - Der- `String` Typ ist eine Sequenz von Unicode-Zeichen, die für den Benutzer nach der Erstellung nicht transparent ist.
   Verwenden Sie den- `string` Typ, um Meldungen bei einem Fehler oder einem Diagnose Ereignis an einen klassischen Host zu melden.
 - Der- `Unit` Typ kann nur einen Wert,, aufweisen `()` . 
-  Verwenden Sie diesen Typ, um anzugeben, dass eine Q #-Funktion oder ein-Vorgang keine Informationen zurückgibt. 
+  Verwenden Sie diesen Typ, um anzugeben, dass eine Q# Funktion oder ein Vorgang keine Informationen zurückgibt. 
 - Der- `Qubit` Typ stellt ein Quantum-Bit oder Qubit dar.
    `Qubit`e sind für den Benutzer nicht transparent. Der einzige Vorgang, der mit Ihnen möglich ist, und nicht an einen anderen Vorgang zu übergeben, besteht darin, auf Identity (Gleichheit) zu testen.
    Letztendlich implementieren Sie Aktionen in, indem Sie systeminterne `Qubit` Anweisungen für einen Quantum-Prozessor (oder einen Quantum-Simulator) aufrufen.
@@ -51,19 +55,19 @@ Die Sprache q # stellt die folgenden *primitiven Typen*bereit, die Sie alle dire
    Dabei handelt es sich um einen enumerierten Typ mit zwei möglichen Werten: und, bei denen es sich um `One` `Zero` Konstanten vom Typ handelt `Result` .
    `Zero`Gibt an, dass der Eigen Wert + 1 gemessen wurde. Gibt an, dass `One` der Eigen Wert-1 gemessen wurde.
 
-Die Konstanten `true` , `false` , `PauliI` ,,, `PauliX` `PauliY` `PauliZ` , `One` und `Zero` sind reservierte Symbole in Q #.
+Die Konstanten `true` , `false` , `PauliI` ,,, `PauliX` `PauliY` `PauliZ` , `One` und `Zero` sind reservierte Symbole in Q# .
 
 ## <a name="array-types"></a>Arraytypen
 
-* Für jeden gültigen Q #-Typ gibt es einen Typ, der ein Array von Werten dieses Typs darstellt.
+* Für jeden gültigen Q# Typ gibt es einen Typ, der ein Array von Werten dieses Typs darstellt.
     Beispielsweise `Qubit[]` stellen und Werte `(Bool, Pauli)[]` Arrays `Qubit` und `(Bool, Pauli)` Tupelwerte dar.
 
 * Ein Array von Arrays ist ebenfalls gültig. Im vorherigen Beispiel wird ein Array von `(Bool, Pauli)` Arrays bezeichnet `(Bool, Pauli)[][]` .
 
 > [!NOTE] 
-> Dieses Beispiel `(Bool, Pauli)[][]` stellt eine potenziell Jagged Array von Arrays und kein rechteckiges zweidimensionales Array dar. F # unterstützt keine rechteckigen mehrdimensionalen Arrays.
+> Dieses Beispiel `(Bool, Pauli)[][]` stellt eine potenziell Jagged Array von Arrays und kein rechteckiges zweidimensionales Array dar. Q#unterstützt keine rechteckigen mehrdimensionalen Arrays.
 
-* Ein Arraywert kann in Q #-Quellcode mithilfe von eckigen Klammern um die Elemente eines Arrays geschrieben werden, wie in `[PauliI, PauliX, PauliY, PauliZ]` .
+* Ein Arraywert kann im Q# Quellcode mithilfe von eckigen Klammern um die Elemente eines Arrays geschrieben werden, wie in `[PauliI, PauliX, PauliY, PauliZ]` .
 Der allgemeine Basistyp aller Elemente im Array bestimmt den Typ eines Arrayliterals. Daher löst das Erstellen eines Arrays mit Elementen, die keinen gemeinsamen Basistyp aufweisen, einen Fehler aus.  
 Ein Beispiel finden Sie unter [Arrays von callables](xref:microsoft.quantum.guide.expressions#arrays-of-callables).
 
@@ -91,7 +95,7 @@ Die Indexwerte von Arrays sind NULL basiert und müssen vom Typ `Int` oder vom T
 
 ## <a name="tuple-types"></a>Tupeltypen
 
-Tupel sind ein leistungsfähiges Konzept, das in Q # verwendet wird, um Werte in einem einzelnen Wert zusammenzufassen, sodass Sie einfacher zu übergeben sind.
+Tupel sind ein leistungsstarkes Konzept, das in der gesamten verwendet wird Q# , um Werte in einem einzelnen Wert zusammenzufassen, sodass es einfacher ist, Sie zu übergeben.
 Insbesondere mithilfe von tupelnotation können Sie Ausdrücken, dass jeder Vorgang und Callable genau eine Eingabe annimmt und genau eine Ausgabe zurückgibt.
 
 * Wenn 0 (null) oder mehr unterschiedliche Typen,,..., angezeigt wird, `T0` `T1` `Tn` können Sie einen neuen *tupeltyp* als angeben `(T0, T1, ..., Tn)` .
@@ -102,17 +106,17 @@ Eine solche Schachtelung ist jedoch immer begrenzt, da Tupeltypen unter keinen U
 Beispielsweise `(3, false)` ist ein Tupel, dessen Typ der tupeltyp ist `(Int, Bool)` .
 Es ist möglich, Arrays von Tupeln, Tupeln von Arrays, Tupeln von subtupeln usw. zu erstellen.
 
-* Ab Q # 0,3 `Unit` ist der Name des *Typs* des leeren Tupels; `()` wird für den *Wert* des leeren Tupels verwendet.
+* Ab Q# 0,3 ist `Unit` der Name des *Typs* des leeren Tupels; `()` wird für den *Wert* des leeren Tupels verwendet.
 
 * Tupelinstanzen sind unveränderlich.
-Q # stellt keinen Mechanismus zum Ändern des Inhalts eines Tupels bereit, nachdem er erstellt wurde.
+Q#bietet keinen Mechanismus zum Ändern des Inhalts eines Tupels, nachdem er erstellt wurde.
 
 
 
 ### <a name="singleton-tuple-equivalence"></a>Äquivalenz für Singleton-Tupel
 
 Es ist möglich, ein Singleton-Tupel (Einzelelement) zu erstellen `('T1)` , z `(5)` `([1,2,3])` . b. oder.
-Q # behandelt jedoch ein Singleton-Tupel als äquivalent zu einem Wert des eingeschlossenen Typs.
+Behandelt jedoch Q# ein Singleton-Tupel als äquivalent zu einem Wert des eingeschlossenen Typs.
 Das heißt, es gibt keinen Unterschied zwischen `5` und `(5)` bzw `5` . zwischen und `(((5)))` oder zwischen `(5, (6))` und `(5, 6)` .
 Es ist ebenso gültig, wie geschrieben zu werden, `(5)+3` da `5+3` beide Ausdrücke als ausgewertet werden `8` .
 
@@ -135,14 +139,14 @@ Beispiel:
 newtype PairOfInts = (Int, Int);
 ```
     
-* Jede f #-Quelldatei kann eine beliebige Anzahl benutzerdefinierter Typen deklarieren.
+* Jede Q# Quelldatei kann eine beliebige Anzahl benutzerdefinierter Typen deklarieren.
 * Typnamen müssen innerhalb eines Namespace eindeutig sein und können nicht mit Vorgangs-und Funktionsnamen in Konflikt stehen.
 * Benutzerdefinierte Typen sind unterschiedlich, auch wenn die Basis Typen identisch sind.
 Vor allem gibt es keine automatische Konvertierung zwischen den Werten von zwei benutzerdefinierten Typen, auch wenn die zugrunde liegenden Typen identisch sind.
 
 ### <a name="named-vs-anonymous-items"></a>Benannte und anonyme Elemente
 
-Eine Q #-Datei kann einen neuen benannten Typ definieren, der einen einzelnen Wert eines beliebigen Typs enthält.
+Eine Q# Datei kann einen neuen benannten Typ definieren, der einen einzelnen Wert eines beliebigen Typs enthält.
 Für jeden tupeltyp `T` können Sie einen neuen benutzerdefinierten Typ deklarieren, bei dem es sich um einen Untertyp von `T` mit der- `newtype` Anweisung handelt.
 Im- @"microsoft.quantum.math" Namespace werden z. b. komplexe Zahlen als benutzerdefinierter Typ definiert:
 
@@ -151,7 +155,7 @@ newtype Complex = (Double, Double);
 ```
 Diese Anweisung erstellt einen neuen Typ mit zwei anonymen Elementen vom Typ `Double` .   
 
-Abgesehen von anonymen Elementen unterstützen benutzerdefinierte Typen auch *benannte Elemente* ab Q # Version 0,7 oder höher. Beispielsweise können Sie die Elemente `Re` für das Double benennen, das den Realteil einer komplexen Zahl und `Im` für den imaginären Teil darstellt: 
+Abgesehen von anonymen Elementen unterstützen benutzerdefinierte Typen auch *benannte Elemente* ab Q# Version 0,7 oder höher. Beispielsweise können Sie die Elemente `Re` für das Double benennen, das den Realteil einer komplexen Zahl und `Im` für den imaginären Teil darstellt: 
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
@@ -178,7 +182,7 @@ Wenn Sie zum Beispiel zurückkehren `Complex` , können Sie auch 2D-Polarkoordin
 newtype Polar = (Radius : Double, Phase : Double);
 ```
 
-Obwohl sowohl `Complex` als auch `Polar` beide über einen zugrunde liegenden Typ verfügen `(Double, Double)` , sind die beiden Typen in f # vollständig inkompatibel. Dadurch wird das Risiko minimiert, dass versehentlich eine komplexe mathematische Funktion mit Polarkoordinaten aufgerufen wird und umgekehrt.
+Obwohl sowohl `Complex` als auch `Polar` beide über einen zugrunde liegenden Typ verfügen `(Double, Double)` , sind die beiden Typen in vollständig inkompatibel Q# , wodurch das Risiko minimiert wird, dass versehentlich eine komplexe mathematische Funktion mit Polarkoordinaten aufgerufen wird und umgekehrt.
 
 #### <a name="access-anonymous-items-with-the-unwrap-operator"></a>Auf anonyme Elemente mit dem Unwrap-Operator zugreifen
 
@@ -211,7 +215,7 @@ newtype DoublyWrappedInt = WrappedInt;
 ...
 ```
 
-Weitere Informationen zum Unwrap-Operator finden Sie unter [typanexpressions in f #](xref:microsoft.quantum.guide.expressions).
+Weitere Informationen zum Unwrap-Operator finden Sie unter [typausdrücke in Q# ](xref:microsoft.quantum.guide.expressions).
 
 ### <a name="creating-values-of-user-defined-types"></a>Erstellen von Werten für benutzerdefinierte Typen
 
@@ -260,7 +264,7 @@ Mit den Typen `'Tinput` und `'Tresult` :
 
 Diese werden als *Signatur* der aufrufenden bezeichnet.
 
-* Alle f #-callables nehmen einen einzelnen Wert als Eingabe an und geben einen einzelnen Wert als Ausgabe zurück.
+* Alle Q# callables nehmen einen einzelnen Wert als Eingabe an und geben einen einzelnen Wert als Ausgabe zurück.
 * Sie können Tupel sowohl für die Eingabe-als auch für die Ausgabewerte verwenden.
 * Callables ohne Ergebnis geben zurück `Unit` .
 * Callables ohne Eingabe nehmen das leere Tupel als Eingabe auf.
@@ -273,7 +277,7 @@ Diese werden als *Signatur* der aufrufenden bezeichnet.
 Wenn die Ausführung des Vorgangs z. b. den Zustand anderer Qubits beansprucht, sollte er das Funktor unterstützen `Controlled` . wenn der Vorgang eine Umkehrung hat, sollte er das Funktor unterstützen `Adjoint` .
 
 > [!NOTE]
-> In diesem Artikel wird nur erläutert, wie Funktoren die Vorgangs Signatur ändern. Weitere Informationen zu Funktions tüktoren und Vorgängen finden Sie unter [Vorgänge und Funktionen in f #](xref:microsoft.quantum.guide.operationsfunctions). 
+> In diesem Artikel wird nur erläutert, wie Funktoren die Vorgangs Signatur ändern. Weitere Informationen zu Funktions tüktoren und Vorgängen finden Sie unter [Vorgänge und Q# Funktionen in ](xref:microsoft.quantum.guide.operationsfunctions). 
 
 Um Unterstützung für den `Controlled` -und/oder- `Adjoint` Funktions tüktor in einem Vorgangstyp zu benötigen, müssen Sie eine Anmerkung hinzufügen, die die entsprechenden Merkmale angibt.
 Die-Anmerkung `is Ctl` (z. b. `(Qubit => Unit is Ctl)` ) gibt an, dass der Vorgang steuerbar ist. Das heißt, die Ausführung basiert auf dem Zustand eines anderen Qubit oder Qubits. Entsprechend gibt die-Anmerkung `is Adj` an, dass der Vorgang über ein Adjoint-Zeichen verfügt, d. h., es kann "invertiert" werden, sodass das Fortsetzen eines Vorgangs und dessen Adjoint in einen Zustand den Zustand unverändert lässt. 
@@ -286,7 +290,7 @@ Ein Vorgangstyp, der keine Funktions tüktoren unterstützt, wird von seinem Ein
 
 Aufruf Bare Typen können *Typparameter*enthalten.
 Verwenden Sie ein Symbol, das mit einem einfachen Anführungszeichen versehen ist, um einen Typparameter anzugeben. beispielsweise `'A` ist ein gültiger Typparameter.
-Weitere Informationen und Details zum Definieren von typparametrisierten Aufruf baren aufrufen finden Sie unter [Vorgänge und Funktionen in f #](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables).
+Weitere Informationen und Details zum Definieren von typparametrisierten Aufruf baren aufrufen finden Sie unter [Vorgänge und Funktionen in Q# ](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables).
 
 Ein Typparameter kann in einer einzigen Signatur mehrmals vorkommen.
 Eine Funktion, die eine andere Funktion auf jedes Element eines Arrays anwendet und die gesammelten Ergebnisse zurückgibt, hat z. b. die Signatur `(('A[], 'A->'A) -> 'A[])` .
@@ -294,8 +298,8 @@ Ebenso hat eine Funktion, die die Komposition von zwei Vorgängen zurückgibt, d
 
 Wenn Sie eine typparametrisierte Aufruf Bare Aufruf Liste aufrufen, müssen alle Argumente, die denselben Typparameter aufweisen, denselben Typ aufweisen.
 
-Q # stellt keinen Mechanismus zum Einschränken der möglichen Typen bereit, die ein Benutzer möglicherweise für einen Typparameter ersetzt.
+Q#stellt keinen Mechanismus zum Einschränken der möglichen Typen bereit, die ein Benutzer für einen Typparameter ersetzen kann.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nachdem Sie alle Typen gesehen haben, die die Q #-Sprache bilden, finden Sie weitere Informationen zum Erstellen und Bearbeiten von Ausdrücken dieser verschiedenen Typen unter [typausdrücke in q #](xref:microsoft.quantum.guide.expressions) .
+Nachdem Sie alle Typen gesehen haben, die die Sprache enthalten Q# , finden Sie unter [typausdrücke Q# in](xref:microsoft.quantum.guide.expressions) Informationen zum Erstellen und Bearbeiten von Ausdrücken dieser verschiedenen Typen.

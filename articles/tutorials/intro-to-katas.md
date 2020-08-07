@@ -6,16 +6,19 @@ ms.author: bradben
 ms.date: 06/02/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.katas
-ms.openlocfilehash: 1c4dfa5c47aa38935cd5936cd256e357b6605371
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b2a3b25bf90109468f02c98c6c687befb83648bc
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275230"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869680"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Erlernen des Quantencomputings mit den Quanten-Katas
 
-[Die Quantum-Katas](https://github.com/Microsoft/QuantumKatas/) sind Open Source-Lernprogramme und programmierübungen, die darauf abzielen, die Elemente von Quantum Computing und Q # Programmieren gleichzeitig zu unterrichten.
+[Die Quantum-Katas](https://github.com/Microsoft/QuantumKatas/) sind Open Source-Lernprogramme und programmierübungen, die darauf abzielen, die Elemente von Quantum Computing und Q# Programmieren gleichzeitig zu unterrichten.
 
 ## <a name="learning-by-doing"></a>Learning by Doing
 
@@ -42,15 +45,15 @@ Entdecken Sie die Grundlagen und Grundlagen von Quantum Computing, oder vertiefe
 |[Lineare Algebra](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)|Lineare Algebra wird zur Darstellung von Quantum-Zuständen und-Vorgängen in Quantum Computing verwendet. Dieses Tutorial behandelt die Grundlagen, einschließlich Matrizen und Vektoren.|
 |[Das Konzept eines Qubits](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/Qubit)|Erfahren Sie mehr über Qubits-eines der Kernkonzepte von Quantum Computing. |
 |[Quantengatter mit einem einzelnen Qubit](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)|In diesem Tutorial werden Single-Qubit-Quantum-Gates vorgestellt, die als Bausteine von Quantum-Algorithmen fungieren und Quantum-Qubit-Zustände auf verschiedene Weise transformieren.|
-|[Systeme mit mehreren Qubits](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|In diesem Tutorial werden multiqubit-Systeme, ihre Darstellung in mathematischer Notation und f #-Code sowie das Konzept von entanglement vorgestellt.|
+|[Systeme mit mehreren Qubits](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|In diesem Tutorial werden multiqubit-Systeme, ihre Darstellung in mathematischer Notation und Q# Code sowie das Konzept von entanglement vorgestellt.|
 |[Multi-Qubit-Quantum-Gates](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)|Dieses Tutorial folgt dem Tutorial zu [Single-Qubit Quantum Gates](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates) und konzentriert sich auf das Anwenden von Quantum-Gates auf multiqubit-Systeme.|
 
 ### <a name="quantum-computing-fundamentals"></a>Grundlagen des Quantencomputings
 
 | Ausbreiten | BESCHREIBUNG |
 |:-----|-------------|
-|[Erkennen von Quantengattern](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|Eine Reihe von Übungen, mit denen Sie sich mit den grundlegenden Quantum Gates in Q # vertraut machen können. Umfasst Übungen für einfache Single-Qubit-und Multi-Qubit-Gates, Adjoint und gesteuerte Gates und die Verwendung von Gates zum Ändern des Status eines Qubit.|
-|[Erstellen einer Quantenüberlagerung](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|Verwenden Sie diese Übungen, um sich mit dem Konzept der superposition und der Programmierung in Q # vertraut zu machen. Umfasst Übungen für einfache Single-Qubit-und Multi-Qubit-Gates, superposition und Fluss Steuerung und Rekursion in Q #.|
+|[Erkennen von Quantengattern](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|Eine Reihe von Übungen, mit denen Sie sich mit den grundlegenden Quantum Gates in vertraut machen können Q# . Umfasst Übungen für einfache Single-Qubit-und Multi-Qubit-Gates, Adjoint und gesteuerte Gates und die Verwendung von Gates zum Ändern des Status eines Qubit.|
+|[Erstellen einer Quantenüberlagerung](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|Verwenden Sie diese Übungen, um sich mit dem Konzept der superposition und der Programmierung in vertraut zu machen Q# . Umfasst Übungen für einfache Single-Qubit-und Multi-Qubit-Gates, superposition und Fluss Steuerung sowie Rekursion in Q# .|
 |[Unterscheiden von Quantenzuständen mit Messungen](https://github.com/microsoft/QuantumKatas/tree/master/Measurements)|Lösen Sie diese Übungen, und lernen Sie die Quanten Messung und orthogonale und nicht orthogonale Zustände kennen. |
 |[Verknüpfte Messungen](https://github.com/microsoft/QuantumKatas/tree/master/JointMeasurements)|Erfahren Sie mehr über gemeinsame Paritäts Messungen und wie Sie den [Measure](xref:microsoft.quantum.intrinsic.measure) -Vorgang zum unterscheiden von Quantum-Zuständen verwenden|
 
@@ -72,7 +75,7 @@ Entdecken Sie die Grundlagen und Grundlagen von Quantum Computing, oder vertiefe
 |:-----|-------------|
 |[BB84-Protokoll für Quantenschlüsselverteilung](https://github.com/microsoft/QuantumKatas/tree/master/KeyDistribution_BB84)|Erfahren Sie, wie Sie ein Quantum Key Distribution-Protokoll, [BB84](https://en.wikipedia.org/wiki/BB84), mit Qubits zum Austauschen von Kryptografieschlüsseln verwenden und implementieren. |
 |[Fehler beim Korrigieren des Codes durch bitkippen](https://github.com/microsoft/QuantumKatas/tree/master/QEC_BitFlipCode)|Erkunden Sie die Quantum-Fehlerkorrektur mit dem einfachsten der QEC-Codes (Quantum Error-Correction), dem drei-Qubit-bitflip-Code.|
-|[Phasenschätzung](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|Phasen Schätz Algorithmen sind einige der grundlegendsten Bausteine von Quantum Computing. Erfahren Sie mehr über die Phasen Schätzung mit diesen Übungen, die die Quantum-Phasen-Schätzung abdecken und wie Phasen-Schätz Routinen in Q # vorbereitet und ausgeführt werden.|
+|[Phasenschätzung](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|Phasen Schätz Algorithmen sind einige der grundlegendsten Bausteine von Quantum Computing. Erfahren Sie mehr über die Phasen Schätzung mit diesen Übungen, die die Quantum-Phasen-Schätzung abdecken und wie Phasen-Schätz Routinen in vorbereitet und ausgeführt werden Q# .|
 |[Quantum-Arithmetik: Entwickeln von Ripple-Carry-addern](https://github.com/microsoft/QuantumKatas/blob/master/RippleCarryAdder)|Eine ausführliche Reihe von Übungen, mit denen die Addition von [Ripple](https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder) auf einem Quantum-Computer untersucht wird. Erstellen Sie einen direkten Quantum-Adder, erweitern Sie ihn mit einem anderen Algorithmus, und erstellen Sie abschließend einen direkten Quantum-subtraktor.   |
 
 ### <a name="entanglement-games"></a>Verschränkungsspiele

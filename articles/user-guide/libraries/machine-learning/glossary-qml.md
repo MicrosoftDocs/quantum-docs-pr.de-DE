@@ -5,12 +5,15 @@ ms.author: alexei.bocharov@microsoft.com
 ms.date: 2/27/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.training
-ms.openlocfilehash: f9b33a607a892179795d0700ba3080f9a24ab94a
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 52c3f69fb99384270a27e57c4f32212d18bee1a4
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275225"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868898"
 ---
 # <a name="quantum-machine-learning-glossary"></a>Quantum Machine Learning Glossar
 
@@ -28,7 +31,7 @@ Wenn Sie einen Kandidaten Parameter Vektor und einen Klassifizierungs-Bias haben
 
 Der Modell Trainingsprozess unterliegt bestimmten voreingestellten Werten, die als *Hyperparameter*bezeichnet werden:
 
-### <a name="learning-rate"></a>Lernrate
+### <a name="learning-rate"></a>Learning rate (Lernrate)
 
 Dabei handelt es sich um einen der wichtigsten Hyperparameter. Es definiert, wie viel aktuelle stochastischen Gradient-Schätzung Auswirkungen auf das Update des Parameters hat. Die Größe der Delta-Aktualisierungsrate ist proportional zur Lernrate. Kleinere Lernraten Werte führen zu einer langsameren Parameter Entwicklung und einer langsameren Konvergenz, aber übermäßig große Werte von LR können die Konvergenz nicht beeinträchtigt werden, da der gradientenabstieg niemals ein bestimmtes lokales minimal Commit durchführt. Obwohl die Lernrate in gewisser Weise vom Trainings Algorithmus angepasst wird, ist es wichtig, einen guten Anfangswert auszuwählen. Ein üblicher Standard Anfangswert für die Lernrate ist 0,1. Die Auswahl des besten Werts der Lernrate ist eine gute Grafik (z. b. Abschnitt 4,3 von Goodfellow et al., Deep Learning, mit Press, 2017).
 
@@ -48,7 +51,7 @@ Als Faustregel gilt, dass die anfängliche Anzahl von Messungen ungefähr $1/\ m
 
 ### <a name="training-threads"></a>Trainieren von Threads
 
-Die Wahrscheinlichkeitsfunktion, bei der es sich um das Schulungs Dienstprogramm für den Klassifizierer handelt, ist sehr selten eine Konstante, was bedeutet, dass Sie in der Regel über eine Vielzahl von lokalem Optima im Parameter Bereich verfügt, die sich durch Qualität Da der SGD-Prozess nur mit einer bestimmten optimalen konvergiert werden kann, ist es wichtig, mehrere Startparameter Vektoren zu untersuchen. Gängige Vorgehensweise beim maschinellen Lernen besteht darin, solche Start Vektoren nach dem Zufallsprinzip zu initialisieren. Die Q #-Schulungs-API akzeptiert ein beliebiges Array solcher Start Vektoren, aber der zugrunde liegende Code untersucht Sie nacheinander. Auf einem Computer mit mehreren Kernen oder in einer beliebigen Parallel Computing-Architektur empfiehlt es sich, mehrere Aufrufe der Q #-Trainings-API parallel mit verschiedenen Parameter Initialisierungen über die Aufrufe auszuführen.
+Die Wahrscheinlichkeitsfunktion, bei der es sich um das Schulungs Dienstprogramm für den Klassifizierer handelt, ist sehr selten eine Konstante, was bedeutet, dass Sie in der Regel über eine Vielzahl von lokalem Optima im Parameter Bereich verfügt, die sich durch Qualität Da der SGD-Prozess nur mit einer bestimmten optimalen konvergiert werden kann, ist es wichtig, mehrere Startparameter Vektoren zu untersuchen. Gängige Vorgehensweise beim maschinellen Lernen besteht darin, solche Start Vektoren nach dem Zufallsprinzip zu initialisieren. Die Q# Trainings-API akzeptiert ein beliebiges Array solcher Start Vektoren, aber der zugrunde liegende Code untersucht sie sequenziell. Auf einem Computer mit mehreren Kernen oder in einer beliebigen Parallel Computing-Architektur empfiehlt es sich, mehrere Aufrufe Q# der Trainings-API parallel mit verschiedenen Parameter Initialisierungen über die Aufrufe auszuführen.
 
 #### <a name="how-to-modify-the-hyperparameters"></a>Ändern der Hyperparameter
 

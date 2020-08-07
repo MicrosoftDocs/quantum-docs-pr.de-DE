@@ -1,23 +1,26 @@
 ---
-title: 'Quantum-Algorithmen in f #'
+title: Quantum-Algorithmen inQ#
 description: Erfahren Sie mehr über grundlegende Quantum Computing-Algorithmen, einschließlich Amplitude-Verstärkung, Fourier Transform, Draper und Beauregard-Adders und Phasen Schätzung.
 author: QuantumWriter
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 7f4916353c53d6459356243098281ccb16b17278
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 0b5972480061c460345057285bbfe53305acc122
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871313"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868813"
 ---
 # <a name="quantum-algorithms"></a>Quantum-Algorithmen #
 
 ## <a name="amplitude-amplification"></a>Amplitudenverstärkung ##
 
-Die *Amplitude-Verstärkung* ist eines der grundlegenden Tools von Quantum Computing. Es ist die grundlegende Idee, dass die Suche, die Amplitude-Schätzung und viele Quantum Machine Learning-Algorithmen zugrunde liegen.  Es gibt viele Varianten, und in f # wird eine allgemeine Version bereitgestellt, die auf der unterschiedlichsten Amplitude-Verstärkung mit partiellen Reflektionen basiert, um den größten Bereich der Anwendung zu ermöglichen.
+Die *Amplitude-Verstärkung* ist eines der grundlegenden Tools von Quantum Computing. Es ist die grundlegende Idee, dass die Suche, die Amplitude-Schätzung und viele Quantum Machine Learning-Algorithmen zugrunde liegen.  Es gibt viele Varianten, und in wird Q# eine allgemeine Version basierend auf der schrägen Amplitude-Verstärkung mit partiellen Reflektionen bereitgestellt, um den größten Anwendungsbereich zu ermöglichen.
 
 Die zentrale Idee hinter der Amplitude-Verstärkung besteht darin, die Wahrscheinlichkeit eines gewünschten Ergebnisses zu verstärken, indem eine Sequenz von Reflektionen durchgeführt wird.  Diese Reflektionen drehen den Anfangszustand näher an den gewünschten Zielzustand, der häufig als markierter Zustand bezeichnet wird.  Insbesondere wenn die Wahrscheinlichkeit, dass der Anfangszustand in einem markierten Zustand gemessen wird, $ \sin ^ 2 (\urta) $ ist, wird nach dem Anwenden der Amplitude-Verstärkung $m $ die Erfolgswahrscheinlichkeit auf $ \sin ^ 2 ((2 m + 1) \urta) $ festgelegt.  Dies bedeutet, dass, wenn $ \teta = \ Pi/[2 (2n + 1)] $ für einen Wert von $n $ ist, die Amplitude-Verstärkung die Wahrscheinlichkeit des Erfolgs auf $100 \\ % $ nach $n $ Iterationen der Amplitude-Verstärkung erhöhen kann.  Da $ \Der Ta = \sin ^ {-1} (\sqrt{\pr (Success)}) $, bedeutet dies, dass die Anzahl der Iterationen, die erforderlich sind, um einen erfolgreichen Abruf zu erzielen, quadratisch niedriger ist als die erwartete Anzahl, die für die Suche nach einem markierten Zustand nicht deterministisch mithilfe der zufälligen Stichprobenentnahme benötigt wird.
 
@@ -27,7 +30,7 @@ Die Logik hinter der Amplitude-Verstärkung folgt direkt aus der Eigen Zerlegung
 
 Eine weitere nützliche Eigenschaft, die daraus resultiert, besteht darin, dass der Eigen Wert $ \teta $ direkt mit der Wahrscheinlichkeit verknüpft ist, dass der Anfangszustand markiert wäre (in dem Fall, dass $P _0 $ ein Projektor ist, der nur den ursprünglichen Zustand aufweist).  Da die eigen Phasen von $Q $ $2 \ der TA = 2 \ Sin ^ {-1} (\sqrt{\pr (Success)}) $ lauten, folgt Folgendes: Wenn wir die Phasen Schätzung auf $Q $ anwenden, können wir die Erfolgswahrscheinlichkeit für ein einheitliches Quantum-Verfahren ermitteln.  Dies ist hilfreich, da hierfür quadratisch weniger Anwendungen des Quantums ausgeführt werden müssen, um die Erfolgswahrscheinlichkeit zu erlernen, als andernfalls erforderlich wäre.
 
-Q # führt die Amplitude-Verstärkung als Spezialisierung der schrägen Amplitude-Verstärkung ein.  Eine schrägende Amplitude-Verstärkung verdient diesen Moniker, da der Projektor auf dem anfänglichen eigen Raum keinen Projektor auf dem ursprünglichen Zustand aufweisen muss.  In diesem Sinne ist das Protokoll für den ursprünglichen Zustand nicht sichtbar.  Die Schlüssel Anwendung der schrägen Amplitude-Verstärkung erfolgt in bestimmten *linearen Kombinationen von einheitlichen* hamiltona-Simulationsmethoden, bei denen der ursprüngliche Zustand unbekannt ist, aber mit einem Ancilla-Register im Simulations Protokoll entkoppelt wird.  Wenn dieses Ancilla-Register als fester Wert gemessen werden soll, z. b. $0 $, dann wenden solche Simulationsmethoden die gewünschte einheitliche Transformation auf die restlichen Qubits an (so genannte System Register).  Alle anderen Messergebnisse führen jedoch zu einem Fehler.  Eine schrägende Amplitude-Verstärkung ermöglicht, dass die Wahrscheinlichkeit, dass diese Messung erfolgreich ist, auf $100 \\ % $ mithilfe der oben genannten Argumentation erhöht werden kann.  Außerdem entspricht die gewöhnliche Amplitude-Verstärkung dem Fall, in dem das System Register leer ist.  Dies ist der Grund, warum Q # eine schräge Amplitude-Verstärkung als grundlegende Amplitude-Verstärkungs Unterroutine verwendet.
+Q#führt die Amplitude-Verstärkung als Spezialisierung der schrägen Amplitude-Verstärkung ein.  Eine schrägende Amplitude-Verstärkung verdient diesen Moniker, da der Projektor auf dem anfänglichen eigen Raum keinen Projektor auf dem ursprünglichen Zustand aufweisen muss.  In diesem Sinne ist das Protokoll für den ursprünglichen Zustand nicht sichtbar.  Die Schlüssel Anwendung der schrägen Amplitude-Verstärkung erfolgt in bestimmten *linearen Kombinationen von einheitlichen* hamiltona-Simulationsmethoden, bei denen der ursprüngliche Zustand unbekannt ist, aber mit einem Ancilla-Register im Simulations Protokoll entkoppelt wird.  Wenn dieses Ancilla-Register als fester Wert gemessen werden soll, z. b. $0 $, dann wenden solche Simulationsmethoden die gewünschte einheitliche Transformation auf die restlichen Qubits an (so genannte System Register).  Alle anderen Messergebnisse führen jedoch zu einem Fehler.  Eine schrägende Amplitude-Verstärkung ermöglicht, dass die Wahrscheinlichkeit, dass diese Messung erfolgreich ist, auf $100 \\ % $ mithilfe der oben genannten Argumentation erhöht werden kann.  Außerdem entspricht die gewöhnliche Amplitude-Verstärkung dem Fall, in dem das System Register leer ist.  Aus diesem Grund Q# verwendet die Verstärkung der Amplitude-Verstärkung als grundlegende Amplitude-Verstärkungs Unterroutine.
 
 Die allgemeine Routine ( `AmpAmpObliviousByReflectionPhases` ) verfügt über zwei Register, die `ancillaRegister` als und bezeichnet werden `systemRegister` . Außerdem werden zwei Oracles für die erforderlichen Reflektionen akzeptiert. Der `ReflectionOracle` verhält sich nur auf dem, `ancillaRegister` während der `ObliviousOracle` für beide Register gemeinsam agiert. Die Eingabe für `ancillaRegister` muss mit dem Eigen Zustand "-1" des ersten reflektionsoperators "$ \boldone-2P_1 $" initialisiert werden.
 
@@ -116,4 +119,4 @@ Auf diese Weise können wir ein Register der Form "\begin{align} \ket{\psi} & = 
 Wenn wir davon ausgehen, dass $ \phi = 2 \pi p/2 ^ k $ für eine ganze Zahl $p $ ist, erkennen wir dies als $ \ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \dots p_n} $, wobei $p _J $ das $j ^ {\textrm{Th}} $ Bit $2 \pi \phi $ ist.
 Wenn Sie das Adjoint der Quantum Fourier-Transformation anwenden, erhalten wir daher die binäre Darstellung der Phase, die als Quantenzustand codiert ist.
 
-In f # wird dies durch den- <xref:microsoft.quantum.characterization.quantumphaseestimation> Vorgang implementiert, der eine <xref:microsoft.quantum.oracles.discreteoracle> implementierende Anwendung von $U ^ m $ als Funktion von positiven ganzen Zahlen $m $ übernimmt.
+In Q# wird dies durch den- <xref:microsoft.quantum.characterization.quantumphaseestimation> Vorgang implementiert, der eine <xref:microsoft.quantum.oracles.discreteoracle> implementierende Anwendung von $U ^ m $ als Funktion von positiven ganzen Zahlen $m $ übernimmt.

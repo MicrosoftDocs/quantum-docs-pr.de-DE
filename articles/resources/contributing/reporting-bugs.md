@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.reporting
-ms.openlocfilehash: 510f842a068a61502d150ccf5e3b2b5742984f3a
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: f8fd5de99a742c07f367bad6830d37e0e45573b5
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274825"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867538"
 ---
 # <a name="reporting-bugs"></a>Melden von Fehlern #
 

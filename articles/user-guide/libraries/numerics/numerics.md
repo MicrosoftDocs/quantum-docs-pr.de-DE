@@ -1,17 +1,20 @@
 ---
-title: 'Verwenden der Microsoft Q # Numerics-Bibliothek'
+title: Verwenden der Microsoft Q# Numerics-Bibliothek
 description: Erfahren Sie mehr über die Typen und Vorgänge, die in der Microsoft Quantum-Numerics-Bibliothek verfügbar sind.
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: 10d5675e0ef182211a38db4d09347b05afe109c3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 474fc74b9c92fbf28c0618a3090905d025699d32
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275185"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868796"
 ---
 # <a name="using-the-numerics-library"></a>Verwenden der Numerics-Bibliothek
 
@@ -64,7 +67,7 @@ Für jeden der drei oben genannten Typen stehen eine Vielzahl von Vorgängen zur
     - Gegenseitige (1/x)
     - Messung (klassisches Double)
 
-Weitere Informationen und eine ausführliche Dokumentation zu den einzelnen Vorgängen finden Sie in der Referenz Dokumentation für die Q #-Bibliothek unter [docs.Microsoft.com](https://docs.microsoft.com/quantum) .
+Weitere Informationen und eine ausführliche Dokumentation zu den einzelnen Vorgängen finden Sie in der Referenz Dokumentation der Q# Bibliothek unter [docs.Microsoft.com](https://docs.microsoft.com/quantum) .
 
 ## <a name="sample-integer-addition"></a>Beispiel: Hinzufügen einer Ganzzahl
 
@@ -99,7 +102,7 @@ EvaluatePolynomialFxP([1.0, 2.0], x, y);
 Das Ergebnis, $P (x) = 1 + 2x $, wird in gespeichert `yFxP` .
 
 Die zweite, `EvaluateEvenPolynomialFxP` und der dritte, `EvaluateOddPolynomialFxP` , sind Spezialisierungs Fälle für die Fälle der geraden bzw. ungeraden Funktionen. Das heißt, bei einer geraden/ungeraden Funktion $f (x) $ und $ $ P_ {even} (x) = a_0 + A_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, $ $ $f (x) $ ist für $P _ {even} (x) $ oder $P _ {Odd} (x): = x\cdot P_ {even} (x) $ gleich gut.
-In f # können diese beiden Fälle wie folgt behandelt werden:
+In Q# können diese beiden Fälle wie folgt behandelt werden:
 ```qsharp
 EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
 ```

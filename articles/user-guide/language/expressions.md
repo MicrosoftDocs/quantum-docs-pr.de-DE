@@ -1,29 +1,32 @@
 ---
-title: 'Typausdrücke in Q #'
-description: 'Erfahren Sie, wie Konstanten, Variablen, Operatoren, Vorgänge und Funktionen als Ausdrücke in Q # angegeben, referenziert und kombiniert werden.'
+title: Ausdrücke inQ#
+description: Erfahren Sie, wie Konstanten, Variablen, Operatoren, Vorgänge und Funktionen als Ausdrücke in angegeben, referenziert und kombiniert werden Q# .
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 1821df6a3a51a62b44f3ccd96b127577c5db990a
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b6cc97dfee05dc843e213e84f17043714a8a9656
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415387"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869612"
 ---
-# <a name="type-expressions-in-q"></a>Typausdrücke in Q #
+# <a name="expressions-in-no-locq"></a>Ausdrücke inQ#
 
 ## <a name="numeric-expressions"></a>Numerische Ausdrücke
 
 Numerische Ausdrücke sind Ausdrücke vom Typ `Int` , `BigInt` oder `Double` .
 Das heißt, Sie sind entweder ganzzahlige oder Gleit Komma Zahlen.
 
-`Int`Literale in Q # werden als Sequenz von Ziffern geschrieben.
+`Int`Literale in Q# werden als Sequenz von Ziffern geschrieben.
 Hexadezimale und binäre ganzzahlige Werte werden unterstützt `0x` `0b` bzw. mit dem Präfix und geschrieben.
 
-`BigInt`Literale in Q # verfügen über ein nach gestelltes- `l` oder- `L` Suffix.
+`BigInt`Literale in Q# verfügen über ein nach gestelltes- `l` oder- `L` Suffix.
 Hexadezimale Big Integerwerte werden unterstützt und mit einem Präfix "0x" geschrieben.
 Daher sind die folgenden alle gültigen Verwendungsmöglichkeiten von `BigInt` Literalen:
 
@@ -33,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-`Double`Literale in Q # sind Gleit Komma Zahlen, die mithilfe von Dezimalziffern geschrieben werden.
+`Double`Literale in Q# sind Gleit Komma Zahlen, die mithilfe von Dezimalziffern geschrieben werden.
 Sie können mit oder ohne Dezimaltrennzeichen, oder mit einem `.` exponentiellen Teil geschrieben werden, der mit "e" oder "e" angegeben wird (nach dem nur ein mögliches negatives Vorzeichen und Dezimalziffern gültig sind).
 Die folgenden `Double` Literale sind gültig: `0.0` , `1.2e5` , `1e-5` .
 
@@ -86,7 +89,7 @@ Die beiden `Bool` Literalwerte sind `true` und `false` .
 Wenn zwei Ausdrücke desselben primitiven Typs vorhanden sind, können die `==` `!=` binären Operatoren und verwendet werden, um einen-Ausdruck zu erstellen `Bool` .
 Der Ausdruck ist true, wenn die beiden Ausdrücke gleich sind, andernfalls false.
 
-Werte von benutzerdefinierten Typen können nicht verglichen werden, sondern es können nur Ihre nicht umschließenden Werte verglichen werden. Verwenden Sie beispielsweise den "Unwrap"-Operator `!` (ausführlich unter [Typen in f #](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)erläutert).
+Werte von benutzerdefinierten Typen können nicht verglichen werden, sondern es können nur Ihre nicht umschließenden Werte verglichen werden. Verwenden Sie z. b. den Operator "Unwrap" `!` (ausführlich unter [Typen in Q# ](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)erläutert).
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -110,9 +113,9 @@ Bei jedem booleschen Ausdruck kann der `not` unäre Operator verwendet werden, u
 
 ## <a name="string-expressions"></a>Zeichenfolgenausdrücke
 
-Q # ermöglicht die Verwendung von Zeichen folgen in der `fail` Anweisung (in der [Ablauf Steuerung](xref:microsoft.quantum.guide.controlflow#fail-statement)erläutert) und in der [`Message`](xref:microsoft.quantum.intrinsic.message) Standardfunktion. Das spezifische Verhalten der letzteren hängt vom verwendeten Simulator ab, schreibt jedoch in der Regel eine Meldung in die Host Konsole, wenn Sie während eines Q #-Programms aufgerufen wird.
+Q#ermöglicht die Verwendung von Zeichen folgen in der `fail` Anweisung (in der [Ablauf Steuerung](xref:microsoft.quantum.guide.controlflow#fail-statement)erläutert) und in der [`Message`](xref:microsoft.quantum.intrinsic.message) Standardfunktion. Das spezifische Verhalten der letzteren hängt vom verwendeten Simulator ab, schreibt jedoch in der Regel eine Meldung in die Host Konsole, wenn Sie während eines Programms aufgerufen wird Q# .
 
-Zeichen folgen in Q # sind entweder Literale oder interpoliert Zeichen folgen.
+Zeichen folgen in Q# sind entweder Literale oder interpoliert Zeichen folgen.
 
 Zeichenfolgenliterale ähneln in den meisten Sprachen einfachen Zeichenfolgenliteralen: eine Sequenz von Unicode-Zeichen, die in doppelten Anführungszeichen eingeschlossen sind `" "` .
 Verwenden Sie innerhalb einer Zeichenfolge den umgekehrten Schrägstrich, `\` um ein doppeltes Anführungszeichen () mit Escapezeichen `\"` zu versehen, oder um eine neue Zeile ( `\n` ), ein Wagen Rücklauf Zeichen ( `\r` ) oder eine Registerkarte ( `\t` ) einzufügen.
@@ -123,11 +126,11 @@ Beispiel:
 ```
 ### <a name="interpolated-strings"></a>Interpolierte Zeichenfolgen
 
-Die Q #-Syntax für Zeichen folgen Interpolationen ist eine Teilmenge der c#-Syntax. Im folgenden finden Sie die wichtigsten Punkte, die sich auf Q # beziehen:
+Die Q# Syntax für Zeichen folgen Interpolationen ist eine Teilmenge der c#-Syntax. Im folgenden finden Sie die wichtigsten Punkte, die Sie betreffen Q# :
 
 * Wenn Sie ein Zeichenfolgenliteral als interpolierte Zeichenfolge ermitteln möchten, stellen Sie ihm ein `$`-Symbol voran. Zwischen dem `$` und dem `"` , das einen zeichenfolgenliteralvorgang startet, darf kein Leerraum vorhanden sein.
 
-* Im folgenden finden Sie ein einfaches Beispiel, in dem die-Funktion verwendet wird [`Message`](xref:microsoft.quantum.intrinsic.message) , um das Ergebnis einer Maßeinheit zusammen mit anderen Q #-Ausdrücken in die Konsole zu schreiben.
+* Im folgenden finden Sie ein einfaches Beispiel, in dem die-Funktion verwendet wird [`Message`](xref:microsoft.quantum.intrinsic.message) , um das Ergebnis einer Maßeinheit zusammen mit anderen Ausdrücken in die Konsole zu schreiben Q# .
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -135,9 +138,9 @@ Die Q #-Syntax für Zeichen folgen Interpolationen ist eine Teilmenge der c#-Syn
     Message($"Number: {num}, Result: {res}");
 ```
 
-* Jeder gültige Q #-Ausdruck kann in einer interinterierten Zeichenfolge angezeigt werden.
+* Jeder gültige Q# Ausdruck wird möglicherweise in einer interinterierten Zeichenfolge angezeigt.
 
-* Ausdrücke in einer interinterierten Zeichenfolge Folgen der Q #-Syntax, nicht der c#-Syntax. Der wichtigste Unterschied besteht darin, dass Q # keine ausführlichen (mehrzeiligen) interpoliert-Zeichen folgen unterstützt.
+* Ausdrücke in einer interinterierten Zeichenfolge Folgen der Q# Syntax, nicht der c#-Syntax. Der wichtigste Unterschied besteht darin, dass Q# keine ausführlichen (mehrzeiligen) interpoliert-Zeichen folgen unterstützt.
 
 Weitere Informationen zur c#-Syntax finden Sie unter [*interpoliert*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings).
 
@@ -197,7 +200,7 @@ Anders als Literale sind die einzigen Ausdrücke eines benutzerdefinierten Typs 
 
 ## <a name="unwrap-expressions"></a>Entpacken von Ausdrücken
 
-In Q # ist der Unwrap-Operator ein nach gestelltes Ausrufezeichen `!` .
+In Q# handelt es sich bei dem Unwrap-Operator um ein nach gestelltes Ausrufezeichen `!` .
 Wenn z. b `IntPair` . ein benutzerdefinierter Typ mit dem zugrunde liegenden Typ `(Int, Int)` und `s` eine Variable mit Wert ist `IntPair(2, 3)` , dann `s!` ist `(2, 3)` .
 
 Bei benutzerdefinierten Typen, die in Bezug auf andere benutzerdefinierte Typen definiert sind, können Sie den Unwrap-Operator wiederholen. `s!!`Gibt z. b. den doppelt entpackten Wert von an `s` .
@@ -270,7 +273,7 @@ Wenn z. b. `a` und `b` beide Arrays vom Typ sind `Int` , wird ein Element aus de
 (a + b)[13]
 ```
 
-Alle Arrays in Q # sind NULL basiert.
+Alle Arrays in Q# sind NULL basiert.
 Das heißt, das erste Element eines Arrays `a` ist immer `a[0]` .
 
 
@@ -318,7 +321,7 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### <a name="copy-and-update-expressions"></a>Copy-und Update-Ausdrücke
 
-Da es sich bei allen Q #-Typen um Werttypen handelt (wobei die Qubits eine etwas besondere Rolle einnehmen), wird formal eine "Kopie" erstellt, wenn ein Wert an ein Symbol gebunden ist oder wenn ein Symbol erneut erstellt wird. Das Verhalten von Q # ist also das gleiche wie bei der Erstellung einer Kopie mit einem Zuweisungs Operator. 
+Da es Q# sich bei allen Typen um Werttypen handelt (wobei die Qubits eine etwas besondere Rolle einnehmen), wird formal eine "Copy"-Kopie erstellt, wenn ein Wert an ein Symbol gebunden ist oder wenn ein Symbol erneut hergestellt wird. Dies heißt, dass das Verhalten von Q# mit dem identisch ist, wenn eine Kopie mithilfe eines Zuweisungs Operators erstellt wurde. 
 
 Natürlich werden in der Praxis nur die relevanten Teile nach Bedarf neu erstellt. Dies wirkt sich darauf aus, wie Arrays kopiert werden, da Array Elemente nicht aktualisiert werden können. Zum Ändern eines vorhandenen Arrays muss ein *Kopier-und Aktualisierungs* Mechanismus genutzt werden.
 
@@ -381,7 +384,7 @@ Während die Vorgänge `(Qubit[] => Unit is Adj)` und `(Qubit[] => Unit is Ctl)`
 
 Beispielsweise gibt `[[Op1], [Op2]]` derzeit einen Fehler aus, da versucht wird, ein Array der beiden inkompatiblen Array Typen und zu erstellen `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` .
 
-Weitere Informationen zu callables finden Sie unter [Aufruf Bare Ausdrücke](#callable-expressions) auf dieser Seite oder [in den Vorgängen und Funktionen in f #](xref:microsoft.quantum.guide.operationsfunctions).
+Weitere Informationen zu callables finden Sie unter [Aufruf Bare Ausdrücke](#callable-expressions) auf dieser Seite bzw. [in den Vorgängen und Funktionen in Q# ](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## <a name="conditional-expressions"></a>Bedingte Ausdrücke
 
@@ -446,7 +449,7 @@ Um also das Ergebnis des Aufrufs `Builder` aus dem vorherigen Absatz aufzurufen,
 ```
 
 Wenn Sie einen [vom Typ parametrisierten](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) Aufruf baren aufrufen, können Sie die tatsächlichen Typparameter innerhalb von spitzen Klammern `< >` nach dem Aufruf baren Ausdruck angeben.
-Diese Aktion ist in der Regel unnötig, weil der Q #-Compiler die eigentlichen Typen leitet.
+Diese Aktion ist in der Regel unnötig, da der Q# Compiler die eigentlichen Typen leitet.
 Es *ist* jedoch für die [partielle Anwendung](xref:microsoft.quantum.guide.operationsfunctions#partial-application) erforderlich, wenn ein typparametrisiertes Argument nicht angegeben wird.
 Dies ist auch nützlich, wenn die Übergabe von Vorgängen mit unterschiedlichen Funktoren unterstützt wird.
 
@@ -469,12 +472,12 @@ Die Typspezifikation ist erforderlich `Op3` , da und `Op1` unterschiedliche Type
 
 * Klammern für Vorgangs-und Funktionsaufrufe werden auch vor jedem Operator gebunden, aber nach der Array Indizierung und den Funktoren.
 
-Q #-Operatoren in Rangfolge, vom höchsten zum niedrigsten:
+Q#Operatoren in Rangfolge, vom höchsten zum niedrigsten:
 
-Operator | Ständigkeit | BESCHREIBUNG | Operanden Typen
+Betreiber | Ständigkeit | BESCHREIBUNG | Operanden Typen
 ---------|----------|---------|---------------
- nachträ`!` | Unäroperatoren | Aufheben der Umschließung | Ein beliebiger benutzerdefinierter Typ
- `-`, `~~~`, `not` | Unäroperatoren | Numerische negative, bitweise Komplement logische Negation | `Int`, `BigInt` oder `Double` für `-` , `Int` `BigInt` `~~~` `Bool` für`not`
+ nachträ`!` | Unär | Aufheben der Umschließung | Ein beliebiger benutzerdefinierter Typ
+ `-`, `~~~`, `not` | Unär | Numerische negative, bitweise Komplement logische Negation | `Int`, `BigInt` oder `Double` für `-` , `Int` `BigInt` `~~~` `Bool` für`not`
  `^` | Binary | Ganzzahlige Potenz | `Int`oder `BigInt` für die Basisklasse `Int` für den Exponenten
  `/`, `*`, `%` | Binary | Division, Multiplikation, ganzzahliger Modulo | `Int`, `BigInt` oder `Double` für `/` und `*` `Int` oder `BigInt` für`%`
  `+`, `-` | Binary | Addition oder Zeichenfolge und Array Verkettung, Subtraktion | `Int`, `BigInt` oder `Double` , zusätzlich `String` oder ein beliebiger Arraytyp für`+`
@@ -492,4 +495,4 @@ Operator | Ständigkeit | BESCHREIBUNG | Operanden Typen
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nun, da Sie mit Ausdrücken in q # arbeiten können, fahren Sie mit den [Vorgängen und Funktionen in q #](xref:microsoft.quantum.guide.operationsfunctions) fort, um zu erfahren, wie Sie Vorgänge und Funktionen definieren und aufzurufen.
+Nachdem Sie nun mit Ausdrücken in arbeiten können Q# , fahren Sie mit den [Vorgängen und Q# Funktionen in](xref:microsoft.quantum.guide.operationsfunctions) fort, um zu erfahren, wie Sie Vorgänge und Funktionen definieren und aufzurufen.

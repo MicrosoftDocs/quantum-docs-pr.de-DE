@@ -6,12 +6,15 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.load
-ms.openlocfilehash: efa4a65a489446cbef48507d0b02a932da74c71c
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 26ba7411c9ade1d6c4b606e8c12c10ade18fc584
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275193"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868830"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>Laden und klassifizieren ihrer eigenen Datasets
 

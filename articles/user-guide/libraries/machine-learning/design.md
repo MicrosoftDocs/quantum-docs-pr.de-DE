@@ -6,12 +6,15 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/17/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.design
-ms.openlocfilehash: b304b9d1a15f164f4dfe758aaed31b7b2369b18c
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 60e694e9f7c2f01a6679ef960f5a7774c8bd6a62
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275150"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868938"
 ---
 # <a name="design-your-own-classifier"></a>Entwerfen Ihres eigenen Klassifizierers
 
@@ -47,6 +50,8 @@ Sehen wir uns ein Beispiel für einen Klassifizierer an. Im [Halbmond Beispiel](
 Hier definieren wir eine Funktion, die ein Array von Elementen zurückgibt `ControlledRotation` , das mit einem Array von Parametern verknüpft ist, und ein Bias definiert das [`SequentialModel`](xref:microsoft.quantum.machinelearning.sequentialmodel) . Dieser Typ ist in der Quantum-Machine Learning Bibliothek von grundlegender Bedeutung und definiert den Klassifizierer. Die in der obigen Funktion definierte Verbindung ist Teil eines Klassifizierers, in dem jede Stichprobe des Datasets zwei Funktionen enthält. Daher benötigen wir nur zwei Qubits. Die grafische Darstellung der Verbindung lautet wie folgt:
 
  ![Beispiel für Verbindungs Modell](~/media/circuit_model_1.PNG)
+
+Beachten Sie, dass die Vorgänge der Quantum Machine Learning Library standardmäßig das letzte Qubit des Registers zum Schätzen der Klassifizierungs Wahrscheinlichkeiten messen. Beachten Sie beim Entwerfen der Verbindung diese Tatsache.
 
 ## <a name="use-the-library-functions-to-write-layers-of-gates"></a>Verwenden der Bibliotheksfunktionen zum Schreiben von Ebenen von Gates
 

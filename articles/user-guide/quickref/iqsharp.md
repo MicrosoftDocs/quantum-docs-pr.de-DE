@@ -1,18 +1,21 @@
 ---
-title: IQ#-Magic-Befehle
-description: 'Kurz Referenzseite für IQ # Magic-Befehle mit Q # jupyter Notebooks'
+title: I Q# Magic-Befehle
+description: Kurz Referenzseite für I Q# Magic-Befehle mit Q# jupyter Notebooks
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 uid: microsoft.quantum.guide.quickref.iqsharp
-ms.openlocfilehash: 2fb542df8723fa437c82b4a1dfada77e22c1d6e4
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: fb7b5543ef9222e6bab2b1cbbc7e3ebb54863438
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870538"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867980"
 ---
-# <a name="iq-magic-commands"></a>IQ#-Magic-Befehle
+# <a name="ino-locq-magic-commands"></a>I Q# Magic-Befehle
 
 ### <a name="general"></a>Allgemein
 
@@ -23,7 +26,7 @@ ms.locfileid: "86870538"
 - [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance): Meldet die aktuellen Leistungsmetriken für diesen Kernel.
 - [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate): Führt eine bestimmte Funktion oder einen Vorgang auf dem quantumschlag-Zielcomputer aus.
 - [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli): Führt eine bestimmte Funktion oder einen Vorgang auf dem Zielcomputer "tffolisimulator" aus.
-- [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who): Listet die Q #-Vorgänge auf, die in der aktuellen Sitzung verfügbar sind.
+- [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who): Listet die Q# Vorgänge auf, die in der aktuellen Sitzung verfügbar sind.
 - [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace): Stellt Aktionen bereit, die sich auf den aktuellen Arbeitsbereich beziehen.
 
 ### <a name="azure-quantum-integration"></a>Azure-Quantum-Integration
@@ -34,12 +37,12 @@ ms.locfileid: "86870538"
 - [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output): Zeigt die Ergebnisse für einen Auftrag im aktuellen Azure Quantum-Arbeitsbereich an.
 - [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status): Zeigt den Status eines Auftrags im aktuellen Azure Quantum-Arbeitsbereich an.
 - [`%azure.submit`](xref:microsoft.quantum.iqsharp.magic-ref.azure.submit): Übermittelt einen Auftrag an einen Azure Quantum-Arbeitsbereich.
-- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Hiermit wird das aktive Ausführungs Ziel für die Q #-Auftrags Übermittlung in einem Azure Quantum-Arbeitsbereich festgelegt oder angezeigt.
+- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Legt das aktive Ausführungs Ziel für die Q# Auftrags Übermittlung in einem Azure Quantum-Arbeitsbereich fest oder zeigt es an.
 
 ### <a name="chemistry-from-microsoftquantumchemistry-package"></a>Chemie (aus dem Microsoft. Quantum. Chemistry-Paket)
 
 - [`%chemistry.broombridge`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.broombridge): Lädt und gibt die Darstellung der broombridge-elektronischen Strukturprobleme aus einer bestimmten YAML-Datei zurück.
-- [`%chemistry.encode`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.encode): Codiert ein Fermion-hamiltonan in ein Format, das von Q # verwendet werden können.
+- [`%chemistry.encode`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.encode): Codiert ein Fermion-hamiltonan in ein Format, das von verwendet werden können Q# .
 - [`%chemistry.fh.add_terms`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.add_terms): Fügt einem Fermion-hamiltonan Bedingungen hinzu.
 - [`%chemistry.fh.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.load): Lädt den Fermion-hamiltonan für ein elektronisches Strukturproblem. Das Problem wird aus einer Datei geladen oder als Argument übergeben.
 - [`%chemistry.inputstate.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load): Lädt das Problem der elektronischen broombridge-Struktur und gibt den ausgewählten Eingabe Status zurück.

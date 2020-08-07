@@ -1,21 +1,24 @@
 ---
-title: 'Ausführen des Grover-Suchalgorithmus in Q#: Quantum Development Kit'
-description: Erstellen eines Q#-Projekts, das den Grover-Algorithmus veranschaulicht, einen der kanonischen Quantenalgorithmen.
+title: Suchalgorithmus von Grover in Q# -Quantum Development Kit ausführen
+description: Erstellen Sie ein Q# Projekt, das den Algorithmus von Grover veranschaulicht, einen der kanonischen Quantum-Algorithmen.
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: 9e4c53b4d5159cf07f0654603c1d477ad09eb7c6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 5c23d71209eb484a510f102e8b581ba4ec21829a
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274742"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869663"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>Tutorial: Implementierung des Grover-Suchalgorithmus in Q\#
 
-In diesem Tutorial erfahren Sie, wie Sie eine Grover-Suchabfrage erstellen und ausführen, um die Suche in unstrukturierten Daten zu beschleunigen.  Bei der Grover-Suche handelt es sich um einen der beliebtesten Quantencomputingalgorithmen. Diese relativ kleine Q#-Implementierung vermittelt Ihnen einen Eindruck davon, welche Vorteile die Programmierung von Quantenlösungen mit einer allgemeinen Q#-Quantenprogrammiersprache zum Ausdrücken von Quantenalgorithmen bietet.  Die Simulationsausgabe am Ende der Anleitung zeigt, dass die Suche nach einer bestimmten Zeichenfolge in einer Liste unsortierter Einträge nur einen Bruchteil der Zeit dauert, die für die Durchsuchung der gesamten Liste auf einem klassischen Computer benötigt würde.
+In diesem Tutorial erfahren Sie, wie Sie eine Grover-Suchabfrage erstellen und ausführen, um die Suche in unstrukturierten Daten zu beschleunigen.  Bei der Grover-Suche handelt es sich um einen der beliebtesten Quantum Computing-Algorithmen. diese relativ kleine Q# Implementierung bietet Ihnen einen Eindruck von einigen der Vorteile der Programmierung von Quantum-Lösungen mit einer umfassenden Q# Quantum-Programmiersprache zum Ausdrücken von Quantum-Algorithmen.  Die Simulationsausgabe am Ende der Anleitung zeigt, dass die Suche nach einer bestimmten Zeichenfolge in einer Liste unsortierter Einträge nur einen Bruchteil der Zeit dauert, die für die Durchsuchung der gesamten Liste auf einem klassischen Computer benötigt würde.
 
 Der Grover-Algorithmus durchsucht eine Liste unstrukturierter Daten nach bestimmten Elementen. Er kann beispielsweise diese Frage beantworten: Ist diese Karte, die aus einem Kartenstapel gezogen wurde, ein Herz As? Die Bezeichnung des spezifischen Elements wird als _markierte Eingabe_ bezeichnet.
 
@@ -39,7 +42,7 @@ Die Anzahl der inkrementellen Verstärkungen ist kleiner als die Anzahl der Elem
 
 ## <a name="write-the-code"></a>Schreiben des Codes
 
-1. Verwenden Sie das Quantum Development Kit, um ein [neues Q#-Projekt für die Befehlszeilenanwendung zu erstellen](xref:microsoft.quantum.install.standalone). Geben Sie dem Projekt den Namen `Grover`.
+1. Erstellen Sie mit dem Quantum Development Kit [ein neues Q# Projekt für die Befehlszeilen Anwendung](xref:microsoft.quantum.install.standalone). Geben Sie dem Projekt den Namen `Grover`.
 
 1. Fügen Sie den folgenden Code der `Program.qs`-Datei in Ihrem neuen Projekt hinzu:
 
@@ -51,9 +54,9 @@ Die Anzahl der inkrementellen Verstärkungen ist kleiner als die Anzahl der Elem
 
     Die `ReflectAboutMarked`-Operation definiert die markierte Eingabe, nach der Sie suchen: die Zeichenfolge aus abwechselnden Nullen und Einsen. In diesem Beispiel wird die markierte Eingabe hartcodiert. Sie kann erweitert werden, um nach verschiedenen Eingaben zu suchen, oder generalisiert, um nach beliebigen Eingaben zu suchen.
 
-1. Führen Sie als Nächstes Ihr neues Q#-Programm aus, um das von `ReflectAboutMarked` markierte Element zu finden.
+1. Führen Sie als nächstes Q# das neue Programm aus, um das durch markierte Element zu suchen `ReflectAboutMarked` .
 
-### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Q#-Befehlszeilenanwendungen mit Visual Studio oder Visual Studio Code
+### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Q#Befehlszeilen Anwendungen mit Visual Studio oder Visual Studio Code
 
 Die ausführbare Datei führt den Vorgang oder die Funktion, der bzw. die mit dem Attribut `@EntryPoint()` markiert ist, abhängig von der Projektkonfiguration und den Befehlszeilenoptionen für einen Simulator oder eine Ressourcenschätzung aus.
 
@@ -104,7 +107,7 @@ Reflecting about marked state...
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Wenn Ihnen dieses Tutorial gefallen hat, sehen Sie sich einige der unten aufgeführten Ressourcen an, um mehr darüber zu erfahren, wie Sie Q# verwenden können, um eigene Quantenanwendungen zu schreiben:
+Wenn Ihnen dieses Tutorial gefallen hat, sehen Sie sich die folgenden Ressourcen an, um mehr darüber zu erfahren, wie Sie Q# Ihre eigenen Quantum-Anwendungen mit schreiben können:
 
 - [Zurück zum Leitfaden mit den ersten Schritte mit dem QDK](xref:microsoft.quantum.welcome)
 - Ausprobieren eines [Beispiels](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search) für einen allgemeineren Grover-Suchalgorithmus

@@ -6,12 +6,15 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.loadhamiltonian
-ms.openlocfilehash: 715dbcefc10ecc5af45f2bdd228890f1cb28886b
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 57e25bf55009797b01695cef0f3d29b94662ccc0
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274729"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869238"
 ---
 # <a name="loading-a-hamiltonian-from-file"></a>Laden eines Hamiltonoperators aus einer Datei
 Zuvor haben wir hamiltonane erstellt, indem wir Ihr einzelne Begriffe hinzugefügt haben. Obwohl dies für kleine Beispiele in Ordnung ist, erfordert die Skalierung von Quantum-Chemie eine hamiltonation mit Millionen oder Milliarden von Begriffen. Solche, die von Chemie Paketen wie nwchem generiert werden, sind zu groß, um von Hand zu importieren. In diesem Beispiel wird veranschaulicht, wie eine- `FermionHamiltonian` Instanz automatisch aus einem durch das [broombridge-Schema](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)dargestellten Molekül generiert werden kann. Zu Referenzzwecken können Sie das bereitgestellte `LithiumHydrideGUI` Beispiel oder das Beispiel überprüfen `RunSimulation` . Eingeschränkte Unterstützung ist auch zum Importieren aus dem Format verfügbar, das von " [Liqui |>](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/)" verwendet wird.
@@ -40,7 +43,7 @@ var fermionHamiltonian = orbitalIntegralHamiltonian.ToFermionHamiltonian(IndexCo
 var jordanWignerEncoding = fermionHamiltonian.ToPauliHamiltonian(Pauli.QubitEncoding.JordanWigner);
 ```
 
-Das broombridge-Schema enthält auch Vorschläge für den Anfangszustand, der vorbereitet werden soll. Die Bezeichnungen, z. b. `"|G⟩"` oder `"|E1⟩"` , für diese Zustände können angezeigt werden, indem die Datei überprüft wird. Um diese anfänglichen Zustände vorzubereiten, `qSharpData` wird die von den f #-Quantum-Algorithmen verwendete ähnlich dem [vorherigen Abschnitt](xref:microsoft.quantum.chemistry.examples.energyestimate)abgerufen, aber mit einem zusätzlichen Parameter, der den gewünschten Anfangszustand auswählt. Beispiel:
+Das broombridge-Schema enthält auch Vorschläge für den Anfangszustand, der vorbereitet werden soll. Die Bezeichnungen, z. b. `"|G⟩"` oder `"|E1⟩"` , für diese Zustände können angezeigt werden, indem die Datei überprüft wird. Um diese anfänglichen Zustände vorzubereiten, `qSharpData` wird der von den Quantum- Q# Algorithmen verwendete ähnlich dem [vorherigen Abschnitt](xref:microsoft.quantum.chemistry.examples.energyestimate)abgerufen, aber mit einem zusätzlichen Parameter, der den gewünschten Anfangszustand auswählt. Beispiel:
 ```csharp
 // The desired initial state, assuming that a description of it is present in the
 // Broombridge schema.

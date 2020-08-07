@@ -1,6 +1,8 @@
 ---
 Title: Erweiterte Matrix Konzepte Description: erfahren Sie mehr über Eigenvektoren, Eigenwerte und Matrix exponentiale, die grundlegenden Tools, die zum beschreiben und Simulieren von Quantum-Algorithmen verwendet werden.
 Autor: quantumwriter UID: Microsoft. Quantum. Concepts. Matrix-Advanced ms. Author: nawiebe@microsoft.com ms. Date: 12/11/2017 ms. Topic: article NO-LOC:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -124,7 +126,7 @@ $$
 e ^ A = \boldone + a + \frac { a ^ 2 } { 2! } + \frac { A ^ 3 } { 3!}+\cdots
 $$
 
-Dies ist wichtig, da die Evolution für die Quantum-mechanische Zeit durch eine einheitliche Matrix der Form $ e ^ { IB } $ für hermitian Matrix $ B $ beschrieben wird.  Aus diesem Grund ist das Durchführen von Matrix Exponentialzahlen ein wesentlicher Bestandteil von Quantum Computing, da f # systeminterne Routinen zum Beschreiben dieser Vorgänge bietet.
+Dies ist wichtig, da die Evolution für die Quantum-mechanische Zeit durch eine einheitliche Matrix der Form $ e ^ { IB } $ für hermitian Matrix $ B $ beschrieben wird.  Aus diesem Grund ist das Durchführen von Matrix Exponentialzahlen ein wesentlicher Bestandteil von Quantum Computing und bietet systeminterne Q# Routinen zum Beschreiben dieser Vorgänge.
 In der Praxis gibt es viele Möglichkeiten, eine Matrix auf einem klassischen Computer exponentiell zu berechnen, und in der Regel wird eine solche exponentialweise mit der Peril in Bezug gesetzt.  Weitere Informationen finden Sie unter [*Cleve Moler und Charles Van Loan. "Neun zweifelhafte Möglichkeiten, den Exponentialwert einer Matrix zu berechnen." Siam Review 20,4 (1978): 801-836*](https://doi.org/10.1137/S00361445024180) , um weitere Informationen zu den beteiligten Problemen zu finden.
 
 Die einfachste Möglichkeit, um zu verstehen, wie die exponentielle einer Matrix berechnet werden kann, ist die Eigenwerte und Eigenvektoren dieser Matrix.  Insbesondere das oben beschriebene Spektral Theorem besagt, dass für jede hermitische oder einheitliche Matrix $ a $ eine einheitliche Matrix $ U $ und eine diagonale Matrix D vorhanden ist, die u $ $ $ = ^ \dagger d u ist $ .  Aufgrund der Eigenschaften von Unitarity haben wir $ eine ^ 2 = u ^ \dagger d ^ 2 u $ und ebenso für alle Power $ p $ $ A ^ p = u ^ \dagger d ^ p u $ .  Wenn wir dies in die Operator Definition des Operator exponentiell ersetzen, erhalten wir Folgendes:

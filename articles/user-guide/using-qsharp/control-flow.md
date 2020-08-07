@@ -1,19 +1,22 @@
 ---
-title: 'Ablauf Steuerung in Q #'
+title: Ablauf Steuerung inQ#
 description: Schleifen, Bedingungen usw.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: b652736168a71b905deaf7c4fdb29a8751b3dfaf
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870990"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867946"
 ---
-# <a name="control-flow-in-q"></a>Ablauf Steuerung in Q #
+# <a name="control-flow-in-no-locq"></a>Ablauf Steuerung inQ#
 
 Innerhalb eines Vorgangs oder einer Funktion wird jede Anweisung in der richtigen Reihenfolge ausgeführt, ähnlich wie andere gängige imperative klassische Sprachen.
 Allerdings können Sie die Ablauf Steuerung auf drei verschiedene Arten ändern:
@@ -42,7 +45,7 @@ Wenn die ursprüngliche *if* -Bedingung und alle else-if-Klauseln als *false*aus
 Beachten Sie, dass der ausgeführte Block in seinem eigenen Bereich ausgeführt wird.
 Bindungen, die innerhalb eines- `if` ,-oder-Blocks erstellt werden, `elif` `else` sind nach Beendigung des-Blocks nicht sichtbar.
 
-Beispiel:
+Ein auf ein Objekt angewendeter
 
 ```qsharp
 if (result == One) {
@@ -104,12 +107,12 @@ Beachten Sie, dass wir am Ende den binären Operator "arithmetischer Shift-Left"
 
 ## <a name="repeat-until-success-loop"></a>Repeat-Until-Success-Schleife
 
-Die Q #-Sprache ermöglicht eine klassische Ablauf Steuerung, die von den Ergebnissen der Messung von Qubits abhängig ist.
+Die Q# Sprache ermöglicht eine klassische Ablauf Steuerung, die von den Ergebnissen der Messung von Qubits abhängig ist.
 Diese Funktion ermöglicht es wiederum, leistungsstarke probabilistische Mini Anwendungen zu implementieren, die die berechnungskosten für die Implementierung von uniflüssen reduzieren können.
-Beispiele hierfür sind die RUS *-Muster (Repeat-Until-Success* ) in f #.
+Beispiele hierfür sind die RUS *-Muster (Repeat-Until-Success* ) in Q# .
 Diese RUS-Muster sind probabilistische Programme, die zu den *erwarteten* niedrigen Kosten in Bezug auf elementare Gates gehören. die anfallenden Kosten hängen von der tatsächlichen Durchführung und der Überführung der zahlreichen möglichen Verzweigungen ab.
 
-Zum Vereinfachen von Wiederholungs-bis-Erfolg-Mustern (RUS) unterstützt Q # die-Konstrukte.
+Zum Vereinfachen von Wiederholungs-bis-Erfolg-Mustern (RUS) Q# unterstützt die-Konstrukte.
 
 ```qsharp
 repeat {
@@ -147,9 +150,9 @@ Weitere Beispiele und Details finden Sie in diesem Artikel unter [Wiederholungs-
 
 ## <a name="while-loop"></a>While-Schleife
 
-Wiederholungs-bis-Erfolg-Muster verfügen über eine sehr Quantum-spezifische-Anmerkung. Sie werden häufig in bestimmten Klassen von Quantum-Algorithmen verwendet. Dies ist also das dedizierte Sprachkonstrukt in f #. Schleifen, die basierend auf einer Bedingung unterbrechen und deren Ausführungsdauer zur Kompilierzeit somit unbekannt ist, werden jedoch mit einer bestimmten Sorgfalt in einer Quantum-Laufzeit behandelt. Die Verwendung innerhalb von Funktionen ist jedoch nicht problematisch, da diese Schleifen nur Code enthalten, der auf herkömmlicher (nicht Quantum-) Hardware ausgeführt wird. 
+Wiederholungs-bis-Erfolg-Muster verfügen über eine sehr Quantum-spezifische-Anmerkung. Sie werden häufig in bestimmten Klassen von Quantum-Algorithmen verwendet. Dies ist also das dedizierte Sprachkonstrukt in Q# . Schleifen, die basierend auf einer Bedingung unterbrechen und deren Ausführungsdauer zur Kompilierzeit somit unbekannt ist, werden jedoch mit einer bestimmten Sorgfalt in einer Quantum-Laufzeit behandelt. Die Verwendung innerhalb von Funktionen ist jedoch nicht problematisch, da diese Schleifen nur Code enthalten, der auf herkömmlicher (nicht Quantum-) Hardware ausgeführt wird. 
 
-F # unterstützt daher die Verwendung von while-Schleifen innerhalb von Functions. Eine- `while` Anweisung besteht aus dem Schlüsselwort `while` , einem booleschen Ausdruck in Klammern und einem Anweisungsblock.
+Q#Daher unterstützt die Verwendung von while-Schleifen nur innerhalb von Functions. Eine- `while` Anweisung besteht aus dem Schlüsselwort `while` , einem booleschen Ausdruck in Klammern und einem Anweisungsblock.
 Der Anweisungsblock (der Text der Schleife) wird ausgeführt, solange die Bedingung als ausgewertet wird `true` .
 
 ```qsharp
@@ -166,7 +169,7 @@ while (index < Length(arr) && item < 0) {
 Die Return-Anweisung beendet die Ausführung eines Vorgangs oder einer Funktion und gibt einen Wert an den Aufrufer zurück.
 Er besteht aus dem Schlüsselwort `return` , gefolgt von einem Ausdruck des entsprechenden Typs und einem abschließenden Semikolon.
 
-Beispiel:
+Ein auf ein Objekt angewendeter
 ```qsharp
 return 1;
 ```
@@ -191,7 +194,7 @@ Die-Anweisung gibt die Zeichenfolge an den klassischen Treiber als Fehlermeldung
 Es gibt keine Einschränkung für die Anzahl der Fail-Anweisungen innerhalb eines Vorgangs.
 Der Compiler gibt möglicherweise eine Warnung aus, wenn-Anweisungen einer Fail-Anweisung innerhalb eines-Blocks folgen.
 
-Beispiel:
+Ein auf ein Objekt angewendeter
 
 ```qsharp
 fail $"Impossible state reached";
@@ -205,7 +208,7 @@ fail $"Syndrome {syn} is incorrect";
 
 ### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a>RUS-Muster für Single-Qubit-Drehung über eine irrationale Achse 
 
-In einem typischen Anwendungsfall implementiert der folgende Q #-Vorgang eine Drehung um eine irrationale Achse von $ (I + 2i Z)/\sqrt {5} $ in der Bloch-Kugel. Die Implementierung verwendet ein bekanntes RUS-Muster:
+In einem typischen Anwendungsfall implementiert der folgende Q# Vorgang eine Drehung um eine irrationale Achse von $ (I + 2i Z)/\sqrt {5} $ in der Bloch-Kugel. Die Implementierung verwendet ein bekanntes RUS-Muster:
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -331,4 +334,4 @@ Weitere Informationen finden Sie unter [Beispiel für Komponententests mit der S
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Erfahren Sie mehr über das [Testen und Debuggen](xref:microsoft.quantum.guide.testingdebugging) in f #.
+Erfahren Sie mehr über das [Testen und Debuggen](xref:microsoft.quantum.guide.testingdebugging) in Q# .

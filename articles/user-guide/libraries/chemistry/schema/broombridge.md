@@ -6,12 +6,15 @@ ms.author: martinro@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.broombridge
-ms.openlocfilehash: 708c4277080c358cb35a49fbf1dde0394d331043
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ed24fdd58dc16f97d1ba8051b1c8d0fd84ce0588
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275078"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869170"
 ---
 # <a name="broombridge-quantum-chemistry-schema"></a>Broombridge-Quantum-Chemie Schema # 
 

@@ -1,17 +1,20 @@
 ---
-title: 'Datenstrukturen in den Q # Standard-Bibliotheken'
-description: 'Erfahren Sie mehr über Datenstrukturen, Oracles und dynamikalische Generatoren in den Microsoft Q # Standard-Bibliotheken.'
+title: Datenstrukturen in den Q# Standardbibliotheken
+description: Erfahren Sie mehr über Datenstrukturen, Oracles und dynamikalische Generatoren in den Microsoft- Q# Standardbibliotheken.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 46ac6794d1e21e111aa1d98e11a6f83194f8d54e
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 222fa7d0d33d4ac6c15e9ee9e6e97f380867a145
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275001"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868516"
 ---
 # <a name="data-structures-and-modeling"></a>Datenstrukturen und Modellierung #
 
@@ -34,7 +37,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ### <a name="arrays"></a>Arrays ###
 
 Der Kanon stellt mehrere Funktionen zum Bearbeiten von Arrays bereit.
-Diese Funktionen sind typparametrisiert und können daher mit Arrays beliebiger Q #-Typen verwendet werden.
+Diese Funktionen sind typparametrisiert und können daher mit Arrays eines beliebigen Typs verwendet werden Q# .
 Beispielsweise gibt die- <xref:microsoft.quantum.arrays.reversed> Funktion ein neues Array zurück, dessen Elemente in umgekehrter Reihenfolge von der Eingabe zurückgegeben werden.
 Dies kann verwendet werden, um zu ändern, wie ein Quantum-Register beim Aufrufen von Vorgängen dargestellt wird:
 
@@ -72,7 +75,7 @@ In der Literatur der [Phasen Schätzung](https://en.wikipedia.org/wiki/Quantum_p
 Hier bezieht sich der Begriff Oracle auf eine blackboxtests-Quantum-Unterroutine, die auf einen Satz von Qubits anwendet und die Antwort als Phase zurückgibt.
 Diese Unterroutine kann sich oft als Eingabe für einen Quantum-Algorithmus vorstellen, der das Oracle zusätzlich zu einigen anderen Parametern annimmt, und eine Reihe von Quantum-Vorgängen anwendet und einen aufzurufenden aufrufungs Vorgang als grundlegende Gate behandelt.
 Um den größeren Algorithmus tatsächlich zu implementieren, muss eine konkrete Zerlegung des Oracle in grundlegende Gates bereitgestellt werden, aber eine solche Zerlegung ist nicht erforderlich, um den Algorithmus zu verstehen, der das Oracle aufruft.
-In f # wird diese Abstraktion mithilfe von Vorgängen als erstklassige Werte dargestellt, sodass Vorgänge in einer Blackbox-Weise an Implementierungen von Quantum-Algorithmen übermittelt werden können.
+In Q# wird diese Abstraktion durch Verwendung von dargestellt, wobei es sich bei den Vorgängen um erstklassige Werte handelt, sodass Vorgänge in einer Blackbox-Weise an Implementierungen von Quantum-Algorithmen übermittelt werden können.
 Darüber hinaus werden benutzerdefinierte Typen verwendet, um die verschiedenen Oracle-Darstellungen auf typsichere Weise zu bezeichnen. dadurch ist es schwierig, unterschiedliche Arten von Black Box-Vorgängen versehentlich zu verscheihen.
 
 Solche Oracles werden in verschiedenen Kontexten angezeigt, einschließlich bekannter Beispiele wie [der Such-und Quantum-Simulations Algorithmen von Grover](https://en.wikipedia.org/wiki/Grover%27s_algorithm) .
@@ -189,7 +192,7 @@ Der einheitliche, der diese Quantum Dynamics beschreibt, ist $U (t) = R_z (2 \ O
 In diesem Kontext können wir $U (t) $ für beliebige $t $ mithilfe eines einzelnen $R _Z $ Gate simulieren. Daher müssen Sie sich nicht auf einzelne Abfragen auf die einheitliche beschränken.
 Ein solches kontinuierliches Modell verfügt auch über die-Eigenschaft, dass Häufigkeits Werte, die größer als $2 \ PI $ sind, von Phasen Schätz Prozessen, die kontinuierliche Abfragen verwenden, erlernt werden können, da Phaseninformationen, die andernfalls durch die Verzweigungen der Logarithmus-Funktion maskiert werden, aus den Ergebnissen von Experimenten angezeigt werden können, die für nicht angemessene Werte $t $ ausgeführt werden.
 Aus diesem Grund sind Probleme, wie z. b. diese kontinuierlichen Abfrage Modelle für die Phasen Schätzung, nicht nur angemessen, sondern auch dem diskreten Abfrage Modell vorzuziehen.
-Aus diesem Grund verfügt Q # über Funktionen für beide Formen von Abfragen und überlassen Sie dem Benutzer die Entscheidung über einen Phasen Schätz Algorithmus, um die Anforderungen und den verfügbaren Oracle-Typ zu erfüllen.
+Aus diesem Grund Q# verfügt über Funktionen für beide Formen von Abfragen, die es dem Benutzer überlassen, einen Phasen Schätz Algorithmus zu entscheiden, der Ihren Anforderungen entspricht, sowie den verfügbaren Oracle-Typ.
 
 ## <a name="dynamical-generator-modeling"></a>Dynamical Generator-Modellierung ##
 

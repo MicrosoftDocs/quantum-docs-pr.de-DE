@@ -6,12 +6,15 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.algebra
-ms.openlocfilehash: 4750643d16ad8af6240df42c1b93353565561429
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8b06eba9cadce84aca6f87e4451026ca2ffc794f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327593"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867640"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Lineare Algebra für Quantencomputing
 
@@ -62,8 +65,7 @@ In den obigen Beispielen wurde der Zustand eines einzelnen Qubits mithilfe einer
 
 Da jedes Qubit wie bereits erwähnt ein Vektorraum ist, können sie nicht einfach multipliziert werden. Stattdessen wird ein **Tensorprodukt** verwendet. Hierbei handelt es sich um eine verwandte Operation, die auf der Grundlage einzelner Vektorräume einen neuen Vektorraum erstellt und durch das Symbol $\otimes$ dargestellt wird. So wird beispielsweise das Tensorprodukt der beiden Qubit-Zustände $\begin{bmatrix} a \\\\  b \end{bmatrix}$ und $\begin{bmatrix} c \\\\  d \end{bmatrix}$ wie folgt berechnet:
 
-$$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}
-$$
+$$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix} $$
 
 Das Ergebnis ist eine vierdimensionale Matrix, wobei jedes Element eine Wahrscheinlichkeit darstellt. $ac$ ist beispielsweise die Wahrscheinlichkeit, dass die beiden Qubits nach dem Kollaps 0 und 0 sind, $ad$ ist die Wahrscheinlichkeit für 0 und 1 und so weiter. 
 

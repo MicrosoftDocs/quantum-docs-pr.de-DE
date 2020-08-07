@@ -6,12 +6,15 @@ ms.author: gulow@microsoft.com
 ms.date: 05/28/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.multireference
-ms.openlocfilehash: 005ef86382ca72969b06a4206cab01f3845718e2
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 0066d676205901d4f2d41538684f9ba57407eb82
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275094"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869561"
 ---
 # <a name="correlated-wavefunctions"></a>Korrelierte Wellenfunktionen
 

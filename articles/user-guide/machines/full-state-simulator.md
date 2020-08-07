@@ -1,25 +1,28 @@
 ---
 title: Full State Quantum Simulator-Quantum Development Kit
-description: 'Erfahren Sie, wie Sie Ihre Q #-Programme auf dem Microsoft Quantum Development Kit vollständigen Status Simulator ausführen.'
+description: Erfahren Sie, wie Sie Ihre Q# Programme auf dem Microsoft Quantum Development Kit vollständigen Status Simulator ausführen.
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.full-state-simulator
-ms.openlocfilehash: 563fdbd2a45461d112e4c46651eddd75c6fc3db2
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b15af66123dadae09815cde1966c69b3ce2e9e64
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871177"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868337"
 ---
 # <a name="quantum-development-kit-qdk-full-state-simulator"></a>Vollständiger Status Simulator für das Quantum Development Kit (QDK)
 
-Das QDK bietet einen vollständigen Status Simulator, der einen Quantum-Computer auf dem lokalen Computer simuliert. Mithilfe des vollständigen Zustands Simulators können Sie in f # geschriebene Quantum-Algorithmen ausführen und Debuggen, wobei bis zu 30 Qubits verwendet werden. Der vollständige Zustands Simulator ähnelt dem Quantum-Simulator, der in der [Liq $ UI | \rangle $](http://stationq.github.io/Liquid/) Platform von Microsoft Research verwendet wird.
+Das QDK bietet einen vollständigen Status Simulator, der einen Quantum-Computer auf dem lokalen Computer simuliert. Mithilfe des vollständigen Zustands Simulators können Sie in geschriebene Quantum-Algorithmen ausführen und Debuggen Q# , wobei bis zu 30 Qubits verwendet werden. Der vollständige Zustands Simulator ähnelt dem Quantum-Simulator, der in der [Liq $ UI | \rangle $](http://stationq.github.io/Liquid/) Platform von Microsoft Research verwendet wird.
 
 ## <a name="invoking-and-running-the-full-state-simulator"></a>Aufrufen und Ausführen des vollständigen Zustands Simulators
 
-Sie machen den vollständigen Zustands Simulator über die- `QuantumSimulator` Klasse verfügbar. Weitere Informationen finden Sie unter [Möglichkeiten zum Ausführen eines Q #-Programms](xref:microsoft.quantum.guide.host-programs).
+Sie machen den vollständigen Zustands Simulator über die- `QuantumSimulator` Klasse verfügbar. Weitere Informationen finden Sie unter [Möglichkeiten zum Ausführen eines Q# Programms](xref:microsoft.quantum.guide.host-programs).
 
 ### <a name="invoking-the-simulator-from-c"></a>Aufrufen des Simulators von C #
 
@@ -36,7 +39,7 @@ Da die- `QuantumSimulator` Klasse die- <xref:System.IDisposable> Schnittstelle i
 
 ### <a name="invoking-the-simulator-from-python"></a>Aufrufen des Simulators aus python
 
-Verwenden Sie die Methode " [simulieren ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) " aus der q #-Python-Bibliothek mit dem importierten q #-Vorgang:
+Verwenden Sie die Methode " [simulieren ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) " aus der Q# Python-Bibliothek mit dem importierten Q# Vorgang:
 
 ```python
 qubit_result = myOperation.simulate()
@@ -44,7 +47,7 @@ qubit_result = myOperation.simulate()
 
 ### <a name="invoking-the-simulator-from-the-command-line"></a>Aufrufen des Simulators über die Befehlszeile
 
-Wenn ein Q #-Programm über die Befehlszeile ausgeführt wird, ist der vollständige Zustands Simulator der Standardziel Computer. Optional können Sie den Parameter **--Simulator** (oder **-s** ) verwenden, um den gewünschten Zielcomputer anzugeben. Beide der folgenden Befehle führen ein Programm mithilfe des vollständigen Zustands Simulators aus. 
+Wenn ein Q# Programm von der Befehlszeile aus ausgeführt wird, ist der vollständige Zustands Simulator der Standardziel Computer. Optional können Sie den Parameter **--Simulator** (oder **-s** ) verwenden, um den gewünschten Zielcomputer anzugeben. Beide der folgenden Befehle führen ein Programm mithilfe des vollständigen Zustands Simulators aus. 
 
 ```dotnetcli
 dotnet run
@@ -53,7 +56,7 @@ dotnet run -s QuantumSimulator
 
 ### <a name="invoking-the-simulator-from-juptyer-notebooks"></a>Aufrufen des Simulators aus juptyer Notebooks
 
-Verwenden [Sie den](xref:microsoft.quantum.iqsharp.magic-ref.simulate) Befehl "IQ # Magic", um den Q #-Vorgang auszuführen.
+Verwenden Sie den I Q# Magic-Befehl [% simulieren](xref:microsoft.quantum.iqsharp.magic-ref.simulate) , um den Q# Vorgang auszuführen.
 
 ```
 %simulate myOperation
@@ -76,6 +79,6 @@ Der vollständige Zustands Simulator verwendet [OpenMP](http://www.openmp.org/) 
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Quantum-Ressourcenschätzung](xref:microsoft.quantum.machines.resources-estimator)
-- [Quantum-zu-ffoli-Simulator](xref:microsoft.quantum.machines.toffoli-simulator)
+- [Ressourcenschätzung für Quantencomputer](xref:microsoft.quantum.machines.resources-estimator)
+- [Toffoli-Simulator für Quantencomputer](xref:microsoft.quantum.machines.toffoli-simulator)
 - [Quantum-Ablauf Verfolgungs Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)

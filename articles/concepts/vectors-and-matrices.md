@@ -1,6 +1,8 @@
 ---
 Title: Vektoren und Matrizen in Quantum Computing Description: Erlernen Sie die Grundlagen der Arbeit mit Vektoren und Matrizen.
 Autor: quantumwriter UID: Microsoft. Quantum. Concepts. Vectors ms. Author: nawiebe@microsoft.com ms. Date: 12/11/2017 ms. Topic: article NO-LOC:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -87,7 +89,7 @@ Eine Vertrautheit mit Vektoren und Matrizen ist für das Verständnis von Quantu
 
 Ein Spalten Vektor (oder einfach [*Vektor*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $ $ der Dimension (oder Größe) $ n $ ist eine Auflistung von $ n $ komplexen Zahlen $ (V_1 V_2, \ldots, v_n), die $ als Spalte angeordnet sind:
 
-$$Ramelow=\begin{bmatrix}
+$$v =\begin{bmatrix}
 v_1\\\\
 v_2\\\\
 \vdots\\\\
@@ -215,7 +217,7 @@ $$
     =\begin{bmatrix}a c \\\\ a d \\\\ a e \\\\ b c \\\\ b d \\\\\end{bmatrix}
 $$
 
-und
+and
 
 $$
     \begin{bmatrix}
@@ -242,7 +244,7 @@ $$
     CG \ ch \ DG \ dh \end{bmatrix} .
 $$
 
-Eine abschließende, nützliche, in Bezug auf das tensorflow-Produkt verwendete Anmerkung ist, dass für alle Vektor- $ v $ -oder Matrix- $ m $ , $ v ^ { \otimes n } $ oder $ M ^ { \otimes n } $ für ein $ n $ -Fold wiederholtes tensorflow-Produkt kurz Hand ist.  Beispiele:
+Eine abschließende, nützliche, in Bezug auf das tensorflow-Produkt verwendete Anmerkung ist, dass für alle Vektor- $ v $ -oder Matrix- $ m $ , $ v ^ { \otimes n } $ oder $ M ^ { \otimes n } $ für ein $ n $ -Fold wiederholtes tensorflow-Produkt kurz Hand ist.  Beispiel:
 
 \begin{align}
 &\begin{bmatrix}1 \\\\ 0 1 \end{bmatrix} ^ { \otimes } = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} , \qquad \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} ^ { \otimes 2 } = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} , \qquad \begin{bmatrix} 1 \\\\ -1 \end{bmatrix} ^ { \otimes 2 } = \begin{bmatrix} 1 \\\\ -1 \\\\ -1 \\\\ 1 \end{bmatrix} ,\\\\

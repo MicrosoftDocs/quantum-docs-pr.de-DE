@@ -1,21 +1,24 @@
 ---
-title: 'Diagnose in den Q # Standard-Bibliotheken'
-description: 'Erfahren Sie mehr über die Diagnosefunktionen und-Vorgänge in den Q # Standard-Bibliotheken, die zum Abfangen von Fehlern oder Fehlern in quantenprogrammen verwendet werden'
+title: Diagnose in den Q# Standardbibliotheken
+description: Erfahren Sie mehr über die Diagnosefunktionen und Vorgänge in den Q# Standardbibliotheken, die zum Abfangen von Fehlern oder Fehlern in Quantum-Programmen verwendet werden.
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 324753cfa1b7d940bf5a0bbe7665f19cc6dda82c
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4a98795b2459adaa4e47c888751121fffdc70971
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870633"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868541"
 ---
 # <a name="diagnostics"></a>Diagnose #
 
 Wie bei der klassischen Entwicklung ist es wichtig, dass Sie Fehler und Fehler in quantumprogrammen diagnostizieren können.
-Die Q #-Standardbibliotheken bieten eine Vielzahl verschiedener Möglichkeiten, um die Richtigkeit von quantenprogrammen sicherzustellen, wie in beschrieben <xref:microsoft.quantum.guide.testingdebugging> .
+Die Q# Standardbibliotheken bieten eine Vielzahl verschiedener Möglichkeiten, um die Richtigkeit von quantenprogrammen sicherzustellen, wie in beschrieben <xref:microsoft.quantum.guide.testingdebugging> .
 Diese Unterstützung wird größtenteils in Form von Funktionen und Vorgängen bereitgestellt, die entweder den Zielcomputer anweisen, zusätzliche Diagnoseinformationen für das Host Programm oder den Entwickler bereitzustellen, oder die Richtigkeit der Bedingungen und invarianten erzwingen, die durch den Funktions-oder Vorgangs Aufrufsatz ausgedrückt werden.
 
 ## <a name="machine-diagnostics"></a>Computer Diagnose ##
@@ -30,7 +33,7 @@ Message($"About to rotate by an angle of {angle}...");
 ```
 
 > [!NOTE]
-> `Message`weist eine Signatur auf `(String -> Unit)` , die wiederum darstellt, dass die Ausgabe einer Debugprotokollierung nicht innerhalb von Q # beobachtet werden kann.
+> `Message`verfügt über eine Signatur `(String -> Unit)` , die wiederum darstellt, dass die Ausgabe einer Debugprotokollierung nicht innerhalb von erkannt werden kann Q# .
 
 Die <xref:microsoft.quantum.diagnostics.dumpmachine> <xref:microsoft.quantum.diagnostics.dumpregister> callables und weisen Zielcomputer an, Diagnoseinformationen zu allen derzeit zugeordneten Qubits bzw. zu einem bestimmten Register von Qubits bereitzustellen.
 Jeder Zielcomputer variiert in Abhängigkeit von den Diagnoseinformationen, die als Reaktion auf eine dumpanweisung bereitgestellt werden.
@@ -49,7 +52,7 @@ Diese Bedingungen können in Form von _Fakten_ _auftreten, die_die Werte Ihrer E
 Beispielsweise `EqualityFactI(1 + 1, 2, "1 + 1 != 2")` stellt die mathematische Tatsache dar, dass $1 + 1 = $2, während `AssertQubit(One, qubit)` die Bedingung darstellt, die die Messung `qubit` `One` mit Sicherheit zurückgibt.
 Im ersten Fall können wir die Richtigkeit der Bedingung nur anhand ihrer Werte überprüfen, während wir im letzteren Fall etwas über den Zustand des Qubit wissen müssen, um die Aussage auszuwerten.
 
-Die Q # Standard-Bibliotheken bieten verschiedene Funktionen für die Darstellung von Fakten, einschließlich:
+Die Q# Standardbibliotheken bieten verschiedene Funktionen für die Darstellung von Fakten, einschließlich:
 
 - <xref:microsoft.quantum.diagnostics.fact>
 - <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact>
@@ -67,7 +70,7 @@ Im allgemeinen <xref:microsoft.quantum.diagnostics.assertmeasurement> wird durch
 Wenn die-Übersetzung fehlschlägt, wird die Ausführung beendet, indem `fail` mit der angegebenen Meldung aufgerufen wird.
 Standardmäßig ist dieser Vorgang nicht implementiert. Simulatoren, die diese unterstützen können, sollten eine Implementierung bereitstellen, die eine Lauf Zeit Überprüfung ausführt.
 `AssertMeasurement`hat die Signatur `((Pauli[], Qubit[], Result, String) -> ())` .
-Da `AssertMeasurement` eine Funktion mit einem leeren Tupel als Ausgabetyp ist, sind keine Auswirkungen des Aufrufs `AssertMeasurement` in einem Q #-Programm Observable-Ausdrücke.
+Da `AssertMeasurement` eine Funktion mit einem leeren Tupel als Ausgabetyp ist, sind keine Auswirkungen von Aufrufen `AssertMeasurement` in einem Programm Observable-Ausdrücke Q# .
 
 Die <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> Vorgangs Funktion bestätigt, dass das Messen der angegebenen Qubits in der angegebenen Pauli-Basis das angegebene Ergebnis mit der angegebenen Wahrscheinlichkeit innerhalb einiger Toleranz hat.
 Toleranz ist additiv (z. b. `abs(expected-actual) < tol` ).

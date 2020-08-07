@@ -1,6 +1,8 @@
 ---
 Title: Quantum Oracles Description: Hier erfahren Sie, wie Sie mit Quantum-Oracles, Black Box-Vorgängen, die als Eingabe für einen anderen Algorithmus verwendet werden, arbeiten und definieren.
 Autor: cgranade UID: Microsoft. Quantum. Concepts. Oracles ms. Author: Christopher.Granade@microsoft.com ms. Date: 07/11/2018 ms. Topic: article NO-LOC:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -105,7 +107,7 @@ $$
 $ = \dagger $ Wir haben nun die Erstellung durch die Erstellung der beiden früheren Probleme gelöst.
 
 > [!TIP]
->Beachten Sie, dass o $ = { \dagger } $ $ ^ 2 = \boldone $ seit $ a \oplus b \oplus b = a $ for $ a, b \in \[ ! Schel. No-Loc ({)] 0, 1 \[ ! Schel. No-Loc (})] $ .
+>Beachten Sie, dass o $ = { \dagger } $ $ ^ 2 = \boldone $ seit $ a \oplus b \oplus b = a $ für alle $ a, b \in \: :: NO-LOC ({)::: 0, 1 \: :: NO-LOC (})::: $ .
 >Folglich ist $ O \ket { x } \ket { y \oplus f (x) } = \ket { x } \ket { y \oplus f (x) \oplus f (x) } = \ket { x } \ket { y } $ .
 
 Wichtig: die Definition eines Oracle auf diese Weise für jeden Berechnungsbasis Status $ \ket { x } \ket { y } $ definiert auch, wie $ O $ für einen beliebigen anderen Zustand agiert.

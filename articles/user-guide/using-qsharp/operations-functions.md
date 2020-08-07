@@ -1,28 +1,31 @@
 ---
-title: 'Vorgänge und Funktionen in Q #'
+title: Vorgänge und Funktionen inQ#
 description: Definieren und aufzurufen von Vorgängen und Funktionen sowie der kontrollierten und der Adjoint-Vorgangs Spezialisierung.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
-ms.openlocfilehash: 08eaf150a38afd789f8a23f567ff111d002bac07
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 76437c83df894fa86409e680f961d97e267c6869
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884215"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867878"
 ---
-# <a name="operations-and-functions-in-q"></a>Vorgänge und Funktionen in Q #
+# <a name="operations-and-functions-in-no-locq"></a>Vorgänge und Funktionen inQ#
 
 ## <a name="defining-new-operations"></a>Definieren von neuen Vorgängen
 
-Vorgänge sind das Kernstück von Q #.
-Nach der Deklaration können Sie entweder von klassischen .NET-Anwendungen aus aufgerufen werden, z. b. durch die Verwendung eines Simulators oder durch andere Vorgänge in Q #.
-Jeder in Q # definierte Vorgang kann eine beliebige Anzahl anderer Vorgänge, einschließlich der integrierten systeminternen Vorgänge, die von der Sprache definiert sind, aufzurufen. Die spezielle Art und Weise, in der Q # diese systeminternen Vorgänge definiert, hängt vom Zielcomputer ab.
+Vorgänge sind der Kern von Q# .
+Nach der Deklaration können Sie entweder von klassischen .NET-Anwendungen aus aufgerufen werden, z. b. durch die Verwendung eines Simulators oder durch andere Vorgänge in Q# .
+Jeder in definierte Vorgang Q# kann eine beliebige Anzahl anderer Vorgänge, einschließlich der integrierten systeminternen Vorgänge, die von der Sprache definiert sind, aufzurufen. Die spezielle Methode, mit der diese systeminternen Q# Vorgänge definiert werden, hängt vom Zielcomputer ab.
 Bei der Kompilierung wird jeder Vorgang als .NET-Klassentyp dargestellt, der den Ziel Computern bereitgestellt werden kann.
 
-Jede f #-Quelldatei kann eine beliebige Anzahl von Vorgängen definieren.
+Jede Q# Quelldatei kann eine beliebige Anzahl von Vorgängen definieren.
 Vorgangs Namen müssen innerhalb eines Namespace eindeutig sein und können keinen Konflikt mit Typ-oder Funktionsnamen verursachen.
 
 Eine Vorgangs Deklaration besteht aus dem Schlüsselwort `operation` , gefolgt von dem Symbol, das den Namen des Vorgangs enthält, einem typisierten bezeichnertupel, das die Argumente für den Vorgang definiert, einem Doppelpunkt `:` , einer Typanmerkung, die den Ergebnistyp des Vorgangs beschreibt, optional einer Anmerkung mit den Vorgangs Merkmalen, einer geöffneten geschweiften Klammer und dem Text der Vorgangs Deklaration in geschweiften `{ }`
@@ -61,16 +64,16 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 ```
 
 > [!NOTE]
-> Jeder Vorgang in Q # nimmt genau eine Eingabe an und gibt genau eine Ausgabe zurück.
+> Jeder Vorgang in Q# erfordert genau eine Eingabe und gibt genau eine Ausgabe zurück.
 > Mehrere Eingaben und Ausgaben werden mithilfe von *Tupeln*dargestellt, die mehrere Werte in einem einzelnen Wert zusammenfassen.
-> In dieser Hinsicht ist Q # eine "Tupel-in-tupelout"-Sprache.
+> In dieser Hinsicht Q# ist eine "Tupel-in-tupelout"-Sprache.
 > Im Anschluss an dieses Konzept sollte ein Satz leerer Klammern, `()` , als leeres Tupel mit dem-Typ gelesen werden `Unit` .
 
 ## <a name="controlled-and-adjoint-operations"></a>Kontrollierte und Adjoint-Vorgänge
 
-*Wenn ein* Vorgang eine einheitliche Transformation implementiert, wie dies bei vielen Vorgängen in Q # der Fall ist, ist es möglich, zu definieren, wie der Vorgang beim angleichen oder *Steuern*agiert. Eine *Adjoint* -Spezialisierung eines Vorgangs gibt an, wie die "Umkehrung" des Vorgangs agiert, während eine *kontrollierte* Spezialisierung angibt, wie ein Vorgang funktioniert, wenn die Anwendung auf den Zustand eines bestimmten Quantum-Registers angewendet wird.
+Wenn ein Vorgang eine einheitliche Transformation implementiert, wie dies bei vielen Vorgängen in der Fall ist Q# , ist es möglich, zu definieren, wie der *adjointed* Vorgang bei Anfügevorgang oder *Kontrolle*agiert. Eine *Adjoint* -Spezialisierung eines Vorgangs gibt an, wie die "Umkehrung" des Vorgangs agiert, während eine *kontrollierte* Spezialisierung angibt, wie ein Vorgang funktioniert, wenn die Anwendung auf den Zustand eines bestimmten Quantum-Registers angewendet wird.
 
-Adjoints von Quantum-Vorgängen sind für viele Aspekte von Quantum Computing von entscheidender Bedeutung. Ein Beispiel für eine solche Situation, die zusammen mit einer nützlichen Q #-Programmiertechnik erläutert wird, finden Sie unter " [Konjugationen](#conjugations) " in diesem Artikel. 
+Adjoints von Quantum-Vorgängen sind für viele Aspekte von Quantum Computing von entscheidender Bedeutung. Ein Beispiel für eine solche Situation, die zusammen mit einem nützlichen Programmierverfahren erläutert Q# wird, finden Sie unter " [Konjugationen](#conjugations) " in diesem Artikel. 
 
 Bei der kontrollierten Version eines Vorgangs handelt es sich um einen neuen Vorgang, der den Basis Vorgang effektiv anwendet, wenn sich alle Steuerelement-Qubits in einem angegebenen Zustand befinden.
 Wenn sich die Steuerelement-Qubits in der superposition befinden, wird der Basis Vorgang einheitlich auf den entsprechenden Teil der superposition angewendet.
@@ -83,15 +86,15 @@ Natürlich könnte auch eine *kontrollierte Adjoint* -Spezialisierung vorhanden 
 > Wenn Sie einen Vorgang nacheinander anwenden und dessen Adjoint in einen Zustand versetzt wird, bleibt der Zustand unverändert, wie in der Tatsache veranschaulicht, dass $UU ^ \dagger = U ^ \dagger U = \id $ die Identitätsmatrix ist.
 > Die einheitliche Darstellung eines kontrollierten Vorgangs ist etwas flexibler, aber weitere Informationen finden Sie unter [Quantum Computing Concepts: Multiple Qubits](xref:microsoft.quantum.concepts.multiple-qubits).
 
-Im folgenden Abschnitt wird beschrieben, wie Sie diese verschiedenen Spezialisierungs Informationen in Ihrem Q #-Code aufzurufen und wie Sie Vorgänge zur Unterstützung definieren.
+Im folgenden Abschnitt wird beschrieben, wie Sie diese verschiedenen Spezialisierungs Informationen in Ihrem Code aufzurufen Q# und wie Sie Vorgänge zur Unterstützung definieren.
 
 ### <a name="calling-operation-specializations"></a>Aufrufen von Vorgangs Spezialisierungs Vorgängen
 
-Ein *Funktor* in Q # ist eine Factory, die einen neuen Vorgang aus einem anderen Vorgang definiert.
-Die zwei standardfunktoren in Q # sind `Adjoint` und `Controlled` .
+Ein *Funktor* in Q# ist eine Factory, die einen neuen Vorgang aus einem anderen Vorgang definiert.
+Die beiden standardfunktoren in Q# sind `Adjoint` und `Controlled` .
 
 Funktoren haben Zugriff auf die Implementierung des Basis Vorgangs, wenn die Implementierung des neuen Vorgangs definiert wird.
-Daher können Funktoren komplexere Funktionen als herkömmliche Funktionen höherer Ebene ausführen. Funktoren haben keine Darstellung im Q #-Typsystem. Daher ist es derzeit nicht möglich, Sie an eine Variable zu binden oder Sie als Argumente zu übergeben. 
+Daher können Funktoren komplexere Funktionen als herkömmliche Funktionen höherer Ebene ausführen. Funktoren haben keine Darstellung im Q# Typsystem. Daher ist es derzeit nicht möglich, Sie an eine Variable zu binden oder Sie als Argumente zu übergeben. 
 
 Verwenden Sie ein Funktor, indem Sie es auf einen Vorgang anwenden, der einen neuen Vorgang zurückgibt.
 Wenn Sie das Funktor beispielsweise auf den-Vorgang anwenden, wird `Adjoint` `Y` der neue-Vorgang zurückgegeben `Adjoint Y` . Sie können den neuen Vorgang wie jeden anderen Vorgang aufrufen.
@@ -109,7 +112,7 @@ Das `Adjoint` Funktor ist eine eigene Umkehrung, d. h `Adjoint Adjoint Op` ., is
 Ebenso `Controlled X(controls, target)` wendet das `Controlled` Funktor auf den `X` -Vorgang an, um einen neuen-Vorgang zu generieren, und wendet diesen neuen-Vorgang auf `controls` und an `target` .
 
 > [!NOTE]
-> In Q # nehmen kontrollierte Versionen immer ein Array von Steuerungs-Qubits auf, und die Steuerung basiert immer auf allen Steuerelement-Qubits, die sich im Status "Compu()" befinden `PauliZ` `One` , "$ \ket {1} $".
+> In Q# werden von kontrollierten Versionen immer ein Array von Steuerelement-Qubits übernommen, und die Steuerung basiert immer auf allen Steuerelement-Qubits, die sich im Status "Compu()" befinden ( `PauliZ` `One` $ \ket {1} $).
 > Das Steuern auf der Grundlage anderer Zustände wird erreicht, indem der entsprechende einheitliche Vorgang auf die Steuerungs Qubits vor dem kontrollierten Vorgang angewendet und dann die Umkehrung des einheitlichen Vorgangs nach dem kontrollierten Vorgang angewendet wird.
 > Wenn Sie z. b `X` . einen Vorgang vor und nach einer kontrollierten Operation auf ein Steuerelement-Qubit anwenden, steuert der Vorgang den `Zero` Zustand ($ \ket {0} $) für dieses Qubit. Anwenden eines `H` Vorgangs vor und nach der Steuerung des `PauliX` `One` Zustands, d. h.-1 eigen Wert von Pauli X, $ \ket {-} \mathrel{: =} (\ket {0} -\ket {1} )/\sqrt {2} $ anstelle des- `PauliZ` `One` Zustands.
 
@@ -140,7 +143,7 @@ In der ersten Vorgangs Deklaration in den vorherigen Beispielen wurden die Vorg�
 Wie z. b. `DecodeSuperdense` Messungen, ist es kein einheitlicher Vorgang. Daher könnten weder die kontrollierten noch die nicht zusammenhängenden Spezialisierungs Maßnahmen vorhanden sein `Unit` .
 Wenn Sie jedoch `BitFlip` einfach den einheitlichen <xref:microsoft.quantum.intrinsic.x> Vorgang ausführen, können Sie ihn mit beiden Spezialisierungs Vorgängen definieren.
 
-In diesem Abschnitt wird erläutert, wie Sie das vorhanden sein von Spezialisierungs Funktionen in Ihre f #-Vorgangs Deklarationen einschließen, sodass Sie in Verbindung mit dem-oder dem-funktors aufgerufen werden können `Adjoint` `Controlled` .
+In diesem Abschnitt wird erläutert, wie Sie das vorhanden sein von Spezialisierungs Funktionen in die Q# Vorgangs Deklarationen einschließen und somit die Möglichkeit haben, in Verbindung mit dem-oder dem- `Adjoint` `Controlled` funktors aufzurufen.
 Weitere Informationen zu einigen Situationen, in denen es entweder gültig oder nicht zulässig ist, bestimmte Spezialisierungs Informationen zu deklarieren, finden Sie unter Umstände für die Überprüfung [von Spezialisierungs](#circumstances-for-validly-defining-specializations) Informationen in diesem Artikel.
 
 Vorgangs Merkmale definieren, welche Arten von Funktions tüktoren Sie auf den deklarierten Vorgang anwenden können und welche Auswirkungen Sie haben. Das vorhanden sein dieser Spezialisierungsmöglichkeiten kann als Teil der Vorgangs Signatur deklariert werden, insbesondere über eine Anmerkung mit den Vorgangs Merkmalen: entweder `is Adj` , `is Ctl` oder `is Adj + Ctl` .
@@ -189,7 +192,7 @@ Im folgenden finden Sie die vollständige Palette der Möglichkeiten mit einigen
 
 #### <a name="explicit-specialization-declarations"></a>Explizite Spezialisierungs Deklarationen
 
-F #-Vorgänge können die folgenden expliziten Spezialisierungs Deklarationen enthalten:
+Q#Vorgänge können die folgenden expliziten Spezialisierungs Deklarationen enthalten:
 
 - Die `body` Spezialisierung gibt die Implementierung des Vorgangs ohne angewendete Funktoren an.
 - Die `adjoint` Spezialisierung gibt die Implementierung des Vorgangs mit `Adjoint` angewendetem Funktionselement an.
@@ -224,7 +227,7 @@ Die- `auto` Direktive wird in die folgende generierte-Direktive aufgelöst, wenn
 > [!TIP]   
 > Wenn es sich um einen eigenständigen Vorgang handelt, geben Sie entweder die Adjoint-oder die kontrollierte Adjoint-Spezialisierung mithilfe der Generations Direktive explizit `self` an, damit der Compiler diese Informationen für Optimierungszwecke nutzen kann.
 
-Eine Spezialisierungs Deklaration, die eine benutzerdefinierte Implementierung enthält, besteht aus einem argumenttupel, gefolgt von einem Anweisungsblock mit dem Q #-Code, der die Spezialisierung implementiert.
+Eine Spezialisierungs Deklaration, die eine benutzerdefinierte Implementierung enthält, besteht aus einem argumenttupel, gefolgt von einem Anweisungsblock mit dem Q# Code, der die Spezialisierung implementiert.
 In der Argumentliste `...` wird verwendet, um die Argumente darzustellen, die für den Vorgang als Ganzes deklariert werden.
 Für `body` und `adjoint` sollte die Argumentliste immer sein `(...)` . bei `controlled` und `adjoint controlled` sollte die Argumentliste ein Symbol sein, das das Array von Steuerelement-Qubits, gefolgt von `...` , in Klammern darstellt, z. b `(controls,...)` ..
 
@@ -326,9 +329,9 @@ Bei einem Vorgang, dessen Text Aufrufe von anderen Vorgängen enthält, die nich
 
 Verwenden Sie einen Vorgang mit zusätzlichen Funktoren, die überall unterstützt werden, wenn Sie einen Vorgang mit weniger Funktoren, aber derselben Signatur verwenden. Verwenden Sie beispielsweise einen Vorgang des Typs an einer beliebigen Stelle, an `(Qubit => Unit is Adj)` der Sie einen Vorgang des Typs verwenden `(Qubit => Unit)` .
 
-Q # ist in Bezug auf Aufruf Bare Rückgabe Typen *kovariant* : ein Aufruf bares Element, das einen Typ zurückgibt, `'A` ist mit einem Aufruf baren Element mit dem gleichen Eingabetyp und einem Ergebnistyp kompatibel, der mit kompatibel ist `'A` .
+Q#ist *kovariant* in Bezug auf Aufruf Bare Rückgabe Typen: ein Aufruf barer, der einen-Typ zurückgibt, `'A` ist mit einem Aufruf baren-Element mit demselben Eingabetyp und einem Ergebnistyp kompatibel, der mit kompatibel ist `'A` .
 
-Q # ist in Bezug auf Eingabetypen *kontra Variant* : ein Aufruf bares Element, das einen Typ `'A` als Eingabe annimmt, ist mit einem Aufruf baren mit demselben Ergebnistyp und einem Eingabetyp kompatibel, der mit kompatibel ist `'A` .
+Q#ist *kontra Variant* in Bezug auf Eingabetypen: ein Aufruf bares Element, das einen Typ `'A` als Eingabe annimmt, ist mit einem Aufruf baren mit dem gleichen Ergebnistyp und einem Eingabetyp kompatibel, der mit kompatibel ist `'A` .
 
 Das heißt, wenn die folgenden Definitionen definiert sind,
 
@@ -357,7 +360,7 @@ Sie können
 - Gibt einen Wert vom Typ `(Qubit[] => Unit is Adj + Ctl)` aus zurück `ConjugateInvertWith` .
 
 > [!IMPORTANT]
-> F # 0,3 hat einen signifikanten Unterschied im Verhalten von benutzerdefinierten Typen eingeführt.
+> Q#0,3 hat einen signifikanten Unterschied im Verhalten von benutzerdefinierten Typen eingeführt.
 
 Benutzerdefinierte Typen werden als umschließende Version des zugrunde liegenden Typs und nicht als Untertyp behandelt.
 Dies bedeutet, dass ein Wert eines benutzerdefinierten Typs nicht verwendbar ist, wenn Sie erwarten, dass ein Wert des zugrunde liegenden Typs ist.
@@ -380,7 +383,7 @@ operation ApplyWith<'T>(
 }
 ```
 
-Ab Version 0,9 unterstützt Q # eine Konjugations Anweisung, die die vorherige Transformation implementiert. Mit dieser Anweisung kann der Vorgang `ApplyWith` folgendermaßen implementiert werden:
+Ab Version 0,9 Q# unterstützt eine Konjugations Anweisung, die die vorherige Transformation implementiert. Mit dieser Anweisung kann der Vorgang `ApplyWith` folgendermaßen implementiert werden:
 
 ```qsharp
 operation ApplyWith<'T>(
@@ -405,12 +408,12 @@ Da alle änderbaren Variablen, die als Teil des Blocks innerhalb von verwendet w
 
 ## <a name="defining-new-functions"></a>Definieren neuer Funktionen
 
-Funktionen sind rein deterministische, klassische Routinen in Q #, die sich von Vorgängen unterscheiden, da Sie keine Auswirkungen auf die Berechnung eines Ausgabe Werts haben können.
+Funktionen sind rein deterministische, klassische Routinen in Q# , die sich von Vorgängen unterscheiden, da Sie keine Auswirkungen auf die Berechnung eines Ausgabe Werts haben dürfen.
 Insbesondere können Funktionen keine Vorgänge aufzurufen. reagieren, zuordnen oder ausleihen von Qubits Stichproben von Zufallszahlen oder hängt anderweitig von dem Zustand ab, der über den Eingabe Wert zu einer Funktion hinausgeht.
-Folglich sind Q #-Funktionen *rein*, da Sie die gleichen Eingabewerte immer denselben Ausgabe Werten zuordnen.
-Durch dieses Verhalten kann der Q #-Compiler sicher neu anordnen, wie und wann Funktionen beim Erstellen von Vorgangs speziationen aufgerufen werden.
+Folglich Q# sind Funktionen *rein*, da Sie die gleichen Eingabewerte immer denselben Ausgabe Werten zuordnen.
+Dieses Verhalten ermöglicht es dem Q# Compiler, sicherzustellen, wie und wann Funktionen beim Erzeugen von Vorgangs speziationen aufgerufen werden.
 
-Jede f #-Quelldatei kann eine beliebige Anzahl von Funktionen definieren.
+Jede Q# Quelldatei kann eine beliebige Anzahl von Funktionen definieren.
 Funktionsnamen müssen innerhalb eines Namespace eindeutig sein und können nicht mit Vorgangs-oder Typnamen in Konflikt stehen.
 
 Das Definieren einer Funktion funktioniert ähnlich wie ein Vorgang, mit dem Unterschied, dass für eine Funktion keine Adjoint-oder kontrollierten Spezialisierungs Funktionen definiert werden können.
@@ -442,7 +445,7 @@ function DotProduct(a : Double[], b : Double[]) : Double {
 
 Wenn dies möglich ist, ist es hilfreich, Klassische Logik in Bezug auf Funktionen anstelle von Vorgängen zu schreiben, damit Vorgänge Sie leichter verwenden können. Wenn Sie z. b. die vorherige `Square` Deklaration als *Vorgang*geschrieben haben, konnte der Compiler nicht garantieren, dass der Aufruf mit derselben Eingabe konstant die gleichen Ausgaben erzeugt.
 
-Um den Unterschied zwischen Funktionen und Vorgängen zu unterstreichen, sollten Sie das Problem der klassischen Stichprobenentnahme einer Zufallszahl aus einem f #-Vorgang in Erwägung gezogen
+Um den Unterschied zwischen Funktionen und Vorgängen zu unterstreichen, sollten Sie das Problem der klassischen Stichprobenentnahme für eine Zufallszahl innerhalb eines- Q# Vorgangs beachten:
 
 ```qsharp
 operation U(target : Qubit) : Unit {
@@ -464,7 +467,7 @@ Daher ist es einfach, diese Logik in anderen Funktionen und Vorgängen zu verwen
 
 Viele Funktionen und Vorgänge, die Sie möglicherweise definieren möchten, sind nicht wirklich stark von den Typen Ihrer Eingaben abhängig, sondern verwenden nur implizit ihre Typen über eine andere Funktion oder einen anderen Vorgang.
 Sehen Sie sich beispielsweise das *Karten* Konzept an, das vielen funktionalen Sprachen gemeinsam ist. bei Angabe einer Funktion $f (x) $ und einer Auflistung von Werten $ \{ x_1, x_2, \dots, x_n \} $ gibt MAP eine neue Auflistung $ \{ f (x_1), f (x_2), \dots, f (x_n) \} $ zurück.
-Um dies in Q # zu implementieren, nutzen Sie die Tatsache, dass Functions die erste Klasse ist.
+Um dies in zu implementieren Q# , nutzen Sie die Tatsache, dass Functions die erste Klasse ist.
 Im folgenden finden Sie ein kurzes Beispiel für die `Map` Verwendung von `T` als Platzhalter, während Sie herausfinden, welche Typen Sie benötigen.
 
 ```qsharp
@@ -504,17 +507,17 @@ Wenn Sie ein neues Tupel oder einen neuen UDT erstellen, müssen Sie nun auch ei
 Diese Funktion ist zwar für eine kleine Anzahl solcher Funktionen übertragbar, da Sie jedoch mehr und mehr Funktionen der gleichen Form wie erfassen `Map` , werden die Kosten für die Einführung neuer Typen in einer relativ kurzen Reihenfolge nicht sehr groß.
 
 Ein Großteil dieser Schwierigkeit ergibt sich jedoch aus der Tatsache, dass Sie dem Compiler nicht die erforderlichen Informationen zur Erkennung der verschiedenen Versionen von erhalten haben `Map` .
-Effektiv möchten Sie, dass der Compiler `Map` als eine mathematische Funktion von q #- *Typen* zu q #-Funktionen behandelt.
+Effektiv möchten Sie, dass der Compiler `Map` als eine mathematische Funktion von Q# *Typen* zu Q# Funktionen behandelt.
 
-Q # formalisiert dieses Konzept, indem es Funktionen und Operationen *Typparameter*sowie ihre normalen tupelparameter zulässt.
+Q#formalisiert dieses Konzept, indem Funktionen und Vorgänge sowohl *Typparameter*als auch Ihre normalen tupelparameter aufweisen können.
 In den vorherigen Beispielen möchten Sie sich vorstellen, `Map` dass im `Int, Pauli` ersten Fall Typparameter und `Double, String` im zweiten Fall vorhanden sind.
 Verwenden Sie zum größten Teil diese Typparameter, als wären Sie normale Typen. Verwenden Sie Werte von Typparametern, um Arrays und Tupel zu erstellen, Funktionen und Vorgänge aufzurufen und gewöhnliche oder änderbare Variablen zuzuweisen.
 
 > [!NOTE]
-> Der extremste Fall der indirekten Abhängigkeit ist die von Qubits, bei denen ein Q #-Programm nicht direkt auf die Struktur des `Qubit` Typs zurückgreifen kann, sondern solche Typen an andere Vorgänge und Funktionen übergeben **muss** .
+> Der extremste Fall der indirekten Abhängigkeit ist die von Qubits, bei denen sich ein Q# Programm nicht direkt auf die Struktur des Typs verlassen kann, `Qubit` sondern solche Typen an andere Vorgänge und Funktionen übergeben **muss** .
 
 Wenn Sie zum vorherigen Beispiel zurückkehren, sehen Sie, dass `Map` über Typparameter verfügen muss, eines für die Darstellung der Eingabe `fn` und eines zum Darstellen der Ausgabe `fn` .
-In f # wird dies durch Hinzufügen von spitzen Klammern (d `<>` . h. nicht Klammer $ \braket {} $!) nach dem Namen einer Funktion oder eines Vorgangs in der Deklaration und durch Auflisten der einzelnen Typparameter geschrieben.
+In Q# wird dies durch Hinzufügen von spitzen Klammern (d `<>` . h. nicht Klammer $ \braket {} $!) nach dem Namen einer Funktion oder eines Vorgangs in der Deklaration und durch Auflisten der einzelnen Typparameter geschrieben.
 Der Name jedes Typparameters muss mit einem Tick beginnen `'` , was darauf hinweist, dass es sich um einen Typparameter handelt und nicht um einen normalen Typ (auch als *konkreter* Typ bezeichnet).
 Daher `Map` wird geschrieben:
 
@@ -541,8 +544,8 @@ let paulis = Map(IntToPauli, ints);
 ```
 
 > [!TIP]
-> Das Schreiben von generischen Funktionen und Vorgängen ist eine Stelle, an der "Tupel-in-Tupel-out" eine sehr nützliche Methode für den Umgang mit Q #-Funktionen und-Vorgängen ist.
-> Da jede Funktion genau eine Eingabe annimmt und genau eine Ausgabe zurückgibt, gleicht eine Eingabe vom Typ `'T -> 'U` *jede beliebige* Q #-Funktion ab.
+> Das Schreiben von generischen Funktionen und Vorgängen ist eine Stelle, an der "Tupel-in-tupelout" eine sehr nützliche Methode ist, um Q# Funktionen und Vorgänge zu übernehmen.
+> Da jede Funktion genau eine Eingabe annimmt und genau eine Ausgabe zurückgibt, gleicht eine Eingabe vom Typ `'T -> 'U` *jede beliebige* Q# Funktion ab.
 > Entsprechend können Sie jeden Vorgang an eine Eingabe vom Typ übergeben `'T => 'U` .
 
 Sehen Sie sich als zweites Beispiel die Herausforderung an, eine Funktion zu schreiben, die die Komposition zweier anderer Funktionen zurückgibt:
@@ -571,15 +574,15 @@ function Compose<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B)) : ('A -
 }
 ```
 
-Die Q #-Standardbibliotheken stellen eine Reihe von Typen parametrisierten Vorgängen und Funktionen bereit, um die Express-Ablauf Steuerung leichter zu gestalten.
-Diese werden im [Leitfaden der Q #-Standardbibliothek](xref:microsoft.quantum.libraries.standard.intro)erläutert.
+Die Q# Standardbibliotheken stellen einen Bereich von Typen parametrisierten Vorgängen und Funktionen bereit, um die Express-Ablauf Steuerung zu vereinfachen.
+Diese werden im [ Q# Handbuch zur Standardbibliothek](xref:microsoft.quantum.libraries.standard.intro)erläutert.
 
 
 ## <a name="callables-as-first-class-values"></a>Callables als First-Class-Werte
 
-Ein wichtiges Verfahren, um die Ablauf Steuerung und die klassische Logik mithilfe von Funktionen anstelle von Vorgängen zu überdenken, besteht darin, diese Vorgänge und Funktionen in Q # als *erste Klasse*zu verwenden.
+Ein wichtiges Verfahren, um die Ablauf Steuerung und die klassische Logik mithilfe von Funktionen anstelle von Vorgängen zu überdenken, besteht darin, diese Vorgänge und Funktionen in als Q# *erste Klasse*zu verwenden.
 Das heißt, Sie sind jeweils die einzelnen Werte in der Sprache.
-Beispielsweise ist der folgende vollständig gültige Q #-Code, wenn ein wenig indirekt:
+Beispielsweise ist der folgende vollständig gültige Q# Code, wenn ein wenig indirekt:
 
 ```qsharp
 operation FirstClassExample(target : Qubit) : Unit {
@@ -649,12 +652,12 @@ function SquareOperation(op : (Qubit => Unit)) : (Qubit => Unit) {
 }
 ```
 
-Im Prinzip könnte die klassische Logik in `SquareOperation` viel stärker einbezogen werden, aber Sie ist weiterhin vom Rest eines Vorgangs isoliert, indem die Garantien, die der Compiler über Funktionen bereitstellen kann. Die Q #-Standardbibliothek verwendet diesen Ansatz, um eine klassische Ablauf Steuerung auf eine Weise auszudrücken, die von Quantum-Programmen problemlos verwendet werden kann.
+Im Prinzip könnte die klassische Logik in `SquareOperation` viel stärker einbezogen werden, aber Sie ist weiterhin vom Rest eines Vorgangs isoliert, indem die Garantien, die der Compiler über Funktionen bereitstellen kann. Die Q# Standardbibliothek verwendet diesen Ansatz, um die klassische Ablauf Steuerung so auszudrücken, dass Quantum-Programme Sie problemlos verwenden können.
 
 
 ## <a name="recursion"></a>Rekursion
 
-F #-callables dürfen direkt oder indirekt rekursiv sein.
+Q#callables dürfen direkt oder indirekt rekursiv sein.
 Das heißt, ein Vorgang oder eine Funktion kann sich selbst aufrufen, oder Sie kann eine andere Aufruf Bare aufrufen, die den Aufruf baren Vorgang direkt oder indirekt aufruft.
 
 Es gibt jedoch zwei wichtige Kommentare zur Verwendung der Rekursion:
@@ -662,8 +665,8 @@ Es gibt jedoch zwei wichtige Kommentare zur Verwendung der Rekursion:
 - Die Verwendung von Rekursion bei Vorgängen beeinträchtigt wahrscheinlich bestimmte Optimierungen.
   Diese Störungen können erhebliche Auswirkungen auf die Ausführungszeit des Algorithmus haben.
 - Bei der Ausführung auf einem eigentlichen Quantum-Gerät ist der Stapel Speicherplatz möglicherweise eingeschränkt, sodass die Tiefe Rekursion zu einem Laufzeitfehler führen kann.
-  Insbesondere der Q #-Compiler und die Common Language Runtime erkennen und optimieren die Endrekursion nicht.
+  Der Q# Compiler und die Laufzeit identifizieren und optimieren die Endrekursion insbesondere nicht.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Erfahren Sie mehr über [Variablen](xref:microsoft.quantum.guide.variables) in f #.
+Erfahren Sie mehr über [Variablen](xref:microsoft.quantum.guide.variables) in Q# .

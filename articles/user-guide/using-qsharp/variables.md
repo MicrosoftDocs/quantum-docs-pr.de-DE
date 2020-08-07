@@ -1,28 +1,31 @@
 ---
-title: 'Variablen in Q #'
+title: Variablen inQ#
 description: füllbeschreibung
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
-ms.openlocfilehash: 08301f408dcb2211ba25c582a5e5aa43310b714a
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 00af0989cd5a1f9ccc7d9f2545acd0d256bc7eb9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885293"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867844"
 ---
-# <a name="variables-in-q"></a>Variablen in Q #
+# <a name="variables-in-no-locq"></a>Variablen inQ#
 
-Q # unterscheidet zwischen veränderbaren und unveränderlichen Symbolen oder *Variablen*, die an Ausdrücke gebunden/zugewiesen sind.
+Q#unterscheidet zwischen veränderbaren und unveränderlichen Symbolen oder *Variablen*, die an Ausdrücke gebunden/zugewiesen sind.
 Im Allgemeinen wird die Verwendung unveränderlicher Symbole empfohlen, da es dem Compiler ermöglicht, weitere Optimierungen auszuführen.
 
 Die linke Seite einer Bindung besteht aus einem symboltupel und der rechten Seite eines Ausdrucks.
 
 ## <a name="immutable-variables"></a>Unveränderliche Variablen
 
-Sie können einen Wert eines beliebigen Typs in Q # einer Variablen zur Wiederverwendung innerhalb eines Vorgangs oder einer Funktion mithilfe des `let` Schlüssel Worts zuweisen. 
+Sie können einen Wert eines beliebigen Typs in Q# einer Variablen für die Wiederverwendung innerhalb eines Vorgangs oder einer Funktion mithilfe des `let` Schlüssel Worts zuweisen. 
 
 Eine unveränderliche Bindung besteht aus dem Schlüsselwort `let` , gefolgt von einem Symbol oder einem symboltupel, einem Gleichheitszeichen `=` , einem Ausdruck, an den die Symbole gebunden werden, und einem abschließenden Semikolon.
 
@@ -55,7 +58,7 @@ Im folgenden finden Sie einige Beispiele für Methoden zur Neubindung von Anweis
 
 #### <a name="apply-and-reassign-statements"></a>Apply-and-REASSIGN-Anweisungen
 
-Eine bestimmte Art von `set` -Anweisung, die *Apply-and-REASSIGN* -Anweisung, stellt eine bequeme Möglichkeit zur Verkettung dar, wenn die Rechte Seite aus der Anwendung eines binären Operators besteht und das Ergebnis an das linke Argument des Operators zurückgesetzt werden soll. Beispiel:
+Eine bestimmte Art von `set` -Anweisung, die *Apply-and-REASSIGN* -Anweisung, stellt eine bequeme Möglichkeit zur Verkettung dar, wenn die Rechte Seite aus der Anwendung eines binären Operators besteht und das Ergebnis an das linke Argument des Operators zurückgesetzt werden soll. Ein auf ein Objekt angewendeter
 
 ```qsharp
 mutable counter = 0;
@@ -107,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-Im Fall von Arrays [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) stellt in der Q # Standard-Bibliothek die erforderlichen Tools für viele gängige Anforderungen an die Initialisierung und Bearbeitung von Arrays bereit. dadurch ist es nicht mehr erforderlich, Array Elemente an erster Stelle zu aktualisieren. 
+Im Fall von Arrays [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) stellt in der Q# Standardbibliothek die erforderlichen Tools für viele gängige Anforderungen an die Initialisierung und Bearbeitung von Arrays bereit, sodass es nicht erforderlich ist, Array Elemente an erster Stelle zu aktualisieren. 
 
 Update-und-REASSIGN-Anweisungen stellen bei Bedarf eine Alternative dar:
 
@@ -198,7 +201,7 @@ let n = 8;
 ...                 // n is 8
 ```
 
-und
+and
 
 ```qsharp
 if (a == b) {
@@ -236,4 +239,4 @@ if (a == b) {
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Erfahren Sie mehr über das [Arbeiten mit Qubits](xref:microsoft.quantum.guide.qubits) in f #.
+Erfahren Sie mehr über das [Arbeiten mit Qubits](xref:microsoft.quantum.guide.qubits) in Q# .

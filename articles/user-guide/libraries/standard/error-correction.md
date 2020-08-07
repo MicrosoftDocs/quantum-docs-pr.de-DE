@@ -1,17 +1,20 @@
 ---
-title: 'Fehlerkorrektur in den Q # Standard-Bibliotheken'
-description: 'Erfahren Sie, wie Sie Fehler Behebungs Codes in ihren Q #-Programmen verwenden, während Sie den Zustand der Qubits schützen.'
+title: Fehlerkorrektur in den Q# Standardbibliotheken
+description: Erfahren Sie, wie Sie Fehler Behebungs Codes in ihren Programmen verwenden, Q# während Sie den Zustand der Qubits schützen.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 514fe68f603b9a3a0b4607390719b08a43fe4967
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8b1f008793281121bc547d1a6ac3b960feb082ab
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274996"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868490"
 ---
 # <a name="error-correction"></a>Fehlerkorrektur #
 
@@ -48,7 +51,7 @@ Beachten Sie, dass $Z _0 Z_1 \ket {000} = \ket {000} $ und $Z _0 Z_1 \ket {111} 
 Auf der anderen Seite $Z _0 Z_1 \ket {100} =-\ket {100} $ und $Z _0 Z_1 \ket {011} =-\ket {011} $, sodass das Ergebnis der Messung $Z _0 $ nützliche Informationen darüber zeigt, welcher Fehler aufgetreten ist.
 
 Um dies hervorzuheben, wiederholen wir die obige Tabelle, fügen jedoch die Ergebnisse der Messung $Z _0 Z_1 $ und $Z _1 Z_2 $ für jede Zeile hinzu.
-Wir bezeichnen die Ergebnisse der einzelnen Messungen durch das Vorzeichen des Eigenwerts, der beobachtet wird, entweder $ + $ oder $-$, der den Q #- `Result` Werten von `Zero` und entspricht `One` .
+Wir bezeichnen die Ergebnisse der einzelnen Messungen durch das Vorzeichen des Eigenwerts, der beobachtet wird, entweder $ + $ oder $-$, entsprechend den Q# `Result` Werten von `Zero` und `One` .
 
 | Fehler $E $ | $E \ket{\overline {0} } $ | $E \ket{\overline {1} } $ | Ergebnis der $Z _0 Z_1 $ | Ergebnis der $Z _1 Z_2 $ |
 | --- | --- | --- | --- | --- |
@@ -68,16 +71,16 @@ Insbesondere betonen wir, dass die Wiederherstellung eine *klassische* Inferenz 
 > Im Allgemeinen können Codes erstellt werden, um eine größere Anzahl von Fehlern zu verarbeiten und $Z $ Errors sowie $X $ Errors zu behandeln.
 
 Die Erkenntnis, dass wir Messungen in der Quantum-Fehlerkorrektur beschreiben können, die auf die gleiche Weise für alle Code Zustände agieren, ist der Grund für die *stabilisatformalität*.
-Q # Canon bietet ein Framework zum Beschreiben der Codierung in und Decodierung von Stabilisator-Codes und zum Beschreiben der Art und Weise, wie eine von Fehlern wieder hergestellt wird.
+Der Q# Kanon bietet ein Framework zum Beschreiben der Codierung in und Decodierung von stabilikocodecodes und zum Beschreiben der Art und Weise, wie eine von Fehlern wiederherstellt.
 In diesem Abschnitt werden dieses Framework und seine Anwendung für einige einfache Quantum-Fehler Behebungs Codes beschrieben.
 
 > [!TIP]
 > Eine vollständige Einführung in die Stabilisator-Formalität geht über den Rahmen dieses Abschnitts hinaus.
 > Wir freuen uns auf Leser, die mehr über den [Mann 2009](https://arxiv.org/abs/0904.2557)lernen möchten.
 
-## <a name="representing-error-correcting-codes-in-q"></a>Darstellen von Fehler Behebungs Codes in f # ##
+## <a name="representing-error-correcting-codes-in-no-locq"></a>Darstellen von Fehler Behebungs Codes inQ# ##
 
-Zur Unterstützung der Angabe von Fehler Behebungs Codes bietet Q # Canon mehrere verschiedene benutzerdefinierte Typen:
+Zur Unterstützung der Angabe von Fehler Behebungs Codes Q# stellt der Kanon mehrere verschiedene benutzerdefinierte Typen bereit:
 
 - <xref:microsoft.quantum.errorcorrection.logicalregister>`= Qubit[]`: Gibt an, dass ein Register von Qubits als Codeblock eines Fehler Behebungs Codes interpretiert werden soll.
 - <xref:microsoft.quantum.errorcorrection.syndrome>`= Result[]`: Gibt an, dass ein Array von Messergebnissen als das auf einem Codeblock gemessene Syndrom interpretiert werden soll.
@@ -119,4 +122,4 @@ using (scratch = Qubit[nScratch]) {
 
 Wir untersuchen dies im [bitflip-Codebeispiel](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code)ausführlicher.
 
-Abgesehen vom Bit-Flip-Code wird der Q #-Kanon mit Implementierungen des [perfekten 5-Qubit-Codes](https://arxiv.org/abs/quant-ph/9602019)bereitgestellt, und der [sieben-Qubit](https://arxiv.org/abs/quant-ph/9705052)-Code, der beide einen beliebigen Single-Qubit-Fehler beheben kann.
+Abgesehen vom Bit-Flip-Code wird der Q# Kanon mit Implementierungen des [perfekten 5-Qubit-Codes](https://arxiv.org/abs/quant-ph/9602019)bereitgestellt, und der [sieben-Qubit](https://arxiv.org/abs/quant-ph/9705052)-Code, der beide einen beliebigen Single-Qubit-Fehler beheben kann.

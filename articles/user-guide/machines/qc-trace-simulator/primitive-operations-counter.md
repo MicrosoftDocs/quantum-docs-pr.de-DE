@@ -1,17 +1,20 @@
 ---
 title: Primitiver Vorgangs Counter-Quantum Development Kit
-description: 'Erfahren Sie mehr über den "Microsoft QDK primitive Operation"-Vorgang, der den Quantum Trace-Simulator verwendet, um primitive Ausführungen zu verfolgen, die von Vorgängen in einem Q #-Programm'
+description: Erfahren Sie mehr über den "Microsoft QDK primitive Operation"-Vorgang, der mithilfe des Quantum-Ablauf Verfolgungs Simulators primitive Ausführungen nachverfolgt, die von Vorgängen in einem Q# Programm
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
-ms.openlocfilehash: ea022d499354f7cefd60da690466496e0ce7c336
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ceb70cef6dc0a4530b992b5a529248a8b283c17f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871024"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868235"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>Quantum-Ablauf Verfolgungs Simulator: primitiver Vorgangs Counter
 
@@ -31,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>Verwendung des primitiven Vorgangs Zählers in einem c#-Host Programm
 
-Das c#-Beispiel in diesem Abschnitt zählt, wie viele <xref:microsoft.quantum.intrinsic.t> Vorgänge zum Implementieren des Vorgangs erforderlich sind <xref:microsoft.quantum.intrinsic.ccnot> , basierend auf dem folgenden f #-Beispielcode:
+Das c#-Beispiel, das in diesem Abschnitt folgt, zählt, wie viele <xref:microsoft.quantum.intrinsic.t> Vorgänge erforderlich sind, um den <xref:microsoft.quantum.intrinsic.ccnot> Vorgang basierend auf dem folgenden Q# Beispielcode zu implementieren:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

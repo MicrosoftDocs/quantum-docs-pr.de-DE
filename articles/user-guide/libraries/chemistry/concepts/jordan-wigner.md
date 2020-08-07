@@ -6,12 +6,15 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
-ms.openlocfilehash: 17cb473c6d33e3356d5da886f47985c3828d4d1f
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 9f1455ebbecf6a3500ec11a5196e7662455c9a78
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275097"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869510"
 ---
 # <a name="jordan-wigner-representation"></a>Darstellung von Jordanien-Wigner
 
@@ -28,7 +31,7 @@ Diese $a ^ \ dagger_j \ket {0} _J = \ket {1} _J $ und $a ^ \ dagger_j \ket {1} _
 Es ist leicht zu überprüfen, ob \begin{align} a ^ \ dagger_j &= \begin{bmatrix}0 & 0 \\ \ 1 &0 \ End{bmatrix} = \bruch{X_j-iY_j} {2} , \nonneuber \\ \\ a_j &= \begin{bmatrix}0 & 1 \\ \ 0 &0 \end{bmatrix} = \bruch{X_j + iY_j} {2} , \end{align}, wobei $X _J $ und $Y _J $ die "Pauli-$X $" und "-$Y $" sind, die für Qubit $j $ fungieren.
 
 >[!NOTE]
-> In f # stellt $ \ket {0} $ State den + 1-eigen Zustand des $Z $-Operators dar. In einigen Bereichen der Physik ist "$ \ket {0} $" der niedrige Energiezustand und somit der "-1"-eigen Status des $Z $-Operators. Daher können sich einige Formeln von gängigen Literatur unterscheiden.
+> Im Q# Zustand "$ \ket {0} $" steht für den "+ 1"-Status des $Z $-Operators. In einigen Bereichen der Physik ist "$ \ket {0} $" der niedrige Energiezustand und somit der "-1"-eigen Status des $Z $-Operators. Daher können sich einige Formeln von gängigen Literatur unterscheiden.
 
 In der Chemie Bibliothek verwenden wir $ \ket {0} $, um ein nicht belegtes Spin-Orbital darzustellen.
 Dies zeigt, dass es bei einer einzelnen Spin-Orbital-Schnittstelle einfach Erstellungs-und Vernichtungs Operatoren in Bezug auf einheitliche Matrizen darstellen kann, die von Quantum-Computern verstanden werden

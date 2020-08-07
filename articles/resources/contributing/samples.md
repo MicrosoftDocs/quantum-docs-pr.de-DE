@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.samples
-ms.openlocfilehash: 3bd0de04a448c74eea6c3e8e3a15dcbb19f9d705
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 20da0e1765a242c172cc595f03d7791a0e8b8d2d
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274806"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867508"
 ---
 # <a name="contributing-samples-to-the-quantum-development-kit"></a>Mitwirken von Beispielen für das Quantum Development Kit
 
@@ -47,8 +50,8 @@ Sehen wir uns die Dateien an, aus denen sich die einzelnen Ordner bilden, betrac
 
 | Datei              | BESCHREIBUNG                                                |
 |-------------------|------------------------------------------------------------|
-| `CHSHGame.csproj` | Q #-Projekt, das zum Erstellen des Beispiels mit dem .net Core SDK verwendet wird |
-| `Game.qs`         | F #-Vorgänge und-Funktionen für das Beispiel                 |
+| `CHSHGame.csproj` | Q#Das Projekt, mit dem das Beispiel mit dem .net Core SDK erstellt wird. |
+| `Game.qs`         | Q#Vorgänge und Funktionen für das Beispiel                 |
 | `Host.cs`         | Zum Ausführen des Beispiels verwendetes c#-Host Programm                     |
 | `host.py`         | Zum Ausführen des Beispiels verwendetes python-Host Programm                 |
 | `README.md`       | Dokumentation zur Funktionsweise des Beispiels und zur Verwendung    |

@@ -5,12 +5,15 @@ author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
-ms.openlocfilehash: 7605676e05ee352e47791657eeaafceef5dbb493
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 78d6488ed5e3972f85f1e6cf1ba2d197596c4cc3
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274737"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869306"
 ---
 # <a name="end-to-end-with-nwchem"></a>End-to-End mit NWChem #
 

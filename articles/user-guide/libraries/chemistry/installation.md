@@ -1,17 +1,20 @@
 ---
-title: 'Installation der Microsoft Q #-Bibliothek'
+title: Installation der Microsoft- Q# Chemie Bibliothek
 description: Erfahren Sie, wie Sie die Microsoft Quantum Chemistry-Bibliothek installieren und mit der nwchem-Berechnungs-Chemie-Plattform verwenden.
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.installation
-ms.openlocfilehash: 0e870bb3421dddb632375a2fc8633249954f8c8b
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 5fe973d24ceffd413cdbd3c543013dcc7ee379c0
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871533"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869340"
 ---
 # <a name="chemistry-library-installation"></a>Installation der Chemie Bibliothek
 

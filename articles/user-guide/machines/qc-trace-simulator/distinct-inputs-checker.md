@@ -1,17 +1,20 @@
 ---
 title: Unterschiedliche Inputs-Eingaben-Quantum Development Kit
-description: 'Erfahren Sie mehr über die unterschiedliche unterschiedliche Inputs-Eingaben von Microsoft QDK, die den Quantum-Ablauf Verfolgungs Simulator zum Überprüfen Ihres Q #-Codes auf potenzielle Konflikte mit freigegebenen Qubits'
+description: Erfahren Sie mehr über die unterschiedliche Microsoft QDK-Eingaben-Prüfung, die den Quantum-Ablauf Verfolgungs Simulator verwendet, um Ihren Q# Code auf potenzielle Konflikte mit freigegebenen Qubits zu überprüfen
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 49a1ccc5f37acfeaa1ee08bd974be45a40a76f93
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 750c94e7f861678d37f051619ff5b29bf4fd3d3e
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871143"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868269"
 ---
 # <a name="quantum-trace-simulator-distinct-inputs-checker"></a>Quantum-Ablauf Verfolgungs Simulator: unterschiedliche Eingaben für Eingaben
 
@@ -19,7 +22,7 @@ Die unterschiedliche Inputs-Prüfung ist Teil des quantumlaufverfolgungs- [Simul
 
 ## <a name="conflicts-with-shared-qubits"></a>Konflikte mit freigegebenen Qubits
 
-Sehen Sie sich den folgenden Q #-Code an, um die Probleme zu veranschaulichen, die von der unterschiedlichen Eingaben Prüfung erkannt werden:
+Beachten Sie den folgenden Q# Code, um die Probleme zu veranschaulichen, die von der unterschiedlichen Eingabe Überprüfung erkannt werden:
 
 ```qsharp
 operation ApplyBoth(
@@ -47,7 +50,7 @@ operation ApplyWithNonDistinctInputs() : Unit {
 }
 ```
 
-Beachten Sie, dass `op1` und `op2` sowohl mit einer partiellen Anwendung als auch mit einem Qubit abgerufen werden. Wenn Sie `ApplyBoth` in diesem Beispiel aufzurufen, hängt das Ergebnis des Vorgangs von der Reihenfolge von und innerhalb von ab, `op1` `op2` `ApplyBoth` was Sie erwarten. Wenn Sie die unterschiedliche Eingaben-Überprüfung aktivieren, werden derartige Situationen erkannt, und es wird eine ausgelöst `DistinctInputsCheckerException` . Weitere Informationen finden Sie unter <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> in der Q #-API-Bibliothek.
+Beachten Sie, dass `op1` und `op2` sowohl mit einer partiellen Anwendung als auch mit einem Qubit abgerufen werden. Wenn Sie `ApplyBoth` in diesem Beispiel aufzurufen, hängt das Ergebnis des Vorgangs von der Reihenfolge von und innerhalb von ab, `op1` `op2` `ApplyBoth` was Sie erwarten. Wenn Sie die unterschiedliche Eingaben-Überprüfung aktivieren, werden derartige Situationen erkannt, und es wird eine ausgelöst `DistinctInputsCheckerException` . Weitere Informationen finden Sie unter <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> in der Q# API-Bibliothek.
 
 ## <a name="invoking-the-distinct-inputs-checker"></a>Aufrufen der unterschiedlichen Eingabe Prüfung
 

@@ -1,28 +1,31 @@
 ---
 title: Einfache Klassifizierung mit der Quantum-Machine Learning Bibliothek
-description: 'Erfahren Sie, wie Sie mithilfe der Quantum-Machine Learning Bibliothek von Microsoft QDK einen in Q # geschriebenen Quantum-Klassifizierer ausführen.'
+description: Erfahren Sie, wie Sie Q# mithilfe der Quantum-Machine Learning Bibliothek von Microsoft QDK einen in geschriebenen Quantum-Klassifizierungs Klassifizierer ausführen.
 author: geduardo
 ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: 1d2538fd164c4c61c2712978d3b5c57b0eb766e6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: f9c3e7ab85c0f0d1a6063e593607d35c5cb76936
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275036"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868966"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Basic-Klassifizierung: klassifizieren von Daten mit dem QDK
 
-In dieser Schnellstartanleitung erfahren Sie, wie Sie mithilfe der Quantum-Machine Learning Bibliothek des QDK einen in Q # geschriebenen quantesequenziellen Klassifizierer ausführen. 
+In dieser Schnellstartanleitung erfahren Sie, wie Sie Q# mithilfe der Quantum-Machine Learning Bibliothek des QDK einen in geschriebenen Quantum-Klassifizierungs Klassifizierer ausführen. 
 
-In dieser Anleitung verwenden wir das Halbmond-DataSet mit einer in Q # definierten Klassifizierungs Struktur.
+In diesem Handbuch verwenden wir das Halbmond-DataSet, indem wir eine Klassifizierungs Struktur verwenden, die in definiert ist Q# .
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 - Das Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
-- Erstellen Sie ein Q #-Projekt für ein [python-Host Programm](xref:microsoft.quantum.install.python) oder ein [c#-Host Programm](xref:microsoft.quantum.install.cs).
+- Erstellen Sie ein Q# Projekt für ein [python-Host Programm](xref:microsoft.quantum.install.python) oder ein [c#-Host Programm](xref:microsoft.quantum.install.cs).
 
 ## <a name="host-program"></a>Host Programm
 
@@ -34,7 +37,7 @@ Ihr Host Programm besteht aus drei Teilen:
 
     ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Python mit Visual Studio Code oder Befehlszeile](#tab/tabid-python)
 
-    Wenn Sie den Q #-Klassifizierer aus python ausführen möchten, speichern Sie den folgenden Code als `host.py` . Beachten Sie, dass Sie auch die Q #-Datei benötigen `Training.qs` , die später in diesem Tutorial erläutert wird.
+    Um die Q# Klassifizierung aus python auszuführen, speichern Sie den folgenden Code als `host.py` . Beachten Sie, dass Sie auch die Q# Datei benötigen `Training.qs` , die später in diesem Tutorial erläutert wird.
 
     :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="3-42":::
 
@@ -49,7 +52,7 @@ Ihr Host Programm besteht aus drei Teilen:
 
     ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[C# mit Visual Studio Code oder Befehlszeile](#tab/tabid-csharp)
 
-    Wenn Sie den Q #-Klassifizierer aus c# ausführen möchten, speichern Sie den folgenden Code als `Host.cs` . Beachten Sie, dass Sie auch die Q #-Datei benötigen `Training.qs` , die später in diesem Tutorial erläutert wird.
+    Um die Q# Klassifizierung aus c# auszuführen, speichern Sie den folgenden Code als `Host.cs` . Beachten Sie, dass Sie auch die Q# Datei benötigen `Training.qs` , die später in diesem Tutorial erläutert wird.
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -63,7 +66,7 @@ Ihr Host Programm besteht aus drei Teilen:
 
     ### <a name="c-with-visual-studio-2019"></a>[C# mit Visual Studio 2019](#tab/tabid-vs2019)
 
-    Um das neue Q #-Programm aus c# in Visual Studio auszuführen, ändern `Host.cs` Sie, um den folgenden c#-Code einzufügen. Beachten Sie, dass Sie auch die Q #-Datei benötigen `Training.qs` , die später in diesem Tutorial erläutert wird.
+    Um Q# das neue Programm aus c# in Visual Studio auszuführen, ändern `Host.cs` Sie, um den folgenden c#-Code einzufügen. Beachten Sie, dass Sie auch die Q# Datei benötigen `Training.qs` , die später in diesem Tutorial erläutert wird.
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -78,7 +81,7 @@ Ihr Host Programm besteht aus drei Teilen:
 
 ## <a name="q-classifier-code"></a>Q- \# Klassifizierungs Code
 
-Sehen wir uns nun an, wie die vom Host Programm aufgerufenen Vorgänge in f # definiert werden.
+Nun sehen wir uns an, wie die vom Host Programm aufgerufenen Vorgänge in definiert werden Q# .
 Der folgende Code wird in einer Datei mit dem Namen gespeichert `Training.qs` .
 
 :::code language="qsharp" source="~/quantum/samples/machine-learning/half-moons/Training.qs" range="4-116":::

@@ -1,21 +1,24 @@
 ---
-title: 'F #-Dateistruktur'
-description: 'Beschreibt die Struktur und die Syntax einer Q #-Datei.'
+title: Q#Dateistruktur
+description: Beschreibt die Struktur und die Syntax einer Q# Datei.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
-ms.openlocfilehash: 54efc2b9d6b7f1956cdf9a335c88620b29f7729d
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ac73962b1a718cd04aa87ee3476c66781fe3ac2b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884178"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867929"
 ---
-# <a name="q-file-structure"></a>F #-Dateistruktur
+# <a name="no-locq-file-structure"></a>Q#Dateistruktur
 
-Eine Q #-Datei besteht aus einer Sequenz von *Namespace Deklarationen*.
+Eine Q# Datei besteht aus einer Sequenz von *Namespace Deklarationen*.
 Jede Namespace Deklaration enthält Deklarationen für benutzerdefinierte Typen, Vorgänge und Funktionen und kann jede beliebige Anzahl von Deklarationen und in beliebiger Reihenfolge enthalten.
 Weitere Informationen zu Deklarationen in einem Namespace finden Sie unter [benutzerdefinierte Typen](xref:microsoft.quantum.guide.types#user-defined-types), [Vorgänge](xref:microsoft.quantum.guide.operationsfunctions#defining-new-operations)und [Funktionen](xref:microsoft.quantum.guide.operationsfunctions#defining-new-functions).
 
@@ -24,10 +27,10 @@ Insbesondere Dokumentations Kommentare für einen Namespace vor der Deklaration.
 
 ## <a name="namespace-declarations"></a>Namespacedeklarationen
 
-Eine Q #-Datei besitzt in der Regel nur eine Namespace Deklaration, kann jedoch keine (und leer sein oder nur Kommentare enthalten) oder mehrere Namespaces enthalten.
+Eine Q# Datei verfügt in der Regel nur über eine Namespace Deklaration, kann jedoch keine (und leer sein oder nur Kommentare enthalten) oder mehrere Namespaces enthalten.
 Namespace Deklarationen können nicht eingefügt werden.
 
-In mehreren Q #-Dateien, die zusammen kompiliert werden, können Sie denselben Namespace deklarieren, solange keine Typen-, Vorgangs-oder Funktions Deklarationen mit demselben Namen vorhanden sind.
+Sie können denselben Namespace in mehreren Dateien deklarieren, die Q# zusammen kompiliert werden, solange keine Typen-, Vorgangs-oder Funktions Deklarationen mit demselben Namen vorhanden sind.
 Es ist insbesondere ungültig, denselben Typ im gleichen Namespace in mehreren Dateien zu definieren, auch wenn die Deklarationen identisch sind.
 
 Eine Namespace Deklaration besteht aus dem Schlüsselwort `namespace` , gefolgt vom Namen des Namespace und den Deklarationen im Namespace, die in geschweifte Klammern eingeschlossen sind `{ }` .
@@ -61,7 +64,7 @@ Wenn ein deklarierter Vorgang einen Vorgang `Op` aus verwendet `Microsoft.Quantu
 Um jedoch eine bestimmte Funktion `Fn` von aufzurufen `Microsoft.Quantum.Math` , müssen Sie Sie mithilfe von aufzurufen `Math.Fn` .
 
 Die- `open` Direktive gilt für den gesamten Namespace Block in einer Datei.
-Wenn Sie also einen zusätzlichen Namespace in derselben Q #-Datei wie zuvor definieren `NS` , haben alle im zweiten Namespace definierten Vorgänge/Funktionen/Typen keinen Zugriff auf etwas von `Microsoft.Quantum.Intrinsic` oder, `Microsoft.Quantum.Math` es sei denn, Sie haben die Open-Direktiven darin wiederholt. 
+Wenn Sie also einen zusätzlichen Namespace in derselben Q# Datei wie `NS` zuvor definieren, haben alle im zweiten Namespace definierten Vorgänge/Funktionen/Typen keinen Zugriff auf etwas von `Microsoft.Quantum.Intrinsic` oder, `Microsoft.Quantum.Math` es sei denn, Sie haben die Open-Direktiven darin wiederholt. 
 
 Um auf einen Typ oder Aufruf baren Wert zu verweisen, der in einem anderen Namespace definiert ist, der *nicht* im aktuellen Namespace geöffnet ist, müssen Sie ihn mit seinem voll qualifizierten Namen referenzieren.
 Angenommen, Sie verfügen über einen Vorgang mit `Op` dem Namen aus dem- `X.Y` Namespace:
@@ -73,13 +76,13 @@ Angenommen, Sie verfügen über einen Vorgang mit `Op` dem Namen aus dem- `X.Y` 
 Es ist in der Regel besser, einen Namespace mit einer- `open` Direktive einzubeziehen.
 Die Verwendung eines voll qualifizierten Namens ist erforderlich, wenn zwei Namespaces Konstrukte mit dem gleichen Namen definieren und die aktuelle Quelle Konstrukte aus beidem verwendet.
 
-F # befolgt die gleichen Regeln für die Benennung wie andere .NET-Sprachen.
-F # unterstützt jedoch keine relativen Verweise auf Namespaces.
+Q#befolgt die gleichen Regeln für die Benennung wie andere .NET-Sprachen.
+Q#Unterstützt jedoch keine relativen Verweise auf Namespaces.
 Wenn der Namespace beispielsweise `a.b` geöffnet ist, wird ein Verweis auf einen Vorgang mit dem Namen `c.d` *nicht* in einen Vorgang mit dem vollständigen Namen aufgelöst `a.b.c.d` .
 
 ## <a name="formatting"></a>Formatierung
 
-Die meisten Q #-Anweisungen und-Direktiven enden mit einem abschließenden Semikolon, `;` .
+Die meisten Q# Anweisungen und Direktiven enden mit einem abschließenden Semikolon, `;` .
 -Anweisungen und-Deklarationen, wie z. b. `for` und `operation` , die mit einem Anweisungsblock enden (siehe folgender Abschnitt), erfordern kein abschließendes Semikolon.
 Jede Anweisungs Beschreibung gibt an, ob das abschließende Semikolon erforderlich ist.
 
@@ -88,14 +91,14 @@ Vermeiden Sie es, mehrere Anweisungen in einer einzelnen Zeile zu platzieren.
 
 ## <a name="statement-blocks"></a>Anweisungsblöcke
 
-Q #-Anweisungen werden in Anweisungsblöcke gruppiert, die in geschweiften Klammern eingeschlossen sind `{ }` . Ein Anweisungsblock beginnt mit einem öffnenden `{` und endet mit einem schließenden `}` .
+Q#-Anweisungen werden in Anweisungsblöcke gruppiert, die in geschweiften Klammern eingeschlossen sind `{ }` . Ein Anweisungsblock beginnt mit einem öffnenden `{` und endet mit einem schließenden `}` .
 
 Ein Anweisungsblock, der lexikalisch in einem anderen-Block eingeschlossen ist, wird als Teil Block des enthaltenden Blocks angesehen; enthaltende-und-Unterblöcke werden auch als äußere und innere Blöcke bezeichnet.
 
 ## <a name="comments"></a>Kommentare
 
 Kommentare beginnen mit zwei Schrägstrichen, `//` und werden bis zum Ende der Zeile fortgesetzt.
-Ein Kommentar kann an beliebiger Stelle in einer Q #-Quelldatei angezeigt werden.
+Ein Kommentar kann an beliebiger Stelle in einer Q# Quelldatei angezeigt werden.
 
 ## <a name="documentation-comments"></a>Dokumentationskommentare
 
@@ -103,7 +106,7 @@ Kommentare, die mit drei Schrägstrichen beginnen, `///` werden vom Compiler spe
 In diesem Fall behandelt der Compiler Sie als Dokumentation für den definierten Aufruf baren oder benutzerdefinierten Typ, der mit anderen .NET-Sprachen identisch ist.
 
 Innerhalb von `///` Kommentaren wird Text, der als Teil der API-Dokumentation angezeigt wird, als [markdown](https://daringfireball.net/projects/markdown/syntax)formatiert, wobei verschiedene Teile der Dokumentation durch speziell benannte Header angezeigt werden.
-Verwenden Sie in markdown die `@"<ref target>"` Erweiterung für Querverweise auf Vorgänge, Funktionen und benutzerdefinierte Typen in f #. Ersetzen Sie dies `<ref target>` durch den voll qualifizierten Namen des Code Objekts, auf das verwiesen wird.
+Verwenden Sie in markdown die `@"<ref target>"` Erweiterung für Querverweise auf Vorgänge, Funktionen und benutzerdefinierte Typen in Q# . Ersetzen Sie dies `<ref target>` durch den voll qualifizierten Namen des Code Objekts, auf das verwiesen wird.
 Unterschiedliche Dokumentations-Engines unterstützen möglicherweise zusätzliche markdownerweiterungen.
 
 Beispiel:
@@ -153,4 +156,4 @@ Die folgenden Namen sind als Dokumentations Kommentar Header gültig.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu [Vorgängen und Funktionen](xref:microsoft.quantum.guide.operationsfunctions) in f #.
+Erfahren Sie mehr über [Vorgänge und Funktionen](xref:microsoft.quantum.guide.operationsfunctions) in Q# .

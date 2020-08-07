@@ -7,12 +7,15 @@ author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
-ms.openlocfilehash: 84d83bf65b3c01a630d98210a5ac3fe322fa501f
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 1d76e9c8532dd7818941d182773a8f85a86becee
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906813"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869748"
 ---
 # <a name="third-party-software-notices-and-information"></a>HINWEISE UND INFORMATIONEN ZU DRITTANBIETERSOFTWARE
 
@@ -20,20 +23,20 @@ Diese Datei basiert auf Material aus den unten aufgeführten Projekten (IP-Adres
 
 1. Yamldotnet. signierte Version 4.2.2 (https://www.nuget.org/packages/YamlDotNet.Signed/4.2.2)
 2. xUnit. Runner. VisualStudio 2.3.1 (https://www.nuget.org/packages/xunit.runner.visualstudio/2.3.1)
-3. xUnit. Runner. Console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1)
-4. xUnit. Extensibility. Execution 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.execution/2.3.1)
+3. xUnit. Runner. Console 2.3.1 ( https://www.nuget.org/packages/xunit.runner.console/2.3.1 )
+4. xunit.extensibility.execution 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.execution/2.3.1)
 5. xUnit. Extensibility. Core 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.core/2.3.1)
 6. xUnit. Core 2.3.1 (https://www.nuget.org/packages/xunit.core/2.3.1)
 7. xUnit. Assert 2.3.1 (https://www.nuget.org/packages/xunit.assert/2.3.1)
 8. xUnit. Analyzers 0.7.0 (https://www.nuget.org/packages/xunit.analyzers/0.7.0)
-9. xUnit. Abstractions 2.0.1 (https://www.nuget.org/packages/xunit.abstractions/2.0.1)
+9. xUnit. Abstraktionen 2.0.1 (https://www.nuget.org/packages/xunit.abstractions/2.0.1)
 10. xUnit 2.3.1 (https://www.nuget.org/packages/xunit/2.3.1)
 11. Manageabsent 1.9.4 (https://www.nuget.org/packages/ManagedEsent/1.9.4)
 12. FSharp. Core 4.2.3 (https://www.nuget.org/packages/FSharp.Core/4.2.3)
 13. FSharp. Charting 0.91.1 (https://www.nuget.org/packages/FSharp.Charting/0.91.1)
-14. 2\.10.4- https://www.nuget.org/packages/FsCheck/2.10.4)
+14. 2.10.4 (https://www.nuget.org/packages/FsCheck/2.10.4)
 15. Argu 3.7.0 (https://www.nuget.org/packages/Argu/3.7.0)
-16. "F" 1.0.3 (https://www.nuget.org/packages/FParsec/1.0.3)
+16. F-Sek. (https://www.nuget.org/packages/FParsec/1.0.3)
 
 ## <a name="yamldotnetsigned-notices-and-information"></a>Yamldotnet. Signed-Hinweise und-Informationen
 ---------------------------------------
@@ -75,7 +78,7 @@ Die unter der Lizenz geltenden Berechtigungen und Einschränkungen entnehmen Sie
 
 
 
-## <a name="xunitextensibilityexecution-notices-and-information"></a>xUnit. Extensibility. Execution-Hinweise und-Informationen
+## <a name="xunitextensibilityexecution-notices-and-information"></a>Hinweise und Informationen zur xunit.extensibility.exe
 ---------------------------------------
 Copyright (c) .Net Foundation und Mitwirkende alle Rechte vorbehalten
 
@@ -164,39 +167,39 @@ Die unter der Lizenz geltenden Berechtigungen und Einschränkungen entnehmen Sie
 ---------------------------------------
 Öffentliche Microsoft-Lizenz (MS-PL)
 
-Diese Lizenz regelt die Verwendung der begleitenden Software. Wenn Sie die Software verwenden, akzeptieren Sie diese Lizenz. Wenn Sie die Lizenz nicht akzeptieren, dürfen Sie die Software nicht verwenden.
+Diese Lizenz regelt die Verwendung der beiliegenden Software. Wenn Sie die Software verwenden, nehmen Sie diese Lizenz an. Falls Sie die Lizenz nicht annehmen, sind Sie nicht berechtigt, die Software zu verwenden.
 
 1. Definitionen
 
-Die Begriffe "reproduzieren", "Reproduktion", "abgeleitete Arbeiten" und "Verteilung" haben hier die gleiche Bedeutung wie unter dem Urheberrechtsgesetz der USA.
+Die Begriffe „vervielfältigen“, „Vervielfältigung“, „Bearbeitungen“ und „Vertrieb“ haben hier die gleiche Bedeutung wie unter dem Urheberrechtsgesetz der USA.
 
-Ein "Beitrag" ist die ursprüngliche Software oder Ergänzungen oder Änderungen an der Software.
+Ein „Beitrag“ ist die ursprüngliche Software oder Hinzufügungen bzw. Änderungen der Software.
 
-Ein "Mitwirkender" ist jede Person, die ihren Beitrag unter dieser Lizenz verteilt.
+Ein „Mitwirkender“ ist eine Person, die ihren Beitrag unter dieser Lizenz vertreibt.
 
-"Lizenzierte Patente" sind die Patentansprüche eines Mitwirkenden, die direkt auf ihren Beitrag lesen.
+„Lizenzierte Patente“ sind die Patentansprüche eines Mitwirkenden, die sich direkt auf seinen Beitrag beziehen.
 
-2. Gewährung von rechten
+2. Gewährung von Rechten
 
-(A) Urheberrechts Gewährung: gemäß den Bedingungen dieser Lizenz, einschließlich der Lizenzbedingungen und Einschränkungen in Abschnitt 3, erteilt jeder Mitwirkender Ihnen eine nicht exklusive, weltweit lizenzfreie Urheberrechtslizenz, um seinen Beitrag zu reproduzieren und die Ableitung vorzubereiten. arbeitet seinen Beitrag und verteilt seinen Beitrag oder alle von Ihnen erstellten abgeleiteten Arbeiten.
+(A) Gewährung von Rechten unter dem Urheberrecht - Vorbehaltlich der Bestimmungen dieser Lizenz, einschließlich der Lizenzbedingungen und \_beschränkungen in Ziffer 3, gewährt Ihnen jeder Mitwirkende eine nicht ausschließliche, weltweite, lizenzgebührenfreie Urheberrechtslizenz, seinen Beitrag zu vervielfältigen, Bearbeitungen seines Beitrags zu erstellen und seinen Beitrag oder von Ihnen erstellte Bearbeitungen zu vertreiben.
 
-(B) Patent Erteilung-gemäß den Bedingungen dieser Lizenz, einschließlich der Lizenzbedingungen und-Einschränkungen in Abschnitt 3 erteilt jeder Mitwirkender Ihnen eine nicht exklusive, weltweit erteilte lizenzfreie Lizenz unter den lizenzierten Patenten, die erstellt, genutzt, verkauft, angeboten für den Verkauf, Import und/oder anderweitig seinen Beitrag in der Software oder die abgeleiteten Arbeiten des Beitrags in der Software genutzt werden können.
+(B) Patentgewährung - Vorbehaltlich der Bestimmungen dieser Lizenz, einschließlich der Lizenzbedingungen und \_beschränkungen in Ziffer 3, gewährt Ihnen jeder Mitwirkende eine nicht ausschließliche, weltweite, lizenzgebührenfreie Lizenz unter seinen lizenzierten Patenten, seinen Beitrag in der Software oder Bearbeitungen des Beitrags in der Software anzufertigen, angefertigt zu haben, zu verwenden, zu verkaufen, zum Verkauf anzubieten, zu importieren und/oder anderweitig darüber zu verfügen.
 
-3. Bedingungen und Einschränkungen
+3. Bedingungen und Beschränkungen
 
-(A) keine Markenlizenz-diese Lizenz gewährt Ihnen keine Rechte, den Namen, das Logo oder Marken eines Mitwirkenden zu verwenden.
+(A) Keine Markenlizenz - Diese Lizenz gewährt Ihnen keine Rechte, den Namen, das Logo oder Marken eines Mitwirkenden zu verwenden.
 
-(B) Wenn Sie einen Patentanspruch gegen einen Mitwirkender in Bezug auf Patente, die Sie beanspruchen, von der Software verletzt haben, wird Ihre Patentlizenz von einem derartigen Mitwirkender der Software automatisch beendet.
+(B) Wenn Sie einen Patentanspruch gegen einen Mitwirkenden für Patente erheben, von denen Sie behaupten, dass sie durch die Software verletzt werden, endet Ihre Patentlizenz von dem entsprechenden an der Software Mitwirkenden automatisch.
 
-(C) Wenn Sie einen Teil der Software verteilen, müssen Sie alle in der Software vorhandenen Urheberrechts-, Patent-, Marken-und Zuweisungs Hinweise aufbewahren.
+(C) Wenn Sie Teile der Software vertreiben, sind Sie verpflichtet, alle in der Software vorhandenen Urheberrechts-, Patent- und Markenhinweise sowie alle Herkunftsangaben beizubehalten.
 
-(D) Wenn Sie einen Teil der Software in Quell Codeform verteilen, können Sie dies nur unter dieser Lizenz tun, indem Sie eine komplette Kopie dieser Lizenz mit Ihrer Distribution einschließen. Wenn Sie einen Teil der Software im kompilierten oder Objekt codeformular verteilen, können Sie dies nur unter einer Lizenz tun, die diese Lizenz einhält.
+(D) Wenn Sie Teile der Software in Quellcodeform vertreiben, dürfen Sie dies nur unter dieser Lizenz tun, indem Sie Ihrem Beitrag eine vollständige Kopie dieser Lizenz beifügen. Wenn Sie Teile der Software in kompilierter oder Objektcodeform vertreiben, dürfen Sie dies nur unter einer Lizenz tun, die diese Lizenz einhält.
 
-(E) die Software wird "as-is" lizenziert. Sie tragen das mit der Nutzung verbundene Risiko. Die Mitwirkenden verfügen über keine ausdrücklichen Gewährleistungen, Garantien oder Bedingungen. Möglicherweise verfügen Sie über weitere Verbraucherrechte unter den lokalen Gesetzen, die diese Lizenz nicht ändern kann. Im durch das lokale Recht zulässigen Umfang schließen die Mitwirkenden die impliziten Gewährleistungen der Handels Üblichkeit, Eignung für einen bestimmten Zweck und Nichtverletzung aus.
+(E) Die Software wird „wie besehen“ lizenziert. Sie tragen das mit der Nutzung verbundene Risiko. Die Mitwirkenden verfügen über keine ausdrücklichen Gewährleistungen, Garantien oder Bedingungen. Möglicherweise haben Sie unter den örtlich anwendbaren Gesetzen zusätzliche Verbraucherrechte, die durch diese Lizenz nicht abgeändert werden können. Im durch das örtlich anwendbare Recht gestatteten Umfang schließen die Mitwirkenden konkludente Garantien der Handelsüblichkeit, Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten Dritter aus.
 
 ## <a name="fsharpcore-notices-and-information"></a>FSharp. Core-Hinweise und-Informationen
 ---------------------------------------
-Mit-Lizenz (mit)
+Die MIT-Lizenz (MIT)
 
 Copyright (c) Microsoft Corporation.
 Alle Rechte vorbehalten.
@@ -209,7 +212,7 @@ DIE SOFTWARE WIRD "WIE BESEHEN" OHNE JEGLICHE GEWÄHRLEISTUNG, WEDER AUSDRÜCKLI
 
 ## <a name="fsharpcharting-notices-and-information"></a>FSharp. Charting-Hinweise und-Informationen
 ---------------------------------------
-Mit-Lizenz (mit)
+Die MIT-Lizenz (MIT)
 
 Copyright (c) 2013 Tomas Petricek
 
@@ -218,11 +221,11 @@ Hiermit wird jeder Person, die eine Kopie dieser Software und der zugehörigen D
 Der obige Urheberrechtshinweis und dieser Berechtigungshinweis sind in allen Kopien oder wesentlichen Teilen der Software enthalten.
 
 DIE SOFTWARE WIRD "WIE BESEHEN" OHNE JEGLICHE GEWÄHRLEISTUNG, WEDER AUSDRÜCKLICH NOCH KONKLUDENT, ZUR VERFÜGUNG GESTELLT, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF GEWÄHRLEISTUNGEN DER HANDELSÜBLICHKEIT, EIGNUNG FÜR EINEN BESTIMMTEN ZWECK UND NICHTVERLETZUNG VON RECHTEN DRITTER. IN KEINEM FALL SIND DIE AUTOREN ODER URHEBERRECHTSINHABER HAFTBAR FÜR ANSPRÜCHE, SCHÄDEN ODER ANDERE HAFTUNGEN, SEI ES AUS EINER VERTRAGSHANDLUNG, UNERLAUBTER HANDLUNG ODER ANDERWEITIG, DIE SICH AUS ODER IN VERBINDUNG MIT DER SOFTWARE ODER DER NUTZUNG ANDERER VERFAHREN IN DER SOFTWARE ERGEBEN.
-Zu den Versionen dieser Software zählen möglicherweise Kopien von "oxyplot. Core. dll" und "oxyplot. gtksharp. dll" (unten).
+Zu den gepackten Versionen dieser Software können Kopien von OxyPlot.Core.dll und OxyPlot.GtkSharp.dll der folgenden Lizenz gehören.
 
 ---
 
-Mit-Lizenz (mit)
+Die MIT-Lizenz (MIT)
 
 Copyright (c) 2012 Oystein bjorke
 
@@ -248,7 +251,7 @@ DIESE SOFTWARE WIRD VON DEN URHEBERRECHTSINHABERN UND MITWIRKENDEN „WIE BESEHE
 
 ## <a name="argu-notices-and-information"></a>Argu-Hinweise und-Informationen
 ---------------------------------------
-Mit-Lizenz (mit)
+Die MIT-Lizenz (MIT)
 
 Copyright (c) 2016 Eirik GS arpalis
 
@@ -265,7 +268,7 @@ DIE SOFTWARE WIRD "WIE BESEHEN" OHNE JEGLICHE GEWÄHRLEISTUNG, WEDER AUSDRÜCKLI
 
 Sofern nicht anders angegeben, wird die Bibliothek der Bibliothek im Quell-und Binärformat unter der vereinfachten BSD-Lizenz verteilt. Die vereinfachte BSD-Lizenz (auch als "2. Klausel BSD License") ist eine einfache, nicht ordnungsgemäße Lizenz, die OSI-kompatibel ist. 
 
-Mit "f" werden von der Unicode-Zeichen Datenbank v abgeleitete Daten integriert. 8.0.0, Copyright (c) 1991 \ u20122015 Unicode, Inc., der unter den folgenden Bedingungen verteilt wird: http://www.unicode.org/terms_of_use.html#Exhibit1 
+Mit "f" werden von der Unicode-Zeichen Datenbank v abgeleitete Daten integriert. 8.0.0, Copyright (c) 1991 \ u20122015 Unicode, Inc., der unter den folgenden Bedingungen verteilt wird:http://www.unicode.org/terms_of_use.html#Exhibit1 
 
 Die Dokumentation im doc-Ordner ist unter der Creative Commons-Karte "Attribution-Noncommercial 3,0 unportiert" lizenziert. Diese Creative Commons-Lizenz gestattet Ihnen nicht, die Dokumentation zu kommerziellen Zwecken ohne Berechtigungen zu verwenden. Dies bedeutet beispielsweise, dass Sie die Dokumentation nicht in Buch Form für den Gewinn verkaufen oder in eine Webinhalts Farm ablegen können, um mit Werbeeinblendungen Geld zu verdienen. Allerdings können Sie die Dokumentation natürlich in einem kommerziellen Kontext (z. b. im Intranet eines kommerziellen Unternehmens) verwenden, sofern Sie nicht versuchen, direkt aus dem Text der Dokumentation Geld zu verdienen. 
 
@@ -277,10 +280,10 @@ Die Weiterverbreitung und Verwendung in Quell- und Binärformen, mit oder ohne M
 * Bei der Weiterverbreitung von Quellcode müssen der obige Urheberrechtshinweis, diese Liste der Bedingungen und der folgende Haftungsausschluss enthalten sein.
 * Bei Weiterverbreitungen in binärer Form muss der obige Urheberrechtshinweis, diese Liste der Bedingungen und der folgende Haftungsausschluss in der Dokumentation und/oder anderen Materialien, die mit der Verbreitung geliefert werden, wiedergegeben werden. 
 
-Diese Software wird von den Urheberrechtsinhabern unverändert bereitgestellt, und jede ausdrückliche oder konkludente Gewährleistung, einschließlich, aber nicht beschränkt auf die konkludenten Gewährleistungen der Handels Üblichkeit und Eignung für einen bestimmten Zweck, wird ausgeschlossen. In keinem Fall sind die Urheberrechtsinhaber für jegliche direkten, indirekten, zufälligen, speziellen, zufälligen oder Folgeschäden haftbar (einschließlich, aber nicht beschränkt auf die Beschaffung von Ersatzgütern oder-Diensten, Verlust von Nutzung, Daten oder Profit) oder Business Unterbrechung) führt jedoch zu einer beliebigen Theorie der Haftung, ob im Vertrag, der strengen Haftung oder dem zivilrechtlichen Delikten (einschließlich Fahrlässigkeit oder anderweitig), die in irgendeiner Weise aus der Verwendung dieser Software hervorgeht, auch wenn Sie auf die Möglichkeit solcher Schäden hingewiesen wird. 
+Diese Software wird von den Urheberrechtsinhabern unverändert bereitgestellt, und jede ausdrückliche oder konkludente Gewährleistung, einschließlich, aber nicht beschränkt auf die konkludenten Gewährleistungen der Handels Üblichkeit und Eignung für einen bestimmten Zweck, wird ausgeschlossen. In keinem Fall sind die Urheberrechtsinhaber für eine direkte, indirekte, zufällige, besondere, vorbildliche oder Folgeschäden (einschließlich, aber nicht beschränkt auf die Beschaffung von Ersatzgütern oder-Diensten, Verlust von Nutzung, Daten, Gewinn oder Geschäfts Unterbrechung), und jegliche HAFTUNGSTHEORIE, ob in Vertrag, strikte Haftung oder zivilrechtlichen Delikten (einschließlich Fahrlässigkeit oder anderweitig), die in irgendeiner Weise aus der Verwendung dieser Software entstehen , auch wenn Sie auf die Möglichkeit solcher Schäden hingewiesen werden. 
 
 2,2 Creative Commons-Zuordnung-nicht kommerziell 3,0 unportierte Lizenz
 
-Zusammenfassung: https://creativecommons.org/licenses/by-nc/3.0/
+FAShttps://creativecommons.org/licenses/by-nc/3.0/
 
-Vollständiger Lizenztext: https://creativecommons.org/licenses/by-nc/3.0/legalcode 
+Der vollständige Lizenztext:https://creativecommons.org/licenses/by-nc/3.0/legalcode 

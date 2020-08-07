@@ -6,12 +6,15 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.hartreefock
-ms.openlocfilehash: 6fa63cbe13fe98565ffb42b56f3ade86720cedb3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 2d5e597c36f7873dfd1e011e7ce7d4b01c0f786e
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275110"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869543"
 ---
 # <a name="hartreefock-theory"></a>Hartree – Fock-Theorie
 

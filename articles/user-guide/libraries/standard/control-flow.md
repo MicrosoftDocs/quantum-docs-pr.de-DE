@@ -1,22 +1,25 @@
 ---
-title: 'Fluss Steuerungen in den Q # Standard-libararies'
-description: 'Erfahren Sie mehr über die Vorgänge und Funktionen der Fluss Steuerung in der Microsoft Q # Standard-Bibliothek.'
+title: Fluss Steuerungen in den Q# standardmäßigen libararies
+description: Erfahren Sie mehr über die Vorgänge und Funktionen der Fluss Steuerung in der Microsoft- Q# Standardbibliothek.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: b41b3edd7a3e3ac13dbda106a869f4cba8183600
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: a440f1ef2b901b18593816ca27aeadf7ab827104
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275016"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868575"
 ---
 # <a name="higher-order-control-flow"></a>Ablauf Steuerung höherer Ordnung #
 
 Eine der Hauptrollen der Standardbibliothek besteht darin, die algorithmischen Ideen auf hoher Ebene einfacher als [Quantum-Programme](https://en.wikipedia.org/wiki/Quantum_programming)auszudrücken.
-Daher stellt der Q #-Kanon eine Vielzahl verschiedener flowsteuerungskonstrukte bereit, die jeweils mithilfe der partiellen Anwendung von Funktionen und Vorgängen implementiert werden.
+Folglich stellt der Q# Kanon eine Vielzahl verschiedener flowsteuerungskonstrukte bereit, die jeweils mithilfe der partiellen Anwendung von Funktionen und Vorgängen implementiert werden.
 Wenn Sie sofort zu einem Beispiel springen, berücksichtigen Sie den Fall, in dem eine "CNOT-Leiter" für ein Register erstellt werden soll:
 
 ```qsharp
@@ -47,7 +50,7 @@ Im restlichen Teil dieses Abschnitts werden einige Beispiele für die Verwendung
 
 Eine der primären Abstraktionen, die von der Canon bereitgestellt werden, ist die der Iterationen.
 Nehmen Sie zum Beispiel eine einheitliche Form $U \otimes u \otimes \cdots \otimes u $ for a Single-Qubit einheitlicher $U $.
-In f # können wir dies verwenden <xref:microsoft.quantum.arrays.indexrange> , um dies als eine `for` Schleife über ein Register darzustellen:
+In Q# können wir dies verwenden <xref:microsoft.quantum.arrays.indexrange> , um dies als eine `for` Schleife über ein Register darzustellen:
 
 ```qsharp
 /// # Summary
@@ -88,7 +91,7 @@ Ebenso <xref:microsoft.quantum.canon.applytoeachindex> eignet sich für die Dars
 > Dann `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` wendet den Fehler Behebungs Code `code` und die Wiederherstellungs Funktion `recoveryFn` unabhängig voneinander auf jeden Block an.
 > Dies gilt auch für klassische Eingaben: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` wendet eine Drehung von $ \pi/$2 über $X $ an, gefolgt von einer Drehung $pi/$3 über $Y $.
 
-Q # Canon bietet auch Unterstützung für klassische Enumerationstypen, die der funktionalen Programmierung vertraut sind.
+Der Q# Kanon bietet auch Unterstützung für klassische Enumerationsmuster, die der funktionalen Programmierung vertraut sind.
 Implementiert beispielsweise <xref:microsoft.quantum.arrays.fold> das Muster $f (f (s \_ {\text{Initial}}, x \_ 0), x \_ 1), \dots) $, um eine Funktion über eine Liste zu reduzieren.
 Dieses Muster kann verwendet werden, um Summen, Produkte, Minima, Maxima und andere Funktionen zu implementieren:
 
@@ -100,7 +103,7 @@ function Sum(xs : Int[]) {
 }
 ```
 
-Ebenso können Funktionen wie <xref:microsoft.quantum.arrays.mapped> und <xref:microsoft.quantum.arrays.mappedbyindex> zum Ausdrücken funktionaler Programmier Konzepte in Q # verwendet werden.
+Ebenso können Funktionen wie <xref:microsoft.quantum.arrays.mapped> und <xref:microsoft.quantum.arrays.mappedbyindex> verwendet werden, um funktionale Programmier Konzepte in auszudrücken Q# .
 
 ## <a name="composing-operations-and-functions"></a>Verfassen von Vorgängen und Funktionen ##
 
@@ -170,7 +173,7 @@ Dieses Iterations Muster wird implementiert von <xref:microsoft.quantum.canon.de
 DecomposeIntoTimeStepsCA((2, U), 1);
 ```
 
-Die Signatur von `DecomposeIntoTimeStepsCA` folgt einem allgemeinen Muster in Q #, bei dem Auflistungen, die entweder durch Arrays oder durch Elemente, die im laufenden Betrieb sind, durch Tupel dargestellt werden, deren erste Elemente Werte sind, die `Int` Ihre Längen angeben.
+Die Signatur von `DecomposeIntoTimeStepsCA` folgt einem allgemeinen Muster in Q# , bei dem Auflistungen, die entweder durch Arrays oder durch Elemente, die im laufenden Betrieb sind, durch Tupel dargestellt werden, deren erste Elemente Werte sind, die `Int` Ihre Längen angeben.
 
 ## <a name="putting-it-together-controlling-operations"></a>Kombinieren von Vorgängen: Steuern von Vorgängen ##
 
@@ -215,7 +218,7 @@ Dadurch `ApplyWith` wird das Steuerelement in der Klammer mit $P $, genau wie ge
 
 An diesem Punkt könnten wir zwar das tun, aber es ist nicht zu erwarten, dass unser neuer Vorgang nicht wie das Anwenden des `Controlled` funktors funktioniert.
 Daher haben wir die Definition des neuen Ablauf steuerungskonzepts abgeschlossen, indem wir eine Funktion schreiben, die das Oracle zum Steuern benötigt und einen neuen Vorgang zurückgibt.
-Auf diese Weise sieht die neue Funktion sehr ähnlich aus und zeigt `Controlled` , dass wir ganz einfach leistungsstarke neue Ablaufsteuerungskonstrukte mit Q # und dem Kanon definieren können:
+Auf diese Weise sieht die neue Funktion sehr ähnlich aus und zeigt `Controlled` , dass wir mit und dem Kanon problemlos leistungsstarke neue Ablaufsteuerungskonstrukte definieren können Q# :
 
 ```qsharp
 function ControlledOnBitString(

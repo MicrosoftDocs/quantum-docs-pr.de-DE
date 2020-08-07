@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: ed5ab5df9de5d71ccd922cd430cf15779806dd6a
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 1110f32a6486de1a346b115fa928a098749b6690
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274857"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866875"
 ---
 # <a name="improving-documentation"></a>Verbessern der Dokumentation
 
@@ -25,7 +28,7 @@ Wir übernehmen auf ähnliche Weise die [mathjax](https://www.mathjax.org/) -Bib
 Dies bedeutet, dass jede Art von Dokumentation in den Details etwas variiert:
 
 - Die **konzeptionelle Dokumentation** besteht aus einer Reihe von Artikeln, die in veröffentlicht werden https://docs.microsoft.com/quantum , und in denen alles von den Grundlagen von Quantum Computing bis hin zu den technischen Spezifikationen für Austauschformate beschrieben wird. Diese Artikel sind in " [docfx-aromatied markdown" (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)geschrieben, einer markdown-Variante, die zum Erstellen umfassender Dokumentations Sätze verwendet wird.
-- Die **API-Referenz** besteht aus einem Satz von Seiten für jede f #-Funktion, jeden Vorgang und jeden benutzerdefinierten Typ, der in veröffentlicht wird https://docs.microsoft.com/qsharp/api/ . Diese Seiten dokumentieren die Eingaben und Vorgänge für jede Aufruf Bare Datei sowie Beispiele und Links zu weiteren Informationen. Die API-Referenz wird automatisch aus kleinen DFM-Dokumenten in Q #-Quellcode als Teil der einzelnen Releases extrahiert.
+- Die **API-Referenz** besteht aus einem Satz von Seiten für jede Q# Funktion, jeden Vorgang und jeden benutzerdefinierten Typ, der in veröffentlicht wird https://docs.microsoft.com/qsharp/api/ . Diese Seiten dokumentieren die Eingaben und Vorgänge für jede Aufruf Bare Datei sowie Beispiele und Links zu weiteren Informationen. Die API-Referenz wird automatisch aus kleinen DFM-Dokumenten im Q# Quellcode im Rahmen der einzelnen Releases extrahiert.
 - Die in den einzelnen Beispielen und in der Datei "Info. MD" enthaltenen "Info ** <!----> . MD** "-Dateien beschreiben, wie dieses Beispiel verwendet wird, und wie es verwendet wird, was es behandelt und wie es mit dem Rest des Quantum Development Kit verknüpft ist. Diese Dateien werden mithilfe von [GitHub-debuggermarkdown (GFM)](https://github.github.com/gfm/)geschrieben, eine einfachere Alternative zu DFM, die für die direkte Anfügung von Dokumentation an Coderepositorys beliebt ist.
 
 ## <a name="contributing-to-the-conceptual-documentation"></a>Mitwirken an der konzeptionellen Dokumentation
@@ -49,7 +52,7 @@ Wenn Sie Code aus dem [beispielrepository](https://github.com/Microsoft/Quantum)
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
 ```
 
-Mit diesem Befehl werden die Zeilen 4 in 8 der [ `Game.qs` Datei aus dem `chsh-game` Beispiel](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)importiert und als Q #-Code für die Syntax Hervorhebung gekennzeichnet.
+Mit diesem Befehl werden die Zeilen 4 in 8 der [ `Game.qs` Datei aus dem `chsh-game` Beispiel](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)importiert und als Q# Code für die Syntax Hervorhebung gekennzeichnet.
 Mit diesem Befehl können Sie das Duplizieren von Code zwischen konzeptionellen Artikeln und dem beispielrepository vermeiden, sodass der Beispielcode in der Dokumentation immer so aktuell wie möglich ist.
 
 ## <a name="contributing-to-the-api-references"></a>Beitrag zu den API-verweisen
@@ -64,7 +67,7 @@ Beim Kompilieren der einzelnen Releases des Quantum Development Kit werden diese
 
 Stellen Sie sich beispielsweise die-Funktion vor `ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)` .
 Ein Dokumentations Kommentar sollte einem Benutzer helfen, zu erfahren, wie `bits` und `oracle` wofür die Funktion vorgesehen ist.
-Alle diese unterschiedlichen Informationen können dem f #-Compiler von einem speziell benannten markdown-Abschnitt im Dokumentations Kommentar bereitgestellt werden.
+Alle diese unterschiedlichen Informationen können dem Q# Compiler von einem speziell benannten markdown-Abschnitt im Dokumentations Kommentar bereitgestellt werden.
 Für das Beispiel von `ControlledOnBitString` könnten wir etwas wie das folgende schreiben:
 
 ```qsharp
@@ -139,7 +142,7 @@ Die gerenderte Version des obigen Codes finden Sie in der [API-Dokumentation fü
 
 Zusätzlich zur allgemeinen Vorgehensweise bei der Dokumentations Erstellung werden im Artikel Schreiben von API-Dokumentations Kommentaren die folgenden Punkte berücksichtigt:
 
-- Das Format der einzelnen Dokumentations Kommentare muss mit dem des Q #-Compilers identisch sein, damit die Dokumentation ordnungsgemäß angezeigt wird. Einige Abschnitte, wie z `/// # Remarks` . b. das Zulassen von frei Hand Inhalten, während Abschnitte wie der- `/// # See Also` Abschnitt restriktiver sind.
+- Das Format der einzelnen Dokumentations Kommentare muss den Anforderungen entsprechen, die der Q# Compiler erwartet, damit die Dokumentation ordnungsgemäß angezeigt wird. Einige Abschnitte, wie z `/// # Remarks` . b. das Zulassen von frei Hand Inhalten, während Abschnitte wie der- `/// # See Also` Abschnitt restriktiver sind.
 - Ein Leser kann Ihre API-Dokumentation auf der Haupt-API-Referenz Website, in der Zusammenfassung für jeden Namespace oder sogar in der IDE durch die Verwendung von Hover-Informationen lesen. Wenn Sie sicherstellen, dass `/// # Summary` nicht länger als ein Satz ist, können Sie den Leser schnell herausfinden, ob Sie einen weiteren Lesevorgang ausführen müssen, und Sie können bei der schnellen Durchführung von Namespace Zusammenfassungen helfen.
 - Die Dokumentation kann deutlich länger als der Code selbst sein, aber das ist in Ordnung. Sogar ein kleiner Code Abschnitt kann unerwartete Auswirkungen auf Benutzer haben, die den Kontext, in dem der Code vorhanden ist, nicht kennen. Wenn Sie konkrete Beispiele und Erläuterungen erläutern, können Sie die Benutzer dabei unterstützen, den Code, der für Sie verfügbar ist, optimal zu nutzen.
 

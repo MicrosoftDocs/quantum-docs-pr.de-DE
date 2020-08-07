@@ -6,12 +6,15 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.quantummodels
-ms.openlocfilehash: 9f9fc37944dd76026c2641d9cdf126e71053a598
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: f6b652ef3e315ded5b4e39fd65a2f6be7070d7fa
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275086"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869476"
 ---
 # <a name="quantum-models-for-electronic-systems"></a>Quantum-Modelle für elektronische Systeme
 

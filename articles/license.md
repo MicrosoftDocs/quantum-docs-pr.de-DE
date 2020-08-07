@@ -4,12 +4,15 @@ description: Lizenzbedingungen, Haftungsausschlüsse und Benutzerrechte für die
 author: QuantumWriter
 ms.author: cpalmer
 ms.date: 11/04/2019
-ms.openlocfilehash: 0d3aa9ae9e4f232ba2403512ff6e2394ecedeb22
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 33b36e5619c62c9e2306441f55b244caa3214e98
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907119"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866722"
 ---
 # <a name="microsoft-software-license-terms"></a>MICROSOFT-SOFTWARE-LIZENZBEDINGUNGEN 
 ## <a name="microsoft-quantum-development-kit-preview"></a>Microsoft Quantum Development Kit (Vorschau)
@@ -21,17 +24,17 @@ ms.locfileid: "77907119"
 
 * * *
 
-Die vorliegenden Lizenzbedingungen stellen eine Vereinbarung zwischen Ihnen und Microsoft Corporation bzw. einem verbundenen Unternehmen dar. Sie gelten für die Vorabversion der oben genannten Software und alle Microsoft-Dienste oder Software Updates (außer in dem Umfang, in dem solche Dienste oder Updates von neuen oder zusätzlichen Begriffen begleitet werden. in diesem Fall gelten diese unterschiedlichen Begriffe in der Reihe und ändern ihre oder die Rechte von Microsoft im Zusammenhang mit vorab aktualisierten Software oder Diensten).
+Die vorliegenden Lizenzbedingungen stellen eine Vereinbarung zwischen Ihnen und Microsoft Corporation bzw. einem verbundenen Unternehmen dar. Sie gelten für die Vorabversion der oben genannten Software und alle Microsoft-Dienste oder Software Updates (außer in dem Umfang, in dem solche Dienste oder Updates von neuen oder zusätzlichen Bedingungen begleitet werden. in diesem Fall gelten diese unterschiedlichen Bedingungen in der Reihe und ändern die Rechte ihrer oder von Microsoft in Bezug auf vorab aktualisierte Software oder Dienste nicht.)
 
 SOLANGE SIE DIESE LIZENZBEDINGUNGEN EINHALTEN, STEHEN IHNEN DIE NACHFOLGEND AUFGEFÜHRTEN RECHTE ZU. DURCH DIE VERWENDUNG DER SOFTWARE AKZEPTIEREN SIE DIESE BEDINGUNGEN.
 
-1. **INSTALLATIONS- UND NUTZUNGSRECHTE.**
+1. **INSTALLATION UND NUTZUNGSRECHTE.**
 
      a. **Allgemein**. Sie können die Microsoft Quantum Development Kit-Software (Vorschauversion) nur verwenden, um Ihre Anwendungen zu entwickeln und zu testen.
 
      b. **Third Party Software**. Die Software umfasst möglicherweise Drittanbieteranwendungen, für die Ihnen im Rahmen dieser Vereinbarung oder unter den eigenen Bedingungen des Drittanbieters eine Lizenz erteilt wird. Lizenzbedingungen, Hinweise und Bestätigungen (sofern vorhanden) können für Anwendungen von Drittanbietern Online auf [Hinweise von Drittanbietern](https://3rdpartysource.microsoft.com/) oder in einer begleitenden Benachrichtigungs Datei zugegriffen werden. Auch wenn solche Anwendungen anderen Vereinbarungen unterliegen, treffen der Gewährleistungsausschluss sowie die Beschränkung und der Ausschluss von Schadensersatz, die weiter unten genannt sind, im zulässigen Rahmen des geltenden Rechts zu. Der von ETH Zürich (Schweiz) entwickelte Kernel, Gruppe von Prof. Troyer.
  
-2. **Zeit empfindliche Software.**
+2. **ZEITEMPFINDLICHE SOFTWARE.**
 
      a. **Zeitraum**. Die Software ist Zeit empfindlich und kann an einem in der Software definierten Datum nicht mehr ausgeführt werden.
 
@@ -42,21 +45,21 @@ SOLANGE SIE DIESE LIZENZBEDINGUNGEN EINHALTEN, STEHEN IHNEN DIE NACHFOLGEND AUFG
 1. **Vorabversion der Software**. Die Software ist eine Vorabversion. Sie funktioniert möglicherweise nicht ordnungsgemäß. Sie kann sich von der im Handel erhältlichen Version unterscheiden.
 
 
-1. **Feedback**. Wenn Sie Microsoft Feedback zu der Software zukommen lassen, gewähren Sie Microsoft unentgeltlich das Recht, Ihr Feedback auf beliebige Weise und zu beliebigen Zwecken zu nutzen, freizugeben und zu kommerzialisieren. Sie geben kein Feedback ab, das einer Lizenz unterliegt, durch die Microsoft seine Software oder Dokumentation gegenüber Drittparteien lizenzieren muss, da Microsoft Ihr Feedback darin verwendet. Diese Rechte gelten über diese Vereinbarung hinaus.
+1. **FEEDBACK**. Wenn Sie Microsoft Feedback zu der Software zukommen lassen, gewähren Sie Microsoft unentgeltlich das Recht, Ihr Feedback auf beliebige Weise und zu beliebigen Zwecken zu nutzen, freizugeben und zu kommerzialisieren. Sie geben kein Feedback ab, das einer Lizenz unterliegt, durch die Microsoft seine Software oder Dokumentation gegenüber Drittparteien lizenzieren muss, da Microsoft Ihr Feedback darin verwendet. Diese Rechte gelten über diese Vereinbarung hinaus.
 
-1. **Datensammlung**. Die Software kann Informationen zu Ihrer Person und Ihrer Verwendung der Software sammeln und diese an Microsoft senden. Microsoft kann diese Informationen zur Bereitstellung von Diensten und zur Verbesserung der Produkte und Dienste von Microsoft verwenden. Ihre Widerspruchsrechte werden ggf. in der Produktdokumentation beschrieben. Einige Funktionen in der Software ermöglichen eventuell die Sammlung von Daten von Benutzern Ihrer Anwendungen, die auf die Software zugreifen oder diese verwenden. Wenn Sie diese Funktionen zur Aktivierung der Datensammlung in Ihren Anwendungen verwenden, müssen Sie geltende Gesetze einhalten, indem Sie beispielsweise die etwaige erforderliche Zustimmung des Benutzers einholen, und eine klare Datenschutzrichtlinie führen, die Benutzer genau über die Verwendung, Sammlung und Weitergabe ihrer Daten informiert. Weitere Informationen über die Datensammlung und -nutzung durch Microsoft finden Sie in der Produktdokumentation und der Datenschutzerklärung von Microsoft unter https://go.microsoft.com/fwlink/?LinkId=521839. Sie stimmen zu, alle geltenden Bestimmungen der Datenschutzerklärung von Microsoft einzuhalten.
+1. **Datensammlung**. Die Software kann Informationen zu Ihrer Person und Ihrer Verwendung der Software sammeln und diese an Microsoft senden. Microsoft kann diese Informationen zur Bereitstellung von Diensten und zur Verbesserung der Produkte und Dienste von Microsoft verwenden. Ihre Widerspruchsrechte werden ggf. in der Produktdokumentation beschrieben. Einige Funktionen in der Software ermöglichen eventuell die Sammlung von Daten von Benutzern Ihrer Anwendungen, die auf die Software zugreifen oder diese verwenden. Wenn Sie diese Funktionen zur Aktivierung der Datensammlung in Ihren Anwendungen verwenden, müssen Sie geltende Gesetze einhalten, indem Sie beispielsweise die etwaige erforderliche Zustimmung des Benutzers einholen, und eine klare Datenschutzrichtlinie führen, die Benutzer genau über die Verwendung, Sammlung und Weitergabe ihrer Daten informiert. Weitere Informationen über die Datensammlung und -nutzung durch Microsoft finden Sie in der Produktdokumentation und der Datenschutzerklärung von Microsoft unter https://go.microsoft.com/fwlink/?LinkId=521839. Sie stimmen der Einhaltung aller geltenden Vorschriften der Datenschutzbestimmungen von Microsoft zu.
 
 1. **Umfang der Lizenz** Die Software wird lizenziert, nicht verkauft. Alle anderen Rechte behält sich Microsoft vor. Folgendes ist Ihnen untersagt, es sei denn, das geltende Recht räumt Ihnen trotz dieser Einschränkung mehr Rechte ein:
 
-    a. umgehen Sie alle technischen Einschränkungen in der Software, die nur auf bestimmte Weise verwendet werden können.
+    a. technische Beschränkungen der Software zu umgehen, die lediglich bestimmte Nutzungsarten zulassen;
 
-    b. Rückgängigmachen der Software, Aufheben der Kompilierung oder Disassemblierung
+    b. Zurückentwickeln (Reverse Engineering), Dekompilieren oder Disassemblieren der Software;
 
-    c. entfernen, minimieren, blockieren oder Ändern von Hinweisen von Microsoft oder seinen Lieferanten in der Software
+    c. Entfernen, Minimieren, Blockieren oder Ändern von Hinweisen von Microsoft oder seinen Zulieferern in der Software,
 
-    d. Verwenden Sie die Software auf eine beliebige Weise, die gegen das Gesetz steht oder Schadsoftware erstellt oder weitergibt. noch
+    d. Verwendung der Software in gesetzeswidriger Weise oder zur Erstellung und Verbreitung von Schadsoftware; oder
     
-    e. freigeben, veröffentlichen, verteilen oder verleihen der Software, Bereitstellen der Software als eigenständige gehostete Lösung, die von anderen Benutzern verwendet werden soll, oder übertragen der Software oder dieses Vertrags an Dritte.
+    e. Freigeben, Veröffentlichen, Verteilen oder Verleihen der Software oder Bereitstellen der Software als eigenständige gehostete Lösung für andere oder Übertragen der Software oder dieser Vereinbarung an Dritte.
 
 1. **Export Einschränkungen**. Sie sind verpflichtet, alle nationalen und internationalen Exportgesetze und -bestimmungen einzuhalten, die für die Software gelten, u.a. Einschränkungen im Hinblick auf Bestimmungsorte, Endbenutzer und Endverwendung. Weitere Informationen zu Exporteinschränkungen finden Sie unter https://aka.ms/exporting.
 
@@ -100,7 +103,7 @@ SOLANGE SIE DIESE LIZENZBEDINGUNGEN EINHALTEN, STEHEN IHNEN DIE NACHFOLGEND AUFG
 die **Einschränkung des dommages-intérêts et Ausschluss de responsabilité pour les dommages. Vous pouvez obtenir de Microsoft et de ses Fournisseurs une indemnisierungsen CAS de dommages leitet uniqument a hauteur de 5, 00 $ US. Vous ne pouvez prétendre de aucune indemnisierungsguss Les les autres dommages, y compris les dommages spéciaux, dereferenzierungsorganisations**Einheiten der Organisationseinheit "en".
 
 **This-Einschränkung concerne**:
-- **tout ce qui est relié au logiciel, aux Services ou au contenu (y compris Le Code) figurant sur des Sites Internet Tarife OE der Organisationsebenen usw**
+- **tout ce qui est relié au logiciel, aux services ou au contenu (y compris le code) figurant sur des sites Internet tiers ou dans des programmes tiers; et**
 - **Les réclamations au titre de Verletzung de kontra t ou de Garantie, ou au titre de responsabilité stricte, de négligence ou d. autre faute dans la Limite autorisée par la Loi en vigueur**.
 
 "Ken **' applique egalements, même si Microsoft konnaissait ou devrait konnaître \ eventualité d ' Tel dommage". Si votre zahlt n ' autorise pas = Ausschluss ou La Einschränkung de responsabilité pour les dommages dereferenzierungseinheiten, Zubehör ou de quelque Nature que ce soit, il se peut que la-Einschränkung ou = Ausschluss ci-dessus ne ' appliquera pas**'.
