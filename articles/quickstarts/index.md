@@ -7,18 +7,21 @@ ms.date: 5/8/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: ee8d210d67a20cfea3bdc36162efc47f021a6dc6
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 378970dc911ea5a794590f8336ffc6d3f9673285
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885473"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867572"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Installieren des Microsoft Quantum Development Kit (QDK)
 
 Es wird beschrieben, wie Sie das Microsoft Quantum Development Kit (QDK) installieren, damit Sie mit der Quantenprogrammierung starten können. Das QDK umfasst Folgendes:
 
-- Programmiersprache Q#
+- Die Programmiersprache Q#
 - Bibliotheken zur Abstraktion komplexer Funktionen in Q#
 - API für die Sprachen Python und .NET (C#, F# und VB.NET) zum Ausführen von Quantenprogrammen, die in Q# geschrieben sind
 - Tools für die Entwicklung

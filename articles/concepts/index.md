@@ -6,12 +6,15 @@ ms.author: nawiebe
 uid: microsoft.quantum.concepts.intro
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: fb1df9e3460c18d0cdc0ff430fa236192b3aa2fa
-ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: f62317cd32068319f15c15ae1fa0775ea3fb00b2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73442304"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866824"
 ---
 # <a name="quantum-computing-history-and-background"></a>Quantencomputing: Geschichte und Hintergrund
 
@@ -27,4 +30,4 @@ Der Kern des Quantencomputings ist die Speicherung von Informationen in Quantenz
 
 Das Entwerfen eines Quantenprogramms zur Bewältigung von Überlagerungen klingt nach einer schwierigen Herausforderung. Dies ist auch der Fall, aber es wurden viele Verfahren und Tools entwickelt, z. B. unser Microsoft Quantum Development Kit, um die Quantenprogrammierung und die Entwicklung von Algorithmen besser zugänglich zu machen. Es gibt einige grundlegende Strategien, mit denen Quantenüberlagerungen so manipuliert werden können, dass sie für das Computing nützlich sind – während gleichzeitig dafür gesorgt wird, dass sich die Lösung nicht in den vielen unterschiedlichen Möglichkeiten des Quantenbereichs verliert. Die Quantenprogrammierung unterscheidet sich deutlich von der klassischen Programmierung und erfordert völlig andere Tools, um die Denkweise hinter Quantenalgorithmen verstehen und ausdrücken zu können. Ohne die allgemeinen Tools als Hilfe für einen Quantenentwickler bei der Quantenprogrammierung ist die Entwicklung von Quantenalgorithmen nicht so einfach.
 
-Wir haben das Microsoft Quantum Development Kit eingeführt, um eine ständig wachsende Community mit Tools zu versorgen, die die Umsetzung der Quantenrevolution in Bezug auf die Aufgaben, Probleme und Lösungen ermöglichen. Unsere allgemeine Programmiersprache Q# wurde konzipiert, um die Problemstellungen der Verarbeitung von Quanteninformationen bewältigen zu können. Sie ist in einen Softwarestapel integriert, der es ermöglicht, einen Quantenalgorithmus bis hinunter zu den primitiven Operationen eines Quantencomputers zu kompilieren.  Bevor Sie sich an die Programmiersprache heranwagen, ist es ratsam, sich mit den Grundprinzipien vertraut zu machen, auf denen das Quantencomputing basiert. Wir behandeln die grundlegenden Regeln des Quantencomputings als Axiome, anstatt detailliert deren Grundlagen in der Quantenmechanik darzustellen. Darüber hinaus setzen wir voraus, dass Sie über Grundkenntnisse in linearer Algebra (Vektoren, Matrizen usw.) verfügen. Falls Sie die Geschichte und die Prinzipien des Quantencomputings eingehender studieren möchten, helfen Ihnen die Informationen im [Referenzabschnitt](xref:microsoft.quantum.more-information) weiter.
+Wir haben das Microsoft Quantum Development Kit eingeführt, um eine ständig wachsende Community mit Tools zu versorgen, die die Umsetzung der Quantenrevolution in Bezug auf die Aufgaben, Probleme und Lösungen ermöglichen. Unsere allgemeine Programmiersprache Q# wurde konzipiert, um die Herausforderungen im Zusammenhang mit der Verarbeitung von Quanteninformationen zu bewältigen. Sie ist in einen Softwarestapel integriert, der es ermöglicht, einen Quantenalgorithmus bis hinunter zu den primitiven Operationen eines Quantencomputers zu kompilieren.  Bevor Sie sich an die Programmiersprache heranwagen, ist es ratsam, sich mit den Grundprinzipien vertraut zu machen, auf denen das Quantencomputing basiert. Wir behandeln die grundlegenden Regeln des Quantencomputings als Axiome, anstatt detailliert deren Grundlagen in der Quantenmechanik darzustellen. Darüber hinaus setzen wir voraus, dass Sie über Grundkenntnisse in linearer Algebra (Vektoren, Matrizen usw.) verfügen. Falls Sie die Geschichte und die Prinzipien des Quantencomputings eingehender studieren möchten, helfen Ihnen die Informationen im [Referenzabschnitt](xref:microsoft.quantum.more-information) weiter.

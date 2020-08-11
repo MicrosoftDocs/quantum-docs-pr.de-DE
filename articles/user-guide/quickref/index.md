@@ -5,13 +5,16 @@ author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 uid: microsoft.quantum.guide.quickref
-ms.openlocfilehash: b5c8951454ec6a2e25417d2b91a8dd2edb61565a
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 51daeda6a6b9199d1f00e38a16843bd7b15d5d07
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430576"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867997"
 ---
 # <a name="quick-reference-pages"></a>Kurzübersichten
 
-* [IQ# -Magic-Befehle für Q#-Jupyter Notebook-Instanzen](xref:microsoft.quantum.guide.quickref.iqsharp)
+* [IQ#-Magic-Befehle für Q#-Jupyter Notebook-Instanzen](xref:microsoft.quantum.guide.quickref.iqsharp)

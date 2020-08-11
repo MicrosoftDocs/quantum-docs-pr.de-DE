@@ -6,14 +6,17 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 4d148435f01d975e690828dd02335758fc71dfe4
-ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 01a5c31a7a920a69f4f90701d370f3a772d2c4d2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87436553"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866739"
 ---
-# <a name="develop-with-q-and-python"></a>Entwickeln mit Q# und Python
+# <a name="develop-with-no-locq-and-python"></a>Entwickeln mit Q# und Python
 
 Installieren Sie das QDK, um Python-Hostprogramme zum Aufrufen von Q#-Vorgängen zu entwickeln.
 
@@ -27,7 +30,7 @@ Installieren Sie das QDK, um Python-Hostprogramme zum Aufrufen von Q#-Vorgängen
 
    - Wenn Sie PowerShell oder pwsh verwenden möchten: Öffnen Sie eine Shell, führen Sie `conda init powershell`aus, schließen Sie die Shell, und öffnen Sie sie erneut.
 
-1. Erstellen und aktivieren Sie eine neue Conda-Umgebung namens `qsharp-env` mit den erforderlichen Paketen (einschließlich Jupyter Notebook und IQ#), indem Sie die folgenden Befehle ausführen:
+1. Erstellen und aktivieren Sie eine neue Conda-Umgebung namens `qsharp-env` mit den erforderlichen Paketen (einschließlich Jupyter Notebook und IQ#). Führen Sie dazu die folgenden Befehle aus:
 
     ```
     conda create -n qsharp-env -c quantum-engineering qsharp notebook
@@ -70,11 +73,11 @@ Installieren Sie das QDK, um Python-Hostprogramme zum Aufrufen von Q#-Vorgängen
     
 ***
 
-Das ist alles! Sie verfügen nun sowohl über das `qsharp`-Python-Paket als auch den IQ#-Kernel für Jupyter, der die Kernfunktionen für das Kompilieren und Ausführen von Q#-Vorgängen in Python bereitstellt und Ihnen die Verwendung von Q#-Jupyter Notebooks ermöglicht.
+Das ist alles! Sie verfügen nun sowohl über das `qsharp`-Python-Paket als auch über den IQ#-Kernel für Jupyter, der die Kernfunktionen für das Kompilieren und Ausführen von Q#-Vorgängen in Python bereitstellt und die Verwendung von Q#-Jupyter Notebook-Instanzen ermöglicht.
 
 ## <a name="choose-your-ide"></a>Auswählen Ihrer IDE
 
-Sie können Q# mit Python zwar in einer beliebigen IDE verwenden, aber wir empfehlen Ihnen dringend die Nutzung von Visual Studio Code (VS Code) als IDE für Ihre Q#/Python-Anwendungen. Mit der QDK-Erweiterung für Visual Studio Code erhalten Sie Zugriff auf umfangreichere Funktionen wie Warnungen, Syntaxhervorhebung, Projektvorlagen usw.
+Q# mit Python kann zwar in einer beliebigen IDE verwendet werden, wir empfehlen jedoch Visual Studio Code (VS Code) als IDE für Ihre Q#- und Python-Anwendungen. Mit der QDK-Erweiterung für Visual Studio Code erhalten Sie Zugriff auf umfangreichere Funktionen wie Warnungen, Syntaxhervorhebung, Projektvorlagen usw.
 
 Wenn Sie VS Code verwenden möchten, gehen Sie wie folgt vor:
 
@@ -83,7 +86,7 @@ Wenn Sie VS Code verwenden möchten, gehen Sie wie folgt vor:
 
 Wenn Sie einen anderen Editor verwenden möchten, sind Sie nach Ausführung der obigen Anweisungen dafür bereit.
 
-## <a name="write-your-first-q-program"></a>Schreiben Ihres ersten Q#-Programms
+## <a name="write-your-first-no-locq-program"></a>Schreiben Ihres ersten Q#-Programms
 
 Nun können Sie Ihre Installation des `qsharp`-Python-Pakets überprüfen, indem Sie ein einfaches Q#-Programm schreiben und ausführen.
 
@@ -109,7 +112,7 @@ Nun können Sie Ihre Installation des `qsharp`-Python-Pakets überprüfen, indem
 1. Das Ergebnis des von Ihnen aufgerufenen Vorgangs sollte angezeigt werden. Da in diesem Fall ein zufälliges Ergebnis durch den Vorgang generiert wird, wird entweder `0` oder `1` auf dem Bildschirm angezeigt. Wenn Sie das Programm wiederholt ausführen, sollte jedes Ergebnis ungefähr die Hälfte der Zeit angezeigt werden.
 
 > [!NOTE]
-> * Beim Python-Code handelt es sich nur um ein normales Python-Programm. Sie können eine beliebige Python-Umgebung verwenden, einschließlich Python-basierter Jupyter Notebooks, um das Python-Programm zu schreiben und Q#-Vorgänge aufzurufen. Das Python-Programm kann Q#-Vorgänge aus allen QS-Dateien importieren, die sich im gleichen Ordner wie der Python-Code selbst befinden.
+> * Beim Python-Code handelt es sich nur um ein normales Python-Programm. Sie können eine beliebige Python-Umgebung verwenden, einschließlich Python-basierter Jupyter Notebook-Instanzen, um das Python-Programm zu schreiben und Q#-Vorgänge aufzurufen. Das Python-Programm kann Q#-Vorgänge aus allen QS-Dateien importieren, die sich im gleichen Ordner befinden wie der Python-Code.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

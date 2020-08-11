@@ -6,18 +6,21 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries
-ms.openlocfilehash: 09fc723d27f2e026430b358c62b817c106c135c2
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: d61fe459362fdb5f3550768a26b34656a8a538a7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871500"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869102"
 ---
-# <a name="overview-of-q-libraries"></a>Übersicht über die Q#-Bibliotheken
-Das Quantum Development Kit wird mehreren Bibliotheken bereitgestellt, um die Entwicklung von Quantenanwendungen in Q# zu vereinfachen.
+# <a name="overview-of-no-locq-libraries"></a>Übersicht über Q#-Bibliotheken
+Das Quantum Development Kit wird mit mehreren Bibliotheken bereitgestellt, um die Entwicklung von Quantenanwendungen in Q# zu vereinfachen.
 In diesem Abschnitt der Dokumentation werden diese Bibliotheken und ihre Verwendung in Programmen beschrieben.
 
-- [**Standardbibliotheken:** ](xref:microsoft.quantum.libraries.standard.intro) Dieser Abschnitt enthält eine Einführung, in der die Schnittstelle zwischen Q#-Programmen und Zielcomputern, der Kanon und eine Q#-Bibliothek mit allgemeinen Vorgängen und Funktionen zum Schreiben von Q#-Programmen beschrieben werden.
+- [**Standardbibliotheken:** ](xref:microsoft.quantum.libraries.standard.intro) In diesem Abschnitt werden das Präludium (definiert die Schnittstelle zwischen Q#-Programmen und Zielcomputern) und der Kanon (eine Q#-Bibliothek mit universellen Operationen und Funktionen zum Schreiben von Q#-Programmen) beschrieben.
 - [**Quantenchemiebibliothek:** ](xref:microsoft.quantum.chemistry.concepts.intro) In diesem Abschnitt wird die Quantenchemiebibliothek beschrieben, die ein Datenmodell zum Laden von Darstellungen von Fermion-Hamiltonoperatoren sowie Vorgänge und Funktionen der Quantensimulation bereitstellt, die mit diesen Darstellungen interagieren können.
 - [**Numerische Quantenbibliothek:** ](xref:microsoft.quantum.numerics.intro) In diesem Abschnitt wird die numerische Quantenbibliothek beschrieben, die Implementierungen für eine große Anzahl mathematischer Funktionen bereitstellt. Sie unterstützt (signierte und nicht signierte) Integer und Festkommadarstellungen.
 - [**Quantum Machine Learning-Bibliothek**](xref:microsoft.quantum.machine-learning.concepts.intro): In diesem Abschnitt wird die Quantum Machine Learning-Bibliothek beschrieben. Sie verfügt über eine Implementierung der sequenziellen Klassifizierer, die Quantencomputing nutzen, um Daten zu verstehen.

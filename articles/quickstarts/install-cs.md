@@ -1,19 +1,22 @@
 ---
-title: Entwickeln mit Q# und .Net
+title: Entwickeln mit Q# und .NET
 author: bradben
 ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 714c15d9589095f0fe395fcd6941672167879dca
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 13d73bdf0287941c89e03ba63869095e5fca4e70
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885503"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867555"
 ---
-# <a name="develop-with-q-and-net"></a>Entwickeln mit Q# und .Net
+# <a name="develop-with-no-locq-and-net"></a>Entwickeln mit Q# und .NET
 
 Q# ist auf die Verwendung mit .NET-Sprachen wie C# und F# ausgelegt.
 In diesem Leitfaden wird veranschaulicht, wie Sie Q# mit einem in einer .NET-Sprache geschriebenen Hostprogramm verwenden.
@@ -24,7 +27,7 @@ Zunächst erstellen wir die Q#-Anwendung und den .NET-Host und veranschaulichen 
 
 - Installieren Sie das Quantum Development Kit [für die Nutzung mit Q#-Befehlszeilenprojekten](xref:microsoft.quantum.install.standalone).
 
-## <a name="creating-a-q-library-and-a-net-host"></a>Erstellen einer Q#-Bibliothek und eines .NET-Hosts
+## <a name="creating-a-no-locq-library-and-a-net-host"></a>Erstellen einer Q#-Bibliothek und eines .NET-Hosts
 
 Der erste Schritt ist die Erstellung von Projekten für Ihre Q#-Bibliothek und für den .NET-Host, von dem Aufrufe für die in Ihrer Q#-Bibliothek definierten Vorgänge und Funktionen durchgeführt werden.
 
@@ -33,7 +36,7 @@ Wenn Sie einen anderen Editor als Visual Studio oder VS Code verwenden, befolgen
 
 ### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code oder Befehlszeile](#tab/tabid-cmdline)
 
-- Erstellen einer neuen Q#-Bibliothek
+- Erstellen Sie eine neue Q#-Bibliothek.
 
   ```dotnetcli
   dotnet new classlib -lang Q# -o quantum
@@ -62,9 +65,9 @@ Wenn Sie einen anderen Editor als Visual Studio oder VS Code verwenden, befolgen
 
 ### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-- Erstellen einer neuen Q#-Bibliothek
+- Erstellen Sie eine neue Q#-Bibliothek.
   - Klicken Sie auf **Datei** -> **Neu** -> **Projekt**.
-  - Geben Sie im Suchfeld als Suchbegriff „Q#“ ein.
+  - Geben Sie „Q#“ in das Suchfeld ein.
   - Wählen Sie **Q#-Bibliothek** aus.
   - Wählen Sie **Weiter** aus.
   - Wählen Sie einen Namen und Speicherort für Ihre Bibliothek aus.
@@ -80,16 +83,16 @@ Wenn Sie einen anderen Editor als Visual Studio oder VS Code verwenden, befolgen
 
 ***
 
-## <a name="calling-into-q-from-net"></a>Durchführen von Q#-Aufrufen aus .NET
+## <a name="calling-into-no-locq-from-net"></a>Durchführen von Q#-Aufrufen über .NET
 
-Nachdem Sie Ihre Projekte gemäß der obigen Anleitung eingerichtet haben, können Sie aus Ihrer .NET-Konsolenanwendung Q#-Aufrufe durchführen.
-Der Q#-Compiler erstellt .NET-Klassen für alle Q#-Vorgänge und -Funktionen, die Ihnen das Ausführen Ihrer Quantenprogramme in einem Simulator ermöglichen.
+Nachdem Sie Ihre Projekte gemäß der obigen Anleitung eingerichtet haben, können Sie über Ihre .NET-Konsolenanwendung Q#-Aufrufe durchführen.
+Der Q#-Compiler erstellt .NET-Klassen für alle Q#-Vorgänge und -Funktionen, die das Ausführen von Quantenprogrammen in einem Simulator ermöglichen.
 
 Das [Beispiel zur .NET-Interoperabilität](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet) enthält das folgende Beispiel für einen Q#-Vorgang:
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 
-Um diesen Vorgang aus .NET in einem Quantensimulator aufzurufen, können Sie die Methode `Run` der .NET-Klasse `RunAlgorithm` verwenden, die vom Q#-Compiler generiert wird:
+Um diesen Vorgang über .NET in einem Quantensimulator aufzurufen, können Sie die Methode `Run` der .NET-Klasse `RunAlgorithm` verwenden, die vom Q#-Compiler generiert wird:
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 

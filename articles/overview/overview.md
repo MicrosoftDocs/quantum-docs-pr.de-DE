@@ -6,12 +6,15 @@ ms.author: bradben
 ms.date: 05/05/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.introduction
-ms.openlocfilehash: 7c55420bd35f9b6e0e7ec80ddffe8a861cb7df39
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 59cb595ac207d6e84358fc6ba742e0e0019c76f9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430780"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866977"
 ---
 # <a name="introduction-to-quantum-computing-and-the-quantum-development-kit"></a>Einführung in Quantencomputing und in das Quantum Development Kit
 
@@ -62,9 +65,9 @@ Maschinelles Lernen auf klassischen Computern revolutioniert die Welt der Wissen
 
 Das Quantum Development Kit enthält die [Quantum Machine Learning-Bibliothek](xref:microsoft.quantum.machine-learning.concepts.intro), mit der Sie Machine Learning-Hybridexperimente durchführen können, bei denen sowohl Quantencomputing als auch klassisches Computing genutzt wird. Die Bibliothek enthält Beispiele und Tutorials und stellt die erforderlichen Tools bereit, um einen neuen Hybridalgorithmus mit einer Kombination aus Quantencomputing und klassischem Computing – den Quantenklassifizierer für Schaltungen – zu implementieren, um Probleme im Zusammenhang mit der überwachten Klassifizierung zu lösen.
 
-## <a name="q-and-the-microsoft-quantum-development-kit-qdk"></a>Q# und das Microsoft Quantum Development Kit (QDK)
+## <a name="no-locq-and-the-microsoft-quantum-development-kit-qdk"></a>Q# und das Microsoft Quantum Development Kit (QDK)
 
-Q# ist die Open-Source-Programmiersprache von Microsoft zum Entwickeln und Ausführen von Quantenalgorithmen. Sie ist im [QDK](https://docs.microsoft.com/quantum/) enthalten. Dabei handelt es sich um ein umfassendes Entwicklungskit für Q#, das mit Standardtools und -sprachen verwendet werden kann, um Quantenanwendungen zu entwickeln, die Sie in verschiedenen Umgebungen ausführen können – unter anderem im integrierten Quantensimulator für den vollständigen Zustand.
+Q# ist die Open-Source-Programmiersprache von Microsoft für die Entwicklung und Ausführung von Quantenalgorithmen. Sie ist im [QDK](https://docs.microsoft.com/quantum/) enthalten. Dabei handelt es sich um ein umfassendes Entwicklungskit für Q#, das mit Standardtools und -sprachen verwendet werden kann, um Quantenanwendungen zu entwickeln, die Sie in verschiedenen Umgebungen ausführen können – unter anderem im integrierten Quantensimulator für den vollständigen Zustand.
 
 Es gibt Erweiterungen für Visual Studio und VS Code sowie Pakete für Python und Jupyter Notebook.
 
@@ -74,7 +77,7 @@ Die Dokumentation beinhaltet einen Leitfaden, Tutorials und Beispielcode für Q#
 
 ## <a name="microsoft-quantum-hardware-partners"></a>Microsoft-Partner für Quantenhardware
 
-Microsoft arbeitet mit Unternehmen im Bereich der Quantenhardware zusammen, um Entwicklern Cloudzugriff auf Quantenhardware zu ermöglichen. Mithilfe der [Azure Quantum-Plattform](https://azure.microsoft.com/services/quantum/) und der Q#-Sprache können sich Entwickler mit Quantenalgorithmen beschäftigen und ihre Quantenprogramme auf verschiedenen Arten von Quantenhardware ausführen.
+Microsoft arbeitet mit Unternehmen im Bereich der Quantenhardware zusammen, um Entwicklern Cloudzugriff auf Quantenhardware zu ermöglichen. Mithilfe der [Azure Quantum-Plattform](https://azure.microsoft.com/services/quantum/) und der Sprache Q# können sich Entwickler mit Quantenalgorithmen beschäftigen und ihre Quantenprogramme auf verschiedenen Arten von Quantenhardware ausführen.
 
 [IonQ](https://ionq.com/news/november-4-2019-microsoft-partnership) und [Honeywell](https://www.honeywell.com/en-us/newsroom/news/2019/11/the-future-of-quantum-computing) arbeiten jeweils mit **Ionenfallen-basierten** Prozessoren, bei denen einzelne, in einem elektrischen Feld gefangene Ionen genutzt werden. [QCI](https://quantumcircuits.com/news-and-publications/quantum-circuits-partners-with-microsoft-on-azure-quantum) arbeitet dagegen mit supraleitenden Schaltkreisen.
 

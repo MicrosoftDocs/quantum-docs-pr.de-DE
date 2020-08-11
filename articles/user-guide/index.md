@@ -6,32 +6,35 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
-ms.openlocfilehash: 078d86c808b26c7f0b7b2577020cd9cef9491a9d
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4fae2949bdcab0c3735b40ef029d70bf7ea3fb9f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885018"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869629"
 ---
-# <a name="the-q-user-guide"></a>Q#-Benutzerhandbuch
+# <a name="the-no-locq-user-guide"></a>Q#-Benutzerhandbuch
 
-Willkommen beim Q#-Benutzerhandbuch! 
+Willkommen beim Q#-Benutzerhandbuch. 
 
 In den verschiedenen Themen dieses Handbuchs finden Sie eine Beschreibung der grundlegenden Konzepte der Sprache Q# sowie alle Informationen, die Sie zum Schreiben von Quantenprogrammen benötigen.
 
 ## <a name="user-guide-contents"></a>Inhalt des Benutzerhandbuchs
 
-- [Q#-Grundlagen:](xref:microsoft.quantum.guide.basics) Ein erster Überblick über den Zweck und die Funktionen der Programmiersprache Q# 
+- [Q#-Grundlagen:](xref:microsoft.quantum.guide.basics) Ein erster Überblick über den Zweck und die Funktionen der Programmiersprache Q#. 
 
-- [Möglichkeiten zum Ausführen eines Q#-Programms](xref:microsoft.quantum.guide.host-programs): Beschreibt, wie ein Q#-Programm ausgeführt wird, und bietet eine Übersicht über die verschiedenen Möglichkeiten, wie Sie das Programm aufrufen können: über die Befehlszeile, in Q#-Jupyter Notebooks oder über ein klassisches Hostprogramm, das in Python oder einer .NET-Sprache geschrieben ist.
+- [Möglichkeiten zum Ausführen eines Q#-Programms:](xref:microsoft.quantum.guide.host-programs) Beschreibt, wie ein Q#-Programm ausgeführt wird, und bietet eine Übersicht über die verschiedenen Möglichkeiten, wie Sie das Programm aufrufen können: über die Befehlszeile, in Q#-Jupyter Notebook-Instanzen oder über ein klassisches Hostprogramm, das in Python oder einer .NET-Sprache geschrieben ist.
 
-### <a name="q-language"></a>Q#-Sprache
+### <a name="no-locq-language"></a>Sprache Q#
 
 - [Typen in Q#:](xref:microsoft.quantum.guide.types) Hier finden Sie Informationen zum Typmodell von Q# sowie zur Syntax für die Angabe und Verwendung von Typen.
 
-- [Typausdrücke in Q#:](xref:microsoft.quantum.guide.expressions) Hier erfahren Sie, wie Sie Werte für die einzelnen Typen in Q# angeben, auf sie verweisen, sie kombinieren und mit ihnen arbeiten. 
+- [Typausdrücke in Q#:](xref:microsoft.quantum.guide.expressions) Hier erfahren Sie, wie Sie Werte für die einzelnen Typen in Q# angeben, auf sie verweisen, sie kombinieren und mit ihnen arbeiten können. 
 
-### <a name="using-q"></a>Verwenden von Q#
+### <a name="using-no-locq"></a>Verwenden von Q#
 
 - [Q#-Dateistruktur:](xref:microsoft.quantum.guide.filestructure) Hier werden Struktur und Syntax einer Q#-Datei (`*.qs`) beschrieben.
 
@@ -47,7 +50,7 @@ In den verschiedenen Themen dieses Handbuchs finden Sie eine Beschreibung der gr
 
 - [Testen und Debuggen:](xref:microsoft.quantum.guide.testingdebugging) Hier werden einige Verfahren beschrieben, mit denen sichergestellt werden kann, dass sich Ihr Code wie gewünscht verhält. 
     Aufgrund der allgemeinen Opazität von Quanteninformationen sind zum Debuggen eines Quantenprogramms ggf. spezielle Verfahren erforderlich. 
-    Glücklicherweise unterstützt Q# nicht nur quantenspezifische, sondern auch viele klassische Debugverfahren, mit denen Programmierer bereits vertraut sind. Beispiele hierfür sind das Erstellen und Ausführen von Komponententests in Q#, Einbetten von *Assertionen* in Werten und Wahrscheinlichkeiten in Ihrem Code und die `Dump`-Funktionen, mit denen der Zustand der Zielcomputer ausgegeben wird. 
+    Erfreulicherweise unterstützt Q# nicht nur quantenspezifische, sondern auch viele klassische Debugverfahren, mit denen Programmierer bereits vertraut sind. Beispiele hierfür sind das Erstellen und Ausführen von Komponententests in Q#, Einbetten von *Assertionen* in Werten und Wahrscheinlichkeiten in Ihrem Code und die `Dump`-Funktionen, mit denen der Zustand der Zielcomputer ausgegeben wird. 
     Letzteres kann zusammen mit unserem Simulator für den vollständigen Zustand genutzt werden, um bestimmte Teile von Berechnungen zu debuggen, indem einige Einschränkungen für Quantenvorgänge umgangen werden (z. B. das [Theorem zum Thema „Kein Klonen“](xref:microsoft.quantum.concepts.pauli)).
 
 ### <a name="quantum-simulators-and-resource-estimators"></a>Quantensimulatoren und Ressourcenschätzungen

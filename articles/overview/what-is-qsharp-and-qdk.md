@@ -6,16 +6,19 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
-ms.openlocfilehash: ede4ad005090e4ac8ffd9b05d27edfa91f8c50ab
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 3ee9e897eb142bbc9503a617cc3e25c1a665ff35
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327702"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866943"
 ---
-# <a name="what-are-the-q-programming-language-and-qdk"></a>Was sind die Programmiersprache Q# und das QDK?
+# <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Was sind die Programmiersprache Q# und das QDK?
 
-Q# ist die Open-Source-Programmiersprache von Microsoft zum Entwickeln und Ausführen von Quantenalgorithmen. Sie ist Teil des Quantum Development Kit (QDK), das [Q#-Bibliotheken](xref:microsoft.quantum.libraries), [Quantensimulatoren](xref:microsoft.quantum.machines), [Erweiterungen für andere Programmierumgebungen](xref:microsoft.quantum.install) sowie eine [API-Dokumentation](xref:microsoft.quantum.standardlibsintro) umfasst. Neben der Q#-Standardbibliothek enthält das QDK auch Bibliotheken für Chemie, maschinelles Lernen und numerische Werte.
+Q# ist die Open-Source-Programmiersprache von Microsoft für die Entwicklung und Ausführung von Quantenalgorithmen. Sie ist Teil des Quantum Development Kit (QDK), das [Q#-Bibliotheken](xref:microsoft.quantum.libraries), [Quantensimulatoren](xref:microsoft.quantum.machines), [Erweiterungen für andere Programmierumgebungen](xref:microsoft.quantum.install) sowie eine [API-Dokumentation](xref:microsoft.quantum.standardlibsintro) umfasst. Neben der Q#-Standardbibliothek enthält das QDK auch Bibliotheken für Chemie, maschinelles Lernen und numerische Werte.
 
 Die Programmiersprache Q# nutzt vertraute Elemente aus Python, C# und F# und unterstützt ein einfaches Prozedurmodell zum Schreiben von Programmen mit Schleifen, If/Then-Anweisungen und gängigen Datentypen. Darüber hinaus führt sie aber auch neue quantenspezifische Datenstrukturen und Operationen ein.
 
@@ -43,7 +46,7 @@ Führen Sie Ihre Quantenprogramme in einem Quantensimulator für den vollständi
 | **Ich möchte mich intensiver mit der Programmiersprache Q# beschäftigen.** | Im [Q#-Benutzerhandbuch](xref:microsoft.quantum.guide) finden Sie Informationen zu Typen, Ausdrücken und Variablen sowie zur Struktur von Quantenprogrammen.|
 | **Ich möchte einfach nur Quantenprogramme schreiben.** | Unter [Installieren des Microsoft Quantum Development Kit (QDK)](xref:microsoft.quantum.install) erfahren Sie, wie Sie Ihre Q#-Umgebung einrichten und mit dem Schreiben von Quantenprogrammen beginnen.|
 
-## <a name="how-does-q-work"></a>Wie funktioniert Q#?
+## <a name="how-does-no-locq-work"></a>Wie funktioniert Q#?
 
 Ein Q#-Programm kann zu einer eigenständigen Befehlszeilenanwendung kompiliert oder durch ein in Python oder in einer .NET-Sprache geschriebenes Hostprogramm aufgerufen werden.
 
@@ -59,7 +62,7 @@ Alles, was Sie zum Schreiben und Ausführen von Q#-Programmen benötigen, kann a
 
 - Das Ausführen von [Q# über die Befehlszeile](xref:microsoft.quantum.install.standalone) stellt die schnellste Einstiegsmöglichkeit dar.
 
-- Führen Sie eigenständige [Jupyter Notebook-Instanzen mit IQ#](xref:microsoft.quantum.install.jupyter) aus – einer Jupyter-Erweiterung zum Kompilieren, Simulieren und Visualisieren von Q#-Programmen.
+- Führen Sie eigenständige [Jupyter Notebook-Instanzen mit IQ# aus](xref:microsoft.quantum.install.jupyter) – einer Jupyter-Erweiterung zum Kompilieren, Simulieren und Visualisieren von Q#-Programmen.
 
 - Falls Sie damit vertraut sind, können Sie [Python](xref:microsoft.quantum.install.python) als Hostprogrammierplattform für Ihre ersten Schritte verwenden. Python wird nicht nur von Entwicklern, sondern auch von vielen Wissenschaftlern, Forschern und Lehrkräften genutzt.
 

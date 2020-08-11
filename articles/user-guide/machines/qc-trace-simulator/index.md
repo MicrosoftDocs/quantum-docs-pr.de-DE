@@ -1,17 +1,20 @@
 ---
 title: 'Ablaufverfolgungssimulator für Quantencomputer: Quantum Development Kit'
-description: Es wird beschrieben, wie Sie den Microsoft-Ablaufverfolgungssimulator für Quantencomputer verwenden, um klassischen Code zu debuggen und die Ressourcenanforderungen eines Q#-Programms zu schätzen.
+description: Hier erfahren Sie, wie Sie den Microsoft-Ablaufverfolgungssimulator für Quantencomputer verwenden, um klassischen Code zu debuggen und die Ressourcenanforderungen eines Q#-Programms zu schätzen.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
-ms.openlocfilehash: c01f01973ea08153cbfa35d87a588a4eae46f1b7
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 5d5efef037ff236bd040dfd88e94f7f3dd331aef
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871109"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868218"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum Development Kit (QDK): Ablaufverfolgungssimulator für Quantencomputer
 

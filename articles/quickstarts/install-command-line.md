@@ -6,16 +6,19 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 3d70838289e72afdd0a48bbdff0bec407428d125
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 630dc7b8acf2dd8f258eb27dfbc367b812cd1c19
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871432"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867606"
 ---
-# <a name="develop-with-q-command-line-applications"></a>Entwickeln mit Q#-Befehlszeilenanwendungen
+# <a name="develop-with-no-locq-command-line-applications"></a>Entwickeln mit Q#-Befehlszeilenanwendungen
 
-Q#-Programme können allein ohne Treiber in einer Hostsprache wie C#, F# oder Python ausgeführt werden.
+Q#-Programme können eigenständig ohne Treiber in einer Hostsprache wie C#, F# oder Python ausgeführt werden.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -23,7 +26,7 @@ Q#-Programme können allein ohne Treiber in einer Hostsprache wie C#, F# oder Py
 
 ## <a name="installation"></a>Installation
 
-Sie können Q#-Befehlszeilenanwendungen zwar in einer beliebigen IDE erstellen, aber wir empfehlen Ihnen, für die lokale Entwicklung Ihrer Q#-Anwendungen Visual Studio Code (VS Code) oder die Visual Studio-IDE zu nutzen. Für die Entwicklung in der Cloud über den Webbrowser wird Visual Studio Codespaces empfohlen. Die Entwicklung in diesen Umgebungen umfasst die umfangreichen Funktionen der QDK-Erweiterung, einschließlich Warnungen, Syntaxhervorhebung, Projektvorlagen und mehr. 
+Q#-Befehlszeilenanwendungen können zwar in einer beliebigen IDE erstellt werden, wir empfehlen jedoch, Visual Studio Code (VS Code) oder die Visual Studio-IDE für die lokale Entwicklung Ihrer Q#-Anwendungen zu verwenden. Für die Entwicklung in der Cloud über den Webbrowser wird Visual Studio Codespaces empfohlen. Die Entwicklung in diesen Umgebungen umfasst die umfangreichen Funktionen der QDK-Erweiterung, einschließlich Warnungen, Syntaxhervorhebung, Projektvorlagen und mehr. 
 
 Gehen Sie zum Konfigurieren von VS Code wie folgt vor:
 
@@ -48,7 +51,7 @@ Geben Sie Folgendes in die Befehlszeile ein, um das QDK für eine andere Umgebun
 dotnet new -i Microsoft.Quantum.ProjectTemplates
 ```
 
-## <a name="develop-with-q"></a>Entwickeln mit Q#
+## <a name="develop-with-no-locq"></a>Entwickeln mit Q#
 
 Folgen Sie den Anweisungen auf der Registerkarte, die Ihrer Umgebung entspricht.
 
@@ -70,15 +73,15 @@ So führen Sie die Anwendung aus:
 
 
 > [!NOTE]
-> Arbeitsbereiche mit mehreren Stammordnern werden von der VS Code-Q#-Erweiterung derzeit nicht unterstützt. Wenn Sie innerhalb eines VS Code-Arbeitsbereichs über mehrere Projekte verfügen, müssen alle Projekte in demselben Stammordner enthalten sein.
+> Arbeitsbereiche mit mehreren Stammordnern werden von der Q#-Erweiterung für VS Code derzeit nicht unterstützt. Wenn Sie innerhalb eines VS Code-Arbeitsbereichs über mehrere Projekte verfügen, müssen alle Projekte in demselben Stammordner enthalten sein.
 
 ### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs)
 
 Überprüfen Sie Ihre Visual Studio-Installation, indem Sie eine Q#-Anwendung vom Typ `Hello World` erstellen.
 
-Erstellen Sie wie folgt eine neue Q#-Anwendung:
+So erstellen Sie eine neue Q#-Anwendung:
 1. Öffnen Sie Visual Studio, und klicken Sie auf **Datei** -> **Neu** -> **Projekt**.
-2. Geben Sie im Suchfeld den Begriff `Q#` ein, wählen Sie **Q#-Anwendung** aus, und klicken Sie auf **Weiter**.
+2. Geben Sie `Q#` in das Suchfeld ein, wählen Sie **Q#-Anwendung** aus, und klicken Sie auf **Weiter**.
 3. Geben Sie einen Namen und Speicherort für Ihre Anwendung ein, und klicken Sie auf **Erstellen**.
 
 

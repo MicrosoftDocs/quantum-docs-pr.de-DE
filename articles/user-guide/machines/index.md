@@ -1,21 +1,24 @@
 ---
 title: Quantensimulatoren und Q#-Programme
-description: Enthält eine Beschreibung der Quantensimulatoren, die als Zielcomputer für Q#-Programme verfügbar sind.
+description: Hier werden die Quantensimulatoren beschrieben, die als Zielcomputer für Q#-Programme verfügbar sind.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 6/17/2020
 ms.topic: article
 uid: microsoft.quantum.machines
-ms.openlocfilehash: c81226ba3e50b65cb1012e885866bd6fcc3764d7
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 77401ca3642b89d708f338f852dc60bf7346b87b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871160"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868303"
 ---
 # <a name="quantum-simulators"></a>Quantensimulatoren
 
-Bei Quantensimulatoren handelt es sich um Softwareprogramme, die auf klassischen Computern ausgeführt werden und als *Zielcomputer* für ein Q#-Programm fungieren. Sie ermöglichen das Ausführen und Testen von Quantenprogrammen in einer Umgebung, die die Reaktion von Qubits auf verschiedene Operationen vorhersagt. In diesem Artikel wird beschrieben, welche Quantensimulatoren im Quantum Development Kit (QDK) enthalten sind. Darüber hinaus enthält er Informationen zu den verschiedenen Verfahren, mit denen Sie ein Q#-Programm an die Quantensimulatoren übergeben können, z. B. über die Befehlszeile oder mit Treibercode, der in einer klassischen Sprache geschrieben ist.  
+Bei Quantensimulatoren handelt es sich um Softwareprogramme, die auf klassischen Computern ausgeführt werden und als *Zielcomputer* für ein Q#-Programm fungieren. Sie ermöglichen das Ausführen und Testen von Quantenprogrammen in einer Umgebung, die die Reaktion von Qubits auf verschiedene Operationen vorhersagt. In diesem Artikel erfahren Sie, welche Quantensimulatoren im Quantum Development Kit (QDK) enthalten sind. Darüber hinaus enthält er Informationen zu den verschiedenen Verfahren, mit denen Sie ein Q#-Programm an die Quantensimulatoren übergeben können – etwa über die Befehlszeile oder mit Treibercode, der in einer klassischen Sprache geschrieben ist.  
 
 
 
@@ -41,7 +44,7 @@ Das QDK enthält mehrere Quantencomputerklassen, die allesamt im Namespace `Micr
 
 ## <a name="invoking-the-quantum-simulator"></a>Aufrufen des Quantensimulators
 
-Unter [Möglichkeiten zum Ausführen eines Q#-Programms](xref:microsoft.quantum.guide.host-programs) sind drei Möglichkeiten beschrieben, wie Sie den Q#-Code an den Quantensimulator übergeben können: 
+Unter [Möglichkeiten zum Ausführen eines Q#-Programms](xref:microsoft.quantum.guide.host-programs) sind drei Möglichkeiten zum Übergeben des Q#-Codes an den Quantensimulator beschrieben: 
 
 * Verwenden der Befehlszeile
 * Verwenden eines Python-Hostprogramms
