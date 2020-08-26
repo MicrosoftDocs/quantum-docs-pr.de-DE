@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.random.maybechooseelement
+name: MaybeChooseElement
+type: operation
+namespace: Microsoft.Quantum.Random
+summary: Wenn ein Array von Daten und eine Verteilung über die Indizes verfügen, versucht, ein Element nach dem Zufallsprinzip auszuwählen.
+examples: >-
+  Der folgende f #-Ausschnitt wählt ein Element zufällig aus einem Array aus:
+
+
+  ```Q#
+
+  let (succeeded, element) = MaybeChooseElement(
+      data,
+      DiscreteUniformDistribution(0, Length(data) - 1)
+  );
+
+  Fact(succeeded, "Index chosen by MaybeChooseElement was not valid.");
+
+  ```
+syntax: "operation MaybeChooseElement (data : 'T[], indexDistribution : Microsoft.Quantum.Random.DiscreteDistribution) : (Bool, 'T)"
+input:
+  content: "(data : 'T[], indexDistribution : Microsoft.Quantum.Random.DiscreteDistribution)"
+  types:
+  - name: data
+    summary: Das Array, aus dem ein Element ausgewählt werden soll.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+  - name: indexDistribution
+    summary: Eine Verteilung über die Indizes von `data` .
+    uid: microsoft.quantum.random.discretedistribution
+output:
+  content: (Bool, 'T)
+  types:
+  - types:
+    - isPrimitive: true
+      uid: Bool
+    - uid: "'T"
+      isLocal: true
+metadata:
+  ms.openlocfilehash: bbbb821e5826e7722c80010b534a38a828db5630
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864229"

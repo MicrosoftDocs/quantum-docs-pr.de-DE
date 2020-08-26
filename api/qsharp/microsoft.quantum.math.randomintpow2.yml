@@ -3,26 +3,23 @@ uid: microsoft.quantum.math.randomintpow2
 name: RandomIntPow2
 type: operation
 namespace: Microsoft.Quantum.Math
-summary: Generiert eine Zufallszahl, die einheitlich von allen ganzen Zahlen entnommen wird, die in einer bestimmten Anzahl von Bits dargestellt werden können.
-remarks: Diese Funktion ruft <xref:microsoft.quantum.intrinsic.random>auf, sodass die Zufälligkeit von der Implementierung von `Random`abhängt.
+summary: RandomIntPow2 wurde als veraltet markiert. Verwenden Sie stattdessen @"microsoft.quantum.random.drawrandomint".
 syntax: 'operation RandomIntPow2 (maxBits : Int) : Int'
 input:
   content: '(maxBits : Int)'
   types:
   - name: maxBits
-    summary: Die Anzahl der klassischen Bits, die zur Darstellung der größten Ganzzahl erforderlich sind, die von diesem Vorgang zurückgegeben werden könnte.
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: Eine ganze Zahl $x $ gleichmäßig nach dem Zufallsprinzip von $ [0, 2 ^ {\texttt{maxBits}}-1] $; Das heißt, mit $ \pr (x) = \frac{1}{2 ^ {\texttt{maxBits}}} $.
-    isPrimitive: true
+  - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: dec46f725da2f805839f7c03306853c851700027
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 61072e350facbf17b13aab9551210d00487cce40
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681537"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863589"

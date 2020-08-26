@@ -3,42 +3,18 @@ uid: microsoft.quantum.canon.assertphase
 name: AssertPhase
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
-  Bestätigt, dass die Phase eines gleich geordneten Superposition-Zustands den erwarteten Wert aufweist.
-
-
-  Bestätigt insbesondere, dass die Phase $ \phi $ eines Quantum-Zustands, der als $ \bruchteil {e ^ {i t}} {\sqrt{2}} (e ^ {i\phi} \ Ket{0} + e ^ {-i\phi} \ Ket{1}) $ für ein beliebiges echtes t ausgedrückt werden kann, den erwarteten Wert hat.
-examples: >-
-  Der folgende Assert ist erfolgreich `qubit` : befindet sich im Zustand $ \ket{\psi} = e ^ {i 0,5} \ sqrt {1/2}{0}\ Ket + e ^ {i 0,5} \ sqrt {1/2}{1}\ Ket $;
-
-
-  - `AssertPhase(0.0,qubit,10e-10);`
-
-
-  `qubit`befindet sich im Status $ \ket{\psi} = e ^ {i 0,5} \ sqrt {1/2} \{0}Ket + e ^ {-i 0,5} \ sqrt {1/2} \{1}Ket $;
-
-
-  - `AssertPhase(0.5,qubit,10e-10);`
-
-
-  `qubit`befindet sich im Status $ \ket{\psi} = e ^ {-i 2.2} \ sqrt {1/2} \{0}Ket + e ^ {i 0,2} \ sqrt {1/2} \{1}Ket $;
-
-
-  - `AssertPhase(-1.2,qubit,10e-10);`
+summary: Assertphase ist veraltet. Verwenden Sie stattdessen @"microsoft.quantum.diagnostics.assertphase".
 syntax: 'operation AssertPhase (expected : Double, qubit : Qubit, tolerance : Double) : Unit'
 input:
   content: '(expected : Double, qubit : Qubit, tolerance : Double)'
   types:
   - name: expected
-    summary: Der erwartete Wert von "$ \phi \in" (-\pi, \pi] $.
     isPrimitive: true
     uid: Double
   - name: qubit
-    summary: Das Qubit, das den erwarteten Zustand speichert.
     isPrimitive: true
     uid: Qubit
   - name: tolerance
-    summary: Absolute Toleranz für den Unterschied zwischen tatsächlichem und erwartetem Verhalten.
     isPrimitive: true
     uid: Double
 output:
@@ -47,9 +23,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: ecfc39806fb1ffe504c76889fb36949b4fee2ed4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 17fa383f5fd8e710f8c83920abe0727663506bfb
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674321"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863289"
