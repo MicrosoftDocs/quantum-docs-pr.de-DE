@@ -1,4 +1,4 @@
-- name: 'Typen in Q#'
+- name: Typen in Q#
   href: types.md
-- name: Typenausdrücke
+- name: Ausdrücke
   href: expressions.md
