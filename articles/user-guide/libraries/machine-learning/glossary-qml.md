@@ -1,5 +1,5 @@
 ---
-title: Quantum Machine Learning-Bibliothek
+title: Quantum Machine Learning-Bibliothek Glossar
 author: alexeib2
 ms.author: alexei.bocharov@microsoft.com
 ms.date: 2/27/2020
@@ -8,12 +8,12 @@ uid: microsoft.quantum.libraries.machine-learning.training
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 52c3f69fb99384270a27e57c4f32212d18bee1a4
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 068fc61d0d7c066df1270384679e13a3b3a8c878
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868898"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863027"
 ---
 # <a name="quantum-machine-learning-glossary"></a>Quantum Machine Learning Glossar
 

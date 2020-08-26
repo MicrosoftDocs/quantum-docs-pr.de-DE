@@ -91,8 +91,8 @@ Wenn Sie mit Arbeiten Q# , sind die gängigsten Arten von Messungen wahrscheinli
 In solchen Fällen ist es üblich, das Messen eines Pauli-Operators zu erörtern, im Allgemeinen ein Operator wie $ x, Y, z $ oder $ z \otimes z, x \otimes x, x \otimes Y $ usw.
 
 > [!TIP]
->In Q# werden multiqubit-Pauli-Operatoren in der Regel durch Arrays des Typs dargestellt `Pauli[]` .
->Wenn $ \otimes Sie z. b. X Z Y darstellen möchten \otimes $ , können Sie das Array verwenden `[PauliX, PauliZ, PauliY]` .
+> In Q# werden multiqubit-Pauli-Operatoren in der Regel durch Arrays des Typs dargestellt `Pauli[]` .
+> Wenn $ \otimes Sie z. b. X Z Y darstellen möchten \otimes $ , können Sie das Array verwenden `[PauliX, PauliZ, PauliY]` .
 
 Die Erörterung von Messungen in Form von Pauli-Operatoren ist vor allem im Unterfeld der Quantum-Fehlerkorrektur üblich.
 In Q# wird eine ähnliche Konvention befolgt. wir erläutern nun diese Alternative Ansicht der Messungen.
@@ -122,7 +122,7 @@ Die Notation von Pauli-Messungen verweist auf diese einheitliche Äquivalenz $ ,
 Diese Messungen werden zur einfacheren Verwendung unten angegeben.
 
 
-|Die Pauli | -Maßeinheit|
+|Die Pauli  | -Maßeinheit  |
 |-------------------|------------------------|
 |$ $ Z |               $\boldone$             |
 |$ $ X | $H               $                    |
@@ -168,20 +168,20 @@ $$
 Daher bilden die tensorflow-Produkte zweier Pauli- $ Z- $ Operatoren eine Matrix, die aus zwei Leerzeichen besteht, die aus $ + 1 $ und $ -1 $ eigen Werten bestehen.
 Wie bei einem Single-Qubit-Fall bilden beide einen halben Leerraum, was bedeutet, dass die Hälfte des zugänglichen Vektor Raums zum $ + 1 $ -eigen Raum und die verbleibende Hälfte des $ eigen Raums-1 gehört $ .
 Im Allgemeinen ist es einfach, aus der Definition des tensorflow-Produkts zu erkennen, dass ein beliebiges tensorflow-Produkt von Pauli- $ Z- $ Operatoren und die Identität auch dies unterliegt.
-Ein auf ein Objekt angewendeter
+Beispiel:
 
 $$
 \begin{align}
     \otimes \boldone Z =\begin{bmatrix}
-        1 & 0 & 0 & 0\\\\
-        0 & 1 & 0 & 0\\\\
-        0 & 0 & -1 & 0\\\\
-        0 & 0 & 0 & -1 \end{bmatrix} .
+        1 &  0 &  0 &  0 \\\\
+        0 &  1 &  0 &  0 \\\\
+        0 &  0 & -1 &  0 \\\\
+        0 &  0 &  0 & -1 \end{bmatrix} .
 \end{align}
 $$
 
 Wie zuvor beschreibt jede einheitliche Transformation dieser Matrizen auch zwei halb Bereiche mit der Bezeichnung $ \pm 1 $ Eigenwerte.
-Beispiel: $ x \otimes x = h \otimes h (z \otimes z) h \otimes h $ von der Identität, die $ Z = HXH ist $ .
+Beispiel: $ x \otimes x = h \otimes h (z \otimes z) h \otimes h $  von der Identität, die $ Z = HXH ist $ .
 Ähnlich wie der One-Qubit-Fall können alle zwei-Qubit-Pauli-Messungen als $ u ^ \dagger (Z \otimes \id ) u $ für $ 4 \times 4 $ einheitliche Matrizen u $ $ geschrieben werden. Die Transformationen in der folgenden Tabelle werden aufgelistet.
 
 > [!NOTE]
@@ -189,16 +189,15 @@ Beispiel: $ x \otimes x = h \otimes h (z \otimes z) h \otimes h $ von der Identi
 > \begin{align}
 >     \operatorname{Austauschen } &=
 >     \left( \begin { Matrix}
->1 & 0 & 0 & 0\\\\
->0 & 0 & 1 & 0\\\\
->0 & 1 & 0 & 0\\\\
+>         1 & 0 & 0 & 0 \\\\
+>         0 & 0 & 1 & 0 \\\\
+>         0 & 1 & 0 & 0 \\\\
 >0 & 0 & 0 & 1 > \end { Matrix } \right ) >     \end{align}
 > $$
->wird verwendet, um den systeminternen Vorgang zu simulieren [`SWAP`](xref:microsoft.quantum.intrinsic) .
+> wird verwendet, um den systeminternen Vorgang zu simulieren [`SWAP`](xref:microsoft.quantum.intrinsic) .
 
-|Die Pauli | -Maßeinheit|
+|Die Pauli     | -Maßeinheit  |
 |----------------------|------------------------|
-|$ \otimes \boldone Z $ | $\boldone \otimes \boldone$|
 |$ \otimes \boldone Z $ | $\boldone\otimes \boldone$|
 |$ \otimes \boldone X $ | $ \otimes \boldone H $|
 |$ \otimes \boldone J $ | $ HS \dagger \otimes \boldone ^ $|
@@ -240,7 +239,7 @@ Daher stimmen Sie mit den oben genannten Anforderungen überein.
 In Q# geben solche Messungen j zurück, $ $ Wenn die Messung ein Ergebnis im Eigen Raum des Zeichens $ (-1) ^ j ergibt $ .
 Die Verwendung von Pauli-Messungen als integrierte Funktion in Q# ist hilfreich, da die Messung solcher Operatoren lange Ketten von gesteuerten und nicht-Transformationen und Basis Transformationen erfordert, um das diagonalisieren des U-Gates zu beschreiben, $ $ das erforderlich ist, um den Vorgang als tensorflow-Produkt von $ Z $ und auszudrücken $ \id $ .
 Wenn Sie festlegen können, dass Sie eine dieser vordefinierten Messungen durchführen möchten, müssen Sie sich keine Gedanken darüber machen, wie Sie Ihre Basis so transformieren, dass eine Berechnungsbasis Messung die erforderlichen Informationen bereitstellt.
-Q#behandelt alle notwendigen Basis Transformationen automatisch.
+Q# behandelt alle notwendigen Basis Transformationen automatisch.
 Weitere Informationen finden Sie unter den [`Measure`](xref:microsoft.quantum.intrinsic.measure) -und- [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) Vorgängen.
 
 ## <a name="the-no-cloning-theorem"></a>Das No-Klon-Theorem
@@ -257,7 +256,7 @@ Obwohl ein vollständiger Nachweis für das No-Klon-Theorem für unsere Erörter
 
 Bei solch einem Quantum-Computer muss der Klon Vorgang durch eine einheitliche Matrix beschrieben werden.
 Die Messung wird nicht zugelassen, da der Quantum-Zustand beschädigt wird, den wir klonen wollen.
-Um den Klon Vorgang zu simulieren, soll die einheitliche Matrix die Eigenschaft verwenden, die$$
+Um den Klon Vorgang zu simulieren, soll die einheitliche Matrix die Eigenschaft verwenden, die $$
   U \ket { \psi } \ket { 0 } = \ket { \psi }\ket{\psi}
 $$
 für jeden Zustand $ \ket { \psi } $ .

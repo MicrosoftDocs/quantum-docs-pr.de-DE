@@ -3,8 +3,7 @@ uid: microsoft.quantum.math.randomsinglequbitpauli
 name: RandomSingleQubitPauli
 type: operation
 namespace: Microsoft.Quantum.Math
-summary: Gibt einen der Single-Qubit-Pauli-Operatoren gleichmäßig nach dem Zufallsprinzip zurück.
-remarks: Diese Funktion ruft <xref:microsoft.quantum.intrinsic.random>auf, sodass die Zufälligkeit von der Implementierung von `Random`abhängt.
+summary: Randomsinglequbitpauli ist veraltet. Verwenden Sie stattdessen @"microsoft.quantum.random.drawrandompauli".
 syntax: 'operation RandomSingleQubitPauli () : Pauli'
 input:
   content: ()
@@ -12,13 +11,12 @@ input:
 output:
   content: Pauli
   types:
-  - summary: Ein `Pauli` Operator, der eine von `[PauliI, PauliX, PauliY, PauliZ]`ist.
-    isPrimitive: true
+  - isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: e0065244d20a9f9c6850a23625ecc3bbb73ace0f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: efe0aa48a13ce7fdfb5ec05ade0e7b6fbfece519
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681507"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863551"

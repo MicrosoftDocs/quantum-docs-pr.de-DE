@@ -450,11 +450,7 @@ operations:
 - uid: microsoft.quantum.canon.assertlessthanphasele
   summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nAssertlessthanphasele ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.arithmetic.assertphaselessthan\".\nVerwenden Sie @\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\"."
 - uid: microsoft.quantum.canon.assertphase
-  summary: >-
-    Bestätigt, dass die Phase eines gleich geordneten Superposition-Zustands den erwarteten Wert aufweist.
-
-
-    Bestätigt insbesondere, dass die Phase $ \phi $ eines Quantum-Zustands, der als $ \bruchteil {e ^ {i t}} {\sqrt {2} } (e ^ {i\phi} \ Ket {0} + e ^ {-i\phi} \ Ket {1} ) $ für ein beliebiges echtes t ausgedrückt werden kann, den erwarteten Wert hat.
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nAssertphase ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.diagnostics.assertphase\"."
 - uid: microsoft.quantum.canon.cascadeccnot
   summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nCascadeccnot ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.canon.applyccnotchain\"."
 - uid: microsoft.quantum.canon.cascadecnot
@@ -585,9 +581,9 @@ newtypes:
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nResultstack ist veraltet."
 metadata:
-  ms.openlocfilehash: ab6e8a58dd163e4a9b2ea299e544a4e487d61e23
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 72e806d0a44fdcc372ab0d10edcaceb501713180
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884681"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88862948"

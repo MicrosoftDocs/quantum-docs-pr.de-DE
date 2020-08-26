@@ -9,12 +9,12 @@ uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8db892091794cb1166e41744572d8938d975abf2
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d80f1c640ac7ddb0104ccbbb6de6d0e26ba05fd6
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869765"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863623"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Tutorial: Implementieren eines Quanten-Zufallszahlengenerators in Q\#
 
@@ -23,11 +23,11 @@ Ein einfaches Beispiel für einen in geschriebenen Quantum-Algorithmus Q# ist ei
 ## <a name="prerequisites"></a>Voraussetzungen
 
 - Das Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
-- Erstellen Q# Sie ein Projekt für [ Q# die Verwendung von über die Befehlszeile](xref:microsoft.quantum.install.standalone)oder mit einem [python-Host Programm](xref:microsoft.quantum.install.python) oder [c#-Host Programm](xref:microsoft.quantum.install.cs).
+- Erstellen Sie ein Q# Projekt für eine- [ Q# Anwendung](xref:microsoft.quantum.install.standalone), ein [python-Host Programm](xref:microsoft.quantum.install.python)oder ein [c#-Host Programm](xref:microsoft.quantum.install.cs).
 
 ## <a name="write-a-no-locq-operation"></a>Schreiben eines- Q# Vorgangs
 
-### <a name="no-locq-operation-code"></a>Q#Vorgangs Code
+### <a name="no-locq-operation-code"></a>Q# Vorgangs Code
 
 1. Ersetzen Sie den Inhalt der Datei „Program.qs“ durch den folgenden Code:
 
@@ -64,13 +64,13 @@ Da das Ergebnis der Messung völlig zufällig ist, erhalten wir ein zufälliges 
 
 ## <a name="creating-a-complete-random-number-generator"></a>Erstellen eines vollständigen Zufallszahlengenerators
 
-Nachdem wir nun über einen-Vorgang verfügen, mit Q# dem zufällige Bits generiert werden, können wir damit einen kompletten Quantum-Zufallszahlengenerator erstellen. Wir können die Q# Befehlszeilen Anwendungen verwenden oder ein Host Programm verwenden.
+Nachdem wir nun über einen-Vorgang verfügen, mit Q# dem zufällige Bits generiert werden, können wir damit einen kompletten Quantum-Zufallszahlengenerator erstellen. Wir können eine- Q# Anwendung verwenden oder ein Host Programm verwenden.
 
 
 
-### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Q#Befehlszeilen Anwendungen mit Visual Studio oder Visual Studio Code](#tab/tabid-qsharp)
+### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a>[Q# Anwendungen mit Visual Studio oder Visual Studio Code](#tab/tabid-qsharp)
 
-Q#Fügen Sie dem Programm den folgenden Einstiegspunkt hinzu, um die vollständige Befehlszeilen Anwendung zu erstellen Q# : 
+Q#Fügen Sie dem Programm den folgenden Einstiegspunkt hinzu, um die vollständige Anwendung zu erstellen Q# : 
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
@@ -92,13 +92,13 @@ Bei nachfolgenden Ausführungen muss diese Datei nicht erneut erstellt werden. G
 dotnet run --no-build
 ```
 
-### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Python mit Visual Studio Code oder Befehlszeile](#tab/tabid-python)
+### <a name="python-with-visual-studio-code-or-the-command-prompt"></a>[Python mit Visual Studio Code oder der Eingabeaufforderung](#tab/tabid-python)
 
 Um Ihr neues Q# Programm aus python auszuführen, speichern Sie den folgenden Code `host.py` :
 
 :::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
 
-Anschließend können Sie Ihr Python-Hostprogramm an der Befehlszeile ausführen:
+Anschließend können Sie Ihr python-Host Programm an der Eingabeaufforderung ausführen:
 
 ```bash
 $ python host.py
@@ -112,7 +112,7 @@ Um Q# das neue Programm aus c# auszuführen, ändern `Driver.cs` Sie, um den fol
 
 :::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
 
-Anschließend können Sie Ihr C#-Hostprogramm über die Befehlszeile ausführen (drücken Sie in Visual Studio F5):
+Sie können dann Ihr c#-Host Programm von der Eingabeaufforderung aus ausführen (in Visual Studio sollten Sie F5 drücken):
 
 ```bash
 $ dotnet run

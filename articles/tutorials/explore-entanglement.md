@@ -1,5 +1,5 @@
 ---
-title: Entdecken Sie jede Verflechtungen mitQ#
+title: Entdecken Sie jede Verflechtungen mit Q#
 description: Erfahren Sie, wie Sie ein Quantum-Programm in schreiben Q# . Entwickeln Sie eine Bell-Zustandsanwendung mithilfe des Quantum Development Kit (QDK)
 author: geduardo
 ms.author: v-edsanc@microsoft.com
@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c66d26b5ea253d6fc2633fbe52fa35ba703d185d
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d815a9a25b8ba5e9489b6d3d27fb0d64ab4aaa1d
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869697"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863442"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Tutorial: Erkunden der Verschränkung mit Q\#
 
@@ -52,11 +52,11 @@ Nun können wir veranschaulichen, wie Q# dieses Verhalten ausdrückt.  Sie begin
 
 ## <a name="creating-a-no-locq-project"></a>Erstellen eines Q# Projekts
 
-Als erstes müssen Sie ein neues Q# Projekt erstellen. In diesem Tutorial verwenden wir die Umgebung, die auf [Befehlszeilen Anwendungen mit vs Code](xref:microsoft.quantum.install.standalone)basiert.
+Als erstes müssen Sie ein neues Q# Projekt erstellen. In diesem Tutorial verwenden wir die Umgebung auf der Grundlage von [ Q# Anwendungen mit vs Code](xref:microsoft.quantum.install.standalone).
 
 So erstellen Sie ein neues Projekt in vs Code: 
 
-1. Klicken **View**Sie auf  ->  **Befehls Palette** anzeigen, und wählen Sie ** Q# : Neues Projekt erstellen**aus.
+1. Klicken Sie auf **Ansicht** -> **Befehlspalette**, und wählen Sie **Q#: Neues Projekt erstellen** aus.
 2. Klicken Sie auf **Standalone console application** (Eigenständige Konsolenanwendung).
 3. Navigieren Sie zum Speicherort für die Speicherung des Projekts, und klicken Sie auf **Projekt erstellen**.
 4. Klicken Sie nach der erfolgreichen Erstellung des Projekts unten rechts auf **Open new project...** (Neues Projekt öffnen...).
@@ -125,7 +125,7 @@ Mit einem Quantenvorgang wird der Zustand eines Qubits transformiert. Analog zu 
 
 Zur Veranschaulichung der Auswirkungen des Vorgangs `SetQubitState` wird dann der Vorgang `TestBellState` hinzugefügt. Für diesen Vorgang wird `Zero` oder `One` als Eingabe verwendet, und der Vorgang `SetQubitState` wird einige Male mit dieser Eingabe aufgerufen. Es wird gezählt, wie oft bei der Messung des Qubits `Zero` und wie oft `One` zurückgegeben wird. Bei der ersten Simulation des Vorgangs `TestBellState` erwarten wir natürlich, dass in der Ausgabe für alle Messungen des Qubits mit `Zero` als Parametereingabe `Zero` und für alle Messungen eines Qubits mit `One` als Parametereingabe `One` zurückgegeben wird. Im weiteren Verlauf fügen wir Code hinzu, `TestBellState` um Superposition und entanglement zu veranschaulichen.
 
-Fügen Sie der `Bell.qs`-Datei die folgende Operation hinzu, innerhalb des Namespaces, nach dem Ende der `SetQubitState`-Operation:
+Fügen Sie der `Program.qs`-Datei die folgende Operation hinzu, innerhalb des Namespaces, nach dem Ende der `SetQubitState`-Operation:
 
 ```qsharp
    operation TestBellState(count : Int, initial : Result) : (Int, Int) {
@@ -161,13 +161,13 @@ Standardmäßig sind Variablen in Q# unveränderlich; ihr Wert kann nicht geänd
 
 Wenn Sie eine Variable benötigen, deren Wert geändert werden kann, wie etwa `numOnes` im Beispiel, können Sie die Variable mit dem Schlüsselwort `mutable` deklarieren. Der Wert einer veränderlichen Variable kann mithilfe einer `setQubitState`-Anweisung geändert werden.
 
-In beiden Fällen wird der Typ einer Variablen vom Compiler abgeleitet. Q#Es sind keine Typanmerkungen für Variablen erforderlich.
+In beiden Fällen wird der Typ einer Variablen vom Compiler abgeleitet. Q# Es sind keine Typanmerkungen für Variablen erforderlich.
 
 #### <a name="about-using-statements-in-q"></a>Informationen zu `using` Anweisungen in Q\#
 
 Die- `using` Anweisung ist auch speziell für Q# . Sie wird verwendet, um Qubits für die Verwendung in einem Codeblock zuzuweisen. In Q# werden alle Qubits dynamisch zugeordnet und freigegeben, anstatt fixierte Ressourcen zu sein, die für die gesamte Lebensdauer eines komplexen Algorithmus vorhanden sind. Eine `using`-Anweisung weist eine Reihe Qubits am Anfang zu und gibt diese Qubits am Ende des Blocks wieder frei.
 
-## <a name="execute-the-code-from-the-command-line"></a>Ausführen des Codes über die Befehlszeile
+## <a name="run-the-code-from-the-command-prompt"></a>Ausführen des Codes an der Eingabeaufforderung
 
 Um den Code auszuführen, muss der Compiler angegeben werden *, der* beim Bereitstellen des Befehls aufgerufen werden kann `dotnet run` . Dies erfolgt mit einer einfachen Änderung in der Q# Datei, indem eine Zeile hinzugefügt wird, die `@EntryPoint()` direkt vor der Aufruf baren Zeile steht: der `TestBellState` Vorgang in diesem Fall. Der vollständige Code sollte wie folgt lauten:
 
@@ -208,7 +208,7 @@ namespace Bell {
 }
 ```
 
-Um das Programm auszuführen, müssen Sie die `count` Argumente und in `initial` der Befehlszeile angeben. Wählen Sie z. b `count = 1000` . und aus `initial = One` . Geben Sie folgenden Befehl ein:
+Um das Programm auszuführen, müssen Sie die `count` Argumente und an `initial` der Eingabeaufforderung angeben. Wählen Sie z. b `count = 1000` . und aus `initial = One` . Geben Sie den folgenden Befehl ein:
 
 ```dotnetcli
 dotnet run --count 1000 --initial One
@@ -235,7 +235,7 @@ Test results (# of 0s, # of 1s):
 
 Sehen wir uns nun an, wie die Q# Methoden zum Platzieren von Qubits in der superposition ausdrückt.  Sie wissen bereits, dass der Zustand eines Qubits den Überlagerungswert 0 und 1 aufweisen kann.  Wir verwenden den Vorgang `Hadamard`, um dies zu erreichen. Wenn das Qubit einen der klassischen Zustände aufweist (bei dem für eine Messung immer `Zero` oder immer `One` zurückgegeben wird), versetzt der Vorgang `Hadamard` bzw. `H` das Qubit in einen Zustand, in dem für eine Messung des Qubits in 50 % der Fälle `Zero` und in 50 % der Fälle `One` zurückgegeben wird.  Sie können sich das Qubit als Mischung von `Zero` und `One` vorstellen.  Wenn wir nun den Vorgang `TestBellState` simulieren, sehen wir nach der Messung, dass ungefähr mit der gleichen Häufigkeit `Zero` und `One` als Ergebnis zurückgegeben wird.  
 
-### <a name="x-flips-qubit-state"></a>`X`kippt-Qubit-Status
+### <a name="x-flips-qubit-state"></a>`X` kippt-Qubit-Status
 
 Zuerst versuchen wir, das Qubit umzukehren (wenn das Qubit den Zustand `Zero` aufweist, wird in `One` umgekehrt (bzw. andersherum)). Dies wird dadurch erreicht, dass wir den Vorgang `X` durchführen, bevor die Messung in `TestBellState` erfolgt:
 
@@ -265,7 +265,7 @@ Test results (# of 0s, # of 1s):
 
 Sehen wir uns nun die Quantum-Eigenschaften der Qubits an.
 
-### <a name="h-prepares-superposition"></a>`H`bereitet die Superposition vor
+### <a name="h-prepares-superposition"></a>`H` bereitet die Superposition vor
 
 Hierfür müssen wir lediglich den Vorgang `X` in der vorherigen Ausführung durch den Vorgang `H` (Hadamard-Vorgang) ersetzen. Statt das Qubit ganz von 0 in 1 umzukehren, kehren wir es nur halb um. Die ersetzten Zeilen in `TestBellState` sehen jetzt so aus:
 

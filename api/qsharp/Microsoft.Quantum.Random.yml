@@ -1,0 +1,45 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.random
+name: Microsoft.Quantum.Random
+functions:
+- uid: microsoft.quantum.random.categoricaldistribution
+  summary: Gibt eine diskrete kategorische Verteilung zurück, bei der die Wahrscheinlichkeit für jede endliche Liste der angegebenen Ergebnisse explizit angegeben wird.
+- uid: microsoft.quantum.random.continuousuniformdistribution
+  summary: Gibt eine einheitliche Verteilung über ein bestimmtes inklusives Intervall zurück.
+- uid: microsoft.quantum.random.discreteuniformdistribution
+  summary: Gibt eine einheitliche Verteilung für einen angegebenen inklusiven Bereich zurück.
+- uid: microsoft.quantum.random.normaldistribution
+  summary: Gibt eine normale Verteilung mit einem angegebenen Mittelwert und Varianz zurück.
+- uid: microsoft.quantum.random.standardnormaldistribution
+  summary: Gibt eine normale Verteilung mit dem Mittelwert 0 und der Varianz 1 zurück.
+- uid: microsoft.quantum.random.transformedcontinuousdistribution
+  summary: Gibt bei einer kontinuierlichen Verteilung eine neue Verteilung zurück, die den ursprünglichen durch eine angegebene Funktion transformiert.
+operations:
+- uid: microsoft.quantum.random.drawcategorical
+  summary: Zeichnet eine zufällige Stichprobe aus einer kategorischen Verteilung, die durch eine Liste von Wahrscheinlichkeiten angegeben wird.
+- uid: microsoft.quantum.random.drawrandombool
+  summary: Bei einer Erfolgswahrscheinlichkeit wird eine einzelne Bernoulli-Testversion zurückgegeben, die mit der angegebenen Wahrscheinlichkeit true ist.
+- uid: microsoft.quantum.random.drawrandomdouble
+  summary: Zeichnet eine zufällige reelle Zahl in einem angegebenen inklusiven Intervall.
+- uid: microsoft.quantum.random.drawrandomint
+  summary: Zeichnet eine zufällige ganze Zahl in einem angegebenen inklusiven Bereich.
+- uid: microsoft.quantum.random.drawrandompauli
+  summary: Zeichnet einen zufälligen Pauli-Wert.
+- uid: microsoft.quantum.random.maybechooseelement
+  summary: Wenn ein Array von Daten und eine Verteilung über die Indizes verfügen, versucht, ein Element nach dem Zufallsprinzip auszuwählen.
+newtypes:
+- uid: microsoft.quantum.random.bigdiscretedistribution
+  summary: Stellt eine Univariate-Wahrscheinlichkeitsverteilung für ganze Zahlen beliebiger Größe dar.
+- uid: microsoft.quantum.random.complexdistribution
+  summary: Stellt eine Univariate-Wahrscheinlichkeitsverteilung für komplexe Zahlen dar.
+- uid: microsoft.quantum.random.continuousdistribution
+  summary: Stellt eine Univariate-Wahrscheinlichkeitsverteilung für reelle Zahlen dar.
+- uid: microsoft.quantum.random.discretedistribution
+  summary: Stellt eine Univariate-Wahrscheinlichkeitsverteilung über ganze Zahlen dar.
+metadata:
+  ms.openlocfilehash: 04ceecba6c304e33452dd5eac014f59522a76e91
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864006"

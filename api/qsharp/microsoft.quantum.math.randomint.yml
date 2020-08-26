@@ -3,26 +3,23 @@ uid: microsoft.quantum.math.randomint
 name: RandomInt
 type: operation
 namespace: Microsoft.Quantum.Math
-summary: Generiert eine ganzzahlige Zufalls Ganzzahl, die größer oder gleich 0 (null) und kleiner als eine angegebene obere Grenze ist.
-remarks: Diese Funktion ruft <xref:microsoft.quantum.intrinsic.random>auf, sodass die Zufälligkeit von der Implementierung von `Random`abhängt.
+summary: RandomInt ist veraltet. Verwenden Sie stattdessen @"microsoft.quantum.random.drawrandomint".
 syntax: 'operation RandomInt (maxInt : Int) : Int'
 input:
   content: '(maxInt : Int)'
   types:
   - name: maxInt
-    summary: Eine Ganzzahl, die größer als die größte Ganzzahl ist, die von diesem Vorgang zurückgegeben werden soll.
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: Eine ganze Zahl $x $ einheitlich aus dem angegebenen Intervall. Das heißt, mit $ \pr (x) = \frac{1}{\texttt{maxInt}} $.
-    isPrimitive: true
+  - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 578761c1710484913122227fb3b37330702ea038
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: aacaa92c47492e49544241bd7a47519ce8413fe8
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682756"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863528"

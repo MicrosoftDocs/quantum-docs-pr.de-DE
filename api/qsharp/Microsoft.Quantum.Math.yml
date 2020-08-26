@@ -53,9 +53,9 @@ functions:
 - uid: microsoft.quantum.math.complexpolarascomplex
   summary: Konvertiert eine komplexe Zahl vom Typ `ComplexPolar` in eine komplexe Zahl vom Typ `Complex` .
 - uid: microsoft.quantum.math.continuedfractionconvergenti
-  summary: Sucht den fortgesetzten Bruchteil konvergent, der sich am nächsten befindet, wenn `fraction` der Nenner kleiner oder gleich ist.`denominatorBound`
+  summary: Sucht den fortgesetzten Bruchteil konvergent, der sich am nächsten befindet, wenn `fraction` der Nenner kleiner oder gleich ist. `denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
-  summary: Sucht den fortgesetzten Bruchteil konvergent, der sich am nächsten befindet, wenn `fraction` der Nenner kleiner oder gleich ist.`denominatorBound`
+  summary: Sucht den fortgesetzten Bruchteil konvergent, der sich am nächsten befindet, wenn `fraction` der Nenner kleiner oder gleich ist. `denominatorBound`
 - uid: microsoft.quantum.math.cos
   summary: Gibt den Kosinus des angegebenen Winkels zurück.
 - uid: microsoft.quantum.math.cosh
@@ -243,17 +243,17 @@ newtypes:
 summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält klassische mathematische Funktionen und Datentypen."
 operations:
 - uid: microsoft.quantum.math.randomint
-  summary: Generiert eine ganzzahlige Zufalls Ganzzahl, die größer oder gleich 0 (null) und kleiner als eine angegebene obere Grenze ist.
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nRandomInt ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.random.drawrandomint\"."
 - uid: microsoft.quantum.math.randomintpow2
-  summary: Generiert eine Zufallszahl, die einheitlich von allen ganzen Zahlen entnommen wird, die in einer bestimmten Anzahl von Bits dargestellt werden können.
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nRandomIntPow2 wurde als veraltet markiert. Verwenden Sie stattdessen @\"microsoft.quantum.random.drawrandomint\"."
 - uid: microsoft.quantum.math.randomreal
-  summary: Gibt eine Zufallszahl zurück, die größer oder gleich 0 (null) und kleiner als 1 ist.
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nRandomreal ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.random.drawrandomdouble\"."
 - uid: microsoft.quantum.math.randomsinglequbitpauli
-  summary: Gibt einen der Single-Qubit-Pauli-Operatoren gleichmäßig nach dem Zufallsprinzip zurück.
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nRandomsinglequbitpauli ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.random.drawrandompauli\"."
 metadata:
-  ms.openlocfilehash: 03b75e3dbaa8be699e58fcbcd13db4fbf1c82f12
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 9df4513399d0b2d1ac534c7ba106189483ef49cc
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326490"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863064"

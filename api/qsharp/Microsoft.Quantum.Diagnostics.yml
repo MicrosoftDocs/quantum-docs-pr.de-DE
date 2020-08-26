@@ -1,6 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.diagnostics
 name: Microsoft.Quantum.Diagnostics
+summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält Funktionen und Vorgänge, die für Diagnosezwecke nützlich sind, einschließlich Assert-Vorgänge und Anspruchs Funktionen."
 functions:
 - uid: microsoft.quantum.diagnostics.allequalityfactb
   summary: Bestätigt, dass zwei Arrays von booleschen Werten gleich sind.
@@ -35,6 +36,10 @@ functions:
 - uid: microsoft.quantum.diagnostics.nearequalityfactd
   summary: Bestätigt, dass ein klassischer Gleit Komma Wert den erwarteten Wert bis zu einer kleinen Toleranz von 1E-10 aufweist.
 operations:
+- uid: microsoft.quantum.diagnostics.allowatmostncallsca
+  summary: Bei einem Aufruf dieses Vorgangs und seines Adjoint-Vorgangs bestätigt, dass ein angegebener Vorgang höchstens eine bestimmte Anzahl von Vorkommen aufgerufen wird.
+- uid: microsoft.quantum.diagnostics.allowatmostnqubits
+  summary: Bei einem Aufrufe dieses Vorgangs und seines Adjoint-Vorgangs wird von bestätigt, dass höchstens eine angegebene Anzahl zusätzlicher Qubits mit using-Anweisungen zugeordnet wird.
 - uid: microsoft.quantum.diagnostics.assertallzero
   summary: Bestätigen Sie, dass die angegebenen Qubits alle in "$ \ket {0} $ State" sind.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
@@ -67,6 +72,8 @@ operations:
     Folglich benötigt dieser Vorgang nur einen einzelnen Vorgang für jeden zu testenden Vorgang, erfordert jedoch doppelt so viele Qubits, die zugewiesen werden müssen.
 
     Diese Assertion kann beispielsweise verwendet werden, um sicherzustellen, dass eine optimierte Version eines Vorgangs identisch mit der naive Implementierung verhält oder dass ein Vorgang, der für einen Bereich von nicht-Quantum-Eingaben agiert, mit bekannten Fällen übereinstimmt.
+- uid: microsoft.quantum.diagnostics.assertphase
+  summary: Bestätigt, dass die Phase eines gleich geordneten Superposition-Zustands den erwarteten Wert aufweist.
 - uid: microsoft.quantum.diagnostics.assertqubit
   summary: Bestätigt, dass sich das Qubit `q` im erwarteten eigen Zustand des Pauli Z-Operators befindet.
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
@@ -74,23 +81,24 @@ operations:
     Bestätigt, dass ein Qubit im erwarteten Zustand ist.
 
 
-    `expected`stellt einen komplexen Vektor dar, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
+    `expected` stellt einen komplexen Vektor dar, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
 
     Das erste Element der Tupel, das jede $a $ darstellt, $b $ der reelle Teil der komplexen Zahl ist, während das zweite Element der imaginäre Teil ist.
 
     Das letzte Argument definiert die Toleranz, mit der die-Assertionen durchgeführt werden.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
   summary: Bestätigt, dass das Qubit den `q` erwarteten Zustand des Pauli Z-Operators bis zu einer gegebenen Toleranz aufweist.
+- uid: microsoft.quantum.diagnostics.dumpoperation
+  summary: Zeigt bei einem Vorgang Diagnoseinformationen zu dem Vorgang an, der vom aktuellen Ausführungs Ziel verfügbar gemacht wird.
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
   summary: Vom Compiler erkanntes Attribut, über das ein alternativer Name definiert werden kann, der beim Laden eines Typs oder Aufruf baren zu Testzwecken verwendet werden kann.
 - uid: microsoft.quantum.diagnostics.test
   summary: Vom Compiler erkanntes Attribut, das zum Markieren eines Komponententests verwendet wird.
-summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält Funktionen und Vorgänge, die für Diagnosezwecke nützlich sind, einschließlich Assert-Vorgänge und Anspruchs Funktionen."
 metadata:
-  ms.openlocfilehash: c8e1cd7f3458e736a47749dd057174eb4961c31d
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 16c457188160a3e0d2b4d04b40af0dabbbdc0f0a
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884580"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863048"

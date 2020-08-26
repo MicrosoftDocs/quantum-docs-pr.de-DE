@@ -1,5 +1,5 @@
 ---
-title: Schreiben und Simulieren von Programmen auf Qubit-Ebene inQ#
+title: Schreiben und Simulieren von Programmen auf Qubit-Ebene in Q#
 description: Schritt-für-Schritt-Tutorial zum Schreiben und Simulieren eines Quantum-Programms, das auf der einzelnen Qubit-Ebene funktioniert
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -9,12 +9,12 @@ ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 22c79e4e01db1a0d0c291d0dcff81dbfa8df5cd3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 39b2d762c0efbfa4bb3a60a1dcee6bcbe2bd91a9
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869714"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863329"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Tutorial: schreiben und Simulieren von Programmen auf Qubit-Ebene in Q\#
 
@@ -41,17 +41,17 @@ In unserem Fall definieren wir einen- Q# Vorgang, um die vollständige drei-Qubi
 ## <a name="in-this-tutorial-youll-learn-how-to"></a>In diesem Tutorial lernen Sie Folgendes:
 
 > [!div class="checklist"]
-> * Definieren von Quantum-Vorgängen inQ#
-> * Direktes abrufen Q# von Vorgängen über die Befehlszeile oder ein klassisches Host Programm
+> * Definieren von Quantum-Vorgängen in Q#
+> * Ausführen Q# von Vorgängen direkt über die Eingabeaufforderung oder ein klassisches Host Programm
 > * Simulieren eines Quantum-Vorgangs von der Qubit-Zuordnung zur Mess Ausgabe
 > * Beobachten Sie, wie sich die simulierte wavefunction des Quantum-Systems während des Vorgangs weiterentwickelt
 
 Das Ausführen eines Quantum-Programms mit dem Quantum Development Kit von Microsoft besteht in der Regel aus zwei Teilen:
 1. Das Programm selbst, das mit der Q# Quantum-Programmiersprache implementiert wird und dann aufgerufen wird, um auf einem Quantum-Computer oder einem Quantum-Simulator ausgeführt zu werden. Diese bestehen aus 
-    - Q#Vorgänge: Unterroutinen, die in quantatenregistern agieren, und 
-    - Q#Functions: klassische Unterroutinen, die innerhalb des Quantum-Algorithmus verwendet werden.
+    - Q# Vorgänge: Unterroutinen, die in quantatenregistern agieren, und 
+    - Q# Functions: klassische Unterroutinen, die innerhalb des Quantum-Algorithmus verwendet werden.
 2. Der Einstiegspunkt, der verwendet wird, um das Quantum-Programm aufzurufen und den Zielcomputer anzugeben, auf dem er ausgeführt werden soll.
-    Dies kann direkt über die Befehlszeile oder über ein Host Programm erfolgen, das in einer klassischen Programmiersprache wie Python oder c# geschrieben ist.
+    Dies kann direkt über die Eingabeaufforderung oder über ein Host Programm erfolgen, das in einer klassischen Programmiersprache wie Python oder c# geschrieben ist.
     Dieses Tutorial enthält Anweisungen für die gewünschte Methode.
 
 ## <a name="allocate-qubits-and-define-quantum-operations"></a>Zuordnen von Qubits und Definieren von Quantum-Vorgängen
@@ -92,7 +92,7 @@ Als nächstes definieren wir den `Perform3qubitQFT` Vorgang:
 Der Vorgang nimmt vorerst keine Argumente an und gibt nichts zurück---in diesem Fall schreiben wir, dass Sie ein-Objekt zurückgibt `Unit` , das `void` in c# oder in einem leeren Tupel `Tuple[()]` in python ähnelt.
 Später werden wir Sie ändern, um ein Array von Messergebnissen zurückzugeben, an dem der Punkt `Unit` durch ersetzt wird `Result[]` . 
 
-### <a name="allocate-qubits-with-using"></a>Zuordnen von Qubits mit`using`
+### <a name="allocate-qubits-with-using"></a>Zuordnen von Qubits mit `using`
 In Q# diesem Vorgang wird zuerst ein Register von drei Qubits mit der- `using` Anweisung zugeteilt:
 
 ```qsharp
@@ -114,7 +114,7 @@ Bei `using` werden die Qubits automatisch im $ \ket {0} $-Status zugeordnet. Wir
 ### <a name="applying-single-qubit-and-controlled-gates"></a>Anwenden von Single-Qubit und kontrollierten Gates
 
 Als nächstes wenden wir die Gates an, aus denen der Vorgang besteht.
-Q#enthält bereits viele grundlegende quantgates als Vorgänge im [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) -Namespace, und diese sind keine Ausnahme. 
+Q# enthält bereits viele grundlegende quantgates als Vorgänge im [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) -Namespace, und diese sind keine Ausnahme. 
 
 Innerhalb eines- Q# Vorgangs werden die Anweisungen, die callables aufrufen, natürlich in sequenzieller Reihenfolge ausgeführt.
 Daher ist das erste anzuwendende Gate der [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) zum ersten Qubit:
@@ -134,10 +134,10 @@ Neben dem Anwenden des- `H` Tors (Hadamard) auf einzelne Qubits besteht die QFT-
 
 #### <a name="controlled-operations"></a>Kontrollierte Vorgänge
 
-Q#macht es sehr einfach, die Ausführung eines Vorgangs auf ein oder mehrere Steuerelement-Qubits zu bedinieren.
+Q# macht es sehr einfach, die Ausführung eines Vorgangs auf ein oder mehrere Steuerelement-Qubits zu bedinieren.
 Im Allgemeinen wird dem-Befehl lediglich `Controlled` vorangestellt, und die Vorgangs Argumente ändern sich wie folgt:
 
- `Op(<normal args>)`$ \bis $ `Controlled Op([<control qubits>], (<normal args>))` .
+ `Op(<normal args>)` $ \bis $ `Controlled Op([<control qubits>], (<normal args>))` .
 
 Beachten Sie, dass die Steuerelement-Qubits als Array bereitgestellt werden müssen, selbst wenn es sich um ein einzelnes Qubit handelt.
 
@@ -157,7 +157,7 @@ Beachten Sie, dass die- [`PI()`](xref:microsoft.quantum.math.pi) Funktion aus de
 Darüber hinaus dividieren wir durch einen `Double` (z. b. `2.0` ), da die Division durch eine ganze Zahl `2` einen Typfehler auslösen würde. 
 
 > [!TIP]
-> `R1(π/2)`und `R1(π/4)` sind äquivalent zu den `S` -und- `T` Vorgängen (auch in `Microsoft.Quantum.Intrinsic` ).
+> `R1(π/2)` und `R1(π/4)` sind äquivalent zu den `S` -und- `T` Vorgängen (auch in `Microsoft.Quantum.Intrinsic` ).
 
 
 Nach dem Anwenden der relevanten `H` Vorgänge und der kontrollierten Rotationen auf das zweite und dritte Qubits:
@@ -249,11 +249,11 @@ Nachdem die Q# Datei und der Vorgang abgeschlossen sind, kann unser Quantum-Prog
 Nachdem wir den Q# Vorgang in einer `.qs` Datei definiert haben, müssen wir diesen Vorgang jetzt aufrufen und alle zurückgegebenen klassischen Daten beobachten.
 Zurzeit gibt es nichts zurück (wie bereits erwähnt, gibt der oben definierte Vorgang zurück `Unit` ), doch wenn wir den Vorgang später ändern, Q# um ein Array von Messergebnissen () zurückzugeben `Result[]` , wird dies behandelt.
 
-Obwohl das Q# Programm in den Umgebungen, in denen es aufgerufen wird, universell ist, ist die Vorgehensweise natürlich unterschiedlich. Befolgen Sie daher einfach die Anweisungen auf der Registerkarte, die dem Setup entspricht: Arbeiten Sie von der Q# Befehlszeilen Anwendung aus, oder verwenden Sie ein Host Programm in Python oder c#.
+Obwohl das Q# Programm in den Umgebungen, in denen es aufgerufen wird, universell ist, ist die Vorgehensweise natürlich unterschiedlich. Befolgen Sie daher einfach die Anweisungen auf der Registerkarte, die dem Setup entspricht: Arbeiten Sie von der Anwendung aus, Q# oder verwenden Sie ein Host Programm in Python oder c#.
 
-#### <a name="command-line"></a>[Befehlszeile](#tab/tabid-cmdline)
+#### <a name="command-prompt"></a>[Eingabeaufforderung](#tab/tabid-cmdline)
 
-Wenn das Q# Programm von der Befehlszeile aus ausgeführt wird, ist nur eine kleine Änderung der Q# Datei erforderlich.
+Wenn Q# Sie das Programm von der Eingabeaufforderung aus ausführen, ist nur eine kleine Änderung der Q# Datei erforderlich.
 
 Fügen Sie einfach `@EntryPoint()` zu einer Zeile vor der Vorgangs Definition hinzu:
 
@@ -445,7 +445,7 @@ Jeder gemessene `Result` Typ (entweder `Zero` oder `One` ) wird dann der entspre
 
 Das-Schlüsselwort `set` wird immer zum erneuten Zuweisen von Variablen verwendet, die mit gebunden sind `mutable` .
 
-#### <a name="return-resultarray"></a>Hre`resultArray`
+#### <a name="return-resultarray"></a>Hre `resultArray`
 
 Wenn alle drei Qubits gemessen werden und die Ergebnisse zu hinzugefügt `resultArray` wurden, ist es sicher, die Qubits wie zuvor zurückzusetzen und deren Zuteilung aufzuheben.
 Fügen Sie nach dem Schließen des Blocks ein. `using`
@@ -499,10 +499,10 @@ Der endgültige Vorgangs Code sollte wie folgt aussehen:
 }
 ```
 
-Wenn Sie von der Befehlszeile aus arbeiten, wird das zurückgegebene Array am Ende der Ausführung einfach direkt in der Konsole gedruckt.
+Wenn Sie von der Eingabeaufforderung aus arbeiten, wird das zurückgegebene Array am Ende der Ausführung einfach direkt in der Konsole gedruckt.
 Aktualisieren Sie andernfalls das Host Programm, um das zurückgegebene Array zu verarbeiten.
 
-#### <a name="command-line"></a>[Befehlszeile](#tab/tabid-cmdline)
+#### <a name="command-prompt"></a>[Eingabeaufforderung](#tab/tabid-cmdline)
 
 Um mehr über das zurückgegebene Array zu erfahren, das in der Konsole gedruckt wird, können wir eine weitere `Message` in der Q# Datei direkt vor der-Anweisung hinzufügen `return` :
 
