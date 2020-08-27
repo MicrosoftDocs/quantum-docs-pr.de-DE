@@ -38,10 +38,14 @@
   name: Magic-Befehl „%package“
 - href: performance.md
   name: Magic-Befehl „%performance“
+- href: project.md
+  name: Magic-Befehl „%project“
 - href: simulate.md
   name: Magic-Befehl „%simulate“
 - href: toffoli.md
   name: Magic-Befehl „%toffoli“
+- href: trace.md
+  name: Magic-Befehl „%trace“
 - href: who.md
   name: Magic-Befehl „%who“
 - href: workspace.md
