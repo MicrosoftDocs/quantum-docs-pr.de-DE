@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.using
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c558e25bf0d906ba6480cd7c41d3ece4ea97c2d1
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 39bf7dc52f4670a6e4536efc437d001c96f9584a
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863086"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992138"
 ---
 # <a name="using-additional-no-locq-libraries"></a>Verwenden zusätzlicher Q# Bibliotheken
 
@@ -83,7 +83,7 @@ Um das Paket über Q# den Code im aktuellen Arbeitsbereich verfügbar zu machen,
 ## <a name="python-interoperability"></a>[Interoperabilität mit Python](#tab/tabid-python)
 
 
-Mithilfe der-Methode können Sie zusätzliche Pakete zur Verwendung in einem python-Host Programm verfügbar machen [`qsharp.packages.add`](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages) .
+Mithilfe der-Methode können Sie zusätzliche Pakete zur Verwendung in einem python-Host Programm verfügbar machen [`qsharp.packages.add`](https://docs.microsoft.com/python/qsharp-core/qsharp.packages.packages) .
 Um z. b. das [**Microsoft. Quantum. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) -Paket für die Verwendung in einem I Notebook hinzuzufügen Q# , führen Sie den folgenden Python-Code aus:
 
 ```python
