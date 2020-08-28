@@ -10,12 +10,12 @@ uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dd7360961aa728a6aa63b8d8c4e4840f5bf2afe8
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 84782d1628dd100c0939b2b12aa0a9aa8ab2b80e
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866756"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863643"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Aktualisieren des Microsoft Quantum Development Kit (QDK)
 
@@ -37,7 +37,7 @@ Unabhängig davon, ob Sie C# oder Python zum Hosten von Q#-Vorgängen nutzen, k�
     dotnet --version
     ```
 
-    Überprüfen Sie, ob `3.1.100` oder höher ausgegeben wird. Falls nicht, sollten Sie die [aktuelle Version](https://dotnet.microsoft.com/download) installieren und die Überprüfung dann erneut durchführen. Befolgen Sie anschließend unten die Anleitung je nach Ihrem Setup (Visual Studio, Visual Studio Code oder direkt über die Befehlszeile).
+    Überprüfen Sie, ob `3.1.100` oder höher ausgegeben wird. Falls nicht, sollten Sie die [aktuelle Version](https://dotnet.microsoft.com/download) installieren und die Überprüfung dann erneut durchführen. Befolgen Sie anschließend unten die Anleitung je nach Ihrem Setup (Visual Studio, Visual Studio Code oder direkt über die Eingabeaufforderung).
 
 ### <a name="update-no-locq-projects-in-visual-studio"></a>Aktualisieren von Q#-Projekten in Visual Studio
  
@@ -84,9 +84,9 @@ Sie können nun zu [Aktualisieren Ihrer Visual Studio-QDK-Erweiterung](#update-v
 
 1. Öffnen Sie in Visual Studio Code den Ordner, der das zu aktualisierende Projekt enthält.
 2. Wählen Sie **Terminal** -> **Neues Terminal** aus.
-3. Befolgen Sie die Anleitung für die Aktualisierung über die Befehlszeile (unten angegeben).
+3. Befolgen Sie die Anleitung für die Aktualisierung über die Eingabeaufforderung (unten angegeben).
 
-### <a name="update-no-locq-projects-using-the-command-line"></a>Aktualisieren von Q#-Projekten über die Befehlszeile
+### <a name="update-no-locq-projects-using-the-command-prompt"></a>Aktualisieren von Q#-Projekten über die Eingabeaufforderung
 
 1. Navigieren Sie zu dem Ordner, der Ihre Hauptprojektdatei enthält.
 
@@ -309,7 +309,7 @@ Nun können Sie den aktualisierten IQ#-Kernel verwenden, um Ihre vorhandenen Q#-
 
 1. Aktualisieren Sie die Quantum-Projektvorlagen für .NET.
 
-    Über die Befehlszeile:
+    Über die Eingabeaufforderung:
 
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates

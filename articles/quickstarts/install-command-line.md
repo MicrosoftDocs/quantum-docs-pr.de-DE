@@ -1,5 +1,5 @@
 ---
-title: Entwickeln mit Q#-Befehlszeilenanwendungen
+title: Entwickeln mit Q#-Anwendungen
 author: KittyYeungQ
 ms.author: kitty
 ms.date: 4/24/2020
@@ -9,14 +9,14 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 630dc7b8acf2dd8f258eb27dfbc367b812cd1c19
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6a287dd76162a05d72af7e9d1e46533425283e2a
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867606"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863661"
 ---
-# <a name="develop-with-no-locq-command-line-applications"></a>Entwickeln mit Q#-Befehlszeilenanwendungen
+# <a name="develop-with-no-locq-applications"></a>Entwickeln mit Q#-Anwendungen
 
 Q#-Programme können eigenständig ohne Treiber in einer Hostsprache wie C#, F# oder Python ausgeführt werden.
 
@@ -26,7 +26,7 @@ Q#-Programme können eigenständig ohne Treiber in einer Hostsprache wie C#, F# 
 
 ## <a name="installation"></a>Installation
 
-Q#-Befehlszeilenanwendungen können zwar in einer beliebigen IDE erstellt werden, wir empfehlen jedoch, Visual Studio Code (VS Code) oder die Visual Studio-IDE für die lokale Entwicklung Ihrer Q#-Anwendungen zu verwenden. Für die Entwicklung in der Cloud über den Webbrowser wird Visual Studio Codespaces empfohlen. Die Entwicklung in diesen Umgebungen umfasst die umfangreichen Funktionen der QDK-Erweiterung, einschließlich Warnungen, Syntaxhervorhebung, Projektvorlagen und mehr. 
+Q#-Anwendungen können zwar in einer beliebigen IDE erstellt werden, wir empfehlen jedoch, Visual Studio Code (VS Code) oder die Visual Studio-IDE für die lokale Entwicklung Ihrer Q#-Anwendungen zu verwenden. Für die Entwicklung in der Cloud über den Webbrowser wird Visual Studio Codespaces empfohlen. Die Entwicklung in diesen Umgebungen umfasst die umfangreichen Funktionen der QDK-Erweiterung, einschließlich Warnungen, Syntaxhervorhebung, Projektvorlagen und mehr. 
 
 Gehen Sie zum Konfigurieren von VS Code wie folgt vor:
 
@@ -45,7 +45,7 @@ So konfigurieren Sie Visual Studio Codespaces:
 3. Nun können Sie Ihre neue Umgebung starten und mit der Entwicklung im Browser über die [VS Codespaces-Cloud-IDE](https://online.visualstudio.com/environments) beginnen. Alternativ können Sie die lokale Installation von VS Code und Codespaces als [Remoteumgebung](https://docs.microsoft.com/visualstudio/online/how-to/vscode) verwenden.
 
 
-Geben Sie Folgendes in die Befehlszeile ein, um das QDK für eine andere Umgebung zu installieren:
+Geben Sie Folgendes an der Eingabeaufforderung ein, um das QDK für eine andere Umgebung zu installieren:
 
 ```dotnetcli
 dotnet new -i Microsoft.Quantum.ProjectTemplates
@@ -94,7 +94,7 @@ So führen Sie die Anwendung aus:
 > [!NOTE]
 > Falls Sie über mehrere Projekte innerhalb einer Visual Studio-Projektmappe verfügen, müssen sich alle darin enthaltenen Projekte in demselben Ordner wie die Projektmappe bzw. in einem der Unterordner befinden.  
 
-### <a name="other-editors-with-the-command-line"></a>[Andere Editoren mit der Befehlszeile](#tab/tabid-cmdline)
+### <a name="other-editors-with-the-command-prompt"></a>[Andere Editoren mit der Eingabeaufforderung](#tab/tabid-cmdline)
 
 Überprüfen Sie Ihre Installation, indem Sie eine Q#-Anwendung vom Typ `Hello World` erstellen.
 

@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.q-sharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3ee9e897eb142bbc9503a617cc3e25c1a665ff35
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 5db574b0380ffa1616cb3959d84925854df4e321
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866943"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863773"
 ---
 # <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Was sind die Programmiersprache Q# und das QDK?
 
@@ -24,7 +24,7 @@ Die Programmiersprache Q# nutzt vertraute Elemente aus Python, C# und F# und unt
 
 ## <a name="what-can-i-do-with-the-qdk"></a>Welche Möglichkeiten bietet das QDK?
 
-Das QDK ist ein umfassendes Entwicklungskit für Q#, das mit gängigen Tools und Sprachen verwendet werden kann, um Quantenanwendungen zu entwickeln, die in verschiedenen Umgebungen ausführbar sind. Q#-Programme können als Befehlszeilen-App, über Jupyter Notebook-Instanzen oder mithilfe eines Python- oder .NET-Hostprogramms ausgeführt werden.
+Das QDK ist ein umfassendes Entwicklungskit für Q#, das mit gängigen Tools und Sprachen verwendet werden kann, um Quantenanwendungen zu entwickeln, die in verschiedenen Umgebungen ausführbar sind. Q#-Programme können als Konsolenanwendung, über Jupyter Notebook-Instanzen oder mithilfe eines Python- oder .NET-Hostprogramms ausgeführt werden.
 
 ### <a name="develop-in-common-tools-and-environments"></a>Entwickeln in gängigen Tools und Umgebungen
 
@@ -48,7 +48,7 @@ Führen Sie Ihre Quantenprogramme in einem Quantensimulator für den vollständi
 
 ## <a name="how-does-no-locq-work"></a>Wie funktioniert Q#?
 
-Ein Q#-Programm kann zu einer eigenständigen Befehlszeilenanwendung kompiliert oder durch ein in Python oder in einer .NET-Sprache geschriebenes Hostprogramm aufgerufen werden.
+Ein Q#-Programm kann zu einer eigenständigen Anwendung kompiliert oder durch ein in Python oder in einer .NET-Sprache geschriebenes Hostprogramm aufgerufen werden.
 
 Wenn Sie das Programm kompilieren und ausführen, wird eine Instanz des Quantensimulators erstellt und der Q#-Code an ihn übergeben. Der Simulator verwendet den Q#-Code, um Qubits (Simulationen von Quantenteilchen) zu erstellen und Transformationen anzuwenden, um deren Zustand zu ändern. Danach werden die Ergebnisse der Quantenoperationen im Simulator an das Programm zurückgegeben.  
 
@@ -60,7 +60,7 @@ Durch die Isolierung des Q#-Codes im Simulator wird sichergestellt, dass die Alg
 
 Alles, was Sie zum Schreiben und Ausführen von Q#-Programmen benötigen, kann auf Ihrem lokalen Computer installiert und von dort aus ausgeführt werden – einschließlich des Q#-Compilers, der Q#-Bibliotheken und der Quantensimulatoren. Schlussendlich können Sie Ihre Q#-Programme remote auf einem echten Quantencomputer ausführen. Bis dahin liefern jedoch die über das QDK bereitgestellten Quantensimulatoren exakte und zuverlässige Ergebnisse.
 
-- Das Ausführen von [Q# über die Befehlszeile](xref:microsoft.quantum.install.standalone) stellt die schnellste Einstiegsmöglichkeit dar.
+- Die Entwicklung von [Q#-Anwendungen](xref:microsoft.quantum.install.standalone) stellt die schnellste Einstiegsmöglichkeit dar.
 
 - Führen Sie eigenständige [Jupyter Notebook-Instanzen mit IQ# aus](xref:microsoft.quantum.install.jupyter) – einer Jupyter-Erweiterung zum Kompilieren, Simulieren und Visualisieren von Q#-Programmen.
 

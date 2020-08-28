@@ -9,12 +9,12 @@ ms.topic: overview
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ff5eb9984da0b22a65f3919599ee18605a206fa0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 06198f3b5b806bab49abf9fca38b5d2f15cfb65f
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867513"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863739"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Einstieg in das Quantum Development Kit (QDK)
 
@@ -36,7 +36,7 @@ Unsere Tutorials helfen Ihnen beim schnellen Einstieg in die Welt des Quantencom
 * [Erkunden der Verschränkung mit Q#](xref:microsoft.quantum.write-program): Dieses Tutorial enthält Informationen zum Schreiben eines Q#-Programms, das einige grundlegende Konzepte der Quantenprogrammierung veranschaulicht.
     Wenn Sie noch nicht bereit sind, mit dem Programmieren zu beginnen, können Sie trotzdem fortfahren, ohne das QDK zu installieren, und sich einen Überblick über die Programmiersprache Q# und die ersten Konzepte des Quantencomputings verschaffen.
 * [Grover-Suchalgorithmus](xref:microsoft.quantum.quickstarts.search): Ein Beispiel für ein Q#-Programm. Hiermit wird die hohe Leistungsfähigkeit von Q# in Bezug auf das Ausdrücken des Quantenalgorithmus mit dem Ziel verdeutlicht, untergeordnete Quantenoperationen zu abstrahieren.
-    In diesem Tutorial erfahren Sie Schritt für Schritt, wie Sie das Programm unter Verwendung von Visual Studio oder Visual Studio Code als Q#-Befehlszeilenanwendung entwickeln.
+    In diesem Tutorial erfahren Sie Schritt für Schritt, wie Sie das Programm unter Verwendung von Visual Studio oder Visual Studio Code als Q#-Anwendung entwickeln.
 
 ### <a name="learning-further"></a>Weitere Informationen zum Lernen
 * In den [Microsoft Learn-Modulen für Quantencomputing](https://docs.microsoft.com/learn/browse/?term=quantum) werden zentrale Konzepte vermittelt, mit denen Sie sich in Ihrer eigenen Geschwindigkeit und nach Ihrem eigenen Zeitplan vertraut machen können. Unser [erstes Modul](https://docs.microsoft.com/learn/modules/qsharp-create-first-quantum-development-kit/) enthält grundlegende Informationen zur Erstellung von Quantenprogrammen mit dem QDK.
