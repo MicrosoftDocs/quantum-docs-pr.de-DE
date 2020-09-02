@@ -2,7 +2,7 @@
 uid: microsoft.quantum.synthesis.applypermutationusingdecomposition
 name: ApplyPermutationUsingDecomposition
 type: operation
-namespace: Microsoft.Quantum.Synthesis
+namespace: microsoft.quantum.synthesis
 summary: >-
   Pertrauert die Verstärkung in einem Quantum-Zustand, wenn eine permutations mithilfe der Zerlegungs basierten Synthese verwendet wird.
 
@@ -34,7 +34,7 @@ examples: >-
   ```
 syntax: 'operation ApplyPermutationUsingDecomposition (perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: >-
-  - [*Alexis de Vos*, *Yvan Van Rentergem*, ADV. in Mathematik. von comm. 2 (2), 2008, pp. 183--200](http://www.aimsciences.org/article/doi/10.3934/amc.2008.2.183)
+  - [*Alexis de Vos*, *Yvan Van Rentergem*, ADV. in Math. of comm. 2 (2), 2008, pp. 183--200](http://www.aimsciences.org/article/doi/10.3934/amc.2008.2.183)
 
   - [*Mathias soeken*, *Laura tague*, *Gerhard W. Dueck*, *Rolf Drechsler*, Journal der symbolischen Berechnung 73 (2016), pp. 1--26](https://www.sciencedirect.com/science/article/pii/S0747717115000188?via%3Dihub)
 input:
@@ -60,9 +60,9 @@ seeAlso:
 - microsoft.quantum.synthesis.applypermutationusingdecompositionwithvariableorder
 - microsoft.quantum.synthesis.applypermutationusingtransformation
 metadata:
-  ms.openlocfilehash: 2394b1260a848e590bea911e5b52d0e37d8c1bac
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 3fd7b84cbf403fe271849ae4d8841a1c8123faa0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85886594"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89328082"

@@ -2,8 +2,8 @@
 uid: microsoft.quantum.characterization.estimatefrequency
 name: EstimateFrequency
 type: operation
-namespace: Microsoft.Quantum.Characterization
-summary: Bei einer Vorbereitung und Messung schätzt die Häufigkeit, mit der diese Messung erfolgreich ist ( `Zero`gibt zurück), indem eine bestimmte Anzahl von Tests ausgeführt wird.
+namespace: microsoft.quantum.characterization
+summary: Bei einer Vorbereitung und Messung schätzt die Häufigkeit, mit der diese Messung erfolgreich ist (gibt zurück `Zero` ), indem eine bestimmte Anzahl von Tests ausgeführt wird.
 syntax: 'operation EstimateFrequency (preparation : (Qubit[] => Unit), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
 input:
   content: '(preparation : (Qubit[] => Unit), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
@@ -44,16 +44,16 @@ output:
   content: Double
   types:
   - summary: >-
-      Eine Schätzung von $ \hat{p} $ der Häufigkeit, mit der $M (p (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ `Zero`zurückgibt, wird mithilfe der unausgewogenen Binomial-Schätzung $ \hat{p} =\_n {\uparamerow}/\_n {\text{Measurements}} $ abgerufen,\_wobei $n {\uparamerow} $ die Anzahl `Zero` der beobachteten Ergebnisse ist.
+      Eine Schätzung von $ \hat{p} $ der Häufigkeit, mit der $M (p (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ zurückgibt `Zero` , wird mithilfe der unausgewogenen Binomial-Schätzung $ \hat{p} = n \_ {\uparamerow}/n \_ {\text{Measurements}} $ abgerufen, wobei $n \_ {\uparamerow} $ die Anzahl der `Zero` beobachteten Ergebnisse ist.
 
 
       Dies ist besonders wichtig auf Ziel Computern, die physische Beschränkungen berücksichtigen, damit Wahrscheinlichkeiten nicht gemessen werden können.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 973ab328d11410fee400659f18a99d50c1883156
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 008a3276e0df9c587f3262f4b5358a0831260ae4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677737"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354585"

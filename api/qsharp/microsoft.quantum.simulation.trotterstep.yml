@@ -2,7 +2,7 @@
 uid: microsoft.quantum.simulation.trotterstep
 name: TrotterStep
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: Implementiert einen einzelnen Zeit Schritt der Zeitentwicklung durch das in einer `EvolutionGenerator` mithilfe einer Trotter – Suzuki-Zerlegung beschriebene System.
 remarks: Weitere Informationen zur Trotter – Suzuki-Zerlegung finden Sie unter [Zeit geordnete Komposition](/quantum/libraries/control-flow#time-ordered-composition).
 syntax: 'function TrotterStep (evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, trotterOrder : Int, trotterStepSize : Double) : (Qubit[] => Unit is Adj + Ctl)'
@@ -23,7 +23,7 @@ input:
 output:
   content: (Qubit[] => Unit is Adj + Ctl)
   types:
-  - summary: Einheitlicher Vorgang, der einen einzelnen Schritt der Zeit-Evolution für die Dauer `trotterStepSize`angleicht.
+  - summary: Einheitlicher Vorgang, der einen einzelnen Schritt der Zeit-Evolution für die Dauer angleicht `trotterStepSize` .
     isOperation: true
     input:
       types:
@@ -38,9 +38,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 7059972ad5494e7d2cd86c943314005f620ad60f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 649c8cf249287df71297fd0ae1604fe6e4893f34
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687229"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89328133"

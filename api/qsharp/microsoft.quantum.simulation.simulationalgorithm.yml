@@ -2,19 +2,19 @@
 uid: microsoft.quantum.simulation.simulationalgorithm
 name: SimulationAlgorithm
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
   Stellt einen zeitunabhängigen Simulations Algorithmus dar.
 
 
-  Eine zeitunabhängige Simulationstechnik konvertiert ein<xref:microsoft.quantum.simulation.evolutiongenerator>
+  Eine zeitunabhängige Simulationstechnik konvertiert ein <xref:microsoft.quantum.simulation.evolutiongenerator>
 
   zur einheitlichen Zeitentwicklung für einige Zeitintervalle.
 syntax: newtype SimulationAlgorithm = ((Double, Microsoft.Quantum.Simulation.EvolutionGenerator, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 8fa6845599852a972d152870a926a499272a43a3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 89c3e6e972264c6ec8427f6e69756d95b86b011c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682485"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89328371"

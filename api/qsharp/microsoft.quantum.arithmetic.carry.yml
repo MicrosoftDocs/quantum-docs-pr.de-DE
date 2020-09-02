@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.carry
 name: Carry
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Implementiert ein umkehrbares durchführen. Wenn `carryIn` ein in Qubit codiertes und zwei Summen in `summand1` und `summand2`codiert sind, berechnet das bitweise XOR von `carryIn` `summand1` und `summand2` im Qubit `summand2` , und die Überführung wird im Qubit `carryOut`-Element als XoReD festgestellt.
+namespace: microsoft.quantum.arithmetic
+summary: Implementiert ein umkehrbares durchführen. Wenn ein in Qubit codiertes `carryIn` und zwei Summen in und codiert `summand1` `summand2` sind, berechnet das bitweise XOR von `carryIn` `summand1` und `summand2` im Qubit, `summand2` und die Überführung wird im Qubit-Element als XoReD `carryOut` festgestellt.
 syntax: 'operation Carry (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit) : Unit'
 input:
   content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit)'
@@ -17,7 +17,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: summand2
-    summary: Zweites Summen-und Qubit-Wert, wird durch das untere Bit der Summe `summand1` von `summand2`und ersetzt.
+    summary: Zweites Summen-und Qubit-Wert, wird durch das untere Bit der Summe von `summand1` und ersetzt `summand2` .
     isPrimitive: true
     uid: Qubit
   - name: carryOut
@@ -33,9 +33,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 3fa18b56fb242e76a88a23af02b3ebe7e5cc57d4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b620fa934d3e40772c9a55eda317449e3329a6d5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679848"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327410"

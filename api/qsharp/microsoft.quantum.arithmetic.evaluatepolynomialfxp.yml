@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.evaluatepolynomialfxp
 name: EvaluatePolynomialFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Wertet ein Polynoms in einer Fixed-Point-Darstellung aus.
 syntax: 'operation EvaluatePolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
@@ -17,7 +17,7 @@ input:
     summary: Eingabe-fest Komma Zahl, für die der polynomwert ausgewertet werden soll.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: Ausgabe feste Punkt Zahl, die $P (x) $ enthält. Muss zunächst den Status $ \ket{0}$ aufweisen.
+    summary: Ausgabe feste Punkt Zahl, die $P (x) $ enthält. Muss zunächst den Status $ \ket {0} $ aufweisen.
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7907702d8919060c630ce410d1cfcb995b4ed37a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5a30a25c7e11c2000abeb9ac4613385666c660fb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679640"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342022"

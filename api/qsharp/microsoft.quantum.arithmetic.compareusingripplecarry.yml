@@ -2,26 +2,26 @@
 uid: microsoft.quantum.arithmetic.compareusingripplecarry
 name: CompareUsingRippleCarry
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Dieser Vorgang testet, ob eine ganze Zahl, die durch ein Register von Qubits dargestellt wird, größer als eine andere Ganzzahl ist, und wendet ein XOR des Ergebnisses auf ein Ausgabe-Qubit an.
 
 
-  Bei zwei `x` Ganzzahlen, `y` die in gleich großen Qubit-Registern gespeichert sind, überprüft dieser Vorgang, `x > y`ob Sie übereinstimmen. True gibt an, dass 1 ein XoReD in ein Ausgabe-Qubit ist. Andernfalls wird 0 in einem Ausgabe-Qubit als XoReD fest.
+  Bei zwei Ganzzahlen `x` `y` , die in gleich großen Qubit-Registern gespeichert sind, überprüft dieser Vorgang, ob Sie übereinstimmen `x > y` . True gibt an, dass 1 ein XoReD in ein Ausgabe-Qubit ist. Andernfalls wird 0 in einem Ausgabe-Qubit als XoReD fest.
 
   Mit anderen Worten: dieser Vorgang kann durch die einheitliche $ $ \begin{align} u\ket {x} \ Ket {y} \ Ket {z} = \ket{x}\ket{y}\ket{z\oplus (x>y)} dargestellt werden.
 
   \end{align} $ $
 syntax: 'operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
-references: '- Eine neue Quantum Ripple-be Additions Verbindung Steven a. Cuccaro, Thomas G. Draper, Samuel A. KUTIN, David Petrie Moultonhttps://arxiv.org/abs/quant-ph/0410184'
+references: '- Eine neue Quantum Ripple-be Additions Verbindung Steven a. Cuccaro, Thomas G. Draper, Samuel A. KUTIN, David Petrie Moulton https://arxiv.org/abs/quant-ph/0410184'
 input:
   content: '(x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit)'
   types:
   - name: x
-    summary: Die erste zu vergleichende Zahl, die `LittleEndian` im Format in einem Qubit-Register gespeichert wird.
+    summary: Die erste zu vergleichende Zahl, die im `LittleEndian` Format in einem Qubit-Register gespeichert wird.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: y
-    summary: Die zweite zu vergleichende Zahl, die `LittleEndian` im Format in einem Qubit-Register gespeichert werden soll.
+    summary: Die zweite zu vergleichende Zahl, die im `LittleEndian` Format in einem Qubit-Register gespeichert werden soll.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: output
     summary: Ein Qubit, das das Ergebnis des Vergleichs $x>y $ speichert.
@@ -36,9 +36,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 08cff4d874060fce0b461c7eeadfdcadf6fa1453
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 374b1611c7bf34f11ab8a8c3f11fad951e288565
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679758"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327368"

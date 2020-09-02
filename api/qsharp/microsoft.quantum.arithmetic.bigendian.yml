@@ -2,14 +2,14 @@
 uid: microsoft.quantum.arithmetic.bigendian
 name: BigEndian
 type: newtype
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Registrieren, das eine Ganzzahl ohne Vorzeichen in Big-d-Reihenfolge codiert. Das Qubit mit Index `0` codiert das höchste Bit einer Ganzzahl ohne Vorzeichen.
-remarks: Wir kürzen `BigEndian` Sie als `BE` in der-Dokumentation.
+remarks: Wir kürzen Sie `BigEndian` als `BE` in der-Dokumentation.
 syntax: newtype BigEndian = Qubit[];
 metadata:
-  ms.openlocfilehash: 9c59021955710a182a2315d4e848016f8d13d6fa
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b8aca5fb596ff61064b7542785d245a3ef7ecace
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679858"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327589"
