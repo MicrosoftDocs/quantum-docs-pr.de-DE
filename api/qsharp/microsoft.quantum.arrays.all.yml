@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arrays.all
 name: All
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Bei Angabe eines Arrays und eines Prädikats, das für die Elemente des Arrays definiert ist, und überprüft, ob alle Elemente des Arrays dem Prädikat entsprechen.
-remarks: "Die-Funktion ist für generische Typen definiert, d. h., wenn ein `'T[]` Array und eine `predicate: 'T -> Bool` Funktion vorhanden sind, `Bool` können wir einen Wert entwickeln, der `predicate`angibt, ob alle Elemente erfüllen."
+remarks: "Die-Funktion ist für generische Typen definiert, d. h., wenn ein Array `'T[]` und eine Funktion vorhanden sind, `predicate: 'T -> Bool` können wir einen Wert entwickeln, `Bool` der angibt, ob alle Elemente erfüllen `predicate` ."
 examples: >-
   Der folgende Code überprüft, ob alle Elemente des Arrays ungleich 0 (null) sind:
 
@@ -39,7 +39,7 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Ein Array von-Elementen `'T`.
+    summary: Ein Array von-Elementen `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
@@ -53,9 +53,9 @@ typeParameters:
 - uid: "'T"
   summary: Der Typ der `array` Elemente.
 metadata:
-  ms.openlocfilehash: 116a2a537c4712c968187785873c0546ec236762
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 515dcb29844277e626158e44da4202fae0e7fd61
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676584"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352647"

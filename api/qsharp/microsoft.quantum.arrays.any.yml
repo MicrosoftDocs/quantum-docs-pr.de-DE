@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arrays.any
 name: Any
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Bei Angabe eines Arrays und eines Prädikats, das für die Elemente des Arrays definiert ist, wird von überprüft, ob mindestens ein Element des Arrays dem Prädikat entspricht.
-remarks: "Die-Funktion ist für generische Typen definiert, d. h., wenn ein `'T[]` Array und eine `predicate: 'T -> Bool` Funktion vorhanden sind, `Bool` können wir einen Wert entwickeln, der `predicate`angibt, ob ein Element übereinstimmt."
+remarks: "Die-Funktion ist für generische Typen definiert, d. h., wenn ein Array `'T[]` und eine Funktion vorhanden sind, `predicate: 'T -> Bool` können wir einen Wert entwickeln, `Bool` der angibt, ob ein Element übereinstimmt `predicate` ."
 examples: >-
   ```qsharp
 
@@ -41,7 +41,7 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Ein Array von-Elementen `'T`.
+    summary: Ein Array von-Elementen `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
@@ -55,9 +55,9 @@ typeParameters:
 - uid: "'T"
   summary: Der Typ der `array` Elemente.
 metadata:
-  ms.openlocfilehash: 4e80b5c39c83bc5d5b26d4df9ca86b8cbc796aeb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: eb61be88ccba6392ca70c75f6c506b9b6c1c8bbd
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676558"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352596"

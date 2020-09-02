@@ -2,7 +2,7 @@
 uid: microsoft.quantum.preparation.statepreparationcomplexcoefficients
 name: StatePreparationComplexCoefficients
 type: function
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
   Gibt einen Vorgang zurück, der einen bestimmten Quantum-Zustand vorbereitet.
 
@@ -13,9 +13,9 @@ summary: >-
   Die Aktion "U" für ein neu zugeordneter Register wird durch "$ $ \begin{align} u\ket {0..." angegeben. 0} = \ket{\psi} = \bruchteil {\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
 
   \end{align} $ $
-remarks: Negative Eingabe Koeffizienten $r _J < $0 werden als positiv mit dem Wert $ | r_j | $ behandelt. `coefficients`wird mit den Elementen $ (r_j, t_j) = (0,0, 0,0) $ aufgefüllt, wenn weniger als $2 ^ n $ angegeben werden.
+remarks: Negative Eingabe Koeffizienten $r _J < $0 werden als positiv mit dem Wert $ | r_j | $ behandelt. `coefficients` wird mit den Elementen $ (r_j, t_j) = (0,0, 0,0) $ aufgefüllt, wenn weniger als $2 ^ n $ angegeben werden.
 examples: >-
-  Im folgenden Code Ausschnitt wird der Quantum-Status $ \ket{\psi} = e ^ {i 0,1} \ sqrt {1/8} \{0}Ket + \ sqrt {7/8} \{2}Ket $ im Qubit- `qubitsLE`Register vorbereitet.
+  Im folgenden Code Ausschnitt wird der Quantum-Status $ \ket{\psi} = e ^ {i 0,1} \ sqrt {1/8} \ Ket {0} + \ sqrt {7/8} \ Ket {2} $ im Qubit-Register vorbereitet `qubitsLE` .
 
 
   ```qsharp
@@ -62,9 +62,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: d42ff528c40346ddb5a487ca68c70544cac20aeb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f7726320e4e1c5da3cb18b9bc34e4e861000aa33
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686469"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331210"

@@ -2,12 +2,12 @@
 uid: microsoft.quantum.diagnostics.dumpmachine
 name: DumpMachine
 type: function
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: Sichert den Status des aktuellen Ziel Computers.
 remarks: >-
   Diese Methode ermöglicht es Ihnen, Informationen über den aktuellen Status des Ziel Computers in einer Datei oder an einem anderen Speicherort zu speichern.
 
-  Die tatsächlich generierten Informationen und die Semantik von `location` sind für jeden Zielcomputer spezifisch. Wenn Sie jedoch ein leeres Tupel als Speicherort (`()`) bereitstellen oder einfach nur `location` den-Parameter weglassen, bedeutet dies in der Regel, dass die Ausgabe in der Konsole generiert wird.
+  Die tatsächlich generierten Informationen und die Semantik von `location` sind für jeden Zielcomputer spezifisch. Wenn Sie jedoch ein leeres Tupel als Speicherort ( `()` ) bereitstellen oder einfach nur den-Parameter weglassen, bedeutet dies in `location` der Regel, dass die Ausgabe in der Konsole generiert wird.
 
 
   Für den lokalen vollständigen Zustands Simulator, der als Teil des Quantum Development Kit verteilt wird, erwartet diese Methode eine Zeichenfolge mit dem Pfad zu einer Datei, in der die Wave-Funktion als eindimensionales Array komplexer Zahlen geschrieben wird, wobei jedes Element die Verstärkung der Wahrscheinlichkeit darstellt, den entsprechenden Zustand zu messen.
@@ -26,9 +26,9 @@ output:
     isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 7511e0bdded689c84cb90794860dd79e48950414
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7b30ac476cd8c3f5db5344d7ac9cabffd670f1a1
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82656568"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337364"

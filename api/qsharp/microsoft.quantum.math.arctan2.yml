@@ -2,7 +2,7 @@
 uid: microsoft.quantum.math.arctan2
 name: ArcTan2
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Gibt einen Winkel zurück, dessen Tangens der Quotient zweier angegebener Zahlen ist.
 remarks: Weitere Informationen finden Sie unter " [System. Math. atan2](https://docs.microsoft.com/dotnet/api/system.math.atan2) ".
 syntax: 'function ArcTan2 (y : Double, x : Double) : Double'
@@ -21,9 +21,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: d4db894c5e4bfaa3fc0fd130be9986264b512a3b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f3f172eff70eb185cf6f5610992336f3ae07e9f0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683428"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344521"

@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.squarefxp
 name: SquareFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Quadriert eine festpunktzahl.
 syntax: 'operation SquareFxP (fp : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
@@ -12,7 +12,7 @@ input:
     summary: Die Festkomma Zahl.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: Die Ergebnis Festkomma Zahl muss zunächst den Status $ \ket{0}$ aufweisen.
+    summary: Die Ergebnis Festkomma Zahl muss zunächst den Status $ \ket {0} $ aufweisen.
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -23,9 +23,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 872599fb948f3f9bcfdede64ddeb5d8bb58debab
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7fbc89e5a1986f633330a2f8c019bd0cf57930f9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676627"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352749"
