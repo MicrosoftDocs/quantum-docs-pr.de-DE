@@ -2,8 +2,8 @@
 uid: microsoft.quantum.simulation.identitygeneratorindex
 name: IdentityGeneratorIndex
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: Gibt einen Generator Index zurück, `H = 0`der mit der NULL hamiltonan übereinstimmt, die dem Vorgang zur Identitätsentwicklung entspricht.
+namespace: microsoft.quantum.simulation
+summary: Gibt einen Generator Index zurück, der mit der NULL hamiltonan übereinstimmt, `H = 0` die dem Vorgang zur Identitätsentwicklung entspricht.
 syntax: 'function IdentityGeneratorIndex (idxTerm : Int) : Microsoft.Quantum.Simulation.GeneratorIndex'
 input:
   content: '(idxTerm : Int)'
@@ -18,9 +18,9 @@ output:
   - summary: Ein Generator Index, der die Evolution unter der hamiltonan $H = $0 darstellt.
     uid: microsoft.quantum.simulation.generatorindex
 metadata:
-  ms.openlocfilehash: b498cc055bed2fcc69ac28548fc08b2bbaa74430
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 680788feec5703ff6a9f23c5367070e7694f524a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683058"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330037"

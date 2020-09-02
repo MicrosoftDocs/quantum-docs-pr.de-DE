@@ -2,19 +2,19 @@
 uid: microsoft.quantum.simulation.paulistringfromgenidx
 name: PauliStringFromGenIdx
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: Extrahiert die Pauli-Zeichenfolge und ihre Qubit-Indizes eines von einem `GeneratorIndex`beschriebenen Pauli-Begriffs.
+namespace: microsoft.quantum.simulation
+summary: Extrahiert die Pauli-Zeichenfolge und ihre Qubit-Indizes eines von einem beschriebenen Pauli-Begriffs `GeneratorIndex` .
 syntax: 'function PauliStringFromGenIdx (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : (Pauli[], Int[])'
 input:
   content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
   types:
   - name: generatorIndex
-    summary: '`GeneratorIndex`der Typ, der einen Pauli-Begriff codiert.'
+    summary: '`GeneratorIndex` der Typ, der einen Pauli-Begriff codiert.'
     uid: microsoft.quantum.simulation.generatorindex
 output:
   content: (Pauli[], Int[])
   types:
-  - summary: Die Pauli-Zeichenfolge des von einem `GeneratorIndex`beschriebenen Begriffs und Indizes zu den Qubits, auf die Sie angewendet wird.
+  - summary: Die Pauli-Zeichenfolge des von einem beschriebenen Begriffs `GeneratorIndex` und Indizes zu den Qubits, auf die Sie angewendet wird.
     types:
     - isArray: true
       isPrimitive: true
@@ -23,9 +23,9 @@ output:
       isPrimitive: true
       uid: Int
 metadata:
-  ms.openlocfilehash: 585cac037696e370f3fc3ca4364db6f753b2c642
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7c924d806130c1181290a3154c5dba1f337f787c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687030"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329493"

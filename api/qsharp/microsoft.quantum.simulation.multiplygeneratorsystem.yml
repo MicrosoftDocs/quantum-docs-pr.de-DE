@@ -2,8 +2,8 @@
 uid: microsoft.quantum.simulation.multiplygeneratorsystem
 name: MultiplyGeneratorSystem
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: Multipliziert den Koeffizient aller Begriffe in einem `GeneratorSystem`.
+namespace: microsoft.quantum.simulation
+summary: Multipliziert den Koeffizient aller Begriffe in einem `GeneratorSystem` .
 syntax: 'function MultiplyGeneratorSystem (multiplier : Double, generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: '(multiplier : Double, generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
@@ -18,14 +18,14 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
-  - summary: Ein `GeneratorSystem` , das ein System mit Koeffizienten darstellt, das `multiplier` größer ist.
+  - summary: Ein, das `GeneratorSystem` ein System mit Koeffizienten darstellt, das `multiplier` größer ist.
     uid: microsoft.quantum.simulation.generatorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
 metadata:
-  ms.openlocfilehash: efdc509ce877e58db1fb365795f2913ce2556563
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5cdf3f3b10d317eca646211e8b4ea80ea87e62b6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682568"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329731"

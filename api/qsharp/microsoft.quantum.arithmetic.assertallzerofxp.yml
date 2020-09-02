@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.assertallzerofxp
 name: AssertAllZeroFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Hilfsfunktion, um zu bestätigen, dass eine Quantum-fest Komma Zahl mit 0 (null) initialisiert wird, d. h., alle{0}Qubits befinden sich im Zustand $ \ket $.
+namespace: microsoft.quantum.arithmetic
+summary: Hilfsfunktion, um zu bestätigen, dass eine Quantum-fest Komma Zahl mit 0 (null) initialisiert wird, d. h., alle Qubits befinden sich im Zustand $ \ket {0} $.
 syntax: 'operation AssertAllZeroFxP (fp : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
   content: '(fp : Microsoft.Quantum.Arithmetic.FixedPoint)'
@@ -19,9 +19,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 1a891bdcd59ca8ac3eacec9f712c3cb6692ccdac
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 555e663f774ead9d40dbec23c073f0d5faee7f4e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672824"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342498"

@@ -2,7 +2,7 @@
 uid: microsoft.quantum.math.ceiling
 name: Ceiling
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Gibt die kleinste Ganzzahl zurück, die größer oder gleich der angegebenen Zahl ist.
 remarks: Weitere Informationen finden Sie unter [System. Math. Ceiling](https://docs.microsoft.com/dotnet/api/system.math.ceiling) .
 syntax: 'function Ceiling (value : Double) : Int'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 97ba849c2216c116c0151fd2605646f674860227
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5b8aae1805360a21e936ec0b5d10eef6daaf5d98
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683378"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335069"
