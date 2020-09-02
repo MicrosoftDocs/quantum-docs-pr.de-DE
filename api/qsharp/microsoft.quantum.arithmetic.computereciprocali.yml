@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.computereciprocali
 name: ComputeReciprocalI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Berechnet die gegenseitige 1/x-Datei für eine Ganzzahl x ohne Vorzeichen unter Verwendung der ganzzahligen Division. Das als ganze Zahl interpretierte Ergebnis ist `floor(2^(2*n-1) / x)`.
+namespace: microsoft.quantum.arithmetic
+summary: Berechnet die gegenseitige 1/x-Datei für eine Ganzzahl x ohne Vorzeichen unter Verwendung der ganzzahligen Division. Das als ganze Zahl interpretierte Ergebnis ist `floor(2^(2*n-1) / x)` .
 remarks: Bei der Eingabe x = 0 ist die Ausgabe alle.
 syntax: 'operation ComputeReciprocalI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
@@ -13,7 +13,7 @@ input:
     summary: n-Bit-Ganzzahl ohne Vorzeichen
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: die 2N-Bit-Ausgabe muss zunächst in "${0}\ket $" liegen.
+    summary: die 2N-Bit-Ausgabe muss zunächst in "$ \ket $" liegen {0} .
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: b371c7c1e7442e49aab01793fdaa9c99bcafa35d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 824bc89e8d6290c98d505b0b17d4521edaa36384
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679717"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342294"

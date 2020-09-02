@@ -2,12 +2,12 @@
 uid: microsoft.quantum.arithmetic.dividei
 name: DivideI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Dividiert zwei Quantum-Ganzzahlen.
 
 
-  `xs`hält den Rest `xs - floor(xs/ys) * ys` und `result` hält. `floor(xs/ys)`
+  `xs` hält den Rest `xs - floor(xs/ys) * ys` und `result` hält `floor(xs/ys)` .
 remarks: >-
   Verwendet einen standardmäßigen Shift-and-Subtract-Ansatz, um die Division zu implementieren.
 
@@ -23,7 +23,7 @@ input:
     summary: $n $-Bit-Divisor
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: $n $-Bit-Ergebnis muss zunächst den Status $ \ket{0}$ aufweisen und durch das Ergebnis der ganzzahligen Division ersetzt werden.
+    summary: $n $-Bit-Ergebnis muss zunächst den Status $ \ket {0} $ aufweisen und durch das Ergebnis der ganzzahligen Division ersetzt werden.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -34,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 05f4b6766910af24a956bfa14bca615633ed1031
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1a426cc92da9db4c1155d2653451031ca37e3965
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679689"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342158"

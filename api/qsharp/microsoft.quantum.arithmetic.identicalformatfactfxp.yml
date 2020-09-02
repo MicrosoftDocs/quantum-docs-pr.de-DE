@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.identicalformatfactfxp
 name: IdenticalFormatFactFxP
 type: function
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Assert, dass alle fest Komma Zahlen im angegebenen Array identische Punktpositionen und Qubit-Zahlen aufweisen.
 syntax: 'function IdenticalFormatFactFxP (fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[]) : Unit'
 input:
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: d5f2e01ccd87e70723260b4d5818510272569829
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 97a028456ebc67b2d03fefd6e38daa1d61999c9a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679587"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342277"

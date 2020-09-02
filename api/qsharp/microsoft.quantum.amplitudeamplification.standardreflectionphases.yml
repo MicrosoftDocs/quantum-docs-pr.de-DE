@@ -2,7 +2,7 @@
 uid: microsoft.quantum.amplitudeamplification.standardreflectionphases
 name: StandardReflectionPhases
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Berechnet partielle Reflexionsphasen für die standardmäßige Amplitude-Verstärkung.
 remarks: Alle Phasen sind $ \pi $, mit Ausnahme der ersten Reflektion über den Startstatus und der letzten Reflektion über den Ziel Status ($0 $).
 syntax: 'function StandardReflectionPhases (nIterations : Int) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
@@ -19,9 +19,9 @@ output:
   - summary: Ein Vorgang, der als Teil Reflektionen angegebene Phasen implementiert.
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
 metadata:
-  ms.openlocfilehash: bbe128a674348d09cec2b1583bcdf60e1d7d8418
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c02770bc2968e53d4bc13dd0c66f1bf6598e860e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676906"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342192"

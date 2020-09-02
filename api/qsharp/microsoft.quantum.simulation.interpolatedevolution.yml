@@ -2,7 +2,7 @@
 uid: microsoft.quantum.simulation.interpolatedevolution
 name: InterpolatedEvolution
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: Interpoliert zwischen zwei Generatoren mit einem einheitlichen Zeitplan und gibt einen Vorgang zurück, der die simulierte Weiterentwicklung unter dem resultierenden zeitabhängigen Generator auf ein Qubit-Register anwendet.
 remarks: Wenn die Interpolations Zeit ausgewählt ist, um die adiabatischen Bedingungen zu erfüllen, gibt diese Funktion einen Vorgang zurück, der die adiabatische Zustands Vorbereitung für den endgültigen Dynamical-Generator ausführt.
 syntax: 'function InterpolatedEvolution (inerpolationTime : Double, evolutionGeneratorStart : Microsoft.Quantum.Simulation.EvolutionGenerator, evolutionGeneratorEnd : Microsoft.Quantum.Simulation.EvolutionGenerator, timeDependentSimulationAlgorithm : Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm) : (Qubit[] => Unit is Adj + Ctl)'
@@ -38,9 +38,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: a0f89c5f3fe233f5dd7e49c47c884ca50ac78969
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5cd3a4a81ea6c495b04464d3ebde3626b837aade
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682655"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329918"

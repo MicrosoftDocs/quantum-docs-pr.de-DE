@@ -2,25 +2,25 @@
 uid: microsoft.quantum.simulation.paulicoefficientfromgenidx
 name: PauliCoefficientFromGenIdx
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: Extrahiert den Koeffizient eines Pauli-Begriffs, der `GeneratorIndex`von einem beschrieben wird.
+namespace: microsoft.quantum.simulation
+summary: Extrahiert den Koeffizient eines Pauli-Begriffs, der von einem beschrieben wird `GeneratorIndex` .
 syntax: 'function PauliCoefficientFromGenIdx (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : Double'
 input:
   content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
   types:
   - name: generatorIndex
-    summary: '`GeneratorIndex`der Typ, der einen Pauli-Begriff codiert.'
+    summary: '`GeneratorIndex` der Typ, der einen Pauli-Begriff codiert.'
     uid: microsoft.quantum.simulation.generatorindex
 output:
   content: Double
   types:
-  - summary: Der Koeffizient des Begriffs, der von `GeneratorIndex`einem beschrieben wird.
+  - summary: Der Koeffizient des Begriffs, der von einem beschrieben wird `GeneratorIndex` .
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 8fbf424210cde86aa57068f2f5d2b7a1c85033a7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3a4eaf64844b4087338a85d9c878b1a51ea96484
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682527"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329629"

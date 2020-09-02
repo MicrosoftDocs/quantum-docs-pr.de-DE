@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.uncurriedopa
 name: UncurriedOpA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Gibt eine Funktion zurück, die Vorgänge zurückgibt, gibt einen neuen Vorgang zurück, der beide Eingaben als Tupel annimmt.
 
@@ -34,7 +34,7 @@ input:
 output:
   content: (('T, 'U) => Unit is Adj)
   types:
-  - summary: Ein neuer Vorgang `op` , der `op(t, u)` entspricht `(curriedOp(t))(u)`.
+  - summary: Ein neuer Vorgang `op` , der `op(t, u)` entspricht `(curriedOp(t))(u)` .
     isOperation: true
     input:
       types:
@@ -56,9 +56,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.uncurryop
 metadata:
-  ms.openlocfilehash: 92ec8c1ae333bcd319c7d63f89fb8614f0793d79
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b85c0be304b8c0fcc2cfa1912445fe45b1347c44
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677984"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354840"

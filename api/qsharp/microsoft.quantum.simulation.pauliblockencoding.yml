@@ -2,13 +2,13 @@
 uid: microsoft.quantum.simulation.pauliblockencoding
 name: PauliBlockEncoding
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
   Erstellt eine einheitliche Block Codierung für ein hamiltonan.
 
 
   Die hamiltonan $H = \ sum_ {j} \ alpha_j P_j $ wird durch eine Summe von Pauli-Begriffen $P _J $, jeweils mit dem tatsächlichen Koeffizienten $ \ alpha_j $, beschrieben.
-remarks: Dies wird erreicht, indem der Status $ \ sum_ {j} \sqrt{\ alpha_j/\alpha}\ket{j} $ vorbereitet und die Vorbereitung wieder vorbereitet wird, und das Erstellen <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> einer <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>multiplizierten, einheitlichen und-.
+remarks: Dies wird erreicht, indem der Status $ \ sum_ {j} \sqrt{\ alpha_j/\alpha}\ket{j} $ vorbereitet und die Vorbereitung wieder vorbereitet wird, und das Erstellen einer multiplizierten, einheitlichen <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> und- <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator> .
 syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
@@ -35,9 +35,9 @@ output:
       uid: Double
     - uid: microsoft.quantum.simulation.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 75b614fa23f2e00a3a960224d79905106fb06070
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a7d259a2d09cb26d46976132589ab6693530cb63
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682542"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329714"

@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.transformedoperationa
 name: TransformedOperationA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Gibt bei Angabe einer Funktion und eines Vorgangs einen neuen Vorgang zurück, dessen Eingabe von der angegebenen Funktion transformiert wird.
 examples: >-
-  Der folgende-Befehl @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" verwendet, um einen für @"Microsoft.Quantum.Arithmetic.BigEndian" Eingaben entworfenen Vorgang in einen Vorgang umzuwandeln, der Eingaben @"Microsoft.Quantum.Arithmetic.LittleEndian"vom Typ akzeptiert:
+  Der folgende-Befehl verwendet @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" , um einen für Eingaben entworfenen Vorgang @"Microsoft.Quantum.Arithmetic.BigEndian" in einen Vorgang umzuwandeln, der Eingaben vom Typ akzeptiert @"Microsoft.Quantum.Arithmetic.LittleEndian" :
 
 
   ```qsharp
@@ -44,7 +44,7 @@ input:
 output:
   content: ('U => Unit is Adj)
   types:
-  - summary: Ein neuer Vorgang, den tbat mit seiner Eingabe aufruft `fn` , übergibt die resultierende Ausgabe `op`anschließend an.
+  - summary: Ein neuer Vorgang `fn` , den tbat mit seiner Eingabe aufruft, übergibt die resultierende Ausgabe anschließend an `op` .
     isOperation: true
     input:
       types:
@@ -63,9 +63,9 @@ seeAlso:
 - applywithinputtransformation
 - compose
 metadata:
-  ms.openlocfilehash: f4cb96f3dac9c540131f04cd1b24449f78a26ef2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4d31ea10e94294f7016619c546de76040b7ecadc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678054"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354942"
