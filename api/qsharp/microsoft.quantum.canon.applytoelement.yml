@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.applytoelement
 name: ApplyToElement
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Wendet einen Vorgang auf ein angegebenes Element eines Arrays an.
 
 
-  Wenn ein Vorgang `op`, ein Index `index`und ein Array von Zielen `targets`, gilt, `op(targets[index])`gilt.
+  Wenn ein Vorgang `op` , ein Index `index` und ein Array von Zielen `targets` , gilt, gilt `op(targets[index])` .
 syntax: "operation ApplyToElement (op : ('T => Unit), index : Int, targets : 'T[]) : Unit"
 input:
   content: "(op : ('T => Unit), index : Int, targets : 'T[])"
@@ -44,9 +44,9 @@ seeAlso:
 - microsoft.quantum.canon.applytoelementa
 - microsoft.quantum.canon.applytoelementca
 metadata:
-  ms.openlocfilehash: 29200446a02cdd59b02a2291bc30fc568b46f787
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b6764c1d7b74ae2b1333c9a73191448866f13bcc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674800"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357611"

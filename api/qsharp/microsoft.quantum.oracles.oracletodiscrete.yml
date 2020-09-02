@@ -2,9 +2,9 @@
 uid: microsoft.quantum.oracles.oracletodiscrete
 name: OracleToDiscrete
 type: function
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: Bei einem Vorgang, der ein "Blackbox"-Oracle darstellt, gibt ein diskretes Oracle-Mal zurück, das den mehrfach wiederholten "Black-Box"-Oracle darstellt.
-examples: '`OracleToDiscrete(U)(3, target)`entspricht dreimal der `U(target)` Wiederholung.'
+examples: '`OracleToDiscrete(U)(3, target)` entspricht dreimal der `U(target)` Wiederholung.'
 syntax: 'function OracleToDiscrete (blackBoxOracle : (Qubit[] => Unit is Adj + Ctl)) : Microsoft.Quantum.Oracles.DiscreteOracle'
 input:
   content: '(blackBoxOracle : (Qubit[] => Unit is Adj + Ctl))'
@@ -30,9 +30,9 @@ output:
   - summary: Ein Vorgang, der teilweise über das "Blackbox"-Oracle angewendet wird, das das diskrete Zeit-Oracle darstellt.
     uid: microsoft.quantum.oracles.discreteoracle
 metadata:
-  ms.openlocfilehash: b7361693d14245fcb99be5fa36d20d2f332ded0a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3b9cd2ae2554f070e79701c409ad24bc9314e002
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681228"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331924"

@@ -2,7 +2,7 @@
 uid: microsoft.quantum.oracles.obliviousoracle
 name: ObliviousOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: >-
   Stellt ein Oracle für die pervirone Amplitude-Verstärkung dar.
 
@@ -12,16 +12,16 @@ summary: >-
 
   - Der Wert von "Ancilla" wird $a $ registriert, für den $O $ agiert.
 
-  - Das System registriert $s $, auf dem der gewünschte einheitliche $U $ angewendet wird, nach der Auswahl für Register $a $ befindet sich im Status $ \ket{t}\_a $.
+  - Das System registriert $s $, auf dem der gewünschte einheitliche $U $ angewendet wird, nach der Auswahl für Register $a $ befindet sich im Status $ \ket{t} \_ a $.
 remarks: >-
-  Dieses Oracle ist durch $ $ o\ket {s}\_a\ket {\ PSI}\_s = \lambda\ket{t}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_definiert. a\cdots $ $ agiert für den Ancilla State $ \ket{s}\_a $, um die einheitliche $U $ in jedem Systemstatus $ \ket{\psi}\_s $ mit Amplitude $ \lambda $ in der durch $ \ket{t}\_a $ gekennzeichneten Basis zu implementieren.
+  Dieses Oracle ist durch $ $ o\ket {s} \_ a\ket {\ PSI} \_ s = \lambda\ket{t} \_ a U \ket{\psi} \_ s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp} definiert. \_ a\cdots $ $ agiert für den Ancilla State $ \ket{s} \_ a $, um die einheitliche $U $ in jedem Systemstatus $ \ket{\psi} \_ s $ mit Amplitude $ \lambda $ in der durch $ \ket{t} a $ gekennzeichneten Basis zu implementieren \_ .
 
-  Der erste Parameter ist das Qubit-Register von $ \ket{s}\_$. Der zweite Parameter ist das Qubit-Register von $ \ket{\psi}\_s $.
+  Der erste Parameter ist das Qubit-Register von $ \ket{s} \_ $. Der zweite Parameter ist das Qubit-Register von $ \ket{\psi} \_ s $.
 syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 9d7a799a9069e6d7eb3470d62322f803a68eb2e6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c88ad3b0a4fe6067a0e52972c23587d5835c779e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681258"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332009"

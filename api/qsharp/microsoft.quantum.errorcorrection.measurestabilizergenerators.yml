@@ -2,7 +2,7 @@
 uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
 name: MeasureStabilizerGenerators
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: Misst den angegebenen Satz von Generatoren einer stabilistabilisgruppe.
 remarks: >-
   Hiermit wird nicht überprüft, ob der angegebene Satz von Generatoren in den einzelnen Generatoren Überlaufen wird.
@@ -46,9 +46,9 @@ output:
   - summary: Das Ergebnis der Messungen.
     uid: microsoft.quantum.errorcorrection.syndrome
 metadata:
-  ms.openlocfilehash: d89455e8341d053053e110a6cfccd19e206d38d8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fe7e1d75d6108d3f1c8288560c011af14bf6529b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682315"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350012"
