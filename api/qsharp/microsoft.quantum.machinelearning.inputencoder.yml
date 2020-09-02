@@ -2,7 +2,7 @@
 uid: microsoft.quantum.machinelearning.inputencoder
 name: InputEncoder
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: Gibt bei einem Satz von Koeffizienten und einer Toleranz einen Zustands Vorbereitungs Vorgang zurück, bei dem jeder Koeffizient als die entsprechende Amplitude eines Berechnungsbasis Zustands vorbereitet wird.
 syntax: 'function InputEncoder (coefficients : Double[]) : Microsoft.Quantum.MachineLearning.StateGenerator'
 input:
@@ -19,9 +19,9 @@ output:
   - summary: Ein Zustands Vorbereitungs Vorgang, bei dem die angegebenen Koeffizienten als Eingabe Zustand für ein bestimmtes Register vorbereitet werden.
     uid: microsoft.quantum.machinelearning.stategenerator
 metadata:
-  ms.openlocfilehash: b1a45c2ce026ab15f1134167355fb131d9b0022e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 88bb75d8e6e330cdc7d157b80581413333c9b371
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684512"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336055"

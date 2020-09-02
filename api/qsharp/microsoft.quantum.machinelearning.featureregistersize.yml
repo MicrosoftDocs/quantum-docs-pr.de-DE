@@ -2,7 +2,7 @@
 uid: microsoft.quantum.machinelearning.featureregistersize
 name: FeatureRegisterSize
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: Gibt die Anzahl von Qubits zurück, die erforderlich sind, um einen bestimmten featurevektor zu codieren.
 syntax: 'function FeatureRegisterSize (sample : Double[]) : Int'
 input:
@@ -20,9 +20,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 6df78574a5385482223d53e19f56e453b7ee3aa4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ae50e2302b4187a7aa86a01447f735bff4dbe1db
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683529"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336123"
