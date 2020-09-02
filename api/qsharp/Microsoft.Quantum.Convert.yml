@@ -18,9 +18,9 @@ functions:
 - uid: microsoft.quantum.convert.boolarrayaspauli
   summary: Gibt bei Angabe einer Bitzeichenfolge einen multiqubit-Pauli-Operator zurück, der als Array von Single-Qubit-Pauli-Operatoren dargestellt wird.
 - uid: microsoft.quantum.convert.boolarrayasresultarray
-  summary: Konvertiert einen `Bool[]` Typ in einen `Result[]` -Typ, `true` wobei zugeordnet `One` ist und `false` zugeordnet `Zero`ist.
+  summary: Konvertiert einen `Bool[]` Typ in einen `Result[]` -Typ, wobei `true` zugeordnet ist `One` und `false` zugeordnet ist `Zero` .
 - uid: microsoft.quantum.convert.boolasresult
-  summary: Konvertiert einen `Bool` Typ in einen `Result` -Typ, `true` wobei zugeordnet `One` ist und `false` zugeordnet `Zero`ist.
+  summary: Konvertiert einen `Bool` Typ in einen `Result` -Typ, wobei `true` zugeordnet ist `One` und `false` zugeordnet ist `Zero` .
 - uid: microsoft.quantum.convert.boolasstring
   summary: Konvertiert einen angegebenen booleschen Wert in eine entsprechende Zeichen folgen Darstellung.
 - uid: microsoft.quantum.convert.doubleasstring
@@ -47,20 +47,20 @@ functions:
 - uid: microsoft.quantum.convert.pauliarrayasint
   summary: Codiert einen multiqubit-Pauli-Operator, der als Array von Single-Qubit-Pauli-Operatoren dargestellt wird, in eine ganze Zahl.
 - uid: microsoft.quantum.convert.rangeasintarray
-  summary: Erstellt ein Array `arr` von ganzen Zahlen, die nach Start. aufgelistet sind. Schritt. Schließlich.
+  summary: Erstellt ein Array von ganzen Zahlen, die `arr` nach Start. aufgelistet sind. Schritt. Schließlich.
 - uid: microsoft.quantum.convert.resultarrayasboolarray
-  summary: Konvertiert einen `Result[]` Typ in einen `Bool[]` -Typ, `One` wobei zugeordnet `true` ist und `Zero` zugeordnet `false`ist.
+  summary: Konvertiert einen `Result[]` Typ in einen `Bool[]` -Typ, wobei `One` zugeordnet ist `true` und `Zero` zugeordnet ist `false` .
 - uid: microsoft.quantum.convert.resultarrayasint
   summary: Erzeugt eine positive ganze Zahl aus einer Zeichenfolge, die im Little-Endian-Format vorliegt.
 - uid: microsoft.quantum.convert.resultasbool
-  summary: Konvertiert einen `Result` Typ in einen `Bool` -Typ, `One` wobei zugeordnet `true` ist und `Zero` zugeordnet `false`ist.
+  summary: Konvertiert einen `Result` Typ in einen `Bool` -Typ, wobei `One` zugeordnet ist `true` und `Zero` zugeordnet ist `false` .
 operations:
 - uid: microsoft.quantum.convert.call
   summary: Ruft eine Funktion mit einer angegebenen Eingabe auf.
 metadata:
-  ms.openlocfilehash: d435979692fe94efb64af82f4a7a949cb2341ef8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7ab5e02631823dcf4dee36f98c14212b43381b74
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677002"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341359"

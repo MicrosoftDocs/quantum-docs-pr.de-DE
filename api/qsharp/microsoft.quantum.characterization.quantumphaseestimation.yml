@@ -2,8 +2,8 @@
 uid: microsoft.quantum.characterization.quantumphaseestimation
 name: QuantumPhaseEstimation
 type: operation
-namespace: Microsoft.Quantum.Characterization
-summary: Führt den Algorithmus für die Quantum-Phasen Schätzung für `U` ein `targetState`bestimmtes Oracle und aus, wobei die Phase in ein Big-in-Quantum-Quantum-Register gelesen wird.
+namespace: microsoft.quantum.characterization
+summary: Führt den Algorithmus für die Quantum-Phasen Schätzung für ein bestimmtes Oracle `U` und aus `targetState` , wobei die Phase in ein Big-in-Quantum-Quantum-Register gelesen wird.
 syntax: 'operation QuantumPhaseEstimation (oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
 input:
   content: '(oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Arithmetic.BigEndian)'
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: adbaf8af437a7067e8d2e6076b1a48c9000be3eb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6e6168df8419f7219e9165592fc37ba293f34231
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677611"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354279"

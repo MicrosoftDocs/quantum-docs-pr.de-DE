@@ -4,29 +4,29 @@ name: Microsoft.Quantum.Extensions.Convert
 summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dies sind einige der Funktionen aus dem System. Convert-Namespace der .NET CLR, die im Q #-Typsystem relevant sind.\n\n # <a name=\"remarks\"></a>Bemerkungen\n Wenn mehrere Versionen der-Funktion für boolesche, int-und Double-Typen vorhanden sind, haben die entsprechenden Funktionen Suffix B, I und D."
 functions:
 - uid: microsoft.quantum.extensions.convert.biginttobools
-  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nBigintum bools ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.bigintasboolarray\".\nVerwenden Sie stattdessen @\"microsoft.quantum.convert.bigintasboolarray\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nBigintum bools ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.bigintasboolarray\".\nVerwenden Sie @\"microsoft.quantum.convert.bigintasboolarray\"."
 - uid: microsoft.quantum.extensions.convert.boolstobigint
-  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nBoolstobigint ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.boolarrayasbigint\".\nVerwenden Sie stattdessen @\"microsoft.quantum.convert.boolarrayasbigint\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nBoolstobigint ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.boolarrayasbigint\".\nVerwenden Sie @\"microsoft.quantum.convert.boolarrayasbigint\"."
 - uid: microsoft.quantum.extensions.convert.pauliarraytoint
-  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"Pauliarrayto int\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.pauliarrayasint\".\nVerwenden Sie stattdessen @\"microsoft.quantum.convert.pauliarrayasint\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"Pauliarrayto int\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.pauliarrayasint\".\nVerwenden Sie @\"microsoft.quantum.convert.pauliarrayasint\"."
 - uid: microsoft.quantum.extensions.convert.tobigint
-  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"\" Ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.intasbigint\".\nVerwenden Sie stattdessen @\"microsoft.quantum.convert.intasbigint\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"\" Ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.intasbigint\".\nVerwenden Sie @\"microsoft.quantum.convert.intasbigint\"."
 - uid: microsoft.quantum.extensions.convert.todouble
-  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"-Double\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.intasdouble\".\nVerwenden Sie stattdessen @\"microsoft.quantum.convert.intasdouble\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"-Double\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.intasdouble\".\nVerwenden Sie @\"microsoft.quantum.convert.intasdouble\"."
 - uid: microsoft.quantum.extensions.convert.tostringb
-  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"$ StringB\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.boolasstring\".\nVerwenden Sie stattdessen @\"microsoft.quantum.convert.boolasstring\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"$ StringB\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.boolasstring\".\nVerwenden Sie @\"microsoft.quantum.convert.boolasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringd
-  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"$ Stringd\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.doubleasstring\".\nVerwenden Sie stattdessen @\"microsoft.quantum.convert.doubleasstring\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"$ Stringd\" ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.doubleasstring\".\nVerwenden Sie @\"microsoft.quantum.convert.doubleasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringdformat
-  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nTostringdformat ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.doubleasstringwithformat\".\nVerwenden Sie stattdessen @\"microsoft.quantum.convert.doubleasstringwithformat\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nTostringdformat ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.doubleasstringwithformat\".\nVerwenden Sie @\"microsoft.quantum.convert.doubleasstringwithformat\"."
 - uid: microsoft.quantum.extensions.convert.tostringi
-  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"\" Ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.intasstring\".\nVerwenden Sie stattdessen @\"microsoft.quantum.convert.intasstring\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\n\"\" Ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.intasstring\".\nVerwenden Sie @\"microsoft.quantum.convert.intasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringiformat
-  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nTostringiformat ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.intasstringwithformat\".\nVerwenden Sie stattdessen @\"microsoft.quantum.convert.intasstringwithformat\"."
+  summary: "\n> [!WARNING]\n> Als veraltet markiert\n\nTostringiformat ist veraltet. Verwenden Sie stattdessen @\"microsoft.quantum.convert.intasstringwithformat\".\nVerwenden Sie @\"microsoft.quantum.convert.intasstringwithformat\"."
 metadata:
-  ms.openlocfilehash: 8196882d8f7edf417f65bcd1651ecb770c4286f4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6f307cfeabec132c2b3b3953f30a2b0ad208f57a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673289"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341019"

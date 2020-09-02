@@ -2,7 +2,7 @@
 uid: microsoft.quantum.math.iscoprimel
 name: IsCoprimeL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Gibt true zurück, wenn $a $ und $b $ eine Co-Primzahl sind, andernfalls false.
 syntax: 'function IsCoprimeL (a : BigInt, b : BigInt) : Bool'
 input:
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 17dd3812ad8cbe48ba7205c58217c24f08d8dd47
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 86fe6a80779290e73748a01bd22fed53da0eaef6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685341"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89334423"

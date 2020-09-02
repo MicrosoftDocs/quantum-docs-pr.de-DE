@@ -4,15 +4,15 @@ name: Microsoft.Quantum.Oracles
 summary: " # <a name=\"summary\"></a>Zusammenfassung\n Diese Namespaces stellen benutzerdefinierte Typen bereit, um verschiedene Arten von Oracles durch ihren vorgesehenen Einsatz in Quantum-Algorithmen (z. b. Phasen Schätzung und Amplitude-Verstärkung) zu ergänzen."
 functions:
 - uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
-  summary: Konvertiert ein Oracle vom Typ `StateOracle` in `DeterministicStateOracle`.
+  summary: Konvertiert ein Oracle vom Typ `StateOracle` in `DeterministicStateOracle` .
 - uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
-  summary: Kombiniert die Oracles `DeterministicStateOracle` und `ObliviousOracle`.
+  summary: Kombiniert die Oracles `DeterministicStateOracle` und `ObliviousOracle` .
 - uid: microsoft.quantum.oracles.oracletodiscrete
   summary: Bei einem Vorgang, der ein "Blackbox"-Oracle darstellt, gibt ein diskretes Oracle-Mal zurück, das den mehrfach wiederholten "Black-Box"-Oracle darstellt.
 - uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
   summary: Erstellt Reflektion über einen angegebenen Zustand aus einem Oracle.
 - uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
-  summary: Konvertiert ein Oracle vom Typ `DeterministicStateOracle` in `StateOracle`.
+  summary: Konvertiert ein Oracle vom Typ `DeterministicStateOracle` in `StateOracle` .
 newtypes:
 - uid: microsoft.quantum.oracles.continuousoracle
   summary: >-
@@ -28,7 +28,7 @@ newtypes:
     Die Eingabe für den Oracle-$O $ lautet wie folgt:
 
 
-    - Das Register, mit dem der gewünschte quantenstatus $ \ket{\psi}\_s $ gespeichert wird.
+    - Das Register, mit dem der gewünschte quantenstatus $ \ket{\psi} \_ s $ gespeichert wird.
 - uid: microsoft.quantum.oracles.discreteoracle
   summary: >-
     Stellt ein diskretes Oracle dar.
@@ -45,7 +45,7 @@ newtypes:
 
     - Der Wert von "Ancilla" wird $a $ registriert, für den $O $ agiert.
 
-    - Das System registriert $s $, auf dem der gewünschte einheitliche $U $ angewendet wird, nach der Auswahl für Register $a $ befindet sich im Status $ \ket{t}\_a $.
+    - Das System registriert $s $, auf dem der gewünschte einheitliche $U $ angewendet wird, nach der Auswahl für Register $a $ befindet sich im Status $ \ket{t} \_ a $.
 - uid: microsoft.quantum.oracles.reflectionoracle
   summary: >-
     Stellt ein reflektionsinoracle dar.
@@ -67,11 +67,11 @@ newtypes:
 
     - Eine Ganzzahl, die das Flag-Qubit $f $ indiziert.
 
-    - Das System registriert $s $, das den gewünschten Quantum-Status $ \ket{\psi}\_s $ speichert.
+    - Das System registriert $s $, das den gewünschten Quantum-Status $ \ket{\psi} \_ s $ speichert.
 metadata:
-  ms.openlocfilehash: c1f364d74aab6d318e7b6db078d5532aeae57bcd
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 100ea34895b343c8b24ef4f584bbf534acd9d6ff
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673103"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340951"

@@ -2,10 +2,10 @@
 uid: microsoft.quantum.characterization.measureidentity
 name: MeasureIdentity
 type: operation
-namespace: Microsoft.Quantum.Characterization
+namespace: microsoft.quantum.characterization
 summary: Misst den Identitäts Operator für ein Register von Qubits.
 remarks: >-
-  Da $ \boldone $ nur den eigen Wert $1 $ und keinen negativen eigen Wert aufweist, gibt dieser Vorgang immer zurück `Zero`, was dem Eigen Wert $ + 1 = (-1) ^ 0 $ entspricht, und führt nicht zu einem zuklappen des Zustands von. `register`
+  Da $ \boldone $ nur den eigen Wert $1 $ und keinen negativen eigen Wert aufweist, gibt dieser Vorgang immer zurück `Zero` , was dem Eigen Wert $ + 1 = (-1) ^ 0 $ entspricht, und führt nicht zu einem zuklappen des Zustands von `register` .
 
 
   Dieser Vorgang ist zwar nicht sinnvoll, aber im Kontext der Prozess Tomographie hilfreich, da er Informationen über die Beibehaltung der Ablauf Verfolgung eines Quantum-Prozesses bereitstellt.
@@ -23,13 +23,13 @@ input:
 output:
   content: Result
   types:
-  - summary: Der Ergebniswert `Zero`.
+  - summary: Der Ergebniswert `Zero` .
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 28dd3655c883c02b798e6e4cdf39c70100c6535b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9b6b8bfbf8d13bf1415afadd0b520551201cd3d2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677639"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354297"

@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.addfxp
 name: AddFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Addiert zwei in quantenregistern gespeicherte Fixed-Point-Nummern.
 
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 75b6e15299b6e0394af8cb530ee7bc66dc07c336
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0f900cd3b7c6552064ec5a52a6d932ff106db0d0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672899"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341767"
