@@ -2,7 +2,7 @@
 uid: microsoft.quantum.bitwise.or
 name: Or
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: >-
   Gibt das bitweise OR von zwei Ganzzahlen zurück.
 
@@ -34,9 +34,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: c55c5e8aa8917392e7be290e56621f42ea5f8a7d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: de9c79639311b56dc8495953f151ea2b1c67cc6a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680645"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351168"

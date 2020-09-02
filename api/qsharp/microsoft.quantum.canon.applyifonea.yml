@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.applyifonea
 name: ApplyIfOneA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Wendet einen adjointable-Vorgang an, der auf einen klassischen Ergebniswert zurückzuführen ist.
 
 
-  `target` Bei einem Vorgang `op` und einem Ergebniswert `result`gilt `op` für, wenn `result` gleich ist `One`. Gibt `Zero`an, dass nichts passiert `target`.
+  Bei einem Vorgang `op` und einem Ergebniswert `result` gilt `op` für, `target` wenn gleich `result` ist `One` . Gibt `Zero` an, dass nichts passiert `target` .
 
-  Das- `A` Suffix gibt an, dass der anzuwendende Vorgang adjointable ist.
+  Das-Suffix `A` gibt an, dass der anzuwendende Vorgang adjointable ist.
 syntax: "operation ApplyIfOneA (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Adj), target : 'T))"
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: 041b9f1f97ec5fe615b6ff83fe7c69bf5a7d0894
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 55fb934d46e192337b911dc52f1d4f45e227bff2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672684"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89358240"

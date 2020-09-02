@@ -2,7 +2,7 @@
 uid: microsoft.quantum.bitwise.rightshiftedl
 name: RightShiftedL
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: Verschiebt die bitweise Darstellung einer Zahl um eine angegebene Anzahl von Bits nach rechts.
 remarks: >-
   Die folgenden sind gleichwertig:
@@ -24,19 +24,19 @@ input:
     isPrimitive: true
     uid: BigInt
   - name: amount
-    summary: Die Anzahl der Bits `value` , um die nach rechts verschoben werden soll.
+    summary: Die Anzahl der Bits, um die `value` nach rechts verschoben werden soll.
     isPrimitive: true
     uid: Int
 output:
   content: BigInt
   types:
-  - summary: Der Wert von `value`, nach rechts nach `amount` Bits verschoben.
+  - summary: Der Wert von `value` , nach rechts nach `amount` Bits verschoben.
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: c6a61d838141e86d831bb341a1e077927e580dcc
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 191feb351e74e0c4cd96992ffb7c5ee499ec16f4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680588"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351100"

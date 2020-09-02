@@ -2,7 +2,7 @@
 uid: microsoft.quantum.bitwise.not
 name: Not
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: >-
   Gibt das bitweise NOT einer Ganzzahl zurück.
 
@@ -29,9 +29,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 3de6cbe072ab770fba893c41112df3bb686c3e79
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7393d7628bff3b4e0b15596119d71b86574180c7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680663"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351202"

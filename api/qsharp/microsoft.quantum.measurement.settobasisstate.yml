@@ -2,9 +2,9 @@
 uid: microsoft.quantum.measurement.settobasisstate
 name: SetToBasisState
 type: operation
-namespace: Microsoft.Quantum.Measurement
+namespace: microsoft.quantum.measurement
 summary: Legt ein Qubit auf einen angegebenen Berechnungsbasis Zustand fest, indem das Qubit gemessen und bei Bedarf ein bitflip angewendet wird.
-remarks: Als invariante dieses Vorgangs wird beim Aufrufen `M(q)` von sofort nach `SetToBasisState(result, q)` der Wert `result`zurückgegeben.
+remarks: Als invariante dieses Vorgangs wird beim Aufrufen von `M(q)` sofort nach der Wert `SetToBasisState(result, q)` zurückgegeben `result` .
 syntax: 'operation SetToBasisState (desired : Result, target : Qubit) : Unit'
 input:
   content: '(desired : Result, target : Qubit)'
@@ -23,9 +23,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 002ca4716f0aa57c0ddd4f33d421402c068ad244
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1bd8b8d83ff2bee3dfb1f4a696ddc3b493a2bb82
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681353"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332247"
