@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.applymajorityinplace
 name: ApplyMajorityInPlace
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Wendet den drei-Qubit-Mehrheits Vorgang direkt auf ein Register von Qubits an.
 
@@ -33,9 +33,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 9b04666843c7f910352e3f16d566a522fddef3d3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 8384aeaf43651c2731e6cdf6efc7dbcff12a2a11
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680015"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342991"

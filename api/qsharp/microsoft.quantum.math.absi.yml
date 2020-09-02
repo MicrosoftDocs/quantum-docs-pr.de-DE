@@ -2,7 +2,7 @@
 uid: microsoft.quantum.math.absi
 name: AbsI
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Gibt den absoluten Wert einer ganzen Zahl zurück.
 remarks: Weitere Informationen finden Sie unter [System. Math. Abs](https://docs.microsoft.com/dotnet/api/system.math.abs) .
 syntax: 'function AbsI (a : Int) : Int'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 9005928fc9b8a797f504b9d4c95d1773e2eaa45d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: da6729b76a01d642b76f110793cc40e1ebf115bf
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681609"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335307"

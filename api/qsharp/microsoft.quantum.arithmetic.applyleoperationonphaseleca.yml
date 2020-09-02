@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arithmetic.applyleoperationonphaseleca
 name: ApplyLEOperationOnPhaseLECA
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Wendet einen Vorgang an, der <xref:microsoft.quantum.arithmetic.phaselittleendian> ein Register als Eingabe für ein Ziel Register des <xref:microsoft.quantum.arithmetic.littleendian>Typs annimmt.
-remarks: Das Register wird `LittleEndian` durch die Verwendung von <xref:microsoft.quantum.canon.qftle> transformiert und dann nach der Anwendung von `op`an seine ursprüngliche Darstellung zurückgegeben.
+namespace: microsoft.quantum.arithmetic
+summary: Wendet einen Vorgang an, <xref:microsoft.quantum.arithmetic.phaselittleendian> der ein Register als Eingabe für ein Ziel Register des Typs annimmt <xref:microsoft.quantum.arithmetic.littleendian> .
+remarks: Das Register wird `LittleEndian` durch die Verwendung von transformiert <xref:microsoft.quantum.canon.qftle> und dann nach der Anwendung von an seine ursprüngliche Darstellung zurückgegeben `op` .
 syntax: 'operation ApplyLEOperationOnPhaseLECA (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl), target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl), target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
@@ -38,9 +38,9 @@ seeAlso:
 - microsoft.quantum.canon.applyleoperationonphaselea
 - microsoft.quantum.canon.applyleoperationonphaselec
 metadata:
-  ms.openlocfilehash: 05427396f848433d90b744dc5308f71323198861
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 28761b658023f20daf34860da0bc0ed4a42c6f7b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680029"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342634"

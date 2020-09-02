@@ -2,18 +2,18 @@
 uid: microsoft.quantum.arithmetic.incrementbymodularinteger
 name: IncrementByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Führt ein modulares Inkrement für ein Qubit-Register durch eine ganzzahlige Konstante aus.
 
 
-  `increment` Geben Sie $a $ an, indem Sie `modulus` $N $ und Integer in `target` durch $y $ codiert haben.
+  Geben Sie `increment` $a $ an, indem Sie `modulus` $N $ und Integer in `target` durch $y $ codiert haben.
 
   Anschließend führt der Vorgang die folgende Transformation aus: \begin{align} \ket{y} \mapsto \ket{(y + a) \operatschmue{mod} N} \end{align} ganze Zahlen werden im Little-Endian-Format codiert.
 remarks: >-
   Geht davon aus, dass der Anfangswert von Target kleiner als $N $ und die Inkrement-$a $ kleiner als $N $ ist.
 
-  Beachten Sie <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger> , dass denselben Vorgang in der `PhaseLittleEndian` Basis implementiert.
+  Beachten Sie, dass <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger> denselben Vorgang in der `PhaseLittleEndian` Basis implementiert.
 syntax: 'operation IncrementByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -27,7 +27,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Ganzzahliger $y `LittleEndian` $ im `increment` Format, dem $a $ hinzugefügt wird.
+    summary: Ganzzahliger $y $ im `LittleEndian` Format, dem `increment` $a $ hinzugefügt wird.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -40,9 +40,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.incrementphasebymodularinteger
 metadata:
-  ms.openlocfilehash: 53faa65d67629d0e4c73efc03724cb4b4b30675d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2f91365a06304e6e4e6b71783a941192f4a7121e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679539"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342872"

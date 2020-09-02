@@ -2,7 +2,7 @@
 uid: microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
 name: TrainSequentialClassifierAtModel
 type: operation
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: Trainiert bei der Struktur eines sequenziellen Klassifizierers den Klassifizierer für einen angegebenen beschrifteten Trainings Satz, beginnend mit einem bestimmten Modell.
 syntax: 'operation TrainSequentialClassifierAtModel (model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions, trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule) : (Microsoft.Quantum.MachineLearning.SequentialModel, Int)'
 input:
@@ -16,7 +16,7 @@ input:
     isArray: true
     uid: microsoft.quantum.machinelearning.labeledsample
   - name: options
-    summary: Konfiguration, die beim Training verwendet werden soll. Weitere @"microsoft.quantum.machinelearning.trainingoptions" Informationen @"microsoft.quantum.machinelearning.defaulttrainingoptions" finden Sie unter und.
+    summary: Konfiguration, die beim Training verwendet werden soll. Weitere Informationen finden Sie unter @"microsoft.quantum.machinelearning.trainingoptions" und @"microsoft.quantum.machinelearning.defaulttrainingoptions" .
     uid: microsoft.quantum.machinelearning.trainingoptions
   - name: trainingSchedule
     summary: Ein Stichproben Zeitplan, der beim Auswählen von Beispielen aus den Trainingsdaten während der Trainingsschritte verwendet werden soll.
@@ -39,9 +39,9 @@ seeAlso:
 - microsoft.quantum.machinelearning.trainsequentialclassifier
 - microsoft.quantum.machinelearning.validatesequentialclassifier
 metadata:
-  ms.openlocfilehash: ab30be93a0a1e0b347d2adfe82dbcf07b12d6996
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 36666626d6fb6319fbc62d2d49d5975fe29f8d93
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684274"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335477"
