@@ -2,8 +2,8 @@
 uid: microsoft.quantum.math.argcomplex
 name: ArgComplex
 type: function
-namespace: Microsoft.Quantum.Math
-summary: Gibt die Phase einer komplexen Zahl vom Typ `Complex`zurück.
+namespace: microsoft.quantum.math
+summary: Gibt die Phase einer komplexen Zahl vom Typ zurück `Complex` .
 syntax: 'function ArgComplex (input : Microsoft.Quantum.Math.Complex) : Double'
 input:
   content: '(input : Microsoft.Quantum.Math.Complex)'
@@ -18,9 +18,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 25ebc6a41fbffd8bae3d4d06b5db5b9d68a4da90
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 33581abc8d0ec53d3ee1a1b3877471ee1cdc8ecb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685807"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344470"

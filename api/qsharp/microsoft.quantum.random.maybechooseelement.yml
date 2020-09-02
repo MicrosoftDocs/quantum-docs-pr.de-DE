@@ -2,7 +2,7 @@
 uid: microsoft.quantum.random.maybechooseelement
 name: MaybeChooseElement
 type: operation
-namespace: Microsoft.Quantum.Random
+namespace: microsoft.quantum.random
 summary: Wenn ein Array von Daten und eine Verteilung über die Indizes verfügen, versucht, ein Element nach dem Zufallsprinzip auszuwählen.
 examples: >-
   Der folgende f #-Ausschnitt wählt ein Element zufällig aus einem Array aus:
@@ -39,9 +39,9 @@ output:
     - uid: "'T"
       isLocal: true
 metadata:
-  ms.openlocfilehash: bbbb821e5826e7722c80010b534a38a828db5630
-  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.openlocfilehash: 874b3972e4a10c322d171f202310756b2ef356fe
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 08/25/2020
-  ms.locfileid: "88864229"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330700"

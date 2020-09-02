@@ -2,10 +2,10 @@
 uid: microsoft.quantum.arrays.equala
 name: EqualA
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Überprüft zwei Arrays desselben Typs und ein Prädikat, das für Paare von Elementen der Arrays definiert ist, und überprüft, ob die Arrays gleich sind.
 remarks: >-
-  Diese Funktion ist für generische Typen definiert. Wenn also zwei Arrays `'T[]` und eine Funktion `equal: ('T, 'T) -> Bool`vorhanden sind, gibt diese Funktion einen `Bool` Wert zurück, der angibt, ob die Arrays gleich sind.
+  Diese Funktion ist für generische Typen definiert. Wenn also zwei Arrays `'T[]` und eine Funktion vorhanden sind `equal: ('T, 'T) -> Bool` , gibt diese Funktion einen Wert zurück, `Bool` der angibt, ob die Arrays gleich sind.
 
   Damit zwei Arrays als gleich betrachtet werden, müssen Sie die gleiche Länge aufweisen, und die Elemente an denselben Positionen in den Arrays müssen gleich sein.
 examples: >-
@@ -59,18 +59,18 @@ output:
   content: Bool
   types:
   - summary: >-
-      Der- `true` Wert nur dann, `array1` Wenn `array2` und gleich sind.
+      Der `true` -Wert nur dann, wenn `array1` und `array2` gleich sind.
 
-      Das heißt, wenn beide Arrays die gleiche Länge aufweisen und alle Elemente gleich sind, wie von `equal`definiert.
+      Das heißt, wenn beide Arrays die gleiche Länge aufweisen und alle Elemente gleich sind, wie von definiert `equal` .
     isPrimitive: true
     uid: Bool
 typeParameters:
 - uid: "'T"
   summary: Der Typ der Elemente des Arrays.
 metadata:
-  ms.openlocfilehash: d2af5ff8e2d66e6162c73c3854670451a00dcf50
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9f3083483b7720efb4f8eda89d2de224543c236e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676502"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352375"

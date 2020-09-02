@@ -2,7 +2,7 @@
 uid: microsoft.quantum.math.expmodi
 name: ExpModI
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: >-
   Gibt eine ganze Zahl zurück, die in Bezug auf einen angegebenen Modulus zu einer gegebenen Potenz ausgelöst wird.
 
@@ -13,7 +13,7 @@ summary: >-
 
 
   Wir gehen davon aus, dass $N $, $x $ positiv und die Stromversorgung nicht negativ ist.
-remarks: Nimmt Zeit proportional zur Anzahl der Bits in, `power`nicht an `power` sich selbst.
+remarks: Nimmt Zeit proportional zur Anzahl der Bits in `power` , nicht an `power` sich selbst.
 syntax: 'function ExpModI (expBase : Int, power : Int, modulus : Int) : Int'
 input:
   content: '(expBase : Int, power : Int, modulus : Int)'
@@ -33,9 +33,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: f1da101fc6ae949aff96100f6b236d202c40d554
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6b12806ec6d8fec045e3c7dcf89d58b634a4d493
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685353"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344147"
