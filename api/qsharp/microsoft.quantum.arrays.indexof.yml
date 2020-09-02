@@ -2,10 +2,10 @@
 uid: microsoft.quantum.arrays.indexof
 name: IndexOf
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Gibt den ersten Index des ersten Elements in einem Array zurück, das ein angegebenes Prädikat erfüllt. Wenn kein solches Element vorhanden ist, wird-1 zurückgegeben.
 examples: >-
-  Angenommen, `IsEven : Int -> Bool` es handelt sich um eine `true` Funktion, die nur dann zurückgibt, wenn Ihre Eingabe gerade ist. Anschließend kann dies mit `IndexOf` verwendet werden, um das erste gerade Element in einem Array zu finden:
+  Angenommen, `IsEven : Int -> Bool` Es handelt sich um eine Funktion, die nur dann zurückgibt, wenn `true` Ihre Eingabe gerade ist. Anschließend kann dies mit verwendet werden, `IndexOf` um das erste gerade Element in einem Array zu finden:
 
 
   ```Q#
@@ -42,9 +42,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 6fb95357096751e53f601a9c855ff656e2dd1b34
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6b0097c4feb41a00f0d9c1fcb4c2b5dbcaa186ef
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680999"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352120"

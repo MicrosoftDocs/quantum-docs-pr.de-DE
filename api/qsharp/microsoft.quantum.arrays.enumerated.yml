@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.enumerated
 name: Enumerated
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Gibt bei Angabe eines Arrays ein neues Array zurück, das die Elemente des ursprünglichen Arrays zusammen mit den Indizes der einzelnen Elemente enthält.
 examples: >-
   Die folgenden `for` Schleifen sind äquivalent:
@@ -41,9 +41,9 @@ typeParameters:
 - uid: "'TElement"
   summary: Der Typ der Elemente des Arrays.
 metadata:
-  ms.openlocfilehash: a8b0a9abeb378c863d228268315950f32c5247c0
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: aecfb5c9f6a7d3f6b14717a7068a0596ae867c9f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884638"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352409"

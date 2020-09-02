@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.exclude
 name: Exclude
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Gibt ein Array mit den Elementen eines anderen Arrays zurück, wobei Elemente in einer angegebenen Liste von Indizes ausgeschlossen werden.
 examples: >-
   ```qsharp
@@ -31,7 +31,7 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: Ein Array `output` , das `output[0]` das erste Element von `array` ist, dessen Index nicht in `remove`angezeigt wird, z `output[1]` . b. das zweite Element dieser Art usw.
+  - summary: Ein Array, `output` das `output[0]` das erste Element von ist, `array` dessen Index nicht in angezeigt wird `remove` , z `output[1]` . b. das zweite Element dieser Art usw.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -39,9 +39,9 @@ typeParameters:
 - uid: "'T"
   summary: Der Typ der Arrayelemente.
 metadata:
-  ms.openlocfilehash: 715610f2e8d0932a22d6dfdd0232e981a495fd6f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7e0f978f711962247c08c1b367f3ca62e16cad2c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676481"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352341"

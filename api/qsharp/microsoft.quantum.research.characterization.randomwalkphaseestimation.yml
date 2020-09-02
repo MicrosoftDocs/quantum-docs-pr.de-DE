@@ -2,13 +2,13 @@
 uid: microsoft.quantum.research.characterization.randomwalkphaseestimation
 name: RandomWalkPhaseEstimation
 type: operation
-namespace: Microsoft.Quantum.Research.Characterization
+namespace: microsoft.quantum.research.characterization
 summary: Führt eine iterative Phasen Schätzung mithilfe eines zufälligen Durchlaufs aus, um einen ungefähren bayesschen Rückschluss auf die klassischen Messergebnisse eines bestimmten Oracle-und eigen Zustands festzustellen.
 remarks: >-
   ### <a name="iterative-phase-estimation-and-eigenstates"></a>Iterative Phasen Schätzung und eigen Zustände
 
 
-  Im Allgemeinen muss das Eingabe Register `eigenstate` nicht den eigen Zustand $ \ket{\phi} $ von $U $ aufweisen, kann jedoch eine übergeordnete Position gegenüber eigen Zuständen sein. Angenommen, der\_Eingabe Zustand wird von \begin{align} \ket{\psi} & = \sum {j} \alpha\_j \ket{\phi\_j} angegeben. \end{align}, wobei\{"$\_\alpha j\}$" komplexe Koeffizienten wie "$ \sum\_j | \alpha\_j | ^ 2 = $1" und "where $U\_\ket{\phi j} =\_\phi j\ket {\_\ Phi j} $" sind.
+  Im Allgemeinen muss das Eingabe Register `eigenstate` nicht den eigen Zustand $ \ket{\phi} $ von $U $ aufweisen, kann jedoch eine übergeordnete Position gegenüber eigen Zuständen sein. Angenommen, der Eingabe Zustand wird von \begin{align} \ket{\psi} & = \sum \_ {j} \alpha \_ j \ket{\phi \_ j} angegeben. \end{align}, wobei "$ \{ \alpha \_ j $" \} komplexe Koeffizienten wie "$ \sum \_ j | \alpha \_ j | ^ 2 = $1" und "where $U \ket{\phi \_ j} = \phi \_ j\ket {\ Phi \_ j} $" sind.
 
 
   Anschließend wird die iterative Phasen Schätzung letztendlich in einen einzelnen eigen Zustand konvergiert, wie im [Entwicklungs Handbuch](xref:microsoft.quantum.libraries.characterization#iterative-phase-estimation-without-eigenstates)beschrieben.
@@ -17,7 +17,7 @@ remarks: >-
   ### <a name="experiment-design"></a>Experiment Entwurf
 
 
-  Die Messzeiten $t $ und der inversionswinkel $ \an die `oracle` an über gegebene Daten werden gemäß der *Partikel Annahme Heuristik*, \begin{align} \Der Ta \sim \pr (\phi), \quad t \ca \frac{1}{\variance{\phi}}.
+  Die Messzeiten $t $ und der inversionswinkel $ \an die an über gegebene Daten `oracle` werden gemäß der *Partikel Annahme Heuristik*, \begin{align} \Der Ta \sim \pr (\phi), \quad t \ca \frac {1} {\variance{\phi}}.
 
   \end{align} diese Heuristik eignet sich optimal, um die erwartete nachträgliche Abweichung in der iterativen Phasen Schätzung unter der Annahme eines normalen vorherigen zu verringern.
 
@@ -74,9 +74,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 719c8583cb0fe7f0c9c0f7fa617fa469080a9588
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 27841784ec8961f7a5a78c425411fcf0ae8e8f15
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82706736"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330581"

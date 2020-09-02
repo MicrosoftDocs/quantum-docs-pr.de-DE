@@ -2,7 +2,7 @@
 uid: microsoft.quantum.random.normaldistribution
 name: NormalDistribution
 type: function
-namespace: Microsoft.Quantum.Random
+namespace: microsoft.quantum.random
 summary: Gibt eine normale Verteilung mit einem angegebenen Mittelwert und Varianz zurück.
 examples: >-
   Der folgende Code zeichnet 10 Beispiele aus der normalen Verteilung mit dem Mittelwert 2 und der Standardabweichung 0,1:
@@ -33,9 +33,9 @@ output:
 seeAlso:
 - microsoft.quantum.random.standardnormaldistribution
 metadata:
-  ms.openlocfilehash: d5ea2faa4f565821ee281aa54b93e047dd5f7e92
-  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.openlocfilehash: 3ebf873028821378daf0081bdc5b77ab7cd2e7cb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 08/25/2020
-  ms.locfileid: "88864217"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330683"

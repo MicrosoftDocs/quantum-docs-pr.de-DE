@@ -2,10 +2,10 @@
 uid: microsoft.quantum.arrays.constantarray
 name: ConstantArray
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Erstellt ein Array mit der angegebenen Länge, wobei alle Elemente gleich dem angegebenen Wert sind.
 examples: >-
-  Der folgende Code erstellt ein Array von 3 booleschen Werten, die jeweils gleich `true`sind:
+  Der folgende Code erstellt ein Array von 3 booleschen Werten, die jeweils gleich sind `true` :
 
 
   ```qsharp
@@ -28,14 +28,14 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: Ein neues Array der Länge `length`, sodass jedes Element ist `value`.
+  - summary: Ein neues Array der Länge `length` , sodass jedes Element ist `value` .
     isArray: true
     uid: "'T"
     isLocal: true
 metadata:
-  ms.openlocfilehash: e989c80b27c3ce0d90a564181c0bcae2f892ada0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: df6f39577259d4e3fbfa5401cab6d25b06abe9c7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676527"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352443"
