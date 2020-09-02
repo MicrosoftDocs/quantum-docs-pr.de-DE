@@ -2,7 +2,7 @@
 uid: microsoft.quantum.synthesis.applyxcontrolledontruthtable
 name: ApplyXControlledOnTruthTable
 type: operation
-namespace: Microsoft.Quantum.Synthesis
+namespace: microsoft.quantum.synthesis
 summary: >-
   Wendet den @"microsoft.quantum.intrinsic.x" Vorgang auf an `target` , wenn die boolesche Funktion `func` für die klassische Zuweisung in als true ausgewertet wird `controlRegister` .
 
@@ -52,9 +52,9 @@ functors:
 seeAlso:
 - microsoft.quantum.synthesis.applyxcontrolledontruthtablewithcleantarget
 metadata:
-  ms.openlocfilehash: c15037917da8101270d3888ec0f335ad7986cbf2
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 782833d34462056413628504cca92f5333a04659
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85886569"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327986"

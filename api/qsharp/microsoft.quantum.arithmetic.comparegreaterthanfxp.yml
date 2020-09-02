@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
 name: CompareGreaterThanFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Vergleicht zwei in quantenregistern gespeicherte Fixed-Point-Nummern und steuert einen Flip-Wert für das Ergebnis.
 remarks: Die aktuelle Implementierung erfordert, dass die zwei Festkomma Zahlen dieselbe Punktposition und dieselbe Anzahl von Qubits aufweisen.
 syntax: 'operation CompareGreaterThanFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit) : Unit'
@@ -16,7 +16,7 @@ input:
     summary: Die zweite zu vergleichende Festkomma Zahl.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: Ergebnis des Vergleichs. Wird gekippt, wenn `fp1 > fp2`.
+    summary: Ergebnis des Vergleichs. Wird gekippt, wenn `fp1 > fp2` .
     isPrimitive: true
     uid: Qubit
 output:
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 851baa02ebf746966b5534a96f1c1bc285632bc2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 68b23de42a62a20d33cc713649df8714706dc592
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679814"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327407"
