@@ -2,22 +2,22 @@
 uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
 name: AssertOperationsEqualInPlace
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: >-
   Bei zwei Vorgängen wird von bestätigt, dass Sie für alle Eingabe Zustände identisch agieren.
 
 
-  Diese Assertionen werden implementiert, indem die Aktion der Vorgänge für alle Zustände der Form $V _0 \otimes... \otimes v_ {n-1} $, wobei $V _K $ einem der Zustände $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ und $ \ket{i} $ (+ 1 eigen Status des Pauli Y-Operators) entspricht.
+  Diese Assertionen werden implementiert, indem die Aktion der Vorgänge für alle Zustände der Form $V _0 \otimes... \otimes v_ {n-1} $, wobei $V _K $ einem der Zustände $ \ket {0} $, $ \ket {1} $, $ \ket{+} $ und $ \ket{i} $ (+ 1 eigen Status des Pauli Y-Operators) entspricht.
 
 
   Diese Assertion verwendet $n $ Qubits und erfordert mehrere Aufrufe der zu vergleichenden Vorgänge.
 syntax: 'operation AssertOperationsEqualInPlace (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
-references: Die Basis der Zustände $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ und $ \ket{i} $ ist die "Chuang-Nielsen"-Basis, die unter [ *i. L. Chuang, M. A. Nielsen* ](https://arxiv.org/abs/quant-ph/9610001)beschrieben wird.
+references: Die Basis der Zustände $ \ket {0} $, $ \ket {1} $, $ \ket{+} $ und $ \ket{i} $ ist die "Chuang-Nielsen"-Basis, die unter [ *i. L. Chuang, M. A. Nielsen* ](https://arxiv.org/abs/quant-ph/9610001)beschrieben wird.
 input:
   content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
   types:
   - name: nQubits
-    summary: Die Anzahl der Qubits $n $, an denen `givenU` die `expectedU` Vorgänge ausgeführt werden.
+    summary: Die Anzahl der Qubits $n $, an denen die Vorgänge ausgeführt werden `givenU` `expectedU` .
     isPrimitive: true
     uid: Int
   - name: givenU
@@ -33,7 +33,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: expectedU
-    summary: Verweis Vorgang auf $n $ Qubits, `givenU` der mit verglichen werden soll.
+    summary: Verweis Vorgang auf $n $ Qubits, der mit `givenU` verglichen werden soll.
     isOperation: true
     input:
       types:
@@ -54,9 +54,9 @@ output:
 seeAlso:
 - assertoperationsequalreferenced
 metadata:
-  ms.openlocfilehash: 007bb4b3dedd5a95fc464608fe8160784b02341b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 477ee177c1db07a9e92d11599ed3d7c0a822e10e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82657033"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337556"

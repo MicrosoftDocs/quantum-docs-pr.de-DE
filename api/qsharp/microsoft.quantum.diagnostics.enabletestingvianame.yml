@@ -2,13 +2,13 @@
 uid: microsoft.quantum.diagnostics.enabletestingvianame
 name: EnableTestingViaName
 type: newtype
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: Vom Compiler erkanntes Attribut, über das ein alternativer Name definiert werden kann, der beim Laden eines Typs oder Aufruf baren zu Testzwecken verwendet werden kann.
 syntax: newtype EnableTestingViaName = String;
 metadata:
-  ms.openlocfilehash: 769df7a097ddbd49877b72369cd2e72a27e2058c
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 58ae661d98b7177230fa54946bafdd07c77ff38b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885778"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337330"

@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.squaresi
 name: SquareSI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Eine quadratische Ganzzahl `xs` mit Vorzeichen und speichert `result`das Ergebnis in, das anfänglich NULL sein muss.
+namespace: microsoft.quantum.arithmetic
+summary: Eine quadratische Ganzzahl `xs` mit Vorzeichen und speichert das Ergebnis in `result` , das anfänglich NULL sein muss.
 remarks: Die-Implementierung basiert auf integersquare.
 syntax: 'operation SquareSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
 input:
@@ -13,7 +13,7 @@ input:
     summary: n-Bit-Ganzzahl in Quadrat (signedlittleendian)
     uid: microsoft.quantum.arithmetic.signedlittleendian
   - name: result
-    summary: Das 2N-Bit-Ergebnis (signedlittleendian) muss zunächst den Status $ \ket{0}$ aufweisen.
+    summary: Das 2N-Bit-Ergebnis (signedlittleendian) muss zunächst den Status $ \ket {0} $ aufweisen.
     uid: microsoft.quantum.arithmetic.signedlittleendian
 output:
   content: Unit
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: e4a212094c38d370e2489b586ee8014131bef9dc
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ee4e8a7ad27fdfb03f590f229a1c0e344a985ff6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676600"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352664"

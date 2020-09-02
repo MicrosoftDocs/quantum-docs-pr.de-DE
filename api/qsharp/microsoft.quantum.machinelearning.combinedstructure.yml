@@ -2,7 +2,7 @@
 uid: microsoft.quantum.machinelearning.combinedstructure
 name: CombinedStructure
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: Bei einer oder mehreren Ebenen kontrollierter Drehungen gibt eine einzelne Ebene zurück, bei der der Modellparameter Index so verschoben wurde, dass unterschiedliche Ebenen von unterschiedlichen Modellparametern parametrisiert werden.
 examples: >-
   Die folgenden sind gleichwertig:
@@ -41,9 +41,9 @@ output:
     isArray: true
     uid: microsoft.quantum.machinelearning.controlledrotation
 metadata:
-  ms.openlocfilehash: 5395786d7170fd6d360f4cc98177b062ad066ab5
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d317cb945ed8371b73af9c1dbcc47602184d1220
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681699"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344946"
