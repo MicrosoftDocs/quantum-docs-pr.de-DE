@@ -2,17 +2,17 @@
 uid: microsoft.quantum.preparation.preparequbit
 name: PrepareQubit
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
-  Bereitet ein Qubit im + 1 (`Zero`)-eigen Zustand des angegebenen Pauli-Operators vor.
+  Bereitet ein Qubit im + 1 ( `Zero` )-eigen Zustand des angegebenen Pauli-Operators vor.
 
   Wenn der Identity-Operator angegeben ist, wird das Qubit im Status "in maximalgemischter Form" vorbereitet.
 
 
-  Wenn sich das Qubit anfänglich im $ \ket{0}$-Zustand befunden hat, bereitet dieser Vorgang das Qubit im $ + $1-eigen Zustand eines angegebenen Pauli-Operators bzw `PauliI`. für im Status "maximisch Mixed" ( <xref:microsoft.quantum.preparation.preparesinglequbitidentity>siehe) vor.
+  Wenn sich das Qubit anfänglich im $ \ket {0} $-Zustand befunden hat, bereitet dieser Vorgang das Qubit im $ + $1-eigen Zustand eines angegebenen Pauli-Operators bzw `PauliI` . für im Status "maximisch Mixed" (siehe <xref:microsoft.quantum.preparation.preparesinglequbitidentity> ) vor.
 
 
-  Wenn sich das Qubit in einem anderen Zustand als $ \ket{0}$ befunden hat, wendet dieser Vorgang die folgenden Gates an: `PauliX`$H $ for, `PauliY`$HS $ for, `PauliZ` $I <xref:microsoft.quantum.preparation.preparesinglequbitidentity> $ `PauliI`for und for.
+  Wenn sich das Qubit in einem anderen Zustand als $ \ket {0} $ befunden hat, wendet dieser Vorgang die folgenden Gates an: $H $ for `PauliX` , $HS $ for `PauliY` , $I $ for `PauliZ` und <xref:microsoft.quantum.preparation.preparesinglequbitidentity> for `PauliI` .
 syntax: 'operation PrepareQubit (basis : Pauli, qubit : Qubit) : Unit'
 input:
   content: '(basis : Pauli, qubit : Qubit)'
@@ -31,9 +31,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 70032bd9174bb987206e2084e2788e5ac7169ae7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f42cb0ab28168124c7589606c34446d35013a325
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681116"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331380"

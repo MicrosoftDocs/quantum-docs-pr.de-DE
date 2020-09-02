@@ -2,14 +2,14 @@
 uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation
 name: AmplitudeAmplificationFromStatePreparation
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Amplitude-Verstärkung durch Oracles für partielle Reflektionen.
 remarks: >-
-  Dies erzwingt strengere Bedingungen in Form von Start-und Ziel Zuständen als `AmpAmpByReflectionPhases`in.
+  Dies erzwingt strengere Bedingungen in Form von Start-und Ziel Zuständen als in `AmpAmpByReflectionPhases` .
 
-  Es wird davon ausgegangen, dass der Ziel Status durch "$ \ket{1}\_f $" gekennzeichnet ist.
+  Es wird davon ausgegangen, dass der Ziel Status durch "$ \ket f $" gekennzeichnet ist {1} \_ .
 
-  Es wird davon ausgegangen, dass "\begin{align}{0}\_a\ket {f{0}\_} \ket s{1}\_= \lambda\ket f \ket {\ Text {\_target}} s + \sqrt{1-| \lambda | ^ 2{0}\_} \ket `flagQubit` f \ cdots" lautet, \end{align} `auxiliaryRegister` in den meisten Fällen und werden im Status ${0}\_\ket {f}{0}\_\ket s $ initialisiert.
+  Es wird davon ausgegangen, dass "\begin{align} a\ket {0} \_ {f} \ket {0} \_ s = \lambda\ket {1} \_ f \ket {\ Text {Target}} \_ s + \sqrt{1-| \lambda | ^ 2} \ket {0} \_ f \ cdots" lautet, \end{align} in den meisten Fällen `flagQubit` und `auxiliaryRegister` werden im Status $ \ket {0} \_ {f} \ket {0} \_ s $ initialisiert.
 syntax: 'function AmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'
@@ -42,9 +42,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 2d29383db3cebfe1848a1fcee3115fcee0825d4d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: de9059b0abc7eb8fd622c72561b8875e07a831ad
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676968"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340662"

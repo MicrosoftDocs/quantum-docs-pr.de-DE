@@ -2,22 +2,22 @@
 uid: microsoft.quantum.amplitudeamplification.applyobliviousamplitudeamplification
 name: ApplyObliviousAmplitudeAmplification
 type: operation
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Durch die Angabe partieller Reflektionen wird die Verstärkung der Amplitude-Verstärkung unterstreicht
 remarks: >-
-  Bei einem\_bestimmten Zusatz Status $ \ket{\text{Start}} a $, einem bestimmten Zusatz Ziel Status $ \ket{\text{Target}}\_a $ und jedem Systemstatus $ \ket{\psi}\_s $, angenommen, \begin{align} o\ket {\ Text {Start}}\_a\ket {\ PSI}\_s = \lambda\ket{\text{Target}}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{\text{Target} ^ \perp}\_a\cdots \end{align} für einige einheitliche $U $.
+  Bei einem bestimmten Zusatz Status $ \ket{\text{Start}} \_ a $, einem bestimmten Zusatz Ziel Status $ \ket{\text{Target}} \_ a $ und jedem Systemstatus $ \ket{\psi} \_ s $, angenommen, \begin{align} o\ket {\ Text {Start}} \_ a\ket {\ PSI} \_ s = \lambda\ket{\text{Target}} \_ a U \ket{\psi} \_ s + \sqrt{1-| \lambda | ^ 2} \ket{\text{Target} ^ \perp} \_ a\cdots \end{align} für einige einheitliche $U $.
 
   Durch eine Sequenz von Reflektionen zu den Start-und Ziel Zuständen im Zusatz Register, die von Anwendungen von `signalOracle` und dessen Adjoint überschneidet werden, kann die Erfolgswahrscheinlichkeit der Anwendung U geändert werden.
 
 
-  In den meisten Fällen `auxiliaryRegister` wird im Status $ \ket{\text{Start}}\_a $ initialisiert.
+  In den meisten Fällen `auxiliaryRegister` wird im Status $ \ket{\text{Start}} \_ a $ initialisiert.
 syntax: 'operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[]) : Unit'
 references: >-
-  Finden Sie unter
+  Siehe
 
 
   - [ *D.W. Berry, Uhr Childs, r. Cleve, r. Kothari, R.D. Somma* ](https://arxiv.org/abs/1312.1414) für die Standardversion.
-    Finden Sie unter
+    Siehe
   - [ *G.H. Low, I.L. Chuang* ](https://arxiv.org/abs/1610.06546) for a Generalisierung to partielle Reflektionen.
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[])'
@@ -32,7 +32,7 @@ input:
     summary: Reflektionsoperator zum Ziel Status des Zusatz Registers
     uid: microsoft.quantum.oracles.reflectionoracle
   - name: signalOracle
-    summary: Einheitlicher Oracle-$O $ vom `ObliviousOracle` Typ, der gemeinsam auf dem Hilfssystem und dem System Register agiert.
+    summary: Einheitlicher Oracle-$O $ vom Typ `ObliviousOracle` , der gemeinsam auf dem Hilfssystem und dem System Register agiert.
     uid: microsoft.quantum.oracles.obliviousoracle
   - name: auxiliaryRegister
     summary: Zusatz Register
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7452686a76d9ff89c0eb79290e7dae23347778ac
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 21bdb88716a07c32673425fd4f5276559b56d266
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672961"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340526"

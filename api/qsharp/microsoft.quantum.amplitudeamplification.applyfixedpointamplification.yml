@@ -2,7 +2,7 @@
 uid: microsoft.quantum.amplitudeamplification.applyfixedpointamplification
 name: ApplyFixedPointAmplification
 type: operation
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Modifizierungsalgorithmus mit fester Punkt Amplitude
 remarks: Startqubits muss sich im Status $ \ket{0\cdots 0} $ befinden. Dieser Vorgang durchläuft eine Reihe von Abfragen in den Befugnissen von $2 $, bis entweder eine maximale Anzahl von Abfragen erreicht oder der Ziel Status gefunden wird.
 syntax: 'operation ApplyFixedPointAmplification (statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits : Qubit[]) : Unit'
@@ -23,9 +23,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 097e3f67cdecfd0ee31bd48e4f64aec659353159
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2a2918e6b9e3cf64a3536a6cbecd7432f084494f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676936"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340543"

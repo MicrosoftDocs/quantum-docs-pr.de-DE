@@ -2,17 +2,17 @@
 uid: microsoft.quantum.amplitudeamplification.rotationphases
 name: RotationPhases
 type: newtype
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Phasen für eine Sequenz von Single-Qubit-Drehungen in der Amplitude-Verstärkung.
 remarks: >-
   Der erste Parameter ist ein Array von Phasen für Reflektionen, ausgedrückt als Produkt von Single-Qubit-Drehungen.
 
-  [G.H. Niedrig, I. L. Chuang, https://arxiv.org/abs/1707.05391].
+  [G.H. Niedrig, I. L. Chuang, https://arxiv.org/abs/1707.05391 ].
 syntax: newtype RotationPhases = Double[];
 metadata:
-  ms.openlocfilehash: bcf8502387a5f4479730bcbb41eaf03fa7925f87
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6973d50061626f87fb57cf54e0abff0caf73c411
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680079"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340254"

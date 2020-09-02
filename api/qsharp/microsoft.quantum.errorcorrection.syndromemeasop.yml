@@ -2,7 +2,7 @@
 uid: microsoft.quantum.errorcorrection.syndromemeasop
 name: SyndromeMeasOp
 type: newtype
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: Stellt einen Vorgang dar, der verwendet wird, um das-Syndrom eines Code Blocks mit Fehlerbehebung zu messen.
 remarks: >-
   Die Signatur `(LogicalRegister => Syndrome)` stellt einen Vorgang dar, der gemeinsam mit den Qubits in `LogicalRegister` und einigen zusätzlichen Qubits gefolgt von einem Maß an zusätzlichen Qubits, um einen Wert zu extrahieren, `Syndrome` der die `Result[]` dieser Messungen darstellt.
@@ -24,9 +24,9 @@ seeAlso:
 - logicalregister
 - syndrome
 metadata:
-  ms.openlocfilehash: e4c011bcbe4200fe894962e0432f4c5c358d0295
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 529eea0e693460624c8cd842bf04a5ce499fad4e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885760"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349621"

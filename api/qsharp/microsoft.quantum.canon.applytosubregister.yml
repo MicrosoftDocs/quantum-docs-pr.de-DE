@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.applytosubregister
 name: ApplyToSubregister
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Wendet einen Vorgang auf ein unter Register eines Register mit Qubits an, die durch ein Array ihrer Indizes angegeben werden.
 examples: >-
-  Erstellen{1}Sie drei Qubit-Status $ \frac {\sqrt{2}}{0}\_\ket 2 ({0}\_\ket 1{0}\ Ket _3 +{1}\_\ket 1{1}\ Ket _3) $:
+  Erstellen Sie drei Qubit-Status $ \frac {1} {\sqrt {2} } \ket {0} \_ 2 (\ket {0} \_ 1 \ Ket {0} _3 + \ket {1} \_ 1 \ Ket {1} _3) $:
 
 
   ```qsharp
@@ -49,9 +49,9 @@ seeAlso:
 - applytosubregisterc
 - applytosubregisterca
 metadata:
-  ms.openlocfilehash: 89c488fd593e6f81a1c811e0b507a69a9f891be9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 00e62624cf1bfc9460316a03c02770fb585df3ba
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674566"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357288"

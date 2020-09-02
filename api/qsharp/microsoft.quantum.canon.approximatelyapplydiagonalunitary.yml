@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.approximatelyapplydiagonalunitary
 name: ApproximatelyApplyDiagonalUnitary
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Wendet ein Array komplexer Phasen auf numerische Basiszustände eines Register von Qubits an und verkürzt kleine Drehwinkel entsprechend einer bestimmten Toleranz.
 
@@ -15,9 +15,9 @@ summary: >-
   $ $ \begin{align} U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i \ theta_j} \ket{j}\bra{j}.
 
   \end{align} $ $
-remarks: '`coefficients`wird mit Elementen $ \ theta_j = $0,0 aufgefüllt, wenn weniger als $2 ^ n $ angegeben werden.'
+remarks: '`coefficients` wird mit Elementen $ \ theta_j = $0,0 aufgefüllt, wenn weniger als $2 ^ n $ angegeben werden.'
 syntax: 'operation ApproximatelyApplyDiagonalUnitary (tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
-references: '- Synthese von Quantum Logic-Leitungen Vivek V. Shende, Stephen S. Bullock, Igor L. Markovhttps://arxiv.org/abs/quant-ph/0406176'
+references: '- Synthese von Quantum Logic-Leitungen Vivek V. Shende, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176'
 input:
   content: '(tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
@@ -43,9 +43,9 @@ functors:
 seeAlso:
 - applydiagonalunitary
 metadata:
-  ms.openlocfilehash: ec183b0a42a3e2382a395a4711390c2ab8e9eb85
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f67d8807ec5e7931b415a132b77e9653b3d1c0a6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674465"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357084"

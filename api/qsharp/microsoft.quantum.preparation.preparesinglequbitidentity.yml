@@ -2,12 +2,12 @@
 uid: microsoft.quantum.preparation.preparesinglequbitidentity
 name: PrepareSingleQubitIdentity
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
   Bereitet ein Qubit im maximale gemischten Zustand vor.
 
 
-  Sie bereitet das angegebene Qubit im Zustand "$ \boldone/$2" vor, indem der%% amp; quot;%% amp; quot;%% amp; quot; \omega (\rho){1} {4} \mathrel{: = \{} \frac \ sum_ {\}\mu \\_auf 0 festgelegt wird. 1, 2\_, 3} \sigma {\mu} \rho \sigma {\mu} ^ {\dagger}, \end{align} $ $, wobei $ \sigma\_i $ der $i $ th-Pauli-Operator ist und $ \rho $ ein Dichte Operator ist, der einen gemischten Zustand darstellt.
+  Sie bereitet das angegebene Qubit im Zustand "$ \boldone/$2" vor, indem der%% amp; quot;%% amp; quot;%% amp; quot; \omega (\rho) \mathrel{: =} \frac {1} {4} \ sum_ {\mu \ auf 0 festgelegt \{ wird. 1, 2, 3 \} } \sigma \_ {\mu} \rho \sigma \_ {\mu} ^ {\dagger}, \end{align} $ $, wobei $ \sigma \_ i $ der $i $ th-Pauli-Operator ist und $ \rho $ ein Dichte Operator ist, der einen gemischten Zustand darstellt.
 remarks: >-
   Der gemischte Status $ \boldone/$2, der das Ergebnis der Anwendung dieses Vorgangs auf einen Zustand beschreibt, beschreibt implizit einen Erwartungswert gegenüber zufälligen Entscheidungen, die in diesem Vorgang vorgenommen werden.
 
@@ -28,9 +28,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 4dd07e9e59575d60bca81c996ad5fc1a3a82b16d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 65b39d742a6ba4399137fb4d88c6f762969a0f93
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686505"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331346"

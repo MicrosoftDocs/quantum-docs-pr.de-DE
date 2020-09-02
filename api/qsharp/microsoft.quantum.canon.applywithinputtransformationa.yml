@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.applywithinputtransformationa
 name: ApplyWithInputTransformationA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Bei einem Vorgang, der eine Eingabe akzeptiert, eine Funktion, die eine mit diesem Vorgang kompatible Ausgabe zurückgibt, sowie eine Eingabe für diese Funktion wendet den Vorgang mithilfe der-Funktion an, um die Eingabe in ein vom Vorgang erwartetes Formular umzuwandeln.
 examples: >-
-  Der folgende-Befehl @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" verwendet, um einen für @"Microsoft.Quantum.Arithmetic.BigEndian" Eingaben entworfenen Vorgang auf eine Eingabe des @"Microsoft.Quantum.Arithmetic.LittleEndian"Typs anzuwenden:
+  Der folgende-Befehl verwendet @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" , um einen für Eingaben entworfenen Vorgang @"Microsoft.Quantum.Arithmetic.BigEndian" auf eine Eingabe des Typs anzuwenden @"Microsoft.Quantum.Arithmetic.LittleEndian" :
 
 
   ```qsharp
@@ -58,9 +58,9 @@ seeAlso:
 - applywithinputtransformationca
 - transformedoperation
 metadata:
-  ms.openlocfilehash: bf2e1c808b908ea5e1ad15014b5d7745708d6156
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7bcc29b8c096b5cb6daf3c5279671f1af3e008df
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676274"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357118"

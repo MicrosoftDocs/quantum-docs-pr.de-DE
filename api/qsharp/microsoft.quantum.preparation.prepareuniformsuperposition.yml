@@ -2,16 +2,16 @@
 uid: microsoft.quantum.preparation.prepareuniformsuperposition
 name: PrepareUniformSuperposition
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
-  Erstellt eine einheitliche Superposition über Zustände, die 0 bis `nIndices`codieren.
+  Erstellt eine einheitliche Superposition über Zustände, die 0 bis codieren `nIndices` .
 
 
-  Das heißt, dieser einheitliche $U $ erstellt eine einheitliche Superposition für alle Zahl Zustände $0 $ bis $M-$1, wenn ein Eingabe Status $ \ket{0\cdots 0} $ angegeben wird. Anders ausgedrückt: $ $ \begin{align} u\ket{0}= \frac{1}{\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
+  Das heißt, dieser einheitliche $U $ erstellt eine einheitliche Superposition für alle Zahl Zustände $0 $ bis $M-$1, wenn ein Eingabe Status $ \ket{0\cdots 0} $ angegeben wird. Anders ausgedrückt: $ $ \begin{align} u\ket {0} = \frac {1} {\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
   \end{align} $ $.
 examples: >-
-  Im folgenden Beispiel wird der Status $ \frac{1}{\sqrt{6}} \ sum_ {j = 0} ^{5}\ket{j} $ auf $3 $ Qubits vorbereitet.
+  Im folgenden Beispiel wird der Status $ \frac {1} {\sqrt {6} } \ sum_ {j = 0} ^ {5} \ket{j} $ auf $3 $ Qubits vorbereitet.
 
 
   ```Q#
@@ -33,7 +33,7 @@ input:
     uid: Int
   - name: indexRegister
     summary: >-
-      Das Qubit-Register, das die Zahlen Zustände `LittleEndian` im-Format speichert.
+      Das Qubit-Register, das die Zahlen Zustände im- `LittleEndian` Format speichert.
 
       Dieses Register muss in der Lage sein, die Zahl $M-$1 zu speichern, und es wird davon ausgegangen, dass es im Status $ \ket{0\cdots 0} $ initialisiert wird.
     uid: microsoft.quantum.arithmetic.littleendian
@@ -46,9 +46,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: a697f4d410ed47c8be3908e2206080a9393260f7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 442daa4affb6b59191af9117a8094f7bfbf71302
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686520"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331329"
