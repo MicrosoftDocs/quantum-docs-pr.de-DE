@@ -96,9 +96,9 @@ newtypes:
 - uid: microsoft.quantum.diagnostics.test
   summary: Vom Compiler erkanntes Attribut, das zum Markieren eines Komponententests verwendet wird.
 metadata:
-  ms.openlocfilehash: 16c457188160a3e0d2b4d04b40af0dabbbdc0f0a
-  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.openlocfilehash: 8fb9929c16e4f4b58a72b2879a3bb1fcc4e51f09
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 08/25/2020
-  ms.locfileid: "88863048"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341240"

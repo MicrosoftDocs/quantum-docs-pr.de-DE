@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.core
 name: Microsoft.Quantum.Core
-summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält Q # Core-Funktionen und-Vorgänge.\n\n # <a name=\"remarks\"></a>Hinweise\n Dieser Namespace wird automatisch vom f #-Compiler geöffnet, sodass alle Elemente dieses Namespace stets verfügbar sind."
+summary: " # <a name=\"summary\"></a>Zusammenfassung\n Dieser Namespace enthält Q # Core-Funktionen und-Vorgänge.\n\n # <a name=\"remarks\"></a>Bemerkungen\n Dieser Namespace wird automatisch vom f #-Compiler geöffnet, sodass alle Elemente dieses Namespace stets verfügbar sind."
 functions:
 - uid: microsoft.quantum.core.default
   summary: Gibt eine Standard Instanz des angegebenen Typs zurück.
@@ -23,9 +23,9 @@ newtypes:
 - uid: microsoft.quantum.core.entrypoint
   summary: Vom Compiler erkanntes Attribut, das zum Markieren des Einstiegs Punkts einer ausführbaren Datei verwendet wird.
 metadata:
-  ms.openlocfilehash: 7533708473cff8902745ed67c235244ea9b2234b
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 354a8e2c221007f27ff409dc4b75b0d5953d9f67
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885266"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341257"

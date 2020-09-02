@@ -70,9 +70,9 @@ newtypes:
 - uid: microsoft.quantum.errorcorrection.syndromemeasop
   summary: Stellt einen Vorgang dar, der verwendet wird, um das-Syndrom eines Code Blocks mit Fehlerbehebung zu messen.
 metadata:
-  ms.openlocfilehash: eed1de587e6bfbfc197113c5cd280ae72df1ce7e
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 6b8fe65de09adf6297ca40420f77719ef19285eb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326607"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341138"
