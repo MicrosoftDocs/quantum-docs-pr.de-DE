@@ -2,10 +2,10 @@
 uid: microsoft.quantum.math.extendedgreatestcommondivisori
 name: ExtendedGreatestCommonDivisorI
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Berechnet ein Tupel $ (u, v) $, sodass $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $, wobei $ \operatschmue{GCD} $ $a $ Greatest common divisor von $a $ und $b $ ist. Die GCD ist immer positiv.
 syntax: 'function ExtendedGreatestCommonDivisorI (a : Int, b : Int) : (Int, Int)'
-references: '- Diese Implementierung ist gemäßhttps://en.wikipedia.org/wiki/Extended_Euclidean_algorithm'
+references: '- Diese Implementierung ist gemäß https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm'
 input:
   content: '(a : Int, b : Int)'
   types:
@@ -27,9 +27,9 @@ output:
     - isPrimitive: true
       uid: Int
 metadata:
-  ms.openlocfilehash: f14516b0dc0a6832250df5a9d107514f9345b6db
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3a82b1d99ecaeff6916f55caeb50fbe044539a53
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673861"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344113"

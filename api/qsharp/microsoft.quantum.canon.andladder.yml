@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.andladder
 name: AndLadder
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Führt eine gesteuerte "and-Leiter" für ein Register der Ziel-Qubits aus.
 
 
-  Durch diesen Vorgang wird eine Transformation angewendet, die von der folgenden Zuordnung der Berechnungsbasis beschrieben wird. $ $ \begin{align}\_\ket{x 1,\_\dots, x n}\_\ket{y 1,\_\dots, y {n-1}} \mapsto\_\ket{x 1,\_\dots, x n}\_\ket{y 1\_\oplus (x\_1 \land x 2),\_\dots, y {n-1}\_\oplus (x\_1 \land x 2 \land \cdots \land x\_{n-1}}, \end{align} $ $, wobei\_$ \ket{x 1\_, \dots, x n} $ bezieht sich `controls`auf die Berechnungsbasis Zustände von, und\_WHERE $ \ket{y\_1, \dots, y {n-1}} $ bezieht `targets`sich auf die Berechnungsbasis Zustände von.
+  Durch diesen Vorgang wird eine Transformation angewendet, die von der folgenden Zuordnung der Berechnungsbasis beschrieben wird. $ $ \begin{align} \ket{x \_ 1, \dots, x \_ n} \ket{y \_ 1, \dots, y \_ {n-1}} \mapsto \ket{x \_ 1, \dots, x \_ n} \ket{y \_ 1 \oplus (x \_ 1 \land x \_ 2), \dots, y \_ {n-1} \oplus (x \_ 1 \land x \_ 2 \land \cdots \land x \_ {n-1}}, \end{align} $ $, wobei $ \ket{x \_ 1, \dots, x \_ n} $ bezieht sich auf die Berechnungsbasis Zustände von `controls` , und WHERE $ \ket{y \_ 1, \dots, y \_ {n-1}} $ bezieht sich auf die Berechnungsbasis Zustände von `targets` .
 remarks: >-
-  - Wird als Teil von <xref:microsoft.quantum.canon.applymulticontrolledc> und <xref:microsoft.quantum.canon.applymulticontrolledca>verwendet.
+  - Wird als Teil von <xref:microsoft.quantum.canon.applymulticontrolledc> und verwendet <xref:microsoft.quantum.canon.applymulticontrolledca> .
 
   - Eine Erläuterung und ein Leitungs Diagramm finden Sie in Abbildung 4,10, Abschnitt 4,3 in Nielsen & Chuang.
 syntax: 'operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
@@ -24,14 +24,14 @@ input:
     summary: >-
       Ein Register von Qubits, das als Steuerelemente für die-und-Leiter verwendet werden soll.
 
-      Mit `controls` diesem Vorgang bleiben die Berechnungsbasis Zustände invariant.
+      Mit diesem Vorgang bleiben die Berechnungsbasis Zustände `controls` invariant.
 
-      Die Länge von `controls` muss mindestens 2 betragen und muss gleich 1 und der Länge von `targets`sein.
+      Die Länge von `controls` muss mindestens 2 betragen und muss gleich 1 und der Länge von sein `targets` .
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: targets
-    summary: Die Länge von `targets` muss mindestens 1 betragen und gleich der Länge von `controls` minus 1 sein.
+    summary: Die Länge von `targets` muss mindestens 1 betragen und gleich der Länge von minus 1 sein `controls` .
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -43,9 +43,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: 4cc74315145176fd3a2258a3d92b2f2dfb4d66d3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 194e562588a7ea244b39795ea1c489a07a7fbfba
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676388"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350879"

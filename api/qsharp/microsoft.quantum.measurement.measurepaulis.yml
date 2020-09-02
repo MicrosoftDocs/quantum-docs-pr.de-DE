@@ -2,7 +2,7 @@
 uid: microsoft.quantum.measurement.measurepaulis
 name: MeasurePaulis
 type: operation
-namespace: Microsoft.Quantum.Measurement
+namespace: microsoft.quantum.measurement
 summary: Wenn ein Array von Multi-Qubit-Pauli-Operatoren verwendet wird, werden die einzelnen Measures mit einem angegebenen Mess Gadget versehen und dann das Array der Ergebnisse zurückgegeben.
 syntax: 'operation MeasurePaulis (paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result)) : Result[]'
 input:
@@ -38,14 +38,14 @@ input:
 output:
   content: Result[]
   types:
-  - summary: Das Array von Ergebnissen, das beim Messen der einzelnen `paulis` Elemente `target`von auf abgerufen wird.
+  - summary: Das Array von Ergebnissen, das beim Messen der einzelnen Elemente von auf abgerufen wird `paulis` `target` .
     isArray: true
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: de1f100a19cda847cfb253fe1dfa01079b9ba676
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 27bb4a6164f8db6a82c1beeb7de1107735870ef0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685176"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332468"
