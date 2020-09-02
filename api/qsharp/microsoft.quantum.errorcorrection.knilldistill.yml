@@ -2,12 +2,12 @@
 uid: microsoft.quantum.errorcorrection.knilldistill
 name: KnillDistill
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: >-
   Implementiert den Knill Magic State-Destillations Algorithmus.
 
 
-  Bei 15 ungefähren Kopien eines Magic State $ $ \begin{align} \cos\bruchteil {\pi}{8} \ket{0} + \sin \bruchteil {\pi}{8} \ket{1} \end{align} ergibt $ $ eine Kopie einer höheren Qualität.
+  Bei 15 ungefähren Kopien eines Magic State $ $ \begin{align} \cos\bruchteil {\pi} {8} \ket {0} + \sin \bruchteil {\pi} {8} \ket {1} \end{align} ergibt $ $ eine Kopie einer höheren Qualität.
 remarks: >-
   Wir folgen dem Algorithmus von "Knill".
 
@@ -27,13 +27,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: Wenn `true`, dann wird die Prozedur erfolgreich ausgeführt, und die Kopie der höheren Qualität sollte akzeptiert werden. Gibt `false`an, dass die Prozedur fehlgeschlagen ist und der Status des Registers als nicht definiert angesehen werden soll.
+  - summary: Wenn `true` , dann wird die Prozedur erfolgreich ausgeführt, und die Kopie der höheren Qualität sollte akzeptiert werden. Gibt an, `false` dass die Prozedur fehlgeschlagen ist und der Status des Registers als nicht definiert angesehen werden soll.
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 5a8e4c43ff21491b35efedb8f60717979e44f0ed
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 979a318e036fbe1585809ce7ba0152b68b4a840e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682361"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350114"

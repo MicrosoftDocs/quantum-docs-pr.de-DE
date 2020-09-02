@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelser
 name: ApplyIfElseR
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Wendet je nach dem Wert eines klassischen Ergebnisses einen von zwei Vorgängen an.
 
 
-  Bei einem Ergebnis `result`wendet den Vorgang `zeroOp` mit als `zeroInput` Eingabe `result` an `Zero`, wenn gleich ist, und gilt `oneOp(oneInput)` , wenn `result == One`gleich ist.
+  Bei einem Ergebnis `result` wendet den Vorgang `zeroOp` mit `zeroInput` als Eingabe an, wenn `result` gleich ist `Zero` , und gilt, wenn gleich ist `oneOp(oneInput)` `result == One` .
 syntax: "operation ApplyIfElseR (result : Result, (zeroOp : ('T => Unit), zeroInput : 'T), (oneOp : ('U => Unit), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit), zeroInput : 'T), (oneOp : ('U => Unit), oneInput : 'U))"
   types:
   - name: result
-    summary: Das Messergebnis, mit dem bestimmt `zeroOp` wird `oneOp` , ob oder angewendet wird.
+    summary: Das Messergebnis, mit dem bestimmt wird, ob `zeroOp` oder `oneOp` angewendet wird.
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: Der Vorgang, der angewendet werden `result == Zero`soll, wenn.
+    summary: Der Vorgang, der angewendet werden soll, wenn `result == Zero` .
     isOperation: true
     input:
       types:
@@ -28,11 +28,11 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: zeroInput
-    summary: Die Eingabe, die für `zeroOp` bereitgestellt `result == Zero`werden soll.
+    summary: Die Eingabe, die für bereitgestellt werden soll `zeroOp` `result == Zero` .
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: Der Vorgang, der angewendet werden `result == One`soll, wenn.
+    summary: Der Vorgang, der angewendet werden soll, wenn `result == One` .
     isOperation: true
     input:
       types:
@@ -43,7 +43,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: oneInput
-    summary: Die Eingabe, die für `oneOp` bereitgestellt `result == One`werden soll.
+    summary: Die Eingabe, die für bereitgestellt werden soll `oneOp` `result == One` .
     uid: "'U"
     isLocal: true
 output:
@@ -53,9 +53,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: Der Eingabetyp des `zeroOp` Vorgangs, der bedingt angewendet werden soll.
+  summary: Der Eingabetyp des Vorgangs `zeroOp` , der bedingt angewendet werden soll.
 - uid: "'U"
-  summary: Der Eingabetyp des `oneOp` Vorgangs, der bedingt angewendet werden soll.
+  summary: Der Eingabetyp des Vorgangs `oneOp` , der bedingt angewendet werden soll.
 seeAlso:
 - microsoft.quantum.canon.applyifzero
 - microsoft.quantum.canon.applyifone
@@ -63,9 +63,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: 4623c321aa2b802b8f27f6a3ec8e65463083b314
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1614a00214bdebe8d5b761cc8ca0732d76a919f7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672742"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350250"

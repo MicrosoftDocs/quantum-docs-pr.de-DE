@@ -2,13 +2,13 @@
 uid: microsoft.quantum.simulation.blockencodingreflectionbylcu
 name: BlockEncodingReflectionByLCU
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
-  Codiert einen relevanten Operator in eine `BlockEncodingReflection`.
+  Codiert einen relevanten Operator in eine `BlockEncodingReflection` .
 
 
-  Dadurch wird ein `BlockEncodingReflection` einheitlicher $U = p\cdot v\cdot P ^ \dagger $ erstellt, der einen Operator $H = \ sum_ {j} | \ alpha_j codiert | U_j $ von Interesse, bei dem es sich um eine lineare Kombination von uniflüssen handelt. In der Regel ist $P $ eine einheitliche Zustands Vorbereitung, z. b{0}\_. $P \ket\|a \ sum_j \sqrt{\ alpha_j/\|\_\vec\alpha 2} \ket{j}\_a $ und $V = \ sum_ {\_j} \ket{j}\bra{j} a\otimes U_j $.
-remarks: Diese `BlockEncoding` Implementierung gibt Ihnen die Eigenschaften eines `BlockEncodingReflection`.
+  Dadurch wird ein `BlockEncodingReflection` einheitlicher $U = p\cdot v\cdot P ^ \dagger $ erstellt, der einen Operator $H = \ sum_ {j} | \ alpha_j codiert | U_j $ von Interesse, bei dem es sich um eine lineare Kombination von uniflüssen handelt. In der Regel ist $P $ eine einheitliche Zustands Vorbereitung, z {0} \_ . b. $P \ket a \ sum_j \sqrt{\ alpha_j/ \| \vec\alpha \| \_ 2} \ket{j} \_ a $ und $V = \ sum_ {j} \ket{j}\bra{j} \_ a\otimes U_j $.
+remarks: Diese `BlockEncoding` Implementierung gibt Ihnen die Eigenschaften eines `BlockEncodingReflection` .
 syntax: 'function BlockEncodingReflectionByLCU (statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
 input:
   content: '(statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl))'
@@ -49,15 +49,15 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.BlockEncodingReflection
   types:
-  - summary: Ein einheitlicher $U $, der gemeinsam für `a` Register `s` agiert und $H $ codiert und $U "^{-1} = U $" erfüllt.
+  - summary: Ein einheitlicher $U $, der gemeinsam für Register agiert `a` und `s` $H $ codiert und $U "^ {-1} = U $" erfüllt.
     uid: microsoft.quantum.simulation.blockencodingreflection
 seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 8fe23d346a09e245d41f2a0c242462b5300561e1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: de3a86598d62960d71fa205dc20507fa59cf9cf7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687099"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343399"

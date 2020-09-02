@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.applytofirstthreequbits
 name: ApplyToFirstThreeQubits
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Wendet einen Vorgang auf die ersten drei Qubits im Register an.
 remarks: >-
   Das entspricht:
@@ -47,9 +47,9 @@ seeAlso:
 - microsoft.quantum.canon.applytofirstthreequbitsa
 - microsoft.quantum.canon.applytofirstthreequbitsca
 metadata:
-  ms.openlocfilehash: 548163ee498bf672b8505080925348c5e58bac73
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6d9b168a79b9eaf40ab29309474179b23ae53de6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82668412"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357475"

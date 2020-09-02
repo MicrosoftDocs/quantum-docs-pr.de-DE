@@ -2,7 +2,7 @@
 uid: microsoft.quantum.oracles.stateoracle
 name: StateOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: >-
   Stellt ein Oracle für die Zustands Vorbereitung dar.
 
@@ -12,16 +12,16 @@ summary: >-
 
   - Eine Ganzzahl, die das Flag-Qubit $f $ indiziert.
 
-  - Das System registriert $s $, das den gewünschten Quantum-Status $ \ket{\psi}\_s $ speichert.
+  - Das System registriert $s $, das den gewünschten Quantum-Status $ \ket{\psi} \_ s $ speichert.
 remarks: >-
-  Dieses{0}\_Oracle ist definiert durch $ $ o\ket {{0}\_f} \ket s = \lambda\ket{1}\_f \ket {\ PSI\_} s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f \ cdots, $ $ agiert auf der Grundlage des Berechnungs Zustands $ \ket{0}\_{f} \ket{0}\_s $, um den Ziel Status $\_\ket{\psi} s $ mit Amplitude $ \lambda $ in der durch $ \ket{1}\_f $ gekennzeichneten Basis zu erstellen.
+  Dieses Oracle ist definiert durch $ $ o\ket {0} \_ {f} \ket {0} \_ s = \lambda\ket {1} \_ f \ket {\ PSI} \_ s + \sqrt{1-| \lambda | ^ 2} \ket {0} \_ f \ cdots, $ $ agiert auf der Grundlage des Berechnungs Zustands $ \ket {0} \_ {f} \ket {0} \_ s $, um den Ziel Status $ \ket{\psi} \_ s $ mit Amplitude $ \lambda $ in der durch $ \ket {1} f $ gekennzeichneten Basis zu erstellen \_ .
 
-  Der erste Parameter ist ein Index für das Qubit-Register von $ \ket{0}\_f $. Der zweite Parameter umfasste beide Register.
+  Der erste Parameter ist ein Index für das Qubit-Register von $ \ket {0} \_ f $. Der zweite Parameter umfasste beide Register.
 syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: fe7ced83927d709bcc6fe82d8866b221446c7d73
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1a303e51638a792fb31ee7cca58bd3662d86897b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673480"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331754"

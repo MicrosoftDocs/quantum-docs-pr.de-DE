@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.applyseriesofopsc
 name: ApplySeriesOfOpsC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Wendet eine Liste von OPS und deren Zielen sequenziell auf ein Array an. Klimatisiert
 syntax: "operation ApplySeriesOfOpsC (listOfOps : ('T[] => Unit is Ctl)[], targets : Int[][], register : 'T[]) : Unit"
 input:
@@ -48,9 +48,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applyoprepeatedlyover
 metadata:
-  ms.openlocfilehash: 2f1da35c130c0d8330ca3dce148f199110ae6e3e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 13ee522ce7b1962ffebfaf47873985b4be936ac2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82670955"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357832"
