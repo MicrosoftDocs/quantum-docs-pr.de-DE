@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.applytosubregistera
 name: ApplyToSubregisterA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Wendet einen Vorgang auf ein unter Register eines Register mit Qubits an, die durch ein Array ihrer Indizes angegeben werden.
 
@@ -45,9 +45,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytosubregister
 metadata:
-  ms.openlocfilehash: e1311150f5e7a246df8f2bb91bbdc4e1dd677de2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 293ed347deb27d66f54d85119b2cdd59a9a723b6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674551"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357271"

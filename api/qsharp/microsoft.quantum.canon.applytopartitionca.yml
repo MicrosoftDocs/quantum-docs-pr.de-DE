@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.applytopartitionca
 name: ApplyToPartitionCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Wendet ein paar von Vorgängen auf eine bestimmte Partition eines Registers in zwei Teilen an.
 
@@ -52,9 +52,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytopartition
 metadata:
-  ms.openlocfilehash: 940269f33bbeeddb52d19103f42ec8ebf6508757
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0fef201b3117ef695f3ce6379f61cea61bb6ac44
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674593"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357305"

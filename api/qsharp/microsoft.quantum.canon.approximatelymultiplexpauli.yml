@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.approximatelymultiplexpauli
 name: ApproximatelyMultiplexPauli
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Wendet eine für ein Array von Qubits bedingte Pauli-Drehung an und verkürzt kleine Drehwinkel entsprechend einer gegebenen Toleranz.
 
@@ -18,7 +18,7 @@ summary: >-
 
 
   ##
-remarks: '`coefficients`wird mit Elementen $ \ theta_j = $0,0 aufgefüllt, wenn weniger als $2 ^ n $ angegeben werden.'
+remarks: '`coefficients` wird mit Elementen $ \ theta_j = $0,0 aufgefüllt, wenn weniger als $2 ^ n $ angegeben werden.'
 syntax: 'operation ApproximatelyMultiplexPauli (tolerance : Double, coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
 input:
   content: '(tolerance : Double, coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
@@ -54,9 +54,9 @@ functors:
 seeAlso:
 - multiplexpauli
 metadata:
-  ms.openlocfilehash: 65f74da36837a638d3442b6732ee24c682b2e47c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7fd00c7625cbff1a00f40920be632a05eb3dc59a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674451"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357067"
