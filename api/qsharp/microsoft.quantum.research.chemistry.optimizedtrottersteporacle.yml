@@ -2,7 +2,7 @@
 uid: microsoft.quantum.research.chemistry.optimizedtrottersteporacle
 name: OptimizedTrotterStepOracle
 type: function
-namespace: Microsoft.Quantum.Research.Chemistry
+namespace: microsoft.quantum.research.chemistry
 summary: Gibt den optimierten Vorgang für den Schritt und die für die Ausführung erforderlichen Parameter zurück.
 syntax: 'function OptimizedTrotterStepOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, trotterStepSize : Double, trotterOrder : Int) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
 input:
@@ -22,7 +22,7 @@ input:
 output:
   content: (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))
   types:
-  - summary: 'Ein Tupel, wobei `Int` : die Anzahl der zugeordneten Qubits `Double` ist `1.0/trotterStepSize`, und der Vorgang ist der trockschritt.'
+  - summary: 'Ein Tupel, wobei: `Int` die Anzahl der zugeordneten Qubits ist, `Double` `1.0/trotterStepSize` und der Vorgang ist der trockschritt.'
     types:
     - isPrimitive: true
       uid: Int
@@ -43,9 +43,9 @@ output:
         - Adjoint
         - Controlled
 metadata:
-  ms.openlocfilehash: defa30f488d64991bea7e005d18b9eafeb99f05a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0df7574ed599e094ec820ef683742d0bb02973cc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683116"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330360"

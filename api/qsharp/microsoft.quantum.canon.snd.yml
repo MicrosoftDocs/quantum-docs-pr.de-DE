@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.snd
 name: Snd
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Gibt bei einem Paar das zweite Element zurück.
 syntax: "function Snd (pair : ('T, 'U)) : 'U"
 input:
@@ -18,7 +18,7 @@ input:
 output:
   content: "'U"
   types:
-  - summary: Das zweite Element von `pair`.
+  - summary: Das zweite Element von `pair` .
     uid: "'U"
     isLocal: true
 typeParameters:
@@ -27,9 +27,9 @@ typeParameters:
 - uid: "'U"
   summary: Der Typ des zweiten Members des Paars.
 metadata:
-  ms.openlocfilehash: b9caf08e6640eadabe0c9606a173dc30040281b0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5dcbd3fbc9a1bb32e7e0fa61da89fe15102a283d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678246"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355299"

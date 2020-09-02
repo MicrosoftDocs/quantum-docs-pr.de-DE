@@ -2,13 +2,13 @@
 uid: microsoft.quantum.errorcorrection.css
 name: CSS
 type: newtype
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: Stellt einen von seinem Encoder, Decoder und den zugehörigen Mess Prozeduren für `X` den-bzw.- `Z` Fehler definierten hashbank – Shor – Steane (CSS)-Code dar.
+namespace: microsoft.quantum.errorcorrection
+summary: Stellt einen von seinem Encoder, Decoder und den zugehörigen Mess Prozeduren für den `X` -bzw.-Fehler definierten hashbank – Shor – Steane (CSS)-Code dar `Z` .
 syntax: newtype CSS = (Microsoft.Quantum.ErrorCorrection.EncodeOp, Microsoft.Quantum.ErrorCorrection.DecodeOp, Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp, Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp);
 metadata:
-  ms.openlocfilehash: b1bedcc35249997229cb7d6615df0ad756b4f5ca
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ee80335b929e9c1e4ef5fc67dee03ad9dc99bd29
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685614"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336633"
