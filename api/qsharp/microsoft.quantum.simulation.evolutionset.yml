@@ -2,17 +2,17 @@
 uid: microsoft.quantum.simulation.evolutionset
 name: EvolutionSet
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
   Stellt einen Satz von Gates dar, der leicht implementiert und zum Implementieren von Simulations Algorithmen verwendet werden kann.
 
 
-  Elemente in der Menge werden von einem <xref:microsoft.quantum.simulation.generatorindex>indiziert, und jeder Satz wird von einer Funktion von `GeneratorIndex` bis <xref:microsoft.quantum.simulation.evolutionunitary>beschrieben, die Vorgänge parametrisiert durch eine reelle Zahl, die die Zeit darstellt
+  Elemente in der Menge werden von einem indiziert  <xref:microsoft.quantum.simulation.generatorindex> , und jeder Satz wird von einer Funktion von `GeneratorIndex` bis beschrieben  <xref:microsoft.quantum.simulation.evolutionunitary> , die Vorgänge parametrisiert durch eine reelle Zahl, die die Zeit darstellt
 syntax: newtype EvolutionSet = (Microsoft.Quantum.Simulation.GeneratorIndex -> Microsoft.Quantum.Simulation.EvolutionUnitary);
 metadata:
-  ms.openlocfilehash: 0db782c1909c6121078f251f34bbffd5b49a4d8e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 747986d1374a343827373ef85ac66720ca3c74b6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687005"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343195"

@@ -2,17 +2,17 @@
 uid: microsoft.quantum.simulation.evolutionschedule
 name: EvolutionSchedule
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
   Stellt einen zeitabhängigen Dynamical-Generator dar.
 
 
-  Der `Double` -Parameter ist ein Zeitplan in $ [0,0] $.
+  Der- `Double` Parameter ist ein Zeitplan in $ [0,0] $.
 syntax: newtype EvolutionSchedule = (Microsoft.Quantum.Simulation.EvolutionSet, (Double -> Microsoft.Quantum.Simulation.GeneratorSystem));
 metadata:
-  ms.openlocfilehash: 99e49eb5e118dc64f8fab3a8ef75a796651c3734
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e6fdee28dc3c2b8c2de9e58282ec12abd351cafd
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82655135"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343246"

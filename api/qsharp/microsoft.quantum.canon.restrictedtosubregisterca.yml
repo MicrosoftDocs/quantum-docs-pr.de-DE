@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.restrictedtosubregisterca
 name: RestrictedToSubregisterCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Schränkt einen Vorgang auf ein Array von Indizes eines Registers ein, d. h. ein unter Register.
 
@@ -50,9 +50,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.restrictedtosubregister
 metadata:
-  ms.openlocfilehash: 153dc21e2c4e2ded5acd5c1343c766d7a1cda540
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d40638976d24b793a82fe89f9ed188c7374ebefd
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678415"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355381"
