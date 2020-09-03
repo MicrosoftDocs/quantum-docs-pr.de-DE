@@ -70,9 +70,9 @@ functions:
 - uid: microsoft.quantum.logical.xor
   summary: Gibt die boolesche exklusive Disjunktion von zwei Werten zurück.
 metadata:
-  ms.openlocfilehash: ece9d3bcc41697efa07101844c0693edfc4bec89
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0ab7077bc2cdf9bc76f3da701a88869f8bb9bf85
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673217"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340101"

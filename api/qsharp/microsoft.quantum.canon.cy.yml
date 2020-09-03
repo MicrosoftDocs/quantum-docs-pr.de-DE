@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.cy
 name: CY
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Wendet das Ende-Y-Gate (CY) auf ein paar von Qubits an.
 
@@ -38,9 +38,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: c7d7d0fb5413051ec7a654c04e01b6ffc02903e6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6d2934f6e8b2f5b286d70eb773ae3fdaf8a3ba65
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680283"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356574"

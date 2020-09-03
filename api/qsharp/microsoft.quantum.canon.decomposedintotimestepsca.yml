@@ -2,13 +2,13 @@
 uid: microsoft.quantum.canon.decomposedintotimestepsca
 name: DecomposedIntoTimeStepsCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Gibt einen Vorgang zurück, der den Trotter – Suzuki Integrator für einen angegebenen Vorgang implementiert.
 remarks: >-
-  Wenn diese Funktion `order` mit gleich `1`ist, gibt diese Funktion einen Vorgang zurück, der durch die niedrigste Reihenfolge (Trotter – Suzuki Integrator $ $ \begin{align} S_1 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda}) simuliert werden kann. \end{align} $ $, wobei die Notation von [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139) befolgt wurde und $ \lambda $ die Entwicklungszeit (dargestellt durch die erste Eingabe der zurückgegebenen Operation) ist\{.\}und lassen Sie $ H_j _ {j = 1} ^ {m} $ den Satz der (Schiefe-hermitian) Dynamical- `op(j, lambda, _)` Generatoren aufweisen, die integriert werden, sodass vom einheitlichen Operator $e ^ {H_j \lambda} $ simuliert wird.
+  Wenn `order` Diese Funktion mit gleich `1` ist, gibt diese Funktion einen Vorgang zurück, der durch die niedrigste Reihenfolge (Trotter – Suzuki Integrator $ $ \begin{align} S_1 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda}) simuliert werden kann. \end{align} $ $, wobei die Notation von [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139) befolgt wurde und $ \lambda $ die Entwicklungszeit (dargestellt durch die erste Eingabe der zurückgegebenen Operation) ist. und lassen Sie $ \{ H_j \} _ {j = 1} ^ {m} $ den Satz der (Schiefe-hermitian) Dynamical-Generatoren aufweisen, die integriert werden, sodass `op(j, lambda, _)` vom einheitlichen Operator $e ^ {H_j \lambda} $ simuliert wird.
 
 
-  Ebenso gibt ein `order` von `2` den symmetrischen Trotter der zweiten Ordnung zurück – Suzuki Integrator $ $ \begin{align} S_2 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda/2} \ prod_ {j ' = m} ^{1} e ^ {H_ {j '} \lambda/2}.
+  Ebenso gibt ein `order` von `2` den symmetrischen Trotter der zweiten Ordnung zurück – Suzuki Integrator $ $ \begin{align} S_2 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda/2} \ prod_ {j ' = m} ^ {1} e ^ {H_ {j '} \lambda/2}.
 
   \end{align} $ $
 
@@ -24,7 +24,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: op
-    summary: Ein Vorgang, bei dem eine Index Eingabe ( `Int`Type) und eine Zeiteingabe ( `Double`Typ) für die Zerlegung akzeptiert werden.
+    summary: Ein Vorgang, bei dem eine Index Eingabe (Type `Int` ) und eine Zeiteingabe (Typ `Double` ) für die Zerlegung akzeptiert werden.
     isOperation: true
     input:
       types:
@@ -51,7 +51,7 @@ input:
 output:
   content: ((Double, 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Gibt eine einheitliche-Klasse zurück, die den Trotter – Suzuki Integrator implementiert `Double` , wobei der erste Parameter die Größe des Integrations Schritts ist und der zweite Parameter das Ziel ist.
+  - summary: Gibt eine einheitliche-Klasse zurück, die den Trotter – Suzuki Integrator implementiert, wobei der erste Parameter `Double` die Größe des Integrations Schritts ist und der zweite Parameter das Ziel ist.
     isOperation: true
     input:
       types:
@@ -68,11 +68,11 @@ output:
     - Controlled
 typeParameters:
 - uid: "'T"
-  summary: Der Typ, auf den jeder Zeit Schritt reagieren soll. in der Regel `Qubit[]` entweder `Qubit`oder.
+  summary: Der Typ, auf den jeder Zeit Schritt reagieren soll. in der Regel entweder `Qubit[]` oder `Qubit` .
 metadata:
-  ms.openlocfilehash: 1fdb15e9a28c24ac58f026a89779951b982edb27
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e3febe45478ca86a36844d6af75884872cb12680
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680254"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356540"

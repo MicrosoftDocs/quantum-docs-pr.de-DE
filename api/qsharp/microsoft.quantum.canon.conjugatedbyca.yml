@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.conjugatedbyca
 name: ConjugatedByCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Bei den äußeren und inneren Vorgängen wird ein neuer Vorgang zurückgegeben, der den inneren Vorgang durch den äußeren Vorgang konjugiert.
 remarks: Der äußere Vorgang wird immer als adjointable angenommen, er muss jedoch nicht steuerbar sein, damit der kombinierte Vorgang steuerbar ist.
 syntax: "function ConjugatedByCA (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl)) : ('T => Unit is Adj + Ctl)"
@@ -61,9 +61,9 @@ seeAlso:
 - conjugatedbyca
 - applywith
 metadata:
-  ms.openlocfilehash: a57abf658e59e05baabc700a08c38e10e1325801
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 85b738f29ba5838e6eeedd871756efa771fd08f0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680369"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356659"

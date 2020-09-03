@@ -2,12 +2,12 @@
 uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections
 name: AmplitudeAmplificationFromPartialReflections
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Amplitude-Verstärkung durch partielle Reflektionen.
 remarks: >-
   Die Amplitude-Verstärkung ist ein Sonderfall der Zerlegung von Amplitude, bei der keine System-Qubits vorhanden sind und das schrägende Oracle auf Identity festgelegt ist.
 
-  In den meisten Fällen `startQubits` wird im Status $ \ket{\text{Start}}\_$1 initialisiert. Dies ist der $-$1-eigen Zustand von `startStateReflection`.
+  In den meisten Fällen `startQubits` wird im Status $ \ket{\text{Start}} $1 initialisiert \_ . Dies ist der $-$1-eigen Zustand von `startStateReflection` .
 syntax: 'function AmplitudeAmplificationFromPartialReflections (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle) : (Qubit[] => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle)'
@@ -39,9 +39,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 4dae118f99c8a2e7cf933a378ed38d414a94fef4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a0ee80fdc187154986db9d7621ce5a1d448b4111
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673003"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339642"

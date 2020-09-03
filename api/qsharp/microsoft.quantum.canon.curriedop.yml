@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.curriedop
 name: CurriedOp
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Gibt eine Curry-Version eines Vorgangs für zwei Eingaben zurück.
 
@@ -67,9 +67,9 @@ typeParameters:
 - uid: "'U"
   summary: Der Typ der zweiten Komponente einer Funktion, die für Paare definiert ist.
 metadata:
-  ms.openlocfilehash: b89dbef2ff8d28656cae7f527fb3d94d869381f0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 97b800f064737d0c53bc7c90853cfe9c91a74aa9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675698"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356608"

@@ -2,15 +2,15 @@
 uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
 name: OptimizedBEXY
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: 'Ein einheitlicher $U $, der die Pauli-Zeichenfolge auf $ (X ^ {z +\_1} pY ^ {\_z} p\_) z {p-1} anwendet... Z_0 $ on Qubits $0.. p $, bedingt an einem Index $z \in\{0,\}1 $ und $p $. Das heißt: $ $ \begin{align} u\ket {z} \ Ket {p} \ Ket {\ PSI} = \ket{z}\ket{p} (X ^ {z + 1}\_pY ^ {z}\_p) z\_{p-1}... Z_0 \ket{\psi} \end{align} $ $'
+namespace: microsoft.quantum.chemistry.jordanwigner
+summary: 'Ein einheitlicher $U $, der die Pauli-Zeichenfolge auf $ (X ^ {z + 1} \_ pY ^ {z} \_ p) z \_ {p-1} anwendet... Z_0 $ on Qubits $0.. p $, bedingt an einem Index $z \in \{ 0, 1 \} $ und $p $. Das heißt: $ $ \begin{align} u\ket {z} \ Ket {p} \ Ket {\ PSI} = \ket{z}\ket{p} (X ^ {z + 1} \_ pY ^ {z} \_ p) z \_ {p-1}... Z_0 \ket{\psi} \end{align} $ $'
 syntax: 'operation OptimizedBEXY (pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
-references: '- Encoding Electronic Spectra in Quantum-Verbindungen mit linearer T-Komplexität Ryan babbush, Craig Gidney, Dominic W. Berry, Nathan Wiebe, Jarrod McClean, Alexandru paler, Austin Fowler, Hartmut netvenhttps://arxiv.org/abs/1805.03662'
+references: '- Encoding Electronic Spectra in Quantum-Verbindungen mit linearer T-Komplexität Ryan babbush, Craig Gidney, Dominic W. Berry, Nathan Wiebe, Jarrod McClean, Alexandru paler, Austin Fowler, Hartmut netven https://arxiv.org/abs/1805.03662'
 input:
   content: '(pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[])'
   types:
   - name: pauliBasis
-    summary: Wenn sich dieses Qubit im Status $ \ket{0}$ befindet, wird $X $ angewendet. Wenn Sie den Status $ \ket{1}$ aufweist, wird $Y $ angewendet.
+    summary: Wenn sich dieses Qubit im Status $ \ket {0} $ befindet, wird $X $ angewendet. Wenn Sie den Status $ \ket {1} $ aufweist, wird $Y $ angewendet.
     isPrimitive: true
     uid: Qubit
   - name: indexRegister
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 2208efefe094c472d4f179e3a75dae721c4ff211
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b221c123b0917232b6f470be84d56358fe08f47e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82665300"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339455"

@@ -2,7 +2,7 @@
 uid: microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases
 name: RotationPhasesAsReflectionPhases
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Konvertiert als Single-Qubit-Drehungen angegebene Phasen in Phasen, die als partielle Reflektionen angegeben sind.
 syntax: 'function RotationPhasesAsReflectionPhases (rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
 references: >-
@@ -22,9 +22,9 @@ output:
   - summary: Ein Vorgang, der Phasen implementiert, die als Teil Spiegelungen angegeben werden.
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
 metadata:
-  ms.openlocfilehash: 9fde93767d1ac0d99b6d0f27db00cfe672315831
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a11d124796a0e164c7a8348c76a720e704d49dc9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680073"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339557"
