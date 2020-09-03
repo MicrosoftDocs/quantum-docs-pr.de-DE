@@ -2,7 +2,7 @@
 uid: microsoft.quantum.math.plusa
 name: PlusA
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Gibt die Summe (Verkettung) von zwei Eingaben zurück.
 syntax: "function PlusA (a : 'Element[], b : 'Element[]) : 'Element[]"
 input:
@@ -29,9 +29,9 @@ typeParameters:
 - uid: "'Element"
   summary: Der Typ der einzelnen Elemente in jedem der beiden Eingabe Arrays.
 metadata:
-  ms.openlocfilehash: bf52166cbd0331b6c6a8c49a00bd343913344a41
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 8b729c0c76a12c52beb83313500fbe6c39609f69
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684146"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333760"

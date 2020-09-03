@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.multiplyfxp
 name: MultiplyFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Multipliziert zwei Festkomma Zahlen in quantenregistern.
 remarks: Die aktuelle Implementierung erfordert, dass die drei Fixed-Point-Nummern die gleiche Punktposition und die gleiche Anzahl von Qubits aufweisen.
 syntax: 'operation MultiplyFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
@@ -16,7 +16,7 @@ input:
     summary: Zweite Festkomma Zahl.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: Die Ergebnis Festkomma Zahl muss zunächst den Status $ \ket{0}$ aufweisen.
+    summary: Die Ergebnis Festkomma Zahl muss zunächst den Status $ \ket {0} $ aufweisen.
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -27,9 +27,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: b37ca00a41df323f2cab854eecd40c276696cbe4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c19c5333f936f633427b8fc7d1ce4d1892ea47c5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679474"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353412"

@@ -2,9 +2,9 @@
 uid: microsoft.quantum.intrinsic.r1
 name: R1
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
-  Wendet eine Drehung um den $ \ket{1}$-Zustand um einen angegebenen Winkel an.
+  Wendet eine Drehung um den $ \ket {1} $-Zustand um einen angegebenen Winkel an.
 
 
   \begin{align} R_1 (\orta) \mathrel{: =} \operatorname{Diag} (1, e ^ {i\der TA}).
@@ -42,9 +42,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 5be535daca1227284ddfa8c38a0082fdf8df7865
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 38998df8067a22ce1fdc81f9ad9fbed0a6ec48a2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674131"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346782"

@@ -2,9 +2,9 @@
 uid: microsoft.quantum.intrinsic.r1frac
 name: R1Frac
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
-  Wendet eine Drehung über den $ \ket{1}$-Zustand um einen als dyadic-Bruchteil angegebenen Winkel an.
+  Wendet eine Drehung über den $ \ket {1} $-Zustand um einen als dyadic-Bruchteil angegebenen Winkel an.
 
 
   \begin{align} R_1 (n, k) \mathrel{: =} \operatschmue{Diag} (1, e ^ {i \pi k/2 ^ n}).
@@ -14,7 +14,7 @@ summary: >-
 
   > [!WARNING]
 
-  > Bei diesem Vorgang wird die **gegenüberliegende** Zeichen Konvention aus @"microsoft.quantum.intrinsic.r"verwendet, und der in enthaltene Faktor von $1/2 @"microsoft.quantum.intrinsic.r1"$ ist nicht enthalten.
+  > Bei diesem Vorgang wird die **gegenüberliegende** Zeichen Konvention aus verwendet @"microsoft.quantum.intrinsic.r" , und der in enthaltene Faktor von $1/2 $ ist nicht enthalten @"microsoft.quantum.intrinsic.r1" .
 remarks: >-
   Äquivalent zu:
 
@@ -51,9 +51,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 45fa756e94be8b580c909004016e0f40861111c1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1cfaf195a3c811d43df50548771759f6dbf3fdc6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683732"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346748"

@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.reflectaboutinteger
 name: ReflectAboutInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Reflektiert ein Quantum-Register über eine angegebene klassische Ganzzahl.
 
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7d63f4f3d4f05aa91305c057badbe329f3561bbd
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: f7f26677218b816ae27baee2a0fdde1504619d28
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884658"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353259"

@@ -2,8 +2,8 @@
 uid: microsoft.quantum.intrinsic.rx
 name: Rx
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
-summary: "Wendet eine Drehung zum $x $-Achse um einen angegebenen Winkel an.\n\n\\begin{align} R_x (\\orta) \\mathrel{: =} e ^ {-i \\erta \\ sigma_x/2} = \\begin{bmatrix} \\cos \\bruchteil {\\thta}{2} &-i\\sin \\bruchteil {\\thta}{2} \\\\ \\\\ -i\\sin \\bruchteil {\\thta}{2} & \\cos \\bruch {\\thta}{2} \\end{bmatrix}.  \n\\end{align}"
+namespace: microsoft.quantum.intrinsic
+summary: "Wendet eine Drehung zum $x $-Achse um einen angegebenen Winkel an.\n\n\\begin{align} R_x (\\orta) \\mathrel{: =} e ^ {-i \\erta \\ sigma_x/2} = \\begin{bmatrix} \\cos \\bruchteil {\\thta} {2} &-i\\sin \\bruchteil {\\thta} {2} \\\\ \\\\ -i\\sin \\bruchteil {\\thta} {2} & \\cos \\bruch {\\thta} {2} \\end{bmatrix}.  \n\\end{align}"
 remarks: >-
   Äquivalent zu:
 
@@ -34,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7a205e787e79743cad3f40e978f459d0f42a8100
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: df0884ddba4b104f875db5179c808c5a7695170c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683674"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346510"

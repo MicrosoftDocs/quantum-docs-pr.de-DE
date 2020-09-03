@@ -2,10 +2,10 @@
 uid: microsoft.quantum.logical.and
 name: And
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: Gibt die boolesche Verbindung von zwei Werten zurück.
 remarks: >-
-  Im Gegensatz `and` zum-Operator ist diese Funktion nicht kurz, sodass beide Eingaben vollständig ausgewertet werden.
+  Im Gegensatz zum- `and` Operator ist diese Funktion nicht kurz, sodass beide Eingaben vollständig ausgewertet werden.
 
 
   Bis zu einem kurzen Schluss Verhalten sind die folgenden äquivalent:
@@ -33,13 +33,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`nur dann, wenn `a` und `b` gleich sind `true`.'
+  - summary: '`true` nur dann, wenn `a` und gleich `b` sind `true` .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 01c26ef3804d484d2cfbd6f54261ad80b8f66594
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 79d3e2fb5499e10a73c4ead1c19d36f09b721f98
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674094"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346272"
