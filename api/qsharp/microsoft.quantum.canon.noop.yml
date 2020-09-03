@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.noop
 name: NoOp
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Führt den Identitäts Vorgang (No-OP) für ein Argument aus.
 
@@ -11,10 +11,10 @@ summary: >-
 
   Dies kann hilfreich sein, wenn eine Eingabe eines Vorgangs Typs erwartet wird, aber keine Aktion ausgeführt werden soll.
 
-  Wenn beispielsweise ein bestimmtes Fehlerkorrektur-Syndrom anzeigt, dass kein Fehler aufgetreten ist `NoOp<Qubit[]>` , ist möglicherweise die richtige Wiederherstellungs Prozedur.
+  Wenn beispielsweise ein bestimmtes Fehlerkorrektur-Syndrom anzeigt, dass kein Fehler aufgetreten ist, ist `NoOp<Qubit[]>` möglicherweise die richtige Wiederherstellungs Prozedur.
 
-  Ebenso kann, wenn ein Vorgang ein Zustands Vorbereitungsverfahren erwartet, als `NoOp<Qubit[]>` Eingabe verwendet werden, um den Status $ \ket{0 \cdots 0} $ vorzubereiten.
-remarks: In fast allen Fällen muss der Typparameter für `NoOp` explizit angegeben werden. Beispielsweise `NoOp<Qubit>` ist identisch mit <xref:microsoft.quantum.intrinsic.i>.
+  Ebenso kann, wenn ein Vorgang ein Zustands Vorbereitungsverfahren erwartet, als Eingabe `NoOp<Qubit[]>` verwendet werden, um den Status $ \ket{0 \cdots 0} $ vorzubereiten.
+remarks: In fast allen Fällen muss der Typparameter für `NoOp` explizit angegeben werden. Beispielsweise `NoOp<Qubit>` ist identisch mit <xref:microsoft.quantum.intrinsic.i> .
 syntax: "operation NoOp (input : 'T) : Unit"
 input:
   content: "(input : 'T)"
@@ -34,9 +34,9 @@ functors:
 seeAlso:
 - microsoft.quantum.intrinsic.i
 metadata:
-  ms.openlocfilehash: 74c85340e065929feabb81d7e97339f80255c0f6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9af76ff7f2c559aef0f940ff3c56e6f8d8cdbb60
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678722"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355979"

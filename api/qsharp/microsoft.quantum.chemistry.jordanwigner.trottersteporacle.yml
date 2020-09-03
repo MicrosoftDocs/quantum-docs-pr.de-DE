@@ -2,7 +2,7 @@
 uid: microsoft.quantum.chemistry.jordanwigner.trottersteporacle
 name: TrotterStepOracle
 type: function
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
+namespace: microsoft.quantum.chemistry.jordanwigner
 summary: Gibt den Vorgang des trockschrittes und die für die Ausführung erforderlichen Parameter zurück.
 syntax: 'function TrotterStepOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, trotterStepSize : Double, trotterOrder : Int) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
 input:
@@ -22,7 +22,7 @@ input:
 output:
   content: (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))
   types:
-  - summary: 'Ein Tupel, wobei `Int` : die Anzahl der zugeordneten Qubits `Double` ist `1.0/trotterStepSize`, und der Vorgang ist der trockschritt.'
+  - summary: 'Ein Tupel, wobei: `Int` die Anzahl der zugeordneten Qubits ist, `Double` `1.0/trotterStepSize` und der Vorgang ist der trockschritt.'
     types:
     - isPrimitive: true
       uid: Int
@@ -43,9 +43,9 @@ output:
         - Adjoint
         - Controlled
 metadata:
-  ms.openlocfilehash: d78cac1e2f1a3b95007a3572aa7257d1938b97f4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bdbe6cd51902f66f732ba4f2d5a86e350f18d9b8
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82662970"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339098"

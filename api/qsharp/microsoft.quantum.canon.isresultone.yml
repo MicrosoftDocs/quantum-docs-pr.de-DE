@@ -2,26 +2,26 @@
 uid: microsoft.quantum.canon.isresultone
 name: IsResultOne
 type: function
-namespace: Microsoft.Quantum.Canon
-summary: Testet, `One`ob ein angegebener Ergebniswert gleich ist.
+namespace: microsoft.quantum.canon
+summary: Testet, ob ein angegebener Ergebniswert gleich ist `One` .
 syntax: 'function IsResultOne (input : Result) : Bool'
 input:
   content: '(input : Result)'
   types:
   - name: input
-    summary: '`Result`zu testender Wert.'
+    summary: '`Result` zu testender Wert.'
     isPrimitive: true
     uid: Result
 output:
   content: Bool
   types:
-  - summary: Gibt `true` zurück `input` , `One`wenn gleich ist.
+  - summary: Gibt `true` zurück `input` , wenn gleich ist `One` .
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 18e4f8d157e6783b129543deef0ac0e3e18dfc50
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 653fd6adac4bfeb1968d57955e6636d65cf561d4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679102"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356217"

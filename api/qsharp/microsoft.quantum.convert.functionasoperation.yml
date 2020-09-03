@@ -2,7 +2,7 @@
 uid: microsoft.quantum.convert.functionasoperation
 name: FunctionAsOperation
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: >-
   Konvertiert Funktionen in Vorgänge.
 
@@ -27,7 +27,7 @@ input:
 output:
   content: ('Input => 'Output)
   types:
-  - summary: Ein Vorgang `op` , der `op(input)` mit `fn(input)` for all `input`identisch ist.
+  - summary: Ein Vorgang `op` , der `op(input)` mit `fn(input)` for all identisch ist `input` .
     isOperation: true
     input:
       types:
@@ -43,9 +43,9 @@ typeParameters:
 - uid: "'Output"
   summary: Der Ausgabetyp der Funktion, die konvertiert werden soll.
 metadata:
-  ms.openlocfilehash: a1383f44c1515e60cde3ee44f8daf3c53a621839
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6e5d92c4aeae43707fc21cfa116e1c375160e0b3
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82659522"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338588"

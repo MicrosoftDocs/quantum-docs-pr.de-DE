@@ -2,7 +2,7 @@
 uid: microsoft.quantum.convert.boolarrayasbigint
 name: BoolArrayAsBigInt
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: >-
   Konvertiert ein angegebenes Array von booleschen Werten in eine entsprechende große Ganzzahl.
 
@@ -22,9 +22,9 @@ output:
   - isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 770b565a3137085ff6af3ea3d4a1ad3ff5938f6d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 04f8279a4f399689628d403eb150cd09dc51ba63
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82661969"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338928"
