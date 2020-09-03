@@ -2,7 +2,7 @@
 uid: microsoft.quantum.convert.intasstringwithformat
 name: IntAsStringWithFormat
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: Konvertiert eine angegebene ganzzahlige Zahl unter Verwendung des angegebenen Formats in eine entsprechende Zeichen folgen Darstellung.
 remarks: Weitere Informationen finden Sie unter [c# Int64. destring](https://docs.microsoft.com/dotnet/api/system.int64.tostring?view=netframework-4.7.1#System_Int64_ToString_System_String_) .
 syntax: 'function IntAsStringWithFormat (a : Int, fmt : String) : String'
@@ -21,9 +21,9 @@ output:
   - isPrimitive: true
     uid: String
 metadata:
-  ms.openlocfilehash: 138eea4609ff77dfe9b64f75d2a767ddccc3786b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d73472502e2d4a05f67463e246e7b0f5c39870f2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677423"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338350"
