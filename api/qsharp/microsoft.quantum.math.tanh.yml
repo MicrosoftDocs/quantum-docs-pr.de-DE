@@ -2,7 +2,7 @@
 uid: microsoft.quantum.math.tanh
 name: Tanh
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Gibt den Hyperbeltangens des angegebenen Winkels zurück.
 remarks: Weitere Informationen finden Sie unter [System. Math. Tanh](https://docs.microsoft.com/dotnet/api/system.math.tanh) .
 syntax: 'function Tanh (d : Double) : Double'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 9b662cf73f1fc16edacf245e7cbd53f952a5508a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 900549f91e5057d83e1a19373f5c02e6ac6ee8af
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685301"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332808"

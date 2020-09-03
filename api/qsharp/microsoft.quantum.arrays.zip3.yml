@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.zip3
 name: Zip3
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Bei drei Arrays gibt ein neues Array von 3-Tupeln zurück, sodass jedes 3-Tupel ein Element aus jedem ursprünglichen Array enthält.
 syntax: "function Zip3 (first : 'T1[], second : 'T2[], third : 'T3[]) : ('T1, 'T2, 'T3)[]"
 input:
@@ -26,7 +26,7 @@ input:
 output:
   content: ('T1, 'T2, 'T3)[]
   types:
-  - summary: Ein Array, das jeweils `(first[idx], second[idx], third[idx])` `idx`3 Tupel des Formulars enthält. Wenn die drei Arrays nicht die gleiche Länge aufweisen, ist die Ausgabe so lang wie die kürzere der Eingaben.
+  - summary: Ein Array, das jeweils 3 Tupel des Formulars enthält `(first[idx], second[idx], third[idx])` `idx` . Wenn die drei Arrays nicht die gleiche Länge aufweisen, ist die Ausgabe so lang wie die kürzere der Eingaben.
     isArray: true
     types:
     - uid: "'T1"
@@ -46,9 +46,9 @@ seeAlso:
 - zip
 - zip4
 metadata:
-  ms.openlocfilehash: 899066b309e41df3a1bb2bdce93382ff58de2662
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d16fb3da1b11fbed9487ef8555dd83bb6b3a16a5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680752"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351389"

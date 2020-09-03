@@ -2,7 +2,7 @@
 uid: microsoft.quantum.logical.nearlyequald
 name: NearlyEqualD
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: Gibt nur dann true zurück, wenn zwei Eingaben fast gleich sind (d. h. innerhalb einer Toleranz von 1E-12).
 remarks: >-
   Die folgenden sind gleichwertig:
@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`, wenn und nur `a` , `b`wenn fast gleich ist.'
+  - summary: '`true` , wenn und nur `a` , wenn fast gleich ist `b` .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: dc752d914306cfb4f4bca481af3e6cd7006b644e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3f11baf79c830a9fb85063cd7dc86fbfcd06b07a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684627"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345456"
