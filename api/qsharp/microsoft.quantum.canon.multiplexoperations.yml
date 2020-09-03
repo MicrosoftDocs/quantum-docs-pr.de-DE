@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.multiplexoperations
 name: MultiplexOperations
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Wendet ein Array von Vorgängen an, die von einem Array von Zahlen Zuständen gesteuert werden.
 
@@ -11,9 +11,9 @@ summary: >-
 
 
   $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
-remarks: '`coefficients`wird mit Identitäts Elementen aufgefüllt, wenn weniger als $2 ^ n $ angegeben werden. Diese Implementierung verwendet $n-$1-hilfssbits.'
+remarks: '`coefficients` wird mit Identitäts Elementen aufgefüllt, wenn weniger als $2 ^ n $ angegeben werden. Diese Implementierung verwendet $n-$1-hilfssbits.'
 syntax: "operation MultiplexOperations (unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
-references: '- Zur ersten Quantum-Simulation mit Quantum Beschleunigung Andrew M. Childs, Dmitri Maslov, yunabong Nam, Neil J. Ross, Yuan suhttps://arxiv.org/abs/1711.10980'
+references: '- Zur ersten Quantum-Simulation mit Quantum Beschleunigung Andrew M. Childs, Dmitri Maslov, yunabong Nam, Neil J. Ross, Yuan su https://arxiv.org/abs/1711.10980'
 input:
   content: "(unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T)"
   types:
@@ -48,9 +48,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 8cb4744c27da953a997f01b26aac6b952998cc78
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 96a3438148a2acb7e75f8b9791aa686dae6e5641
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885382"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355923"

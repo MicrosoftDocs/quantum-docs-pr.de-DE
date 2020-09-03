@@ -2,14 +2,14 @@
 uid: microsoft.quantum.chemistry.htermstogenidx
 name: HTermsToGenIdx
 type: function
-namespace: Microsoft.Quantum.Chemistry
-summary: Konvertiert einen Index in einen hamiltona-Begriff `HTerm[]` im Datenformat in einen generatorindex.
+namespace: microsoft.quantum.chemistry
+summary: Konvertiert einen Index in einen hamiltona-Begriff im `HTerm[]` Datenformat in einen generatorindex.
 syntax: 'function HTermsToGenIdx (data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[], idx : Int) : Microsoft.Quantum.Simulation.GeneratorIndex'
 input:
   content: '(data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[], idx : Int)'
   types:
   - name: data
-    summary: Eingabedaten im `HTerm[]` -Format.
+    summary: Eingabedaten im- `HTerm[]` Format.
     isArray: true
     uid: microsoft.quantum.chemistry.hterm
   - name: termType
@@ -24,12 +24,12 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.GeneratorIndex
   types:
-  - summary: Ein generatorindex, der einen von `data[idx]`dargestellten hamiltona-Begriff darstellt, sowie zusätzliche Informationen `termType`, die von hinzugefügt werden.
+  - summary: Ein generatorindex, der einen von dargestellten hamiltona-Begriff darstellt `data[idx]` , sowie zusätzliche Informationen, die von hinzugefügt werden `termType` .
     uid: microsoft.quantum.simulation.generatorindex
 metadata:
-  ms.openlocfilehash: 6c7c235cc1d3ccb5ea0b739c22a5d2c5c33129ce
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 451332a2ad0ade4871920a7da34d8af0afd990c9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677561"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354211"

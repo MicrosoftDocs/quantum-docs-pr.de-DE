@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.iteratethroughcartesianproduct
 name: IterateThroughCartesianProduct
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Wendet einen Vorgang für jeden Index im kartesischen Produkt mehrerer Bereiche an.
 
 
-  Wendet iterativ einen Vorgang für jedes Element des kartesischen Produkts von `0..(bounds[0] - 1)`, `0..(bounds[1] - 1)`,... an,`0..(bounds[Length(bounds) - 1] - 1)`
+  Wendet iterativ einen Vorgang für jedes Element des kartesischen Produkts von `0..(bounds[0] - 1)` , `0..(bounds[1] - 1)` ,... an, `0..(bounds[Length(bounds) - 1] - 1)`
 examples: >-
-  Bei einem Vorgang `op`sind die folgenden beiden Code Ausschnitte äquivalent:
+  Bei einem Vorgang `op` sind die folgenden beiden Code Ausschnitte äquivalent:
 
 
   ```Q#
@@ -69,9 +69,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.iteratethroughcartesianpower
 metadata:
-  ms.openlocfilehash: 0021d7715963d0b0d2f3a0248b857b7591876220
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 07b22e7b094198a42c6126579ebf285b7d93af52
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679045"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356183"

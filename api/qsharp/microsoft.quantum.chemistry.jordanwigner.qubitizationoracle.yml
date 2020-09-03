@@ -2,7 +2,7 @@
 uid: microsoft.quantum.chemistry.jordanwigner.qubitizationoracle
 name: QubitizationOracle
 type: function
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
+namespace: microsoft.quantum.chemistry.jordanwigner
 summary: Gibt den qubisierungsvorgang und die für die Ausführung erforderlichen Parameter zurück.
 syntax: 'function QubitizationOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
 input:
@@ -14,7 +14,7 @@ input:
 output:
   content: (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))
   types:
-  - summary: 'Ein Tupel, in `Int` dem: die Anzahl der zugeordneten Qubits ist, `Double` die One-Norm von hamiltona-Koeffizienten ist, und der Vorgang ist der durch die qubisierung erstellte Quantum Walk.'
+  - summary: 'Ein Tupel, in dem: `Int` die Anzahl der zugeordneten Qubits ist, `Double` die One-Norm von hamiltona-Koeffizienten ist, und der Vorgang ist der durch die qubisierung erstellte Quantum Walk.'
     types:
     - isPrimitive: true
       uid: Int
@@ -35,9 +35,9 @@ output:
         - Adjoint
         - Controlled
 metadata:
-  ms.openlocfilehash: 9e58837b8f4d59505a321578cbd9f69b4c849627
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e4aac826537428f5226b83873beb29a06e21dd75
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82663456"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339166"

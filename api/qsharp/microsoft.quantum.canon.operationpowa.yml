@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.operationpowa
 name: OperationPowA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Löst einen Vorgang für eine Stromversorgung aus.
 
@@ -52,9 +52,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.operationpow
 metadata:
-  ms.openlocfilehash: 4cae162ca7528f8cf59a5cbd6e9102a222f2a6f8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e518adab118600e52ab99102bab6e2de11d54f31
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678683"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355860"
