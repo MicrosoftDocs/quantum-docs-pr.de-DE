@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.multiplyi
 name: MultiplyI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Multiplizieren `xs` Sie Integer `ys` nach Ganzzahl, und `result`speichern Sie das Ergebnis in, das anfänglich NULL sein muss.
+namespace: microsoft.quantum.arithmetic
+summary: Multiplizieren Sie Integer `xs` nach Ganzzahl `ys` , und speichern Sie das Ergebnis in `result` , das anfänglich NULL sein muss.
 remarks: >-
   Verwendet einen standardmäßigen Verschiebungs-und Add-Ansatz zum Implementieren der Multiplikation.
 
@@ -19,7 +19,7 @@ input:
     summary: $n $-Bit-Multiplikator (littleEndian)
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: $2N $-Bit-Ergebnis (littleEndian) muss zunächst den Status $ \ket{0}$ aufweisen.
+    summary: $2N $-Bit-Ergebnis (littleEndian) muss zunächst den Status $ \ket {0} $ aufweisen.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: fcb55b47c0d5ca82736e8c3da14190daffd2b414
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 67e1ef577bf36cf524d2468bc191d2b381c800df
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679486"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353378"

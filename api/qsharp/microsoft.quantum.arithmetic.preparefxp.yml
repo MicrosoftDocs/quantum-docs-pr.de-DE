@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.preparefxp
 name: PrepareFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Initialisieren Sie eine Quantum-fixpunktzahl in eine klassische Konstante.
 syntax: 'operation PrepareFxP (constant : Double, fp : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 3bf618cc74481e87da11d9b5328a64432afae468
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a24d076ccad09dd564ed702155d9c1f15d111d16
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679426"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353344"

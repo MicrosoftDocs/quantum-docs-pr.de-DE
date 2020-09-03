@@ -2,17 +2,17 @@
 uid: microsoft.quantum.intrinsic.rfrac
 name: RFrac
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
   Wendet eine Drehung um die angegebene Pauli-Achse um einen als dyadic-Bruchteil angegebenen Winkel an.
 
 
-  \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}, \end{align} WHERE $ \mu \in \{i, X, Y, Z\}$.
+  \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}, \end{align} WHERE $ \mu \in \{ i, X, Y, Z \} $.
 
 
   > [!WARNING]
 
-  > Bei diesem Vorgang wird die **gegenüberliegende** Zeichen Konvention von @"microsoft.quantum.intrinsic.r"verwendet.
+  > Bei diesem Vorgang wird die **gegenüberliegende** Zeichen Konvention von verwendet @"microsoft.quantum.intrinsic.r" .
 remarks: >-
   Äquivalent zu:
 
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: dc9f0ca68e1528ee7a36ef1503785cf60c08567c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 00baacab18c2fa77946abf1f0220da6016b688e6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683687"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346646"
