@@ -2,10 +2,10 @@
 uid: microsoft.quantum.core.rangestart
 name: RangeStart
 type: function
-namespace: Microsoft.Quantum.Core
+namespace: microsoft.quantum.core
 summary: Gibt den definierten Startwert des angegebenen Bereichs zurück.
 remarks: >-
-  Das erste Element eines Bereichs Ausdrucks ist `start`, sein zweites Element `start+step`, das dritte Element ist `start+step+step`usw., bis `end` erfolgreich ist.
+  Das erste Element eines Bereichs Ausdrucks ist `start` , sein zweites Element `start+step` , das dritte Element ist `start+step+step` usw., bis erfolgreich `end` ist.
 
 
   Beachten Sie, dass der definierte Startwert eines Bereichs mit dem ersten Element der Sequenz übereinstimmt, es sei denn, der Bereich gibt eine leere Sequenz an (z. b. 2.). 1).
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: a5a5240da851b459e732c78f7be94b8a2d02b1f1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5185ab84eb872312828011842988b4a8b1e55e53
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82657250"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337976"

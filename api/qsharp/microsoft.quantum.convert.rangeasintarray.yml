@@ -2,8 +2,8 @@
 uid: microsoft.quantum.convert.rangeasintarray
 name: RangeAsIntArray
 type: function
-namespace: Microsoft.Quantum.Convert
-summary: Erstellt ein Array `arr` von ganzen Zahlen, die nach Start. aufgelistet sind. Schritt. Schließlich.
+namespace: microsoft.quantum.convert
+summary: Erstellt ein Array von ganzen Zahlen, die `arr` nach Start. aufgelistet sind. Schritt. Schließlich.
 examples: >-
   ```qsharp
 
@@ -23,14 +23,14 @@ input:
 output:
   content: Int[]
   types:
-  - summary: Ein neues Array von ganzen Zahlen, das den Werten entspricht, die `range`durch durchlaufen werden.
+  - summary: Ein neues Array von ganzen Zahlen, das den Werten entspricht, die durch durchlaufen werden `range` .
     isArray: true
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: f909319a624459b2453db2ac73d3ceaec38f6911
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 22077ab84984e3701fef26c28fefefd325ea4627
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677371"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338316"
