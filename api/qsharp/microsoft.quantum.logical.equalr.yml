@@ -2,7 +2,7 @@
 uid: microsoft.quantum.logical.equalr
 name: EqualR
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: Gibt nur dann true zurück, wenn zwei Eingaben gleich sind.
 remarks: >-
   Die folgenden sind gleichwertig:
@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`, `a` `b`wenn gleich ist.'
+  - summary: '`true``a`, wenn gleich ist `b` .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 88ac59dd3a0972e1c43e2d4c7716dcf7403d83c0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: beb31b0eb25f2e2d8e09e774ba7d64d0ee8d13f6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685901"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346000"

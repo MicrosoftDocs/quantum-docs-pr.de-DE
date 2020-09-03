@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.sequencei
 name: SequenceI
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Ein Array von ganzen Zahlen in einem angegebenen Intervall erhalten.
 examples: >-
   ```qsharp
@@ -28,20 +28,20 @@ input:
     isPrimitive: true
     uid: Int
   - name: to
-    summary: Ein inklusiver Endindex des Intervalls, das nicht kleiner `from`als ist.
+    summary: Ein inklusiver Endindex des Intervalls, das nicht kleiner als ist `from` .
     isPrimitive: true
     uid: Int
 output:
   content: Int[]
   types:
-  - summary: Ein Array, das die Reihenfolge `from`der `from + 1`Zahlen,,.. `to`., enthält.
+  - summary: Ein Array, das die Reihenfolge der Zahlen `from` , `from + 1` ,..., enthält `to` .
     isArray: true
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0efe1b4c3980c808cd89e56fd4948e06218cab66
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 079ea7c2082f541c89bfee1f7edd8bc2ed670751
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680826"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351678"

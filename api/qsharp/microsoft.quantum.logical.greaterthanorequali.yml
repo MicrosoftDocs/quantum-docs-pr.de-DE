@@ -2,7 +2,7 @@
 uid: microsoft.quantum.logical.greaterthanorequali
 name: GreaterThanOrEqualI
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: Gibt nur dann true zurück, wenn eine Zahl größer als eine andere Zahl oder gleich einer anderen Zahl ist.
 remarks: >-
   Die folgenden sind gleichwertig:
@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true``a` , `b`wenn größer als oder gleich ist.'
+  - summary: '`true``a`, wenn größer als oder gleich ist `b` .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 78c69a4e3e0463b965b69969e384aaf396471b91
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 72f63c48cf6da7affac2d2fb40fdd0500ccabdfb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684759"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345745"

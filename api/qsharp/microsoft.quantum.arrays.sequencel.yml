@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arrays.sequencel
 name: SequenceL
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Ein Array von ganzen Zahlen in einem angegebenen Intervall erhalten.
-remarks: Der Unterschied `from` zwischen `to` und muss in einen `Int` -Wert passen.
+remarks: Der Unterschied zwischen `from` und `to` muss in einen- `Int` Wert passen.
 examples: >-
   ```qsharp
 
@@ -24,20 +24,20 @@ input:
     isPrimitive: true
     uid: BigInt
   - name: to
-    summary: Ein inklusiver Endindex des Intervalls, das nicht kleiner `from`als ist.
+    summary: Ein inklusiver Endindex des Intervalls, das nicht kleiner als ist `from` .
     isPrimitive: true
     uid: BigInt
 output:
   content: BigInt[]
   types:
-  - summary: Ein Array, das die Reihenfolge `from`der `from + 1`Zahlen,,.. `to`., enthält.
+  - summary: Ein Array, das die Reihenfolge der Zahlen `from` , `from + 1` ,..., enthält `to` .
     isArray: true
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 7271856286009cfd1651f19f69f932e79d79c2bf
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c39259d5c39ff523464b1defc3c29c7dca6551ee
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680813"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351661"
