@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d815a9a25b8ba5e9489b6d3d27fb0d64ab4aaa1d
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
+ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863442"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90063239"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Tutorial: Erkunden der Verschränkung mit Q\#
 
@@ -112,7 +112,7 @@ Ein- Q# Vorgang ist eine Quantum-Unterroutine. Das heißt, es handelt sich um ei
 
 Die Argumente für eine Operation werden als Tupel angegeben, in Klammern eingeschlossen.
 
-Der Rückgabetyp der Operation wird nach einem Doppelpunkt angegeben. In diesem Fall hat die Operation `SetQubitState` keinen Rückgabewert, daher ist sie als `Unit` zurückgebend markiert. Dies Q# entspricht `unit` in F #, das ungefähr analog zu `void` in c# ist, und ein leeres Tupel ( `Tuple[()]` ) in Python.
+Der Rückgabetyp der Operation wird nach einem Doppelpunkt angegeben. In diesem Fall hat die Operation `SetQubitState` keinen Rückgabewert, daher ist sie als `Unit` zurückgebend markiert. Dies Q# entspricht `unit` in F #, das ungefähr analog zu `void` in c# ist, und ein leeres Tupel in python ( `()` , dargestellt durch den Typhinweis `Tuple[()]` ).
 
 Sie haben im ersten Vorgang zwei Quantum-Vorgänge verwendet Q# :
 
