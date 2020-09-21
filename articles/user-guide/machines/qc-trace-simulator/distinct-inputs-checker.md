@@ -2,19 +2,19 @@
 title: Unterschiedliche Inputs-Eingaben-Quantum Development Kit
 description: Erfahren Sie mehr über die unterschiedliche Microsoft QDK-Eingaben-Prüfung, die den Quantum-Ablauf Verfolgungs Simulator verwendet, um Ihren Q# Code auf potenzielle Konflikte mit freigegebenen Qubits zu überprüfen
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 750c94e7f861678d37f051619ff5b29bf4fd3d3e
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: bcb0bc92a546279496d27ad9b8c5f943ac133e2a
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868269"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833458"
 ---
 # <a name="quantum-trace-simulator-distinct-inputs-checker"></a>Quantum-Ablauf Verfolgungs Simulator: unterschiedliche Eingaben für Eingaben
 
@@ -88,7 +88,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - Übersicht über den Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .
 - Die <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API-Referenz.

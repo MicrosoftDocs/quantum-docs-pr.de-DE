@@ -2,19 +2,19 @@
 title: Klassische Daten werden geladen
 description: Erfahren Sie, wie Sie ein eigenes Dataset laden, um ein Klassifizierungs Modell mit dem Microsoft Quantum Development Kit (QDK) zu trainieren.
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.load
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 26ba7411c9ade1d6c4b606e8c12c10ade18fc584
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: cd6fdb6bb33a65ee02ac8c43f40df9abeff9c841
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868830"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833693"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>Laden und klassifizieren ihrer eigenen Datasets
 
@@ -80,7 +80,7 @@ Angenommen, wir verfügen über ein kleines DataSet mit den Höhen und Gewichtun
 | 0,54      | 30         | Hund    |
 | 0,30      | 8          | Cat    |
 | 0,91      | 44         | Hund    |
-| 0,86      | 31          | Hund    |
+| 0.86      | 31          | Hund    |
 | 0,32      | 5         | Cat    |
 | 0,25      | 4          | Cat    |
 

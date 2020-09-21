@@ -4,18 +4,18 @@ description: Microsoft Quantum Development Kit Hinweise und Informationen zu Dri
 services: service-name-with-dashes-AZURE-ONLY
 keywords: Vermeiden Sie es, Schlüsselwörter hinzuzufügen oder zu bearbeiten, ohne Ihren SEO-Experten zurate zu ziehen.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1d76e9c8532dd7818941d182773a8f85a86becee
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 939dc681d6b9a89f02fd1f392b7fd84067d98e8f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869748"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834124"
 ---
 # <a name="third-party-software-notices-and-information"></a>HINWEISE UND INFORMATIONEN ZU DRITTANBIETERSOFTWARE
 
@@ -195,7 +195,7 @@ Ein „Mitwirkender“ ist eine Person, die ihren Beitrag unter dieser Lizenz ve
 
 (D) Wenn Sie Teile der Software in Quellcodeform vertreiben, dürfen Sie dies nur unter dieser Lizenz tun, indem Sie Ihrem Beitrag eine vollständige Kopie dieser Lizenz beifügen. Wenn Sie Teile der Software in kompilierter oder Objektcodeform vertreiben, dürfen Sie dies nur unter einer Lizenz tun, die diese Lizenz einhält.
 
-(E) Die Software wird „wie besehen“ lizenziert. Sie tragen das mit der Nutzung verbundene Risiko. Die Mitwirkenden verfügen über keine ausdrücklichen Gewährleistungen, Garantien oder Bedingungen. Möglicherweise haben Sie unter den örtlich anwendbaren Gesetzen zusätzliche Verbraucherrechte, die durch diese Lizenz nicht abgeändert werden können. Im durch das örtlich anwendbare Recht gestatteten Umfang schließen die Mitwirkenden konkludente Garantien der Handelsüblichkeit, Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten Dritter aus.
+(E) Die Software wird „wie besehen“ lizenziert. Sie tragen das alleinige Verwendungsrisiko. Die Mitwirkenden verfügen über keine ausdrücklichen Gewährleistungen, Garantien oder Bedingungen. Möglicherweise haben Sie unter den örtlich anwendbaren Gesetzen zusätzliche Verbraucherrechte, die durch diese Lizenz nicht abgeändert werden können. Im durch das örtlich anwendbare Recht gestatteten Umfang schließen die Mitwirkenden konkludente Garantien der Handelsüblichkeit, Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten Dritter aus.
 
 ## <a name="fsharpcore-notices-and-information"></a>FSharp. Core-Hinweise und-Informationen
 ---------------------------------------
@@ -268,7 +268,7 @@ DIE SOFTWARE WIRD "WIE BESEHEN" OHNE JEGLICHE GEWÄHRLEISTUNG, WEDER AUSDRÜCKLI
 
 Sofern nicht anders angegeben, wird die Bibliothek der Bibliothek im Quell-und Binärformat unter der vereinfachten BSD-Lizenz verteilt. Die vereinfachte BSD-Lizenz (auch als "2. Klausel BSD License") ist eine einfache, nicht ordnungsgemäße Lizenz, die OSI-kompatibel ist. 
 
-Mit "f" werden von der Unicode-Zeichen Datenbank v abgeleitete Daten integriert. 8.0.0, Copyright (c) 1991 \ u20122015 Unicode, Inc., der unter den folgenden Bedingungen verteilt wird:http://www.unicode.org/terms_of_use.html#Exhibit1 
+Mit "f" werden von der Unicode-Zeichen Datenbank v abgeleitete Daten integriert. 8.0.0, Copyright (c) 1991 \ u20122015 Unicode, Inc., der unter den folgenden Bedingungen verteilt wird: http://www.unicode.org/terms_of_use.html#Exhibit1 
 
 Die Dokumentation im doc-Ordner ist unter der Creative Commons-Karte "Attribution-Noncommercial 3,0 unportiert" lizenziert. Diese Creative Commons-Lizenz gestattet Ihnen nicht, die Dokumentation zu kommerziellen Zwecken ohne Berechtigungen zu verwenden. Dies bedeutet beispielsweise, dass Sie die Dokumentation nicht in Buch Form für den Gewinn verkaufen oder in eine Webinhalts Farm ablegen können, um mit Werbeeinblendungen Geld zu verdienen. Allerdings können Sie die Dokumentation natürlich in einem kommerziellen Kontext (z. b. im Intranet eines kommerziellen Unternehmens) verwenden, sofern Sie nicht versuchen, direkt aus dem Text der Dokumentation Geld zu verdienen. 
 
@@ -284,6 +284,6 @@ Diese Software wird von den Urheberrechtsinhabern unverändert bereitgestellt, u
 
 2,2 Creative Commons-Zuordnung-nicht kommerziell 3,0 unportierte Lizenz
 
-FAShttps://creativecommons.org/licenses/by-nc/3.0/
+FAS https://creativecommons.org/licenses/by-nc/3.0/
 
-Der vollständige Lizenztext:https://creativecommons.org/licenses/by-nc/3.0/legalcode 
+Der vollständige Lizenztext: https://creativecommons.org/licenses/by-nc/3.0/legalcode 

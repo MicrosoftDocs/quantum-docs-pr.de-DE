@@ -1,6 +1,6 @@
 ---
 Title: Quantum Oracles Description: Hier erfahren Sie, wie Sie mit Quantum-Oracles, Black Box-Vorgängen, die als Eingabe für einen anderen Algorithmus verwendet werden, arbeiten und definieren.
-Autor: cgranade UID: Microsoft. Quantum. Concepts. Oracles ms. Author: Christopher.Granade@microsoft.com ms. Date: 07/11/2018 ms. Topic: article NO-LOC:
+Autor: cgranade UID: Microsoft. Quantum. Concepts. Oracles ms. Author: chgranad ms. Date: 07/11/2018 ms. Topic: article NO-LOC:
 - "Q#"
 - "$$v"
 - "$$"
@@ -140,7 +140,7 @@ O \ket { \psi } & = o \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ 
 $$
 
 ## <a name="phase-oracles"></a>Phasen-Oracles
-Alternativ $ $ dazu können Sie f in ein Oracle O codieren, $ $ indem Sie eine _Phase_ auf der Grundlage der Eingabe für $ O anwenden $ . Beispielsweise können wir $ O so definieren $ , dass$$
+Alternativ $ $ dazu können Sie f in ein Oracle O codieren, $ $ indem Sie eine _Phase_ auf der Grundlage der Eingabe für $ O anwenden $ . Beispielsweise können wir $ O so definieren $ , dass $$
 \begin{align}
     O \ket { x } = (-1) ^ { f (x) } \ket { x } .
 \end{align}
@@ -148,9 +148,9 @@ $$
 Wenn eine Phase, die Oracle für ein Register anfänglich in einem Compute-Status x anwendet, eine Phase $ \ket { } $ ist, ist diese Phase eine globale Phase und daher nicht Observable.
 Ein solches Oracle kann jedoch eine sehr leistungsfähige Ressource sein, wenn Sie auf eine übergeordnete Position oder einen kontrollierten Vorgang angewendet wird.
 Stellen Sie sich z $ . b. einen Phase-Oracle-O_f $ für eine Single-Qubit-Funktion $ f vor $ .
-Seitdem$$
+Seitdem $$
 \begin{align}
-    O_f\ket{+}
+    O_f \ket{+}
         &=O_f ( \ket { 0 }  +  \ket { 1 } )/ \sqrt { 2 }\\\\
         &=((-1) ^ { f (0) } \ket { 0 } + (-1) ^ { f (1) } \ket { 1 } )/ \sqrt { 2 }\\\\
         &=(-1) ^ { f (0) } ( \ket { 0 } + (-1) ^ { f (1)-f (0) } \ket { 1 } )/ \sqrt { 2 }\\\\

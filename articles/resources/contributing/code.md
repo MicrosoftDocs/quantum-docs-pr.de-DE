@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 956b0957a5261b8a77bf18d776fbcc2853bfbfe7
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b27d084bbe2cda878efa6250c52c0ae628637850
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866908"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834889"
 ---
 # <a name="contributing-code"></a>Mitwirken am Code
 
@@ -34,7 +34,7 @@ Daher ist es hilfreich, wenn die durch einen Beitrag hinzugefügten Funktionen g
 Die Q# Funktionen, Vorgänge und benutzerdefinierten Typen, aus denen Bibliotheken wie der Kanon bestehen, werden automatisch als Teil der Entwicklung im [**Microsoft/quantrelibraries-**](https://github.com/Microsoft/QuantumLibraries/) Repository getestet.
 Wenn eine neue Pull Request beispielsweise geöffnet wird, prüft unsere [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) Konfiguration, ob die Änderungen im Pull Request vorhandene Funktionen, von denen die Quantum-Programmier Community abhängt, nicht unterbrechen.
 
-Mit der neuesten Q# Version werden Komponententests mit dem- `@Test("QuantumSimulator")` Attribut definiert. Das Argument kann entweder "Quantensimulator", "-ffolisimulator", "tracesimulator" oder ein beliebiger voll qualifizierter Name sein, der das Ausführungs Ziel angibt. Mehrere Attribute, die verschiedene Ausführungs Ziele definieren, können an dieselbe Aufruf Bare angefügt werden. Einige unserer Tests verwenden weiterhin das veraltete [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) -Paket, das alle Q# Funktionen und Vorgänge verfügbar macht, `Test` die auf das [xUnit](https://xunit.github.io/) -Framework enden. Dieses Paket wird nicht mehr zum Definieren von Komponententests benötigt. 
+Mit der aktuellen Q# Version werden Komponententests mit dem- `@Test("QuantumSimulator")` Attribut definiert. Das Argument kann entweder "Quantensimulator", "-ffolisimulator", "tracesimulator" oder ein beliebiger voll qualifizierter Name sein, der das Testlauf-Ziel angibt. Mehrere Attribute, die verschiedene Testlauf-Ziele definieren, können an denselben aufrufenden angefügt werden. Einige unserer Tests verwenden weiterhin das veraltete [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) -Paket, das alle Q# Funktionen und Vorgänge verfügbar macht, `Test` die auf das [xUnit](https://xunit.github.io/) -Framework enden. Dieses Paket wird nicht mehr zum Definieren von Komponententests benötigt. 
 
 Die folgende Funktion wird verwendet, um sicherzustellen, dass die <xref:microsoft.quantum.canon.fst> -Funktion und die-Funktion <xref:microsoft.quantum.canon.snd> beide die richtigen Ausgaben in einem repräsentativen Beispiel zurückgeben.
 Wenn die Ausgabe von `Fst` oder `Snd` falsch ist, wird die- `fail` Anweisung verwendet, damit der Test fehlschlägt.

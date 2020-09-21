@@ -16,7 +16,7 @@ summary: >-
 
   Sie kann durch die große ganze Zahl `0xE8L` in Hexadezimal Schreibweise oder als Dezimal Schreibweise dargestellt werden `232L` .  Das- `L` Suffix gibt an, dass die Konstante vom Typ ist `BigInt` .
 
-  Weitere Informationen zu dieser Darstellung finden Sie auch in den [Wahrheitstabellen Kata](https://github.com/microsoft/QuantumKatas/tree/master/TruthTables).
+  Weitere Informationen zu dieser Darstellung finden Sie auch in den [Wahrheitstabellen Kata](https://github.com/microsoft/QuantumKatas/tree/main/TruthTables).
 
 
   Die-Implementierung nutzt @"microsoft.quantum.intrinsic.cnot" und @"microsoft.quantum.intrinsic.r1" Gates.
@@ -52,9 +52,9 @@ functors:
 seeAlso:
 - microsoft.quantum.synthesis.applyxcontrolledontruthtablewithcleantarget
 metadata:
-  ms.openlocfilehash: 782833d34462056413628504cca92f5333a04659
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: d07c1ae20f133d1215d1f6b0cdbd07a635039dda
+  ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89327986"
+  ms.lasthandoff: 09/17/2020
+  ms.locfileid: "90759355"

@@ -2,19 +2,19 @@
 title: Intrinsische Vorgänge und Funktionen im QDK
 description: Erfahren Sie mehr über die intrinsischen Vorgänge und Funktionen im QDK, einschließlich klassischer Funktionen und einheitlicher, Rotations-und maßoperationen.
 author: QuantumWriter
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4eb10e82a64381c503703be440be90e60f3a8622
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: dd507d0c644ae711a5e5a1dff9156f571cb0fa92
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863727"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833556"
 ---
 # <a name="the-prelude"></a>Der Auftakt #
 
@@ -240,7 +240,7 @@ Dies bedeutet, dass ein einzelner Zielcomputer diese Auswirkungen auf die Leistu
 
 ### <a name="math"></a>Mathematik ###
 
-Der <xref:microsoft.quantum.math> -Namespace stellt viele nützliche Funktionen aus der [ `System.Math` Klasse](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)der .net-Basisklassen Bibliothek bereit.
+Der <xref:microsoft.quantum.math> -Namespace stellt viele nützliche Funktionen aus der [ `System.Math` Klasse](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true)der .net-Basisklassen Bibliothek bereit.
 Diese Funktionen können auf die gleiche Weise wie alle anderen Funktionen verwendet werden Q# :
 
 ```qsharp

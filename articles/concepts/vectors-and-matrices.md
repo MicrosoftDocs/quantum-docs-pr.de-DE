@@ -1,6 +1,6 @@
 ---
 Title: Vektoren und Matrizen in Quantum Computing Description: Erlernen Sie die Grundlagen der Arbeit mit Vektoren und Matrizen.
-Autor: quantumwriter UID: Microsoft. Quantum. Concepts. Vectors ms. Author: nawiebe@microsoft.com ms. Date: 12/11/2017 ms. Topic: article NO-LOC:
+Autor: quantumwriter UID: Microsoft. Quantum. Concepts. Vectors ms. Author: v-benbra ms. Date: 12/11/2017 ms. Topic: article NO-LOC:
 - "Q#"
 - "$$v"
 - "$$"
@@ -93,7 +93,7 @@ $$v =\begin{bmatrix}
 v_1\\\\
 v_2\\\\
 \vdots\\\\
-v_n\end{bmatrix}$$
+v_n \end{bmatrix}$$
 
 Die Norm eines Vector $ v $ ist als $ \sqrt { \sum \_ i | v \_ i | ^ 2 definiert } $ . Ein Vektor wird als Einheits Norm bezeichnet (oder auch als [*Einheits Vektor*](https://en.wikipedia.org/wiki/Unit_vector)bezeichnet), wenn seine Norm den Wert 1 hat $ $ . Das [*Adjoint eines Vector*](https://en.wikipedia.org/wiki/Adjoint_matrix) $ v $ wird als $ v ^ bezeichnet und als \dagger $ folgender Zeilen Vektor definiert $ \* $ , wobei die komplexe konjugierung bezeichnet.
 
@@ -114,12 +114,12 @@ u_1\\\\
 u_2\\\\
 \vdots\\\\
 u_n \end{bmatrix} ~ \mathrm { und}~
-Ramelow=\begin{bmatrix}
+Ramelow =\begin{bmatrix}
     v_1\\\\
     v_2\\\\
     \vdots\\\\
     v_n \end{bmatrix} , ~ \mathrm {}~
-Au + BV=\begin{bmatrix}
+Au + BV =\begin{bmatrix}
 au_1 + bv_1\\\\
 au_2 + bv_2\\\\
 \vdots\\\\
@@ -128,7 +128,7 @@ $$
 
 Eine [*Matrix*](https://en.wikipedia.org/wiki/Matrix_(mathematics)) der Größe $ m \times n $ ist eine Auflistung von $ $ in Mio. Zeilen komplexen Zahlen, die in $ m $ Zeilen und n Spalten angeordnet sind, $ $ wie unten dargestellt:
 
-$$800= 
+$$800 = 
 \begin{bmatrix}
 M_ { 11 } ~~ m_ { 12 } ~~ \cdots ~~ m_ { 1N}\\\\
 M_ { 21 } ~~ m_ { 22 } ~~ \cdots ~~ m_ { 2N}\\\\
@@ -183,7 +183,7 @@ Eine Matrix $ m $ wird als [*hermitian*](https://en.wikipedia.org/wiki/Hermitian
 Schließlich ist das [*tensorflow-Produkt*](https://en.wikipedia.org/wiki/Tensor_product) (oder Kronecker-Produkt) von zwei Matrizen $ m $ der Größe $ m \times n $ und $ n $ der Größe $ p \times q $ eine größere Matrix $ p = M \otimes n $ der Größe $ MP \times NQ " $ und wird $ $ $ $ wie folgt von M und n abgerufen:
 
 \begin{align}
-    M \otimes N&=
+    M \otimes N &=
     \begin{bmatrix}
         M_ { 11 } ~~ \cdots ~~ m_ { 1N }\\\\
         \ddots\\\\
@@ -211,40 +211,40 @@ $$
     \begin{bmatrix}
         a \\\\ b \end{bmatrix} \otimes \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix}=
     \begin{bmatrix}
-        ein \begin{bmatrix} c \\\\ d \\\\ e\end{bmatrix}
+        ein \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix}
         \\\\[1.5 em] b \begin{bmatrix} c \\\\ d \\\\ e\end{bmatrix}
     \end{bmatrix}
     =\begin{bmatrix}a c \\\\ a d \\\\ a e \\\\ b c \\\\ b d \\\\\end{bmatrix}
 $$
 
-and
+und
 
 $$
     \begin{bmatrix}
-        a \ b \\\\ c \ d\end{bmatrix}
+        a \ b \\\\ c \ d \end{bmatrix}
     \otimes 
     \begin{bmatrix}
-        e \ f \\\\ \ h\end{bmatrix}
+        e \ f \\\\ \ h \end{bmatrix}
      =
     \begin{bmatrix}
     ein\begin{bmatrix}
-    e \ f \\\\ \ h\end{bmatrix}
+    e \ f \\\\ \ h \end{bmatrix}
     b\begin{bmatrix}
-    e \ f \\\\ \ h\end{bmatrix}
+    e \ f \\\\ \ h \end{bmatrix}
     \\\\[1em] c\begin{bmatrix}
-    e \ f \\\\ \ h\end{bmatrix}
+    e \ f \\\\ \ h \end{bmatrix}
     d\begin{bmatrix}
-    e \ f \\\\ \ h\end{bmatrix}
+    e \ f \\\\ \ h \end{bmatrix}
     \end{bmatrix}
     =
     \begin{bmatrix}
-    AE \ AF \ be \ BF\\\\
-    AG \ AH \ BG \ BH\\\\
-    CE \ CF \ de \ DF\\\\
+    AE \ AF \ be \ BF \\\\
+    AG \ AH \ BG \ BH \\\\
+    CE \ CF \ de \ DF \\\\
     CG \ ch \ DG \ dh \end{bmatrix} .
 $$
 
-Eine abschließende, nützliche, in Bezug auf das tensorflow-Produkt verwendete Anmerkung ist, dass für alle Vektor- $ v $ -oder Matrix- $ m $ , $ v ^ { \otimes n } $ oder $ M ^ { \otimes n } $ für ein $ n $ -Fold wiederholtes tensorflow-Produkt kurz Hand ist.  Beispiel:
+Eine abschließende, nützliche, in Bezug auf das tensorflow-Produkt verwendete Anmerkung ist, dass für alle Vektor- $ v $ -oder Matrix- $ m $ , $ v ^ { \otimes n } $ oder $ M ^ { \otimes n } $ für ein $ n $ -Fold wiederholtes tensorflow-Produkt kurz Hand ist.  Zum Beispiel:
 
 \begin{align}
 &\begin{bmatrix}1 \\\\ 0 1 \end{bmatrix} ^ { \otimes } = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} , \qquad \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} ^ { \otimes 2 } = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} , \qquad \begin{bmatrix} 1 \\\\ -1 \end{bmatrix} ^ { \otimes 2 } = \begin{bmatrix} 1 \\\\ -1 \\\\ -1 \\\\ 1 \end{bmatrix} ,\\\\

@@ -1,6 +1,6 @@
 ---
 Title: Quantum-Verbindungs Beschreibung: erfahren Sie, wie Sie einfache und komplexe Quantum-Vorgänge mithilfe von Quantum-Verbindungs Diagrammen visuell darstellen.
-Autor: quantumwriter UID: Microsoft. Quantum. Concepts. Circuits ms. Author: nawiebe@microsoft.com ms. Date: 12/11/2017 ms. Topic: article NO-LOC:
+Autor: quantumwriter UID: Microsoft. Quantum. Concepts. Circuits ms. Author: v-benbra ms. Date: 12/11/2017 ms. Topic: article NO-LOC:
 - "Q#"
 - "$$v"
 - "$$"
@@ -156,7 +156,7 @@ In den Sonderfällen, in denen $ g = X $ und $ g = Z enthalten $ sind, wird die 
 <!--Keine Möglichkeit finden, diese problemlos zu zentrieren... wahrscheinlich ist eine Erweiterung erforderlich:-->
 ![Leitungs Diagramm für Sonderfälle kontrollierter Gates](~/media/6.svg)
 
-Q#stellt Methoden bereit, mit denen die gesteuerte Version eines Vorgangs automatisch generiert werden kann. Dadurch wird der Programmierer daran bewahrt, diese Vorgänge zu codieren. Ein Beispiel hierfür finden Sie unten:
+Q# stellt Methoden bereit, mit denen die gesteuerte Version eines Vorgangs automatisch generiert werden kann. Dadurch wird der Programmierer daran bewahrt, diese Vorgänge zu codieren. Ein Beispiel hierfür finden Sie unten:
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -175,7 +175,7 @@ Eine solche unter Leitung sieht insbesondere wie folgt aus:
 <!--Keine Möglichkeit finden, diese problemlos zu zentrieren... wahrscheinlich ist eine Erweiterung erforderlich:-->
 ![Symbol, das einen Messungs Vorgang darstellt](~/media/7.svg)
 
-Q#implementiert zu diesem Zweck einen [Measure-Operator](xref:microsoft.quantum.intrinsic.measure) .
+Q# implementiert zu diesem Zweck einen [Measure-Operator](xref:microsoft.quantum.intrinsic.measure) .
 Weitere Informationen finden Sie im [Abschnitt zu Messungen](xref:microsoft.quantum.libraries.standard.prelude#measurements) .
 
 Ebenso wird die unter Leitung

@@ -1,6 +1,6 @@
 ---
 Title: Pauli Messungen Description: erfahren Sie, wie Sie mit Einzel-und multiqubit-Pauli-Mess Vorgängen arbeiten.
-Autor: quantumwriter UID: Microsoft. Quantum. Concepts. Pauli ms. Author: nawiebe@microsoft.com ms. Date: 12/11/2017 ms. Topic: article NO-LOC:
+Autor: bradben UID: Microsoft. Quantum. Concepts. Pauli ms. Author: v-benbra ms. Date: 12/11/2017 ms. Topic: article NO-LOC:
 - "Q#"
 - "$$v"
 - "$$"
@@ -143,8 +143,8 @@ Dies entspricht auch dem Anwenden von $ HS ^ \dagger $ auf den Quanten Zustands 
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {
-        H(q);
         Adjoint S(q);
+        H(q);
     } apply {
         set result = M(q);
     }
@@ -230,7 +230,7 @@ Obwohl beide Arten von Messungen in Quantum Computing gleichermaßen wertvoll si
 Es ist offensichtlich, dass die Informationen, die Sie erlernen möchten, bei der Quantum-Verarbeitung nicht in einem einzigen Qubit gespeichert werden, sondern nicht lokal in allen Qubits gespeichert werden $ \otimes . Daher werden diese Informationen nur durch eine gemeinsame Messung (z. b. z z. b. z z $ ) als Manifest angezeigt.
 
 Beispielsweise möchten wir bei der Fehlerkorrektur häufig ermitteln, welche Fehler aufgetreten sind, wenn Sie nichts über den Zustand erfahren möchten, den wir zu schützen versuchen.
-Das Beispiel für [bitflip-Code](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code) zeigt ein Beispiel dafür, wie Sie dies mithilfe von Messungen wie $ z \otimes z \otimes \id $ und $ \id \otimes z \otimes z $ < erreichen können. --TODO: Ändern Sie dies in einen Link zum Beispiel Browser, sobald das bitflip-Codebeispiel integriert ist. -->
+Das Beispiel für [bitflip-Code](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code) zeigt ein Beispiel dafür, wie Sie dies mithilfe von Messungen wie $ z \otimes z \otimes \id $ und $ \id \otimes z \otimes z $ < erreichen können. --TODO: Ändern Sie dies in einen Link zum Beispiel Browser, sobald das bitflip-Codebeispiel integriert ist. -->
 
 Beliebige Pauli-Operatoren $ wie \otimes \otimes z. b. X Y Z \otimes \boldone $ können ebenfalls gemessen werden.
 Alle derartigen tensorflow-Produkte von Pauli-Operatoren verfügen nur über zwei Eigenwerte $ \pm 1, $ und beide eigen Räume bilden halbräume des gesamten Vektor Bereichs.

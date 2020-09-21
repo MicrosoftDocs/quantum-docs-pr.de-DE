@@ -2,19 +2,19 @@
 title: Erstellen eines Quanten-Zufallszahlengenerators
 description: Erstellen Sie ein Q# Projekt, das grundlegende Quantum-Konzepte wie Superposition veranschaulicht, indem Sie einen Quantum-Zufallszahlengenerator erstellen.
 author: bromeg
-ms.author: megbrow@microsoft.com
+ms.author: megbrow
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d80f1c640ac7ddb0104ccbbb6de6d0e26ba05fd6
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: a0e8933e6a77d017db914e4bb969ea05f760a443
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863623"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834039"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Tutorial: Implementieren eines Quanten-Zufallszahlengenerators in Q\#
 
@@ -33,7 +33,7 @@ Ein einfaches Beispiel für einen in geschriebenen Quantum-Algorithmus Q# ist ei
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-Wie im Artikel [Grundlegendes zu Quantencomputing](xref:microsoft.quantum.overview.understanding) erklärt, stellt ein Qubit eine Einheit mit Quanteninformationen dar, die sich in einem Superpositionszustand befinden kann. Für ein Qubit kann sich bei einer Messung nur 0 oder 1 ergeben. Während der Ausführung steht der Zustand des Qubits aber für die Wahrscheinlichkeit, dass sich für eine Messung entweder 0 oder 1 ergibt. Dieser Wahrscheinlichkeitszustand wird als Überlagerung bezeichnet. Wir können diese Wahrscheinlichkeit verwenden, um Zufallszahlen zu generieren.
+Wie im Artikel [Grundlegendes zu Quantencomputing](xref:microsoft.quantum.overview.understanding) erklärt, stellt ein Qubit eine Einheit mit Quanteninformationen dar, die sich in einem Superpositionszustand befinden kann. Für ein Qubit kann sich bei einer Messung nur 0 oder 1 ergeben. Wenn jedoch ein Vorgang ausgeführt wird, stellt der Status des Qubit die Wahrscheinlichkeit dar, dass entweder 0 oder 1 mit einer Messung gelesen wird. Dieser Wahrscheinlichkeitszustand wird als Überlagerung bezeichnet. Wir können diese Wahrscheinlichkeit verwenden, um Zufallszahlen zu generieren.
 
 In unserem Q# Vorgang stellen wir den `Qubit` DataType, den systemeigenen, bereit Q# . Wir können `Qubit` nur mit einer `using`-Anweisung zuordnen. Nach der Zuordnung befindet sich ein Qubit immer im Zustand `Zero`. 
 
@@ -74,11 +74,11 @@ Q#Fügen Sie dem Programm den folgenden Einstiegspunkt hinzu, um die vollständi
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
-Die ausführbare Datei führt den Vorgang oder die Funktion, der bzw. die mit dem Attribut `@EntryPoint()` markiert ist, abhängig von der Projektkonfiguration und den Befehlszeilenoptionen für einen Simulator oder eine Ressourcenschätzung aus.
+Abhängig von der Projekt Konfiguration und den Befehlszeilenoptionen führt das Programm den Vorgang oder die Funktion aus, der mit dem- `@EntryPoint()` Attribut für einen Simulator oder eine Ressourcenschätzung gekennzeichnet ist.
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-34":::
 
-Drücken Sie in Visual Studio einfach STRG+F5, um das Skript auszuführen.
+Drücken Sie in Visual Studio einfach STRG + F5, um das Skript auszuführen.
 
 Erstellen Sie in VS Code erstmalig die Datei „Program.qs“, indem Sie Folgendes im Terminal eingeben:
 

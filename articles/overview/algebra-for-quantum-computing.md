@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.algebra
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8b06eba9cadce84aca6f87e4451026ca2ffc794f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d7a8dff8d491a9ce6451148d2d27121f1c190ed0
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867640"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759321"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Lineare Algebra für Quantencomputing
 
@@ -22,8 +22,8 @@ Lineare Algebra ist die Sprache des Quantencomputings. Sie müssen zwar nicht mi
 
 Die Vertrautheit mit den [grundlegenden Konzepten der Quantenphysik](xref:microsoft.quantum.overview.understanding) kann für das Verständnis des Quantencomputings ebenso hilfreich sein, wie gewisse Grundkenntnisse im Bereich der linearen Algebra zum besseren Verständnis der Funktionsweise von Quantenalgorithmen beitragen. Sie sollten zumindest mit **Vektoren** und **Matrizenmultiplikation** vertraut sein. In den folgenden Tutorials werden noch einmal die Grundlagen behandelt, falls Sie Ihre Kenntnisse im Zusammenhang mit diesen Algebrakonzepten auffrischen möchten:
 
-- [Jupyter Notebook-Tutorial zu linearer Algebra](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)
-- [Jupyter Notebook-Tutorial zu komplexer Arithmetik](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)
+- [Jupyter Notebook-Tutorial zu linearer Algebra](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra)
+- [Jupyter Notebook-Tutorial zu komplexer Arithmetik](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ComplexArithmetic)
 - [Lineare Algebra für Quantencomputing](https://cds.cern.ch/record/1522001/files/978-1-4614-6336-8_BookBackMatter.pdf)
 - [Grundlagen der linearen Algebra](https://www.math.ubc.ca/~carrell/NB.pdf)
 - [Einführung in Quantencomputing](https://www.codeproject.com/Articles/5155638/Quantum-Computation-Primer-Part-1#exploring-quantum-superposition)

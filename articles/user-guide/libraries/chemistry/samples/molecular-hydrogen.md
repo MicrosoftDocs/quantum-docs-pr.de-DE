@@ -9,15 +9,15 @@ uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a2df4b829a3f4946c6de6e6b80ad72a5bc192b2c
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 05506f4099de754cd02d81fbd9200f2de091e37e
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869204"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759731"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Abrufen von Energiestandschätzungen
-Das Einschätzen der Werte von Energie Stufen ist eine der Hauptanwendungen der Quantum-Chemie. In diesem Artikel wird beschrieben, wie Sie dies für das kanonische Beispiel für den molekularen Wasserstoff durchführen können. Das in diesem Abschnitt referenzierte Beispiel befindet sich [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) im Repository "Chemistry Samples". Ein visuelles Beispiel, in dem die Ausgabe dargestellt wird, ist die [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) Demo.
+Das Einschätzen der Werte von Energie Stufen ist eine der Hauptanwendungen der Quantum-Chemie. In diesem Artikel wird beschrieben, wie Sie dies für das kanonische Beispiel für den molekularen Wasserstoff durchführen können. Das in diesem Abschnitt referenzierte Beispiel befindet sich [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) im Repository "Chemistry Samples". Ein visuelles Beispiel, in dem die Ausgabe dargestellt wird, ist die [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) Demo.
 
 ## <a name="estimating-the-energy-values-of-molecular-hydrogen"></a>Schätzen der Energiewerte von molekularer Wasserstoff
 
@@ -65,7 +65,7 @@ Zum Simulieren der hamiltona müssen die Fermion-Operatoren in Qubit-Operatoren 
     var qSharpData = QSharpFormat.Convert.ToQSharpFormat(qSharpHamiltonianData, qSharpWavefunctionData);
 ```
 
-Als Nächstes übergeben `qSharpData` Sie, das den hamiltonan die Funktion darstellt `TrotterStepOracle` . `TrotterStepOracle`gibt eine Quantum-Operation zurück, die der echtzeitentwicklung der hamiltonan entspricht. Weitere Informationen finden Sie unter [Simulieren von hamiltona Dynamics](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms).
+Als Nächstes übergeben `qSharpData` Sie, das den hamiltonan die Funktion darstellt `TrotterStepOracle` . `TrotterStepOracle` gibt eine Quantum-Operation zurück, die der echtzeitentwicklung der hamiltonan entspricht. Weitere Informationen finden Sie unter [Simulieren von hamiltona Dynamics](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms).
 
 ```qsharp
 // qSharpData passed from driver
@@ -156,5 +156,5 @@ using (var qsim = new QuantumSimulator())
 
 Der-Vorgang gibt zwei Parameter zurück: 
 
-- `energyEst`Gibt an, wie hoch die Energie des Mittelwerts ist und wie `-1.137` im Durchschnitt liegen sollte. 
-- `phaseEst`die vom Phasen Schätz Algorithmus zurückgegebene RAW-Phase. Dies ist nützlich für die Diagnose von Aliasing, wenn es aufgrund eines `trotterStep` zu großen Werts auftritt.
+- `energyEst` Gibt an, wie hoch die Energie des Mittelwerts ist und wie `-1.137` im Durchschnitt liegen sollte. 
+- `phaseEst` die vom Phasen Schätz Algorithmus zurückgegebene RAW-Phase. Dies ist nützlich für die Diagnose von Aliasing, wenn es aufgrund eines `trotterStep` zu großen Werts auftritt.

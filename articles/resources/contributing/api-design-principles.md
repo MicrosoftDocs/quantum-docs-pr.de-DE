@@ -1,6 +1,6 @@
 ---
-title: Q#API-Entwurfs Prinzipien
-description: Q#API-Entwurfs Prinzipien
+title: Q# API-Entwurfs Prinzipien
+description: Q# API-Entwurfs Prinzipien
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
@@ -9,14 +9,14 @@ uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 580fcaea575ff544ed2c5f31eba7e963bea4534b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8714d3290e4099f901dab20a9ee9334699c4ad81
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866892"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834907"
 ---
-# <a name="no-locq-api-design-principles"></a>Q#API-Entwurfs Prinzipien
+# <a name="no-locq-api-design-principles"></a>Q# API-Entwurfs Prinzipien
 
 ## <a name="introduction"></a>Einführung
 
@@ -44,7 +44,7 @@ In diesem Artikel werden diese Grundsätze aufgeführt, und es werden Beispiele 
     Anders ausgedrückt: führen Sie keine öffentlichen APIs ein, wenn Sie nützlich sind, aber stellen Sie sicher, dass jeder Teil einer API ein *konkretes* Beispiel hat, in dem es nützlich ist.
 
   *Beispiele:*
-  - @"microsoft.quantum.canon.applytoeachca"kann verwendet werden `ApplyToEachCA(H, _)` , um die Registrierung in einem einheitlichen Status der übergeordneten Position vorzubereiten, eine gängige Aufgabe in vielen Quantenalgorithmen. Der gleiche Vorgang kann auch für viele andere Aufgaben in Vorbereitungs-, Numerics-und Oracle-basierten Algorithmen verwendet werden.
+  - @"microsoft.quantum.canon.applytoeachca" kann verwendet werden `ApplyToEachCA(H, _)` , um die Registrierung in einem einheitlichen Status der übergeordneten Position vorzubereiten, eine gängige Aufgabe in vielen Quantenalgorithmen. Der gleiche Vorgang kann auch für viele andere Aufgaben in Vorbereitungs-, Numerics-und Oracle-basierten Algorithmen verwendet werden.
 
 - ✅**Verwenden Sie** die neuen API-Entwürfe für Brainstorming und Workshop, um zu überprüfen, ob Sie intuitiv sind und vorgeschlagene Anwendungsfälle erfüllen.
 
@@ -65,11 +65,11 @@ In diesem Artikel werden diese Grundsätze aufgeführt, und es werden Beispiele 
 - ✅Stellen **Sie** "Shim"-Vorgänge und-Funktionen bereit, mit denen vorhandener Benutzercode während der Veraltung ordnungsgemäß ausgeführt werden kann.
 
   *Beispiele:*
-  - Wenn Sie einen Vorgang mit dem Namen zu umbenennen `EstimateExpectation` `EstimateAverage` , führen Sie einen neuen Vorgang mit dem Namen ein, `EstimateExpectation` der den ursprünglichen Vorgang unter seinem neuen Namen aufruft, damit vorhandener Code weiterhin ordnungsgemäß funktionieren kann.
+  - Wenn Sie einen Vorgang mit dem Namen zu umbenennen `EstimateExpectation`   `EstimateAverage` , führen Sie einen neuen Vorgang mit dem Namen ein,   `EstimateExpectation` der den ursprünglichen Vorgang unter seinem neuen Namen aufruft, damit vorhandener Code weiterhin ordnungsgemäß funktionieren kann.
 
 - ✅Verwenden **Sie** das- @"microsoft.quantum.core.deprecated" Attribut, um dem Benutzer veraltete Anwendungen mitzuteilen.
 
-- ✅Wenn Sie einen Vorgang oder eine Funktion umbenennen, geben **Sie** den neuen Namen als Zeichen folgen Eingabe an `@Deprecated` .
+- ✅ Wenn Sie einen Vorgang oder eine Funktion umbenennen, geben **Sie** den neuen Namen als Zeichen folgen Eingabe an `@Deprecated` .
 
 - ⛔️ **nicht** vorhandene Funktionen oder Vorgänge ohne einen veralteten Zeitraum von mindestens sechs Monaten für Vorschau Releases oder mindestens zwei Jahre für unterstützte Releases entfernen.
 
@@ -91,13 +91,13 @@ In diesem Artikel werden diese Grundsätze aufgeführt, und es werden Beispiele 
 
   *Beispiele:*
   - Eine Unterroutine, bei der die Gleit Komma Eingabe als Quadrate festgelegt wird, kann deterministisch geschrieben werden, sodass Sie dem Benutzer als `Squared : Double -> Double` nicht als Vorgang angezeigt werden soll `Square : Double => Double` . Dadurch kann die Unterroutine an mehr Stellen aufgerufen werden (z. b. innerhalb anderer Funktionen) und nützliche Optimierungs Informationen für den Compiler bereitstellen, die sich auf die Leistung und Optimierungen auswirken können.
-  - `ForEach<'TInput, 'TOutput>('TInput => 'TOutput, 'TInput[]) => 'TOutput[]`und `Mapped<'TInput, 'TOutput>('TInput -> 'TOutput, 'TInput[]) -> 'TOutput[]` unterscheiden sich in Bezug auf den Determinismus. beide sind in unterschiedlichen Situationen nützlich.
-  - API-Routinen, die die Anwendung von Quantum-Vorgängen transformieren, können oft auf deterministische Weise ausgeführt werden und können daher als Funktionen wie z. b. zur Verfügung gestellt werden `CControlled<'T>(op : 'T => Unit) => ((Bool, 'T) => Unit)` .
+  - `ForEach<'TInput, 'TOutput>('TInput => 'TOutput, 'TInput[]) => 'TOutput[]` und `Mapped<'TInput, 'TOutput>('TInput -> 'TOutput, 'TInput[]) -> 'TOutput[]` unterscheiden sich in Bezug auf den Determinismus. beide sind in unterschiedlichen Situationen nützlich.
+  - API-Routinen, die die Anwendung von Quantum-Vorgängen transformieren, können oft auf deterministische Weise ausgeführt werden und können daher als Funktionen wie z. b. zur Verfügung gestellt werden   `CControlled<'T>(op : 'T => Unit) => ((Bool, 'T) => Unit)` .
 
 - ✅Generalisieren **Sie** den Eingabetyp für jede Funktion und jeden Vorgang bei Bedarf mit Typparametern.
 
   *Beispiele:*
-  - `ApplyToEach`weist den-Typ `<'T>(('T => Unit), 'T[]) => Unit` anstelle des spezifischen Typs der am häufigsten verbreiteten Anwendung auf `((Qubit => Unit), Qubit[]) => Unit` .
+  - `ApplyToEach` weist den-Typ `<'T>(('T => Unit), 'T[]) => Unit` anstelle des spezifischen Typs der am häufigsten verbreiteten Anwendung auf `((Qubit => Unit), Qubit[]) => Unit` .
 
 > [!TIP]
 > Es ist wichtig, zukünftige Anforderungen zu antizipieren, aber es ist auch wichtig, konkrete Probleme für Ihre Benutzer zu lösen.
@@ -121,7 +121,7 @@ In diesem Artikel werden diese Grundsätze aufgeführt, und es werden Beispiele 
 - ✅Ordnen **Sie** Elemente in Eingabe Tupeln so an, dass die am häufigsten angewendeten Eingaben zuerst auftreten (d.h., dass die partielle Anwendung ähnlich verhält).
 
   *Beispiele:*
-  - Ein Vorgang `ApplyRotation` , der eine Gleit Komma Zahl und ein Qubit als Eingaben annimmt, kann häufig teilweise mit der Gleit Komma Eingabe für die Verwendung mit Vorgängen verwendet werden, die eine Eingabe des Typs erwarten `Qubit => Unit` . Folglich eine Signatur von`operation ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl`
+  - Ein Vorgang `ApplyRotation` , der eine Gleit Komma Zahl und ein Qubit als Eingaben annimmt, kann häufig teilweise mit der Gleit Komma Eingabe für die Verwendung mit Vorgängen verwendet werden, die eine Eingabe des Typs erwarten `Qubit => Unit` . Folglich eine Signatur von `operation ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl`
       funktioniert mit partieller Anwendung am weitesten gehend.
   - In der Regel bedeutet diese Anleitung, dass alle klassischen Daten vor allen Qubits in den eingabetupeln platziert werden, aber ein gutes Urteil verwendet und überprüft wird, wie Ihre API in der Praxis aufgerufen wird
 
@@ -132,7 +132,7 @@ In diesem Artikel werden diese Grundsätze aufgeführt, und es werden Beispiele 
 - ✅Führen **Sie** neue benutzerdefinierte Typen ein, um hilfreiche Kurzform für lange und/oder komplizierte Typen bereitzustellen.
 
   *Beispiele:*
-  - In Fällen, in denen ein Vorgangstyp mit drei Qubit-Array Eingaben häufig als Eingabe verwendet oder als Ausgabe zurückgegeben wird, stellt ein UDT wie z. b.`newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl)`
+  - In Fällen, in denen ein Vorgangstyp mit drei Qubit-Array Eingaben häufig als Eingabe verwendet oder als Ausgabe zurückgegeben wird, stellt ein UDT wie z. b. `newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl)`
       kann hilfreich sein, um eine hilfreiche Kurzweile bereitzustellen.
 
 - ✅Führen **Sie** neue benutzerdefinierte Typen ein, um anzugeben, dass ein angegebener Basistyp nur in einem speziellen Sinn verwendet werden sollte.
@@ -143,12 +143,12 @@ In diesem Artikel werden diese Grundsätze aufgeführt, und es werden Beispiele 
 - ✅Führen **Sie** neue benutzerdefinierte Typen mit benannten Elementen ein, die zukünftige Erweiterbarkeit ermöglichen (z. b. eine Ergebnis Struktur, die in der Zukunft möglicherweise weitere benannte Elemente enthält).
 
   *Beispiele:*
-  - Wenn ein Vorgang `TrainModel` eine große Anzahl von Konfigurationsoptionen verfügbar macht, ermöglicht das verfügbar machen dieser Optionen als neuer `TrainingOptions` UDT und Bereitstellen einer neuen Funktion das `DefaultTrainingOptions : Unit -> TrainingOptions` überschreiben spezifischer benannter Elemente in trainingoptions-UDT-Werten, wobei Bibliotheks Entwickler weiterhin neue UDT-Elemente hinzufügen können.
+  - Wenn ein Vorgang `TrainModel` eine große Anzahl von Konfigurationsoptionen verfügbar macht, ermöglicht das verfügbar machen dieser Optionen als neuer   `TrainingOptions` UDT und Bereitstellen einer neuen Funktion das   `DefaultTrainingOptions : Unit -> TrainingOptions` überschreiben spezifischer benannter Elemente in trainingoptions-UDT-Werten, wobei Bibliotheks Entwickler weiterhin neue UDT-Elemente hinzufügen können.
 
 - ✅Deklarieren **Sie** benannte Elemente für neue benutzerdefinierte Typen entsprechend, dass die Benutzer die richtige tupelentkonstruktion kennen müssen.
 
   *Beispiele:*
-  - Wenn eine komplexe Zahl in der Polar Zerlegung repräsentiert, bevorzugen `newtype ComplexPolar = (Magnitude: Double, Argument: Double)` Sie `newtype ComplexPolar = (Double, Double)` .
+  - Wenn eine komplexe Zahl in der Polar Zerlegung repräsentiert, bevorzugen   `newtype ComplexPolar = (Magnitude: Double, Argument: Double)` Sie   `newtype ComplexPolar = (Double, Double)` .
 
 **Schlüssel** Prinzipal: Verwenden Sie benutzerdefinierte Typen, um die Cognitive Load zu verringern, und für die keine weiteren Konzepte und Nomenklatur benötigt werden.
 
@@ -167,7 +167,7 @@ In diesem Artikel werden diese Grundsätze aufgeführt, und es werden Beispiele 
 - ⛔️ **keine** Accessorfunktionen einführen, wenn dies nicht unbedingt erforderlich ist.   benannte Elemente werden in diesem Fall stark bevorzugt.
 
   *Beispiele:*
-  - Wenn Sie einen UDT einführen `newtype Complex = (Double, Double)` , empfiehlt es sich, die Definition in zu ändern, `newtype Complex = (Real : Double, Imag : Double)` um Funktionen `GetReal : Complex -> Double` und einzuführen `GetImag : Complex -> Double` .
+  - Wenn Sie einen UDT einführen `newtype Complex = (Double, Double)` , empfiehlt es sich, die Definition in zu ändern,   `newtype Complex = (Real : Double, Imag : Double)` um Funktionen `GetReal : Complex -> Double` und einzuführen   `GetImag : Complex -> Double` .
 
 ## <a name="namespaces-and-organization"></a>Namespaces und Organisation
 
@@ -176,29 +176,29 @@ In diesem Artikel werden diese Grundsätze aufgeführt, und es werden Beispiele 
 - ✅Nennen **Sie** Namespaces als `Publisher.Product.DomainArea` .
 
   *Beispiele:*
-  - Funktionen, Vorgänge und UDTs, die von Microsoft als Teil der Funktion für die Quantum-Simulation des quantumentwicklungskit veröffentlicht werden, werden im- `Microsoft.Quantum.Simulation` Namespace platziert.
-  - `Microsoft.Quantum.Math`stellt einen Namespace dar, der von Microsoft als Teil des quantumentwicklungskit in Bezug auf den Domänen Bereich Mathematik veröffentlicht wurde.
+  - Funktionen, Vorgänge und UDTs, die von Microsoft als Teil der Funktion für die Quantum-Simulation des quantumentwicklungskit veröffentlicht werden, werden im-   `Microsoft.Quantum.Simulation` Namespace platziert.
+  - `Microsoft.Quantum.Math` stellt einen Namespace dar, der von Microsoft als Teil des quantumentwicklungskit in Bezug auf den Domänen Bereich Mathematik veröffentlicht wurde.
 
 - ✅Platzieren **Sie** Vorgänge, Funktionen und benutzerdefinierte Typen, die für bestimmte Funktionen verwendet werden, in einen Namespace, der diese Funktionalität beschreibt, auch wenn diese Funktionalität in verschiedenen Problem Domänen verwendet wird.
 
   *Beispiele:*
-  - Die von Microsoft als Teil des quantumentwicklungskit veröffentlichten APIs zur Zustands Vorbereitung werden in platziert `Microsoft.Quantum.Preparation` .
-  - Die von Microsoft als Teil des quantumentwicklungskit veröffentlichten Quantum-Simulations-APIs werden in platziert `Microsoft.Quantum.Simulation` .
+  - Die von Microsoft als Teil des quantumentwicklungskit veröffentlichten APIs zur Zustands Vorbereitung werden in platziert   `Microsoft.Quantum.Preparation` .
+  - Die von Microsoft als Teil des quantumentwicklungskit veröffentlichten Quantum-Simulations-APIs werden in platziert   `Microsoft.Quantum.Simulation` .
 
 - ✅Platzieren **Sie** Vorgänge, Funktionen und benutzerdefinierte Typen, die nur in bestimmten Domänen verwendet werden, in Namespaces, die Ihre Domäne des Hilfsprogramms angeben. Verwenden Sie bei Bedarf Subnamespaces, um fokussierte Aufgaben in jedem domänenspezifischen Namespace anzugeben.
 
   *Beispiele:*
-  - Die von Microsoft veröffentlichte Quantum Machine Learning-Bibliothek wird größtenteils in den- @"microsoft.quantum.machinelearning" Namespace eingefügt, aber Beispiel Datasets werden vom- @"microsoft.quantum.machinelearning.datasets" Namespace bereitgestellt.
+  - Die von Microsoft veröffentlichte Quantum Machine Learning-Bibliothek wird größtenteils in den- @"microsoft.quantum.machinelearning" Namespace eingefügt, aber Beispiel Datasets werden vom- @"microsoft.quantum.machinelearning.datasets"   Namespace bereitgestellt.
   - Die von Microsoft als Teil des quantumentwicklungskit veröffentlichten Quantum-Chemie-APIs sollten in platziert werden `Microsoft.Quantum.Chemistry` . Die Funktionalität, die für die Implementierung der Jordanien-Wigner-Zerlegung spezifisch ist, kann in platziert werden `Microsoft.Quantum.Chemistry.JordanWigner` , sodass die primäre Schnittstelle für den Domänen Bereich der Quantum-Chemie nicht mit Implementierungen beschäftigt ist.
 
 **Schlüsselprinzip:** Verwenden Sie Namespaces und Zugriffsmodifizierer, um die API-Oberfläche zu verwenden, die Benutzern zur Verfügung gestellt wird, und um interne Details im Zusammenhang mit Implementierung und Tests ihrer APIs auszublenden
 
-- ✅Wenn sinnvoll, **sollten** Sie alle Funktionen und Vorgänge, die erforderlich sind, um eine API zu implementieren, im gleichen Namespace wie die implementierte API platzieren. Sie sind jedoch mit den Schlüsselwörtern "private" oder "Internal" gekennzeichnet, um anzugeben, dass Sie nicht Teil der öffentlichen API-Oberfläche für eine Bibliothek sind. Verwenden Sie einen Namen, der mit einem Unterstrich ( `_` ) beginnt, um private und interne Vorgänge und Funktionen visuell von öffentlichen callables zu unterscheiden.
+- ✅ Wenn sinnvoll, **sollten** Sie alle Funktionen und Vorgänge, die erforderlich sind, um eine API zu implementieren, im gleichen Namespace wie die implementierte API platzieren. Sie sind jedoch mit den Schlüsselwörtern "private" oder "Internal" gekennzeichnet, um anzugeben, dass Sie nicht Teil der öffentlichen API-Oberfläche für eine Bibliothek sind. Verwenden Sie einen Namen, der mit einem Unterstrich ( `_` ) beginnt, um private und interne Vorgänge und Funktionen visuell von öffentlichen callables zu unterscheiden.
 
   *Beispiele:*
   - Der Vorgangs Name `_Features` gibt eine Funktion an, die für einen bestimmten Namespace und eine Assembly privat ist, und muss entweder mit dem- `internal` Schlüsselwort verknüpft werden.
 
-- ✅In dem seltenen Fall, dass ein umfangreicher Satz privater Funktionen oder Vorgänge erforderlich ist, um die API für einen bestimmten Namespace zu **implementieren, platzieren** Sie diese in einem neuen Namespace, der dem Namespace entspricht, der implementiert wird und in dem Sie endet `.Private` .
+- ✅ In dem seltenen Fall, dass ein umfangreicher Satz privater Funktionen oder Vorgänge erforderlich ist, um die API für einen bestimmten Namespace zu **implementieren, platzieren** Sie diese in einem neuen Namespace, der dem Namespace entspricht, der implementiert wird und in dem Sie endet `.Private` .
 
 - ✅Platzieren Sie alle Komponententests in Namespaces, die mit dem zu testenden Namespace überein **Stimmen** und mit enden `.Tests` .
 
@@ -224,7 +224,7 @@ In diesem Artikel werden diese Grundsätze aufgeführt, und es werden Beispiele 
 
   - **Verbund**
 
-    - **Assert**: Überprüfen Sie, ob eine Annahme über den Status eines Ziel Computers und seiner Qubits (möglicherweise durch Verwendung nicht physischer Ressourcen) gilt. Vorgänge mit diesem Verb sollten immer sicher entfernt werden, ohne dass sich dies auf die Funktionalität von Bibliotheken und ausführbaren Programmen auswirkt. Beachten Sie, dass im Gegensatz zu Fakten Assertionen im Allgemeinen vom externen Zustand abhängig sind, wie z. b. der Status eines Qubit-Registers, der Ausführungsumgebung oder so weiter. Da die Abhängigkeit von externem Status eine Art von Nebeneffekt ist, müssen Assertionen als Vorgänge und nicht als Funktionen verfügbar gemacht werden.
+    - **Assert**: Überprüfen Sie, ob eine Annahme über den Status eines Ziel Computers und seiner Qubits (möglicherweise durch Verwendung nicht physischer Ressourcen) gilt. Vorgänge mit diesem Verb sollten immer sicher entfernt werden, ohne dass sich dies auf die Funktionalität von Bibliotheken und ausführbaren Programmen auswirkt. Beachten Sie, dass im Gegensatz zu Fakten Assertionen im Allgemeinen vom externen Status abhängen, wie z. b. dem Status eines Qubit-Registers, der Lauf Umgebung oder so weiter. Da die Abhängigkeit von externem Status eine Art von Nebeneffekt ist, müssen Assertionen als Vorgänge und nicht als Funktionen verfügbar gemacht werden.
 
     - **Schätzung**: bei Verwendung eines oder mehrerer möglicherweise wiederholter Messungen wird eine klassische Menge von Messergebnissen geschätzt.
 
@@ -249,12 +249,12 @@ In diesem Artikel werden diese Grundsätze aufgeführt, und es werden Beispiele 
 
   - **Nomen**:
 
-    - **Fakt**: eine boolesche Bedingung, die nur von Ihren Eingaben abhängt, nicht vom Status eines Ziel Computers, der Umgebung oder des Zustands der Qubits des Computers. Im Gegensatz zu einer-Assertion ist ein Fakt nur für die *Werte* , die für diese Tatsache bereitgestellt werden, empfindlich. Beispiel:
+    - **Fakt**: eine boolesche Bedingung, die nur von Ihren Eingaben abhängt, nicht vom Status eines Ziel Computers, der Umgebung oder des Zustands der Qubits des Computers. Im Gegensatz zu einer-Assertion ist ein Fakt nur für die *Werte* , die für diese Tatsache bereitgestellt werden, empfindlich. Zum Beispiel:
 
       *Beispiele:*
       - @"microsoft.quantum.diagnostics.equalityfacti": stellt einen Gleichheits Fakt über zwei ganzzahlige Eingaben dar. entweder sind die als Eingabe bereitgestellten Ganzzahlen gleich zueinander, oder Sie sind nicht unabhängig von einem anderen Programmzustand.
 
-    - **Optionen:** Ein UDT, der mehrere benannte Elemente enthält, die als "optionale Argumente" für eine Funktion oder einen Vorgang fungieren können. Beispiel:
+    - **Optionen:** Ein UDT, der mehrere benannte Elemente enthält, die als "optionale Argumente" für eine Funktion oder einen Vorgang fungieren können. Zum Beispiel:
 
       *Beispiele:*
       - Der @"microsoft.quantum.machinelearning.trainingoptions" UDT umfasst benannte Elemente für Lernrate, Mini Batch-Größe und andere konfigurierbare Parameter für ml-Schulungen.
@@ -268,8 +268,8 @@ In diesem Artikel werden diese Grundsätze aufgeführt, und es werden Beispiele 
     - **Wie folgt:** Stellt dar, dass die Eingabe und Ausgabe einer Funktion die gleichen Informationen darstellen, dass die Ausgabe diese Informationen jedoch nicht in ihrer ursprünglichen Darstellung, sondern **als** *X* darstellt. Dies gilt insbesondere für Typkonvertierungs Funktionen.
 
       *Beispiele:*
-      - `IntAsDouble(2)`Gibt an, dass sowohl die Eingabe ( `2` ) als auch die Ausgabe ( `2.0` ) die gleichen Informationen qualitativ darstellen, wobei jedoch unterschiedliche Q- \# Datentypen verwendet werden.
+      - `IntAsDouble(2)` Gibt an, dass sowohl die Eingabe ( `2` ) als auch die Ausgabe ( `2.0` ) die gleichen Informationen qualitativ darstellen, wobei jedoch unterschiedliche Q- \# Datentypen verwendet werden.
 
-    - **Von:** Um die Konsistenz zu gewährleisten, **sollte** diese Vorposition nicht verwendet werden, um Typkonvertierungs Funktionen anzugeben, oder andere Fälle **, in denen dies zutrifft** .
+    - **Von:** Um die Konsistenz zu gewährleisten,   **sollte** diese Vorposition nicht verwendet werden, um Typkonvertierungs Funktionen anzugeben, oder andere Fälle **, in denen dies zutrifft** .
 
     - ⛔️ **:** diese Vorposition **sollte nicht** verwendet werden, um Verwirrung mit der Verwendung als Verb in vielen Programmiersprachen zu vermeiden.

@@ -1,5 +1,5 @@
 ---
-title: Ablauf Steuerung inQ#
+title: Ablauf Steuerung in Q#
 description: Schleifen, Bedingungen usw.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -9,23 +9,23 @@ uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: e8c873868d6f697fc90b23a38c11f35e46b40c4f
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867946"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759661"
 ---
-# <a name="control-flow-in-no-locq"></a>Ablauf Steuerung inQ#
+# <a name="control-flow-in-no-locq"></a>Ablauf Steuerung in Q#
 
 Innerhalb eines Vorgangs oder einer Funktion wird jede Anweisung in der richtigen Reihenfolge ausgeführt, ähnlich wie andere gängige imperative klassische Sprachen.
 Allerdings können Sie die Ablauf Steuerung auf drei verschiedene Arten ändern:
 
-* `if`Äußerungen
-* `for`Loops
-* `repeat-until-success`Loops
+* `if` Äußerungen
+* `for` Loops
+* `repeat-until-success` Loops
 
-Die `if` `for` Ablaufsteuerungskonstrukte und sind für die meisten klassischen Programmiersprachen vertraut. [`Repeat-until-success`](#repeat-until-success-loop)Schleifen werden später in diesem Artikel erläutert.
+Die `if` `for` Ablaufsteuerungskonstrukte und sind für die meisten klassischen Programmiersprachen vertraut. [`Repeat-until-success`](#repeat-until-success-loop) Schleifen werden später in diesem Artikel erläutert.
 
 Wichtig ist, `for` dass Schleifen und `if` Anweisungen in Vorgängen verwendet werden können, für die [Spezialisierungs](xref:microsoft.quantum.guide.operationsfunctions) Vorgänge automatisch generiert werden. In diesem Szenario kehrt das Adjoint einer `for` Schleife die Richtung um und übernimmt das Adjoint der einzelnen Iterationen.
 Diese Aktion folgt dem Prinzip "Schuh-und-SOCKS": Wenn Sie das Einfügen von SOCKS und den Schuhen rückgängig machen möchten, müssen Sie die einfügende Schuhe rückgängig machen und dann auf die SOCKS setzen. 
@@ -68,7 +68,7 @@ if (i == 1) {
 }
 ```
 
-## <a name="for-loop"></a>for-Schleife
+## <a name="for-loop"></a>for-Schleifen
 
 Die- `for` Anweisung unterstützt Iterationen über einen ganzzahligen Bereich oder ein Array.
 Die-Anweisung besteht aus dem `for` -Schlüsselwort, gefolgt von einem Symbol-oder Symbol-Tupel, dem-Schlüsselwort `in` und einem Ausdruck vom Typ `Range` oder Array, alle in Klammern und einem Anweisungsblock.
@@ -148,7 +148,7 @@ Weitere Beispiele und Details finden Sie in diesem Artikel unter [Wiederholungs-
 > [!TIP]   
 > Vermeiden Sie die Verwendung von Wiederholungs-bis-Erfolg-Schleifen innerhalb von Funktionen. Verwenden Sie *while* -Schleifen, um die entsprechende Funktionalität in Funktionen bereitzustellen. 
 
-## <a name="while-loop"></a>While-Schleife
+## <a name="while-loop"></a>while-Schleifen
 
 Wiederholungs-bis-Erfolg-Muster verfügen über eine sehr Quantum-spezifische-Anmerkung. Sie werden häufig in bestimmten Klassen von Quantum-Algorithmen verwendet. Dies ist also das dedizierte Sprachkonstrukt in Q# . Schleifen, die basierend auf einer Bedingung unterbrechen und deren Ausführungsdauer zur Kompilierzeit somit unbekannt ist, werden jedoch mit einer bestimmten Sorgfalt in einer Quantum-Laufzeit behandelt. Die Verwendung innerhalb von Funktionen ist jedoch nicht problematisch, da diese Schleifen nur Code enthalten, der auf herkömmlicher (nicht Quantum-) Hardware ausgeführt wird. 
 
@@ -248,7 +248,7 @@ fixup {
 }
 ```
 
-### <a name="rus-without-fixup"></a>RUS ohne`fixup`
+### <a name="rus-without-fixup"></a>RUS ohne `fixup`
 
 Dieses Beispiel zeigt eine RUS-Schleife ohne den fixupschritt. Der Code ist eine probabilistische Verbindung, die ein wichtiges Drehungs Gate implementiert $V _3 = (\boldone + 2 i)/\sqrt {5} $ mithilfe von `H` und `T` Gates.
 Die Schleife wird im Durchschnitt in $ \frac {8} {5} $ Wiederholungen beendet.
@@ -330,7 +330,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-Weitere Informationen finden Sie unter [Beispiel für Komponententests mit der Standardbibliothek](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
+Weitere Informationen finden Sie unter [Beispiel für Komponententests mit der Standardbibliothek](https://github.com/microsoft/Quantum/blob/main/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
 
 ## <a name="next-steps"></a>Nächste Schritte
 

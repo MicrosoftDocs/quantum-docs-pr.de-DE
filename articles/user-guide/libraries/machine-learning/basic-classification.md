@@ -2,23 +2,23 @@
 title: Einfache Klassifizierung mit der Quantum-Machine Learning Bibliothek
 description: Erfahren Sie, wie Sie Q# mithilfe der Quantum-Machine Learning Bibliothek von Microsoft QDK einen in geschriebenen Quantum-Klassifizierungs Klassifizierer ausführen.
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f9c3e7ab85c0f0d1a6063e593607d35c5cb76936
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 5dc4614b9992e2c6b9f8ff4b839c0929ec8cab7c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868966"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833713"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Basic-Klassifizierung: klassifizieren von Daten mit dem QDK
 
-In dieser Schnellstartanleitung erfahren Sie, wie Sie Q# mithilfe der Quantum-Machine Learning Bibliothek des QDK einen in geschriebenen Quantum-Klassifizierungs Klassifizierer ausführen. 
+In dieser Schnellstartanleitung erfahren Sie, wie Sie Q# mithilfe der Quantum-Machine Learning-Bibliothek des QDK einen in geschriebenen quantumziellen Klassifizierungs-Klassifizierer ausführen. 
 
 In diesem Handbuch verwenden wir das Halbmond-DataSet, indem wir eine Klassifizierungs Struktur verwenden, die in definiert ist Q# .
 
@@ -70,7 +70,7 @@ Ihr Host Programm besteht aus drei Teilen:
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
-    Drücken Sie dann F5. Das Programm wird gestartet, und ein neues Fenster mit den folgenden Ergebnissen wird angezeigt: 
+    Drücken Sie F5, damit das Programm ausgeführt wird. Die folgenden Ergebnisse werden in einem neuen Fenster angezeigt: 
 
     ```bash
     $ dotnet run
@@ -88,9 +88,9 @@ Der folgende Code wird in einer Datei mit dem Namen gespeichert `Training.qs` .
 
 Die wichtigsten im obigen Code definierten Funktionen und Vorgänge sind:
 
-- `ClassifierStructure() : ControlledRotation[]`: in dieser Funktion legen wir die Struktur unseres Verbindungs Modells fest, indem wir die Ebenen der kontrollierten Gates hinzufügen, die wir in Erwägung gezogen haben. Dieser Schritt entspricht der Deklaration von Neuronen-Ebenen in einem sequenziellen Deep Learning-Modell.
-- `TrainHalfMoonModel() : (Double[], Double)`: dieser Vorgang ist der Kernteil des Codes und definiert das Training. Hier laden wir die Beispiele aus dem DataSet, das in der Bibliothek enthalten ist, legen die Hyperparameter und die ursprünglichen Parameter für das Training fest und beginnen mit dem Training, indem wir den `TrainSequentialClassifier` in der Bibliothek enthaltenen Vorgang aufrufen. Es gibt die Parameter und die Verschiebung aus, die den Klassifizierer bestimmen.
-- `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: dieser Vorgang definiert den Validierungsprozess zum Auswerten des Modells. Hier laden wir die Beispiele für die Überprüfung, die Anzahl der Messungen pro Stichprobe und die Toleranz. Er gibt die Anzahl der fehl Klassifizierungen für den ausgewählten Batch von Beispielen für die Validierung aus.
+- `ClassifierStructure() : ControlledRotation[]` : in dieser Funktion legen wir die Struktur unseres Verbindungs Modells fest, indem wir die Ebenen der kontrollierten Gates hinzufügen, die wir in Erwägung gezogen haben. Dieser Schritt entspricht der Deklaration von Neuronen-Ebenen in einem sequenziellen Deep Learning-Modell.
+- `TrainHalfMoonModel() : (Double[], Double)` : dieser Vorgang ist der Kernteil des Codes und definiert das Training. Hier laden wir die Beispiele aus dem DataSet, das in der Bibliothek enthalten ist, legen die Hyperparameter und die ursprünglichen Parameter für das Training fest und beginnen mit dem Training, indem wir den `TrainSequentialClassifier` in der Bibliothek enthaltenen Vorgang aufrufen. Es gibt die Parameter und die Verschiebung aus, die den Klassifizierer bestimmen.
+- `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int` : dieser Vorgang definiert den Validierungsprozess zum Auswerten des Modells. Hier laden wir die Beispiele für die Überprüfung, die Anzahl der Messungen pro Stichprobe und die Toleranz. Er gibt die Anzahl der fehl Klassifizierungen für den ausgewählten Batch von Beispielen für die Validierung aus.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

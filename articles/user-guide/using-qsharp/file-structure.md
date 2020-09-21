@@ -1,22 +1,22 @@
 ---
-title: Q#Dateistruktur
+title: Q# Dateistruktur
 description: Beschreibt die Struktur und die Syntax einer Q# Datei.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ac73962b1a718cd04aa87ee3476c66781fe3ac2b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 98b3a2e35186989b8191cc566a5d5310bc26eafc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867929"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833313"
 ---
-# <a name="no-locq-file-structure"></a>Q#Dateistruktur
+# <a name="no-locq-file-structure"></a>Q# Dateistruktur
 
 Eine Q# Datei besteht aus einer Sequenz von *Namespace Deklarationen*.
 Jede Namespace Deklaration enthält Deklarationen für benutzerdefinierte Typen, Vorgänge und Funktionen und kann jede beliebige Anzahl von Deklarationen und in beliebiger Reihenfolge enthalten.
@@ -76,7 +76,7 @@ Angenommen, Sie verfügen über einen Vorgang mit `Op` dem Namen aus dem- `X.Y` 
 Es ist in der Regel besser, einen Namespace mit einer- `open` Direktive einzubeziehen.
 Die Verwendung eines voll qualifizierten Namens ist erforderlich, wenn zwei Namespaces Konstrukte mit dem gleichen Namen definieren und die aktuelle Quelle Konstrukte aus beidem verwendet.
 
-Q#befolgt die gleichen Regeln für die Benennung wie andere .NET-Sprachen.
+Q# befolgt die gleichen Regeln für die Benennung wie andere .NET-Sprachen.
 Q#Unterstützt jedoch keine relativen Verweise auf Namespaces.
 Wenn der Namespace beispielsweise `a.b` geöffnet ist, wird ein Verweis auf einen Vorgang mit dem Namen `c.d` *nicht* in einen Vorgang mit dem vollständigen Namen aufgelöst `a.b.c.d` .
 
@@ -91,7 +91,7 @@ Vermeiden Sie es, mehrere Anweisungen in einer einzelnen Zeile zu platzieren.
 
 ## <a name="statement-blocks"></a>Anweisungsblöcke
 
-Q#-Anweisungen werden in Anweisungsblöcke gruppiert, die in geschweiften Klammern eingeschlossen sind `{ }` . Ein Anweisungsblock beginnt mit einem öffnenden `{` und endet mit einem schließenden `}` .
+Q# -Anweisungen werden in Anweisungsblöcke gruppiert, die in geschweiften Klammern eingeschlossen sind `{ }` . Ein Anweisungsblock beginnt mit einem öffnenden `{` und endet mit einem schließenden `}` .
 
 Ein Anweisungsblock, der lexikalisch in einem anderen-Block eingeschlossen ist, wird als Teil Block des enthaltenden Blocks angesehen; enthaltende-und-Unterblöcke werden auch als äußere und innere Blöcke bezeichnet.
 
@@ -109,7 +109,7 @@ Innerhalb von `///` Kommentaren wird Text, der als Teil der API-Dokumentation an
 Verwenden Sie in markdown die `@"<ref target>"` Erweiterung für Querverweise auf Vorgänge, Funktionen und benutzerdefinierte Typen in Q# . Ersetzen Sie dies `<ref target>` durch den voll qualifizierten Namen des Code Objekts, auf das verwiesen wird.
 Unterschiedliche Dokumentations-Engines unterstützen möglicherweise zusätzliche markdownerweiterungen.
 
-Beispiel:
+Zum Beispiel:
 
 ```qsharp
 /// # Summary

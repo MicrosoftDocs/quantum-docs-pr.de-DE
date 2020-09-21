@@ -2,19 +2,19 @@
 title: Schreiben und Simulieren von Programmen auf Qubit-Ebene in Q#
 description: Schritt-für-Schritt-Tutorial zum Schreiben und Simulieren eines Quantum-Programms, das auf der einzelnen Qubit-Ebene funktioniert
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 39b2d762c0efbfa4bb3a60a1dcee6bcbe2bd91a9
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 0dbeee8e092c830576ba8f79733035cdeeac11de
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863329"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834957"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Tutorial: schreiben und Simulieren von Programmen auf Qubit-Ebene in Q\#
 
@@ -132,9 +132,9 @@ Daher hat das Anwenden [`H`](xref:microsoft.quantum.intrinsic.h) von auf das ers
 Neben dem Anwenden des- `H` Tors (Hadamard) auf einzelne Qubits besteht die QFT-Leitung hauptsächlich aus kontrollierten [`R1`](xref:microsoft.quantum.intrinsic.r1) Rotationen.
 `R1(θ, <qubit>)`Bei einem Vorgang im Allgemeinen bleibt die $ \ket {0} $-Komponente des Qubit unverändert, während eine Rotation $e ^ {i\orta} $ auf die $ \ket $-Komponente angewendet wird {1} .
 
-#### <a name="controlled-operations"></a>Kontrollierte Vorgänge
+#### <a name="controlled-operations"></a>Gesteuerte Vorgänge
 
-Q# macht es sehr einfach, die Ausführung eines Vorgangs auf ein oder mehrere Steuerelement-Qubits zu bedinieren.
+Q# macht es äußerst einfach, die Ausführung eines Vorgangs auf ein oder mehrere Steuerelement-Qubits zu bedinieren.
 Im Allgemeinen wird dem-Befehl lediglich `Controlled` vorangestellt, und die Vorgangs Argumente ändern sich wie folgt:
 
  `Op(<normal args>)` $ \bis $ `Controlled Op([<control qubits>], (<normal args>))` .
@@ -244,7 +244,7 @@ namespace NamespaceQFT {
 
 Nachdem die Q# Datei und der Vorgang abgeschlossen sind, kann unser Quantum-Programm aufgerufen und simuliert werden.
 
-## <a name="execute-the-program"></a>Ausführen des Programms
+## <a name="run-the-program"></a>Ausführen des Programms
 
 Nachdem wir den Q# Vorgang in einer `.qs` Datei definiert haben, müssen wir diesen Vorgang jetzt aufrufen und alle zurückgegebenen klassischen Daten beobachten.
 Zurzeit gibt es nichts zurück (wie bereits erwähnt, gibt der oben definierte Vorgang zurück `Unit` ), doch wenn wir den Vorgang später ändern, Q# um ein Array von Messergebnissen () zurückzugeben `Result[]` , wird dies behandelt.
@@ -269,7 +269,7 @@ Um das Programm auszuführen, öffnen Sie das Terminal im Ordner des Projekts, u
 dotnet run
 ```
 
-Bei der Ausführung sollten die `Message` `DumpMachine` Ausgaben und unten in der Konsole gedruckt angezeigt werden.
+Nach Abschluss des Vorgangs sollten die `Message` Ausgaben und `DumpMachine` unten in der Konsole gedruckt angezeigt werden.
 
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
@@ -314,8 +314,8 @@ Der c#-Host besteht aus vier Teilen:
     In diesem Beispiel gibt es keine.
 3. Ausführen des Quantenalgorithmus. 
     Jeder Q# Vorgang generiert eine c#-Klasse mit demselben Namen. 
-    Diese Klasse weist eine `Run`-Methode auf, die die Operation **asynchron** ausführt.
-    Die Ausführung ist asynchron, weil die Ausführung auf realer Hardware asynchron ist. 
+    Diese Klasse verfügt über eine- `Run` Methode, die den Vorgang **asynchron**ausführt.
+    Die Ausführung erfolgt asynchron, da Sie auf tatsächlicher Hardware ausgeführt wird. 
     Da die- `Run` Methode asynchron ist, wird die- `Wait()` Methode aufgerufen. Dadurch wird die Ausführung blockiert, bis die Aufgabe abgeschlossen ist, und das Ergebnis synchron zurückgegeben wird. 
 4. Verarbeiten Sie das zurückgegebene Ergebnis des Vorgangs.
     Vorerst gibt der Vorgang nichts zurück.
@@ -499,7 +499,7 @@ Der endgültige Vorgangs Code sollte wie folgt aussehen:
 }
 ```
 
-Wenn Sie von der Eingabeaufforderung aus arbeiten, wird das zurückgegebene Array am Ende der Ausführung einfach direkt in der Konsole gedruckt.
+Wenn Sie von der Eingabeaufforderung aus arbeiten, wird das zurückgegebene Array einfach direkt an der Konsole am Ende des Testlaufs angezeigt.
 Aktualisieren Sie andernfalls das Host Programm, um das zurückgegebene Array zu verarbeiten.
 
 #### <a name="command-prompt"></a>[Eingabeaufforderung](#tab/tabid-cmdline)

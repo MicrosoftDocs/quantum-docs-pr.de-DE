@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.katas
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b2a3b25bf90109468f02c98c6c687befb83648bc
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 780f04aa941d416032ea3e50b05769f93fae769f
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869680"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759390"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Erlernen des Quantencomputings mit den Quanten-Katas
 
@@ -41,50 +41,50 @@ Entdecken Sie die Grundlagen und Grundlagen von Quantum Computing, oder vertiefe
 
 | Ausbreiten | BESCHREIBUNG |
 |:-----|-------------|
-|[Komplexe Arithmetik](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)|In diesem Tutorial wird ein Teil des mathematischen Hintergrunds erläutert, der zum Arbeiten mit Quantum Computing erforderlich ist, z. b. imaginäre und komplexe Zahlen.|
-|[Lineare Algebra](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)|Lineare Algebra wird zur Darstellung von Quantum-Zuständen und-Vorgängen in Quantum Computing verwendet. Dieses Tutorial behandelt die Grundlagen, einschließlich Matrizen und Vektoren.|
-|[Das Konzept eines Qubits](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/Qubit)|Erfahren Sie mehr über Qubits-eines der Kernkonzepte von Quantum Computing. |
-|[Quantengatter mit einem einzelnen Qubit](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)|In diesem Tutorial werden Single-Qubit-Quantum-Gates vorgestellt, die als Bausteine von Quantum-Algorithmen fungieren und Quantum-Qubit-Zustände auf verschiedene Weise transformieren.|
-|[Systeme mit mehreren Qubits](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|In diesem Tutorial werden multiqubit-Systeme, ihre Darstellung in mathematischer Notation und Q# Code sowie das Konzept von entanglement vorgestellt.|
-|[Multi-Qubit-Quantum-Gates](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)|Dieses Tutorial folgt dem Tutorial zu [Single-Qubit Quantum Gates](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates) und konzentriert sich auf das Anwenden von Quantum-Gates auf multiqubit-Systeme.|
+|[Komplexe Arithmetik](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ComplexArithmetic)|In diesem Tutorial wird ein Teil des mathematischen Hintergrunds erläutert, der zum Arbeiten mit Quantum Computing erforderlich ist, z. b. imaginäre und komplexe Zahlen.|
+|[Lineare Algebra](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra)|Lineare Algebra wird zur Darstellung von Quantum-Zuständen und-Vorgängen in Quantum Computing verwendet. Dieses Tutorial behandelt die Grundlagen, einschließlich Matrizen und Vektoren.|
+|[Das Konzept eines Qubits](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/Qubit)|Erfahren Sie mehr über Qubits-eines der Kernkonzepte von Quantum Computing. |
+|[Quantengatter mit einem einzelnen Qubit](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/SingleQubitGates)|In diesem Tutorial werden Single-Qubit-Quantum-Gates vorgestellt, die als Bausteine von Quantum-Algorithmen fungieren und Quantum-Qubit-Zustände auf verschiedene Weise transformieren.|
+|[Systeme mit mehreren Qubits](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/MultiQubitSystems)|In diesem Tutorial werden multiqubit-Systeme, ihre Darstellung in mathematischer Notation und Q# Code sowie das Konzept von entanglement vorgestellt.|
+|[Multi-Qubit-Quantum-Gates](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/MultiQubitGates)|Dieses Tutorial folgt dem Tutorial zu [Single-Qubit Quantum Gates](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/SingleQubitGates) und konzentriert sich auf das Anwenden von Quantum-Gates auf multiqubit-Systeme.|
 
 ### <a name="quantum-computing-fundamentals"></a>Grundlagen des Quantencomputings
 
 | Ausbreiten | BESCHREIBUNG |
 |:-----|-------------|
-|[Erkennen von Quantengattern](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|Eine Reihe von Übungen, mit denen Sie sich mit den grundlegenden Quantum Gates in vertraut machen können Q# . Umfasst Übungen für einfache Single-Qubit-und Multi-Qubit-Gates, Adjoint und gesteuerte Gates und die Verwendung von Gates zum Ändern des Status eines Qubit.|
-|[Erstellen einer Quantenüberlagerung](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|Verwenden Sie diese Übungen, um sich mit dem Konzept der superposition und der Programmierung in vertraut zu machen Q# . Umfasst Übungen für einfache Single-Qubit-und Multi-Qubit-Gates, superposition und Fluss Steuerung sowie Rekursion in Q# .|
-|[Unterscheiden von Quantenzuständen mit Messungen](https://github.com/microsoft/QuantumKatas/tree/master/Measurements)|Lösen Sie diese Übungen, und lernen Sie die Quanten Messung und orthogonale und nicht orthogonale Zustände kennen. |
-|[Verknüpfte Messungen](https://github.com/microsoft/QuantumKatas/tree/master/JointMeasurements)|Erfahren Sie mehr über gemeinsame Paritäts Messungen und wie Sie den [Measure](xref:microsoft.quantum.intrinsic.measure) -Vorgang zum unterscheiden von Quantum-Zuständen verwenden|
+|[Erkennen von Quantengattern](https://github.com/microsoft/QuantumKatas/tree/main/BasicGates)|Eine Reihe von Übungen, mit denen Sie sich mit den grundlegenden Quantum Gates in vertraut machen können Q# . Umfasst Übungen für einfache Single-Qubit-und Multi-Qubit-Gates, Adjoint und gesteuerte Gates und die Verwendung von Gates zum Ändern des Status eines Qubit.|
+|[Erstellen einer Quantenüberlagerung](https://github.com/microsoft/QuantumKatas/tree/main/Superposition)|Verwenden Sie diese Übungen, um sich mit dem Konzept der superposition und der Programmierung in vertraut zu machen Q# . Umfasst Übungen für einfache Single-Qubit-und Multi-Qubit-Gates, superposition und Fluss Steuerung sowie Rekursion in Q# .|
+|[Unterscheiden von Quantenzuständen mit Messungen](https://github.com/microsoft/QuantumKatas/tree/main/Measurements)|Lösen Sie diese Übungen, und lernen Sie die Quanten Messung und orthogonale und nicht orthogonale Zustände kennen. |
+|[Verknüpfte Messungen](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|Erfahren Sie mehr über gemeinsame Paritäts Messungen und wie Sie den [Measure](xref:microsoft.quantum.intrinsic.measure) -Vorgang zum unterscheiden von Quantum-Zuständen verwenden|
 
 ### <a name="algorithms"></a>Algorithmen
 
 | Ausbreiten | BESCHREIBUNG |
 |:-----|-------------|
-|[Quantenteleportation](https://github.com/microsoft/QuantumKatas/tree/master/Teleportation)|Diese Kata untersucht Quantum-Teleportation: ein Protokoll, das die Kommunikation eines Quantum-Zustands mithilfe der klassischen Kommunikation und zuvor freigegebenen Quantum-Entanglement ermöglicht.|
-|[Superdichte Codeerstellung](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding)|Superdense Coding ist ein Protokoll, das die Übertragung von zwei klassischen Informationen ermöglicht, indem nur ein Qubit mithilfe der zuvor freigegebenen Quantum-Entanglement gesendet wird.  |
-|[Deutsch-Jozsa-Algorithmus](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringDeutschJozsaAlgorithm)|Dieser Algorithmus ist für eines der ersten Beispiele eines Quantum-Algorithmus bekannt, der exponentiell schneller ist als ein beliebiger deterministischer klassischer Algorithmus.|
-|[Untersuchen allgemeiner Eigenschaften des Algorithmus für die Grover-Suche](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringGroversAlgorithm)|Eine allgemeine Einführung in einen der bekanntesten Algorithmen in Quantum Computing. Dadurch wird das Problem beim Auffinden einer Eingabe in ein schwarzes Feld (Oracle) gelöst, das eine bestimmte Ausgabe erzeugt. |
-|[Implementieren des Algorithmus für die Grover-Suche](https://github.com/microsoft/QuantumKatas/tree/master/GroversAlgorithm)|Diese Kata geht tiefer in den Suchalgorithmus von Grover ein und deckt das Schreiben von Oracles, das Durchführen von Schritten des Algorithmus und schließlich das Fortsetzen des Vorgangs.|
-|[Lösen realer Probleme mit dem Algorithmus von Grover: Sat-Probleme](https://github.com/microsoft/QuantumKatas/tree/master/SolveSATWithGrover)|Eine Reihe von Übungen, die den Algorithmus von Grover zum lösen realistischer Probleme mithilfe von [booleschen satismoability-Problemen](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem) (Sat) als Beispiel verwendet.  |
-|[Lösen realer Probleme mithilfe des Algorithmus "Grover": Graph-Farbgebung](https://github.com/microsoft/QuantumKatas/tree/master/GraphColoring)| Diese Kata erläutert den Algorithmus von Grover, dieses Mal, um [Probleme](https://en.wikipedia.org/wiki/Constraint_satisfaction_problem)mit der Einschränkungs Zufriedenheit zu lösen, mithilfe eines Diagramms als Beispiel. |
+|[Quantenteleportation](https://github.com/microsoft/QuantumKatas/tree/main/Teleportation)|Diese Kata untersucht Quantum-Teleportation: ein Protokoll, das die Kommunikation eines Quantum-Zustands mithilfe der klassischen Kommunikation und zuvor freigegebenen Quantum-Entanglement ermöglicht.|
+|[Superdichte Codeerstellung](https://github.com/microsoft/QuantumKatas/tree/main/SuperdenseCoding)|Superdense Coding ist ein Protokoll, das die Übertragung von zwei klassischen Informationen ermöglicht, indem nur ein Qubit mithilfe der zuvor freigegebenen Quantum-Entanglement gesendet wird.  |
+|[Deutsch-Jozsa-Algorithmus](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ExploringDeutschJozsaAlgorithm)|Dieser Algorithmus ist für eines der ersten Beispiele eines Quantum-Algorithmus bekannt, der exponentiell schneller ist als ein beliebiger deterministischer klassischer Algorithmus.|
+|[Untersuchen allgemeiner Eigenschaften des Algorithmus für die Grover-Suche](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ExploringGroversAlgorithm)|Eine allgemeine Einführung in einen der bekanntesten Algorithmen in Quantum Computing. Dadurch wird das Problem beim Auffinden einer Eingabe in ein schwarzes Feld (Oracle) gelöst, das eine bestimmte Ausgabe erzeugt. |
+|[Implementieren des Algorithmus für die Grover-Suche](https://github.com/microsoft/QuantumKatas/tree/main/GroversAlgorithm)|Diese Kata geht tiefer in den Suchalgorithmus von Grover ein und deckt das Schreiben von Oracles, das Durchführen von Schritten des Algorithmus und schließlich das Fortsetzen des Vorgangs.|
+|[Lösen realer Probleme mit dem Algorithmus von Grover: Sat-Probleme](https://github.com/microsoft/QuantumKatas/tree/main/SolveSATWithGrover)|Eine Reihe von Übungen, die den Algorithmus von Grover zum lösen realistischer Probleme mithilfe von [booleschen satismoability-Problemen](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem) (Sat) als Beispiel verwendet.  |
+|[Lösen realer Probleme mithilfe des Algorithmus "Grover": Graph-Farbgebung](https://github.com/microsoft/QuantumKatas/tree/main/GraphColoring)| Diese Kata erläutert den Algorithmus von Grover, dieses Mal, um [Probleme](https://en.wikipedia.org/wiki/Constraint_satisfaction_problem)mit der Einschränkungs Zufriedenheit zu lösen, mithilfe eines Diagramms als Beispiel. |
 
 ### <a name="protocols-and-libraries"></a>Protokolle und Bibliotheken
 
 | Ausbreiten | BESCHREIBUNG |
 |:-----|-------------|
-|[BB84-Protokoll für Quantenschlüsselverteilung](https://github.com/microsoft/QuantumKatas/tree/master/KeyDistribution_BB84)|Erfahren Sie, wie Sie ein Quantum Key Distribution-Protokoll, [BB84](https://en.wikipedia.org/wiki/BB84), mit Qubits zum Austauschen von Kryptografieschlüsseln verwenden und implementieren. |
-|[Fehler beim Korrigieren des Codes durch bitkippen](https://github.com/microsoft/QuantumKatas/tree/master/QEC_BitFlipCode)|Erkunden Sie die Quantum-Fehlerkorrektur mit dem einfachsten der QEC-Codes (Quantum Error-Correction), dem drei-Qubit-bitflip-Code.|
-|[Phasenschätzung](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|Phasen Schätz Algorithmen sind einige der grundlegendsten Bausteine von Quantum Computing. Erfahren Sie mehr über die Phasen Schätzung mit diesen Übungen, die die Quantum-Phasen-Schätzung abdecken und wie Phasen-Schätz Routinen in vorbereitet und ausgeführt werden Q# .|
-|[Quantum-Arithmetik: Entwickeln von Ripple-Carry-addern](https://github.com/microsoft/QuantumKatas/blob/master/RippleCarryAdder)|Eine ausführliche Reihe von Übungen, mit denen die Addition von [Ripple](https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder) auf einem Quantum-Computer untersucht wird. Erstellen Sie einen direkten Quantum-Adder, erweitern Sie ihn mit einem anderen Algorithmus, und erstellen Sie abschließend einen direkten Quantum-subtraktor.   |
+|[BB84-Protokoll für Quantenschlüsselverteilung](https://github.com/microsoft/QuantumKatas/tree/main/KeyDistribution_BB84)|Erfahren Sie, wie Sie ein Quantum Key Distribution-Protokoll, [BB84](https://en.wikipedia.org/wiki/BB84), mit Qubits zum Austauschen von Kryptografieschlüsseln verwenden und implementieren. |
+|[Fehler beim Korrigieren des Codes durch bitkippen](https://github.com/microsoft/QuantumKatas/tree/main/QEC_BitFlipCode)|Erkunden Sie die Quantum-Fehlerkorrektur mit dem einfachsten der QEC-Codes (Quantum Error-Correction), dem drei-Qubit-bitflip-Code.|
+|[Phasenschätzung](https://github.com/microsoft/QuantumKatas/blob/main/PhaseEstimation)|Phasen Schätz Algorithmen sind einige der grundlegendsten Bausteine von Quantum Computing. Erfahren Sie mehr über die Phasen Schätzung mit diesen Übungen, die die Quantum-Phasen-Schätzung abdecken und wie Phasen-Schätz Routinen in vorbereitet und ausgeführt werden Q# .|
+|[Quantum-Arithmetik: Entwickeln von Ripple-Carry-addern](https://github.com/microsoft/QuantumKatas/blob/main/RippleCarryAdder)|Eine ausführliche Reihe von Übungen, mit denen die Addition von [Ripple](https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder) auf einem Quantum-Computer untersucht wird. Erstellen Sie einen direkten Quantum-Adder, erweitern Sie ihn mit einem anderen Algorithmus, und erstellen Sie abschließend einen direkten Quantum-subtraktor.   |
 
 ### <a name="entanglement-games"></a>Verschränkungsspiele
 
 | Ausbreiten | BESCHREIBUNG |
 |:-----|-------------|
-|[Spiel „CHSH“](https://github.com/microsoft/QuantumKatas/tree/master/CHSHGame)|Erkunden Sie Quantum jede Verflechtungen mit einer Implementierung des [CHSH](https://en.wikipedia.org/wiki/CHSH_inequality) -Spiels. Dieses [nicht lokale](https://en.wikipedia.org/wiki/Quantum_refereed_game) Spiel zeigt, wie die Wahrscheinlichkeit von Quantum jede Verflechtungen verwendet werden kann, um die Wahrscheinlichkeit zu erhöhen, dass über das, was mit einer reinen klassischen Strategie möglich wäre, gewonnen wird.|
-|[Spiel „GHZ“](https://github.com/microsoft/QuantumKatas/tree/master/GHZGame)|Das GHz-Spiel ist ein weiteres nicht lokales Spiel, das jedoch drei Spieler umfasst.|
-|[Spiel „Magisches Mermin-Peres-Quadrat“](https://github.com/microsoft/QuantumKatas/tree/master/MagicSquareGame)|Eine Reihe von Übungen, die [Quantum-Pseudo teleblohe](https://en.wikipedia.org/wiki/Quantum_pseudo-telepathy#The_Mermin%E2%80%93Peres_magic_square_game) zum Lösen eines magischen quadratischen Spiels untersucht.  |
+|[Spiel „CHSH“](https://github.com/microsoft/QuantumKatas/tree/main/CHSHGame)|Erkunden Sie Quantum jede Verflechtungen mit einer Implementierung des [CHSH](https://en.wikipedia.org/wiki/CHSH_inequality) -Spiels. Dieses [nicht lokale](https://en.wikipedia.org/wiki/Quantum_refereed_game) Spiel zeigt, wie die Wahrscheinlichkeit von Quantum jede Verflechtungen verwendet werden kann, um die Wahrscheinlichkeit zu erhöhen, dass über das, was mit einer reinen klassischen Strategie möglich wäre, gewonnen wird.|
+|[Spiel „GHZ“](https://github.com/microsoft/QuantumKatas/tree/main/GHZGame)|Das GHz-Spiel ist ein weiteres nicht lokales Spiel, das jedoch drei Spieler umfasst.|
+|[Spiel „Magisches Mermin-Peres-Quadrat“](https://github.com/microsoft/QuantumKatas/tree/main/MagicSquareGame)|Eine Reihe von Übungen, die [Quantum-Pseudo teleblohe](https://en.wikipedia.org/wiki/Quantum_pseudo-telepathy#The_Mermin%E2%80%93Peres_magic_square_game) zum Lösen eines magischen quadratischen Spiels untersucht.  |
 
 ## <a name="resources"></a>Ressourcen
 

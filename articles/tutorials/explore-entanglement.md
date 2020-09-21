@@ -2,19 +2,19 @@
 title: Entdecken Sie jede Verflechtungen mit Q#
 description: Erfahren Sie, wie Sie ein Quantum-Programm in schreiben Q# . Entwickeln Sie eine Bell-Zustandsanwendung mithilfe des Quantum Development Kit (QDK)
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
-ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
+ms.openlocfilehash: 6fd7494d341a83a1354d23a283d21a7ae535e49f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90063239"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834022"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Tutorial: Erkunden der Verschränkung mit Q\#
 
@@ -104,7 +104,7 @@ Ersetzen Sie den Inhalt von `Program.qs` durch den folgenden Code:
 Dieser Vorgang kann jetzt aufgerufen werden, um ein Qubit auf einen klassischen Zustand festzulegen, indem entweder immer `Zero` oder immer `One` zurückgegeben wird.
 `Zero` und `One` sind Konstanten, die die beiden einzigen möglichen Ergebnisse der Messung eines Qubits darstellen.
 
-Mit dem Vorgang `SetQubitState` wird das Qubit gemessen. Falls sich das Qubit im gewünschten Zustand befindet, wird es von `SetQubitState` unverändert gelassen. Andernfalls ändern wir den Qubit-Zustand in den gewünschten Zustand, indem wir den Vorgang `X` ausführen.
+Mit dem Vorgang `SetQubitState` wird das Qubit gemessen. Wenn sich das Qubit im gewünschten Zustand befindet, `SetQubitState` bleibt es unverändert `X` . andernfalls ändern wir den Qubit-Zustand in den gewünschten Zustand, wenn der Vorgang ausgeführt wird.
 
 #### <a name="about-no-locq-operations"></a>Informationen zu Q# Vorgängen
 
@@ -300,7 +300,7 @@ Dies wird als **Überlagerung** bezeichnet und gibt uns unseren ersten echten Ei
 ## <a name="prepare-entanglement"></a>Vorbereiten von Verschränkung
 
 Sehen wir uns nun an Q# , wie Methoden zum entangle-Qubits ausdrückt.
-Zuerst legen wir das erste Qubit auf den Anfangszustand fest und verwenden dann den Vorgang `H`, um die Überlagerung zu erzielen.  Bevor wir das erste Qubit Messen, verwenden wir dann einen neuen Vorgang ( `CNOT` ), der für "kontrolliert-not" steht.  Das Ergebnis der Ausführung dieses Vorgangs für zwei Qubits ist, dass das zweite Qubit umgekehrt wird, wenn das erste Qubit `One` ist.  Die beiden Qubits sind nun verschränkt.  Unsere Statistiken für das erste Qubit haben sich nicht geändert (50:50-Wahrscheinlichkeit für `Zero` oder `One` nach der Messung), aber wenn wir jetzt das zweite Qubit messen, erhalten wir __immer__ das gleiche Ergebnis wie bei der Messung des ersten Qubits. Unser `CNOT` hat die zwei Qubits verschränkt, sodass was immer mit dem einen von ihnen geschieht, auch mit dem anderen geschieht. Wenn Sie die Messungen umkehrten (das zweite Qubit vor dem ersten messen), würde das Gleiche passieren. Die erste Messung wäre zufällig, und die zweite wäre im Gleichschritt mit dem, was bei der ersten herausgefunden wurde.
+Zuerst legen wir das erste Qubit auf den Anfangszustand fest und verwenden dann den Vorgang `H`, um die Überlagerung zu erzielen.  Bevor wir das erste Qubit Messen, verwenden wir dann einen neuen Vorgang ( `CNOT` ), der für " *kontrolliert-not*" steht.  Das Ergebnis der Ausführung dieses Vorgangs auf zwei Qubits besteht darin, das zweite Qubit auszuklappen, wenn das erste Qubit ist `One` .  Die beiden Qubits sind nun verschränkt.  Unsere Statistiken für das erste Qubit haben sich nicht geändert (50:50-Wahrscheinlichkeit für `Zero` oder `One` nach der Messung), aber wenn wir jetzt das zweite Qubit messen, erhalten wir __immer__ das gleiche Ergebnis wie bei der Messung des ersten Qubits. Unser `CNOT` hat die zwei Qubits verschränkt, sodass was immer mit dem einen von ihnen geschieht, auch mit dem anderen geschieht. Wenn Sie die Messungen umkehrten (das zweite Qubit vor dem ersten messen), würde das Gleiche passieren. Die erste Messung wäre zufällig, und die zweite wäre im Gleichschritt mit dem, was bei der ersten herausgefunden wurde.
 
 Als erstes müssen wir zwei Qubits anstelle eines in zuordnen `TestBellState` :
 

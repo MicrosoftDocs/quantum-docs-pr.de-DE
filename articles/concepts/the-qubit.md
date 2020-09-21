@@ -1,6 +1,6 @@
 ---
 Title: das Qubit in Quantum Computing Description: erfahren Sie mehr über Qubits, die grundlegende Einheit der Informationen in Quantum Computing.
-Autor: quantumwriter UID: Microsoft. Quantum. Concepts. Qubit ms. Author: nawiebe@microsoft.com ms. Date: 12/11/2017 ms. Topic: article NO-LOC:
+Autor: quantumwriter UID: Microsoft. Quantum. Concepts. Qubit ms. Author: v-benbra ms. Date: 12/11/2017 ms. Topic: article NO-LOC:
 - "Q#"
 - "$$v"
 - "$$"
@@ -100,7 +100,7 @@ Die Quantum State Vektoren $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ und $ \beg
 
 Wir verwenden diese beiden Quantum-Zustände, damit Sie den zwei Zuständen eines klassischen Bits entsprechen, nämlich $ 0 $ und $ 1 $ . Die Standard Konvention besteht darin,
 
-$$0 \equiv \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} , \qquad 1 \equiv \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} ,$$
+$$0 \equiv \begin{bmatrix} 1 \\\\  0 \end{bmatrix} , \qquad 1 \equiv \begin{bmatrix} 0 \\\\  1 \end{bmatrix} ,$$
 
 Obwohl die entgegengesetzte Auswahl gleichermaßen gut wäre. Folglich entsprechen nur zwei der unendlichen Zahl der möglichen Single-Qubit Quantum State Vectors den Zuständen klassischer Bits. nicht alle anderen Quantum-Zustände.
 
@@ -120,7 +120,7 @@ Qubits können auch unter $ $ Verwendung der [*Bloch Sphere*](https://en.wikiped
 ![Bloch-Kugel](~/media/concepts_bloch.png)
 
 Die Pfeile in diesem Diagramm zeigen die Richtung an, in der der Quantum-Status Vektor zeigt, und jede Transformation des Pfeils kann als Drehung zu einer der Hauptachsen betrachtet werden.
-Obwohl eine Quantum-Berechnung als Folge von Rotationen eine leistungsstarke Intuition darstellt, ist es schwierig, diese intuienz zu verwenden, um Algorithmen zu entwerfen und zu beschreiben. Q#verringert dieses Problem, indem eine Sprache zum beschreiben solcher Drehungen bereitgestellt wird.
+Obwohl eine Quantum-Berechnung als Folge von Rotationen eine leistungsstarke Intuition darstellt, ist es schwierig, diese intuienz zu verwenden, um Algorithmen zu entwerfen und zu beschreiben. Q# verringert dieses Problem, indem eine Sprache zum beschreiben solcher Drehungen bereitgestellt wird.
 
 ## <a name="single-qubit-operations"></a>Single-Qubit-Vorgänge
 
@@ -128,7 +128,7 @@ Quantum-Computer verarbeiten Daten, indem Sie einen universellen Satz von Quantu
 Dieses Konzept der Universalität ähnelt dem Konzept der Universalität für traditionelles (d.h. klassisches) Computing, bei dem ein Gate-Satz als universell betrachtet wird, wenn jede Transformation der Eingabe Bits mithilfe einer begrenzten Längen Verbindung ausgeführt werden kann.
 Bei der Quantenberechnung sind die gültigen Transformationen, die wir für ein Qubit ausführen dürfen, einheitliche Transformationen und Messungen.
 Der *Adjoint-Vorgang* oder das komplexe konjugierte austauschen ist für das Quantum Computing von entscheidender Bedeutung, da es für das Umkehren von Quantum-Transformationen erforderlich ist.
-Q#Dies wird durch die Bereitstellung von Methoden zur automatischen Kompilierung von Gate-Sequenzen in ihren Adjoint widergespiegelt, wodurch der Programmierer nicht in vielen Fällen Code-adjoints übergeben muss. Ein Beispiel hierfür finden Sie unten:
+Q# Dies wird durch die Bereitstellung von Methoden zur automatischen Kompilierung von Gate-Sequenzen in ihren Adjoint widergespiegelt, wodurch der Programmierer nicht in vielen Fällen Code-adjoints übergeben muss. Ein Beispiel hierfür finden Sie unten:
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -145,7 +145,7 @@ Bei der Universalität ist es erforderlich, dass ein Quantum-Computer *nur jede 
 Anders ausgedrückt: ein Satz von Gates ist ein universelles Gate, wenn eine einheitliche Transformation ungefähr als ein Produkt von Gates aus dieser Menge geschrieben werden kann. Wir verlangen, dass für jede vorgeschriebene Fehlergrenze Gates $ g_ { 1 } , g_ { 2 } , \ldots G_N $ aus dem Gate-Satz vorhanden sind.
 
 $$
-G_N g_ { N-1 } \cdots G_2 G_1 \ca.$$
+G_N g_ { N-1 } \cdots G_2 G_1 \ca. $$
 
 Beachten Sie Folgendes: da die Konvention für die Matrix Multiplikation von rechts nach links multipliziert werden soll, ist der erste Gate-Vorgang in dieser Sequenz, $ G_N $ , tatsächlich der letzte, der auf den quantenvektor angewendet wird. Formal gesagt, wir sagen, dass ein solcher Gate-Satz universell ist, wenn für jede Fehlertoleranz $ \epsilon > 0 $ $ G_1, \ldots, G_N vorhanden ist, $ sodass der Abstand zwischen $ G_N \ldots G_1 $ und $ U höchstens $ $ \epsilon ist $ . Im Idealfall sollte der Wert von N den Wert von $ $ $ \epsilon erreichen, der $ polylogarithmisch mit $ 1/\ Epsilon skaliert $ .
 

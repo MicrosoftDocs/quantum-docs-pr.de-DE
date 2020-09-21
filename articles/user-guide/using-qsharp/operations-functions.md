@@ -1,5 +1,5 @@
 ---
-title: Vorgänge und Funktionen inQ#
+title: Vorgänge und Funktionen in Q#
 description: Definieren und aufzurufen von Vorgängen und Funktionen sowie der kontrollierten und der Adjoint-Vorgangs Spezialisierung.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -9,14 +9,14 @@ uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 76437c83df894fa86409e680f961d97e267c6869
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c2ce999ea2a0fe7204f402fedb4cd3a3c15bd44b
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867878"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759423"
 ---
-# <a name="operations-and-functions-in-no-locq"></a>Vorgänge und Funktionen inQ#
+# <a name="operations-and-functions-in-no-locq"></a>Vorgänge und Funktionen in Q#
 
 ## <a name="defining-new-operations"></a>Definieren von neuen Vorgängen
 
@@ -43,12 +43,12 @@ operation BitFlip(target : Qubit) : Unit {
 Das Schlüsselwort `operation` beginnt mit der Vorgangs Definition, gefolgt vom Namen; hier, `BitFlip` .
 Als nächstes wird der Typ der Eingabe definiert ( `Qubit` ), zusammen mit einem Namen, `target` , um auf die Eingabe innerhalb des neuen Vorgangs zu verweisen.
 Schließlich `Unit` definiert, dass die Ausgabe des Vorgangs leer ist.
-`Unit`wird ähnlich wie `void` in c# und anderen imperativen Sprachen verwendet und entspricht `unit` in F # und anderen funktionalen Sprachen.
+`Unit` wird ähnlich wie `void` in c# und anderen imperativen Sprachen verwendet und entspricht `unit` in F # und anderen funktionalen Sprachen.
 
 Vorgänge können auch interessantere Typen als zurückgeben `Unit` .
 Der- <xref:microsoft.quantum.intrinsic.m> Vorgang gibt beispielsweise eine Ausgabe vom Typ zurück `Result` , die angibt, dass eine Messung durchgeführt wurde.  Sie können Sie von einem Vorgang an einen anderen Vorgang übergeben oder mit dem- `let` Schlüsselwort verwenden, um eine neue Variable zu definieren.
 
-Mit diesem Ansatz können Sie die klassische Berechnung darstellen, die mit Quantum-Vorgängen auf niedriger Ebene interagiert, wie z. b. in einer über [geordneten Codierung](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding):
+Mit diesem Ansatz können Sie die klassische Berechnung darstellen, die mit Quantum-Vorgängen auf niedriger Ebene interagiert, wie z. b. in einer über [geordneten Codierung](https://github.com/microsoft/QuantumKatas/tree/main/SuperdenseCoding):
 
 ```qsharp
 operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
@@ -100,14 +100,14 @@ Verwenden Sie ein Funktor, indem Sie es auf einen Vorgang anwenden, der einen ne
 Wenn Sie das Funktor beispielsweise auf den-Vorgang anwenden, wird `Adjoint` `Y` der neue-Vorgang zurückgegeben `Adjoint Y` . Sie können den neuen Vorgang wie jeden anderen Vorgang aufrufen.
 Damit ein Vorgang die Anwendung des-oder- `Adjoint` `Controlled` funktors unterstützt, muss der Rückgabetyp notwendigerweise sein `Unit` . 
 
-#### <a name="adjoint-functor"></a>`Adjoint`Funktionselement
+#### <a name="adjoint-functor"></a>`Adjoint` Funktionselement
 
 Folglich `Adjoint Y(q1)` wendet das `Adjoint` Funktor auf den `Y` Vorgang an, um einen neuen Vorgang zu generieren, und wendet diesen neuen Vorgang auf an `q1` .
 Der neue Vorgang hat dieselbe Signatur und denselben Typ wie der Basis Vorgang `Y` .
 Insbesondere unterstützt der neue-Vorgang auch `Adjoint` , und unterstützt nur dann, wenn `Controlled` der Basis Vorgang durchgeführt wurde.
 Das `Adjoint` Funktor ist eine eigene Umkehrung, d. h `Adjoint Adjoint Op` ., ist immer identisch mit `Op` .
 
-#### <a name="controlled-functor"></a>`Controlled`Funktionselement
+#### <a name="controlled-functor"></a>`Controlled` Funktionselement
 
 Ebenso `Controlled X(controls, target)` wendet das `Controlled` Funktor auf den `X` -Vorgang an, um einen neuen-Vorgang zu generieren, und wendet diesen neuen-Vorgang auf `controls` und an `target` .
 
@@ -123,11 +123,11 @@ Der neue-Vorgang unterstützt `Controlled` , und unterstützt `Adjoint` nur dann
 
 Wenn für den ursprünglichen Vorgang nur ein einzelnes Argument benötigt wurde, wird hier die [entsprechgabe von Singleton-Tupeln](xref:microsoft.quantum.guide.types) berücksichtigt.
 Beispiels `Controlled X` Weise ist die gesteuerte Version des `X` Vorgangs. 
-`X`weist den Typ auf `(Qubit => Unit is Adj + Ctl)` , `Controlled X` hat also `((Qubit[], (Qubit)) => Unit is Adj + Ctl)` den Typ; aufgrund der Äquivalenz von Singleton-Tupeln ist dies identisch mit `((Qubit[], Qubit) => Unit is Adj + Ctl)` .
+`X` weist den Typ auf `(Qubit => Unit is Adj + Ctl)` , `Controlled X` hat also `((Qubit[], (Qubit)) => Unit is Adj + Ctl)` den Typ; aufgrund der Äquivalenz von Singleton-Tupeln ist dies identisch mit `((Qubit[], Qubit) => Unit is Adj + Ctl)` .
 
 Wenn der Basis Vorgang mehrere Argumente benötigt hat, denken Sie daran, die entsprechenden Argumente der kontrollierten Version des Vorgangs in Klammern einzuschließen, um Sie in ein Tupel zu konvertieren.
 Beispiels `Controlled Rz` Weise ist die gesteuerte Version des `Rz` Vorgangs. 
-`Rz`weist den Typ auf `((Double, Qubit) => Unit is Adj + Ctl)` , hat also den `Controlled Rz` Typ `((Qubit[], (Double, Qubit)) => Unit is Adj + Ctl)` .
+`Rz` weist den Typ auf `((Double, Qubit) => Unit is Adj + Ctl)` , hat also den `Controlled Rz` Typ `((Qubit[], (Double, Qubit)) => Unit is Adj + Ctl)` .
 Daher ist `Controlled Rz(controls, (0.1, target))` ein gültiger Aufruf von `Controlled Rz` (Beachten Sie die Klammern `0.1, target` ).
 
 Als weiteres Beispiel `CNOT(control, target)` kann als implementiert werden `Controlled X([control], target)` . Wenn ein Ziel von zwei Steuerungs Qubits (ccnot) gesteuert werden soll, verwenden Sie eine- `Controlled X([control1, control2], target)` Anweisung.
@@ -192,7 +192,7 @@ Im folgenden finden Sie die vollständige Palette der Möglichkeiten mit einigen
 
 #### <a name="explicit-specialization-declarations"></a>Explizite Spezialisierungs Deklarationen
 
-Q#Vorgänge können die folgenden expliziten Spezialisierungs Deklarationen enthalten:
+Q# Vorgänge können die folgenden expliziten Spezialisierungs Deklarationen enthalten:
 
 - Die `body` Spezialisierung gibt die Implementierung des Vorgangs ohne angewendete Funktoren an.
 - Die `adjoint` Spezialisierung gibt die Implementierung des Vorgangs mit `Adjoint` angewendetem Funktionselement an.
@@ -329,9 +329,9 @@ Bei einem Vorgang, dessen Text Aufrufe von anderen Vorgängen enthält, die nich
 
 Verwenden Sie einen Vorgang mit zusätzlichen Funktoren, die überall unterstützt werden, wenn Sie einen Vorgang mit weniger Funktoren, aber derselben Signatur verwenden. Verwenden Sie beispielsweise einen Vorgang des Typs an einer beliebigen Stelle, an `(Qubit => Unit is Adj)` der Sie einen Vorgang des Typs verwenden `(Qubit => Unit)` .
 
-Q#ist *kovariant* in Bezug auf Aufruf Bare Rückgabe Typen: ein Aufruf barer, der einen-Typ zurückgibt, `'A` ist mit einem Aufruf baren-Element mit demselben Eingabetyp und einem Ergebnistyp kompatibel, der mit kompatibel ist `'A` .
+Q# ist *kovariant* in Bezug auf Aufruf Bare Rückgabe Typen: ein Aufruf barer, der einen-Typ zurückgibt, `'A` ist mit einem Aufruf baren-Element mit demselben Eingabetyp und einem Ergebnistyp kompatibel, der mit kompatibel ist `'A` .
 
-Q#ist *kontra Variant* in Bezug auf Eingabetypen: ein Aufruf bares Element, das einen Typ `'A` als Eingabe annimmt, ist mit einem Aufruf baren mit dem gleichen Ergebnistyp und einem Eingabetyp kompatibel, der mit kompatibel ist `'A` .
+Q# ist *kontra Variant* in Bezug auf Eingabetypen: ein Aufruf bares Element, das einen Typ `'A` als Eingabe annimmt, ist mit einem Aufruf baren mit dem gleichen Ergebnistyp und einem Eingabetyp kompatibel, der mit kompatibel ist `'A` .
 
 Das heißt, wenn die folgenden Definitionen definiert sind,
 
@@ -360,7 +360,7 @@ Sie können
 - Gibt einen Wert vom Typ `(Qubit[] => Unit is Adj + Ctl)` aus zurück `ConjugateInvertWith` .
 
 > [!IMPORTANT]
-> Q#0,3 hat einen signifikanten Unterschied im Verhalten von benutzerdefinierten Typen eingeführt.
+> Q# 0,3 hat einen signifikanten Unterschied im Verhalten von benutzerdefinierten Typen eingeführt.
 
 Benutzerdefinierte Typen werden als umschließende Version des zugrunde liegenden Typs und nicht als Untertyp behandelt.
 Dies bedeutet, dass ein Wert eines benutzerdefinierten Typs nicht verwendbar ist, wenn Sie erwarten, dass ein Wert des zugrunde liegenden Typs ist.
@@ -509,7 +509,7 @@ Diese Funktion ist zwar für eine kleine Anzahl solcher Funktionen übertragbar,
 Ein Großteil dieser Schwierigkeit ergibt sich jedoch aus der Tatsache, dass Sie dem Compiler nicht die erforderlichen Informationen zur Erkennung der verschiedenen Versionen von erhalten haben `Map` .
 Effektiv möchten Sie, dass der Compiler `Map` als eine mathematische Funktion von Q# *Typen* zu Q# Funktionen behandelt.
 
-Q#formalisiert dieses Konzept, indem Funktionen und Vorgänge sowohl *Typparameter*als auch Ihre normalen tupelparameter aufweisen können.
+Q# formalisiert dieses Konzept, indem Funktionen und Vorgänge sowohl *Typparameter*als auch Ihre normalen tupelparameter aufweisen können.
 In den vorherigen Beispielen möchten Sie sich vorstellen, `Map` dass im `Int, Pauli` ersten Fall Typparameter und `Double, String` im zweiten Fall vorhanden sind.
 Verwenden Sie zum größten Teil diese Typparameter, als wären Sie normale Typen. Verwenden Sie Werte von Typparametern, um Arrays und Tupel zu erstellen, Funktionen und Vorgänge aufzurufen und gewöhnliche oder änderbare Variablen zuzuweisen.
 
@@ -657,7 +657,7 @@ Im Prinzip könnte die klassische Logik in `SquareOperation` viel stärker einbe
 
 ## <a name="recursion"></a>Rekursion
 
-Q#callables dürfen direkt oder indirekt rekursiv sein.
+Q# callables dürfen direkt oder indirekt rekursiv sein.
 Das heißt, ein Vorgang oder eine Funktion kann sich selbst aufrufen, oder Sie kann eine andere Aufruf Bare aufrufen, die den Aufruf baren Vorgang direkt oder indirekt aufruft.
 
 Es gibt jedoch zwei wichtige Kommentare zur Verwendung der Rekursion:

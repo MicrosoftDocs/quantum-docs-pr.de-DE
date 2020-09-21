@@ -1,19 +1,20 @@
 ---
 title: Quantum Machine Learning-Bibliothek
+description: Erfahren Sie, wie Machine Learning auf Quantum-Systemen verwendet wird.
 author: alexeib2
-ms.author: alexei.bocharov@microsoft.com
+ms.author: alexeib
 ms.date: 11/22/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 65b0aa6a7f385765933d4d89ce34901f77cf76ec
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 9f7f892fb2b76432942c86163497c22f0c73d51f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863097"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833808"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>Einführung in Quantum Machine Learning
 
@@ -70,8 +71,8 @@ Eindeutig $b $ muss das Intervall von $ (-0,5, + 0,5) $ aufweisen, damit es sinn
 
 Ein Trainings Fall $ (x, y) \in \mathcal{d} $ wird bei Berücksichtigung der Bias-$b $ als fehl *Klassifizierung* betrachtet, wenn sich die Bezeichnung, die für $x $ as per Regel 1 abgeleitet wurde, tatsächlich von $y $ unterscheidet. Die Gesamtanzahl der fehl Klassifizierungen ist die *Trainings Bewertung* des Klassifizierers, bei der der Bias $b $ liegt. Der *optimale* Klassifizierungs Aufwand $b $ minimiert die Trainings Bewertung. Wenn die Voraus berechnete Wahrscheinlichkeitsschätzung $ \{ P (M = y_2 | U (\orta) x) | (x, *) \in\mathcal{d} \} $. die optimale klassifizierungsabweichung kann durch die binäre Suche im Intervall von $ (-0,5, + 0,5) $ gefunden werden, indem höchstens $ \ Log_2 (| \mathcal{d} |) festgestellt wird. $ Steps.
 
-### <a name="reference"></a>Referenz
+### <a name="reference"></a>Verweis
 
 Diese Informationen sollten ausreichen, um mit dem Code zu beginnen. Wenn Sie jedoch mehr über dieses Modell erfahren möchten, lesen Sie den ursprünglichen Vorschlag: [ *"Circuit-zentrierte Quantum Classifiers", Maria Schuld, Alex Bocharov, Krysta svore und Nathan Wiebe*](https://arxiv.org/abs/1804.00633)
 
-Zusätzlich zum Codebeispiel, das Sie in den nächsten Schritten sehen werden, können Sie in [diesem Tutorial](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/QuantumClassification) auch mit der Erkundung der Quantum-Klassifizierung beginnen. 
+Zusätzlich zum Codebeispiel, das Sie in den nächsten Schritten sehen werden, können Sie in [diesem Tutorial](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/QuantumClassification) auch mit der Erkundung der Quantum-Klassifizierung beginnen. 
