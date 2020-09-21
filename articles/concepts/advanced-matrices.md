@@ -1,6 +1,6 @@
 ---
 Title: Erweiterte Matrix Konzepte Description: erfahren Sie mehr über Eigenvektoren, Eigenwerte und Matrix exponentiale, die grundlegenden Tools, die zum beschreiben und Simulieren von Quantum-Algorithmen verwendet werden.
-Autor: quantumwriter UID: Microsoft. Quantum. Concepts. Matrix-Advanced ms. Author: nawiebe@microsoft.com ms. Date: 12/11/2017 ms. Topic: article NO-LOC:
+Autor: quantumwriter UID: Microsoft. Quantum. Concepts. Matrix-Advanced ms. Author: v-benbra ms. Date: 12/11/2017 ms. Topic: article NO-LOC:
 - "Q#"
 - "$$v"
 - "$$"
@@ -93,7 +93,7 @@ Wir erweitern nun unsere Manipulation von Matrizen auf [*Eigenwerte, Eigenvektor
 
 Let $ M $ ist eine quadratische Matrix $ , und v $ ist ein Vektor, der nicht der Nullen aller Nullen ist (d. h. der Vektor mit allen Einträgen gleich $ 0 $ ).
 
-Wir sagen $ , $ dass v ein [*eigen Vektor*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) von M ist, $ $ Wenn $ mv = CV $ für eine bestimmte Zahl $ c $ . Wir sagen $ , dass c $ der [*eigen Wert*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) ist, der dem Eigen Vektor $ v entspricht $ . Im Allgemeinen kann eine Matrix $ M $ einen Vektor in einen anderen Vektor umwandeln, aber ein eigen Vektor ist ein besonderes Zeichen, da er unverändert bleibt, außer dass er mit einer Zahl multipliziert wird. Beachten Sie Folgendes: Wenn $ v $ ein eigen Vektor mit dem Eigen Wert $ c ist $ , dann $ $ ist AV auch ein eigenständiger Vektor (bei jedem Wert ungleich 0 (NULL $ $ )) mit demselben eigen Wert.
+Wir sagen $ , $ dass v ein [*eigen Vektor*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) von M ist,  $ $ Wenn $ mv = CV $ für eine bestimmte Zahl $ c $ . Wir sagen $ , dass c $ der [*eigen Wert*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) ist, der dem Eigen Vektor $ v entspricht $ . Im Allgemeinen kann eine Matrix $ M $ einen Vektor in einen anderen Vektor umwandeln, aber ein eigen Vektor ist ein besonderes Zeichen, da er unverändert bleibt, außer dass er mit einer Zahl multipliziert wird. Beachten Sie Folgendes: Wenn $ v $ ein eigen Vektor mit dem Eigen Wert $ c ist $ , dann $ $ ist AV auch ein eigenständiger Vektor (bei jedem Wert ungleich 0 (NULL $ $ )) mit demselben eigen Wert.
 
 Beispielsweise ist für die Identitätsmatrix jeder Vektor $ v $ ein eigen Vektor mit dem Eigen Wert $ 1 $ .
 
@@ -108,7 +108,7 @@ Die Vektoren
 
 $$\begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix} , \begin{bmatrix} 0 \\\\ 1 \\\\ 0 \end{bmatrix} und \begin{bmatrix} 0 \\\\ 0 \\\\ 1\end{bmatrix}$$
 
-sind Eigenvektoren dieser Matrix mit eigen Werten $ d_1 $ , $ d_2 $ und $ D_3 $ . Wenn $ d_1 $ , $ d_2 $ und $ D_3 unter $ schiedliche Zahlen sind, sind diese Vektoren (und ihre vielfache) die einzigen Eigenvektoren der Matrix $ d $ . Im Allgemeinen ist es für eine diagonal Matrix leicht, die Eigenwerte und Eigenvektoren zu lesen. Die Eigenwerte sind alle Zahlen, die auf der Diagonal angezeigt werden, und ihre jeweiligen Eigenvektoren sind die Einheits Vektoren, bei denen ein Eintrag gleich $ 1 $ und die restlichen Einträge gleich $ 0 sind $ .
+sind Eigenvektoren dieser Matrix mit eigen Werten  $ d_1 $ , $ d_2 $ und $ D_3 $ . Wenn $ d_1 $ , $ d_2 $ und $ D_3 unter $ schiedliche Zahlen sind, sind diese Vektoren (und ihre vielfache) die einzigen Eigenvektoren der Matrix $ d $ . Im Allgemeinen ist es für eine diagonal Matrix leicht, die Eigenwerte und Eigenvektoren zu lesen. Die Eigenwerte sind alle Zahlen, die auf der Diagonal angezeigt werden, und ihre jeweiligen Eigenvektoren sind die Einheits Vektoren, bei denen ein Eintrag gleich $ 1 $ und die restlichen Einträge gleich $ 0 sind $ .
 
 Beachten Sie im obigen Beispiel, dass die Eigenvektoren von $ D $ eine Grundlage für $ drei $ dimensionale Vektoren bilden. Eine Basis ist ein Satz von Vektoren, sodass jeder Vektor als lineare Kombination von Ihnen geschrieben werden kann. Explizitere, $ V_1 $ , $ V_2 $ und $ V_3 $ bilden eine Grundlage, wenn ein Vektor $ v $ als $ v = A_1 V_1 + a_2 V_2 + a_3 V_3 geschrieben werden kann A_1 $ $ $ , $ a_2 $ und $ a_3 $ .
 

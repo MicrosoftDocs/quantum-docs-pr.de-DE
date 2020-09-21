@@ -3,17 +3,17 @@ title: Diagnose in den Q# Standardbibliotheken
 description: Erfahren Sie mehr über die Diagnosefunktionen und Vorgänge in den Q# Standardbibliotheken, die zum Abfangen von Fehlern oder Fehlern in Quantum-Programmen verwendet werden.
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4a98795b2459adaa4e47c888751121fffdc70971
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 11ce1bc86db0c5aa0f81ba7d0f2d6ec3463b178c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868541"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835569"
 ---
 # <a name="diagnostics"></a>Diagnose #
 
@@ -33,7 +33,7 @@ Message($"About to rotate by an angle of {angle}...");
 ```
 
 > [!NOTE]
-> `Message`verfügt über eine Signatur `(String -> Unit)` , die wiederum darstellt, dass die Ausgabe einer Debugprotokollierung nicht innerhalb von erkannt werden kann Q# .
+> `Message` verfügt über eine Signatur `(String -> Unit)` , die wiederum darstellt, dass die Ausgabe einer Debugprotokollierung nicht innerhalb von erkannt werden kann Q# .
 
 Die <xref:microsoft.quantum.diagnostics.dumpmachine> <xref:microsoft.quantum.diagnostics.dumpregister> callables und weisen Zielcomputer an, Diagnoseinformationen zu allen derzeit zugeordneten Qubits bzw. zu einem bestimmten Register von Qubits bereitzustellen.
 Jeder Zielcomputer variiert in Abhängigkeit von den Diagnoseinformationen, die als Reaktion auf eine dumpanweisung bereitgestellt werden.
@@ -67,16 +67,16 @@ Daher können wir einzelne Vorgänge auf einem klassischen Simulator testen, bev
 Auf Ziel Computern, die keine Auswertung von Assertionen zulassen, können Aufrufe von <xref:microsoft.quantum.diagnostics.assertmeasurement> problemlos ignoriert werden.
 
 Im allgemeinen <xref:microsoft.quantum.diagnostics.assertmeasurement> wird durch den Vorgang bestätigt, dass das Messen der angegebenen Qubits in der angegebenen Pauli-Basis immer das angegebene Ergebnis hat.
-Wenn die-Übersetzung fehlschlägt, wird die Ausführung beendet, indem `fail` mit der angegebenen Meldung aufgerufen wird.
+Wenn die-Übersetzung fehlschlägt, wird die-Laufzeit beendet, indem `fail` mit der angegebenen Meldung aufgerufen wird.
 Standardmäßig ist dieser Vorgang nicht implementiert. Simulatoren, die diese unterstützen können, sollten eine Implementierung bereitstellen, die eine Lauf Zeit Überprüfung ausführt.
-`AssertMeasurement`hat die Signatur `((Pauli[], Qubit[], Result, String) -> ())` .
+`AssertMeasurement` hat die Signatur `((Pauli[], Qubit[], Result, String) -> ())` .
 Da `AssertMeasurement` eine Funktion mit einem leeren Tupel als Ausgabetyp ist, sind keine Auswirkungen von Aufrufen `AssertMeasurement` in einem Programm Observable-Ausdrücke Q# .
 
 Die <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> Vorgangs Funktion bestätigt, dass das Messen der angegebenen Qubits in der angegebenen Pauli-Basis das angegebene Ergebnis mit der angegebenen Wahrscheinlichkeit innerhalb einiger Toleranz hat.
-Toleranz ist additiv (z. b. `abs(expected-actual) < tol` ).
-Wenn die-Übersetzung fehlschlägt, wird die Ausführung beendet, indem `fail` mit der angegebenen Meldung aufgerufen wird.
+Toleranz ist additiv (z `abs(expected-actual) < tol` . b.).
+Wenn die-Übersetzung fehlschlägt, wird die-Laufzeit beendet, indem `fail` mit der angegebenen Meldung aufgerufen wird.
 Standardmäßig ist dieser Vorgang nicht implementiert. Simulatoren, die diese unterstützen können, sollten eine Implementierung bereitstellen, die eine Lauf Zeit Überprüfung ausführt.
-`AssertMeasurementProbability`hat die Signatur `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . Der erste `Double` Parameter gibt die gewünschte Wahrscheinlichkeit des Ergebnisses und der zweite die Toleranz an.
+`AssertMeasurementProbability` hat die Signatur `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . Der erste `Double` Parameter gibt die gewünschte Wahrscheinlichkeit des Ergebnisses und der zweite die Toleranz an.
 
 Wir können mehr als Assert-Vorgänge durchführen, indem wir die klassischen Informationen verwenden, die von einem Simulator verwendet werden, um den internen Zustand eines Qubit darzustellen, sodass es nicht erforderlich ist, um unsere Assertionen zu testen.
 Dies ermöglicht es uns insbesondere, auf nicht *kompatible* Messungen zu gründen, die auf tatsächlicher Hardware nicht möglich wären.

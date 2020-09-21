@@ -1,6 +1,6 @@
 ---
 Title: Beschreibung von Quantum Computing Glossar: ein Glossar allgemeiner Begriffe, Aktionen und Objekte, die bei der Quantenberechnung verwendet werden.
-Autor: quantumwriter ms. Author: Alan.Geller@microsoft.com ms. Date: 12/11/2017 ms. Topic: article UID: Microsoft. Quantum. Glossar NO-LOC:
+Autor: bradben ms. Author: v-benbra ms. Date: 9/1/2020 ms. Topic: article UID: Microsoft. Quantum. Glossar NO-LOC:
 - "Q#"
 - "$$v"
 - "$$"
@@ -99,7 +99,7 @@ Einer von vier bestimmten maxitional [entbickten](xref:microsoft.quantum.glossar
 
 ## <a name="bloch-sphere"></a>Bloch-Kugel
 
-Eine grafische Darstellung eines Single-[Qubit](xref:microsoft.quantum.glossary#qubit) - [Quantum-Zustands](xref:microsoft.quantum.glossary#quantum-state) als Punkt in einer dreidimensionalen Einheits Kugel. Weitere Informationen finden Sie unter [visualisieren von Qubits und Transformationen mithilfe der Bloch-Kugel](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
+Eine grafische Darstellung eines Single-[Qubit](xref:microsoft.quantum.glossary#qubit) - [Quantum-Zustands](xref:microsoft.quantum.glossary#quantum-state) als Punkt in einer dreidimensionalen Einheits Kugel. Weitere Informationen finden Sie unter  [visualisieren von Qubits und Transformationen mithilfe der Bloch-Kugel](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 ## <a name="callable"></a>Callable
 
@@ -170,7 +170,7 @@ Eine Bezeichnung für eine Auflistung verwandter Namen (d. h. [Vorgänge](xref:m
 
 ## <a name="operation"></a>Vorgang
 
-Die grundlegende Einheit der Quantum-Ausführung in Q# . Dies entspricht ungefähr einer Funktion in C, C++ oder python oder einer statischen Methode in c# oder Java. Weitere Informationen finden Sie unter [Vorgänge und Funktionen](xref:microsoft.quantum.guide.operationsfunctions).
+Die grundlegende Einheit der Quantum-Berechnung in Q# . Dies entspricht ungefähr einer Funktion in C, C++ oder python oder einer statischen Methode in c# oder Java. Weitere Informationen finden Sie unter [Vorgänge und Funktionen](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## <a name="operator-application"></a>Operator Anwendung
 

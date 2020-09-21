@@ -2,19 +2,19 @@
 title: Broombridge-Quantum-Chemie Schema
 description: Übersicht über das broombridge-Quantum-Chemie Schema, das verwendet wird, um reale Chemie Probleme mit dem Microsoft Quantum Development Kit zu modellieren.
 author: martinro
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.broombridge
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ed24fdd58dc16f97d1ba8051b1c8d0fd84ce0588
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: e580fd8267cc7ba30533d557eceb486f8c205be6
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869170"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835773"
 ---
 # <a name="broombridge-quantum-chemistry-schema"></a>Broombridge-Quantum-Chemie Schema # 
 

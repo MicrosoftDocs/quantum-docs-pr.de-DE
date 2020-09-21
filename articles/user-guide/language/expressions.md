@@ -1,32 +1,32 @@
 ---
-title: Ausdrücke inQ#
+title: Ausdrücke in Q#
 description: Erfahren Sie, wie Konstanten, Variablen, Operatoren, Vorgänge und Funktionen als Ausdrücke in angegeben, referenziert und kombiniert werden Q# .
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b6cc97dfee05dc843e213e84f17043714a8a9656
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 9bf28e3854eae1892692d7ca840e1860de2e2934
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869612"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835841"
 ---
-# <a name="expressions-in-no-locq"></a>Ausdrücke inQ#
+# <a name="expressions-in-no-locq"></a>Ausdrücke in Q#
 
 ## <a name="numeric-expressions"></a>Numerische Ausdrücke
 
 Numerische Ausdrücke sind Ausdrücke vom Typ `Int` , `BigInt` oder `Double` .
 Das heißt, Sie sind entweder ganzzahlige oder Gleit Komma Zahlen.
 
-`Int`Literale in Q# werden als Sequenz von Ziffern geschrieben.
+`Int` Literale in Q# werden als Sequenz von Ziffern geschrieben.
 Hexadezimale und binäre ganzzahlige Werte werden unterstützt `0x` `0b` bzw. mit dem Präfix und geschrieben.
 
-`BigInt`Literale in Q# verfügen über ein nach gestelltes- `l` oder- `L` Suffix.
+`BigInt` Literale in Q# verfügen über ein nach gestelltes- `l` oder- `L` Suffix.
 Hexadezimale Big Integerwerte werden unterstützt und mit einem Präfix "0x" geschrieben.
 Daher sind die folgenden alle gültigen Verwendungsmöglichkeiten von `BigInt` Literalen:
 
@@ -36,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-`Double`Literale in Q# sind Gleit Komma Zahlen, die mithilfe von Dezimalziffern geschrieben werden.
+`Double` Literale in Q# sind Gleit Komma Zahlen, die mithilfe von Dezimalziffern geschrieben werden.
 Sie können mit oder ohne Dezimaltrennzeichen, oder mit einem `.` exponentiellen Teil geschrieben werden, der mit "e" oder "e" angegeben wird (nach dem nur ein mögliches negatives Vorzeichen und Dezimalziffern gültig sind).
 Die folgenden `Double` Literale sind gültig: `0.0` , `1.2e5` , `1e-5` .
 
@@ -64,16 +64,14 @@ Bei ganzzahligen und großen ganzzahligen Werten sind Verschiebungen arithmetisc
 Wenn Sie einen negativen Wert entweder nach links oder nach rechts verschieben, ergibt dies eine negative Zahl.
 Das heißt, dass ein Schritt nach links oder rechts verschoben wird, entspricht dem multiplizieren bzw. aufteilen durch 2.
 
-Die ganzzahlige Division und der ganzzahlige Modulo folgen dem Verhalten für negative Zahlen wie c#.
-Das heißt, dass `a % b` immer das gleiche Vorzeichen wie hat `a` und `b * (a / b) + a % b` immer gleich ist `a` .
-Beispiel:
+Die ganzzahlige Division und der ganzzahlige Modulo folgen dem Verhalten für negative Zahlen wie c#. Das heißt, dass `a % b` immer das gleiche Vorzeichen wie hat `a` und `b * (a / b) + a % b` immer gleich ist `a` . Zum Beispiel:
 
- `A` | `B` | `A / B` | `A % B`
----------|----------|---------|---------
- 5 | 2 | 2 | 1
- 5 | -2 | -2 | 1
- -5 | 2 | -2 | -1
- -5 | -2 | 2 | -1
+|`A` | `B` | `A / B` | `A % B`|
+|:---------:|:----------:|:---------:|:---------:|
+| 5 | 2 | 2 | 1 |
+| 5 | -2 | -2 | 1 |
+| -5 | 2 | -2 | -1 |
+| -5 | -2 | 2 | -1 |
 
 Die Division von großen ganzzahligen und Modulo funktioniert auf dieselbe Weise.
 
@@ -103,7 +101,7 @@ Der Gleichheits Vergleich für `Qubit` Werte ist die Identitäts Gleichheit, d. 
 Die Zustände der beiden Qubits werden von diesem Vergleich nicht verglichen, auf Sie zugegriffen, gemessen oder geändert.
 
 Der Gleichheits Vergleich für `Double` Werte kann aufgrund von Rundungs Effekten irreführend sein.
-Beispielsweise `49.0 * (1.0/49.0) != 1.0`.
+Beispiel: `49.0 * (1.0/49.0) != 1.0`.
 
 Bei zwei numerischen Ausdrücken können die binären Operatoren,, `>` `<` `>=` und `<=` verwendet werden, um einen neuen booleschen Ausdruck zu erstellen, der true ist, wenn der erste Ausdruck größer als, kleiner als, größer als oder gleich oder kleiner oder gleich dem zweiten Ausdruck ist.
 
@@ -113,13 +111,13 @@ Bei jedem booleschen Ausdruck kann der `not` unäre Operator verwendet werden, u
 
 ## <a name="string-expressions"></a>Zeichenfolgenausdrücke
 
-Q#ermöglicht die Verwendung von Zeichen folgen in der `fail` Anweisung (in der [Ablauf Steuerung](xref:microsoft.quantum.guide.controlflow#fail-statement)erläutert) und in der [`Message`](xref:microsoft.quantum.intrinsic.message) Standardfunktion. Das spezifische Verhalten der letzteren hängt vom verwendeten Simulator ab, schreibt jedoch in der Regel eine Meldung in die Host Konsole, wenn Sie während eines Programms aufgerufen wird Q# .
+Q# ermöglicht die Verwendung von Zeichen folgen in der `fail` Anweisung (in der [Ablauf Steuerung](xref:microsoft.quantum.guide.controlflow#fail-statement)erläutert) und in der [`Message`](xref:microsoft.quantum.intrinsic.message) Standardfunktion. Das spezifische Verhalten der letzteren hängt vom verwendeten Simulator ab, schreibt jedoch in der Regel eine Meldung in die Host Konsole, wenn Sie während eines Programms aufgerufen wird Q# .
 
 Zeichen folgen in Q# sind entweder Literale oder interpoliert Zeichen folgen.
 
 Zeichenfolgenliterale ähneln in den meisten Sprachen einfachen Zeichenfolgenliteralen: eine Sequenz von Unicode-Zeichen, die in doppelten Anführungszeichen eingeschlossen sind `" "` .
 Verwenden Sie innerhalb einer Zeichenfolge den umgekehrten Schrägstrich, `\` um ein doppeltes Anführungszeichen () mit Escapezeichen `\"` zu versehen, oder um eine neue Zeile ( `\n` ), ein Wagen Rücklauf Zeichen ( `\r` ) oder eine Registerkarte ( `\t` ) einzufügen.
-Beispiel:
+Zum Beispiel:
 
 ```qsharp
 "\"Hello world!\", she said.\n"
@@ -156,14 +154,14 @@ Beachten Sie, dass der implizierte Wert `step` + 1 ist, auch wenn `stop` kleiner
 
 Einige Beispiel Bereiche sind:
 
-- `1..3`der Bereich von 1, 2, 3.
-- `2..2..5`ist der Bereich von 2, 4.
-- `2..2..6`ist der Bereich von 2, 4, 6.
-- `6..-2..2`der Bereich ist 6, 4, 2.
-- `2..1`der leere Bereich.
-- `2..6..7`der Bereich 2.
-- `2..2..1`der leere Bereich.
-- `1..-1..2`der leere Bereich.
+- `1..3` der Bereich von 1, 2, 3.
+- `2..2..5` ist der Bereich von 2, 4.
+- `2..2..6` ist der Bereich von 2, 4, 6.
+- `6..-2..2` der Bereich ist 6, 4, 2.
+- `2..1` der leere Bereich.
+- `2..6..7` der Bereich 2.
+- `2..2..1` der leere Bereich.
+- `1..-1..2` der leere Bereich.
 
 ## <a name="qubit-expressions"></a>Qubit-Ausdrücke
 
@@ -207,11 +205,11 @@ Bei benutzerdefinierten Typen, die in Bezug auf andere benutzerdefinierte Typen 
 Wenn `WrappedPair` ein benutzerdefinierter Typ mit dem zugrunde liegenden Typ ist `IntPair` und `t` eine Variable mit dem Wert ist, `WrappedPair(IntPair(1,2))` dann `t!!` ist `(1,2)` .
 
 Der `!` Operator hat eine höhere Rangfolge als alle anderen Operatoren, außer `[]` für die Array Indizierung und die Slicing.
-`!`und `[]` binden Sie Positions bedingt, `a[i]![3]` d. h., wird gelesen als `((a[i])!)[3]` : nehmen Sie das `i` th-Element von `a` , entpacken Sie es, und holen Sie dann das dritte Element des entpackten Werts (der ein Array sein muss).
+`!` und `[]` binden Sie Positions bedingt, `a[i]![3]` d. h., wird gelesen als `((a[i])!)[3]` : nehmen Sie das `i` th-Element von `a` , entpacken Sie es, und holen Sie dann das dritte Element des entpackten Werts (der ein Array sein muss).
 
 Die Rangfolge des `!` Operators hat eine Beeinträchtigung, die möglicherweise nicht offensichtlich ist.
 Wenn eine Funktion oder ein Vorgang einen Wert zurückgibt, der dann entpackt wird, muss der Funktions-oder Vorgangs Ausdruck in Klammern eingeschlossen werden, damit das Argument Tupel an den-Ausdruck gebunden wird, anstatt an den Unwrap-Vorgang.
-Beispiel:
+Zum Beispiel:
 
 ```qsharp
 let f = (Foo(arg))!;    // Calls Foo(arg), then unwraps the result
@@ -253,7 +251,7 @@ type | Standard
  `Qubit` | _Ungültiges Qubit_
  `Pauli` | `PauliI`
  `Result` | `Zero`
- `Range` | Der leere Bereich,`1..1..0`
+ `Range` | Der leere Bereich, `1..1..0`
  `Callable` | _Ungültige Aufruf Bare_
  `Array['T]` | `'T[0]`
 
@@ -328,17 +326,17 @@ Natürlich werden in der Praxis nur die relevanten Teile nach Bedarf neu erstell
 Sie können ein neues Array aus einem vorhandenen Array mithilfe von *Copy-und Update-* Ausdrücken erstellen, die die Operatoren `w/` und verwenden `<-` .
 Ein Copy-and-Update-Ausdruck ist ein Ausdruck der Form `expression1 w/ expression2 <- expression3` , wobei
 
-* `expression1`muss `T[]` für einen Typ vom Typ sein `T` .
-* `expression2`definiert, welche Indizes in dem in angegebenen Array `expression1` geändert werden. `expression2`muss entweder vom Typ `Int` oder vom Typ sein `Range` .
-* `expression3`der Wert (n), der zum Aktualisieren von Elementen in verwendet wird `expression1` , basierend auf den in angegebenen Indizes `expression2` . Wenn `expression2` vom Typ ist `Int` , `expression3` muss vom Typ sein `T` . Wenn `expression2` vom Typ ist `Range` , `expression3` muss vom Typ sein `T[]` .
+* `expression1` muss `T[]` für einen Typ vom Typ sein `T` .
+* `expression2` definiert, welche Indizes in dem in angegebenen Array `expression1` geändert werden. `expression2` muss entweder vom Typ `Int` oder vom Typ sein `Range` .
+* `expression3` der Wert (n), der zum Aktualisieren von Elementen in verwendet wird `expression1` , basierend auf den in angegebenen Indizes `expression2` . Wenn `expression2` vom Typ ist `Int` , `expression3` muss vom Typ sein `T` . Wenn `expression2` vom Typ ist `Range` , `expression3` muss vom Typ sein `T[]` .
 
 Beispielsweise erstellt der Copy-and-Update-Ausdruck `arr w/ idx <- value` ein neues Array mit allen Elementen, die auf die entsprechenden Elemente in festgelegt sind `arr` , mit Ausnahme der durch angegebenen Elemente `idx` , die auf den Wert (e) in festgelegt ist `value` . 
 
 `arr`Das angegebene enthält das Array. `[0,1,2,3]` 
 
-- `arr w/ 0 <- 10`ist das Array `[10,1,2,3]` .
-- `arr w/ 2 <- 10`ist das Array `[0,1,10,3]` .
-- `arr w/ 0..2..3 <- [10,12]`ist das Array `[10,1,12,3]` .
+- `arr w/ 0 <- 10` ist das Array `[10,1,2,3]` .
+- `arr w/ 2 <- 10` ist das Array `[0,1,10,3]` .
+- `arr w/ 0..2..3 <- [10,12]` ist das Array `[10,1,12,3]` .
 
 #### <a name="copy-and-update-expressions-for-named-items"></a>Copy-und Update-Ausdrücke für benannte Elemente
 
@@ -376,11 +374,11 @@ Sie können auch ein Array von callables erstellen.
 * Wenn der allgemeine Elementtyp ein Vorgang oder Funktionstyp ist, müssen alle Elemente die gleichen Eingabe-und Ausgabetypen aufweisen.
 * Der Elementtyp des Arrays unterstützt alle [Funktoren](xref:microsoft.quantum.guide.operationsfunctions) , die von allen Elementen unterstützt werden.
 Wenn z. b. `Op1` , `Op2` und `Op3` alle Vorgänge sind, unterstützt, unterstützt und unterstützt jedoch `Qubit[] => Unit` `Op1` `Adjoint` `Op2` `Controlled` `Op3` beide:
-  * `[Op1, Op2]`ist ein Array von `(Qubit[] => Unit)` Vorgängen.
-  * `[Op1, Op3]`ist ein Array von `(Qubit[] => Unit is Adj)` Vorgängen.
-  * `[Op2, Op3]`ist ein Array von `(Qubit[] => Unit is Ctl)` Vorgängen.
+  * `[Op1, Op2]` ist ein Array von `(Qubit[] => Unit)` Vorgängen.
+  * `[Op1, Op3]` ist ein Array von `(Qubit[] => Unit is Adj)` Vorgängen.
+  * `[Op2, Op3]` ist ein Array von `(Qubit[] => Unit is Ctl)` Vorgängen.
 
-Während die Vorgänge `(Qubit[] => Unit is Adj)` und `(Qubit[] => Unit is Ctl)` den gemeinsamen Basistyp aufweisen `(Qubit[] => Unit)` , verwenden *Arrays* dieser Vorgänge jedoch keinen gemeinsamen Basistyp.
+Während die Vorgänge `(Qubit[] => Unit is Adj)` und  `(Qubit[] => Unit is Ctl)` den gemeinsamen Basistyp aufweisen `(Qubit[] => Unit)` , verwenden *Arrays* dieser Vorgänge jedoch keinen gemeinsamen Basistyp.
 
 Beispielsweise gibt `[[Op1], [Op2]]` derzeit einen Fehler aus, da versucht wird, ein Array der beiden inkompatiblen Array Typen und zu erstellen `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` .
 
@@ -395,9 +393,9 @@ Wenn zwei Ausdrücke desselben Typs und ein boolescher Ausdruck verwendet werden
 Bedingte Ausdrücke können zu Vorgängen ausgewertet werden, die über die gleichen Eingaben und Ausgaben verfügen, aber unterschiedliche Funktions tüktoren unterstützen. In diesem Fall ist der Typ des bedingten Ausdrucks ein Vorgang mit Eingaben und Ausgaben, die alle von beiden Ausdrücken unterstützten Funktoren unterstützen.
 Wenn z. b. `Op1` , `Op2` und `Op3` alle sind, unterstützt, unterstützt und unterstützt jedoch `Qubit[]=>Unit` `Op1` `Adjoint` `Op2` `Controlled` `Op3` beide:
 
-- `flag ? Op1 | Op2`ist ein- `(Qubit[] => Unit)` Vorgang.
-- `flag ? Op1 | Op3`ist ein- `(Qubit[] => Unit is Adj)` Vorgang.
-- `flag ? Op2 | Op3`ist ein- `(Qubit[] => Unit is Ctl)` Vorgang.
+- `flag ? Op1 | Op2` ist ein- `(Qubit[] => Unit)` Vorgang.
+- `flag ? Op1 | Op3` ist ein- `(Qubit[] => Unit is Adj)` Vorgang.
+- `flag ? Op2 | Op3` ist ein- `(Qubit[] => Unit is Ctl)` Vorgang.
 
 Wenn einer der beiden möglichen Ergebnis Ausdrücke einen Funktions-oder einen Vorgangs aufzurufen enthält, findet dieser Vorgang nur statt, wenn das Ergebnis das Ergebnis ist, das der Wert des Aufrufes ist. Wenn z. b. `a==b ? C(qs) | D(qs)` `a==b` true ist, wird der `C` Vorgang aufgerufen, und wenn false ist, wird nur der `D` Vorgang aufgerufen. Diese Vorgehensweise ähnelt der *Kurzschluss* in anderen Sprachen.
 
@@ -472,17 +470,17 @@ Die Typspezifikation ist erforderlich `Op3` , da und `Op1` unterschiedliche Type
 
 * Klammern für Vorgangs-und Funktionsaufrufe werden auch vor jedem Operator gebunden, aber nach der Array Indizierung und den Funktoren.
 
-Q#Operatoren in Rangfolge, vom höchsten zum niedrigsten:
+Q# Operatoren in Rangfolge, vom höchsten zum niedrigsten:
 
 Betreiber | Ständigkeit | BESCHREIBUNG | Operanden Typen
 ---------|----------|---------|---------------
- nachträ`!` | Unär | Aufheben der Umschließung | Ein beliebiger benutzerdefinierter Typ
- `-`, `~~~`, `not` | Unär | Numerische negative, bitweise Komplement logische Negation | `Int`, `BigInt` oder `Double` für `-` , `Int` `BigInt` `~~~` `Bool` für`not`
- `^` | Binary | Ganzzahlige Potenz | `Int`oder `BigInt` für die Basisklasse `Int` für den Exponenten
- `/`, `*`, `%` | Binary | Division, Multiplikation, ganzzahliger Modulo | `Int`, `BigInt` oder `Double` für `/` und `*` `Int` oder `BigInt` für`%`
- `+`, `-` | Binary | Addition oder Zeichenfolge und Array Verkettung, Subtraktion | `Int`, `BigInt` oder `Double` , zusätzlich `String` oder ein beliebiger Arraytyp für`+`
+ nachträ `!` | Unär | Aufheben der Umschließung | Ein beliebiger benutzerdefinierter Typ
+ `-`, `~~~`, `not` | Unär | Numerische negative, bitweise Komplement logische Negation | `Int`, `BigInt` oder `Double` für `-` , `Int` `BigInt` `~~~` `Bool` für `not`
+ `^` | Binary | Ganzzahlige Potenz | `Int` oder `BigInt` für die Basisklasse `Int` für den Exponenten
+ `/`, `*`, `%` | Binary | Division, Multiplikation, ganzzahliger Modulo | `Int`, `BigInt` oder `Double` für `/` und `*` `Int` oder `BigInt` für `%`
+ `+`, `-` | Binary | Addition oder Zeichenfolge und Array Verkettung, Subtraktion | `Int`, `BigInt` oder `Double` , zusätzlich `String` oder ein beliebiger Arraytyp für `+`
  `<<<`, `>>>` | Binary | Left Shift, Right Shift | `Int` oder `BigInt`
- `<`, `<=`, `>`, `>=` | Binary | Kleiner-als-, kleiner-als-oder-gleich-, größer-als-, größer-als-oder-gleich-Vergleiche | `Int`, `BigInt` oder`Double`
+ `<`, `<=`, `>`, `>=` | Binary | Kleiner-als-, kleiner-als-oder-gleich-, größer-als-, größer-als-oder-gleich-Vergleiche | `Int`, `BigInt` oder `Double`
  `==`, `!=` | Binary | gleich, nicht gleichmäßige Vergleiche | beliebiger primitiver Typ
  `&&&` | Binary | Bitweises AND | `Int` oder `BigInt`
  `^^^` | Binary | Bitweises XOR | `Int` oder `BigInt`
@@ -490,7 +488,7 @@ Betreiber | Ständigkeit | BESCHREIBUNG | Operanden Typen
  `and` | Binary | Logisches AND | `Bool`
  `or` | Binary | Logisches OR | `Bool`
  `..` | Binär/Ternär | Bereichs Operator | `Int`
- `?` `|` | TERNÄRE | Bedingt | `Bool`für die linke Seite
+ `?` `|` | TERNÄRE | Bedingt | `Bool` für die linke Seite
 `w/` `<-` | TERNÄRE | Kopieren und aktualisieren | Weitere Informationen finden Sie unter [Copy-and-Update-Ausdrücke](#copy-and-update-expressions)
 
 ## <a name="next-steps"></a>Nächste Schritte

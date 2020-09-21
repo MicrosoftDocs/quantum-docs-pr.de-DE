@@ -1,20 +1,20 @@
 ---
 title: Zweite Quantifizierung
 description: Erfahren Sie mehr über den zweiten quantifisierungsansatz zum Modellieren elektronischer Strukturen in der Quantum-Programmierung.
-author: nathanwiebe2
-ms.author: nawiebe@microsoft.com
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.secondquantization
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ba77c499d6830b1f78bba39e20b15c4ebe9433fc
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6becd348f7b3957cb60b16bbd5a28228527e1d4c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869459"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835807"
 ---
 # <a name="second-quantization"></a>Zweite Quantifizierung
 
@@ -77,7 +77,7 @@ Die Quantum-Chemie Bibliothek kann diese Konventionen verwenden, und die Spin-Or
 ```
 
 Bei fermionic Systems verhindert das Ausschlussprinzip von Pauli, dass mehrere Elektronen gleichzeitig in einer beliebigen Spin-Orbital vorhanden sind.
-Dies bedeutet, dass wir die zwei rechtlichen Zustände für "$ \ psi_1 $" in "\begin{Equation} \ psi_1 \rightarrow \begin{Cases} \ket {0} _1 & \text{}" schreiben können, wenn "$ \ psi_1 $" nicht belegt ist,}\\\
+Dies bedeutet, dass wir die zwei rechtlichen Zustände für "$ \ psi_1 $" in "\begin{Equation} \ psi_1 \rightarrow \begin{Cases} \ket {0} _1 & \text{}" schreiben können, wenn "$ \ psi_1 $" nicht belegt ist,} \\\
 \ket {1} _1 & \text{if $ \ psi_1 $ ist belegt.} \end{Cases} \end{Equation} diese Codierung eignet sich hervorragend für Quantum-Computer, da dies bedeutet, dass wir den elektronischen Beruf als einzelnes Quantum-Bit speichern können.
 
 Die Berufs Zustände für die $2N $ Spin-Orbitals können auf ähnliche Weise in $2N $ Qubits gespeichert werden.

@@ -2,19 +2,19 @@
 title: Korrelierte Wellenfunktionen
 description: Erfahren Sie mehr über dynamische und nicht dynamische Korrelationen in wavefunctions mithilfe der Microsoft Quantum Chemistry-Bibliothek.
 author: guanghaolow
-ms.author: gulow@microsoft.com
+ms.author: gulow
 ms.date: 05/28/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.multireference
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0066d676205901d4f2d41538684f9ba57407eb82
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 420fc8e108852f6548e2147693e089f5ce970aa9
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869561"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835484"
 ---
 # <a name="correlated-wavefunctions"></a>Korrelierte Wellenfunktionen
 

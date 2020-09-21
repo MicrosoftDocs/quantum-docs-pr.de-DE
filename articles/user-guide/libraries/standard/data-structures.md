@@ -3,18 +3,18 @@ title: Datenstrukturen in den Q# Standardbibliotheken
 description: Erfahren Sie mehr über Datenstrukturen, Oracles und dynamikalische Generatoren in den Microsoft- Q# Standardbibliotheken.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 222fa7d0d33d4ac6c15e9ee9e6e97f380867a145
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 51eb52d0b8ace972f6a425edba400ca9a8916d2e
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868516"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835586"
 ---
 # <a name="data-structures-and-modeling"></a>Datenstrukturen und Modellierung #
 
@@ -160,8 +160,8 @@ Diese einheitliche wird in der Regel durch einen von zwei Typen von Oracles besc
 
 > [!TIP]
 > Beide unten beschriebenen Oracle-Typen werden in den Beispielen behandelt.
-> Weitere Informationen zu kontinuierlichen Abfrage-Oracles finden Sie im Beispiel [ **phaseschätz.** ](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation)
-> Weitere Informationen zu diskreten Abfrage-Oracles finden Sie im Beispiel [ **isingphaseschätz.** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)
+> Weitere Informationen zu kontinuierlichen Abfrage-Oracles finden Sie im Beispiel [ **phaseschätz.** ](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation)
+> Weitere Informationen zu diskreten Abfrage-Oracles finden Sie im Beispiel [ **isingphaseschätz.** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)
 
 Der erste Oracle-Typ, der als diskretes Abfrage-Oracle bezeichnet wird und mit dem benutzerdefinierten Typ dargestellt <xref:microsoft.quantum.oracles.discreteoracle> wird, umfasst einfach eine einheitliche Matrix.
 Wenn $U $ die einheitliche ist, deren Eigenwerte wir schätzen möchten, ist das Oracle für $U $ einfach ein eigenständiger Wert für eine Unterroutine, die $U $ implementiert.
@@ -211,8 +211,8 @@ Dabei steuert die ganzzahlige $r > $0 den Näherungs Fehler.
 Die Dynamical Generator Modeling Library bietet ein Framework für die systematische Codierung komplexer Generatoren in Bezug auf einfachere Generatoren. Eine solche Beschreibung kann dann an die Simulations Bibliothek weitergeleitet werden, um die Zeitentwicklung durch einen Simulations Algorithmus Ihrer Wahl zu implementieren, wobei viele Details automatisch berücksichtigt werden.
 
 > [!TIP]
-> Die nachstehend beschriebene Dynamical Generator Library wird in den Beispielen behandelt. Ein Beispiel, das auf dem Modell zum Modellieren von Modellen basiert, finden Sie im Beispiel [ **isinggenerators** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators).
-> Ein Beispiel, das auf Molekular Wasserstoff basiert, finden Sie in den Beispielen [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) und [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui) .
+> Die nachstehend beschriebene Dynamical Generator Library wird in den Beispielen behandelt. Ein Beispiel, das auf dem Modell zum Modellieren von Modellen basiert, finden Sie im Beispiel [ **isinggenerators** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators).
+> Ein Beispiel, das auf Molekular Wasserstoff basiert, finden Sie in den Beispielen [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) und [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/gui) .
 
 ### <a name="complete-description-of-a-generator"></a>Umfassende Beschreibung eines Generators ###
 

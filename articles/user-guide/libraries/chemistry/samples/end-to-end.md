@@ -2,18 +2,18 @@
 title: Nwchem Quantum-Beispielprogramm
 description: Unter Verwendung eines nwchem-Eingabe Decks finden Sie ein Beispiel für das Aufrufen von Gate-Anzahlen für die Quantum-Chemie-Simulation.
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 528c34ea9b28b2f9b8f9a8bad681557f44bfcdaa
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 986ff2c2ff144c57bd01ddeea0467d0168fd9334
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759714"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835756"
 ---
 # <a name="end-to-end-with-nwchem"></a>End-to-End mit NWChem #
 
@@ -46,14 +46,14 @@ Import-Module InvokeNWChem.psm1
 ```
 
 > [!NOTE]
-> Standardmäßig verhindert Windows die Ausführung von Skripts oder Modulen als sicherheitsmeasure.
-> Damit Module wie z `Invoke-NWChem.psm1` . b. unter Windows ausgeführt werden können, müssen Sie ggf. die Ausführungs Richtlinie ändern.
+> Standardmäßig verhindert Windows das Ausführen von Skripts oder Modulen als sicherheitsmeasure.
+> Damit Module wie z `Invoke-NWChem.psm1` . b. unter Windows ausgeführt werden können, müssen Sie möglicherweise die Richtlinie ändern.
 > Führen Sie dazu den folgenden `Set-ExecutionPolicy` Befehl aus:
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope Process
 > ```
-> Die Ausführungs Richtlinie wird dann wieder hergestellt, wenn Sie PowerShell beenden.
-> Wenn Sie die Ausführungs Richtlinie speichern möchten, verwenden Sie einen anderen Wert für `-Scope` :
+> Die Richtlinie wird wieder hergestellt, wenn Sie PowerShell beenden.
+> Wenn Sie die Richtlinie speichern möchten, verwenden Sie einen anderen Wert für `-Scope` :
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 > ```

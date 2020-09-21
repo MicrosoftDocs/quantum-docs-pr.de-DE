@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4caacaad127f8a4d3b6f77efe35ebe7d3b97cacf
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a3380627aa196a749dd9487ad603aad29f34ae29
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868762"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759927"
 ---
 # <a name="applications"></a>Applications #
 
@@ -52,9 +52,9 @@ Im besonderen Fall, in dem die hamiltona in eine Summe von hermischen Teilen zer
 
 > [!TIP]
 > Anwendungen des Trotter-Suzuki-Simulations Algorithmus werden in den Beispielen behandelt.
-> Das Erstellungs Modell, das nur die systeminternen Vorgänge verwendet, die von den einzelnen Ziel Computern bereitgestellt werden, finden Sie im [Beispiel **simpleising** ](https://github.com/microsoft/Quantum/blob/master/samples/simulation/ising/simple).
-> Informationen zum Strukturierung von Modellen, die die Struktur der Trotter-Suzuki-Bibliothek verwenden, finden Sie im [Beispiel **isingtrotterbeispiel** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/trotter-evolution).
-> Informationen zu molekularem Wasserstoff mithilfe der Struktur der Struktur von Trotter-Suzuki finden Sie im Beispiel für die [ **H2-Simulation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line).
+> Das Erstellungs Modell, das nur die systeminternen Vorgänge verwendet, die von den einzelnen Ziel Computern bereitgestellt werden, finden Sie im [Beispiel **simpleising** ](https://github.com/microsoft/Quantum/blob/main/samples/simulation/ising/simple).
+> Informationen zum Strukturierung von Modellen, die die Struktur der Trotter-Suzuki-Bibliothek verwenden, finden Sie im [Beispiel **isingtrotterbeispiel** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution).
+> Informationen zu molekularem Wasserstoff mithilfe der Struktur der Struktur von Trotter-Suzuki finden Sie im Beispiel für die [ **H2-Simulation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line).
 
 In vielen Fällen möchten wir den Simulations Algorithmus implementieren, sind jedoch nicht an den Details der Implementierung interessiert. Beispielsweise der Second-order Integrator entspricht $ $ \begin{align} U (t) & = \left (e ^ {-IH \_ 0 t/2R} e ^ {-IH \_ 1 t/2R} \cdots e ^ {-IH \_ {d-1} t/2R} e ^ {-IH \_ {d-1} t/2R} \cdots e ^ {-IH \_ 1 t/2R} e ^ {-IH \_ 0 t/2R} \right) ^ {r} + \mathcal{o} (d ^ 3 \ max_j \\ | H \_ j \\ | ^ 3 t ^ 3/r ^ 2), \end{align} $ $ unter Verwendung eines Produkts von $2RD $ Terms. Größere Bestellungen umfassen noch mehr Begriffe, und optimierte Varianten erfordern möglicherweise sehr untriviale Ordnungen in den Exponentialzahlen. Andere erweiterte Algorithmen können auch die Verwendung von "Ancilla Qubits" in Zwischenschritten einschließen. Daher verpacken wir Simulations Algorithmen im Kanon als benutzerdefinierten Typ.
 
@@ -87,8 +87,8 @@ function TimeDependentTrotterSimulationAlgorithm(
 ```
 
 > [!TIP]
-> Anwendungen der Simulations Bibliothek werden in den Beispielen behandelt. Informationen zur Phasen Schätzung im ersierenden Modell mithilfe von finden `SimulationAlgorithm` Sie im [Beispiel **isingphaseschätz.** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)
-> Informationen zur Vorbereitung des adiabatischen Zustands im ersierenden Modell mithilfe von finden `TimeDependentSimulationAlgorithm` Sie im Beispiel " [ **adiabaticising** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic)".
+> Anwendungen der Simulations Bibliothek werden in den Beispielen behandelt. Informationen zur Phasen Schätzung im ersierenden Modell mithilfe von finden `SimulationAlgorithm` Sie im [Beispiel **isingphaseschätz.** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)
+> Informationen zur Vorbereitung des adiabatischen Zustands im ersierenden Modell mithilfe von finden `TimeDependentSimulationAlgorithm` Sie im Beispiel " [ **adiabaticising** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic)".
 
 
 ### <a name="adiabatic-state-preparation--phase-estimation"></a>Schätzung der adiabatischen Zustands Vorbereitung & Phasen ###
@@ -129,14 +129,14 @@ operation EstimateAdiabaticStateEnergy(
 }
 ```
 
-`nQubits`die Anzahl der Qubits, die zum Codieren des anfänglichen Quantums verwendet werden. `statePrepUnitary`bereitet den Startstatus von der Berechnungsbasis $ \ket{0\cdots 0} $ vor. `adiabaticUnitary`ist der einheitliche Vorgang, der die adiabatische Zustands Vorbereitung implementiert, z. b. durch die- `InterpolatedEvolution` Funktion erzeugt. `qpeUnitary`der einheitliche Vorgang, der verwendet wird, um die Phasen Schätzung für den resultierenden Quantum-Zustand auszuführen. `phaseEstAlgorithm`ist die Wahl des Algorithmus zur Phasen Schätzung.
+`nQubits` die Anzahl der Qubits, die zum Codieren des anfänglichen Quantums verwendet werden. `statePrepUnitary` bereitet den Startstatus von der Berechnungsbasis $ \ket{0\cdots 0} $ vor. `adiabaticUnitary` ist der einheitliche Vorgang, der die adiabatische Zustands Vorbereitung implementiert, z. b. durch die-  `InterpolatedEvolution` Funktion erzeugt. `qpeUnitary` der einheitliche Vorgang, der verwendet wird, um die Phasen Schätzung für den resultierenden Quantum-Zustand auszuführen. `phaseEstAlgorithm` ist die Wahl des Algorithmus zur Phasen Schätzung.
 
 > [!TIP]
-> In den Beispielen werden Anwendungen der Adiabatic-Zustands Vorbereitung behandelt. Informationen zum Erstellungsmodell, das eine manuelle Implementierung der adiabatischen Zustands Vorbereitung und der Verwendung der- `AdiabaticEvolution` Funktion verwendet, finden Sie im Beispiel " [ **adiabaticising** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic)".
-> Informationen zur Phasen-und adiabatischen Zustands Vorbereitung im ersierungsmodell finden Sie im [Beispiel **isingphaseschätz.** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)
+> In den Beispielen werden Anwendungen der Adiabatic-Zustands Vorbereitung behandelt. Informationen zum Erstellungsmodell, das eine manuelle Implementierung der adiabatischen Zustands Vorbereitung und der Verwendung der- `AdiabaticEvolution` Funktion verwendet, finden Sie im Beispiel " [ **adiabaticising** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic)".
+> Informationen zur Phasen-und adiabatischen Zustands Vorbereitung im ersierungsmodell finden Sie im [Beispiel **isingphaseschätz.** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)
 
 > [!TIP]
-> Die [Simulation von molekularer Wasserstoff](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) ist ein interessantes und kurzes Beispiel. Das Modell und die experimentellen Ergebnisse, die in der Datei "" [.](https://arxiv.org/abs/1512.06860) erfordert nur die Pauli-Matrizen und hat das Format $ \hat H = g \_ {0} I \_ 0i \_ 1 + g \_ 1 {Z \_ 0} + g \_ 2 {z \_ 1} + g \_ 3 {z \_ 0} {z \_ 1} + g \_ 4 {y \_ 0} {y \_ 1} + g \_ 5 {x \_ 0} {x \_ 1} $. Dabei handelt es sich um eine effektive hamiltona, die nur 2 Qubits erfordert, bei denen die Konstanten $g $ aus der Entfernung $R $ zwischen den beiden Wasserstoffatomen berechnet werden. Mithilfe von kanonischen Funktionen werden die Paulis in Uni-und dann über kurze Zeiträume mithilfe der Trotter-Suzuki-Zerlegung weiterentwickelt. Eine gute Näherung für den $H _2 $ Ground State kann ohne Verwendung der Adiabatic-Zustands Vorbereitung erstellt werden. Daher kann die Grund Zustands Energie direkt durch die Verwendung der Phasen Schätzung vom Kanon gefunden werden.
+> Die [Simulation von molekularer Wasserstoff](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) ist ein interessantes und kurzes Beispiel. Das Modell und die experimentellen Ergebnisse, die in der Datei "" [.](https://arxiv.org/abs/1512.06860) erfordert nur die Pauli-Matrizen und hat das Format $ \hat H = g \_ {0} I \_ 0i \_ 1 + g \_ 1 {Z \_ 0} + g \_ 2 {z \_ 1} + g \_ 3 {z \_ 0} {z \_ 1} + g \_ 4 {y \_ 0} {y \_ 1} + g \_ 5 {x \_ 0} {x \_ 1} $. Dabei handelt es sich um eine effektive hamiltona, die nur 2 Qubits erfordert, bei denen die Konstanten $g $ aus der Entfernung $R $ zwischen den beiden Wasserstoffatomen berechnet werden. Mithilfe von kanonischen Funktionen werden die Paulis in Uni-und dann über kurze Zeiträume mithilfe der Trotter-Suzuki-Zerlegung weiterentwickelt. Eine gute Näherung für den $H _2 $ Ground State kann ohne Verwendung der Adiabatic-Zustands Vorbereitung erstellt werden. Daher kann die Grund Zustands Energie direkt durch die Verwendung der Phasen Schätzung vom Kanon gefunden werden.
 
 ## <a name="shors-algorithm"></a>Shor-Algorithmus ##
 Der Shor-Algorithmus ist eine der wichtigsten Entwicklungen bei der quantumberechnung, da er zeigte, dass Quantum-Computer verwendet werden könnten, um wichtige, zurzeit klassisch unlösbare Probleme zu lösen.

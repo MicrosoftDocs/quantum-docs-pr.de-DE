@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0090fb2b9ac5f3c9d195a3ab02dcd21c848d8ef7
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b226f355771f2b65399ebe00cc3de9429a3cebb0
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868626"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759908"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum-Charakterisierung und-Statistiken #
 
@@ -74,7 +74,7 @@ Die Phasen Schätzung wird für diesen Grund innerhalb einer Reihe von Quantum-A
 ### <a name="bayesian-phase-estimation"></a>Schätzung der bayesschen Phase ###
 
 > [!TIP]
-> Ausführlichere Informationen zur bayesschen Phasen Schätzung in der Praxis finden Sie im Beispiel für eine [**phaseschätzungsschätzung**](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) .
+> Ausführlichere Informationen zur bayesschen Phasen Schätzung in der Praxis finden Sie im Beispiel für eine [**phaseschätzungsschätzung**](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation) .
 
 Die Idee der bayesschen Phasen Schätzung ist einfach.
 Sie erfassen Mess Statistiken aus dem Phasen Schätz Protokoll und verarbeiten dann die Ergebnisse mit bayesschen Inferenz und geben eine Schätzung des Parameters an.
@@ -112,7 +112,7 @@ Das wichtigste Feature der robusten Phasen Schätzung, das gemeinsam mit den mei
 Weitere relevante Details sind z. a. der kleine Speicherplatz, der nur $1 $ Ancilla Qubit ist, oder, wenn die Prozedur nicht Adaptive ist, d. h. die erforderliche Sequenz von Quantum-Experimenten ist unabhängig von den zwischen Messergebnissen. In diesem und bevorstehenden Beispielen, in denen der Algorithmus der Phasen Schätzung von Bedeutung ist, sollten Sie in der Dokumentation wie @"microsoft.quantum.characterization.robustphaseestimation" und den referenzierten Veröffentlichungen darauf verweisen, um weitere Informationen und deren Implementierung zu erhalten.
 
 > [!TIP]
-> Es gibt viele Beispiele, in denen eine robuste Phasen Schätzung verwendet wird. Die Phasen Schätzung zum Extrahieren der Grund Zustands Energie des unterschiedlichen physischen Systems finden Sie im Beispiel für die [ **H2-Simulation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), das [ **simpleising** -Beispiel](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)und das Beispiel für das Hubbard- [ **Modell** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard).
+> Es gibt viele Beispiele, in denen eine robuste Phasen Schätzung verwendet wird. Die Phasen Schätzung zum Extrahieren der Grund Zustands Energie des unterschiedlichen physischen Systems finden Sie im Beispiel für die [ **H2-Simulation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line), das [ **simpleising** -Beispiel](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)und das Beispiel für das Hubbard- [ **Modell** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).
 
 
 ### <a name="continuous-oracles"></a>Kontinuierliche Oracles ###
@@ -130,7 +130,7 @@ Durch die Verwendung der Phasen Schätzung mit kontinuierlichen Abfragen können
 
 ### <a name="random-walk-phase-estimation"></a>Schätzung der Zufalls Durchlauf Phase ###
 
-Q#bietet eine hilfreiche Näherung der bayyesian-Phasen Schätzung, die für die Verwendung in der Nähe von Quantum-Geräten entwickelt wurde
+Q# bietet eine hilfreiche Näherung der bayyesian-Phasen Schätzung, die für die Verwendung in der Nähe von Quantum-Geräten entwickelt wurde
 Diese Methode ist sowohl adaptiv als auch vollständig deterministisch und ermöglicht eine nahezu optimale Skalierung von Fehlern in der geschätzten Phase $ \hat{\phi} $ mit sehr geringem Arbeitsspeicher Aufwand.
 
 Das Protokoll verwendet eine ungefähre Bayessche Typrückschluss-Methode, die annimmt, dass die vorherige Verteilung Gaußsch ist.

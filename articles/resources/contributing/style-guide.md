@@ -9,19 +9,19 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 27a2ae5ae9d00329fc369268edae24228a9a9d0d
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: fef3cea1c11e4fef49ddbf63adb34e07675049d2
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867588"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834192"
 ---
-# <a name="no-locq-style-guide"></a>Q#Styleguide #
+# <a name="no-locq-style-guide"></a>Q# Styleguide #
 ## <a name="general-conventions"></a>Allgemeine Konventionen ##
 
 Die in diesem Handbuch empfohlenen Konventionen sollen Ihnen helfen, Programme und Bibliotheken Q# leichter zu lesen und zu verstehen.
 
-## <a name="guidance"></a>Anleitung
+## <a name="guidance"></a>Anleitungen
 
 Wir empfehlen Folgendes:
 
@@ -52,7 +52,7 @@ Dieser Unterschied schlägt vor, dass wir Vorgänge als Verben und Funktionen al
 > Aus dieser Sicht sollten benutzerdefinierte Typen als Nomen benannt werden, damit der Typ selbst und die Konstruktorfunktion konsistente Namen aufweisen.
 
 Stellen Sie in angemessener Weise sicher, dass Vorgangs Namen mit Verben beginnen, die die Auswirkungen des Vorgangs eindeutig angeben.
-Beispiel:
+Zum Beispiel:
 
 - `MeasureInteger`
 - `EstimateEnergy`
@@ -67,7 +67,7 @@ Andere Verben können auch in diesem Fall nützlich sein, wie in `IterateThrough
 | ---- | ------ |
 | Anwenden | Ein als Eingabe bereitgestellter Vorgang wird aufgerufen. |
 | Assert | Eine Hypothese über das Ergebnis einer möglichen Quantum-Messung wird von einem Simulator geprüft. |
-| Schätzungen | Ein klassischer Wert wird zurückgegeben, der eine Schätzung darstellt, die aus einer oder mehreren Messungen gezeichnet wird. |
+| Schätzung | Ein klassischer Wert wird zurückgegeben, der eine Schätzung darstellt, die aus einer oder mehreren Messungen gezeichnet wird. |
 | "Measure" | Eine Quantum-Messung wird ausgeführt, und das Ergebnis wird an den Benutzer zurückgegeben. |
 | Vorbereiten | Ein bestimmtes Register von Qubits wird in einem bestimmten Zustand initialisiert. |
 | Beispiel | Ein klassischer Wert wird nach dem Zufallsprinzip aus einer Verteilung zurückgegeben. |
@@ -79,7 +79,7 @@ Bei Functions empfiehlt es sich, die Verwendung von Verben anstelle von gängige
 - `LookupFunction`
 
 Vor allem empfiehlt es sich in fast allen Fällen, frühere Partizipationen zu verwenden, wenn dies angebracht ist, um anzugeben, dass ein Funktionsname an anderer Stelle in einem Quantum-Programm mit einer Aktion oder einem Nebeneffekt verbunden ist.
-Verwendet beispielsweise `ControlledOnInt` die Form teilnehmen des Verbs "Control", um anzugeben, dass die Funktion als Adjektiv fungiert, um das Argument zu ändern.
+Verwendet beispielsweise  `ControlledOnInt` die Form teilnehmen des Verbs "Control", um anzugeben, dass die Funktion als Adjektiv fungiert, um das Argument zu ändern.
 Dieser Name hat den zusätzlichen Vorteil, dass die Semantik des integrierten `Controlled` funktors übereinstimmt, wie weiter unten erläutert.
 Ebenso können- _Agent-Nomen_ verwendet werden, um Funktions-und UDT-Namen aus Vorgangs Namen zu erstellen, wie im Fall des namens `Encoder` für einen UDT, der stark zugeordnet ist `Encode` .
 
@@ -96,7 +96,7 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-|   | Name | BESCHREIBUNG |
+| &nbsp;  | name | BESCHREIBUNG |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | Löschen Sie die Verwendung eines Verbs ("reflektieren"), um die Auswirkung des Vorgangs anzuzeigen. |
 | ☒ | <s>`operation XRotation`</s> | Die Verwendung von Substantiv Phrase schlägt eine Funktion anstelle von Operation vor. |
@@ -115,7 +115,7 @@ Wir empfehlen Folgendes:
 
 Beim Definieren eines Einstiegs Punkts in ein Q# Programm erkennt der Q# Compiler das- [ `@EntryPoint()` Attribut](xref:microsoft.quantum.core.entrypoint) , sodass die Einstiegspunkte einen bestimmten Namen aufweisen (z. b. `main` , `Main` oder `__main__` ).
 Aus Sicht eines Q# Entwicklers sind Einstiegspunkte also normale Vorgänge, die mit kommentiert werden `@EntryPoint()` .
-Außerdem sind Q# Einstiegspunkte möglicherweise Einstiegspunkte für eine gesamte Anwendung (d. h. in Q# eigenständigen ausführbaren Dateien), oder es kann sich um eine Schnittstelle zwischen einem Q# Programm und dem Host Programm für eine Anwendung handeln (d.h. bei Verwendung Q# von mit Python oder .net), sodass der Name "Main" irreführend sein kann, wenn er auf einen Q# Einstiegspunkt angewendet wird.
+Außerdem sind Q# Einstiegspunkte möglicherweise Einstiegspunkte für eine gesamte Anwendung (z Q# . b. in eigenständigen ausführbaren Programmen) oder eine Schnittstelle zwischen einem Q# Programm und dem Host Programm für eine Anwendung (d.h. bei Verwendung Q# von mit Python oder .net), sodass der Name "Main" irreführend sein kann, wenn er auf einen Q# Einstiegspunkt angewendet wird.
 
 Wir empfehlen die Verwendung von Benennungs Einstiegspunkten, um die Verwendung des `@EntryPoint()` Attributs anhand der allgemeinen Ratschläge für Benennungs Vorgänge widerzuspiegeln, die oben aufgeführt sind.
 
@@ -129,7 +129,7 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-|   | Name | BESCHREIBUNG |
+| &nbsp;  | name | BESCHREIBUNG |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | Kommuniziert den Zweck des Einstiegs Punkts über den Vorgangs Namen eindeutig. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | Die Verwendung von `Main` kommuniziert nicht eindeutig mit dem Zweck des Einstiegs Punkts und ist mit dem- `@EntryPoint()` Attribut redundant. |
@@ -171,7 +171,7 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-|   | Name | BESCHREIBUNG |
+| &nbsp;   | name | BESCHREIBUNG |
 |---|------|-------------|
 | ☑ | `X` | Wohl verständliche Kurzformen für "Apply a $X $ Transformation" |
 | ☑ | `CNOT` | Wohl verständliche Kurzformen für "kontrolliert-not" |
@@ -228,7 +228,7 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-|   | Name | BESCHREIBUNG |
+| &nbsp;   | name | BESCHREIBUNG |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | Die Vorposition "to" führt zu einem Verb Ausdruck, der einen Vorgang und keine Funktion angibt. |
 | ☒ | <s>`AsDouble`</s> | Der Eingabetyp ist aus dem Funktionsnamen nicht eindeutig. |
@@ -251,7 +251,7 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-|   | Name | BESCHREIBUNG |
+| &nbsp;  | name | BESCHREIBUNG |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | Verwenden Sie keinen Unterstrich `_` , um anzugeben, dass dieser Vorgang nur für die interne Verwendung vorgesehen ist. |
 | ☑ | `internal operation ApplyDecomposedOperation` | Das `internal` Schlüsselwort am Anfang weist eindeutig darauf hin, dass dieser Vorgang nur für die interne Verwendung vorgesehen ist. |
@@ -264,12 +264,12 @@ Diese Gruppen können unterschieden werden, indem der gleiche Stamm Name verwend
 
 | Suffix | Bedeutung |
 |--------|---------|
-| `A` | Für die Unterstützung erwartete Eingabe`Adjoint` |
-| `C` | Für die Unterstützung erwartete Eingabe`Controlled` |
-| `CA` | Es wurde eine Eingabe erwartet, die `Controlled` und`Adjoint` |
-| `I` | Eingabe oder Eingaben weisen den Typ auf.`Int` |
-| `D` | Eingabe oder Eingaben weisen den Typ auf.`Double` |
-| `L` | Eingabe oder Eingaben weisen den Typ auf.`BigInt` |
+| `A` | Für die Unterstützung erwartete Eingabe `Adjoint` |
+| `C` | Für die Unterstützung erwartete Eingabe `Controlled` |
+| `CA` | Es wurde eine Eingabe erwartet, die `Controlled` und `Adjoint` |
+| `I` | Eingabe oder Eingaben weisen den Typ auf. `Int` |
+| `D` | Eingabe oder Eingaben weisen den Typ auf. `Double` |
+| `L` | Eingabe oder Eingaben weisen den Typ auf. `BigInt` |
 
 # <a name="guidance"></a>[Leitfaden](#tab/guidance)
 
@@ -323,7 +323,7 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-|   | Codeausschnitt | BESCHREIBUNG |
+| &nbsp;  | Codeausschnitt | BESCHREIBUNG |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | Der Name `Apply` ist ein `CamelCase` -formatierter Verb Ausdruck, der darauf hinweist, dass das benannte Element ein Vorgang ist. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Benannte Elemente sollten mit einem ersten Großbuchstaben beginnen. |
@@ -479,7 +479,7 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-|   | Codeausschnitt | BESCHREIBUNG |
+| &nbsp; | Codeausschnitt | BESCHREIBUNG |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | Verwenden Sie Leerzeichen um binäre Operatoren. |
 | ☒ | <s>`target:Qubit`</s> | Verwenden Sie Leerzeichen um Doppelpunkte der Typanmerkung. |

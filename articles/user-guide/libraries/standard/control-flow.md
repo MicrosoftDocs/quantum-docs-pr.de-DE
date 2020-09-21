@@ -3,18 +3,18 @@ title: Fluss Steuerungen in den Q# standardmäßigen libararies
 description: Erfahren Sie mehr über die Vorgänge und Funktionen der Fluss Steuerung in der Microsoft- Q# Standardbibliothek.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a440f1ef2b901b18593816ca27aeadf7ab827104
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 1cfef50cf2bbecd2043972a662edd8120c5570ec
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868575"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835620"
 ---
 # <a name="higher-order-control-flow"></a>Ablauf Steuerung höherer Ordnung #
 
@@ -86,7 +86,7 @@ Dies bedeutet insbesondere, dass Aufrufe von `ApplyToEachCA` in Vorgängen angez
 Ebenso <xref:microsoft.quantum.canon.applytoeachindex> eignet sich für die Darstellung von Mustern im Formular `U(0, targets[0]); U(1, targets[1]); ...` und bietet Versionen für jede Kombination von Funktoren, die von der Eingabe unterstützt werden.
 
 > [!TIP]
-> `ApplyToEach`ist typparametrisiert, sodass Sie mit-Vorgängen verwendet werden kann, die andere Eingaben als annehmen `Qubit` .
+> `ApplyToEach` ist typparametrisiert, sodass Sie mit-Vorgängen verwendet werden kann, die andere Eingaben als annehmen `Qubit` .
 > Nehmen wir beispielsweise an, dass `codeBlocks` ein Array von <xref:microsoft.quantum.errorcorrection.logicalregister> Werten ist, die wieder hergestellt werden müssen.
 > Dann `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` wendet den Fehler Behebungs Code `code` und die Wiederherstellungs Funktion `recoveryFn` unabhängig voneinander auf jeden Block an.
 > Dies gilt auch für klassische Eingaben: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` wendet eine Drehung von $ \pi/$2 über $X $ an, gefolgt von einer Drehung $pi/$3 über $Y $.
@@ -120,7 +120,7 @@ Da das Steuern von Vorgängen im allgemeinen teuer sein kann, kann die Verwendun
 
 > [!NOTE]
 > Eine andere Folge bei der Umgestaltung $U $ besteht darin, dass wir nicht einmal wissen müssen, wie das `Controlled` Funktor angewendet wird `U` .
-> `ApplyWithCA`Daher weist eine schwächere Signatur auf, als möglicherweise erwartet wird:
+> `ApplyWithCA` Daher weist eine schwächere Signatur auf, als möglicherweise erwartet wird:
 > ```qsharp
 > ApplyWithCA<'T> : (('T => Unit is Adj),
 >     ('T => Unit is Adj + Ctl), 'T) => Unit

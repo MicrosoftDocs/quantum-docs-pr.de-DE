@@ -1,20 +1,20 @@
 ---
 title: Arbeiten mit Qubits
-description: füllbeschreibung
+description: Weitere Informationen zum Arbeiten mit Qubits in Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6808a852ee0de7d3a38ea44e9637eeaa6bea382a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: aa942a61280553ae4e51cd5ddcc85c0df935dab1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867861"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835858"
 ---
 # <a name="working-with-qubits"></a>Arbeiten mit Qubits
 
@@ -39,7 +39,7 @@ Die-Anweisung besteht aus dem Schlüsselwort `using` , gefolgt von einer in Klam
 Die Bindung folgt demselben Muster wie `let` -Anweisungen: entweder ein einzelnes Symbol oder ein Tupel von Symbolen, gefolgt von einem Gleichheitszeichen `=` und entweder ein einzelner Wert oder ein entsprechendes Tupel von *Initialisierern*.
 
 Initialisierer sind entweder für ein einzelnes Qubit, das als angegeben ist, `Qubit()` oder ein Array von Qubits verfügbar, `Qubit[n]` wobei `n` ein `Int` Ausdruck ist.
-Ein auf ein Objekt angewendeter
+Beispiel:
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -68,7 +68,7 @@ Diese Qubits befinden sich in der Regel nicht in einem sauberen Zustand, d. h., 
 Diese werden häufig als "modifizierte" Qubits bezeichnet, da ihr Zustand unbekannt ist und sogar mit anderen Teilen des Arbeitsspeichers des Quantums Computers entkoppelt werden kann.
 
 Die Bindung folgt demselben Muster und denselben Regeln wie die- `using` Anweisung.
-Ein auf ein Objekt angewendeter
+Beispiel:
 ```qsharp
 borrowing (qubit = Qubit()) {
     // ...
@@ -150,7 +150,7 @@ Die *Berechnungsbasis* bezieht sich auf die `PauliZ` Basis und ist die am häufi
 ### <a name="measure-a-single-qubit-in-the-pauliz-basis"></a>Messen eines einzelnen Qubit in der `PauliZ` Basis
 
 Verwenden [`M`](xref:microsoft.quantum.intrinsic.m) Sie den-Vorgang, bei dem es sich um einen integrierten, intrinsischen nicht einheitlichen Vorgang handelt, um ein einzelnes Qubit in der Basis zu messen `PauliZ` und dem Ergebnis einen klassischen Wert zuzuweisen.
-`M`verfügt über einen reservierten Rückgabetyp, `Result` , der nur Werte annehmen kann `Zero` oder `One` die den gemessenen Zuständen $ \ket {0} $ oder $ \ket {1} $ entspricht. Dies deutet darauf hin, dass das Ergebnis nicht mehr ein Quantum-Zustand ist.
+`M` verfügt über einen reservierten Rückgabetyp, `Result` , der nur Werte annehmen kann `Zero` oder `One` die den gemessenen Zuständen $ \ket {0} $ oder $ \ket {1} $ entspricht. Dies deutet darauf hin, dass das Ergebnis nicht mehr ein Quantum-Zustand ist.
 
 Ein einfaches Beispiel ist der folgende Vorgang, der ein Qubit im $ \ket $-Zustand zuordnet {0} , dann einen Hadamard-Vorgang `H` darauf anwendet und das Ergebnis in der `PauliZ` Basis misst.
 

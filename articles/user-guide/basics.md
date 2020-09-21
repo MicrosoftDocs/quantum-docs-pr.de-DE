@@ -1,22 +1,22 @@
 ---
-title: Q#Kenntnisse
-description: Grundlegende Konzepte vonQ#
+title: Q# Kenntnisse
+description: Grundlegende Konzepte von Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 02/28/2020
 ms.topic: article
 uid: microsoft.quantum.guide.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4f4a75cdaaa070fd763d7f75429b7c39357d25a5
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 86f6538cf383f4e7c14255b38cfb1c141c8f991b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869646"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835518"
 ---
-# <a name="no-locq-basics"></a>Q#Kenntnisse
+# <a name="no-locq-basics"></a>Q# Kenntnisse
 
 Dieser Artikel bietet eine kurze Einführung in die grundlegenden Bausteine von Q# .
 
@@ -39,7 +39,7 @@ using (qubit = Qubit()) {
 ```
 Weitere Informationen zum Initialisieren oder *zuordnen*von Qubits finden Sie unter [Arbeiten mit Qubits](xref:microsoft.quantum.guide.qubits).
 
-## <a name="quantum-states-in-no-locq"></a>Quantum-Zustände inQ#
+## <a name="quantum-states-in-no-locq"></a>Quantum-Zustände in Q#
 
 Wichtig ist, dass das vorherige Programm nicht explizit auf den Bundesstaat verweist, Q# sondern beschreibt, wie das Programm den Zustand *transformiert* hat.
 Bei dieser Vorgehensweise können Sie unabhängig davon, was ein Quantum-Status *ist* , auf jedem Zielcomputer, der je nach Computer unterschiedliche Interpretationen aufweisen kann, vollständig agnostisch sein. 
@@ -53,7 +53,7 @@ Wenn der Zielcomputer jedoch ein echter Quantum-Computer ist, wird der Quantum-C
 Ein Q# Programm kombiniert diese Vorgänge so, wie Sie von einem Zielcomputer definiert wurden, um neue Vorgänge auf höherer Ebene zum Ausdrücken von Quantum-Berechnungen zu erstellen.
 Auf diese Weise ist Q# es einfacher, die Logik zugrunde liegende Quantum und Hybrid Quantum – klassische Algorithmen auszudrücken, während dies auch in Bezug auf die Struktur eines Ziel Computers oder Simulators allgemein ist.
 
-## <a name="no-locq-operations-and-functions"></a>Q#Vorgänge und Funktionen
+## <a name="no-locq-operations-and-functions"></a>Q# Vorgänge und Funktionen
 
 Konkret umfasst ein Q# Programm *Vorgänge*, *Funktionen*und beliebige benutzerdefinierte Typen. 
 
@@ -65,13 +65,13 @@ In diesem Fall `Measure` ist ein *Vorgang* , der den Zielcomputer anweist, eine 
 Vorgänge und Funktionen werden auch als *callables*bezeichnet. Die zugrunde liegende Struktur und das zugehörige Verhalten werden in [Vorgängen und Q# Funktionen in ](xref:microsoft.quantum.guide.operationsfunctions)eingeführt und ausführlich erläutert.
 
 
-## <a name="no-locq-syntax-overview"></a>Q#Syntax Übersicht
+## <a name="no-locq-syntax-overview"></a>Q# Syntax Übersicht
 
 Die Syntax einer Sprache beschreibt die verschiedenen Kombinationen von Symbolen, die ein syntaktisch korrektes Programm bilden.
 In Q# werden Syntax Elemente in drei unterschiedliche Gruppen eingeteilt: Typen, Ausdrücke und Anweisungen.
 
 ### <a name="types"></a>Typen
-Q#ist eine stark typisierte Sprache, sodass der Compiler bei der sorgfältigen Verwendung von Typen bei der Kompilierung starke Garantien für Programme bereitstellen kann Q# .
+Q# ist eine stark typisierte Sprache, sodass der Compiler bei der sorgfältigen Verwendung von Typen bei der Kompilierung starke Garantien für Programme bereitstellen kann Q# .
 Zusätzlich zu den standardmäßigen und Quantum-spezifischen integrierten primitiven Typen, z. b. `Int` , `Bool` , `Qubit` und `Result` , Q# bietet Unterstützung für benutzerdefinierte Typen.
 
 Beschreibungen aller primitiven Typen, Details zu Array-und Tupeltypen sowie Schritte zum Definieren neuer Typen innerhalb einer Q# Datei finden Sie unter [Typen in Q# ](xref:microsoft.quantum.guide.types).
@@ -87,7 +87,7 @@ Ein anderer Ausdruck, `Int` der ergibt, ist z `5` . b `2+3` ..
 Weitere Informationen zu Ausdrücken und kompatiblen Operatoren in Q# finden Sie unter [typausdrücke Q# in ](xref:microsoft.quantum.guide.expressions). 
 
 ### <a name="statements"></a>Anweisungen 
-Eine-Anweisung ist eine syntaktische Einheit einer imperativen Programmiersprache, die einige auszuführende Aktionen ausdrückt. Anweisungen, die mit Ausdrücken in den Anweisungen vergleichen, geben keine Ergebnisse zurück und werden ausschließlich für Ihre Nebeneffekte ausgeführt. Ausdrücke geben jedoch immer ein Ergebnis zurück und haben oft keine Nebeneffekte. Kurz gesagt Q# werden-Anweisungen ausgeführt, während Ausdrücke ausgewertet werden.
+Eine-Anweisung ist eine syntaktische Einheit einer imperativen Programmiersprache, die einige auszuführende Aktionen ausdrückt. Anweisungen, die mit Ausdrücken in der Anweisung vergleichen, geben keine Ergebnisse zurück und werden ausschließlich für Ihre Nebeneffekte ausgeführt. Ausdrücke geben jedoch immer ein Ergebnis zurück und haben oft keine Nebeneffekte. Kurz gesagt Q# werden-Anweisungen ausgeführt, während Ausdrücke ausgewertet werden.
 
 Ein einfaches Beispiel für eine-Anweisung in Q# ist das Zuweisen eines Symbols zu einem Ausdruck:
 ```qsharp

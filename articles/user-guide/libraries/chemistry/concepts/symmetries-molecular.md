@@ -1,20 +1,20 @@
 ---
 title: Symmetries von molekularen inteden
 description: Erfahren Sie, wie Sie den Q# Typ "orbitalintegral" verwenden, um molekulare Symmetries aufzulisten.
-author: nathanwiebe2
-ms.author: nawiebe
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.symmetries
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1f71c0ac8e2cd2781c0bc7b23d6c9222f3b9d18a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 9ebb8e9bda06967d3cfa002a7d074933d9135ada
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869442"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833826"
 ---
 # <a name="symmetries-of-molecular-integrals"></a>Symmetries von molekularen inteden
 

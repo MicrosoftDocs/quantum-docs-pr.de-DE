@@ -2,19 +2,19 @@
 title: Vorgänge und Funktionen in Q#
 description: Definieren und aufzurufen von Vorgängen und Funktionen sowie der kontrollierten und der Adjoint-Vorgangs Spezialisierung.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c2ce999ea2a0fe7204f402fedb4cd3a3c15bd44b
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: e9a84de2753bc3293f441e66ee53e78559263e5c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759423"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833479"
 ---
 # <a name="operations-and-functions-in-no-locq"></a>Vorgänge und Funktionen in Q#
 
@@ -73,9 +73,7 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 Wenn ein Vorgang eine einheitliche Transformation implementiert, wie dies bei vielen Vorgängen in der Fall ist Q# , ist es möglich, zu definieren, wie der *adjointed* Vorgang bei Anfügevorgang oder *Kontrolle*agiert. Eine *Adjoint* -Spezialisierung eines Vorgangs gibt an, wie die "Umkehrung" des Vorgangs agiert, während eine *kontrollierte* Spezialisierung angibt, wie ein Vorgang funktioniert, wenn die Anwendung auf den Zustand eines bestimmten Quantum-Registers angewendet wird.
 
-Adjoints von Quantum-Vorgängen sind für viele Aspekte von Quantum Computing von entscheidender Bedeutung. Ein Beispiel für eine solche Situation, die zusammen mit einem nützlichen Programmierverfahren erläutert Q# wird, finden Sie unter " [Konjugationen](#conjugations) " in diesem Artikel. 
-
-Bei der kontrollierten Version eines Vorgangs handelt es sich um einen neuen Vorgang, der den Basis Vorgang effektiv anwendet, wenn sich alle Steuerelement-Qubits in einem angegebenen Zustand befinden.
+Adjoints von Quantum-Vorgängen sind für viele Aspekte von Quantum Computing von entscheidender Bedeutung. Ein Beispiel für eine solche Situation, die zusammen mit einer nützlichen Q# Programmiertechnik erläutert wird, finden Sie unter [Ablauf Steuerung: Konjugationen](xref:microsoft.quantum.guide.controlflow#conjugations). Bei der kontrollierten Version eines Vorgangs handelt es sich um einen neuen Vorgang, der den Basis Vorgang effektiv anwendet, wenn sich alle Steuerelement-Qubits in einem angegebenen Zustand befinden.
 Wenn sich die Steuerelement-Qubits in der superposition befinden, wird der Basis Vorgang einheitlich auf den entsprechenden Teil der superposition angewendet.
 Folglich werden kontrollierte Vorgänge häufig zum Generieren von entanglement verwendet.
 
@@ -151,7 +149,7 @@ Die tatsächliche Implementierung jeder Spezialisierung kann entweder *implizit*
 
 ### <a name="implicitly-specifying-implementations"></a>Implizit angeben von Implementierungen
 
-In diesem Fall besteht der Text der Vorgangs Deklaration ausschließlich aus der Standard Implementierung. Beispiel:
+In diesem Fall besteht der Text der Vorgangs Deklaration ausschließlich aus der Standard Implementierung. Zum Beispiel:
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -364,46 +362,6 @@ Sie können
 
 Benutzerdefinierte Typen werden als umschließende Version des zugrunde liegenden Typs und nicht als Untertyp behandelt.
 Dies bedeutet, dass ein Wert eines benutzerdefinierten Typs nicht verwendbar ist, wenn Sie erwarten, dass ein Wert des zugrunde liegenden Typs ist.
-
-
-### <a name="conjugations"></a>Konjugationen
-
-Im Gegensatz zu klassischen Bits ist das Freigeben von Quantum-Speicher etwas komplizierter, da das Blind Zurücksetzen von Qubits unerwünschte Auswirkungen auf die verbleibende Berechnung haben kann, wenn die Qubits noch entkoppelt sind. Diese Auswirkungen können vermieden werden, indem Berechnungen vor der Freigabe des Arbeitsspeichers ordnungsgemäß durchgeführt werden. Ein gängiges Muster in Quantum Computing ist daher Folgendes: 
-
-```qsharp
-operation ApplyWith<'T>(
-    outerOperation : ('T => Unit is Adj), 
-    innerOperation : ('T => Unit), 
-    target : 'T) 
-: Unit {
-
-    outerOperation(target);
-    innerOperation(target);
-    Adjoint outerOperation(target);
-}
-```
-
-Ab Version 0,9 Q# unterstützt eine Konjugations Anweisung, die die vorherige Transformation implementiert. Mit dieser Anweisung kann der Vorgang `ApplyWith` folgendermaßen implementiert werden:
-
-```qsharp
-operation ApplyWith<'T>(
-    outerOperation : ('T => Unit is Adj), 
-    innerOperation : ('T => Unit), 
-    target : 'T) 
-: Unit {
-
-    within{ 
-        outerOperation(target);
-    }
-    apply {
-        innerOperation(target);
-    }
-}
-```
-Eine solche Konjugations Anweisung ist weitaus nützlicher, wenn die äußeren und inneren Transformationen nicht als Vorgänge verfügbar sind, sondern eher durch einen Block, der aus mehreren Anweisungen besteht, beschreibbar ist. 
-
-Die umgekehrte Transformation für die-Anweisungen, die im-Block innerhalb von definiert sind, wird automatisch vom Compiler generiert und nach Abschluss von Apply-Block ausgeführt.
-Da alle änderbaren Variablen, die als Teil des Blocks innerhalb von verwendet werden, im Apply-Block nicht wieder hergestellt werden können, ist die generierte Transformation garantiert das Adjoint der Berechnung im within-Block. 
 
 
 ## <a name="defining-new-functions"></a>Definieren neuer Funktionen
@@ -663,7 +621,7 @@ Das heißt, ein Vorgang oder eine Funktion kann sich selbst aufrufen, oder Sie k
 Es gibt jedoch zwei wichtige Kommentare zur Verwendung der Rekursion:
 
 - Die Verwendung von Rekursion bei Vorgängen beeinträchtigt wahrscheinlich bestimmte Optimierungen.
-  Diese Störungen können erhebliche Auswirkungen auf die Ausführungszeit des Algorithmus haben.
+  Diese Störungen können erhebliche Auswirkungen auf die Laufzeit des Algorithmus haben.
 - Bei der Ausführung auf einem eigentlichen Quantum-Gerät ist der Stapel Speicherplatz möglicherweise eingeschränkt, sodass die Tiefe Rekursion zu einem Laufzeitfehler führen kann.
   Der Q# Compiler und die Laufzeit identifizieren und optimieren die Endrekursion insbesondere nicht.
 

@@ -1,6 +1,6 @@
 ---
 Title: Dirac Notation Description: erfahren Sie, wie Sie die Dirac-Notation zum Darstellen von Quantum-Zuständen und zum Simulieren von Quantum-Vorgängen verwenden
-Autor: quantumwriter UID: Microsoft. Quantum. Concepts. Dirac ms. Author: nawiebe@microsoft.com ms. Date: 12/11/2017 ms. Topic: article NO-LOC:
+Autor: quantumwriter UID: Microsoft. Quantum. Concepts. Dirac ms. Author: v-benbra ms. Date: 12/11/2017 ms. Topic: article NO-LOC:
 - "Q#"
 - "$$v"
 - "$$"
@@ -230,5 +230,5 @@ Dieses Konzept, das den Zustand als Matrix anstelle eines Vektors darstellt, ist
 Allgemeine Quantum-Zustands Operatoren sind in einigen Bereichen des Quantums, aber nicht notwendig, um die Grundlagen des Felds zu verstehen.
 Für den interessierten Reader empfiehlt es sich, eines der in bereitgestellten Referenzbücher [zu lesen, um weitere Informationen](xref:microsoft.quantum.more-information)zu erhalten.
 
-## <a name="no-locq-gate-sequences-equivalent-to-quantum-states"></a>Q#Gate-Sequenzen, die den Quantum-Zuständen entsprechen
+## <a name="no-locq-gate-sequences-equivalent-to-quantum-states"></a>Q# Gate-Sequenzen, die den Quantum-Zuständen entsprechen
 Ein letzter Punkt, der sich auf die Quantum-Notation und die Q# Programmiersprache aufhebt: zu Beginn dieses Dokuments haben wir erwähnt, dass der Quantum-Status das grundlegende Objekt der Informationen in Quantum Computing ist.  Es kann dann eine Überraschung sein, dass Q# es in kein Konzept des Quantums gibt.  Stattdessen werden alle Zustände nur durch die Vorgänge beschrieben, die zur Vorbereitung verwendet werden.  Das vorherige Beispiel ist eine hervorragende Abbildung.  Anstatt eine einheitliche Superposition für jede Quantum-Bitzeichenfolge in einem Register auszudrücken, können wir das Ergebnis als $ H ^ { \otimes n } \ket { 0 darstellen } $ .  Diese exponentiell kürzere Beschreibung des Zustands hat nicht nur den Vorteil, dass wir uns klassisch darauf auswirken können, sondern auch die Vorgänge definieren, die durch den Software Stapel zur Implementierung des Algorithmus weitergegeben werden müssen.  Aus diesem Grund ist für die Ausgabe von Q# Gate-Sequenzen anstelle von Quantum-Zuständen konzipiert. die beiden Perspektiven sind jedoch auf der theoretischen Ebene gleichwertig.

@@ -1,24 +1,24 @@
 ---
-title: Variablen inQ#
-description: füllbeschreibung
+title: Variablen in Q#
+description: Erfahren Sie, wie Sie mit verschiedenen Variablen in arbeiten können. Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 00af0989cd5a1f9ccc7d9f2545acd0d256bc7eb9
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: bb87f36d3c9b7df195f64e85151e833d494ea945
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867844"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835875"
 ---
-# <a name="variables-in-no-locq"></a>Variablen inQ#
+# <a name="variables-in-no-locq"></a>Variablen in Q#
 
-Q#unterscheidet zwischen veränderbaren und unveränderlichen Symbolen oder *Variablen*, die an Ausdrücke gebunden/zugewiesen sind.
+Q# unterscheidet zwischen veränderbaren und unveränderlichen Symbolen oder *Variablen*, die an Ausdrücke gebunden/zugewiesen sind.
 Im Allgemeinen wird die Verwendung unveränderlicher Symbole empfohlen, da es dem Compiler ermöglicht, weitere Optimierungen auszuführen.
 
 Die linke Seite einer Bindung besteht aus einem symboltupel und der rechten Seite eines Ausdrucks.
@@ -58,7 +58,7 @@ Im folgenden finden Sie einige Beispiele für Methoden zur Neubindung von Anweis
 
 #### <a name="apply-and-reassign-statements"></a>Apply-and-REASSIGN-Anweisungen
 
-Eine bestimmte Art von `set` -Anweisung, die *Apply-and-REASSIGN* -Anweisung, stellt eine bequeme Möglichkeit zur Verkettung dar, wenn die Rechte Seite aus der Anwendung eines binären Operators besteht und das Ergebnis an das linke Argument des Operators zurückgesetzt werden soll. Ein auf ein Objekt angewendeter
+Eine bestimmte Art von `set` -Anweisung, die *Apply-and-REASSIGN* -Anweisung, stellt eine bequeme Möglichkeit zur Verkettung dar, wenn die Rechte Seite aus der Anwendung eines binären Operators besteht und das Ergebnis an das linke Argument des Operators zurückgesetzt werden soll. Beispiel:
 
 ```qsharp
 mutable counter = 0;
@@ -166,7 +166,7 @@ Eine Zuweisung dieses Formulars heißt, dass die Elemente dieses Tupels *deaktiv
 Wenn die Rechte Seite der Bindung ein Tupel ist, können Sie dieses Tupel bei der Zuweisung dekonstruieren.
 Solche Dekonstruktionen können geschaltete Tupel einschließen, und jede vollständige oder partielle Dekonstruktion ist gültig, solange die Form des Tupels auf der rechten Seite mit der Form des symboltupels kompatibel ist.
 
-Beispiel:
+Zum Beispiel:
 
 ```qsharp
 let (i, f) = (5, 0.1); // i is bound to 5 and f to 0.1
@@ -201,7 +201,7 @@ let n = 8;
 ...                 // n is 8
 ```
 
-and
+und
 
 ```qsharp
 if (a == b) {

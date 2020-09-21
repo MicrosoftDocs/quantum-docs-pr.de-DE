@@ -2,19 +2,19 @@
 title: Ablauf Steuerung in Q#
 description: Schleifen, Bedingungen usw.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e8c873868d6f697fc90b23a38c11f35e46b40c4f
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759661"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833522"
 ---
 # <a name="control-flow-in-no-locq"></a>Ablauf Steuerung in Q#
 
@@ -24,15 +24,16 @@ Allerdings können Sie die Ablauf Steuerung auf drei verschiedene Arten ändern:
 * `if` Äußerungen
 * `for` Loops
 * `repeat-until-success` Loops
+* Konjugationen ( `apply-within` Anweisungen)
 
-Die `if` `for` Ablaufsteuerungskonstrukte und sind für die meisten klassischen Programmiersprachen vertraut. [`Repeat-until-success`](#repeat-until-success-loop) Schleifen werden später in diesem Artikel erläutert.
+Die `if` `for` Ablaufsteuerungskonstrukte und sind für die meisten klassischen Programmiersprachen vertraut. [`Repeat-until-success`](#repeat-until-success-loop) Schleifen und [Konjugationen](#conjugations) werden weiter unten in diesem Artikel erläutert.
 
 Wichtig ist, `for` dass Schleifen und `if` Anweisungen in Vorgängen verwendet werden können, für die [Spezialisierungs](xref:microsoft.quantum.guide.operationsfunctions) Vorgänge automatisch generiert werden. In diesem Szenario kehrt das Adjoint einer `for` Schleife die Richtung um und übernimmt das Adjoint der einzelnen Iterationen.
 Diese Aktion folgt dem Prinzip "Schuh-und-SOCKS": Wenn Sie das Einfügen von SOCKS und den Schuhen rückgängig machen möchten, müssen Sie die einfügende Schuhe rückgängig machen und dann auf die SOCKS setzen. 
 
 ## <a name="if-else-if-else"></a>If, else-if, Else
 
-Die- `if` Anweisung unterstützt die bedingte Ausführung.
+Die- `if` Anweisung unterstützt die bedingte Verarbeitung.
 Er besteht aus dem Schlüsselwort `if` , einem booleschen Ausdruck in Klammern und einem Anweisungsblock (der _Then_ -Block).
 Optional kann eine beliebige Anzahl von else-if-Klauseln befolgt werden, von denen jeder aus dem Schlüsselwort `elif` , einem booleschen Ausdruck in Klammern und einem Anweisungsblock (der _else-if-_ Block) besteht.
 Schließlich kann die Anweisung optional mit einer Else-Klausel abgeschlossen werden, die aus dem Schlüsselwort `else` gefolgt von einem anderen Anweisungsblock (dem _else_ -Block) besteht.
@@ -45,7 +46,7 @@ Wenn die ursprüngliche *if* -Bedingung und alle else-if-Klauseln als *false*aus
 Beachten Sie, dass der ausgeführte Block in seinem eigenen Bereich ausgeführt wird.
 Bindungen, die innerhalb eines- `if` ,-oder-Blocks erstellt werden, `elif` `else` sind nach Beendigung des-Blocks nicht sichtbar.
 
-Ein auf ein Objekt angewendeter
+Beispiel:
 
 ```qsharp
 if (result == One) {
@@ -129,7 +130,7 @@ Der Schleifen Text wird ausgeführt, und anschließend wird die Bedingung ausgew
 Wenn die Bedingung true ist, wird die-Anweisung abgeschlossen. Andernfalls wird der Fixup ausgeführt, und die Anweisung wird erneut ausgeführt, beginnend mit dem Schleifen Text.
 
 Alle drei Teile einer RUS-Schleife (der Text, der Test und das Fixup) werden als einzelner Bereich *für jede Wiederholung*behandelt, sodass im Text gebundene Symbole sowohl im Test als auch im Fixup verfügbar sind.
-Wenn Sie die Ausführung des Fixup abschließen, wird der Gültigkeitsbereich für die-Anweisung beendet, sodass Symbol Bindungen, die während des Texts oder Fixup erstellt werden, in nachfolgenden Wiederholungen nicht verfügbar sind.
+Wenn Sie die Ausführung des Fixup abschließen, wird der Gültigkeitsbereich für die-Anweisung beendet, sodass im Text-oder Fixup-Bereich vorgenommene Symbol Bindungen in nachfolgenden Wiederholungen nicht verfügbar sind.
 
 Außerdem ist die- `fixup` Anweisung häufig hilfreich, aber nicht immer erforderlich.
 In Fällen, in denen er nicht benötigt wird, wird das Konstrukt
@@ -150,9 +151,10 @@ Weitere Beispiele und Details finden Sie in diesem Artikel unter [Wiederholungs-
 
 ## <a name="while-loop"></a>while-Schleifen
 
-Wiederholungs-bis-Erfolg-Muster verfügen über eine sehr Quantum-spezifische-Anmerkung. Sie werden häufig in bestimmten Klassen von Quantum-Algorithmen verwendet. Dies ist also das dedizierte Sprachkonstrukt in Q# . Schleifen, die basierend auf einer Bedingung unterbrechen und deren Ausführungsdauer zur Kompilierzeit somit unbekannt ist, werden jedoch mit einer bestimmten Sorgfalt in einer Quantum-Laufzeit behandelt. Die Verwendung innerhalb von Funktionen ist jedoch nicht problematisch, da diese Schleifen nur Code enthalten, der auf herkömmlicher (nicht Quantum-) Hardware ausgeführt wird. 
+Wiederholungs-bis-Erfolg-Muster verfügen über eine sehr Quantum-spezifische-Anmerkung. Sie werden häufig in bestimmten Klassen von Quantum-Algorithmen verwendet. Dies ist also das dedizierte Sprachkonstrukt in Q# . Schleifen, die basierend auf einer Bedingung unterbrechen und deren Testlauf Länge daher zur Kompilierzeit nicht bekannt ist, werden mit bestimmter Sorgfalt in einer Quantum-Laufzeit behandelt. Die Verwendung innerhalb von Funktionen ist jedoch nicht problematisch, da diese Schleifen nur Code enthalten, der auf herkömmlicher (nicht Quantum-) Hardware ausgeführt wird. 
 
-Q#Daher unterstützt die Verwendung von while-Schleifen nur innerhalb von Functions. Eine- `while` Anweisung besteht aus dem Schlüsselwort `while` , einem booleschen Ausdruck in Klammern und einem Anweisungsblock.
+Q#Daher unterstützt die Verwendung von while-Schleifen nur innerhalb von Functions.
+Eine- `while` Anweisung besteht aus dem Schlüsselwort `while` , einem booleschen Ausdruck in Klammern und einem Anweisungsblock.
 Der Anweisungsblock (der Text der Schleife) wird ausgeführt, solange die Bedingung als ausgewertet wird `true` .
 
 ```qsharp
@@ -164,12 +166,51 @@ while (index < Length(arr) && item < 0) {
 }
 ```
 
+## <a name="conjugations"></a>Konjugationen
+
+Im Gegensatz zu klassischen Bits ist das Freigeben von Quantum-Speicher etwas komplizierter, da das Blind Zurücksetzen von Qubits unerwünschte Auswirkungen auf die verbleibende Berechnung haben kann, wenn die Qubits noch entkoppelt sind. Diese Auswirkungen können vermieden werden, indem Berechnungen vor der Freigabe des Arbeitsspeichers ordnungsgemäß durchgeführt werden. Ein gängiges Muster in Quantum Computing ist daher Folgendes: 
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    outerOperation(target);
+    innerOperation(target);
+    Adjoint outerOperation(target);
+}
+```
+
+Q# unterstützt eine Konjugations Anweisung, die die vorherige Transformation implementiert. Mit dieser Anweisung kann der Vorgang `ApplyWith` folgendermaßen implementiert werden:
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    within{ 
+        outerOperation(target);
+    }
+    apply {
+        innerOperation(target);
+    }
+}
+```
+Eine solche Konjugations Anweisung erweist sich als nützlich, wenn die äußeren und inneren Transformationen nicht als Vorgänge verfügbar sind, sondern eher durch einen Block, der aus mehreren Anweisungen besteht, beschreibbar ist. 
+
+Die umgekehrte Transformation für die-Anweisungen, die im-Block innerhalb von definiert sind, wird automatisch vom Compiler generiert und nach Abschluss von Apply-Block ausgeführt.
+Da alle änderbaren Variablen, die als Teil des Blocks innerhalb von verwendet werden, im Apply-Block nicht wieder hergestellt werden können, ist die generierte Transformation garantiert das Adjoint der Berechnung im within-Block. 
+
 ## <a name="return-statement"></a>Return-Anweisung
 
 Die Return-Anweisung beendet die Ausführung eines Vorgangs oder einer Funktion und gibt einen Wert an den Aufrufer zurück.
 Er besteht aus dem Schlüsselwort `return` , gefolgt von einem Ausdruck des entsprechenden Typs und einem abschließenden Semikolon.
 
-Ein auf ein Objekt angewendeter
+Beispiel:
 ```qsharp
 return 1;
 ```
@@ -194,7 +235,7 @@ Die-Anweisung gibt die Zeichenfolge an den klassischen Treiber als Fehlermeldung
 Es gibt keine Einschränkung für die Anzahl der Fail-Anweisungen innerhalb eines Vorgangs.
 Der Compiler gibt möglicherweise eine Warnung aus, wenn-Anweisungen einer Fail-Anweisung innerhalb eines-Blocks folgen.
 
-Ein auf ein Objekt angewendeter
+Beispiel:
 
 ```qsharp
 fail $"Impossible state reached";
