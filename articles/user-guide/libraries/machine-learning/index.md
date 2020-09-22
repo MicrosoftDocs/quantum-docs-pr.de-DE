@@ -2,19 +2,19 @@
 title: Einführung in das Quantum Machine Learning-Paket | Microsoft-Dokumentation
 description: Einführung in das Quantum Machine Learning-Paket
 author: QuantumWriter
-ms.author: alexeib@microsoft.com
+ms.author: alexeib
 ms.date: 12/5/2019
 ms.topic: article
 uid: microsoft.quantum.machine-learning.concepts.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2f8884fafd6370e4f70ec93e6fc8617c34c29431
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 321901a7976e4633a672495827c27c5f1645ad30
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868847"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835688"
 ---
 # <a name="introduction-to-the-quantum-machine-learning-library"></a>Einführung in die Quantum Machine Learning-Bibliothek
 

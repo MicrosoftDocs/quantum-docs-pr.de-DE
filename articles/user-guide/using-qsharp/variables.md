@@ -166,7 +166,7 @@ Eine Zuweisung dieses Formulars heißt, dass die Elemente dieses Tupels *deaktiv
 Wenn die Rechte Seite der Bindung ein Tupel ist, können Sie dieses Tupel bei der Zuweisung dekonstruieren.
 Solche Dekonstruktionen können geschaltete Tupel einschließen, und jede vollständige oder partielle Dekonstruktion ist gültig, solange die Form des Tupels auf der rechten Seite mit der Form des symboltupels kompatibel ist.
 
-Zum Beispiel:
+Beispiel:
 
 ```qsharp
 let (i, f) = (5, 0.1); // i is bound to 5 and f to 0.1
