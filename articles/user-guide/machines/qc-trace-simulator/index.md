@@ -2,19 +2,19 @@
 title: 'Ablaufverfolgungssimulator für Quantencomputer: Quantum Development Kit'
 description: Hier erfahren Sie, wie Sie den Microsoft-Ablaufverfolgungssimulator für Quantencomputer verwenden, um klassischen Code zu debuggen und die Ressourcenanforderungen eines Q#-Programms zu schätzen.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5d5efef037ff236bd040dfd88e94f7f3dd331aef
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 54a1f63461cfcc8146f7dc4d18d321238d77454d
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868218"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833366"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum Development Kit (QDK): Ablaufverfolgungssimulator für Quantencomputer
 
@@ -86,7 +86,7 @@ Das QDK enthält fünf Tools, die Sie mit einem Ablaufverfolgungssimulator für 
 |-----| -----|
 |[Überprüfung auf eindeutige Eingaben](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |Dient zum Durchführen einer Überprüfung auf potenzielle Konflikte mit freigegebenen Qubits. |
 |[Überprüfung auf Verwendung von ungültigen Qubits](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |Dient zum Durchführen einer Überprüfung, ob eine Operation vom Programm auf ein bereits freigegebenes Qubit angewendet wird. |
-|[Indikator für primitive Vorgänge](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Dient zum Ermitteln der Anzahl von Primitivenausführungen in allen Operationen, die in einem Quantenprogramm aufgerufen werden.  |
+|[Indikator für primitive Vorgänge](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Dient zum Ermitteln der Anzahl von Primitivenprozessen in allen Operationen, die in einem Quantenprogramm aufgerufen werden.  |
 |[Tiefenindikator](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |Dient zum Erfassen der jeweiligen Anzahl für die Untergrenze der Tiefe aller Operationen, die in einem Quantenprogramm ausgelöst werden.   |
 |[Breitenindikator](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |Dient zum Zählen der Qubits, die von den einzelnen Operationen eines Quantenprogramms zugeordnet und geliehen werden. |
 

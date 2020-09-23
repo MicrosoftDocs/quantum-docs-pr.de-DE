@@ -2,19 +2,19 @@
 title: Quantensimulatoren und Q#-Programme
 description: Hier werden die Quantensimulatoren beschrieben, die als Zielcomputer für Q#-Programme verfügbar sind.
 author: QuantumWriter
-ms.author: Alan.Geller@microsoft.com
+ms.author: v-benbra
 ms.date: 6/17/2020
 ms.topic: article
 uid: microsoft.quantum.machines
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 77401ca3642b89d708f338f852dc60bf7346b87b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6a2a4bb829301f9db9bd14f3240556a403b9a54f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868303"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833429"
 ---
 # <a name="quantum-simulators"></a>Quantensimulatoren
 
@@ -24,7 +24,7 @@ Bei Quantensimulatoren handelt es sich um Softwareprogramme, die auf klassischen
 
 ## <a name="the-quantum-development-kit-qdk-quantum-simulators"></a>Quantensimulatoren im Quantum Development Kit (QDK)
 
-Der Quantensimulator ist für das Bereitstellen der Implementierungen von Quantenprimitiven für einen Algorithmus zuständig. Dies gilt auch für primitive Vorgänge, z. B. `H`, `CNOT` und `Measure`, sowie für die Verwaltung und Nachverfolgung von Qubits. Das QDK enthält verschiedene Klassen von Quantensimulatoren, die für unterschiedliche Ausführungsmodelle desselben Quantenalgorithmus stehen. 
+Der Quantensimulator ist für das Bereitstellen der Implementierungen von Quantenprimitiven für einen Algorithmus zuständig. Dies gilt auch für primitive Vorgänge, z. B. `H`, `CNOT` und `Measure`, sowie für die Verwaltung und Nachverfolgung von Qubits. Das QDK enthält verschiedene Klassen von Quantensimulatoren, die für unterschiedliche Ausführungsmodelle des gleichen Quantenalgorithmus stehen. 
 
 
 Mit jeder Art von Quantensimulator können unterschiedliche Implementierungen dieser Primitive bereitgestellt werden. Mit dem [Simulator für den vollständigen Zustand](xref:microsoft.quantum.machines.full-state-simulator) wird der Quantenalgorithmus beispielsweise ausgeführt, indem der [Quantenzustandsvektor](xref:microsoft.quantum.glossary#quantum-state) vollständig simuliert wird, während der tatsächliche Quantenzustand beim [Ablaufverfolgungssimulator für Quantencomputer](xref:microsoft.quantum.machines.qc-trace-simulator.intro) nicht berücksichtigt wird. Stattdessen wird hiermit die Nutzung von Gates, Qubits und anderen Ressourcen für den Algorithmus nachverfolgt.

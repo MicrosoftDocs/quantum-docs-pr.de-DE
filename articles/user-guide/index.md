@@ -2,19 +2,19 @@
 title: Q#-Benutzerhandbuch
 description: Übersicht über Zweck und Inhalt des Benutzerhandbuchs
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4fae2949bdcab0c3735b40ef029d70bf7ea3fb9f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f0680e773c8233d6c4f1acb742b3cc38dbc069d5
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869629"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834753"
 ---
 # <a name="the-no-locq-user-guide"></a>Q#-Benutzerhandbuch
 
@@ -26,7 +26,7 @@ In den verschiedenen Themen dieses Handbuchs finden Sie eine Beschreibung der gr
 
 - [Q#-Grundlagen:](xref:microsoft.quantum.guide.basics) Ein erster Überblick über den Zweck und die Funktionen der Programmiersprache Q#. 
 
-- [Möglichkeiten zum Ausführen eines Q#-Programms:](xref:microsoft.quantum.guide.host-programs) Beschreibt, wie ein Q#-Programm ausgeführt wird, und bietet eine Übersicht über die verschiedenen Möglichkeiten, wie Sie das Programm aufrufen können: über die Befehlszeile, in Q#-Jupyter Notebook-Instanzen oder über ein klassisches Hostprogramm, das in Python oder einer .NET-Sprache geschrieben ist.
+- [Möglichkeiten zum Ausführen eines Q#-Programms:](xref:microsoft.quantum.guide.host-programs) Beschreibt, wie ein Q#-Programm ausgeführt wird, und bietet eine Übersicht über die verschiedenen Möglichkeiten, wie Sie das Programm aufrufen können: über die Befehlszeile, in Q#-Jupyter Notebook-Instanzen oder über ein klassisches Hostprogramm, das in Python oder in einer .NET-Sprache geschrieben ist.
 
 ### <a name="no-locq-language"></a>Sprache Q#
 
@@ -46,7 +46,7 @@ In den verschiedenen Themen dieses Handbuchs finden Sie eine Beschreibung der gr
 
 - [Arbeiten mit Qubits:](xref:microsoft.quantum.guide.qubits) Hier werden die Features von Q# beschrieben, die Sie für die Nutzung einzelner Qubits und Qubit-Systeme verwenden können, insbesondere für ihre Zuordnung, die Durchführung von Vorgängen und ihre Messung. 
 
-- [Ablaufsteuerung in Q#:](xref:microsoft.quantum.guide.controlflow) Hier wird die Programmierung von in Q# verfügbaren Ablaufsteuerungsmustern beschrieben. Dazu zählt neben zahlreichen Standardverfahren (etwa bedingte Ausführung, for-Schleifen, while-Schleifen) auch das quantenspezifische Muster der Wiederholung bis zum Erfolg (repeat-until-success).
+- [Ablaufsteuerung in Q#:](xref:microsoft.quantum.guide.controlflow) Hier wird die Programmierung von in Q# verfügbaren Ablaufsteuerungsmustern beschrieben. Dazu zählt neben zahlreichen Standardverfahren (etwa bedingte Verarbeitung, *for*-Schleifen, *while-Schleifen*) auch das quantenspezifische Muster der Wiederholung bis zum Erfolg (*repeat-until-success*).
 
 - [Testen und Debuggen:](xref:microsoft.quantum.guide.testingdebugging) Hier werden einige Verfahren beschrieben, mit denen sichergestellt werden kann, dass sich Ihr Code wie gewünscht verhält. 
     Aufgrund der allgemeinen Opazität von Quanteninformationen sind zum Debuggen eines Quantenprogramms ggf. spezielle Verfahren erforderlich. 
@@ -55,7 +55,7 @@ In den verschiedenen Themen dieses Handbuchs finden Sie eine Beschreibung der gr
 
 ### <a name="quantum-simulators-and-resource-estimators"></a>Quantensimulatoren und Ressourcenschätzungen
 
-- [Quantensimulatoren und Hostanwendungen:](xref:microsoft.quantum.machines) Eine Übersicht über die verschiedenen verfügbaren Simulatoren sowie Informationen zum allgemeinen Ausführungsmodell zwischen Hostprogramm und den Zielcomputern
+- [Quantensimulatoren und Hostanwendungen:](xref:microsoft.quantum.machines) Eine Übersicht über die verschiedenen verfügbaren Simulatoren sowie Informationen zum allgemeinen Ausführungsmodell zwischen Hostprogramm und den Zielcomputern.
 
 - [Simulator für den vollständigen Zustand:](xref:microsoft.quantum.machines.full-state-simulator) Der Zielcomputer zum Simulieren des vollständigen Quantenzustands. Hilfreich zum vollständigen Ausführen oder Debuggen kleinerer Programme (weniger als ein paar Dutzend Qubits).
 
