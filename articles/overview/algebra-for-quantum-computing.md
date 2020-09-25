@@ -2,19 +2,19 @@
 title: Lineare Algebra für Quantencomputing
 description: Hier finden Sie Informationen zu den grundlegenden Konzepten der linearen Algebra, die zum Verständnis des Quantencomputings benötigt werden.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.algebra
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d7a8dff8d491a9ce6451148d2d27121f1c190ed0
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: bff1da475f87278bc9e769805b3fe0fe8704d47a
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759321"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835127"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Lineare Algebra für Quantencomputing
 
