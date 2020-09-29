@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6fd7494d341a83a1354d23a283d21a7ae535e49f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: ac9c060c157ba5ee3bc66852c42298ac8adcb3b3
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834022"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91492335"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Tutorial: Erkunden der Verschränkung mit Q\#
 
@@ -32,7 +32,7 @@ Führen Sie zunächst diese Schritte aus, wenn Sie bereit zum Codieren sind:
 
 Sie können auch mit der Erzählung arbeiten, ohne das QDK zu installieren, indem Sie die Übersichten der Q# Programmiersprache und die ersten Konzepte von Quantum Computing überprüfen.
 
-## <a name="in-this-tutorial-youll-learn-how-to"></a>In diesem Tutorial lernen Sie Folgendes:
+## <a name="in-this-tutorial-youll-learn-how-to"></a>In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 > [!div class="checklist"]
 > * Erstellen und Kombinieren von Vorgängen in Q\#
@@ -83,7 +83,7 @@ Unser Ziel ist es, zwei Qubits in einem bestimmten Quantum-Zustand vorzubereiten
 
 ### <a name="initialize-qubit-using-measurement"></a>Initialisieren von Qubit mithilfe von Messungen
 
-Im ersten nachfolgenden Code wird gezeigt, wie Sie in mit Qubits arbeiten Q# .  Wir führen zwei Vorgänge ein, [`M`](xref:microsoft.quantum.intrinsic.m) die [`X`](xref:microsoft.quantum.intrinsic.x) den Zustand eines Qubit transformieren. In diesem Codeausschnitt wird der Vorgang `SetQubitState` definiert, für den als Parameter ein Qubit verwendet wird, sowie ein weiterer Parameter `desired`, mit dem der gewünschte Zustand für das Qubit dargestellt wird.  Der Vorgang `SetQubitState` führt eine Messung für das Qubit durch, indem der Vorgang `M` verwendet wird.  In Q# gibt eine Qubit-Messung immer entweder `Zero` oder zurück `One` .  Wenn die Messung einen Wert zurückgibt, der nicht gleich dem gewünschten Wert ist, wird `SetQubitState` das Qubit geflippt, d. h., es wird ein `X` Vorgang ausgeführt, der den Qubit-Zustand in einen neuen Zustand ändert, in dem die Wahrscheinlichkeiten eines Messwerts, der zurück `Zero` gibt, und `One` umgekehrt werden. Auf diese Weise wird `SetQubitState` das Ziel-Qubit immer in den gewünschten Zustand versetzt.
+Im ersten Code Ausschnitt unten wird gezeigt, wie Sie in mit Qubits arbeiten Q# .  Wir führen zwei Vorgänge ein, [`M`](xref:microsoft.quantum.intrinsic.m) die [`X`](xref:microsoft.quantum.intrinsic.x) den Zustand eines Qubit transformieren. In diesem Codeausschnitt wird der Vorgang `SetQubitState` definiert, für den als Parameter ein Qubit verwendet wird, sowie ein weiterer Parameter `desired`, mit dem der gewünschte Zustand für das Qubit dargestellt wird.  Der Vorgang `SetQubitState` führt eine Messung für das Qubit durch, indem der Vorgang `M` verwendet wird.  In Q# gibt eine Qubit-Messung immer entweder `Zero` oder zurück `One` .  Wenn die Messung einen Wert zurückgibt, der nicht gleich dem gewünschten Wert ist, wird `SetQubitState` das Qubit geflippt, d. h., es wird ein `X` Vorgang ausgeführt, der den Qubit-Zustand in einen neuen Zustand ändert, in dem die Wahrscheinlichkeiten eines Messwerts, der zurück `Zero` gibt, und `One` umgekehrt werden. Auf diese Weise wird `SetQubitState` das Ziel-Qubit immer in den gewünschten Zustand versetzt.
 
 Ersetzen Sie den Inhalt von `Program.qs` durch den folgenden Code:
 
@@ -112,7 +112,7 @@ Ein- Q# Vorgang ist eine Quantum-Unterroutine. Das heißt, es handelt sich um ei
 
 Die Argumente für eine Operation werden als Tupel angegeben, in Klammern eingeschlossen.
 
-Der Rückgabetyp der Operation wird nach einem Doppelpunkt angegeben. In diesem Fall hat die Operation `SetQubitState` keinen Rückgabewert, daher ist sie als `Unit` zurückgebend markiert. Dies Q# entspricht `unit` in F #, das ungefähr analog zu `void` in c# ist, und ein leeres Tupel in python ( `()` , dargestellt durch den Typhinweis `Tuple[()]` ).
+Der Rückgabetyp der Operation wird nach einem Doppelpunkt angegeben. In diesem Fall weist der `SetQubitState` Vorgang keinen Rückgabetyp auf, sodass er als zurückgegeben gekennzeichnet ist `Unit` . Dies Q# entspricht `unit` in F #, das ungefähr analog zu `void` in c# ist, und ein leeres Tupel in python ( `()` , dargestellt durch den Typhinweis `Tuple[()]` ).
 
 Sie haben im ersten Vorgang zwei Quantum-Vorgänge verwendet Q# :
 
@@ -159,7 +159,7 @@ Diese Operation (`TestBellState`) iteriert `count` Iterationen lang in einer Sch
 
 Standardmäßig sind Variablen in Q# unveränderlich; ihr Wert kann nicht geändert werden, nachdem Sie gebunden wurden. Das `let`-Schlüsselwort wird verwendet, um die Bindung einer unveränderlichen Variable anzugeben. Operationsargumente sind immer unveränderlich.
 
-Wenn Sie eine Variable benötigen, deren Wert geändert werden kann, wie etwa `numOnes` im Beispiel, können Sie die Variable mit dem Schlüsselwort `mutable` deklarieren. Der Wert einer veränderlichen Variable kann mithilfe einer `setQubitState`-Anweisung geändert werden.
+Wenn Sie eine Variable benötigen, deren Wert geändert werden kann, wie etwa `numOnes` im Beispiel, können Sie die Variable mit dem Schlüsselwort `mutable` deklarieren. Der Wert einer veränderlichen Variable kann mithilfe einer `set`-Anweisung geändert werden.
 
 In beiden Fällen wird der Typ einer Variablen vom Compiler abgeleitet. Q# Es sind keine Typanmerkungen für Variablen erforderlich.
 
@@ -169,7 +169,7 @@ Die- `using` Anweisung ist auch speziell für Q# . Sie wird verwendet, um Qubits
 
 ## <a name="run-the-code-from-the-command-prompt"></a>Ausführen des Codes an der Eingabeaufforderung
 
-Um den Code auszuführen, muss der Compiler angegeben werden *, der* beim Bereitstellen des Befehls aufgerufen werden kann `dotnet run` . Dies erfolgt mit einer einfachen Änderung in der Q# Datei, indem eine Zeile hinzugefügt wird, die `@EntryPoint()` direkt vor der Aufruf baren Zeile steht: der `TestBellState` Vorgang in diesem Fall. Der vollständige Code sollte wie folgt lauten:
+Um den Code ausführen zu können, müssen Sie den Compiler anweisen *, welche* Funktion beim Bereitstellen des Befehls ausgeführt werden kann `dotnet run` . Dies erfolgt mit einer einfachen Änderung in der Q# Datei, indem eine Zeile hinzugefügt wird, die `@EntryPoint()` direkt vor der Aufruf baren Zeile steht: der `TestBellState` Vorgang in diesem Fall. Der vollständige Code sollte wie folgt lauten:
 
 ```qsharp
 namespace Bell {
@@ -237,7 +237,7 @@ Sehen wir uns nun an, wie die Q# Methoden zum Platzieren von Qubits in der super
 
 ### <a name="x-flips-qubit-state"></a>`X` kippt-Qubit-Status
 
-Zuerst versuchen wir, das Qubit umzukehren (wenn das Qubit den Zustand `Zero` aufweist, wird in `One` umgekehrt (bzw. andersherum)). Dies wird dadurch erreicht, dass wir den Vorgang `X` durchführen, bevor die Messung in `TestBellState` erfolgt:
+Zuerst versuchen wir, das Qubit zu kippen (wenn sich das Qubit im `Zero` Zustand befindet, wird es zu `One` und umgekehrt). Dies wird dadurch erreicht, dass wir den Vorgang `X` durchführen, bevor die Messung in `TestBellState` erfolgt:
 
 ```qsharp
 X(qubit);
