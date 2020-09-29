@@ -6,9 +6,9 @@ namespace: microsoft.quantum.chemistry.jordanwigner
 summary: Eine Funktion, die Daten für den Begriff "Integer" zurückgibt `OptimizedBETermIndex` `n` `n` , und zwar zusammen mit der Anzahl der Begriffe in der ersten `Int` und der Summe der absoluten Werte aller Begriffs Koeffizienten in `Double` .
 syntax: newtype OptimizedBEGeneratorSystem = (Int, Double, (Int -> Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBETermIndex));
 metadata:
-  ms.openlocfilehash: 7911ed7672c02ddc7ce15a1d31e3ec51c823bc1d
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 07a0edd5a6378c6ea80fb10adc797a7fb3208540
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89339540"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91478289"

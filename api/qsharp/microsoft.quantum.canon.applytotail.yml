@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytotail
+name: ApplyToTail
+type: operation
+namespace: microsoft.quantum.canon
+summary: >-
+  Wendet einen Vorgang auf das letzte Element eines Arrays an.
+
+
+  Bei einem Vorgang `op` und einem Array von Zielen `targets` gilt `op(Tail(targets))` .
+examples: >-
+  Die folgenden Q #-Code Ausschnitte sind gleichwertig:
+
+
+  ```Q#
+
+  ApplyToTail(H, register);
+
+  H(Tail(register));
+
+  ```
+syntax: "operation ApplyToTail (op : ('T => Unit), targets : 'T[]) : Unit"
+input:
+  content: "(op : ('T => Unit), targets : 'T[])"
+  types:
+  - name: op
+    summary: Ein anzuwendende Vorgang.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: targets
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Der Eingabetyp des Vorgangs, der angewendet werden soll.
+seeAlso:
+- microsoft.quantum.canon.applytotaila
+- microsoft.quantum.canon.applytotailc
+- microsoft.quantum.canon.applytotailca
+metadata:
+  ms.openlocfilehash: 04d0163247095dea71958c5586edbd9b7ae1850b
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493878"
