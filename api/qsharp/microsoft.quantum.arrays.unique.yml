@@ -1,0 +1,66 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.unique
+name: Unique
+type: function
+namespace: microsoft.quantum.arrays
+summary: >-
+  Gibt ein neues Array zurück, das keine gleich benachbarten Elemente aufweist.
+
+
+  Bei einem bestimmten Array von Elementen und einer Funktion zum Testen der Gleichheit gibt diese Funktion ein neues Array zurück, in dem die relative Reihenfolge der Elemente beibehalten wird. alle angrenzenden Elemente, die gleich sind, werden jedoch nur nach einem einzelnen Element gefiltert.
+remarks: Wenn mehrere Elemente gleich sind, jedoch nicht nebeneinander, werden mehrere Vorkommen im Ausgabe Array angezeigt.  Verwenden Sie diese Funktion in Verbindung mit `Sorted` , um ein Array mit Gesamtzahl der eindeutigen Elemente zu erhalten.
+examples: >-
+  ```Q#
+
+  let unique1 = Unique(EqualI, [1, 1, 3, 3, 2, 5, 5, 5, 7]);
+
+  // same as [1, 3, 2, 5, 7]
+
+  let unique2 = Unique(EqualI, [2, 2, 1, 1, 2, 2, 1, 1]);
+
+  // same as [2, 1, 2, 1];
+
+  let unique3 = Unique(EqualI, Sorted(LessThanOrEqualI, [2, 2, 1, 1, 2, 2, 1, 1]));
+
+  // same as [1, 2];
+
+  ```
+syntax: "function Unique (equal : (('T, 'T) -> Bool), array : 'T[]) : 'T[]"
+input:
+  content: "(equal : (('T, 'T) -> Bool), array : 'T[])"
+  types:
+  - name: equal
+    summary: Eine Funktion, die zwei-Elemente als vergleicht, die `a` als gleich betrachtet werden, `b` wenn gleich `equal(a, b)` ist `true` .
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array
+    summary: Das Array, das nach eindeutigen Elementen gefiltert werden soll.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Array ohne gleich angrenzende Elemente.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Der Typ der einzelnen Elemente von `array` .
+metadata:
+  ms.openlocfilehash: a47f41ce4298035bd2ccf23dfd26491349f946f7
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494083"

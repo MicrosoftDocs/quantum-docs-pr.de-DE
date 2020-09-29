@@ -1,0 +1,60 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytomost
+name: ApplyToMost
+type: operation
+namespace: microsoft.quantum.canon
+summary: >-
+  Wendet einen Vorgang auf alle bis auf das letzte Element eines Arrays an.
+
+
+  Bei einem Vorgang `op` und einem Array von Zielen `targets` gilt `op(Most(targets))` .
+examples: >-
+  Die folgenden Q #-Code Ausschnitte sind gleichwertig:
+
+
+  ```Q#
+
+  ApplyToMost(ApplyCNOTChain, register);
+
+  ApplyCNOTChain(Most(register));
+
+  ```
+syntax: "operation ApplyToMost (op : ('T[] => Unit), targets : 'T[]) : Unit"
+input:
+  content: "(op : ('T[] => Unit), targets : 'T[])"
+  types:
+  - name: op
+    summary: Ein anzuwendende Vorgang.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: targets
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Der Eingabetyp des Vorgangs, der angewendet werden soll.
+seeAlso:
+- microsoft.quantum.canon.applytomosta
+- microsoft.quantum.canon.applytomostc
+- microsoft.quantum.canon.applytomostca
+metadata:
+  ms.openlocfilehash: e2b6ed4171425496c7da84ba522d56532028ce75
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493962"

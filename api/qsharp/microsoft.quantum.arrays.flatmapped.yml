@@ -1,0 +1,56 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.flatmapped
+name: FlatMapped
+type: function
+namespace: microsoft.quantum.arrays
+summary: Gibt bei einem Array und einer Funktion, die ein Array Element einem Ausgabe Array zuordnet, die verketteten Ausgabe Arrays für jedes Array Element zurück.
+examples: >-
+  ```Q#
+
+  let Numbers = SequenceI(1, _); // generates numbers starting from 1
+
+  let values = FlatMapped(Numbers, [1, 2, 3]);
+
+  // values = [1, 1, 2, 1, 2, 3]
+
+  ```
+syntax: "function FlatMapped (mapper : ('TInput -> 'TOutput[]), array : 'TInput[]) : 'TOutput[]"
+input:
+  content: "(mapper : ('TInput -> 'TOutput[]), array : 'TInput[])"
+  types:
+  - name: mapper
+    summary: Eine Funktion von `'TInput` zu `'TOutput[]` , die zum Zuordnen von Array Elementen verwendet wird.
+    isFunction: true
+    input:
+      types:
+      - uid: "'TInput"
+        isLocal: true
+    output:
+      types:
+      - isArray: true
+        uid: "'TOutput"
+        isLocal: true
+  - name: array
+    summary: Ein Array von-Elementen.
+    isArray: true
+    uid: "'TInput"
+    isLocal: true
+output:
+  content: "'TOutput[]"
+  types:
+  - summary: Ein Array von `'TOutput[]` , bei dem es sich um die Verkettung aller von der Zuordnungs Funktion generierten Arrays handelt.
+    isArray: true
+    uid: "'TOutput"
+    isLocal: true
+typeParameters:
+- uid: "'TInput"
+  summary: Der Typ der `array` Elemente.
+- uid: "'TOutput"
+  summary: Die- `mapper` Funktion gibt Arrays dieses Typs zurück.
+metadata:
+  ms.openlocfilehash: 358e45ce25825b333def906411ff3b27607b1195
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494238"

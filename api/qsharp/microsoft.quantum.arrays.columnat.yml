@@ -1,0 +1,56 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.columnat
+name: ColumnAt
+type: function
+namespace: microsoft.quantum.arrays
+summary: >-
+  Extrahiert eine Spalte aus einer Matrix.
+
+
+  Diese Funktion extrahiert eine Spalte in einer Matrix in Zeilen weiser Reihenfolge.
+
+  Extrahieren einer Zeile ("corrsponds") für den Element Zugriff auf den ersten Index und erfordert daher keine weitere Behandlung.
+examples: >-
+  ```Q#
+
+  let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+  let column = ColumnAt(0, matrix);
+
+  // same as: column = [1, 4, 7]
+
+  ```
+syntax: "function ColumnAt (column : Int, matrix : 'T[][]) : 'T[]"
+input:
+  content: "(column : Int, matrix : 'T[][])"
+  types:
+  - name: column
+    summary: Spalte der Matrix
+    isPrimitive: true
+    uid: Int
+  - name: matrix
+    summary: zweidimensionale Matrix in Zeilen weiser Reihenfolge
+    isArray: true
+    types:
+    - isArray: true
+      uid: "'T"
+      isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Der Typ der einzelnen Elemente von `matrix` .
+seeAlso:
+- microsoft.quantum.arrays.transposed
+- microsoft.quantum.arrays.diagonal
+metadata:
+  ms.openlocfilehash: 427ba7fe6430a1da759e9de927a566a19494288a
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494318"

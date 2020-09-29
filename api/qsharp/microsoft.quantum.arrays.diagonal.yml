@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.diagonal
+name: Diagonal
+type: function
+namespace: microsoft.quantum.arrays
+summary: >-
+  Gibt ein Array von diagonalen Elementen eines zweidimensionalen Arrays zurück.
+
+
+  Wenn das zweidimensionale Array keine quadratische Form aufweist, wird die Diagonale über dem Minimalwert über der Anzahl von Zeilen und Spalten zurückgegeben.
+examples: >-
+  ```Q#
+
+  let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+  let diagonal = Diagonal(matrix);
+
+  // same as: column = [1, 5, 9]
+
+  ```
+syntax: "function Diagonal (matrix : 'T[][]) : 'T[]"
+input:
+  content: "(matrix : 'T[][])"
+  types:
+  - name: matrix
+    summary: zweidimensionale Matrix in Zeilen weiser Reihenfolge
+    isArray: true
+    types:
+    - isArray: true
+      uid: "'T"
+      isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Der Typ der einzelnen Elemente von `matrix` .
+seeAlso:
+- microsoft.quantum.arrays.transposed
+metadata:
+  ms.openlocfilehash: 3e8d56081dbac5eac36b71839c3d747d5350333c
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494299"

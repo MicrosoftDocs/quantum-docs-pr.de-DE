@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.prefixes
+name: Prefixes
+type: function
+namespace: microsoft.quantum.arrays
+summary: >-
+  Gibt bei Angabe eines Arrays alle zugehörigen Präfixe zurück.
+
+
+  Gibt ein Array aller Präfixe zurück, beginnend mit einem Array, das nur das erste Element bis zum vollständigen Array enthält.
+examples: >-
+  ```Q#
+
+  let prefixes = Prefixes([23, 42, 144]);
+
+  // prefixes = [[23], [23, 42], [23, 42, 144]]
+
+  ```
+syntax: "function Prefixes (array : 'T[]) : 'T[][]"
+input:
+  content: "(array : 'T[])"
+  types:
+  - name: array
+    summary: Ein Array von-Elementen.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[][]"
+  types:
+  - isArray: true
+    types:
+    - isArray: true
+      uid: "'T"
+      isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Der Typ der `array` Elemente.
+metadata:
+  ms.openlocfilehash: 185aa7119630dca7ff1d9fa890d64826f156a84b
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494155"
