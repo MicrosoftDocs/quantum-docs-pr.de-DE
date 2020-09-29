@@ -2,19 +2,19 @@
 title: Quantencomputer und -simulatoren
 description: Hier finden Sie Informationen zu Quantenhardware und Quantensimulatoren sowie zur Funktionsweise von Quantenoperationen.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.simulators
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 299baea75865a4f0ece6b490cef3301dd2a672ac
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8691838b2d6c54baa40042245eee8c901a7ca965
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867708"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835008"
 ---
 # <a name="quantum-computers-and-quantum-simulators"></a>Quantencomputer und -simulatoren
 
@@ -33,7 +33,7 @@ Damit ein Quantencomputer ordnungsgemäß funktioniert, muss eine Vielzahl von H
 
 ## <a name="quantum-simulators"></a>Quantensimulatoren
 
-Mit auf klassischen Computern ausgeführten Quantensimulatoren lässt sich das Ausführen von Quantenalgorithmen auf einem Quantensystem simulieren.  Das Quantum Development Kit (QDK) von Microsoft enthält einen Vektorsimulator für den vollständigen Zustand sowie weitere spezialisierte Quantensimulatoren.
+Mit auf klassischen Computern ausgeführten Quantensimulatoren lässt sich die Berechnung von Quantenalgorithmen auf einem Quantensystem simulieren.  Das Quantum Development Kit (QDK) von Microsoft enthält einen Vektorsimulator für den vollständigen Zustand sowie weitere spezialisierte Quantensimulatoren.
 
 ## <a name="topological-qubit"></a>Topologisches Qubit
 

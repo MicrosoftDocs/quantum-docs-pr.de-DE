@@ -1,22 +1,25 @@
 ---
 title: Entwickeln mit Q#-Anwendungen
-author: KittyYeungQ
-ms.author: kitty
-ms.date: 4/24/2020
+description: Hier erfahren Sie, wie Sie eine Anwendung vom Typ Q# erstellen, die über die Eingabeaufforderung ausgeführt wird.
+author: bradben
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a630b2307f5d95321fb26f480d7a441ddba846fc
-ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+ms.openlocfilehash: 68f530d80e5c5f40dc2bcbb185879c3cb6f93f91
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89358257"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834413"
 ---
 # <a name="develop-with-no-locq-applications"></a>Entwickeln mit Q#-Anwendungen
+
+Folgen Sie den Anweisungen auf der Registerkarte, die Ihrer Umgebung entspricht.
 
 Q#-Programme können eigenständig ohne Treiber in einer Hostsprache wie C#, F# oder Python ausgeführt werden.
 
@@ -63,14 +66,14 @@ Erstellen Sie wie folgt ein neues Projekt:
 2. Klicken Sie auf **Standalone console application** (Eigenständige Konsolenanwendung).
 3. Navigieren Sie zum Speicherort für die Speicherung des Projekts, und klicken Sie auf **Projekt erstellen**.
 4. Klicken Sie nach der erfolgreichen Erstellung des Projekts unten rechts auf **Open new project...** (Neues Projekt öffnen...).
-        
+
 Untersuchen Sie das Projekt. Es sollte eine Quelldatei mit dem Namen `Program.qs` angezeigt werden. Hierbei handelt es sich um ein Q#-Programm, mit dem ein einfacher Vorgang zum Ausgeben einer Meldung in der Konsole definiert wird.
 
 So führen Sie die Anwendung aus:
+
 1. Klicken Sie auf **Terminal** -> **Neues Terminal**.
 2. Geben Sie an der Eingabeaufforderung des Terminals `dotnet run` ein.
 3. Im Ausgabefenster sollte der folgende Text angezeigt werden: `Hello quantum world!`.
-
 
 > [!NOTE]
 > Arbeitsbereiche mit mehreren Stammordnern werden von der Q#-Erweiterung für VS Code derzeit nicht unterstützt. Wenn Sie innerhalb eines VS Code-Arbeitsbereichs über mehrere Projekte verfügen, müssen alle Projekte in demselben Stammordner enthalten sein.
@@ -80,6 +83,7 @@ So führen Sie die Anwendung aus:
 Überprüfen Sie Ihre Visual Studio-Installation, indem Sie eine Q#-Anwendung vom Typ `Hello World` erstellen.
 
 So erstellen Sie eine neue Q#-Anwendung:
+
 1. Öffnen Sie Visual Studio, und klicken Sie auf **Datei** -> **Neu** -> **Projekt**.
 2. Geben Sie `Q#` in das Suchfeld ein, wählen Sie **Q#-Anwendung** aus, und klicken Sie auf **Weiter**.
 3. Geben Sie einen Namen und Speicherort für Ihre Anwendung ein, und klicken Sie auf **Erstellen**.
@@ -88,6 +92,7 @@ So erstellen Sie eine neue Q#-Anwendung:
 Untersuchen Sie das Projekt. Es sollte eine Quelldatei mit dem Namen `Program.qs` angezeigt werden. Hierbei handelt es sich um ein Q#-Programm, mit dem ein einfacher Vorgang zum Ausgeben einer Meldung in der Konsole definiert wird.
 
 So führen Sie die Anwendung aus:
+
 1. Wählen Sie **Debuggen** -> **Ohne Debuggen starten** aus.
 2. Der Text `Hello quantum world!` sollte in einem Konsolenfenster ausgegeben werden.
 
@@ -105,11 +110,13 @@ So führen Sie die Anwendung aus:
     ```
 
 1. Erstellen einer neuen Anwendung:
+
     ```dotnetcli
     dotnet new console -lang Q# -o runSayHello
     ```
 
 1. Navigieren Sie zum Anwendungsverzeichnis:
+
     ```dotnetcli
     cd runSayHello
     ```
@@ -117,6 +124,7 @@ So führen Sie die Anwendung aus:
     Dieses Verzeichnis sollte nun eine Datei namens `Program.qs` enthalten. Dabei handelt es sich um ein Q#-Programm, mit dem ein einfacher Vorgang zum Ausgeben einer Meldung in der Konsole definiert wird. Sie können diese Vorlage mit einem Text-Editor ändern und mit ihren eigenen Quantum-Anwendungen überschreiben. 
 
 1. Führen Sie das Programm aus:
+
     ```dotnetcli
     dotnet run
     ```

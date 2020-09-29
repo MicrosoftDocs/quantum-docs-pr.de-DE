@@ -1,20 +1,21 @@
 ---
 title: Entwickeln mit Q# und .NET
+description: Hier erfahren Sie, wie Sie mithilfe von .NET-Sprachen eine Anwendung vom Typ Q# erstellen.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 96a1d0d75f3ff7de11407fd76479cbae86ce7571
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: e8733918daa02afaea0fc1994d5f0851d4be9b93
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759271"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834328"
 ---
 # <a name="develop-with-no-locq-and-net"></a>Entwickeln mit Q# und .NET
 

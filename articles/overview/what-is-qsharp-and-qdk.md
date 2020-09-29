@@ -2,23 +2,23 @@
 title: Was sind die Programmiersprache Q# und das QDK?
 description: Hier finden Sie Informationen zum Microsoft Quantum Development Kit, zur Programmiersprache Q# und zur Erstellung von Quantenprogrammen.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5db574b0380ffa1616cb3959d84925854df4e321
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 21adfcc1c5321d87665adb39a3c838bbda0b8861
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863773"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834566"
 ---
 # <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Was sind die Programmiersprache Q# und das QDK?
 
-Q# ist die Open-Source-Programmiersprache von Microsoft für die Entwicklung und Ausführung von Quantenalgorithmen. Sie ist Teil des Quantum Development Kit (QDK), das [Q#-Bibliotheken](xref:microsoft.quantum.libraries), [Quantensimulatoren](xref:microsoft.quantum.machines), [Erweiterungen für andere Programmierumgebungen](xref:microsoft.quantum.install) sowie eine [API-Dokumentation](xref:microsoft.quantum.standardlibsintro) umfasst. Neben der Q#-Standardbibliothek enthält das QDK auch Bibliotheken für Chemie, maschinelles Lernen und numerische Werte.
+Q# ist die Open-Source-Programmiersprache von Microsoft für die Entwicklung und Ausführung von Quantenalgorithmen. Sie ist Teil des Quantum Development Kit (QDK), das [Q#-Bibliotheken](xref:microsoft.quantum.libraries), [Quantensimulatoren](xref:microsoft.quantum.machines), [Erweiterungen für andere Programmierumgebungen](xref:microsoft.quantum.install) sowie eine [API-Dokumentation](xref:microsoft.quantum.apiref-intro) umfasst. Neben der Q#-Standardbibliothek enthält das QDK auch Bibliotheken für Chemie, maschinelles Lernen und numerische Werte.
 
 Die Programmiersprache Q# nutzt vertraute Elemente aus Python, C# und F# und unterstützt ein einfaches Prozedurmodell zum Schreiben von Programmen mit Schleifen, If/Then-Anweisungen und gängigen Datentypen. Darüber hinaus führt sie aber auch neue quantenspezifische Datenstrukturen und Operationen ein.
 
@@ -54,7 +54,7 @@ Wenn Sie das Programm kompilieren und ausführen, wird eine Instanz des Quantens
 
 Durch die Isolierung des Q#-Codes im Simulator wird sichergestellt, dass die Algorithmen den Gesetzen der Quantenphysik folgen und ordnungsgemäß auf Quantencomputern ausgeführt werden können.
 
-![qsharp-code-flow](~/media/qsharp-code-flow.png)
+![Qsharp-Codeflow](~/media/qsharp-code-flow.png)
 
 ## <a name="how-do-i-use-the-qdk"></a>Wie wird das QDK verwendet?
 

@@ -2,23 +2,23 @@
 title: Grundlegendes zu Quantencomputing
 description: Hier erfahren Sie, was Quantencomputer sind und wie sie sich die Prinzipien der Quantenmechanik zunutze machen.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.understanding
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 214fe809aaeba759005fa76ba3615f376d402bc9
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 332afb4ea7de01da5d8f22fee6517032ed4f9fc1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866960"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834991"
 ---
 # <a name="understanding-quantum-computing"></a>Grundlegendes zu Quantencomputing
 
-Beim Quantencomputing werden die Prinzipien der Quantenmechanik genutzt, um Informationen zu verarbeiten. Daher muss beim Quantencomputing ein anderer Ansatz verfolgt werden als beim klassischen Computing.  Ein Beispiel für diesen Unterschied ist der Prozessor, der in Quantencomputern zum Einsatz kommt.  Bei klassischen Computern werden bekanntlich Silizium-basierte Chips verwendet. Quantencomputer nutzen dagegen Quantenmaterialien wie Atome, Ionen, Photonen oder Elektronen.  
+Beim Quantencomputing werden die Prinzipien der Quantenmechanik genutzt, um Informationen zu verarbeiten. Daher muss beim Quantencomputing ein anderer Ansatz verfolgt werden als beim klassischen Computing. Ein Beispiel für diesen Unterschied ist der Prozessor, der in Quantencomputern zum Einsatz kommt. Bei klassischen Computern werden bekanntlich Silizium-basierte Chips verwendet. Quantencomputer nutzen dagegen Quantensysteme wie Atome, Ionen, Photonen oder Elektronen. Mithilfe ihrer Quanteneigenschaften können sie Bits darstellen, die in unterschiedlichen Quantenüberlagerungen von 1 und 0 vorbereitet werden können.  
 
 Für das Verhalten des Quantenmaterials gelten die Gesetze der Quantenmechanik. Dabei werden Konzepte wie probabilistische Berechnung, Superposition und Verschränkung genutzt. Diese Konzepte bilden die Grundlage für Quantenalgorithmen, die sich die Leistungsfähigkeit des Quantencomputings zunutze machen, um komplexe Probleme zu lösen. In diesem Artikel werden einige der grundlegenden Konzepte der Quantenmechanik beschrieben, auf denen das Quantencomputing basiert.
 

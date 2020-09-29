@@ -1,29 +1,27 @@
 ---
 title: Entwickeln mit Q#-Jupyter Notebook-Instanzen
+description: Hier erfahren Sie, wie Sie mithilfe von Jupyter Notebook-Instanzen eine Anwendung vom Typ Q# erstellen.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 10b1faafa70c87a99ea09916e2c386b32f9a570f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 51de510907ea087d1f23d3ff65d268d6d455a493
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866807"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834311"
 ---
 # <a name="develop-with-no-locq-jupyter-notebooks"></a>Entwickeln mit Q#-Jupyter Notebook-Instanzen
 
 Installieren Sie das QDK für die Entwicklung von Q#-Vorgängen in Q#-Jupyter Notebook-Instanzen.
 
-Jupyter Notebooks ermöglichen die direkte Codeausführung parallel zu Anweisungen, Notizen und anderem Inhalt. Diese Umgebung ist ideal für die Erstellung von Q#-Code mit eingebetteten Erläuterungen oder interaktiven Tutorials zum Quantencomputing. Hier erfahren Sie, welche Schritte zum Erstellen eigener Q#-Notebooks erforderlich sind.
-
-> [!NOTE]
-> * In Q#-Jupyter Notebook-Instanzen können Sie nur Q#-Code ausführen, und die Vorgänge können nicht über externe Hostprogramme (z. B. Python- oder C#-Dateien) aufgerufen werden. Diese Umgebung ist nicht geeignet, wenn Ihr Ziel die Kombination eines externen klassischen Hostprogramms mit dem Quantenprogramm ist.
+Jupyter Notebook-Instanzen ermöglichen die direkte Codeberechnung parallel zu Anweisungen, Notizen und anderem Inhalt. Diese Umgebung ist ideal für die Erstellung von Q#-Code mit eingebetteten Erläuterungen oder interaktiven Tutorials zum Quantencomputing. Hier erfahren Sie, welche Schritte zum Erstellen eigener Q#-Notebooks erforderlich sind.
 
 ## <a name="install-the-ino-locq-jupyter-kernel"></a>Installieren des IQ#-Jupyter-Kernels
 
@@ -62,18 +60,18 @@ IQ# (ausgesprochen „i-q-sharp“) ist eine hauptsächlich von Jupyter und Pyth
     dotnet iqsharp install
     ```
 
-    > [!NOTE]
-    > Wenn Sie während des Schritts `dotnet iqsharp install` einen Fehler erhalten, sollten Sie ein neues Terminalfenster öffnen und den Vorgang dann wiederholen.
-    > Falls der Vorgang immer noch nicht erfolgreich ist, sollten Sie mit dem installierten Tool `dotnet-iqsharp` (unter Windows `dotnet-iqsharp.exe`) Folgendes ausführen:
-    > ```
-    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
-    > ```
-    > Ersetzen Sie hierbei `/path/to/dotnet-iqsharp` durch den absoluten Pfad zum Tool `dotnet-iqsharp` in Ihrem Dateisystem.
-    > Normalerweise finden Sie dies unter `.dotnet/tools` in Ihrem Benutzerprofilordner.
+> [!NOTE]
+> Wenn Sie während des Schritts `dotnet iqsharp install` einen Fehler erhalten, sollten Sie ein neues Terminalfenster öffnen und den Vorgang dann wiederholen.
+> Falls der Vorgang immer noch nicht erfolgreich ist, sollten Sie mit dem installierten Tool `dotnet-iqsharp` (unter Windows `dotnet-iqsharp.exe`) Folgendes ausführen:
+> ```
+> /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+> ```
+> Ersetzen Sie hierbei `/path/to/dotnet-iqsharp` durch den absoluten Pfad zum Tool `dotnet-iqsharp` in Ihrem Dateisystem.
+> Normalerweise finden Sie dies unter `.dotnet/tools` in Ihrem Benutzerprofilordner.
     
 ***
 
-Das ist alles! Sie verfügen nun über den IQ#-Kernel für Jupyter, der die Kernfunktionen zum Kompilieren und Ausführen von Q#-Vorgängen in Q#-Jupyter Notebooks bereitstellt.
+Das ist alles! Sie verfügen nun über den IQ#-Kernel für Jupyter, der die Kernfunktionen zum Kompilieren und Ausführen von Q#-Vorgängen in Jupyter Notebook-Instanzen vom Typ Q# bereitstellt.
 
 ## <a name="create-your-first-no-locq-notebook"></a>Erstellen Ihres ersten Q#-Notebooks
 
@@ -87,7 +85,7 @@ Nun können Sie Ihre Q#-Jupyter Notebook-Installation überprüfen, indem Sie e
 
     - Wenn Jupyter Notebook nicht automatisch in Ihrem Browser geöffnet wird, kopieren Sie die URL aus der Befehlszeile in den Browser.
 
-1. Wählen Sie „Neu“ > „Q#“ aus, um eine Jupyter Notebook-Instanz mit einem Q#-Kernel zu erstellen, und fügen Sie in der ersten Notebookzelle den folgenden Code hinzu:
+1. Wählen Sie **Neu > Q#** aus, um eine Jupyter Notebook-Instanz mit einem Q#-Kernel zu erstellen, und fügen Sie in der ersten Notebookzelle den folgenden Code hinzu:
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 

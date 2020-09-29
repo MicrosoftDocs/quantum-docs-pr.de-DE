@@ -3,18 +3,18 @@ uid: microsoft.quantum.welcome
 title: Einstieg in das Quantum Development Kit (QDK)
 description: Hier finden Sie Informationen zu den ersten Schritten mit dem Quantum Development Kit von Microsoft bei der Programmierung von Quantenprojekten in Q#.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/10/2020
 ms.topic: overview
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 06198f3b5b806bab49abf9fca38b5d2f15cfb65f
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: e56b0e0455773481fbff6cfb7f4a6817cfc93d1a
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863739"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834498"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Einstieg in das Quantum Development Kit (QDK)
 
@@ -22,8 +22,8 @@ Willkommen beim Microsoft Quantum Development Kit!
 
 Das Quantum Development Kit (QDK) enthält alle Tools, die Sie für die Erstellung Ihrer eigenen Quantenprogramme und Experimente mit Q# benötigen. Q# ist eine Programmiersprache, die speziell für die Entwicklung von Quantenanwendungen konzipiert wurde.
 
-Beginnen Sie mit dem [Leitfaden zur Installation des QDK](xref:microsoft.quantum.install), um sofort loszulegen.
-Dort erfahren Sie Schritt für Schritt, wie Sie das Quantum Development Kit auf Windows-, Linux- oder macOS-Computern installieren, damit Sie Ihre eigenen Quantenprogramme schreiben können.
+Beginnen Sie mit dem [Leitfaden zur Einrichtung des QDK](xref:microsoft.quantum.install), um sofort loszulegen.
+Dort erfahren Sie Schritt für Schritt, wie Sie das Quantum Development Kit auf Windows-, Linux- oder macOS-Computern einrichten, damit Sie Ihre eigenen Quantenprogramme schreiben können.
 
 Sollten Sie noch keine Erfahrung mit Quantencomputing haben, finden Sie in der [Übersicht](xref:microsoft.quantum.overview.introduction) Informationen zu den Möglichkeiten von Quantencomputern sowie zu den Grundlagen des Quantencomputings.
 
@@ -33,8 +33,7 @@ Das Quantum Development Kit bietet viele Möglichkeiten, um sich mit der Entwick
 Unsere Tutorials helfen Ihnen beim schnellen Einstieg in die Welt des Quantencomputings:
 
 * [Quanten-Zufallszahlengenerator](xref:microsoft.quantum.quickstarts.qrng): Beginnen Sie mit einer Q#-Anwendung im Hallo Welt-Stil, die eine kurze Einführung in die Konzepte des Quantencomputings bietet, während Sie in wenigen Minuten eine Quantenanwendung erstellen und ausführen.
-* [Erkunden der Verschränkung mit Q#](xref:microsoft.quantum.write-program): Dieses Tutorial enthält Informationen zum Schreiben eines Q#-Programms, das einige grundlegende Konzepte der Quantenprogrammierung veranschaulicht.
-    Wenn Sie noch nicht bereit sind, mit dem Programmieren zu beginnen, können Sie trotzdem fortfahren, ohne das QDK zu installieren, und sich einen Überblick über die Programmiersprache Q# und die ersten Konzepte des Quantencomputings verschaffen.
+* [Erkunden der Verschränkung mit Q#](xref:microsoft.quantum.write-program): Dieses Tutorial enthält Informationen zum Schreiben eines Q#-Programms, das einige grundlegende Konzepte der Quantenprogrammierung veranschaulicht. Wenn Sie noch nicht bereit sind, mit dem Programmieren zu beginnen, können Sie trotzdem fortfahren, ohne das QDK zu installieren, und sich einen Überblick über die Programmiersprache Q# und die ersten Konzepte des Quantencomputings verschaffen.
 * [Grover-Suchalgorithmus](xref:microsoft.quantum.quickstarts.search): Ein Beispiel für ein Q#-Programm. Hiermit wird die hohe Leistungsfähigkeit von Q# in Bezug auf das Ausdrücken des Quantenalgorithmus mit dem Ziel verdeutlicht, untergeordnete Quantenoperationen zu abstrahieren.
     In diesem Tutorial erfahren Sie Schritt für Schritt, wie Sie das Programm unter Verwendung von Visual Studio oder Visual Studio Code als Q#-Anwendung entwickeln.
 
@@ -68,7 +67,7 @@ Die aktuelle Dokumentation enthält die folgenden zusätzlichen Themen.
     Zu den Themen gehören Ablaufsteuerung, Datenstrukturen, Fehlerkorrektur, Testen und Debuggen. 
 * [Q#-Chemiebibliothek](xref:microsoft.quantum.chemistry.concepts.intro): Hier werden die Vorgänge und Funktionen beschrieben, die quantenbasierte Chemiesimulationen unterstützen. Dies ist ein wichtiger Anwendungsbereich für Quantencomputing. Zu den Themen gehören beispielsweise die Simulation der Hamilton-Dynamiken und die Quantenphasenschätzung.
 * [Numerikbibliothek von Q#](xref:microsoft.quantum.numerics.intro): Hier werden die Vorgänge und Funktionen beschrieben, die das Ausdrücken komplizierter arithmetischer Funktionen in Bezug auf die nativen Vorgänge von Zielcomputern unterstützen.
-* [Q#-Bibliotheksreferenz](xref:microsoft.quantum.standardlibsintro): Enthält Referenzinformationen zu Bibliotheksentitäten nach Namespace.
+* [Q#-Bibliotheksreferenz](xref:microsoft.quantum.apiref-intro): Enthält Referenzinformationen zu Bibliotheksentitäten nach Namespace.
 
 ### <a name="general-quantum-computing"></a>Allgemeines Quantencomputing
 
