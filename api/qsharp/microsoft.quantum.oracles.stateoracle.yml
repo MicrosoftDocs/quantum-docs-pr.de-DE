@@ -19,9 +19,9 @@ remarks: >-
   Der erste Parameter ist ein Index für das Qubit-Register von $ \ket {0} \_ f $. Der zweite Parameter umfasste beide Register.
 syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 1a303e51638a792fb31ee7cca58bd3662d86897b
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 3c1dd8076ef6004098d5f82cc4a0f0462855a233
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89331754"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91491961"
