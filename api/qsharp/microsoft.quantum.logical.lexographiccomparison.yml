@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.lexographiccomparison
+name: LexographicComparison
+type: function
+namespace: microsoft.quantum.logical
+summary: Gibt eine-Vergleichsfunktion zurück, die eine neue Funktion zurückgibt, die zwei Arrays lexografisch vergleicht.
+remarks: >-
+  Der lexografischen Vergleich zwischen zwei Arrays `xs` und `ys` wird durch die folgende Prozedur definiert. Wir sagen, dass zwei Elemente `x` und `y` äquivalent sind, wenn `elementComparison(x, y)` und beide "true" `elementComparison(y, x)` sind.
+
+
+  - Beide Arrays werden Element-für-Element-Elemente verglichen, bis das erste Paar Elemente, die nicht äquivalent sind. Das Array, das das Element enthält, das zuerst anhand von auftritt, `elementComparison` wird als erstes in der lexographical-Reihenfolge angezeigt.
+
+  - Wenn keine nicht gleichwertigen Elemente gefunden werden und ein Array länger als das andere ist, wird das kürzere Array als erstes Vorkommen bezeichnet.
+syntax: "function LexographicComparison (elementComparison : (('T, 'T) -> Bool)) : (('T[], 'T[]) -> Bool)"
+input:
+  content: "(elementComparison : (('T, 'T) -> Bool))"
+  types:
+  - name: elementComparison
+    summary: Eine Funktion, die zwei Elemente `x` und vergleicht und `y` zurückgibt, wenn `x` kleiner oder gleich ist `y` .
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+output:
+  content: (('T[], 'T[]) -> Bool)
+  types:
+  - summary: Eine Funktion, die zwei Arrays `xs` und vergleicht und `ys` zurückgibt, wenn `xs` vor oder gleich `ys` in der lexographical-Reihenfolge auftritt.
+    isFunction: true
+    input:
+      types:
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+typeParameters:
+- uid: "'T"
+  summary: Der Typ der Elemente der zu vergleichenden Arrays.
+seeAlso:
+- microsoft.quantum.arrays.sorted
+metadata:
+  ms.openlocfilehash: c7b1ec454d7a87c344b0297007dff32fb6ee07a6
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494343"

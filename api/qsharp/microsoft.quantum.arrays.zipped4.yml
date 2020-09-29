@@ -1,0 +1,63 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.zipped4
+name: Zipped4
+type: function
+namespace: microsoft.quantum.arrays
+summary: Bei Angabe von vier Arrays wird ein neues Array von 4-Tupeln zurückgegeben, sodass jedes 4-Tupel ein Element aus jedem ursprünglichen Array enthält.
+syntax: "function Zipped4 (first : 'T1[], second : 'T2[], third : 'T3[], fourth : 'T4[]) : ('T1, 'T2, 'T3, 'T4)[]"
+input:
+  content: "(first : 'T1[], second : 'T2[], third : 'T3[], fourth : 'T4[])"
+  types:
+  - name: first
+    summary: Ein Array, das Werte für das erste Element jedes Tupels enthält.
+    isArray: true
+    uid: "'T1"
+    isLocal: true
+  - name: second
+    summary: Ein Array, das Werte für das zweite Element jedes Tupels enthält.
+    isArray: true
+    uid: "'T2"
+    isLocal: true
+  - name: third
+    summary: Ein Array, das Werte für das dritte Element jedes Tupels enthält.
+    isArray: true
+    uid: "'T3"
+    isLocal: true
+  - name: fourth
+    summary: Ein Array, das Werte für das vierte Element jedes Tupels enthält.
+    isArray: true
+    uid: "'T4"
+    isLocal: true
+output:
+  content: ('T1, 'T2, 'T3, 'T4)[]
+  types:
+  - summary: Ein Array, das 4 Tupel des Formulars `(first[idx], second[idx], third[idx], fourth[idx])` für jedes enthält `idx` . Wenn die vier Arrays nicht die gleiche Länge aufweisen, ist die Ausgabe so lang wie die kürzere der Eingaben.
+    isArray: true
+    types:
+    - uid: "'T1"
+      isLocal: true
+    - uid: "'T2"
+      isLocal: true
+    - uid: "'T3"
+      isLocal: true
+    - uid: "'T4"
+      isLocal: true
+typeParameters:
+- uid: "'T1"
+  summary: Der Typ der ersten Array Elemente.
+- uid: "'T2"
+  summary: Der Typ der zweiten Array Elemente.
+- uid: "'T3"
+  summary: Der Typ der dritten Array Elemente.
+- uid: "'T4"
+  summary: Der Typ der vierten Array Elemente.
+seeAlso:
+- microsoft.quantum.arrays.zipped
+- microsoft.quantum.arrays.zipped3
+metadata:
+  ms.openlocfilehash: 12c6501fd173798718b2ab14d14d93b5d53361b6
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494035"

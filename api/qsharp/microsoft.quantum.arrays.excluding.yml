@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.excluding
+name: Excluding
+type: function
+namespace: microsoft.quantum.arrays
+summary: Gibt ein Array mit den Elementen eines anderen Arrays zurück, wobei Elemente in einer angegebenen Liste von Indizes ausgeschlossen werden.
+examples: >-
+  ```qsharp
+
+  let array = [10, 11, 12, 13, 14, 15];
+
+  // The following line returns [10, 12, 15].
+
+  let subarray = Excluding([1, 3, 4], array);
+
+  ```
+syntax: "function Excluding (remove : Int[], array : 'T[]) : 'T[]"
+input:
+  content: "(remove : Int[], array : 'T[])"
+  types:
+  - name: remove
+    summary: Ein Array von Indizes, das festlegt, welche Elemente aus der Ausgabe ausgeschlossen werden sollen.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: array
+    summary: Ein Array, dessen Werte im Ausgabe Array entnommen werden.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Ein Array, `output` das `output[0]` das erste Element von ist, `array` dessen Index nicht in angezeigt wird `remove` , z `output[1]` . b. das zweite Element dieser Art usw.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Der Typ der Arrayelemente.
+metadata:
+  ms.openlocfilehash: 4d11c4578b91eac6d59574900887dcb265f66898
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494250"

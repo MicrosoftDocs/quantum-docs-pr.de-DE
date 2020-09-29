@@ -4,12 +4,13 @@ name: PrepareUniformSuperposition
 type: operation
 namespace: microsoft.quantum.preparation
 summary: >-
-  Erstellt eine einheitliche Superposition über Zustände, die 0 bis codieren `nIndices` .
+  Erstellt eine einheitliche Superposition über Zustände, die 0 bis codieren `nIndices - 1` .
 
 
   Das heißt, dieser einheitliche $U $ erstellt eine einheitliche Superposition für alle Zahl Zustände $0 $ bis $M-$1, wenn ein Eingabe Status $ \ket{0\cdots 0} $ angegeben wird. Anders ausgedrückt: $ $ \begin{align} u\ket {0} = \frac {1} {\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
   \end{align} $ $.
+remarks: Der Vorgang ist "adjointable", erfordert jedoch, dass `indexRegister` sich in diesem Fall in einer einheitlichen übergeordneten Position befindet `nIndices` .
 examples: >-
   Im folgenden Beispiel wird der Status $ \frac {1} {\sqrt {6} } \ sum_ {j = 0} ^ {5} \ket{j} $ auf $3 $ Qubits vorbereitet.
 
@@ -20,6 +21,7 @@ examples: >-
 
   using(indexRegister = Qubit[3]) {
       PrepareUniformSuperposition(nIndices, LittleEndian(indexRegister));
+      // ...
   }
 
   ```
@@ -46,9 +48,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 442daa4affb6b59191af9117a8094f7bfbf71302
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: ff1e1e50992b209865c4e3b1c82e9faec9199d58
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89331329"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91485395"
