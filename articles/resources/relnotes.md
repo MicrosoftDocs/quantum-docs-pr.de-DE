@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 28e880445bf61150d7940730009a5482298adae2
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 27038a86dc4854c397458d95529aca463d493fd6
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91492352"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771329"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Versionshinweise für das Microsoft Quantum Development Kit
 
@@ -23,6 +23,12 @@ Dieser Artikel enthält Informationen zu den einzelnen Releases des Microsoft Qu
 Installationsanweisungen finden Sie im [Installationshandbuch](xref:microsoft.quantum.install).
 
 Updateanweisungen finden Sie im [Updatehandbuch](xref:microsoft.quantum.update).
+
+## <a name="version-01220100504"></a>Version 0.12.20100504
+
+*Veröffentlichungsdatum: 5. Oktober, 2020*
+
+Diese Version behebt einen Fehler, der sich auf das Laden von Q# Notebooks auswirkt (siehe [iqsharp # 331](https://github.com/microsoft/iqsharp/pull/331)).
 
 ## <a name="version-01220092803"></a>Version 0.12.20092803
 
@@ -66,7 +72,7 @@ Sehen Sie sich die vollständige Liste geschlossener PRS für [Bibliotheken](htt
 
 Dieses Release enthält Folgendes:
 
-- Geöffnete Namespaces in Q# Notebooks sind jetzt für alle zukünftigen Zellen Berechnungen verfügbar. Dies ermöglicht beispielsweise, dass Namespaces einmal in einer Zelle am Anfang des Notebooks geöffnet werden, anstatt relevante Namespaces in jeder codezelle öffnen zu müssen. Mit einem neuen `%lsopen` Magic-Befehl wird die Liste der aktuell geöffneten Namespaces angezeigt.
+- Geöffnete Namespaces in Q# Notebooks sind jetzt verfügbar, wenn alle zukünftigen Zellen ausgeführt werden. Dies ermöglicht beispielsweise, dass Namespaces einmal in einer Zelle am Anfang des Notebooks geöffnet werden, anstatt relevante Namespaces in jeder codezelle öffnen zu müssen. Mit einem neuen `%lsopen` Magic-Befehl wird die Liste der aktuell geöffneten Namespaces angezeigt.
 
 Sehen Sie sich die vollständige Liste geschlossener PRS für [Bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [Compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [Laufzeit](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [Beispiele](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [ Q# I](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) und [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)an.  
 

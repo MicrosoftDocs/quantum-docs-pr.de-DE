@@ -9,12 +9,12 @@ uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a0e8933e6a77d017db914e4bb969ea05f760a443
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: cefe35a10dd89c14d2f1abc3080d52ab125236d1
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834039"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771269"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Tutorial: Implementieren eines Quanten-Zufallszahlengenerators in Q\#
 
@@ -33,7 +33,7 @@ Ein einfaches Beispiel für einen in geschriebenen Quantum-Algorithmus Q# ist ei
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-Wie im Artikel [Grundlegendes zu Quantencomputing](xref:microsoft.quantum.overview.understanding) erklärt, stellt ein Qubit eine Einheit mit Quanteninformationen dar, die sich in einem Superpositionszustand befinden kann. Für ein Qubit kann sich bei einer Messung nur 0 oder 1 ergeben. Wenn jedoch ein Vorgang ausgeführt wird, stellt der Status des Qubit die Wahrscheinlichkeit dar, dass entweder 0 oder 1 mit einer Messung gelesen wird. Dieser Wahrscheinlichkeitszustand wird als Überlagerung bezeichnet. Wir können diese Wahrscheinlichkeit verwenden, um Zufallszahlen zu generieren.
+Wie im Artikel [Grundlegendes zu Quantencomputing](xref:microsoft.quantum.overview.understanding) erklärt, stellt ein Qubit eine Einheit mit Quanteninformationen dar, die sich in einem Superpositionszustand befinden kann. Für ein Qubit kann sich bei einer Messung nur 0 oder 1 ergeben. Vor der Messung stellt der Status des Qubits jedoch die Wahrscheinlichkeit dar, dass entweder 0 oder 1 mit einer Messung gelesen wird. Dieser Wahrscheinlichkeitszustand wird als Überlagerung bezeichnet. Wir können diese Wahrscheinlichkeit verwenden, um Zufallszahlen zu generieren.
 
 In unserem Q# Vorgang stellen wir den `Qubit` DataType, den systemeigenen, bereit Q# . Wir können `Qubit` nur mit einer `using`-Anweisung zuordnen. Nach der Zuordnung befindet sich ein Qubit immer im Zustand `Zero`. 
 

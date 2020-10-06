@@ -8,12 +8,12 @@ uid: microsoft.quantum.guide.quickref.iqsharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 75a1e1820e5ca16268c9b11322eb5653094b1a3c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 4549afb84bf0084160079e3cef3a7f94dffcda3e
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833567"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771345"
 ---
 # <a name="ino-locq-magic-commands"></a>I Q# Magic-Befehle
 
@@ -34,7 +34,7 @@ ms.locfileid: "90833567"
 ### <a name="azure-quantum-integration"></a>Azure-Quantum-Integration
 
 - [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect): Stellt eine Verbindung mit einem Azure Quantum Workspace her oder zeigt den aktuellen Verbindungsstatus an.
-- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Führt einen Auftrag in einem Azure Quantum-Arbeitsbereich aus.
+- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Übermittelt einen Auftrag an einen Azure Quantum-Arbeitsbereich und wartet auf den Abschluss.
 - [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs): Hiermit wird eine Liste der Aufträge im aktuellen Azure Quantum-Arbeitsbereich angezeigt.
 - [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output): Zeigt die Ergebnisse für einen Auftrag im aktuellen Azure Quantum-Arbeitsbereich an.
 - [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status): Zeigt den Status eines Auftrags im aktuellen Azure Quantum-Arbeitsbereich an.
