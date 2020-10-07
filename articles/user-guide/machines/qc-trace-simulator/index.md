@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 54a1f63461cfcc8146f7dc4d18d321238d77454d
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7f5e25aa7b58277642783e03d03854cd75ff4ca3
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833366"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771289"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum Development Kit (QDK): Ablaufverfolgungssimulator für Quantencomputer
 
@@ -86,7 +86,7 @@ Das QDK enthält fünf Tools, die Sie mit einem Ablaufverfolgungssimulator für 
 |-----| -----|
 |[Überprüfung auf eindeutige Eingaben](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |Dient zum Durchführen einer Überprüfung auf potenzielle Konflikte mit freigegebenen Qubits. |
 |[Überprüfung auf Verwendung von ungültigen Qubits](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |Dient zum Durchführen einer Überprüfung, ob eine Operation vom Programm auf ein bereits freigegebenes Qubit angewendet wird. |
-|[Indikator für primitive Vorgänge](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Dient zum Ermitteln der Anzahl von Primitivenprozessen in allen Operationen, die in einem Quantenprogramm aufgerufen werden.  |
+|[Indikator für primitive Vorgänge](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Dient zum Ermitteln der Anzahl von Primitiven in allen Operationen, die in einem Quantenprogramm aufgerufen werden.  |
 |[Tiefenindikator](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |Dient zum Erfassen der jeweiligen Anzahl für die Untergrenze der Tiefe aller Operationen, die in einem Quantenprogramm ausgelöst werden.   |
 |[Breitenindikator](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |Dient zum Zählen der Qubits, die von den einzelnen Operationen eines Quantenprogramms zugeordnet und geliehen werden. |
 

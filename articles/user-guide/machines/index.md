@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6a2a4bb829301f9db9bd14f3240556a403b9a54f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f40c63eed60379aa46a0cd9cfdd7d8de8c22c079
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833429"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771307"
 ---
 # <a name="quantum-simulators"></a>Quantensimulatoren
 
@@ -24,7 +24,7 @@ Bei Quantensimulatoren handelt es sich um Softwareprogramme, die auf klassischen
 
 ## <a name="the-quantum-development-kit-qdk-quantum-simulators"></a>Quantensimulatoren im Quantum Development Kit (QDK)
 
-Der Quantensimulator ist für das Bereitstellen der Implementierungen von Quantenprimitiven für einen Algorithmus zuständig. Dies gilt auch für primitive Vorgänge, z. B. `H`, `CNOT` und `Measure`, sowie für die Verwaltung und Nachverfolgung von Qubits. Das QDK enthält verschiedene Klassen von Quantensimulatoren, die für unterschiedliche Ausführungsmodelle des gleichen Quantenalgorithmus stehen. 
+Der Quantensimulator ist für das Bereitstellen der Implementierungen von Quantenprimitiven für einen Algorithmus zuständig. Dies gilt auch für primitive Vorgänge, z. B. `H`, `CNOT` und `Measure`, sowie für die Verwaltung und Nachverfolgung von Qubits. Das QDK enthält verschiedene Klassen von Quantensimulatoren, die für unterschiedliche Simulationen des gleichen Quantenalgorithmus stehen. 
 
 
 Mit jeder Art von Quantensimulator können unterschiedliche Implementierungen dieser Primitive bereitgestellt werden. Mit dem [Simulator für den vollständigen Zustand](xref:microsoft.quantum.machines.full-state-simulator) wird der Quantenalgorithmus beispielsweise ausgeführt, indem der [Quantenzustandsvektor](xref:microsoft.quantum.glossary#quantum-state) vollständig simuliert wird, während der tatsächliche Quantenzustand beim [Ablaufverfolgungssimulator für Quantencomputer](xref:microsoft.quantum.machines.qc-trace-simulator.intro) nicht berücksichtigt wird. Stattdessen wird hiermit die Nutzung von Gates, Qubits und anderen Ressourcen für den Algorithmus nachverfolgt.
