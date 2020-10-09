@@ -4,17 +4,17 @@ title: Einstieg in das Quantum Development Kit (QDK)
 description: Hier finden Sie Informationen zu den ersten Schritten mit dem Quantum Development Kit von Microsoft bei der Programmierung von Quantenprojekten in Q#.
 author: bradben
 ms.author: v-benbra
-ms.date: 5/10/2020
+ms.date: 9/29/2020
 ms.topic: overview
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e56b0e0455773481fbff6cfb7f4a6817cfc93d1a
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 8a60888bbf7dce1b85bce7a2aa8c994bb8570964
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834498"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771201"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Einstieg in das Quantum Development Kit (QDK)
 
@@ -34,13 +34,11 @@ Unsere Tutorials helfen Ihnen beim schnellen Einstieg in die Welt des Quantencom
 
 * [Quanten-Zufallszahlengenerator](xref:microsoft.quantum.quickstarts.qrng): Beginnen Sie mit einer Q#-Anwendung im Hallo Welt-Stil, die eine kurze Einführung in die Konzepte des Quantencomputings bietet, während Sie in wenigen Minuten eine Quantenanwendung erstellen und ausführen.
 * [Erkunden der Verschränkung mit Q#](xref:microsoft.quantum.write-program): Dieses Tutorial enthält Informationen zum Schreiben eines Q#-Programms, das einige grundlegende Konzepte der Quantenprogrammierung veranschaulicht. Wenn Sie noch nicht bereit sind, mit dem Programmieren zu beginnen, können Sie trotzdem fortfahren, ohne das QDK zu installieren, und sich einen Überblick über die Programmiersprache Q# und die ersten Konzepte des Quantencomputings verschaffen.
-* [Grover-Suchalgorithmus](xref:microsoft.quantum.quickstarts.search): Ein Beispiel für ein Q#-Programm. Hiermit wird die hohe Leistungsfähigkeit von Q# in Bezug auf das Ausdrücken des Quantenalgorithmus mit dem Ziel verdeutlicht, untergeordnete Quantenoperationen zu abstrahieren.
-    In diesem Tutorial erfahren Sie Schritt für Schritt, wie Sie das Programm unter Verwendung von Visual Studio oder Visual Studio Code als Q#-Anwendung entwickeln.
+* [Grover-Suchalgorithmus](xref:microsoft.quantum.quickstarts.search): Ein Beispiel für ein Q#-Programm. Hiermit wird die hohe Leistungsfähigkeit von Q# in Bezug auf das Ausdrücken des Quantenalgorithmus mit dem Ziel verdeutlicht, untergeordnete Quantenoperationen zu abstrahieren. In diesem Tutorial erfahren Sie Schritt für Schritt, wie Sie das Programm unter Verwendung von Visual Studio oder Visual Studio Code als Q#-Anwendung entwickeln.
 
-### <a name="learning-further"></a>Weitere Informationen zum Lernen
-* In den [Microsoft Learn-Modulen für Quantencomputing](https://docs.microsoft.com/learn/browse/?term=quantum) werden zentrale Konzepte vermittelt, mit denen Sie sich in Ihrer eigenen Geschwindigkeit und nach Ihrem eigenen Zeitplan vertraut machen können. Unser [erstes Modul](https://docs.microsoft.com/learn/modules/qsharp-create-first-quantum-development-kit/) enthält grundlegende Informationen zur Erstellung von Quantenprogrammen mit dem QDK.
-* Informieren Sie sich über [Quanten-Katas](https://github.com/Microsoft/QuantumKatas), wenn Sie sich eingehender mit der Q#-Programmierung beschäftigen möchten. Hierbei handelt es sich um eine Sammlung von Programmierübungen, die Sie im gewünschten Tempo durcharbeiten können und die als Einführung in das Quantencomputing mit Q# dienen.
-    Viele dieser Katas sind auch als Q#-Notebooks verfügbar. 
+## <a name="learning-further"></a>Weitere Informationen zum Lernen
+* Microsoft Learn bietet kostenloses Onlinetraining für Quantencomputing. Der Lernpfad zu den [Grundlagen des Quantencomputings](https://docs.microsoft.com/learn/paths/quantum-computing-fundamentals/) bietet eine Einführung in die grundlegenden Konzepte von Quantencomputing und Quantenalgorithmen, und Sie erhalten einen Einstieg in das Entwickeln von Quantenprogrammen mithilfe von Q#.
+* Informieren Sie sich über [Quanten-Katas](https://github.com/Microsoft/QuantumKatas), wenn Sie sich eingehender mit der Q#-Programmierung beschäftigen möchten. Hierbei handelt es sich um eine Sammlung von Programmierübungen, die Sie im gewünschten Tempo durcharbeiten können und die als Einführung in das Quantencomputing mit Q# dienen. Viele dieser Katas sind auch als Q#-Notebooks verfügbar. 
 * Unser [Repository mit Beispielen](https://github.com/Microsoft/Quantum) enthält mehrere Beispiele für das Schreiben von Quantenprogrammen mit Q#. Die meisten dieser Beispiele werden mit unseren Open-Source-[Quantenbibliotheken](https://github.com/Microsoft/QuantumLibraries) geschrieben, z. B. zu den Bereichen [Standard](xref:microsoft.quantum.libraries.standard.intro) und [Chemie](xref:microsoft.quantum.chemistry.concepts.intro) (weitere Informationen unten).
 
 ## <a name="key-concepts-for-quantum-computing"></a>Wichtige Konzepte für das Quantencomputing
