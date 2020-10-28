@@ -1,0 +1,187 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Konvertiert ein `BigEndian` Qubit-Register in eine `LittleEndian` Qubit-Registrierung, indem die Qubit-Reihenfolge umgekehrt wird.
+  uid: Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian
+- summary: Wenn true, werden zusätzliche Bestätigungen aktiviert, die teuer sind, aber nützlich sind, um die Verwendung der arithmetischen Funktionen zu debuggen.
+  uid: Microsoft.Quantum.Arithmetic.ExtraArithmeticAssertionsEnabled
+- summary: Assert, dass alle fest Komma Zahlen im angegebenen Array identische Punktpositionen und Qubit-Zahlen aufweisen.
+  uid: Microsoft.Quantum.Arithmetic.IdenticalFormatFactFxP
+- summary: Bestätigen Sie, dass alle fest Komma Zahlen im angegebenen Array identische Punktpositionen aufweisen, wenn Sie vom unwichtigsten Bit gezählt werden. Dies bedeutet, dass die Anzahl der Bits, die Minuspunkt Positionen aufweisen, für alle Festkomma Zahlen im Array konstant sein muss.
+  uid: Microsoft.Quantum.Arithmetic.IdenticalPointPosFactFxP
+- summary: Konvertiert ein `LittleEndian` Qubit-Register in eine `BigEndian` Qubit-Registrierung, indem die Qubit-Reihenfolge umgekehrt wird.
+  uid: Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian
+- summary: Gibt bei einem Vorgang, der eine Big-Endian-Eingabe annimmt, einen neuen Vorgang zurück, der eine Little-Endian-Eingabe annimmt.
+  uid: Microsoft.Quantum.Arithmetic.ReversedOpBE
+- summary: Gibt bei einem Vorgang, der eine Big-Endian-Eingabe annimmt, einen neuen Vorgang zurück, der eine Little-Endian-Eingabe annimmt.
+  uid: Microsoft.Quantum.Arithmetic.ReversedOpBEA
+- summary: Gibt bei einem Vorgang, der eine Big-Endian-Eingabe annimmt, einen neuen Vorgang zurück, der eine Little-Endian-Eingabe annimmt.
+  uid: Microsoft.Quantum.Arithmetic.ReversedOpBEC
+- summary: Gibt bei einem Vorgang, der eine Big-Endian-Eingabe annimmt, einen neuen Vorgang zurück, der eine Little-Endian-Eingabe annimmt.
+  uid: Microsoft.Quantum.Arithmetic.ReversedOpBECA
+- summary: Gibt bei einem Vorgang, der eine Little-Endian-Eingabe annimmt, einen neuen Vorgang zurück, der eine Big-Endian-Eingabe annimmt.
+  uid: Microsoft.Quantum.Arithmetic.ReversedOpLE
+- summary: Gibt bei einem Vorgang, der eine Little-Endian-Eingabe annimmt, einen neuen Vorgang zurück, der eine Big-Endian-Eingabe annimmt.
+  uid: Microsoft.Quantum.Arithmetic.ReversedOpLEA
+- summary: Gibt bei einem Vorgang, der eine Little-Endian-Eingabe annimmt, einen neuen Vorgang zurück, der eine Big-Endian-Eingabe annimmt.
+  uid: Microsoft.Quantum.Arithmetic.ReversedOpLEC
+- summary: Gibt bei einem Vorgang, der eine Little-Endian-Eingabe annimmt, einen neuen Vorgang zurück, der eine Big-Endian-Eingabe annimmt.
+  uid: Microsoft.Quantum.Arithmetic.ReversedOpLECA
+name: Microsoft.Quantum.Arithmetic
+newtypes:
+- summary: Registrieren, das eine Ganzzahl ohne Vorzeichen in Big-d-Reihenfolge codiert. Das Qubit mit Index `0` codiert das höchste Bit einer Ganzzahl ohne Vorzeichen.
+  uid: Microsoft.Quantum.Arithmetic.BigEndian
+- summary: Stellt ein Register der Qubits-Codierung einer Festkomma Zahl dar. Besteht aus einer ganzen Zahl, die gleich der Anzahl der Qubits Links vom binären Punkt ist, d. h., Qubits mit Gewichtung größer oder gleich 1 und einem Quantum-Register.
+  uid: Microsoft.Quantum.Arithmetic.FixedPoint
+- summary: Registrieren, das eine Ganzzahl ohne Vorzeichen in Little-in-der-Reihenfolge codiert. Das Qubit mit Index `0` codiert das niedrigste Bit einer Ganzzahl ohne Vorzeichen.
+  uid: Microsoft.Quantum.Arithmetic.LittleEndian
+- summary: >-
+    Little-in-tdian-Ganzzahlen ohne Vorzeichen in QFT.
+
+    Wenn z. b. $ \ket{x} $ die Little-Endian-Codierung der Ganzzahl $x $ auf Berechnungsbasis ist, dann ist $ \operatschmue{qftle} \ket{x} $ die Codierung von $x $ in der QFT-Basis.
+  uid: Microsoft.Quantum.Arithmetic.PhaseLittleEndian
+- summary: Der Typ einer Ganzzahl mit Vorzeichen, die in Little-kondian gespeichert ist (siehe littleenddian).
+  uid: Microsoft.Quantum.Arithmetic.SignedLittleEndian
+operations:
+- summary: Fügt einer Quantum-fixpunktzahl eine klassische Konstante hinzu.
+  uid: Microsoft.Quantum.Arithmetic.AddConstantFxP
+- summary: Addiert zwei in quantenregistern gespeicherte Fixed-Point-Nummern.
+  uid: Microsoft.Quantum.Arithmetic.AddFxP
+- summary: Wählt in Abhängigkeit von der Register Größe von automatisch zwischen Addition und ohne ausführen und ohne aus `ys` .
+  uid: Microsoft.Quantum.Arithmetic.AddI
+- summary: Implementiert die innere Additions Funktion für den Vorgang ripplecarryadderttk. Dies ist der innere Vorgang, der mit dem äußeren Vorgang konjuregiert wird, um den vollständigen Adder zu konstruieren.
+  uid: Microsoft.Quantum.Arithmetic.ApplyInnerTTKAdder
+- summary: Implementiert die innere Additions Funktion für den Vorgang ripplecarryaddernocarryttk. Dies ist der innere Vorgang, der mit dem äußeren Vorgang konjuregiert wird, um den vollständigen Adder zu konstruieren.
+  uid: Microsoft.Quantum.Arithmetic.ApplyInnerTTKAdderWithoutCarry
+- summary: Wendet einen Vorgang an, <xref:microsoft.quantum.arithmetic.phaselittleendian> der ein Register als Eingabe für ein Ziel Register des Typs annimmt <xref:microsoft.quantum.arithmetic.littleendian> .
+  uid: Microsoft.Quantum.Arithmetic.ApplyLEOperationOnPhaseLE
+- summary: Wendet einen Vorgang an, <xref:microsoft.quantum.arithmetic.phaselittleendian> der ein Register als Eingabe für ein Ziel Register des Typs annimmt <xref:microsoft.quantum.arithmetic.littleendian> .
+  uid: Microsoft.Quantum.Arithmetic.ApplyLEOperationOnPhaseLEA
+- summary: Wendet einen Vorgang an, <xref:microsoft.quantum.arithmetic.phaselittleendian> der ein Register als Eingabe für ein Ziel Register des Typs annimmt <xref:microsoft.quantum.arithmetic.littleendian> .
+  uid: Microsoft.Quantum.Arithmetic.ApplyLEOperationOnPhaseLEC
+- summary: Wendet einen Vorgang an, <xref:microsoft.quantum.arithmetic.phaselittleendian> der ein Register als Eingabe für ein Ziel Register des Typs annimmt <xref:microsoft.quantum.arithmetic.littleendian> .
+  uid: Microsoft.Quantum.Arithmetic.ApplyLEOperationOnPhaseLECA
+- summary: Wendet den drei-Qubit-Mehrheits Vorgang direkt auf ein Register von Qubits an.
+  uid: Microsoft.Quantum.Arithmetic.ApplyMajorityInPlace
+- summary: Umkehrbarer, direkter Ripple-Operation-Vorgang, der in der ganzzahligen Additions Operation ripplecarryaddercdkm weiter unten verwendet wird. Bei zwei Qubit `xs` -Registern und `ys` derselben Länge wendet der-Vorgang eine Ripple-Sequenz Sequenz von "CNOT" und "ccnot Gates" mit Qubits in `xs` und als die Ziele an `ys` `xs` .
+  uid: Microsoft.Quantum.Arithmetic.ApplyOuterCDKMAdder
+- summary: Implementiert den äußeren Vorgang für ripplecarryadderttk, um den inneren Vorgang zum Erstellen des vollständigen Adder konjugieren.
+  uid: Microsoft.Quantum.Arithmetic.ApplyOuterTTKAdder
+- summary: Wendet einen Vorgang an, <xref:microsoft.quantum.arithmetic.littleendian> der ein Register als Eingabe für ein Ziel Register des Typs annimmt <xref:microsoft.quantum.arithmetic.phaselittleendian> .
+  uid: Microsoft.Quantum.Arithmetic.ApplyPhaseLEOperationOnLE
+- summary: ''
+  uid: Microsoft.Quantum.Arithmetic.ApplyPhaseLEOperationOnLEA
+- summary: ''
+  uid: Microsoft.Quantum.Arithmetic.ApplyPhaseLEOperationOnLEC
+- summary: ''
+  uid: Microsoft.Quantum.Arithmetic.ApplyPhaseLEOperationOnLECA
+- summary: Wendet einen Vorgang an, der eine Big-Endian-Eingabe an eine Register Codierung einer Ganzzahl ohne Vorzeichen unter Verwendung des Little-Endian-Formats nimmt.
+  uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpBE
+- summary: Wendet einen Vorgang an, der eine Big-Endian-Eingabe an eine Register Codierung einer Ganzzahl ohne Vorzeichen unter Verwendung des Little-Endian-Formats nimmt.
+  uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA
+- summary: Wendet einen Vorgang an, der eine Big-Endian-Eingabe an eine Register Codierung einer Ganzzahl ohne Vorzeichen unter Verwendung des Little-Endian-Formats nimmt.
+  uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC
+- summary: Wendet einen Vorgang an, der eine Big-Endian-Eingabe an eine Register Codierung einer Ganzzahl ohne Vorzeichen unter Verwendung des Little-Endian-Formats nimmt.
+  uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpBECA
+- summary: Wendet einen Vorgang an, der eine Little-Endian-Eingabe an eine Register Codierung einer Ganzzahl ohne Vorzeichen unter Verwendung des Big-Endian-Formats nimmt.
+  uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpLE
+- summary: Wendet einen Vorgang an, der eine Little-Endian-Eingabe an eine Register Codierung einer Ganzzahl ohne Vorzeichen unter Verwendung des Big-Endian-Formats nimmt.
+  uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA
+- summary: Wendet einen Vorgang an, der eine Little-Endian-Eingabe an eine Register Codierung einer Ganzzahl ohne Vorzeichen unter Verwendung des Big-Endian-Formats nimmt.
+  uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC
+- summary: Wendet einen Vorgang an, der eine Little-Endian-Eingabe an eine Register Codierung einer Ganzzahl ohne Vorzeichen unter Verwendung des Big-Endian-Formats nimmt.
+  uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpLECA
+- summary: Wendet eine bitweise XOR-Operation zwischen einer klassischen Ganzzahl und einer ganzen Zahl an, die durch ein Register von Qubits dargestellt wird.
+  uid: Microsoft.Quantum.Arithmetic.ApplyXorInPlace
+- summary: Hilfsfunktion, um zu bestätigen, dass eine Quantum-fest Komma Zahl mit 0 (null) initialisiert wird, d. h., alle Qubits befinden sich im Zustand $ \ket {0} $.
+  uid: Microsoft.Quantum.Arithmetic.AssertAllZeroFxP
+- summary: Bestätigt, dass das signifikanteste Qubit eines Qubit-Registers, das eine Ganzzahl ohne Vorzeichen darstellt, in einem bestimmten Zustand ist.
+  uid: Microsoft.Quantum.Arithmetic.AssertMostSignificantBit
+- summary: Bestätigt, dass der `number` codierte in phaselittleenddian kleiner als ist `value` .
+  uid: Microsoft.Quantum.Arithmetic.AssertPhaseLessThan
+- summary: Bestätigt, dass die Wahrscheinlichkeit eines bestimmten Zustands eines Quantum-Register über den erwarteten Wert verfügt.
+  uid: Microsoft.Quantum.Arithmetic.AssertProbInt
+- summary: Implementiert ein umkehrbares durchführen. Wenn ein in Qubit codiertes `carryIn` und zwei Summen in und codiert `summand1` `summand2` sind, berechnet das bitweise XOR von `carryIn` `summand1` und `summand2` im Qubit, `summand2` und die Überführung wird im Qubit-Element als XoReD `carryOut` festgestellt.
+  uid: Microsoft.Quantum.Arithmetic.Carry
+- summary: Der Kern Vorgang in ripplecarryaddercdkm, der mit dem obigen applyoutercdkmadder-Vorgang verwendet wird, der mit diesem Vorgang konjuregiert wurde, um die innere Operation von ripplecarryaddercdkm abzurufen. Mit diesem Vorgang wird das Qubit "ausführen" berechnet und eine Sequenz von "Not Gates" auf einen Teil der Eingabe angewendet `ys` .
+  uid: Microsoft.Quantum.Arithmetic.CarryOutCoreCDKM
+- summary: 'Wrapper für ganzzahligen Vergleich: `result = x > y` .'
+  uid: Microsoft.Quantum.Arithmetic.CompareGTI
+- summary: 'Wrapper für ganzzahligen Vergleich mit Vorzeichen: `result = xs > ys` .'
+  uid: Microsoft.Quantum.Arithmetic.CompareGTSI
+- summary: Vergleicht zwei in quantenregistern gespeicherte Fixed-Point-Nummern und steuert einen Flip-Wert für das Ergebnis.
+  uid: Microsoft.Quantum.Arithmetic.CompareGreaterThanFxP
+- summary: Dieser Vorgang testet, ob eine ganze Zahl, die durch ein Register von Qubits dargestellt wird, größer als eine andere Ganzzahl ist, und wendet ein XOR des Ergebnisses auf ein Ausgabe-Qubit an.
+  uid: Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry
+- summary: Berechnet $1/x $ für eine Festkomma Zahl $x $.
+  uid: Microsoft.Quantum.Arithmetic.ComputeReciprocalFxP
+- summary: Berechnet die gegenseitige 1/x-Datei für eine Ganzzahl x ohne Vorzeichen unter Verwendung der ganzzahligen Division. Das als ganze Zahl interpretierte Ergebnis ist `floor(2^(2*n-1) / x)` .
+  uid: Microsoft.Quantum.Arithmetic.ComputeReciprocalI
+- summary: Kopiert das signifikanteste Bit eines Qubit-Registers, das `from` eine Ganzzahl ohne Vorzeichen in das Qubit darstellt `target` .
+  uid: Microsoft.Quantum.Arithmetic.CopyMostSignificantBit
+- summary: Dividiert zwei Quantum-Ganzzahlen.
+  uid: Microsoft.Quantum.Arithmetic.DivideI
+- summary: Wertet ein sogar polynomal in einer Fixed-Point-Darstellung aus.
+  uid: Microsoft.Quantum.Arithmetic.EvaluateEvenPolynomialFxP
+- summary: Wertet einen ungeraden Polynoms in einer Fixed-Point-Darstellung aus.
+  uid: Microsoft.Quantum.Arithmetic.EvaluateOddPolynomialFxP
+- summary: Wertet ein Polynoms in einer Fixed-Point-Darstellung aus.
+  uid: Microsoft.Quantum.Arithmetic.EvaluatePolynomialFxP
+- summary: Wendet einen größer-als-Vergleich zwischen zwei ganzen Zahlen an, die in Qubit-Registern codiert sind, wobei ein Ziel-Qubit basierend auf dem Ergebnis des Vergleichs geflippt wird.
+  uid: Microsoft.Quantum.Arithmetic.GreaterThan
+- summary: Erhöht mithilfe von Phasen Drehungen ein unsigniertes Quantum-Register durch eine klassische Ganzzahl.
+  uid: Microsoft.Quantum.Arithmetic.IncrementByInteger
+- summary: Führt ein modulares Inkrement für ein Qubit-Register durch eine ganzzahlige Konstante aus.
+  uid: Microsoft.Quantum.Arithmetic.IncrementByModularInteger
+- summary: Erhöht mithilfe von Phasen Drehungen ein unsigniertes Quantum-Register durch eine klassische Ganzzahl.
+  uid: Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger
+- summary: Führt ein modulares Inkrement für ein Qubit-Register durch eine ganzzahlige Konstante aus.
+  uid: Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger
+- summary: Kehrt eine angegebene Ganzzahl von Modulo 2 um.
+  uid: Microsoft.Quantum.Arithmetic.Invert2sSI
+- summary: Dadurch wird der Vorgang für die direkte Mehrheit auf 3 Qubits angewendet.
+  uid: Microsoft.Quantum.Arithmetic.MAJ
+- summary: Messen Sie eine fest Komma Zahl, gibt ihren Wert als Double zurück, und setzt alle Register auf NULL zurück.
+  uid: Microsoft.Quantum.Arithmetic.MeasureFxP
+- summary: Misst den Inhalt eines Quantum-Registers und konvertiert ihn in eine ganze Zahl. Die Messung erfolgt in Bezug auf die standardmäßige Berechnungsbasis, d. h. auf die eigen Basis von `PauliZ` .
+  uid: Microsoft.Quantum.Arithmetic.MeasureInteger
+- summary: Führt einen modularen Multiplikations-und-Add by integer-Konstanten für ein Qubit-Register aus.
+  uid: Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger
+- summary: Das gleiche wie bei multiplyandaddbymodularinteger, jedoch wird davon ausgegangen, dass die Summen-und-Werte Ganzzahlen in QFT codieren.
+  uid: Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger
+- summary: Führt eine modulare Multiplikation durch eine ganzzahlige Konstante in einem Qubit-Register durch.
+  uid: Microsoft.Quantum.Arithmetic.MultiplyByModularInteger
+- summary: Multipliziert zwei Festkomma Zahlen in quantenregistern.
+  uid: Microsoft.Quantum.Arithmetic.MultiplyFxP
+- summary: Multiplizieren Sie Integer `xs` nach Ganzzahl `ys` , und speichern Sie das Ergebnis in `result` , das anfänglich NULL sein muss.
+  uid: Microsoft.Quantum.Arithmetic.MultiplyI
+- summary: Multiplizieren Sie eine ganze Zahl `xs` mit Vorzeichen `ys` , und speichern Sie das Ergebnis in `result` , das anfänglich NULL sein muss.
+  uid: Microsoft.Quantum.Arithmetic.MultiplySI
+- summary: Initialisieren Sie eine Quantum-fixpunktzahl in eine klassische Konstante.
+  uid: Microsoft.Quantum.Arithmetic.PrepareFxP
+- summary: Reflektiert ein Quantum-Register über eine angegebene klassische Ganzzahl.
+  uid: Microsoft.Quantum.Arithmetic.ReflectAboutInteger
+- summary: 'Umkehrbarer, direkter Ripple-Carry-Wert: Addition von zwei Ganzzahlen.'
+  uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderCDKM
+- summary: 'Umkehrbarer, direkter Ripple-Carry-Wert: Addition von zwei Ganzzahlen. Bei zwei $n ganzen Zahlen mit ganzen Zahlen, die in den littleEndian `xs` -Registern und `ys` , und einem Qubit-Wert codiert sind, berechnet der-Vorgang die Summe der beiden ganzen Zahlen, bei denen die $n $ geringsten signifikanten Bits des Ergebnisses in gespeichert sind `ys` und der Wert für das Ausführen von XoReD zum Qubit ist `carry` .'
+  uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderD
+- summary: Umkehrbar, direkte Ripple-Durchführung von zwei Ganzzahlen ohne Ausführung.
+  uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderNoCarryTTK
+- summary: 'Umkehrbarer, direkter Ripple-Carry-Wert: Addition von zwei Ganzzahlen. Bei zwei $n ganzen Zahlen mit ganzen Zahlen, die in den littleEndian `xs` -Registern und `ys` , und einem Qubit-Wert codiert sind, berechnet der-Vorgang die Summe der beiden ganzen Zahlen, bei denen die $n $ geringsten signifikanten Bits des Ergebnisses in gespeichert sind `ys` und der Wert für das Ausführen von XoReD zum Qubit ist `carry` .'
+  uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderTTK
+- summary: Quadriert eine festpunktzahl.
+  uid: Microsoft.Quantum.Arithmetic.SquareFxP
+- summary: Berechnet das Quadrat der Ganzzahl `xs` in `result` , das anfänglich NULL sein muss.
+  uid: Microsoft.Quantum.Arithmetic.SquareI
+- summary: Eine quadratische Ganzzahl `xs` mit Vorzeichen und speichert das Ergebnis in `result` , das anfänglich NULL sein muss.
+  uid: Microsoft.Quantum.Arithmetic.SquareSI
+- summary: Implementiert ein umkehrbares Summen Gate. `carryIn` `summand1` `summand2` Berechnet das bitweise XOR von `carryIn` `summand1` und `summand2` im Qubit, `summand2` Wenn ein in Qubit codiertes und zwei Summen in und codiert sind.
+  uid: Microsoft.Quantum.Arithmetic.Sum
+summary: ''
+uid: Microsoft.Quantum.Arithmetic
+metadata:
+  ms.openlocfilehash: 73e3ac964e19ce4613c9426bfc09a39aff4228cf
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92706522"
