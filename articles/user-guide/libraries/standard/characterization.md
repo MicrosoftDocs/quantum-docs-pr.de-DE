@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8dddc15354c32808e7ad1310bce233ee3dc93fe8
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835637"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692144"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum-Charakterisierung und-Statistiken #
 
@@ -39,7 +39,7 @@ Dies hat den Vorteil, dass wir nur ein einzelnes zusätzliches Qubit benötigen,
 Jede der unten vorgeschlagenen Methoden verwendet eine andere Strategie für das Entwerfen von Experimenten und verschiedene Datenverarbeitungsmethoden, um die Phase zu erlernen.  Sie verfügen jeweils über einen einzigartigen Vorteil, der von strengen Fehler Grenzen bis hin zu den Möglichkeiten zum einbeziehen vorheriger Informationen, zum tolerieren von Fehlern oder zur Verwendung von klassischen Computern mit Arbeitsspeicher verfügt.
 
 Bei der Erörterung der iterativen Phasen Schätzung wird ein einheitlicher $U $ als schwarzer-Box-Vorgang berücksichtigt.
-Wie im Abschnitt zu Oracles in [Datenstrukturen](xref:microsoft.quantum.libraries.data-structures)beschrieben, modelliert der Q# Kanon solche Vorgänge nach dem <xref:microsoft.quantum.oracles.discreteoracle> benutzerdefinierten Typ, der durch den tupeltyp definiert wird `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
+Wie im Abschnitt zu Oracles in [Datenstrukturen](xref:microsoft.quantum.libraries.data-structures)beschrieben, modelliert der Q# Kanon solche Vorgänge nach dem <xref:Microsoft.Quantum.Oracles.DiscreteOracle> benutzerdefinierten Typ, der durch den tupeltyp definiert wird `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
 Wenn `U : DiscreteOracle` , dann wird `U(m)` $U ^ m $ für implementiert `m : Int` .
 
 Wenn diese Definition vorhanden ist, wird jeder Schritt der iterativen Phasen Schätzung fortgesetzt, indem ein zusätzliches Qubit im $ \ket{+} $-Status zusammen mit dem ursprünglichen Zustand $ \ket{\phi} $ vorbereitet wird. wir gehen davon aus, dass es sich um einen [eigen Vektor](xref:microsoft.quantum.concepts.matrix-advanced) von $U (m) $, d. h. $U (m) \ket{\phi} = e ^ {im\phi} \ Ket {\ Phi} $.  
@@ -99,7 +99,7 @@ Der genaue Bayessche Rückschluss ist in der Praxis unlösbar.
 Um dies zu sehen, möchten wir eine $n $-Bit-Variable $x $ erlernen.
 Die vorherige Distribution $ \pr (x) $ unterstützt mehr als $2 ^ n $ hypothetische Werte von $x $.
 Dies bedeutet Folgendes: Wenn wir eine sehr genaue Schätzung $x $ benötigen, ist für die Bayes-Phasen Schätzung möglicherweise eine nicht benötigte Arbeitsspeicher-und Verarbeitungszeit erforderlich.
-Während einige Anwendungen, wie z. b. die Quantum-Simulation, die erforderliche Genauigkeit nicht ausschließt, schließt andere Anwendungen, wie z. b. der Shor-Algorithmus, nicht den exakten bayesschen Rückschluss innerhalb des Phasen Schätz Schritts aus.  Aus diesem Grund werden auch Implementierungen für ungefähre Bayes-Methoden bereitgestellt, wie z. b. die [Random Walk-Phasen Schätzung (rwpe)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) und auch nicht-Bayes-Ansätze, wie z. b. eine [robuste Phasen Schätzung](xref:microsoft.quantum.characterization.robustphaseestimation).
+Während einige Anwendungen, wie z. b. die Quantum-Simulation, die erforderliche Genauigkeit nicht ausschließt, schließt andere Anwendungen, wie z. b. der Shor-Algorithmus, nicht den exakten bayesschen Rückschluss innerhalb des Phasen Schätz Schritts aus.  Aus diesem Grund werden auch Implementierungen für ungefähre Bayes-Methoden bereitgestellt, wie z. b. die [Random Walk-Phasen Schätzung (rwpe)](xref:Microsoft.Quantum.Research.Characterization.RandomWalkPhaseEstimation) und auch nicht-Bayes-Ansätze, wie z. b. eine [robuste Phasen Schätzung](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation).
 
 ### <a name="robust-phase-estimation"></a>Stabile Phasen Schätzung ###
 
@@ -112,14 +112,14 @@ Das wichtigste Feature der robusten Phasen Schätzung, das gemeinsam mit den mei
 Weitere relevante Details sind z. a. der kleine Speicherplatz, der nur $1 $ Ancilla Qubit ist, oder, wenn die Prozedur nicht Adaptive ist, d. h. die erforderliche Sequenz von Quantum-Experimenten ist unabhängig von den zwischen Messergebnissen. In diesem und bevorstehenden Beispielen, in denen der Algorithmus der Phasen Schätzung von Bedeutung ist, sollten Sie in der Dokumentation wie @"microsoft.quantum.characterization.robustphaseestimation" und den referenzierten Veröffentlichungen darauf verweisen, um weitere Informationen und deren Implementierung zu erhalten.
 
 > [!TIP]
-> Es gibt viele Beispiele, in denen eine robuste Phasen Schätzung verwendet wird. Die Phasen Schätzung zum Extrahieren der Grund Zustands Energie des unterschiedlichen physischen Systems finden Sie im Beispiel für die [ **H2-Simulation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line), das [ **simpleising** -Beispiel](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)und das Beispiel für das Hubbard- [ **Modell** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).
+> Es gibt viele Beispiele, in denen eine robuste Phasen Schätzung verwendet wird. Die Phasen Schätzung zum Extrahieren der Grund Zustands Energie des unterschiedlichen physischen Systems finden Sie im Beispiel für die [ **H2-Simulation**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line), das [ **simpleising** -Beispiel](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)und das Beispiel für das Hubbard- [ **Modell**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).
 
 
 ### <a name="continuous-oracles"></a>Kontinuierliche Oracles ###
 
-Wir können auch aus dem oben verwendeten Oracle-Modell generalisieren, um fortlaufende Oracles zu ermöglichen, die nach dem Kanatyp modelliert werden <xref:microsoft.quantum.oracles.continuousoracle> .
+Wir können auch aus dem oben verwendeten Oracle-Modell generalisieren, um fortlaufende Oracles zu ermöglichen, die nach dem Kanatyp modelliert werden <xref:Microsoft.Quantum.Oracles.ContinuousOracle> .
 Angenommen, anstelle eines einzelnen einheitlichen Operators $U $ haben wir eine Familie einheitlicher Operatoren $U (t) $ für $t \in \mathbb{r} $, sodass $U (t) U (s) $ = $U (t + s) $.
-Dabei handelt es sich um eine schwächere Anweisung als im diskreten Fall, da wir einen erstellen können, <xref:microsoft.quantum.oracles.discreteoracle> indem wir $t = m \, \delta t $ für einige festgelegte $ \delta t $ einschränken.
+Dabei handelt es sich um eine schwächere Anweisung als im diskreten Fall, da wir einen erstellen können, <xref:Microsoft.Quantum.Oracles.DiscreteOracle> indem wir $t = m \, \delta t $ für einige festgelegte $ \delta t $ einschränken.
 Nach dem [Theorem des Steins](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups), $U (t) = \exp (i H t) $ für einen Operator $H $, wobei $ \exp $ die Matrix exponentialweise ist, wie in [Advanced Matrizen](xref:microsoft.quantum.concepts.matrix-advanced)beschrieben.
 Der Eigen Status $ \ket{\phi} $ von $H $, sodass $H \ket{\phi} = \phi \ket{\phi} $ auch der Eigen Status $U (t) $ für alle $t $, \begin{Equation} U (t) \ket{\phi} = e ^ {i \phi t} \ket{\phi}.
 \end{equation}
@@ -146,14 +146,14 @@ Die Möglichkeit, rückwärts zu wechseln, ermöglicht es dem Algorithmus auch, 
 
 Jeder Phasen Schätz Vorgang, der mit dem Kanon bereitgestellt wird Q# , erfordert einen anderen Satz von Eingaben, der die Qualität parametrisiert, die wir für die abschließende Schätzung $ \hat{\phi} $ verlangen.
 In diesen unterschiedlichen Eingaben werden allerdings mehrere allgemeine Eingaben gemeinsam genutzt, sodass die partielle Anwendung über den Qualitätsparametern eine gängige Signatur zur Folge hat.
-Der <xref:microsoft.quantum.characterization.robustphaseestimation> im nächsten Abschnitt erörterte Vorgang hat z. b. die folgende Signatur:
+Der <xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation> im nächsten Abschnitt erörterte Vorgang hat z. b. die folgende Signatur:
 
 ```qsharp
 operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[])  : Double
 ```
 
 Die `bitsPrecision` Eingabe ist eindeutig für `RobustPhaseEstimation` , während `oracle` und `eigenstate` gemeinsam sind.
-So kann ein Vorgang, wie in **H2Sample**gezeigt, einen iterativen Phasen Schätz Algorithmus mit einer Eingabe des Formulars akzeptieren, damit `(DiscreteOracle, Qubit[]) => Unit` ein Benutzer beliebige Phasen Schätz Algorithmen angeben kann:
+So kann ein Vorgang, wie in **H2Sample** gezeigt, einen iterativen Phasen Schätz Algorithmus mit einer Eingabe des Formulars akzeptieren, damit `(DiscreteOracle, Qubit[]) => Unit` ein Benutzer beliebige Phasen Schätz Algorithmen angeben kann:
 
 ```qsharp
 operation H2EstimateEnergy(

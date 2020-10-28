@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e9a84de2753bc3293f441e66ee53e78559263e5c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 55e6d3e1a242386c46213083692377520df83a80
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833479"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692135"
 ---
 # <a name="operations-and-functions-in-no-locq"></a>Vorgänge und Funktionen in Q#
 
@@ -32,7 +32,7 @@ Eine Vorgangs Deklaration besteht aus dem Schlüsselwort `operation` , gefolgt v
 
 Jeder Vorgang nimmt eine Eingabe an, erzeugt eine Ausgabe und gibt die Implementierung für eine oder mehrere Vorgangs Spezialisierungs Vorgänge an.
 Die möglichen Spezialisierungsmöglichkeiten und die Vorgehensweise zum Definieren und anrufen werden in den verschiedenen Abschnitten dieses Artikels beschrieben.
-Sehen Sie sich den folgenden Vorgang an, der nur eine Standard Textzeile definiert und ein einzelnes Qubit als Eingabe annimmt und dann den integrierten <xref:microsoft.quantum.intrinsic.x> Vorgang für diese Eingabe aufruft:
+Sehen Sie sich den folgenden Vorgang an, der nur eine Standard Textzeile definiert und ein einzelnes Qubit als Eingabe annimmt und dann den integrierten <xref:Microsoft.Quantum.Intrinsic.X> Vorgang für diese Eingabe aufruft:
 
 ```qsharp
 operation BitFlip(target : Qubit) : Unit {
@@ -46,7 +46,7 @@ Schließlich `Unit` definiert, dass die Ausgabe des Vorgangs leer ist.
 `Unit` wird ähnlich wie `void` in c# und anderen imperativen Sprachen verwendet und entspricht `unit` in F # und anderen funktionalen Sprachen.
 
 Vorgänge können auch interessantere Typen als zurückgeben `Unit` .
-Der- <xref:microsoft.quantum.intrinsic.m> Vorgang gibt beispielsweise eine Ausgabe vom Typ zurück `Result` , die angibt, dass eine Messung durchgeführt wurde.  Sie können Sie von einem Vorgang an einen anderen Vorgang übergeben oder mit dem- `let` Schlüsselwort verwenden, um eine neue Variable zu definieren.
+Der- <xref:Microsoft.Quantum.Intrinsic.m> Vorgang gibt beispielsweise eine Ausgabe vom Typ zurück `Result` , die angibt, dass eine Messung durchgeführt wurde.  Sie können Sie von einem Vorgang an einen anderen Vorgang übergeben oder mit dem- `let` Schlüsselwort verwenden, um eine neue Variable zu definieren.
 
 Mit diesem Ansatz können Sie die klassische Berechnung darstellen, die mit Quantum-Vorgängen auf niedriger Ebene interagiert, wie z. b. in einer über [geordneten Codierung](https://github.com/microsoft/QuantumKatas/tree/main/SuperdenseCoding):
 
@@ -65,13 +65,13 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 > [!NOTE]
 > Jeder Vorgang in Q# erfordert genau eine Eingabe und gibt genau eine Ausgabe zurück.
-> Mehrere Eingaben und Ausgaben werden mithilfe von *Tupeln*dargestellt, die mehrere Werte in einem einzelnen Wert zusammenfassen.
+> Mehrere Eingaben und Ausgaben werden mithilfe von *Tupeln* dargestellt, die mehrere Werte in einem einzelnen Wert zusammenfassen.
 > In dieser Hinsicht Q# ist eine "Tupel-in-tupelout"-Sprache.
 > Im Anschluss an dieses Konzept sollte ein Satz leerer Klammern, `()` , als leeres Tupel mit dem-Typ gelesen werden `Unit` .
 
 ## <a name="controlled-and-adjoint-operations"></a>Kontrollierte und Adjoint-Vorgänge
 
-Wenn ein Vorgang eine einheitliche Transformation implementiert, wie dies bei vielen Vorgängen in der Fall ist Q# , ist es möglich, zu definieren, wie der *adjointed* Vorgang bei Anfügevorgang oder *Kontrolle*agiert. Eine *Adjoint* -Spezialisierung eines Vorgangs gibt an, wie die "Umkehrung" des Vorgangs agiert, während eine *kontrollierte* Spezialisierung angibt, wie ein Vorgang funktioniert, wenn die Anwendung auf den Zustand eines bestimmten Quantum-Registers angewendet wird.
+Wenn ein Vorgang eine einheitliche Transformation implementiert, wie dies bei vielen Vorgängen in der Fall ist Q# , ist es möglich, zu definieren, wie der *adjointed* Vorgang bei Anfügevorgang oder *Kontrolle* agiert. Eine *Adjoint* -Spezialisierung eines Vorgangs gibt an, wie die "Umkehrung" des Vorgangs agiert, während eine *kontrollierte* Spezialisierung angibt, wie ein Vorgang funktioniert, wenn die Anwendung auf den Zustand eines bestimmten Quantum-Registers angewendet wird.
 
 Adjoints von Quantum-Vorgängen sind für viele Aspekte von Quantum Computing von entscheidender Bedeutung. Ein Beispiel für eine solche Situation, die zusammen mit einer nützlichen Q# Programmiertechnik erläutert wird, finden Sie unter [Ablauf Steuerung: Konjugationen](xref:microsoft.quantum.guide.controlflow#conjugations). Bei der kontrollierten Version eines Vorgangs handelt es sich um einen neuen Vorgang, der den Basis Vorgang effektiv anwendet, wenn sich alle Steuerelement-Qubits in einem angegebenen Zustand befinden.
 Wenn sich die Steuerelement-Qubits in der superposition befinden, wird der Basis Vorgang einheitlich auf den entsprechenden Teil der superposition angewendet.
@@ -139,7 +139,7 @@ Das `Controlled` -und das- `Adjoint` funktorin werden angewendet, sodass es kein
 
 In der ersten Vorgangs Deklaration in den vorherigen Beispielen wurden die Vorgänge `BitFlip` und `DecodeSuperdense` mit Signaturen `(Qubit => Unit)` `((Qubit, Qubit) => (Result, Result))` bzw. definiert.
 Wie z. b. `DecodeSuperdense` Messungen, ist es kein einheitlicher Vorgang. Daher könnten weder die kontrollierten noch die nicht zusammenhängenden Spezialisierungs Maßnahmen vorhanden sein `Unit` .
-Wenn Sie jedoch `BitFlip` einfach den einheitlichen <xref:microsoft.quantum.intrinsic.x> Vorgang ausführen, können Sie ihn mit beiden Spezialisierungs Vorgängen definieren.
+Wenn Sie jedoch `BitFlip` einfach den einheitlichen <xref:Microsoft.Quantum.Intrinsic.X> Vorgang ausführen, können Sie ihn mit beiden Spezialisierungs Vorgängen definieren.
 
 In diesem Abschnitt wird erläutert, wie Sie das vorhanden sein von Spezialisierungs Funktionen in die Q# Vorgangs Deklarationen einschließen und somit die Möglichkeit haben, in Verbindung mit dem-oder dem- `Adjoint` `Controlled` funktors aufzurufen.
 Weitere Informationen zu einigen Situationen, in denen es entweder gültig oder nicht zulässig ist, bestimmte Spezialisierungs Informationen zu deklarieren, finden Sie unter Umstände für die Überprüfung [von Spezialisierungs](#circumstances-for-validly-defining-specializations) Informationen in diesem Artikel.
@@ -149,7 +149,7 @@ Die tatsächliche Implementierung jeder Spezialisierung kann entweder *implizit*
 
 ### <a name="implicitly-specifying-implementations"></a>Implizit angeben von Implementierungen
 
-In diesem Fall besteht der Text der Vorgangs Deklaration ausschließlich aus der Standard Implementierung. Zum Beispiel:
+In diesem Fall besteht der Text der Vorgangs Deklaration ausschließlich aus der Standard Implementierung. Beispiel:
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -368,7 +368,7 @@ Dies bedeutet, dass ein Wert eines benutzerdefinierten Typs nicht verwendbar ist
 
 Funktionen sind rein deterministische, klassische Routinen in Q# , die sich von Vorgängen unterscheiden, da Sie keine Auswirkungen auf die Berechnung eines Ausgabe Werts haben dürfen.
 Insbesondere können Funktionen keine Vorgänge aufzurufen. reagieren, zuordnen oder ausleihen von Qubits Stichproben von Zufallszahlen oder hängt anderweitig von dem Zustand ab, der über den Eingabe Wert zu einer Funktion hinausgeht.
-Folglich Q# sind Funktionen *rein*, da Sie die gleichen Eingabewerte immer denselben Ausgabe Werten zuordnen.
+Folglich Q# sind Funktionen *rein* , da Sie die gleichen Eingabewerte immer denselben Ausgabe Werten zuordnen.
 Dieses Verhalten ermöglicht es dem Q# Compiler, sicherzustellen, wie und wann Funktionen beim Erzeugen von Vorgangs speziationen aufgerufen werden.
 
 Jede Q# Quelldatei kann eine beliebige Anzahl von Funktionen definieren.
@@ -401,7 +401,7 @@ function DotProduct(a : Double[], b : Double[]) : Double {
 
 ### <a name="classical-logic-in-functions--good"></a>Klassische Logik in Functions = = Good
 
-Wenn dies möglich ist, ist es hilfreich, Klassische Logik in Bezug auf Funktionen anstelle von Vorgängen zu schreiben, damit Vorgänge Sie leichter verwenden können. Wenn Sie z. b. die vorherige `Square` Deklaration als *Vorgang*geschrieben haben, konnte der Compiler nicht garantieren, dass der Aufruf mit derselben Eingabe konstant die gleichen Ausgaben erzeugt.
+Wenn dies möglich ist, ist es hilfreich, Klassische Logik in Bezug auf Funktionen anstelle von Vorgängen zu schreiben, damit Vorgänge Sie leichter verwenden können. Wenn Sie z. b. die vorherige `Square` Deklaration als *Vorgang* geschrieben haben, konnte der Compiler nicht garantieren, dass der Aufruf mit derselben Eingabe konstant die gleichen Ausgaben erzeugt.
 
 Um den Unterschied zwischen Funktionen und Vorgängen zu unterstreichen, sollten Sie das Problem der klassischen Stichprobenentnahme für eine Zufallszahl innerhalb eines- Q# Vorgangs beachten:
 
@@ -415,7 +415,7 @@ operation U(target : Qubit) : Unit {
 
 Jedes Mal `U` , wenn aufgerufen wird, wird eine andere Aktion für ausgeführt `target` .
 Insbesondere kann der Compiler nicht garantieren, dass, wenn Sie eine `adjoint auto` Spezialisierung-Deklaration hinzufügen `U` , `U(target); Adjoint U(target);` als Identität agiert (d. h. als No-OP).
-Dies verstößt gegen die Definition des in [Vektoren und Matrizen](xref:microsoft.quantum.concepts.vectors)definierten Adjoint, sodass der Compiler die automatische Generierung einer Adjoint-Spezialisierung in einem Vorgang gestattet, bei dem Sie den Vorgang aufzurufen, <xref:microsoft.quantum.math.randomreal> die vom Compiler bereitgestellten Garantien sprengen würde <xref:microsoft.quantum.math.randomreal> . ist ein Vorgang, für den keine Adjoint-oder kontrollierte Version vorhanden ist.
+Dies verstößt gegen die Definition des in [Vektoren und Matrizen](xref:microsoft.quantum.concepts.vectors)definierten Adjoint, sodass der Compiler die automatische Generierung einer Adjoint-Spezialisierung in einem Vorgang gestattet, bei dem Sie den Vorgang aufzurufen, <xref:Microsoft.Quantum.Math.RandomReal> die vom Compiler bereitgestellten Garantien sprengen würde <xref:Microsoft.Quantum.Math.RandomReal> . ist ein Vorgang, für den keine Adjoint-oder kontrollierte Version vorhanden ist.
 
 Auf der anderen Seite können Funktionsaufrufe wie z. b. `Square` sicher sein, und der Compiler wird sichergestellt, dass nur die Eingabe in beibehalten werden muss, damit die `Square` Ausgabe stabil bleibt.
 Daher ist es einfach, diese Logik in anderen Funktionen und Vorgängen zu verwenden, damit Sie so viel Klassische Logik wie möglich in Functions isolieren kann.
@@ -467,7 +467,7 @@ Diese Funktion ist zwar für eine kleine Anzahl solcher Funktionen übertragbar,
 Ein Großteil dieser Schwierigkeit ergibt sich jedoch aus der Tatsache, dass Sie dem Compiler nicht die erforderlichen Informationen zur Erkennung der verschiedenen Versionen von erhalten haben `Map` .
 Effektiv möchten Sie, dass der Compiler `Map` als eine mathematische Funktion von Q# *Typen* zu Q# Funktionen behandelt.
 
-Q# formalisiert dieses Konzept, indem Funktionen und Vorgänge sowohl *Typparameter*als auch Ihre normalen tupelparameter aufweisen können.
+Q# formalisiert dieses Konzept, indem Funktionen und Vorgänge sowohl *Typparameter* als auch Ihre normalen tupelparameter aufweisen können.
 In den vorherigen Beispielen möchten Sie sich vorstellen, `Map` dass im `Int, Pauli` ersten Fall Typparameter und `Double, String` im zweiten Fall vorhanden sind.
 Verwenden Sie zum größten Teil diese Typparameter, als wären Sie normale Typen. Verwenden Sie Werte von Typparametern, um Arrays und Tupel zu erstellen, Funktionen und Vorgänge aufzurufen und gewöhnliche oder änderbare Variablen zuzuweisen.
 
@@ -536,9 +536,9 @@ Die Q# Standardbibliotheken stellen einen Bereich von Typen parametrisierten Vor
 Diese werden im [ Q# Handbuch zur Standardbibliothek](xref:microsoft.quantum.libraries.standard.intro)erläutert.
 
 
-## <a name="callables-as-first-class-values"></a>Callables als First-Class-Werte
+## <a name="callables-as-first-class-values"></a>Aufruf Bare Werte als First-Class Werte
 
-Ein wichtiges Verfahren, um die Ablauf Steuerung und die klassische Logik mithilfe von Funktionen anstelle von Vorgängen zu überdenken, besteht darin, diese Vorgänge und Funktionen in als Q# *erste Klasse*zu verwenden.
+Ein wichtiges Verfahren, um die Ablauf Steuerung und die klassische Logik mithilfe von Funktionen anstelle von Vorgängen zu überdenken, besteht darin, diese Vorgänge und Funktionen in als Q# *erste Klasse* zu verwenden.
 Das heißt, Sie sind jeweils die einzelnen Werte in der Sprache.
 Beispielsweise ist der folgende vollständig gültige Q# Code, wenn ein wenig indirekt:
 
@@ -549,7 +549,7 @@ operation FirstClassExample(target : Qubit) : Unit {
 }
 ```
 
-Der Wert der Variablen `ourH` im vorherigen Code Ausschnitt ist dann der Vorgang <xref:microsoft.quantum.intrinsic.h> , sodass Sie diesen Wert wie jeder andere Vorgang abrufen können.
+Der Wert der Variablen `ourH` im vorherigen Code Ausschnitt ist dann der Vorgang <xref:Microsoft.Quantum.Intrinsic.H> , sodass Sie diesen Wert wie jeder andere Vorgang abrufen können.
 Mit dieser Fähigkeit können Sie Vorgänge schreiben, die Vorgänge als Teil Ihrer Eingabe ausführen und so die Konzepte der Ablauf Steuerung in höherer Ordnung bilden.
 Beispielsweise können Sie sich vorstellen, einen Vorgang zu "quadrieren", indem Sie ihn zweimal auf das gleiche Ziel-Qubit anwenden.
 
@@ -589,7 +589,7 @@ Das heißt, die klassische Logik innerhalb einer Funktion ist isoliert, sodass d
 
 ## <a name="partial-application"></a>Partielle Anwendung
 
-Sie können mit Funktionen, die Vorgänge mithilfe einer *partiellen Anwendung*zurückgeben, wesentlich mehr tun, bei der Sie einen oder mehrere Teile der Eingabe für eine Funktion oder einen Vorgang bereitstellen, ohne Sie tatsächlich aufrufen zu müssen. Im vorherigen `ApplyTwice` Beispiel können Sie angeben, dass Sie nicht sofort angeben möchten, auf welchem Qubit der Eingabevorgang angewendet werden soll:
+Sie können mit Funktionen, die Vorgänge mithilfe einer *partiellen Anwendung* zurückgeben, wesentlich mehr tun, bei der Sie einen oder mehrere Teile der Eingabe für eine Funktion oder einen Vorgang bereitstellen, ohne Sie tatsächlich aufrufen zu müssen. Im vorherigen `ApplyTwice` Beispiel können Sie angeben, dass Sie nicht sofort angeben möchten, auf welchem Qubit der Eingabevorgang angewendet werden soll:
 
 ```qsharp
 operation PartialApplicationExample(op : (Qubit => Unit), target : Qubit) : Unit {
