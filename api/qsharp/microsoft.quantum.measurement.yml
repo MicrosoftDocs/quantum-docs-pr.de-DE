@@ -1,0 +1,32 @@
+### YamlMime:QSharpNamespace
+functions: []
+name: Microsoft.Quantum.Measurement
+newtypes: []
+operations:
+- summary: ''
+  uid: Microsoft.Quantum.Measurement.BasisChangeZtoY
+- summary: Misst ein einzelnes Qubit in der X-Basis und setzt es nach der Messung auf einen festgelegten Anfangszustand zurück.
+  uid: Microsoft.Quantum.Measurement.MResetX
+- summary: Misst ein einzelnes Qubit in der Y-Basis und setzt es nach der Messung auf einen festgelegten Anfangszustand zurück.
+  uid: Microsoft.Quantum.Measurement.MResetY
+- summary: Misst ein einzelnes Qubit in der Z-Basis und setzt es nach der Messung auf einen festgelegten Anfangszustand zurück.
+  uid: Microsoft.Quantum.Measurement.MResetZ
+- summary: Misst gemeinsam ein Register von Qubits in der Pauli Z-Basis.
+  uid: Microsoft.Quantum.Measurement.MeasureAllZ
+- summary: Wenn ein Array von Multi-Qubit-Pauli-Operatoren verwendet wird, werden die einzelnen Measures mit einem angegebenen Mess Gadget versehen und dann das Array der Ergebnisse zurückgegeben.
+  uid: Microsoft.Quantum.Measurement.MeasurePaulis
+- summary: Misst den angegebenen Pauli-Operator mithilfe eines expliziten Scratch-Qubit, um die Messung auszuführen.
+  uid: Microsoft.Quantum.Measurement.MeasureWithScratch
+- summary: Misst jedes Qubit in einem angegebenen Array standardmäßig.
+  uid: Microsoft.Quantum.Measurement.MultiM
+- summary: Legt ein Qubit auf einen angegebenen Berechnungsbasis Zustand fest, indem das Qubit gemessen und bei Bedarf ein bitflip angewendet wird.
+  uid: Microsoft.Quantum.Measurement.SetToBasisState
+summary: ''
+uid: Microsoft.Quantum.Measurement
+metadata:
+  ms.openlocfilehash: f35f2867ca9fd68cbc0fbc0cf3d386d441adbaa7
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92701615"
