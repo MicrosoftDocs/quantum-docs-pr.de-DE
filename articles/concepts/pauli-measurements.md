@@ -87,7 +87,7 @@ Autor: bradben UID: Microsoft. Quantum. Concepts. Pauli ms. Author: v-benbra ms.
 
 In den vorherigen Diskussionen haben wir uns auf Berechnungsbasis Messungen konzentriert.
 Tatsächlich gibt es weitere allgemeine Messungen, die bei der Quantum-Berechnung auftreten, die aus Sicht der Sicht bequem in Bezug auf Berechnungsbasis Messungen ausgedrückt werden können.
-Wenn Sie mit Arbeiten Q# , sind die gängigsten Arten von Messungen wahrscheinlich *Pauli-Messungen*, die Berechnungsbasis Messungen verallgemeinern, um Messungen in anderen Basen und die Parität zwischen verschiedenen Qubits zu berücksichtigen.
+Wenn Sie mit Arbeiten Q# , sind die gängigsten Arten von Messungen wahrscheinlich *Pauli-Messungen* , die Berechnungsbasis Messungen verallgemeinern, um Messungen in anderen Basen und die Parität zwischen verschiedenen Qubits zu berücksichtigen.
 In solchen Fällen ist es üblich, das Messen eines Pauli-Operators zu erörtern, im Allgemeinen ein Operator wie $ x, Y, z $ oder $ z \otimes z, x \otimes x, x \otimes Y $ usw.
 
 > [!TIP]
@@ -128,7 +128,7 @@ Diese Messungen werden zur einfacheren Verwendung unten angegeben.
 |$ $ X | $H               $                    |
 |$ $ J | $HS ^               {\dagger}$         |
 
-Das heißt, dass mit dieser Sprache "Measure $ Y $ " dem Anwenden $ von HS ^ \dagger $ und der anschließenden Messung der Berechnungsbasis entspricht, wobei [`S`](xref:microsoft.quantum.intrinsic.s) ein System interner Quantum-Vorgang ist, der manchmal als "Phasen Gate" bezeichnet wird, und durch die einheitliche Matrix simuliert werden kann.
+Das heißt, dass mit dieser Sprache "Measure $ Y $ " dem Anwenden $ von HS ^ \dagger $ und der anschließenden Messung der Berechnungsbasis entspricht, wobei [`S`](xref:Microsoft.Quantum.Intrinsic.S) ein System interner Quantum-Vorgang ist, der manchmal als "Phasen Gate" bezeichnet wird, und durch die einheitliche Matrix simuliert werden kann.
 
 $$
 \begin{align}
@@ -168,7 +168,7 @@ $$
 Daher bilden die tensorflow-Produkte zweier Pauli- $ Z- $ Operatoren eine Matrix, die aus zwei Leerzeichen besteht, die aus $ + 1 $ und $ -1 $ eigen Werten bestehen.
 Wie bei einem Single-Qubit-Fall bilden beide einen halben Leerraum, was bedeutet, dass die Hälfte des zugänglichen Vektor Raums zum $ + 1 $ -eigen Raum und die verbleibende Hälfte des $ eigen Raums-1 gehört $ .
 Im Allgemeinen ist es einfach, aus der Definition des tensorflow-Produkts zu erkennen, dass ein beliebiges tensorflow-Produkt von Pauli- $ Z- $ Operatoren und die Identität auch dies unterliegt.
-Beispiel:
+Ein auf ein Objekt angewendeter
 
 $$
 \begin{align}
@@ -194,7 +194,7 @@ Beispiel: $ x \otimes x = h \otimes h (z \otimes z) h \otimes h $  von der Ident
 >         0 & 1 & 0 & 0 \\\\
 >0 & 0 & 0 & 1 > \end { Matrix } \right ) >     \end{align}
 > $$
-> wird verwendet, um den systeminternen Vorgang zu simulieren [`SWAP`](xref:microsoft.quantum.intrinsic) .
+> wird verwendet, um den systeminternen Vorgang zu simulieren [`SWAP`](xref:Microsoft.Quantum.Intrinsic) .
 
 |Die Pauli     | -Maßeinheit  |
 |----------------------|------------------------|
@@ -214,7 +214,7 @@ Beispiel: $ x \otimes x = h \otimes h (z \otimes z) h \otimes h $  von der Ident
 |$X \otimes Y $ | $ \operatorname { CNOT } \_ { 10 } (H \otimes HS ^ \dagger ) $|
 |$J \otimes Y $ | $ \operatorname { CNOT } \_ { 10 } (HS ^ \dagger \otimes HS ^ \dagger ) $|
 
-Hier wird der [`CNOT`](xref:microsoft.quantum.intrinsic.cnot) Vorgang aus folgendem Grund angezeigt.
+Hier wird der [`CNOT`](xref:Microsoft.Quantum.Intrinsic.CNOT) Vorgang aus folgendem Grund angezeigt.
 Jede Pauli-Messung, bei der die Matrix nicht enthalten $ \boldone $ ist, ist gleichbedeutend $ mit \otimes $ der oben beschriebenen Argumentation.
 Die Eigenwerte von $ z \otimes z $ hängen nur von der Parität der Qubits ab, aus denen die einzelnen Berechnungsbasis Vektor bestehen, und die kontrollierten Vorgänge dienen dazu, diese Parität zu berechnen und im ersten Bit zu speichern.
 Nachdem das erste Bit gemessen wurde, können wir die Identität des resultierenden halb Raums wiederherstellen, was dem Messen des Pauli-Operators entspricht.
@@ -240,16 +240,16 @@ In Q# geben solche Messungen j zurück, $ $ Wenn die Messung ein Ergebnis im Eig
 Die Verwendung von Pauli-Messungen als integrierte Funktion in Q# ist hilfreich, da die Messung solcher Operatoren lange Ketten von gesteuerten und nicht-Transformationen und Basis Transformationen erfordert, um das diagonalisieren des U-Gates zu beschreiben, $ $ das erforderlich ist, um den Vorgang als tensorflow-Produkt von $ Z $ und auszudrücken $ \id $ .
 Wenn Sie festlegen können, dass Sie eine dieser vordefinierten Messungen durchführen möchten, müssen Sie sich keine Gedanken darüber machen, wie Sie Ihre Basis so transformieren, dass eine Berechnungsbasis Messung die erforderlichen Informationen bereitstellt.
 Q# behandelt alle notwendigen Basis Transformationen automatisch.
-Weitere Informationen finden Sie unter den [`Measure`](xref:microsoft.quantum.intrinsic.measure) -und- [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) Vorgängen.
+Weitere Informationen finden Sie unter den [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) -und- [`MeasurePaulis`](xref:Microsoft.Quantum.Measurement.MeasurePaulis) Vorgängen.
 
-## <a name="the-no-cloning-theorem"></a>Das No-Klon-Theorem
+## <a name="the-no-cloning-theorem"></a>Das No-Cloning-Theorem
 
 Quantum-Informationen sind leistungsstark.
 Dadurch können wir beeindruckende Dinge, wie z. b. die Faktor Zahlen, exponentiell beschleunigen als die besten bekannten klassischen Algorithmen, oder korrelierte Elektronen Systeme effizient simulieren, die für eine genaue Simulation exponentialkosten benötigen.
 Es gibt jedoch Einschränkungen hinsichtlich der Leistungsfähigkeit von Quantum Computing.
-Eine solche Einschränkung wird durch das *No-Klon-Theorem*angegeben.
+Eine solche Einschränkung wird durch das *No-Klon-Theorem* angegeben.
 
-Das No-Klon-Theorem weist einen passenden Namen auf.
+Der No-Cloning Theorem hat einen passenden Namen.
 Sie lässt das Klonen generischer Quantenzustände durch einen Quantum-Computer nicht zu.
 Der Beweis für das Theorem ist erstaunlich einfach.
 Obwohl ein vollständiger Nachweis für das No-Klon-Theorem für unsere Erörterung etwas zu technisch ist, liegt der Nachweis im Fall von zusätzlichen Qubits in unserem Bereich. (zusätzliche Qubits sind für den temporären Speicherplatz während einer Berechnung verwendeter Qubits und können problemlos verwendet und verwaltet werden ( Q# Siehe [geliehene Qubits](xref:microsoft.quantum.guide.qubits#borrowed-qubits)).
@@ -273,15 +273,15 @@ $$
 \end{align}
 $$
 
-Dies stellt die grundlegende Intuition hinter dem No-Klon-Theorem bereit: jedes Gerät, das einen unbekannten Quantum-Zustand kopiert, muss Fehler in mindestens einigen der von ihm kopierte Zustände auslösen.
+Dadurch wird die grundlegende Intuition hinter dem No-Cloning-Theorem bereitstellt: jedes Gerät, das einen unbekannten Quantum-Zustand kopiert, muss Fehler in mindestens einigen der von ihm kopierte Zustände auslösen.
 Während die Hauptannahme, dass der Cloner den Eingabe Status linear verarbeitet, durch Hinzufügen und Messen von hilfssbits verletzt werden kann, können solche Interaktionen auch Informationen über das System durch die maßstatistik und das exakte Klonen in solchen Fällen vermeiden.
-Einen ausführlicheren Nachweis für das No-Klon-Theorem finden Sie unter, [um weitere Informationen](xref:microsoft.quantum.more-information)zu erhalten.
+Einen ausführlicheren Nachweis des No-Cloning [Theorem finden Sie](xref:microsoft.quantum.more-information)unter.
 
-Das No-Clone-Theorem ist wichtig für ein qualitativ hochwertiges Verständnis von Quantum Computing, denn wenn Sie Quantum-Zustände ingünstig Klonen könnten, erhalten Sie eine nahezu magische Möglichkeit, von Quantum-Zuständen zu lernen.
+Das No-Cloning-Theorem ist wichtig für ein qualitativ hochwertiges Verständnis von Quantum Computing, denn wenn Sie Quantum-Zustände ingünstig Klonen könnten, erhalten Sie eine nahezu magische Möglichkeit, aus den Quantum-Zuständen zu lernen.
 Tatsächlich könnten Sie das Prinzip der geunten Unsicherheit von Heisenberg verletzen.
 Alternativ können Sie einen optimalen Cloner verwenden, um ein einzelnes Beispiel aus einer komplexen Quantum-Distribution zu erstellen und alles zu erlernen, was Sie möglicherweise über die Verteilung von nur einem Beispiel erfahren.
 Dies würden Sie tun, wenn Sie eine Münze kippen und Köpfe beobachten und dann einen Freund über das Ergebnis informieren, dass er antwortet, dass die Verteilung der Münze Bernoulli mit $ p = 0.512643 \ ldots $ ! "lauten muss.  Eine solche Anweisung wäre nicht unsinnig, weil ein Teil der Informationen (das Heads-Ergebnis) einfach nicht die vielen Informationen bereitstellen kann, die erforderlich sind, um die Verteilung ohne wesentliche vorherige Informationen zu codieren.
 Ebenso wie ohne vorherige Informationen können wir einen quantumstatus nicht ganz genau so Klonen, wie wir ein Ensemble dieser Münzen nicht vorbereiten können, ohne dass Sie $ p kennen $ .
 
 Informationen sind in Quantum Computing nicht kostenlos.
-Jedes gemessene Qubit liefert ein einzelnes Bit an Informationen, und das No-Klon-Theorem zeigt, dass es keine Hintertür gibt, die ausgenutzt werden kann, um den grundlegenden Kompromiss zwischen den Informationen, die über das System gewonnen wurden, und der auf ihm aufgerufenen Störung zu umgehen.
+Jedes gemessene Qubit liefert ein einzelnes Bit an Informationen, und das No-Cloning-Theorem zeigt, dass es keine Hintertür gibt, die ausgenutzt werden kann, um den grundlegenden Kompromiss zwischen den Informationen, die über das System gewonnen wurden, und der darauf aufgerufenen Störung zu umgehen.
