@@ -1,0 +1,58 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Konvertiert eine angegebene große Ganzzahl in ein Array von booleschen Werten. Das 0-Element des Arrays ist das am wenigsten bedeutende Bit der großen Ganzzahl.
+  uid: Microsoft.Quantum.Convert.BigIntAsBoolArray
+- summary: Konvertiert ein angegebenes Array von booleschen Werten in eine entsprechende große Ganzzahl. Das 0-Element des Arrays ist das am wenigsten bedeutende Bit der großen Ganzzahl.
+  uid: Microsoft.Quantum.Convert.BoolArrayAsBigInt
+- summary: Erzeugt eine positive ganze Zahl aus einer Bits-Zeichenfolge in Little-Endian-Format.
+  uid: Microsoft.Quantum.Convert.BoolArrayAsInt
+- summary: Gibt bei Angabe einer Bitzeichenfolge einen multiqubit-Pauli-Operator zurück, der als Array von Single-Qubit-Pauli-Operatoren dargestellt wird.
+  uid: Microsoft.Quantum.Convert.BoolArrayAsPauli
+- summary: Konvertiert einen `Bool[]` Typ in einen `Result[]` -Typ, wobei `true` zugeordnet ist `One` und `false` zugeordnet ist `Zero` .
+  uid: Microsoft.Quantum.Convert.BoolArrayAsResultArray
+- summary: Konvertiert einen `Bool` Typ in einen `Result` -Typ, wobei `true` zugeordnet ist `One` und `false` zugeordnet ist `Zero` .
+  uid: Microsoft.Quantum.Convert.BoolAsResult
+- summary: Konvertiert einen angegebenen booleschen Wert in eine entsprechende Zeichen folgen Darstellung.
+  uid: Microsoft.Quantum.Convert.BoolAsString
+- summary: Konvertiert eine angegebene Gleit Komma Zahl mit doppelter Genauigkeit in eine entsprechende Zeichen folgen Darstellung.
+  uid: Microsoft.Quantum.Convert.DoubleAsString
+- summary: Konvertiert eine angegebene Gleit Komma Zahl mit doppelter Genauigkeit unter Verwendung des angegebenen Formats in eine entsprechende Zeichen folgen Darstellung.
+  uid: Microsoft.Quantum.Convert.DoubleAsStringWithFormat
+- summary: Konvertiert Funktionen in Vorgänge.
+  uid: Microsoft.Quantum.Convert.FunctionAsOperation
+- summary: Konvertiert eine angegebene Ganzzahl in eine entsprechende große ganze Zahl.
+  uid: Microsoft.Quantum.Convert.IntAsBigInt
+- summary: Erzeugt eine binäre Darstellung einer positiven ganzen Zahl unter Verwendung der Little-dendian-Darstellung für das zurückgegebene Array.
+  uid: Microsoft.Quantum.Convert.IntAsBoolArray
+- summary: Konvertiert eine angegebene Ganzzahl in eine entsprechende Gleit Komma Zahl mit doppelter Genauigkeit.
+  uid: Microsoft.Quantum.Convert.IntAsDouble
+- summary: Konvertiert eine angegebene ganzzahlige Zahl in eine entsprechende Zeichen folgen Darstellung.
+  uid: Microsoft.Quantum.Convert.IntAsString
+- summary: Konvertiert eine angegebene ganzzahlige Zahl unter Verwendung des angegebenen Formats in eine entsprechende Zeichen folgen Darstellung.
+  uid: Microsoft.Quantum.Convert.IntAsStringWithFormat
+- summary: Konvertiert eine angegebene große Ganzzahl, sofern möglich, in eine entsprechende Ganzzahl. Die-Funktion gibt ein paar der resultierenden Ganzzahl und ein boolesches Flag zurück, das true ist, wenn die Konvertierung möglich war.
+  uid: Microsoft.Quantum.Convert.MaybeBigIntAsInt
+- summary: Codiert einen multiqubit-Pauli-Operator, der als Array von Single-Qubit-Pauli-Operatoren dargestellt wird, in eine ganze Zahl.
+  uid: Microsoft.Quantum.Convert.PauliArrayAsInt
+- summary: Erstellt ein Array von ganzen Zahlen, die `arr` nach Start. aufgelistet sind. Schritt. Schließlich.
+  uid: Microsoft.Quantum.Convert.RangeAsIntArray
+- summary: Konvertiert einen `Result[]` Typ in einen `Bool[]` -Typ, wobei `One` zugeordnet ist `true` und `Zero` zugeordnet ist `false` .
+  uid: Microsoft.Quantum.Convert.ResultArrayAsBoolArray
+- summary: Erzeugt eine positive ganze Zahl aus einer Zeichenfolge, die im Little-Endian-Format vorliegt.
+  uid: Microsoft.Quantum.Convert.ResultArrayAsInt
+- summary: Konvertiert einen `Result` Typ in einen `Bool` -Typ, wobei `One` zugeordnet ist `true` und `Zero` zugeordnet ist `false` .
+  uid: Microsoft.Quantum.Convert.ResultAsBool
+name: Microsoft.Quantum.Convert
+newtypes: []
+operations:
+- summary: Ruft eine Funktion mit einer angegebenen Eingabe auf.
+  uid: Microsoft.Quantum.Convert.Call
+summary: 'Dieser Namespace enthält Funktionen für die Konvertierung zwischen verschiedenen Q #-Datentypen.'
+uid: Microsoft.Quantum.Convert
+metadata:
+  ms.openlocfilehash: d22f0735b800d2e9a34f8c7ce58353850a4cdded
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92703116"

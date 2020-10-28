@@ -1,0 +1,84 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: >+
+    > [!WARNING]
+
+    > Und wurde als veraltet markiert. Verwenden Sie stattdessen <xref:Microsoft.Quantum.Bitwise.And>.
+
+    >
+
+    > Verwenden Sie @"microsoft.quantum.bitwise.and".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.And
+- summary: >+
+    > [!WARNING]
+
+    > Nicht als veraltet markiert. Verwenden Sie stattdessen <xref:Microsoft.Quantum.Bitwise.Not>.
+
+    >
+
+    > Verwenden Sie @"microsoft.quantum.bitwise.not".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.Not
+- summary: >+
+    > [!WARNING]
+
+    > Oder ist veraltet. Verwenden Sie stattdessen <xref:Microsoft.Quantum.Bitwise.Or>.
+
+    >
+
+    > Verwenden Sie @"microsoft.quantum.bitwise.or".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.Or
+- summary: >+
+    > [!WARNING]
+
+    > Die Parität wurde als veraltet markiert. Verwenden Sie stattdessen <xref:Microsoft.Quantum.Bitwise.Parity>.
+
+    >
+
+    > Verwenden Sie @"microsoft.quantum.bitwise.parity".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.Parity
+- summary: >+
+    > [!WARNING]
+
+    > Xbits ist veraltet. Verwenden Sie stattdessen <xref:Microsoft.Quantum.Bitwise.XBits>.
+
+    >
+
+    > Verwenden Sie @"microsoft.quantum.bitwise.xbits".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.XBits
+- summary: >+
+    > [!WARNING]
+
+    > XOR ist veraltet. Verwenden Sie stattdessen <xref:Microsoft.Quantum.Bitwise.Xor>.
+
+    >
+
+    > Verwenden Sie @"microsoft.quantum.bitwise.xor".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.Xor
+- summary: >+
+    > [!WARNING]
+
+    > Zbits ist veraltet. Verwenden Sie stattdessen <xref:Microsoft.Quantum.Bitwise.ZBits>.
+
+    >
+
+    > Verwenden Sie @"microsoft.quantum.bitwise.zbits".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.ZBits
+name: Microsoft.Quantum.Extensions.Bitwise
+newtypes: []
+operations: []
+summary: ''
+uid: Microsoft.Quantum.Extensions.Bitwise
+metadata:
+  ms.openlocfilehash: 4ae65fda1f41159bc876efbdade906c24892172c
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92702522"
