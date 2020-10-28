@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ac9c060c157ba5ee3bc66852c42298ac8adcb3b3
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 7a1a49e18ac9330ca6e3cc89b3e58c96eccb91db
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91492335"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691669"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Tutorial: Erkunden der Verschränkung mit Q\#
 
@@ -32,7 +32,7 @@ Führen Sie zunächst diese Schritte aus, wenn Sie bereit zum Codieren sind:
 
 Sie können auch mit der Erzählung arbeiten, ohne das QDK zu installieren, indem Sie die Übersichten der Q# Programmiersprache und die ersten Konzepte von Quantum Computing überprüfen.
 
-## <a name="in-this-tutorial-youll-learn-how-to"></a>In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
+## <a name="in-this-tutorial-youll-learn-how-to"></a>In diesem Tutorial lernen Sie Folgendes:
 
 > [!div class="checklist"]
 > * Erstellen und Kombinieren von Vorgängen in Q\#
@@ -56,9 +56,9 @@ Als erstes müssen Sie ein neues Q# Projekt erstellen. In diesem Tutorial verwen
 
 So erstellen Sie ein neues Projekt in vs Code: 
 
-1. Klicken Sie auf **Ansicht** -> **Befehlspalette**, und wählen Sie **Q#: Neues Projekt erstellen** aus.
+1. Klicken Sie auf **Ansicht** -> **Befehlspalette** , und wählen Sie **Q#: Neues Projekt erstellen** aus.
 2. Klicken Sie auf **Standalone console application** (Eigenständige Konsolenanwendung).
-3. Navigieren Sie zum Speicherort für die Speicherung des Projekts, und klicken Sie auf **Projekt erstellen**.
+3. Navigieren Sie zum Speicherort für die Speicherung des Projekts, und klicken Sie auf **Projekt erstellen** .
 4. Klicken Sie nach der erfolgreichen Erstellung des Projekts unten rechts auf **Open new project...** (Neues Projekt öffnen...).
 
 In diesem Fall haben wir das Projekt aufgerufen `Bell` . Hierdurch werden zwei Dateien generiert: `Bell.csproj` , die Projektdatei und `Program.qs` , eine Vorlage einer-Anwendung, die Q# wir zum Schreiben der Anwendung verwenden. Der Inhalt von `Program.qs` sollte wie folgt lauten:
@@ -83,7 +83,7 @@ Unser Ziel ist es, zwei Qubits in einem bestimmten Quantum-Zustand vorzubereiten
 
 ### <a name="initialize-qubit-using-measurement"></a>Initialisieren von Qubit mithilfe von Messungen
 
-Im ersten Code Ausschnitt unten wird gezeigt, wie Sie in mit Qubits arbeiten Q# .  Wir führen zwei Vorgänge ein, [`M`](xref:microsoft.quantum.intrinsic.m) die [`X`](xref:microsoft.quantum.intrinsic.x) den Zustand eines Qubit transformieren. In diesem Codeausschnitt wird der Vorgang `SetQubitState` definiert, für den als Parameter ein Qubit verwendet wird, sowie ein weiterer Parameter `desired`, mit dem der gewünschte Zustand für das Qubit dargestellt wird.  Der Vorgang `SetQubitState` führt eine Messung für das Qubit durch, indem der Vorgang `M` verwendet wird.  In Q# gibt eine Qubit-Messung immer entweder `Zero` oder zurück `One` .  Wenn die Messung einen Wert zurückgibt, der nicht gleich dem gewünschten Wert ist, wird `SetQubitState` das Qubit geflippt, d. h., es wird ein `X` Vorgang ausgeführt, der den Qubit-Zustand in einen neuen Zustand ändert, in dem die Wahrscheinlichkeiten eines Messwerts, der zurück `Zero` gibt, und `One` umgekehrt werden. Auf diese Weise wird `SetQubitState` das Ziel-Qubit immer in den gewünschten Zustand versetzt.
+Im ersten Code Ausschnitt unten wird gezeigt, wie Sie in mit Qubits arbeiten Q# .  Wir führen zwei Vorgänge ein, [`M`](xref:Microsoft.Quantum.Intrinsic.m) die [`X`](xref:Microsoft.Quantum.Intrinsic.X) den Zustand eines Qubit transformieren. In diesem Codeausschnitt wird der Vorgang `SetQubitState` definiert, für den als Parameter ein Qubit verwendet wird, sowie ein weiterer Parameter `desired`, mit dem der gewünschte Zustand für das Qubit dargestellt wird.  Der Vorgang `SetQubitState` führt eine Messung für das Qubit durch, indem der Vorgang `M` verwendet wird.  In Q# gibt eine Qubit-Messung immer entweder `Zero` oder zurück `One` .  Wenn die Messung einen Wert zurückgibt, der nicht gleich dem gewünschten Wert ist, wird `SetQubitState` das Qubit geflippt, d. h., es wird ein `X` Vorgang ausgeführt, der den Qubit-Zustand in einen neuen Zustand ändert, in dem die Wahrscheinlichkeiten eines Messwerts, der zurück `Zero` gibt, und `One` umgekehrt werden. Auf diese Weise wird `SetQubitState` das Ziel-Qubit immer in den gewünschten Zustand versetzt.
 
 Ersetzen Sie den Inhalt von `Program.qs` durch den folgenden Code:
 
@@ -116,8 +116,8 @@ Der Rückgabetyp der Operation wird nach einem Doppelpunkt angegeben. In diesem 
 
 Sie haben im ersten Vorgang zwei Quantum-Vorgänge verwendet Q# :
 
-* Der [`M`](xref:microsoft.quantum.intrinsic.m) Vorgang, der den Zustand des Qubit misst.
-* Der [`X`](xref:microsoft.quantum.intrinsic.x) Vorgang, der den Zustand eines Qubit kippt.
+* Der [`M`](xref:Microsoft.Quantum.Intrinsic.m) Vorgang, der den Zustand des Qubit misst.
+* Der [`X`](xref:Microsoft.Quantum.Intrinsic.X) Vorgang, der den Zustand eines Qubit kippt.
 
 Mit einem Quantenvorgang wird der Zustand eines Qubits transformiert. Analog zu klassischen Logikgattern wird anstelle von Vorgängen auch von Quantengattern gesprochen. Diese Bezeichnung stammt aus den Anfängen des Quantencomputings, als Algorithmen lediglich ein theoretisches Konstrukt waren und in Form von Diagrammen visualisiert wurden – ähnlich wie bei einem Schaltplan im Bereich des klassischen Computings.
 
@@ -300,7 +300,7 @@ Dies wird als **Überlagerung** bezeichnet und gibt uns unseren ersten echten Ei
 ## <a name="prepare-entanglement"></a>Vorbereiten von Verschränkung
 
 Sehen wir uns nun an Q# , wie Methoden zum entangle-Qubits ausdrückt.
-Zuerst legen wir das erste Qubit auf den Anfangszustand fest und verwenden dann den Vorgang `H`, um die Überlagerung zu erzielen.  Bevor wir das erste Qubit Messen, verwenden wir dann einen neuen Vorgang ( `CNOT` ), der für " *kontrolliert-not*" steht.  Das Ergebnis der Ausführung dieses Vorgangs auf zwei Qubits besteht darin, das zweite Qubit auszuklappen, wenn das erste Qubit ist `One` .  Die beiden Qubits sind nun verschränkt.  Unsere Statistiken für das erste Qubit haben sich nicht geändert (50:50-Wahrscheinlichkeit für `Zero` oder `One` nach der Messung), aber wenn wir jetzt das zweite Qubit messen, erhalten wir __immer__ das gleiche Ergebnis wie bei der Messung des ersten Qubits. Unser `CNOT` hat die zwei Qubits verschränkt, sodass was immer mit dem einen von ihnen geschieht, auch mit dem anderen geschieht. Wenn Sie die Messungen umkehrten (das zweite Qubit vor dem ersten messen), würde das Gleiche passieren. Die erste Messung wäre zufällig, und die zweite wäre im Gleichschritt mit dem, was bei der ersten herausgefunden wurde.
+Zuerst legen wir das erste Qubit auf den Anfangszustand fest und verwenden dann den Vorgang `H`, um die Überlagerung zu erzielen.  Bevor wir das erste Qubit Messen, verwenden wir dann einen neuen Vorgang ( `CNOT` ), der für " *kontrolliert-not* " steht.  Das Ergebnis der Ausführung dieses Vorgangs auf zwei Qubits besteht darin, das zweite Qubit auszuklappen, wenn das erste Qubit ist `One` .  Die beiden Qubits sind nun verschränkt.  Unsere Statistiken für das erste Qubit haben sich nicht geändert (50:50-Wahrscheinlichkeit für `Zero` oder `One` nach der Messung), aber wenn wir jetzt das zweite Qubit messen, erhalten wir __immer__ das gleiche Ergebnis wie bei der Messung des ersten Qubits. Unser `CNOT` hat die zwei Qubits verschränkt, sodass was immer mit dem einen von ihnen geschieht, auch mit dem anderen geschieht. Wenn Sie die Messungen umkehrten (das zweite Qubit vor dem ersten messen), würde das Gleiche passieren. Die erste Messung wäre zufällig, und die zweite wäre im Gleichschritt mit dem, was bei der ersten herausgefunden wurde.
 
 Als erstes müssen wir zwei Qubits anstelle eines in zuordnen `TestBellState` :
 

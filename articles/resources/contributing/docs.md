@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 20e9f8126a290f52701b6b0e525d7669a605d4c9
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 2debef858c38b9a8f11264858130ed7cb41543ae
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759678"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691790"
 ---
 # <a name="improving-documentation"></a>Verbessern der Dokumentation
 
@@ -29,7 +29,7 @@ Dies bedeutet, dass jede Art von Dokumentation in den Details etwas variiert:
 
 - Die **konzeptionelle Dokumentation** besteht aus einer Reihe von Artikeln, die in veröffentlicht werden https://docs.microsoft.com/quantum , und in denen alles von den Grundlagen von Quantum Computing bis hin zu den technischen Spezifikationen für Austauschformate beschrieben wird. Diese Artikel sind in " [docfx-aromatied markdown" (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)geschrieben, einer markdown-Variante, die zum Erstellen umfassender Dokumentations Sätze verwendet wird.
 - Die **API-Referenz** besteht aus einem Satz von Seiten für jede Q# Funktion, jeden Vorgang und jeden benutzerdefinierten Typ, der in veröffentlicht wird https://docs.microsoft.com/qsharp/api/ . Diese Seiten dokumentieren die Eingaben und Vorgänge für jede Aufruf Bare Datei sowie Beispiele und Links zu weiteren Informationen. Die API-Referenz wird automatisch aus kleinen DFM-Dokumenten im Q# Quellcode im Rahmen der einzelnen Releases extrahiert.
-- Die in den einzelnen Beispielen und in der Datei "Info. MD" enthaltenen "Info ** <!----> . MD** "-Dateien beschreiben, wie dieses Beispiel verwendet wird, und wie es verwendet wird, was es behandelt und wie es mit dem Rest des Quantum Development Kit verknüpft ist. Diese Dateien werden mithilfe von [GitHub-debuggermarkdown (GFM)](https://github.github.com/gfm/)geschrieben, eine einfachere Alternative zu DFM, die für die direkte Anfügung von Dokumentation an Coderepositorys beliebt ist.
+- Die in den einzelnen Beispielen und in der Datei "Info. MD" enthaltenen "Info **<!----> . MD** "-Dateien beschreiben, wie dieses Beispiel verwendet wird, und wie es verwendet wird, was es behandelt und wie es mit dem Rest des Quantum Development Kit verknüpft ist. Diese Dateien werden mithilfe von [GitHub-debuggermarkdown (GFM)](https://github.github.com/gfm/)geschrieben, eine einfachere Alternative zu DFM, die für die direkte Anfügung von Dokumentation an Coderepositorys beliebt ist.
 
 ## <a name="contributing-to-the-conceptual-documentation"></a>Mitwirken an der konzeptionellen Dokumentation
 
@@ -46,7 +46,7 @@ Im folgenden werden weitere Informationen zu Pull Requests beschrieben. es gibt 
 
 ### <a name="referencing-sample-code-from-conceptual-articles"></a>Verweisen auf Beispiel Code aus konzeptionellen Artikeln
 
-Wenn Sie Code aus dem [beispielrepository](https://github.com/Microsoft/Quantum)einschließen möchten, können Sie dazu einen speziellen markdown-Befehl mit docfx-Geschmack verwenden:
+Wenn Sie Code aus dem [beispielrepository](https://github.com/Microsoft/Quantum)einschließen möchten, können Sie dazu einen speziellen DocFX-Flavored markdown-Befehl verwenden:
 
 ```markdown
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
@@ -138,7 +138,7 @@ Für das Beispiel von `ControlledOnBitString` könnten wir etwas wie das folgend
  }
 ```
 
-Die gerenderte Version des obigen Codes finden Sie in der [API-Dokumentation für die `ControlledOnBitString` Funktion](xref:microsoft.quantum.canon.controlledonbitstring).
+Die gerenderte Version des obigen Codes finden Sie in der [API-Dokumentation für die `ControlledOnBitString` Funktion](xref:Microsoft.Quantum.Canon.ControlledOnBitString).
 
 Zusätzlich zur allgemeinen Vorgehensweise bei der Dokumentations Erstellung werden im Artikel Schreiben von API-Dokumentations Kommentaren die folgenden Punkte berücksichtigt:
 

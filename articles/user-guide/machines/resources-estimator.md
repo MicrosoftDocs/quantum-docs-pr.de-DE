@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6138c098a4efe2797c7d7360573ddcb9cb70a6c1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e1ec01d85a141b9c8a7a5ba5589663a0773520e7
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835926"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691874"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Ressourcenschätzung für das Quantum Development Kit (QDK)
 
@@ -127,18 +127,45 @@ Die Ressourcenschätzung verfolgt die folgenden Metriken:
 |----|----|
 |__CNOT__    |Die Ausführung von `CNOT` Vorgängen (auch als kontrollierte Pauli X-Vorgänge bezeichnet).|
 |__Qubitclifford__ |Die Testlauf-Anzahl einzelner Qubit Clifford-und Pauli-Vorgänge.|
-|__Gemessen__    |Die Testlauf-Anzahl von Messungen.  |
+|__Measure__    |Die Testlauf-Anzahl von Messungen.  |
 |__R__    |Die Anzahl der Testlauf mit einzelnen Qubit-Drehungen, ausgenommen `T` , Clifford-und Pauli-Vorgänge.  |
 |__T__    |Die Anzahl der `T` Vorgänge und ihre konjutoren, einschließlich der `T` Vorgänge, T_x = h. T. h und T_y = HY. T. HY.  |
-|__Tiefe__|Die untere Grenze für die Tiefe der vom Vorgang durchgeführten Quantum-Leitung Q# . Standardmäßig zählt die Tiefe Metrik nur `T` Gates. Weitere Informationen finden Sie unter [tiefen Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
-|__Width__    |Die untere Grenze für die maximale Anzahl von Qubits, die während der Ausführung des Q# Vorgangs zugeordnet wurden. Möglicherweise ist es nicht möglich, sowohl __Tiefe__ als auch __Breite__ Untergrenzen gleichzeitig zu erreichen.  |
+|__Tiefe__|Die Tiefe der vom Vorgang durchgeführten Quantum-Verbindung Q# (siehe [unten](#depth-width-and-qubitcount)). Standardmäßig zählt die Tiefe Metrik nur `T` Gates. Weitere Informationen finden Sie unter [tiefen Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__Width__|Breite der vom Vorgang durchgeführten quantumleitung Q# (siehe [unten](#depth-width-and-qubitcount)). Standardmäßig zählt die Tiefe Metrik nur `T` Gates. Weitere Informationen finden Sie unter [tiefen Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__Qubitcount__    |Die untere Grenze für die maximale Anzahl von Qubits, die während der Ausführung des Q# Vorgangs zugeordnet wurden. Diese Metrik ist möglicherweise nicht mit der __Tiefe__ kompatibel (siehe unten).  |
 |__Borrowedwidth__    |Die maximale Anzahl der im Vorgang geliehenen Qubits Q# .  |
+
+
+## <a name="depth-width-and-qubitcount"></a>Tiefe, Breite und qubitcount
+
+Die gemeldeten tiefen und breiten Schätzungen sind miteinander kompatibel.
+(Bisher waren beide Zahlen erreichbar, aber für Tiefe und Breite sind unterschiedliche Verbindungen erforderlich.) Derzeit können beide Metriken in diesem Paar gleichzeitig von derselben Verbindung erreicht werden.
+
+Folgende Metriken werden gemeldet:
+
+__Tiefe:__ Für den Stamm Vorgang, der für die Ausführung benötigt wird, wobei bestimmte Gate-Zeiten angenommen werden.
+Für Vorgänge namens oder nachfolgende Vorgänge: Zeitunterschied zwischen der aktuellen Qubit-Verfügbarkeits Zeit am Anfang und am Ende des Vorgangs.
+
+__Breite:__ Für den Stamm Vorgang: die Anzahl von Qubits, die tatsächlich verwendet wurden, um Sie auszuführen (und der Vorgang, den Sie aufruft).
+Für Vorgänge mit dem Namen oder nachfolgende Vorgänge: wie viele weitere Qubits wurden zusätzlich zu den Qubits verwendet, die bereits am Anfang des Vorgangs verwendet wurden.
+
+Beachten Sie, dass wiederverwendete Qubits nicht zu dieser Zahl beitragen.
+Wenn beispielsweise einige Qubits freigegeben wurden, bevor der Vorgang a startet, und alle von diesem Vorgang angeforderten Qubit (und Vorgänge, die von einem aufgerufen wurden) durch wieder verwenden von zuvor releasequbits erfüllt wurden, wird die Breite des Vorgangs a als 0 (null) gemeldet. Erfolgreich geliehene Qubits tragen nicht an die Breite an.
+
+__Qubitcount:__ Für den Stamm Vorgang: minimale Anzahl von Qubits, die ausreichen, um diesen Vorgang auszuführen (und von ihm aufgerufene Vorgänge).
+Für Vorgänge mit dem Namen oder nachfolgende Vorgänge: minimale Anzahl von Qubits, die ausreichen, um diesen Vorgang separat auszuführen. Diese Zahl enthält keine Eingabe-Qubits. Sie enthält auch geliehene Qubits.
+
+Zwei Betriebsmodi werden unterstützt. Der Modus wird ausgewählt, indem qctracesimulatorconfiguration. optimizetiefe festgelegt wird.
+
+__Optimizetiefe = true:__ Bei qubitmanager wird von der Qubit-Wiederverwendung abgeraten, und jedes Mal, wenn ein Qubit angefordert wird, wird ein neues Qubit zugewiesen. Die __Tiefe__ des Stamm Vorgangs wird zur minimalen Tiefe (untere Grenze). Für diese Tiefe wird eine kompatible __Breite__ gemeldet (beide können gleichzeitig erreicht werden). Beachten Sie, dass diese Breite bei dieser Tiefe wahrscheinlich nicht optimal ist. " __Qubitcount__ " ist möglicherweise niedriger als die Breite für den Stamm Vorgang, da die Wiederverwendung vorausgesetzt wird
+
+__Optimizetiefe = false:__ Qubitmanager wird empfohlen, Qubits wiederzuverwenden und veröffentlichte Qubits wiederzuverwenden, bevor neue zugeordnet werden. Die __Breite__ des Stamm Vorgangs wird zur minimalen Breite (untere Grenze). Es wird eine kompatible __Tiefe__ gemeldet, für die Sie erreicht werden kann. __Qubitcount__ ist die gleiche wie die __Breite__ für den Stamm Vorgang, vorausgesetzt, dass keine Kreditaufnahme erfolgt.
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Angeben der Wahrscheinlichkeit von Messergebnissen
 
-Sie können <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> aus dem- <xref:microsoft.quantum.diagnostics> Namespace verwenden, um Informationen über die erwartete Wahrscheinlichkeit eines Messvorgangs bereitzustellen. Weitere Informationen finden Sie unter [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
+Sie können <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> aus dem- <xref:Microsoft.Quantum.Diagnostics> Namespace verwenden, um Informationen über die erwartete Wahrscheinlichkeit eines Messvorgangs bereitzustellen. Weitere Informationen finden Sie unter [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Quantum-Ablauf Verfolgungs Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 - [Toffoli-Simulator für Quantencomputer](xref:microsoft.quantum.machines.toffoli-simulator)

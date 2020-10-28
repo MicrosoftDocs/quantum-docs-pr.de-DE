@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: aa942a61280553ae4e51cd5ddcc85c0df935dab1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 9a3d7e03016332a04ac9d1610428b6fcd546d1f6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835858"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691578"
 ---
 # <a name="working-with-qubits"></a>Arbeiten mit Qubits
 
@@ -29,17 +29,17 @@ In diesem Artikel wird beschrieben, wie Sie in einem Programm mit Qubits arbeite
 
 Da es sich bei physischen Qubits um eine wertvolle Ressource auf einem Quantum-Computer handelt, besteht der Auftrag des Compilers darin, sicherzustellen, dass Sie so effizient wie möglich verwendet werden.
 Daher müssen Sie angeben, Q# dass Qubits zur Verwendung in einem bestimmten Anweisungsblock *zuzuordnen* sind.
-Sie können Qubits als einzelnes Qubit oder als Array von Qubits zuordnen, die als *Register*bezeichnet werden. 
+Sie können Qubits als einzelnes Qubit oder als Array von Qubits zuordnen, die als *Register* bezeichnet werden. 
 
 ### <a name="clean-qubits"></a>Löschen von Qubits
 
 Verwenden Sie die- `using` Anweisung, um neue Qubits für die Verwendung während eines-Anweisungsblocks zuzuordnen.
 
 Die-Anweisung besteht aus dem Schlüsselwort `using` , gefolgt von einer in Klammern eingeschlossenen Bindung `( )` und dem Anweisungsblock, in dem die Qubits verfügbar sind.
-Die Bindung folgt demselben Muster wie `let` -Anweisungen: entweder ein einzelnes Symbol oder ein Tupel von Symbolen, gefolgt von einem Gleichheitszeichen `=` und entweder ein einzelner Wert oder ein entsprechendes Tupel von *Initialisierern*.
+Die Bindung folgt demselben Muster wie `let` -Anweisungen: entweder ein einzelnes Symbol oder ein Tupel von Symbolen, gefolgt von einem Gleichheitszeichen `=` und entweder ein einzelner Wert oder ein entsprechendes Tupel von *Initialisierern* .
 
 Initialisierer sind entweder für ein einzelnes Qubit, das als angegeben ist, `Qubit()` oder ein Array von Qubits verfügbar, `Qubit[n]` wobei `n` ein `Int` Ausdruck ist.
-Beispiel:
+Ein auf ein Objekt angewendeter
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -68,7 +68,7 @@ Diese Qubits befinden sich in der Regel nicht in einem sauberen Zustand, d. h., 
 Diese werden häufig als "modifizierte" Qubits bezeichnet, da ihr Zustand unbekannt ist und sogar mit anderen Teilen des Arbeitsspeichers des Quantums Computers entkoppelt werden kann.
 
 Die Bindung folgt demselben Muster und denselben Regeln wie die- `using` Anweisung.
-Beispiel:
+Ein auf ein Objekt angewendeter
 ```qsharp
 borrowing (qubit = Qubit()) {
     // ...
@@ -95,7 +95,7 @@ In gewisser Hinsicht ist dies alles, was ein Q# Programm mit einem Qubit tun kan
 In diesem Artikel werden einige nützliche Q# Vorgänge erläutert, die Sie für die Interaktion mit Qubits verwenden können.
 Weitere Details zu diesen und anderen finden Sie unter systeminterne [Vorgänge und Funktionen](xref:microsoft.quantum.libraries.standard.prelude). 
 
-Zuerst werden die Single-Qubit-Pauli-Operatoren $X $, $Y $ und $Z $ in Q# durch die intrinsischen Vorgänge [`X`](xref:microsoft.quantum.intrinsic.x) , und dargestellt, die jeweils den- [`Y`](xref:microsoft.quantum.intrinsic.y) [`Z`](xref:microsoft.quantum.intrinsic.z) Typ haben `(Qubit => Unit is Adj + Ctl)` .
+Zuerst werden die Single-Qubit-Pauli-Operatoren $X $, $Y $ und $Z $ in Q# durch die intrinsischen Vorgänge [`X`](xref:Microsoft.Quantum.Intrinsic.X) , und dargestellt, die jeweils den- [`Y`](xref:Microsoft.Quantum.Intrinsic.Y) [`Z`](xref:Microsoft.Quantum.Intrinsic.Z) Typ haben `(Qubit => Unit is Adj + Ctl)` .
 
 Wie in systeminternen [Vorgängen und Funktionen](xref:microsoft.quantum.libraries.standard.prelude)beschrieben, sollten Sie sich $X $ und somit auch `X` als bitflip-Vorgang oder nicht als Gate vorstellen.
 Sie können den- `X` Vorgang verwenden, um Zustände der Form $ \ket{s_0 s_1 \dots s_n} $ für eine klassische Bitzeichenfolge vorzubereiten $s $:
@@ -127,7 +127,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > Später sehen Sie kompaktere Methoden zum Schreiben dieses Vorgangs, für die keine manuelle Ablauf Steuerung erforderlich ist.
 
-Sie können auch Zustände wie z. b. $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ und $ \ket {-} = \left (\ket {0} -\ket {1} \right)/\sqrt {2} $ mithilfe der Hadamard Transform $H $, die in Q# durch den systeminternen Vorgang [`H`](xref:microsoft.quantum.intrinsic.h) (auch vom Typ (Qubit => Unit is ADJ + CTL)) dargestellt wird.
+Sie können auch Zustände wie z. b. $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ und $ \ket {-} = \left (\ket {0} -\ket {1} \right)/\sqrt {2} $ mithilfe der Hadamard Transform $H $, die in Q# durch den systeminternen Vorgang [`H`](xref:Microsoft.Quantum.Intrinsic.H) (auch vom Typ (Qubit => Unit is ADJ + CTL)) dargestellt wird.
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -149,7 +149,7 @@ Die *Berechnungsbasis* bezieht sich auf die `PauliZ` Basis und ist die am häufi
 
 ### <a name="measure-a-single-qubit-in-the-pauliz-basis"></a>Messen eines einzelnen Qubit in der `PauliZ` Basis
 
-Verwenden [`M`](xref:microsoft.quantum.intrinsic.m) Sie den-Vorgang, bei dem es sich um einen integrierten, intrinsischen nicht einheitlichen Vorgang handelt, um ein einzelnes Qubit in der Basis zu messen `PauliZ` und dem Ergebnis einen klassischen Wert zuzuweisen.
+Verwenden [`M`](xref:Microsoft.Quantum.Intrinsic.M) Sie den-Vorgang, bei dem es sich um einen integrierten, intrinsischen nicht einheitlichen Vorgang handelt, um ein einzelnes Qubit in der Basis zu messen `PauliZ` und dem Ergebnis einen klassischen Wert zuzuweisen.
 `M` verfügt über einen reservierten Rückgabetyp, `Result` , der nur Werte annehmen kann `Zero` oder `One` die den gemessenen Zuständen $ \ket {0} $ oder $ \ket {1} $ entspricht. Dies deutet darauf hin, dass das Ergebnis nicht mehr ein Quantum-Zustand ist.
 
 Ein einfaches Beispiel ist der folgende Vorgang, der ein Qubit im $ \ket $-Zustand zuordnet {0} , dann einen Hadamard-Vorgang `H` darauf anwendet und das Ergebnis in der `PauliZ` Basis misst.
@@ -175,7 +175,7 @@ operation MeasureOneQubit() : Result {
 
 ### <a name="measure-one-or-more-qubits-in-specific-bases"></a>Messen eines oder mehrerer Qubits in bestimmten Basen
 
-Zum Messen eines Arrays mit einem oder mehreren Qubits in bestimmten Basen können Sie den- [`Measure`](xref:microsoft.quantum.intrinsic.measure) Vorgang verwenden.
+Zum Messen eines Arrays mit einem oder mehreren Qubits in bestimmten Basen können Sie den- [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) Vorgang verwenden.
 
 Die Eingaben für `Measure` sind ein Array von `Pauli` Typen (z. b `[PauliX, PauliZ, PauliZ]` .) und ein Array von Qubits.
 

@@ -9,19 +9,19 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fef3cea1c11e4fef49ddbf63adb34e07675049d2
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7666974e255d537c8d611d0077b7f9b37a61f918
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834192"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691736"
 ---
 # <a name="no-locq-style-guide"></a>Q# Styleguide #
 ## <a name="general-conventions"></a>Allgemeine Konventionen ##
 
 Die in diesem Handbuch empfohlenen Konventionen sollen Ihnen helfen, Programme und Bibliotheken Q# leichter zu lesen und zu verstehen.
 
-## <a name="guidance"></a>Anleitungen
+## <a name="guidance"></a>Leitfaden
 
 Wir empfehlen Folgendes:
 
@@ -52,7 +52,7 @@ Dieser Unterschied schlägt vor, dass wir Vorgänge als Verben und Funktionen al
 > Aus dieser Sicht sollten benutzerdefinierte Typen als Nomen benannt werden, damit der Typ selbst und die Konstruktorfunktion konsistente Namen aufweisen.
 
 Stellen Sie in angemessener Weise sicher, dass Vorgangs Namen mit Verben beginnen, die die Auswirkungen des Vorgangs eindeutig angeben.
-Zum Beispiel:
+Beispiel:
 
 - `MeasureInteger`
 - `EstimateEnergy`
@@ -96,7 +96,7 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-| &nbsp;  | name | BESCHREIBUNG |
+| &nbsp;  | Name | BESCHREIBUNG |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | Löschen Sie die Verwendung eines Verbs ("reflektieren"), um die Auswirkung des Vorgangs anzuzeigen. |
 | ☒ | <s>`operation XRotation`</s> | Die Verwendung von Substantiv Phrase schlägt eine Funktion anstelle von Operation vor. |
@@ -113,7 +113,7 @@ Wir empfehlen Folgendes:
 
 ### <a name="entry-points"></a>Einstiegspunkte
 
-Beim Definieren eines Einstiegs Punkts in ein Q# Programm erkennt der Q# Compiler das- [ `@EntryPoint()` Attribut](xref:microsoft.quantum.core.entrypoint) , sodass die Einstiegspunkte einen bestimmten Namen aufweisen (z. b. `main` , `Main` oder `__main__` ).
+Beim Definieren eines Einstiegs Punkts in ein Q# Programm erkennt der Q# Compiler das- [ `@EntryPoint()` Attribut](xref:Microsoft.Quantum.Core.EntryPoint) , sodass die Einstiegspunkte einen bestimmten Namen aufweisen (z. b. `main` , `Main` oder `__main__` ).
 Aus Sicht eines Q# Entwicklers sind Einstiegspunkte also normale Vorgänge, die mit kommentiert werden `@EntryPoint()` .
 Außerdem sind Q# Einstiegspunkte möglicherweise Einstiegspunkte für eine gesamte Anwendung (z Q# . b. in eigenständigen ausführbaren Programmen) oder eine Schnittstelle zwischen einem Q# Programm und dem Host Programm für eine Anwendung (d.h. bei Verwendung Q# von mit Python oder .net), sodass der Name "Main" irreführend sein kann, wenn er auf einen Q# Einstiegspunkt angewendet wird.
 
@@ -129,12 +129,12 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-| &nbsp;  | name | BESCHREIBUNG |
+| &nbsp;  | Name | BESCHREIBUNG |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | Kommuniziert den Zweck des Einstiegs Punkts über den Vorgangs Namen eindeutig. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | Die Verwendung von `Main` kommuniziert nicht eindeutig mit dem Zweck des Einstiegs Punkts und ist mit dem- `@EntryPoint()` Attribut redundant. |
 
-***
+**_
 
 ### <a name="shorthand-and-abbreviations"></a>Kurzformen und Abkürzungen ###
 
@@ -171,7 +171,7 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-| &nbsp;   | name | BESCHREIBUNG |
+| &nbsp;   | Name | BESCHREIBUNG |
 |---|------|-------------|
 | ☑ | `X` | Wohl verständliche Kurzformen für "Apply a $X $ Transformation" |
 | ☑ | `CNOT` | Wohl verständliche Kurzformen für "kontrolliert-not" |
@@ -181,7 +181,7 @@ Wir empfehlen Folgendes:
 
 
 
-***
+_*_
 
 
 ### <a name="proper-nouns-in-names"></a>Richtige Nomen in Namen ###
@@ -208,14 +208,14 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-***
+_*_
 
 ### <a name="type-conversions"></a>Typkonvertierungen ###
 
 Da Q# eine stark und statisch typisierte Sprache ist, kann ein Wert eines Typs nur als Wert eines anderen Typs mithilfe eines expliziten Aufrufes einer Typkonvertierungs Funktion verwendet werden.
 Dies steht im Gegensatz zu Sprachen, die es ermöglichen, Typen implizit (z. b. typherauf Stufung) oder durch Umwandlung zu ändern.
 Typkonvertierungs Funktionen spielen daher eine wichtige Rolle bei der Q# Bibliotheksentwicklung und bilden eine der gängigsten Entscheidungen zum benennen.
-Es ist jedoch zu beachten, dass Typkonvertierungen immer _deterministisch_sind. Sie können als Funktionen geschrieben werden und fallen daher unter den obigen Empfehlungen.
+Es ist jedoch zu beachten, dass Typkonvertierungen immer _deterministisch_ sind. Sie können als Funktionen geschrieben werden und fallen daher unter den obigen Empfehlungen.
 Insbesondere wird empfohlen, dass Typkonvertierungs Funktionen nie als Verben (z. b. `ConvertToX` ) oder adverbfilter-präpositional-Ausdrücke () benannt werden `ToX` . Sie sollten jedoch als Adjektiv-Ausdrücke mit präpositional bezeichnet werden, die die Quell-und Zieltypen angeben ( `XAsY` ).
 Beim Auflisten von Array Typen in Namen der Typkonvertierungs Funktion wird die Kurzform empfohlen `Arr` .
 Abgesehen von Ausnahmefällen wird empfohlen, dass alle Typkonvertierungs Funktionen mit benannt werden, `As` damit Sie schnell identifiziert werden können.
@@ -228,14 +228,14 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-| &nbsp;   | name | BESCHREIBUNG |
+| &nbsp;   | Name | BESCHREIBUNG |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | Die Vorposition "to" führt zu einem Verb Ausdruck, der einen Vorgang und keine Funktion angibt. |
 | ☒ | <s>`AsDouble`</s> | Der Eingabetyp ist aus dem Funktionsnamen nicht eindeutig. |
 | ☒ | <s>`PauliArrFromBoolArr`</s> | Die Eingabe-und Ausgabetypen werden in der falschen Reihenfolge angezeigt. |
 | ☑ | `ResultArrAsBoolArr` | Die Eingabe-und Ausgabetypen sind eindeutig. |
 
-***
+_*_
 
 ### <a name="private-or-internal-names"></a>Private oder interne Namen ###
 
@@ -251,12 +251,12 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-| &nbsp;  | name | BESCHREIBUNG |
+| &nbsp;  | Name | BESCHREIBUNG |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | Verwenden Sie keinen Unterstrich `_` , um anzugeben, dass dieser Vorgang nur für die interne Verwendung vorgesehen ist. |
 | ☑ | `internal operation ApplyDecomposedOperation` | Das `internal` Schlüsselwort am Anfang weist eindeutig darauf hin, dass dieser Vorgang nur für die interne Verwendung vorgesehen ist. |
 
-***
+_*_
 ### <a name="variants"></a>Varianten ###
 
 Obwohl diese Einschränkung in zukünftigen Versionen von möglicherweise nicht beibehalten wird Q# , ist es aktuell, dass häufig Gruppen verwandter Vorgänge oder Funktionen vorhanden sind, die durch die von Ihnen unterstützten Funktoren unterschieden werden, oder durch die konkreten Typen ihrer Argumente.
@@ -280,7 +280,7 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-***
+_*_
 
 ### <a name="arguments-and-variables"></a>Argumente und Variablen ###
 
@@ -305,9 +305,9 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-***
+_*_
 
-### <a name="user-defined-type-named-items"></a>Benannte Elemente des benutzerdefinierten Typs ###
+### <a name="user-defined-type-named-items"></a>Benannte Elemente User-Defined Typs ###
 
 Benannte Elemente in benutzerdefinierten Typen sollten als benannt werden `CamelCase` , auch als Eingabe für UDT-Konstruktoren.
 Dadurch können benannte Elemente bei Verwendung der accessornotation (z. b. `callable::Apply` ) oder der Copy-and-Update-Notation () eindeutig von Verweisen auf lokale Variablen getrennt werden `set arr w/= Data <- newData` .
@@ -329,7 +329,7 @@ Wir empfehlen Folgendes:
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Benannte Elemente sollten mit einem ersten Großbuchstaben beginnen. |
 | ☒ | <s>`newtype Collection = (Length : Int, Get : Int -> (Qubit => Unit)) `</s> | Benannte Elemente, die in Functions aufgelöst werden, sollten als nominale Ausdrücke und nicht als Verb Ausdrücke benannt werden. |
 
-***
+_*_
 
 ## <a name="input-conventions"></a>Eingabe Konventionen ##
 
@@ -379,7 +379,7 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-***
+_*_
 
 ## <a name="documentation-conventions"></a>Konventionen in der Dokumentation ##
 
@@ -451,7 +451,7 @@ is Adj + Ctl {
 }
 ```
 
-***
+_*_
 
 ## <a name="formatting-conventions"></a>Formatierungs Konventionen ##
 
@@ -486,4 +486,4 @@ Wir empfehlen Folgendes:
 | ☑ | `Example(a, b, c)` | Elemente im eingabetupel sind zur besseren Lesbarkeit ordnungsgemäß verteilt. |
 | ☒ | <s>`Example (a, b, c)`</s> | Leerzeichen sollten nach Funktions-, Vorgangs-oder UDT-Namen unterdrückt werden. |
 
-***
+_**

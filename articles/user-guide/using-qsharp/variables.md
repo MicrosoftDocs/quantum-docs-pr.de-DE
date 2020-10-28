@@ -9,16 +9,16 @@ uid: microsoft.quantum.guide.variables
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bb87f36d3c9b7df195f64e85151e833d494ea945
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 67c71c09e004d77360902360fefc7a7752e4a829
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835875"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690937"
 ---
 # <a name="variables-in-no-locq"></a>Variablen in Q#
 
-Q# unterscheidet zwischen veränderbaren und unveränderlichen Symbolen oder *Variablen*, die an Ausdrücke gebunden/zugewiesen sind.
+Q# unterscheidet zwischen veränderbaren und unveränderlichen Symbolen oder *Variablen* , die an Ausdrücke gebunden/zugewiesen sind.
 Im Allgemeinen wird die Verwendung unveränderlicher Symbole empfohlen, da es dem Compiler ermöglicht, weitere Optimierungen auszuführen.
 
 Die linke Seite einer Bindung besteht aus einem symboltupel und der rechten Seite eines Ausdrucks.
@@ -40,7 +40,7 @@ Dadurch wird dem Variablennamen (oder "Symbol") ein bestimmtes Array von Pauli-O
 > [!NOTE]
 > Im vorherigen Beispiel muss der Typ der neuen Variablen nicht explizit angegeben werden, da der Ausdruck auf der rechten Seite der `let` Anweisung eindeutig ist, und der Compiler leitet den richtigen Typ ab. 
 
-Variablen `let` , die mit definiert werden, sind *unveränderlich*. Dies bedeutet, dass Sie nach der Definition nicht mehr in irgendeiner Weise geändert werden können.
+Variablen `let` , die mit definiert werden, sind *unveränderlich* . Dies bedeutet, dass Sie nach der Definition nicht mehr in irgendeiner Weise geändert werden können.
 Dies ermöglicht eine Reihe nützlicher Optimierungen, einschließlich der Optimierung der klassischen Logik, die für die Neuanordnung von Variablen zum Anwenden der `Adjoint` Variante eines Vorgangs durchgesetzt wird.
 
 ## <a name="mutable-variables"></a>Änderbare Variablen
@@ -58,7 +58,7 @@ Im folgenden finden Sie einige Beispiele für Methoden zur Neubindung von Anweis
 
 #### <a name="apply-and-reassign-statements"></a>Apply-and-REASSIGN-Anweisungen
 
-Eine bestimmte Art von `set` -Anweisung, die *Apply-and-REASSIGN* -Anweisung, stellt eine bequeme Möglichkeit zur Verkettung dar, wenn die Rechte Seite aus der Anwendung eines binären Operators besteht und das Ergebnis an das linke Argument des Operators zurückgesetzt werden soll. Beispiel:
+Eine bestimmte Art von `set` -Anweisung, die *Apply-and-REASSIGN* -Anweisung, stellt eine bequeme Möglichkeit zur Verkettung dar, wenn die Rechte Seite aus der Anwendung eines binären Operators besteht und das Ergebnis an das linke Argument des Operators zurückgesetzt werden soll. Ein auf ein Objekt angewendeter
 
 ```qsharp
 mutable counter = 0;
@@ -92,7 +92,7 @@ for (q in qubits) {
 #### <a name="update-and-reassign-statements"></a>Update-und-REASSIGN-Anweisungen
 
 Eine ähnliche Verkettung ist für [Copy-und Update-Ausdrücke](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) auf der rechten Seite vorhanden.
-Entsprechend sind *Update-und-REASSIGN* -Anweisungen für *benannte Elemente* in benutzerdefinierten Typen sowie für *Array Elemente*vorhanden.  
+Entsprechend sind *Update-und-REASSIGN* -Anweisungen für *benannte Elemente* in benutzerdefinierten Typen sowie für *Array Elemente* vorhanden.  
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
@@ -110,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-Im Fall von Arrays [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) stellt in der Q# Standardbibliothek die erforderlichen Tools für viele gängige Anforderungen an die Initialisierung und Bearbeitung von Arrays bereit, sodass es nicht erforderlich ist, Array Elemente an erster Stelle zu aktualisieren. 
+Im Fall von Arrays [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) stellt in der Q# Standardbibliothek die erforderlichen Tools für viele gängige Anforderungen an die Initialisierung und Bearbeitung von Arrays bereit, sodass es nicht erforderlich ist, Array Elemente an erster Stelle zu aktualisieren. 
 
 Update-und-REASSIGN-Anweisungen stellen bei Bedarf eine Alternative dar:
 
@@ -135,7 +135,7 @@ operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
 
 ```
 
-Mithilfe der Bibliotheks Tools für Arrays, die in bereitgestellt werden, [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) können Sie z. b. problemlos eine Funktion definieren, die ein Array von Typen zurückgibt, `Pauli` wobei das Element bei Index `i` einen bestimmten `Pauli` Wert annimmt und alle anderen Einträge die Identität ( `PauliI` ) sind.
+Mithilfe der Bibliotheks Tools für Arrays, die in bereitgestellt werden, [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) können Sie z. b. problemlos eine Funktion definieren, die ein Array von Typen zurückgibt, `Pauli` wobei das Element bei Index `i` einen bestimmten `Pauli` Wert annimmt und alle anderen Einträge die Identität ( `PauliI` ) sind.
 
 Im folgenden finden Sie zwei Definitionen einer solchen Funktion, wobei die zweite die von Ihnen zur Verfügung stehenden Tools nutzt.
 
@@ -150,7 +150,7 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
 }
 ```
 
-Anstatt jeden Index im Array zu durchlaufen und ihn bedingt auf `PauliI` oder das angegebene festzulegen `pauli` , können Sie stattdessen in verwenden, `ConstantArray` [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) um ein Array von Typen zu erstellen `PauliI` , und dann einfach einen Copy-and-Update-Ausdruck zurückgeben, in dem Sie den spezifischen Wert bei Index geändert haben `location` :
+Anstatt jeden Index im Array zu durchlaufen und ihn bedingt auf `PauliI` oder das angegebene festzulegen `pauli` , können Sie stattdessen in verwenden, `ConstantArray` [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) um ein Array von Typen zu erstellen `PauliI` , und dann einfach einen Copy-and-Update-Ausdruck zurückgeben, in dem Sie den spezifischen Wert bei Index geändert haben `location` :
 
 ```qsharp
 function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {

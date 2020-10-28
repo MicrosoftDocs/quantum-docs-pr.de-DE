@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.katas
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 097d7f70088b6ee84a1e91ee99be59149dd9e15b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 6b2eff2a457b809bd168b9b59ab013b7fc7541e6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834821"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691653"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Erlernen des Quantencomputings mit den Quanten-Katas
 
@@ -55,7 +55,7 @@ Entdecken Sie die Grundlagen und Grundlagen von Quantum Computing, oder vertiefe
 |[Erkennen von Quantengattern](https://github.com/microsoft/QuantumKatas/tree/main/BasicGates)|Eine Reihe von Übungen, mit denen Sie sich mit den grundlegenden Quantum Gates in vertraut machen können Q# . Umfasst Übungen für einfache Single-Qubit-und Multi-Qubit-Gates, Adjoint und gesteuerte Gates und die Verwendung von Gates zum Ändern des Status eines Qubit.|
 |[Erstellen einer Quantenüberlagerung](https://github.com/microsoft/QuantumKatas/tree/main/Superposition)|Verwenden Sie diese Übungen, um sich mit dem Konzept der superposition und der Programmierung in vertraut zu machen Q# . Umfasst Übungen für einfache Single-Qubit-und Multi-Qubit-Gates, superposition und Fluss Steuerung sowie Rekursion in Q# .|
 |[Unterscheiden von Quantenzuständen mit Messungen](https://github.com/microsoft/QuantumKatas/tree/main/Measurements)|Lösen Sie diese Übungen, und lernen Sie die Quanten Messung und orthogonale und nicht orthogonale Zustände kennen. |
-|[Verknüpfte Messungen](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|Erfahren Sie mehr über gemeinsame Paritäts Messungen und wie Sie den [Measure](xref:microsoft.quantum.intrinsic.measure) -Vorgang zum unterscheiden von Quantum-Zuständen verwenden|
+|[Verknüpfte Messungen](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|Erfahren Sie mehr über gemeinsame Paritäts Messungen und wie Sie den [Measure](xref:Microsoft.Quantum.Intrinsic.Measure) -Vorgang zum unterscheiden von Quantum-Zuständen verwenden|
 
 ### <a name="algorithms"></a>Algorithmen
 

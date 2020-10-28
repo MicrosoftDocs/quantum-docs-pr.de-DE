@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: eca37202e5fe9b48dcfdec4eeb4ba6cafaac8723
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833522"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691096"
 ---
 # <a name="control-flow-in-no-locq"></a>Ablauf Steuerung in Q#
 
@@ -38,15 +38,15 @@ Er besteht aus dem Schlüsselwort `if` , einem booleschen Ausdruck in Klammern u
 Optional kann eine beliebige Anzahl von else-if-Klauseln befolgt werden, von denen jeder aus dem Schlüsselwort `elif` , einem booleschen Ausdruck in Klammern und einem Anweisungsblock (der _else-if-_ Block) besteht.
 Schließlich kann die Anweisung optional mit einer Else-Klausel abgeschlossen werden, die aus dem Schlüsselwort `else` gefolgt von einem anderen Anweisungsblock (dem _else_ -Block) besteht.
 
-Die `if` Bedingung wird ausgewertet, und wenn der Wert *true*ist, wird der *Then* -Block ausgeführt.
-Wenn die Bedingung *false*ist, wird die erste else-if-Bedingung ausgewertet. Wenn dies zutrifft, wird der *else-if-* Block ausgeführt.
+Die `if` Bedingung wird ausgewertet, und wenn der Wert *true* ist, wird der *Then* -Block ausgeführt.
+Wenn die Bedingung *false* ist, wird die erste else-if-Bedingung ausgewertet. Wenn dies zutrifft, wird der *else-if-* Block ausgeführt.
 Andernfalls wertet der zweite Else-If-Block aus, und dann der dritte, usw., bis entweder eine-Klausel mit einer true-Bedingung gefunden wird oder keine else-if-Klauseln mehr vorhanden sind.
-Wenn die ursprüngliche *if* -Bedingung und alle else-if-Klauseln als *false*ausgewertet werden, wird der *else* -Block ausgeführt, falls angegeben.
+Wenn die ursprüngliche *if* -Bedingung und alle else-if-Klauseln als *false* ausgewertet werden, wird der *else* -Block ausgeführt, falls angegeben.
 
 Beachten Sie, dass der ausgeführte Block in seinem eigenen Bereich ausgeführt wird.
 Bindungen, die innerhalb eines- `if` ,-oder-Blocks erstellt werden, `elif` `else` sind nach Beendigung des-Blocks nicht sichtbar.
 
-Beispiel:
+Ein auf ein Objekt angewendeter
 
 ```qsharp
 if (result == One) {
@@ -69,7 +69,7 @@ if (i == 1) {
 }
 ```
 
-## <a name="for-loop"></a>for-Schleifen
+## <a name="for-loop"></a>for-Schleife
 
 Die- `for` Anweisung unterstützt Iterationen über einen ganzzahligen Bereich oder ein Array.
 Die-Anweisung besteht aus dem `for` -Schlüsselwort, gefolgt von einem Symbol-oder Symbol-Tupel, dem-Schlüsselwort `in` und einem Ausdruck vom Typ `Range` oder Array, alle in Klammern und einem Anweisungsblock.
@@ -129,7 +129,7 @@ dabei `expression` ist ein beliebiger gültiger Ausdruck, der zu einem Wert vom 
 Der Schleifen Text wird ausgeführt, und anschließend wird die Bedingung ausgewertet.
 Wenn die Bedingung true ist, wird die-Anweisung abgeschlossen. Andernfalls wird der Fixup ausgeführt, und die Anweisung wird erneut ausgeführt, beginnend mit dem Schleifen Text.
 
-Alle drei Teile einer RUS-Schleife (der Text, der Test und das Fixup) werden als einzelner Bereich *für jede Wiederholung*behandelt, sodass im Text gebundene Symbole sowohl im Test als auch im Fixup verfügbar sind.
+Alle drei Teile einer RUS-Schleife (der Text, der Test und das Fixup) werden als einzelner Bereich *für jede Wiederholung* behandelt, sodass im Text gebundene Symbole sowohl im Test als auch im Fixup verfügbar sind.
 Wenn Sie die Ausführung des Fixup abschließen, wird der Gültigkeitsbereich für die-Anweisung beendet, sodass im Text-oder Fixup-Bereich vorgenommene Symbol Bindungen in nachfolgenden Wiederholungen nicht verfügbar sind.
 
 Außerdem ist die- `fixup` Anweisung häufig hilfreich, aber nicht immer erforderlich.
@@ -210,7 +210,7 @@ Da alle änderbaren Variablen, die als Teil des Blocks innerhalb von verwendet w
 Die Return-Anweisung beendet die Ausführung eines Vorgangs oder einer Funktion und gibt einen Wert an den Aufrufer zurück.
 Er besteht aus dem Schlüsselwort `return` , gefolgt von einem Ausdruck des entsprechenden Typs und einem abschließenden Semikolon.
 
-Beispiel:
+Ein auf ein Objekt angewendeter
 ```qsharp
 return 1;
 ```
@@ -235,7 +235,7 @@ Die-Anweisung gibt die Zeichenfolge an den klassischen Treiber als Fehlermeldung
 Es gibt keine Einschränkung für die Anzahl der Fail-Anweisungen innerhalb eines Vorgangs.
 Der Compiler gibt möglicherweise eine Warnung aus, wenn-Anweisungen einer Fail-Anweisung innerhalb eines-Blocks folgen.
 
-Beispiel:
+Ein auf ein Objekt angewendeter
 
 ```qsharp
 fail $"Impossible state reached";
@@ -324,7 +324,7 @@ Wichtige programmgesteuerte Features, die in diesem Vorgang angezeigt werden, si
 * Ein komplexerer `fixup` Teil der Schleife, der Quantum-Vorgänge einschließt. 
 * Die Verwendung von- `AssertMeasurementProbability` Anweisungen, um die Wahrscheinlichkeit zu ermitteln, dass der Quantenzustand an bestimmten angegebenen Punkten im Programm gemessen wird.
 
-Weitere Informationen zu den [`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) -und- [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) Vorgängen finden Sie unter [Testen und Debuggen](xref:microsoft.quantum.guide.testingdebugging).
+Weitere Informationen zu den [`AssertMeasurement`](xref:Microsoft.Quantum.Diagnostics.assertmeasurement) -und- [`AssertMeasurementProbability`](xref:Microsoft.Quantum.Diagnostics.assertmeasurementprobability) Vorgängen finden Sie unter [Testen und Debuggen](xref:microsoft.quantum.guide.testingdebugging).
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {

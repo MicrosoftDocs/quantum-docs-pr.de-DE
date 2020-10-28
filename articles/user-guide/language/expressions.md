@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.expressions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9bf28e3854eae1892692d7ca840e1860de2e2934
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e95a7cb9b74136ef9a6f51b4bbc32d1d93c43a0d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835841"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691606"
 ---
 # <a name="expressions-in-no-locq"></a>Ausdrücke in Q#
 
@@ -40,7 +40,7 @@ let bigOne = bigZero + 1L;
 Sie können mit oder ohne Dezimaltrennzeichen, oder mit einem `.` exponentiellen Teil geschrieben werden, der mit "e" oder "e" angegeben wird (nach dem nur ein mögliches negatives Vorzeichen und Dezimalziffern gültig sind).
 Die folgenden `Double` Literale sind gültig: `0.0` , `1.2e5` , `1e-5` .
 
-Wenn ein Array Ausdruck eines beliebigen Elementtyps vorhanden ist, können Sie `Int` mithilfe der integrierten Funktion einen Ausdruck bilden [`Length`](xref:microsoft.quantum.core.length) , wobei der Array Ausdruck in Klammern eingeschlossen ist.
+Wenn ein Array Ausdruck eines beliebigen Elementtyps vorhanden ist, können Sie `Int` mithilfe der integrierten Funktion einen Ausdruck bilden [`Length`](xref:Microsoft.Quantum.Core.Length) , wobei der Array Ausdruck in Klammern eingeschlossen ist.
 Wenn z. b `a` . an ein Array gebunden ist, dann `Length(a)` ist ein ganzzahliger Ausdruck.
 Wenn `b` ein Array von Arrays ganzer Zahlen ist, `Int[][]` dann `Length(b)` ist die Anzahl der Unterarrays in `b` , und `Length(b[1])` die Anzahl von ganzen Zahlen im zweiten Unterarray in `b` .
 
@@ -64,7 +64,7 @@ Bei ganzzahligen und großen ganzzahligen Werten sind Verschiebungen arithmetisc
 Wenn Sie einen negativen Wert entweder nach links oder nach rechts verschieben, ergibt dies eine negative Zahl.
 Das heißt, dass ein Schritt nach links oder rechts verschoben wird, entspricht dem multiplizieren bzw. aufteilen durch 2.
 
-Die ganzzahlige Division und der ganzzahlige Modulo folgen dem Verhalten für negative Zahlen wie c#. Das heißt, dass `a % b` immer das gleiche Vorzeichen wie hat `a` und `b * (a / b) + a % b` immer gleich ist `a` . Zum Beispiel:
+Die ganzzahlige Division und der ganzzahlige Modulo folgen dem Verhalten für negative Zahlen wie c#. Das heißt, dass `a % b` immer das gleiche Vorzeichen wie hat `a` und `b * (a / b) + a % b` immer gleich ist `a` . Beispiel:
 
 |`A` | `B` | `A / B` | `A % B`|
 |:---------:|:----------:|:---------:|:---------:|
@@ -111,13 +111,13 @@ Bei jedem booleschen Ausdruck kann der `not` unäre Operator verwendet werden, u
 
 ## <a name="string-expressions"></a>Zeichenfolgenausdrücke
 
-Q# ermöglicht die Verwendung von Zeichen folgen in der `fail` Anweisung (in der [Ablauf Steuerung](xref:microsoft.quantum.guide.controlflow#fail-statement)erläutert) und in der [`Message`](xref:microsoft.quantum.intrinsic.message) Standardfunktion. Das spezifische Verhalten der letzteren hängt vom verwendeten Simulator ab, schreibt jedoch in der Regel eine Meldung in die Host Konsole, wenn Sie während eines Programms aufgerufen wird Q# .
+Q# ermöglicht die Verwendung von Zeichen folgen in der `fail` Anweisung (in der [Ablauf Steuerung](xref:microsoft.quantum.guide.controlflow#fail-statement)erläutert) und in der [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) Standardfunktion. Das spezifische Verhalten der letzteren hängt vom verwendeten Simulator ab, schreibt jedoch in der Regel eine Meldung in die Host Konsole, wenn Sie während eines Programms aufgerufen wird Q# .
 
 Zeichen folgen in Q# sind entweder Literale oder interpoliert Zeichen folgen.
 
 Zeichenfolgenliterale ähneln in den meisten Sprachen einfachen Zeichenfolgenliteralen: eine Sequenz von Unicode-Zeichen, die in doppelten Anführungszeichen eingeschlossen sind `" "` .
 Verwenden Sie innerhalb einer Zeichenfolge den umgekehrten Schrägstrich, `\` um ein doppeltes Anführungszeichen () mit Escapezeichen `\"` zu versehen, oder um eine neue Zeile ( `\n` ), ein Wagen Rücklauf Zeichen ( `\r` ) oder eine Registerkarte ( `\t` ) einzufügen.
-Zum Beispiel:
+Beispiel:
 
 ```qsharp
 "\"Hello world!\", she said.\n"
@@ -128,7 +128,7 @@ Die Q# Syntax für Zeichen folgen Interpolationen ist eine Teilmenge der c#-Synt
 
 * Wenn Sie ein Zeichenfolgenliteral als interpolierte Zeichenfolge ermitteln möchten, stellen Sie ihm ein `$`-Symbol voran. Zwischen dem `$` und dem `"` , das einen zeichenfolgenliteralvorgang startet, darf kein Leerraum vorhanden sein.
 
-* Im folgenden finden Sie ein einfaches Beispiel, in dem die-Funktion verwendet wird [`Message`](xref:microsoft.quantum.intrinsic.message) , um das Ergebnis einer Maßeinheit zusammen mit anderen Ausdrücken in die Konsole zu schreiben Q# .
+* Im folgenden finden Sie ein einfaches Beispiel, in dem die-Funktion verwendet wird [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) , um das Ergebnis einer Maßeinheit zusammen mit anderen Ausdrücken in die Konsole zu schreiben Q# .
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -189,7 +189,7 @@ Beispielsweise `(1, One)` ist ein `(Int, Result)` Ausdruck.
 
 Abgesehen von Literalen sind die einzigen Tupelausdrücke Symbole, die an Tupelwerte, Array Elemente von tupelarrays und Aufruf Bare Aufrufe gebunden sind, die Tupel zurückgeben.
 
-## <a name="user-defined-type-expressions"></a>Benutzerdefinierte typausdrücke
+## <a name="user-defined-type-expressions"></a>User-Defined typausdrücke
 
 Ein Literalwert eines benutzerdefinierten Typs besteht aus dem Typnamen, gefolgt von einem tupelliteraltyp mit dem basistupeltyp des Typs.
 Wenn z. b. `IntPair` ein benutzerdefinierter Typ ist `(Int, Int)` , der auf basiert, dann `IntPair(2, 3)` ist ein gültiges Literale dieses Typs.
@@ -209,7 +209,7 @@ Der `!` Operator hat eine höhere Rangfolge als alle anderen Operatoren, außer 
 
 Die Rangfolge des `!` Operators hat eine Beeinträchtigung, die möglicherweise nicht offensichtlich ist.
 Wenn eine Funktion oder ein Vorgang einen Wert zurückgibt, der dann entpackt wird, muss der Funktions-oder Vorgangs Ausdruck in Klammern eingeschlossen werden, damit das Argument Tupel an den-Ausdruck gebunden wird, anstatt an den Unwrap-Vorgang.
-Zum Beispiel:
+Beispiel:
 
 ```qsharp
 let f = (Foo(arg))!;    // Calls Foo(arg), then unwraps the result
@@ -237,7 +237,7 @@ In den meisten Fällen ist dies eine Variation von 0 (null).
 
 Bei Qubits und callables, bei denen es sich um Verweise auf Entitäten handelt, gibt es keinen angemessenen Standardwert.
 Daher ist für diese Typen der Standardwert ein ungültiger Verweis, den Sie nicht ohne einen Laufzeitfehler verwenden können, ähnlich wie bei einem NULL-Verweis in Sprachen wie c# oder Java.
-Arrays, die Qubits oder callables enthalten, müssen mit nicht standardmäßigen Werten initialisiert werden, bevor Sie Ihre Elemente sicher verwenden können. Geeignete Initialisierungs Routinen finden Sie unter <xref:microsoft.quantum.arrays> .
+Arrays, die Qubits oder callables enthalten, müssen mit nicht standardmäßigen Werten initialisiert werden, bevor Sie Ihre Elemente sicher verwenden können. Geeignete Initialisierungs Routinen finden Sie unter <xref:Microsoft.Quantum.Arrays> .
 
 Die Standardwerte für jeden Typ lauten:
 

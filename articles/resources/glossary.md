@@ -107,7 +107,7 @@ Ein [Vorgang](xref:microsoft.quantum.glossary#operation) oder eine [Funktion](xr
 
 ## <a name="clifford-group"></a>Clifford-Gruppe
 
-Der Satz von Vorgängen, die die oktanten der [Bloch-Kugel](xref:microsoft.quantum.glossary#bloch-sphere) und Auswirkung Permutationen der [Pauli-Operatoren](xref:microsoft.quantum.glossary#pauli-operators)belegen. Hierzu gehören die Vorgänge [ $ X $ ](xref:microsoft.quantum.intrinsic.x), [ $ Y $ ](xref:microsoft.quantum.intrinsic.y), [ $ Z $ ](xref:microsoft.quantum.intrinsic.z), [ $ H $ ](xref:microsoft.quantum.intrinsic.h) und [ $ S $ ](xref:microsoft.quantum.intrinsic.s).
+Der Satz von Vorgängen, die die oktanten der [Bloch-Kugel](xref:microsoft.quantum.glossary#bloch-sphere) und Auswirkung Permutationen der [Pauli-Operatoren](xref:microsoft.quantum.glossary#pauli-operators)belegen. Hierzu gehören die Vorgänge [ $ X $ ](xref:Microsoft.Quantum.Intrinsic.X), [ $ Y $ ](xref:Microsoft.Quantum.Intrinsic.Y), [ $ Z $ ](xref:Microsoft.Quantum.Intrinsic.Z), [ $ H $ ](xref:Microsoft.Quantum.Intrinsic.H) und [ $ S $ ](xref:Microsoft.Quantum.Intrinsic.S).
 
 ## <a name="controlled"></a>Klimatisiert
 
@@ -150,7 +150,7 @@ Wenn zwei [Zustände](xref:microsoft.quantum.glossary#quantum-state) mit einem V
 
 ## <a name="hadamard"></a>Hadamard
 
-Der Hadamard-Vorgang (auch als "Hadamard Gate or Transform" bezeichnet) agiert mit einem einzelnen [Qubit](xref:microsoft.quantum.glossary#qubit) und versetzt ihn in eine gerade [Superposition](xref:microsoft.quantum.glossary#superposition) von $ \ket { 0 } $ oder $ \ket { 1, } $ Wenn sich das Qubit anfänglich im Zustand "0" befindet $ \ket { } $ . In Q# wird dieser Vorgang durch den vordefinierten [`H`](xref:microsoft.quantum.intrinsic.h) Vorgang angewendet.
+Der Hadamard-Vorgang (auch als "Hadamard Gate or Transform" bezeichnet) agiert mit einem einzelnen [Qubit](xref:microsoft.quantum.glossary#qubit) und versetzt ihn in eine gerade [Superposition](xref:microsoft.quantum.glossary#superposition) von $ \ket { 0 } $ oder $ \ket { 1, } $ Wenn sich das Qubit anfänglich im Zustand "0" befindet $ \ket { } $ . In Q# wird dieser Vorgang durch den vordefinierten [`H`](xref:Microsoft.Quantum.Intrinsic.H) Vorgang angewendet.
 
 ## <a name="immutable"></a>Unveränderlich
 
@@ -182,11 +182,11 @@ Eine Unterroutine, die zur Laufzeit Daten abhängige Informationen für einen Qu
 
 ## <a name="partial-application"></a>Partielle Anwendung
 
-Aufrufen einer [Funktion](xref:microsoft.quantum.glossary#function) oder eines [Vorgangs](xref:microsoft.quantum.glossary#operation) ohne alle erforderlichen Eingaben. Dadurch wird eine neue [Aufruf Bare](xref:microsoft.quantum.glossary#callable) zurückgegeben, bei der nur die fehlenden Parameter (die durch einen Unterstrich angegeben werden) während einer zukünftigen Anwendung bereitgestellt werden müssen. Beispielsweise können Sie mit der-Funktion Sie `MyFunc(x : int, y : int) : int {return x + y;}` teilweise auf eine neue Funktion anwenden `let NewFunc = MyFunc(_, 3)` . Anschließend können Sie die neue Funktion zu einem späteren Zeitpunkt mit dem fehlenden Parameter aufrufen `NewFunc(2)` , der den Wert *5*zurückgibt.  Weitere Informationen finden Sie unter [partielle Anwendung](xref:microsoft.quantum.guide.operationsfunctions#partial-application).
+Aufrufen einer [Funktion](xref:microsoft.quantum.glossary#function) oder eines [Vorgangs](xref:microsoft.quantum.glossary#operation) ohne alle erforderlichen Eingaben. Dadurch wird eine neue [Aufruf Bare](xref:microsoft.quantum.glossary#callable) zurückgegeben, bei der nur die fehlenden Parameter (die durch einen Unterstrich angegeben werden) während einer zukünftigen Anwendung bereitgestellt werden müssen. Beispielsweise können Sie mit der-Funktion Sie `MyFunc(x : int, y : int) : int {return x + y;}` teilweise auf eine neue Funktion anwenden `let NewFunc = MyFunc(_, 3)` . Anschließend können Sie die neue Funktion zu einem späteren Zeitpunkt mit dem fehlenden Parameter aufrufen `NewFunc(2)` , der den Wert *5* zurückgibt.  Weitere Informationen finden Sie unter [partielle Anwendung](xref:microsoft.quantum.guide.operationsfunctions#partial-application).
 
 ## <a name="pauli-operators"></a>Pauli-Operatoren
 
-Ein Satz von drei einheitlichen Matrizen, die als `X` , `Y` und Quantum-Vorgänge bezeichnet werden `Z` . Die Identitätsmatrix $ I $ ist häufig auch in der Gruppe enthalten.  $I = \begin{bmatrix} 1 & 0 \\\\ 0 & 1 \end{bmatrix} $ , $ X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix} $ , $ Y = \begin{bmatrix} 0 & -i \\\\ i & 0 \end{bmatrix} $ , $ Z = \begin{bmatrix} 1 & 0 \\\\ 0 & -1 \end{bmatrix} $ .   Weitere Informationen finden Sie unter [Single-Qubit-Vorgänge](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
+Eine Reihe von 3 2 x 2-einheitlichen Matrizen, die als `X` , `Y` und Quantum-Vorgänge bezeichnet werden `Z` . Die Identitätsmatrix $ I $ ist häufig auch in der Gruppe enthalten.  $I = \begin{bmatrix} 1 & 0 \\\\ 0 & 1 \end{bmatrix} $ , $ X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix} $ , $ Y = \begin{bmatrix} 0 & -i \\\\ i & 0 \end{bmatrix} $ , $ Z = \begin{bmatrix} 1 & 0 \\\\ 0 & -1 \end{bmatrix} $ .   Weitere Informationen finden Sie unter [Single-Qubit-Vorgänge](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
 
 ## <a name="quantum-circuit-diagram"></a>Quantum-Verbindungs Diagramm
 

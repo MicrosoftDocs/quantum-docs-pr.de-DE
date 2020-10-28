@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.types
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c4a3e6563b8cabee87d1db6b9cb1c1f1c1a7131b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 349138984387cc564cca18ea09c7bf161524b0b6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835824"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691622"
 ---
 # <a name="types-in-no-locq"></a>Typen in Q#
 
@@ -22,7 +22,7 @@ In diesem Artikel werden das Q# Typmodell und die Syntax zum Angeben von und arb
 
 Beachten Sie, dass Q# eine *stark typisierte* Sprache ist, sodass der Compiler durch eine sorgfältige Verwendung dieser Typen bei der Kompilierung starke Garantien für Programme bereitstellen kann Q# .
 Um die bestmöglichen Garantien zu gewährleisten, müssen Konvertierungen zwischen Typen in Q# explizit mithilfe von Aufrufen von Funktionen erfolgen, die diese Konvertierung Ausdrücken. 
-Q# stellt eine Vielzahl solcher Funktionen als Teil des- <xref:microsoft.quantum.convert> Namespace bereit.
+Q# stellt eine Vielzahl solcher Funktionen als Teil des- <xref:Microsoft.Quantum.Convert> Namespace bereit.
 Auf der anderen Seite werden Upcasts in kompatible Typen implizit durchgeführt. 
 
 Q# stellt beide primitiven Typen bereit, die direkt verwendet werden, und eine Vielzahl von Möglichkeiten, um neue Typen aus anderen Typen zu entwickeln.
@@ -30,7 +30,7 @@ Wir beschreiben alle in den restlichen Abschnitten dieses Artikels.
 
 ## <a name="primitive-types"></a>Primitive Typen
 
-Die Q# Sprache stellt die folgenden *primitiven Typen*bereit, die Sie alle direkt in Programmen verwenden können Q# . Sie können diese primitiven Typen auch verwenden, um neue Typen zu erstellen.
+Die Q# Sprache stellt die folgenden *primitiven Typen* bereit, die Sie alle direkt in Programmen verwenden können Q# . Sie können diese primitiven Typen auch verwenden, um neue Typen zu erstellen.
 
 - Der- `Int` Typ stellt eine 64-Bit-Ganzzahl mit Vorzeichen dar, z `2` . b., `107` , `-5` .
 - Der- `BigInt` Typ stellt eine Ganzzahl mit Vorzeichen beliebiger Größe dar, z `2L` . b., `107L` , `-5L` .
@@ -126,14 +126,14 @@ Beispielsweise `(7)` ist ein Ausdruck vom Typ `Int` , `([1,2,3])` ist ein Ausdru
 
 Dies bedeutet insbesondere, dass Sie einen Vorgang oder eine Funktion anzeigen können, deren Eingabe-Tupel oder ausgabetupeltyp ein Feld hat, das ein einzelnes Argument annimmt oder einen einzelnen Wert zurückgibt.
 
-Diese Eigenschaft wird als Übereinstimmung mit einem _Singleton-Tupel_bezeichnet.
+Diese Eigenschaft wird als Übereinstimmung mit einem _Singleton-Tupel_ bezeichnet.
 
 
 ## <a name="user-defined-types"></a>Benutzerdefinierte Typen
 
 Eine benutzerdefinierte Typdeklaration besteht aus dem Schlüsselwort `newtype` , gefolgt vom Namen des benutzerdefinierten Typs, einer `=` , einer gültigen Typspezifikation und einem abschließenden Semikolon.
 
-Zum Beispiel:
+Beispiel:
 
 ```qsharp
 newtype PairOfInts = (Int, Int);
@@ -199,7 +199,7 @@ function PrintedMessage(value : Nested) : Unit {
 
 Ein einzelner Unwrap-Operator entpackt eine umschließende Schicht. Verwenden Sie mehrere Unwrap-Operatoren, um auf einen multipliziert umschließenden Wert zuzugreifen.
 
-Zum Beispiel:
+Beispiel:
 
 ```qsharp
 newtype WrappedInt = Int;
@@ -259,8 +259,8 @@ Im Allgemeinen haben benutzerdefinierte Typen möglicherweise keine zyklischen A
 
 Mit den Typen `'Tinput` und `'Tresult` :
 
-* `('Tinput => 'Tresult)` ist der Basistyp für jeden *Vorgang*, z `((Qubit, Pauli) => Result)` . b..
-* `('Tinput -> 'Tresult)` ist der Basistyp für jede *Funktion*, z `(Int -> Int)` . b.. 
+* `('Tinput => 'Tresult)` ist der Basistyp für jeden *Vorgang* , z `((Qubit, Pauli) => Result)` . b..
+* `('Tinput -> 'Tresult)` ist der Basistyp für jede *Funktion* , z `(Int -> Int)` . b.. 
 
 Diese werden als *Signatur* der aufrufenden bezeichnet.
 
@@ -282,13 +282,13 @@ Wenn z. b. die Ausführung des Vorgangs auf dem Zustand anderer Qubits basiert, 
 Um Unterstützung für den `Controlled` -und/oder- `Adjoint` Funktions tüktor in einem Vorgangstyp zu benötigen, müssen Sie eine Anmerkung hinzufügen, die die entsprechenden Merkmale angibt.
 Die-Anmerkung `is Ctl` (z. b. `(Qubit => Unit is Ctl)` ) gibt an, dass der Vorgang steuerbar ist. Das heißt, der Run basiert auf dem Zustand eines anderen Qubit oder Qubits. Entsprechend gibt die-Anmerkung `is Adj` an, dass der Vorgang über ein Adjoint-Zeichen verfügt, d. h., es kann "invertiert" werden, sodass das Fortsetzen eines Vorgangs und dessen Adjoint in einen Zustand den Zustand unverändert lässt. 
 
-Wenn Sie festlegen möchten, dass ein Vorgang dieses Typs sowohl das-als `Adjoint` auch das-Funktor unterstützt, `Controlled` können Sie dies als Ausdrücken `(Qubit => Unit is Adj + Ctl)` . Der integrierte Pauli- <xref:microsoft.quantum.intrinsic.x> Vorgang hat z. b. den-Typ `(Qubit => Unit is Adj + Ctl)` . 
+Wenn Sie festlegen möchten, dass ein Vorgang dieses Typs sowohl das-als `Adjoint` auch das-Funktor unterstützt, `Controlled` können Sie dies als Ausdrücken `(Qubit => Unit is Adj + Ctl)` . Der integrierte Pauli- <xref:Microsoft.Quantum.Intrinsic.X> Vorgang hat z. b. den-Typ `(Qubit => Unit is Adj + Ctl)` . 
 
 Ein Vorgangstyp, der keine Funktions tüktoren unterstützt, wird von seinem Eingabe-und Ausgabetyp allein angegeben, ohne dass zusätzliche Anmerkungen vorhanden sind.
 
-### <a name="type-parameterized-functions-and-operations"></a>Typparametrisierte Funktionen und Vorgänge
+### <a name="type-parameterized-functions-and-operations"></a>Type-Parameterized Funktionen und Vorgänge
 
-Aufruf Bare Typen können *Typparameter*enthalten.
+Aufruf Bare Typen können *Typparameter* enthalten.
 Verwenden Sie ein Symbol, das mit einem einfachen Anführungszeichen versehen ist, um einen Typparameter anzugeben. beispielsweise `'A` ist ein gültiger Typparameter.
 Weitere Informationen und Details zum Definieren von typparametrisierten Aufruf baren aufrufen finden Sie unter [Vorgänge und Funktionen in Q# ](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables).
 

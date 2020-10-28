@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 82882f01d1b5c036faee71f18a18b2595107ddb7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 036896a33fa02db671a5fd07421160df164bd41d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835909"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690784"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Quantum Development Kit (QDK)-Simulator (QDK)
 
@@ -67,7 +67,7 @@ Verwenden Sie den I Q# Magic-Befehl " [% deffoli](xref:microsoft.quantum.iqsharp
 Der Schalter "-Schalter" unterstützt Folgendes:
 
 * Drehungen und exponentialweise, z. b. `R` und `Exp` , wenn der resultierende Vorgang `X` oder die Identitätsmatrix ist.
-* Messungen und [Assert](xref:microsoft.quantum.diagnostics.assertmeasurement) -Vorgänge, aber nur in der Pauli- `Z` Basis. Beachten Sie, dass die Wahrscheinlichkeit eines Messvorgangs immer entweder **0** oder **1**ist. Es gibt keine Zufälligkeit im-Simulator von "".
+* Messungen und [Assert](xref:Microsoft.Quantum.Diagnostics.AssertMeasurement) -Vorgänge, aber nur in der Pauli- `Z` Basis. Beachten Sie, dass die Wahrscheinlichkeit eines Messvorgangs immer entweder **0** oder **1** ist. Es gibt keine Zufälligkeit im-Simulator von "".
 * `DumpMachine` -und- `DumpRegister` Funktionen.
 Beide Funktionen geben den aktuellen `Z` Status jedes Qubit aus, ein Qubit pro Zeile.
 
@@ -77,14 +77,14 @@ Standardmäßig ordnet eine- `ToffoliSimulator` Instanz Speicherplatz für 65.53
 Wenn für Ihren Algorithmus mehr Qubits erforderlich sind, können Sie die Qubit-Anzahl angeben, indem Sie dem Konstruktor einen Wert für den Parameter bereitstellen `qubitCount` .
 Für jedes zusätzliche Qubit ist nur ein Byte Arbeitsspeicher erforderlich, sodass die Anzahl der benötigten Qubits nicht signifikant ist.
 
-Zum Beispiel:
+Beispiel:
 
 ```csharp
     var sim = new ToffoliSimulator(qubitCount: 1000000);
     var res = myLargeOperation.Run(sim).Result;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Quantum-Ressourcenschätzung](xref:microsoft.quantum.machines.resources-estimator)
 - [Quantum-Ablauf Verfolgungs Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)

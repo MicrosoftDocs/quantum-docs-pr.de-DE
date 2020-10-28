@@ -9,12 +9,12 @@ uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 05506f4099de754cd02d81fbd9200f2de091e37e
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 81fba0c52c854d61f9143659795fb4d3c3cee8b9
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759731"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691538"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Abrufen von Energiestandschätzungen
 Das Einschätzen der Werte von Energie Stufen ist eine der Hauptanwendungen der Quantum-Chemie. In diesem Artikel wird beschrieben, wie Sie dies für das kanonische Beispiel für den molekularen Wasserstoff durchführen können. Das in diesem Abschnitt referenzierte Beispiel befindet sich [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) im Repository "Chemistry Samples". Ein visuelles Beispiel, in dem die Ausgabe dargestellt wird, ist die [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) Demo.
@@ -44,7 +44,7 @@ Der erste Schritt ist das Erstellen der hamiltona, die den molekularen Wassersto
     var fermionHamiltonian = new OrbitalIntegralHamiltonian(orbitalIntegrals).ToFermionHamiltonian();
 ```
 
-Zum Simulieren der hamiltona müssen die Fermion-Operatoren in Qubit-Operatoren umgerechnet werden. Diese Konvertierung erfolgt wie folgt über die Jordanien-Wigner-Codierung:
+Zum Simulieren der hamiltona müssen die Fermion-Operatoren in Qubit-Operatoren umgerechnet werden. Diese Konvertierung erfolgt über die Jordan-Wigner Codierung wie folgt:
 
 ```csharp
     // The Jordan-Wigner encoding converts the fermion Hamiltonian, 
@@ -83,7 +83,7 @@ let integratorOrder = 4;
 let (nQubits, (rescale, oracle)) =  TrotterStepOracle (qSharpData, stepSize, integratorOrder);
 ```
 
-An diesem Punkt können Sie die [Phasen Schätz Algorithmen](xref:microsoft.quantum.libraries.characterization) der Standardbibliothek verwenden, um die Grund Zustands Energie mithilfe der vorherigen Simulation zu erlernen. Dies erfordert, dass eine gute Näherung für den Quantum-Grundzustand vorbereitet wird. Vorschläge für solche Näherungen werden im Schema bereitgestellt [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) . Ohne diese Vorschläge fügt der Standardansatz jedoch eine Reihe von Elektronen hinzu, `hamiltonian.NElectrons` um die diagonalen 1-Elektronen-ergriffsenergien zu minimieren. Die Funktionen und Vorgänge der Phasen Schätzung werden in der docfx-Notation im [Microsoft. Quantum. Charakterisierung](xref:microsoft.quantum.characterization) -Namespace bereitgestellt.
+An diesem Punkt können Sie die [Phasen Schätz Algorithmen](xref:microsoft.quantum.libraries.characterization) der Standardbibliothek verwenden, um die Grund Zustands Energie mithilfe der vorherigen Simulation zu erlernen. Dies erfordert, dass eine gute Näherung für den Quantum-Grundzustand vorbereitet wird. Vorschläge für solche Näherungen werden im Schema bereitgestellt [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) . Ohne diese Vorschläge fügt der Standardansatz jedoch eine Reihe von Elektronen hinzu, `hamiltonian.NElectrons` um die diagonalen 1-Elektronen-ergriffsenergien zu minimieren. Die Funktionen und Vorgänge der Phasen Schätzung werden in der docfx-Notation im [Microsoft. Quantum. Charakterisierung](xref:Microsoft.Quantum.Characterization) -Namespace bereitgestellt.
 
 Der folgende Code Ausschnitt zeigt, wie die echtzeitentwicklung durch die Simulations Bibliothek für die Chemie in die Quantum-Phasen-Schätzung integriert wird.
 

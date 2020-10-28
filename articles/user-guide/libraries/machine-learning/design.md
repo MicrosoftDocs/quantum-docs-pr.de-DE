@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.machine-learning.design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3515279dd4d03b2a512035af0b13e084dd91f9dc
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 221479e616ff7a03c4ac20e0062125660314e95b
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835705"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691149"
 ---
 # <a name="design-your-own-classifier"></a>Entwerfen Ihres eigenen Klassifizierers
 
@@ -28,7 +28,7 @@ Wie bei klassischem Deep Learning gibt es keine allgemeine Regel für die Auswah
 
 ## <a name="how-to-build-a-classifier-with-q"></a>Erstellen eines Klassifizierers mit Q\#
 
-Zum Erstellen einer Klassifizierer werden parametegesteuerte Rotationen in unserem Verbindungs Modell verkettet. Hierfür können wir den [`ControlledRotation`](xref:microsoft.quantum.machinelearning.controlledrotation) in der Quantum-Machine Learning Bibliothek definierten Typ verwenden. Dieser Typ akzeptiert vier Argumente, die bestimmen: den Index des Ziel-Qubit, das Array von Indizes der Steuerelement-Qubits, die Achse der Drehung und den Index des zugeordneten Parameters im Array von Parametern, die das Modell definieren.
+Zum Erstellen einer Klassifizierer werden parametegesteuerte Rotationen in unserem Verbindungs Modell verkettet. Hierfür können wir den [`ControlledRotation`](xref:Microsoft.Quantum.MachineLearning.ControlledRotation) in der Quantum-Machine Learning Bibliothek definierten Typ verwenden. Dieser Typ akzeptiert vier Argumente, die bestimmen: den Index des Ziel-Qubit, das Array von Indizes der Steuerelement-Qubits, die Achse der Drehung und den Index des zugeordneten Parameters im Array von Parametern, die das Modell definieren.
 
 Sehen wir uns ein Beispiel für einen Klassifizierer an. Im [Halbmond Beispiel](https://github.com/microsoft/Quantum/tree/main/samples/machine-learning/half-moons)finden Sie den folgenden Klassifizierer, der in der Datei definiert ist `Training.qs` .
 
@@ -47,7 +47,7 @@ Sehen wir uns ein Beispiel für einen Klassifizierer an. Im [Halbmond Beispiel](
     }
  ```
 
-Hier definieren wir eine Funktion, die ein Array von Elementen zurückgibt `ControlledRotation` , das mit einem Array von Parametern verknüpft ist, und ein Bias definiert das [`SequentialModel`](xref:microsoft.quantum.machinelearning.sequentialmodel) . Dieser Typ ist in der Quantum-Machine Learning Bibliothek von grundlegender Bedeutung und definiert den Klassifizierer. Die in der obigen Funktion definierte Verbindung ist Teil eines Klassifizierers, in dem jede Stichprobe des Datasets zwei Funktionen enthält. Daher benötigen wir nur zwei Qubits. Die grafische Darstellung der Verbindung lautet wie folgt:
+Hier definieren wir eine Funktion, die ein Array von Elementen zurückgibt `ControlledRotation` , das mit einem Array von Parametern verknüpft ist, und ein Bias definiert das [`SequentialModel`](xref:Microsoft.Quantum.MachineLearning.SequentialModel) . Dieser Typ ist in der Quantum-Machine Learning Bibliothek von grundlegender Bedeutung und definiert den Klassifizierer. Die in der obigen Funktion definierte Verbindung ist Teil eines Klassifizierers, in dem jede Stichprobe des Datasets zwei Funktionen enthält. Daher benötigen wir nur zwei Qubits. Die grafische Darstellung der Verbindung lautet wie folgt:
 
  ![Beispiel für Verbindungs Modell](~/media/circuit_model_1.PNG)
 
@@ -55,11 +55,11 @@ Beachten Sie, dass die Vorgänge der Quantum Machine Learning Library standardm�
 
 ## <a name="use-the-library-functions-to-write-layers-of-gates"></a>Verwenden der Bibliotheksfunktionen zum Schreiben von Ebenen von Gates
 
-Angenommen, wir verfügen über ein DataSet mit 784-Features pro Instanz, z. b. Bilder mit 28 × 28 Pixeln wie dem mnist-DataSet. In diesem Fall wird die Breite der Verbindung so groß, dass das manuelle Schreiben jedes einzelnen Gates zu einer möglichen, aber unpraktischen Aufgabe wird. Aus diesem Grund stellt die Quantum-Machine Learning Bibliothek eine Reihe von Tools zum automatischen Generieren von Ebenen von parametersierten Rotationen bereit. Die-Funktion gibt beispielsweise [`LocalRotationsLayer`](xref:microsoft.quantum.machinelearning.localrotationslayer) ein Array von unkontrollierten Single-Qubit-Drehungen an einer gegebenen Achse zurück, wobei für jedes Qubit im Register jeweils eine Drehung durch einen anderen Modellparameter angegeben wird. Gibt beispielsweise `LocalRotationsLayer(4, X)` den folgenden Satz von Gates zurück:
+Angenommen, wir verfügen über ein DataSet mit 784-Features pro Instanz, z. b. Bilder mit 28 × 28 Pixeln wie dem mnist-DataSet. In diesem Fall wird die Breite der Verbindung so groß, dass das manuelle Schreiben jedes einzelnen Gates zu einer möglichen, aber unpraktischen Aufgabe wird. Aus diesem Grund stellt die Quantum-Machine Learning Bibliothek eine Reihe von Tools zum automatischen Generieren von Ebenen von parametersierten Rotationen bereit. Die-Funktion gibt beispielsweise [`LocalRotationsLayer`](xref:Microsoft.Quantum.MachineLearning.LocalRotationsLayer) ein Array von unkontrollierten Single-Qubit-Drehungen an einer gegebenen Achse zurück, wobei für jedes Qubit im Register jeweils eine Drehung durch einen anderen Modellparameter angegeben wird. Gibt beispielsweise `LocalRotationsLayer(4, X)` den folgenden Satz von Gates zurück:
 
  ![Lokale rotationsebene](~/media/local_rotations_layer.PNG)
 
-Wir empfehlen Ihnen, die [API-Referenz der Quantum Machine Learning Library](xref:microsoft.quantum.machinelearning) zu erkunden, um alle verfügbaren Tools zum Optimieren des Leitungs Entwurfs zu ermitteln.
+Wir empfehlen Ihnen, die [API-Referenz der Quantum Machine Learning Library](xref:Microsoft.Quantum.MachineLearning) zu erkunden, um alle verfügbaren Tools zum Optimieren des Leitungs Entwurfs zu ermitteln.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

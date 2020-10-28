@@ -89,7 +89,7 @@ Diese Gate-Sequenz ist von grundlegender Bedeutung für das Quantum Computing, d
 
 $$\mathrm{CNOT } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } } \left ( \ket { 00 }  +  \ket { 11 } \right ),$$
 
-Vorgänge mit dieser oder einer größeren Komplexität sind bei Quantum-Algorithmen und der Quantum-Fehlerkorrektur universell. Daher sollte Sie als eine einfache Methode für die Visualisierung bezeichnet werden, die als *Quantum*-Verbindungs Diagramm bezeichnet wird.
+Vorgänge mit dieser oder einer größeren Komplexität sind bei Quantum-Algorithmen und der Quantum-Fehlerkorrektur universell. Daher sollte Sie als eine einfache Methode für die Visualisierung bezeichnet werden, die als *Quantum* -Verbindungs Diagramm bezeichnet wird.
 Das Verbindungs Diagramm zum Vorbereiten dieses maximale entkoppelt Quantum-Zustands lautet wie folgt:
 
 <!--- ![](.\media\1.svg) --->
@@ -109,7 +109,7 @@ Beispielsweise das Symbol
 <!--Keine Möglichkeit finden, diese problemlos zu zentrieren... wahrscheinlich ist eine Erweiterung erforderlich:-->
 ![Symbol für einen Hadamard-Vorgang, der auf einem Single-Qubit-Register agiert](~/media/2.svg)
 
-ist ein [Hadamard](xref:microsoft.quantum.intrinsic.h) -Vorgang, der auf einem Single-Qubit-Register agiert.
+ist ein [Hadamard](xref:Microsoft.Quantum.Intrinsic.H) -Vorgang, der auf einem Single-Qubit-Register agiert.
 
 Quantum-Gates werden in chronologischer Reihenfolge mit dem am weitesten links gerichteten Tor sortiert, wenn das Gate zuerst auf die Qubits angewendet wird.
 Mit anderen Worten: Wenn Sie die Drähte mit dem Quantum-Zustand betrachten, bringen die Drähte den Quantenzustand durch die einzelnen Gates im Diagramm von links nach rechts.
@@ -150,7 +150,7 @@ Im Allgemeinen werden solche kontrollierten Vorgänge in Leitungs Diagrammen als
 ![Leitungs Diagramm eines einzeln kontrollierten Gates](~/media/5.svg)
 
 Hier gibt der schwarze Kreis das Quantum-Bit an, auf dem das Gate gesteuert wird, und ein vertikales Netzwerk gibt den einheitlichen an, der angewendet wird, wenn das Steuerelement-Qubit den Wert $ 1 annimmt $ .
-In den Sonderfällen, in denen $ g = X $ und $ g = Z enthalten $ sind, wird die folgende Notation eingeführt, um die kontrollierte Version der Gates zu beschreiben (Beachten Sie, dass das gesteuerte X-Gate das [ $ CNOT $ Gate](xref:microsoft.quantum.intrinsic.cnot)ist):
+In den Sonderfällen, in denen $ g = X $ und $ g = Z enthalten $ sind, wird die folgende Notation eingeführt, um die kontrollierte Version der Gates zu beschreiben (Beachten Sie, dass das gesteuerte X-Gate das [ $ CNOT $ Gate](xref:Microsoft.Quantum.Intrinsic.CNOT)ist):
 
 <!--- ![](.\media\6.svg) --->
 <!--Keine Möglichkeit finden, diese problemlos zu zentrieren... wahrscheinlich ist eine Erweiterung erforderlich:-->
@@ -175,7 +175,7 @@ Eine solche unter Leitung sieht insbesondere wie folgt aus:
 <!--Keine Möglichkeit finden, diese problemlos zu zentrieren... wahrscheinlich ist eine Erweiterung erforderlich:-->
 ![Symbol, das einen Messungs Vorgang darstellt](~/media/7.svg)
 
-Q# implementiert zu diesem Zweck einen [Measure-Operator](xref:microsoft.quantum.intrinsic.measure) .
+Q# implementiert zu diesem Zweck einen [Measure-Operator](xref:Microsoft.Quantum.Intrinsic.Measure) .
 Weitere Informationen finden Sie im [Abschnitt zu Messungen](xref:microsoft.quantum.libraries.standard.prelude#measurements) .
 
 Ebenso wird die unter Leitung

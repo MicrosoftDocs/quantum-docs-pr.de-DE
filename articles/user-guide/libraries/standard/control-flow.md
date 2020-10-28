@@ -9,14 +9,14 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1cfef50cf2bbecd2043972a662edd8120c5570ec
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: ad107f5c65a4bf368d12d30e4a72786f2076205c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835620"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690869"
 ---
-# <a name="higher-order-control-flow"></a>Ablauf Steuerung höherer Ordnung #
+# <a name="higher-order-control-flow"></a>Higher-Order Ablauf Steuerung #
 
 Eine der Hauptrollen der Standardbibliothek besteht darin, die algorithmischen Ideen auf hoher Ebene einfacher als [Quantum-Programme](https://en.wikipedia.org/wiki/Quantum_programming)auszudrücken.
 Folglich stellt der Q# Kanon eine Vielzahl verschiedener flowsteuerungskonstrukte bereit, die jeweils mithilfe der partiellen Anwendung von Funktionen und Vorgängen implementiert werden.
@@ -38,7 +38,7 @@ for (idxQubit in 0..nQubits - 2) {
 }
 ```
 
-Ausgedrückt in Bezug auf <xref:microsoft.quantum.canon.applytoeachca> -und-Array Bearbeitungsfunktionen wie <xref:microsoft.quantum.arrays.zip> , ist dies jedoch viel kürzer und leichter zu lesen:
+Ausgedrückt in Bezug auf <xref:Microsoft.Quantum.Canon.ApplyToEachCA> -und-Array Bearbeitungsfunktionen wie <xref:Microsoft.Quantum.Arrays.Zipped> , ist dies jedoch viel kürzer und leichter zu lesen:
 
 ```qsharp
 ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
@@ -50,7 +50,7 @@ Im restlichen Teil dieses Abschnitts werden einige Beispiele für die Verwendung
 
 Eine der primären Abstraktionen, die von der Canon bereitgestellt werden, ist die der Iterationen.
 Nehmen Sie zum Beispiel eine einheitliche Form $U \otimes u \otimes \cdots \otimes u $ for a Single-Qubit einheitlicher $U $.
-In Q# können wir dies verwenden <xref:microsoft.quantum.arrays.indexrange> , um dies als eine `for` Schleife über ein Register darzustellen:
+In Q# können wir dies verwenden <xref:Microsoft.Quantum.Arrays.IndexRange> , um dies als eine `for` Schleife über ein Register darzustellen:
 
 ```qsharp
 /// # Summary
@@ -83,16 +83,16 @@ ApplyToEachCA(Adjoint U, register);
 ```
 
 Dies bedeutet insbesondere, dass Aufrufe von `ApplyToEachCA` in Vorgängen angezeigt werden können, für die eine Adjoint-Spezialisierung automatisch generiert wird.
-Ebenso <xref:microsoft.quantum.canon.applytoeachindex> eignet sich für die Darstellung von Mustern im Formular `U(0, targets[0]); U(1, targets[1]); ...` und bietet Versionen für jede Kombination von Funktoren, die von der Eingabe unterstützt werden.
+Ebenso <xref:Microsoft.Quantum.Canon.ApplyToEachIndex> eignet sich für die Darstellung von Mustern im Formular `U(0, targets[0]); U(1, targets[1]); ...` und bietet Versionen für jede Kombination von Funktoren, die von der Eingabe unterstützt werden.
 
 > [!TIP]
 > `ApplyToEach` ist typparametrisiert, sodass Sie mit-Vorgängen verwendet werden kann, die andere Eingaben als annehmen `Qubit` .
-> Nehmen wir beispielsweise an, dass `codeBlocks` ein Array von <xref:microsoft.quantum.errorcorrection.logicalregister> Werten ist, die wieder hergestellt werden müssen.
+> Nehmen wir beispielsweise an, dass `codeBlocks` ein Array von <xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister> Werten ist, die wieder hergestellt werden müssen.
 > Dann `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` wendet den Fehler Behebungs Code `code` und die Wiederherstellungs Funktion `recoveryFn` unabhängig voneinander auf jeden Block an.
 > Dies gilt auch für klassische Eingaben: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` wendet eine Drehung von $ \pi/$2 über $X $ an, gefolgt von einer Drehung $pi/$3 über $Y $.
 
 Der Q# Kanon bietet auch Unterstützung für klassische Enumerationsmuster, die der funktionalen Programmierung vertraut sind.
-Implementiert beispielsweise <xref:microsoft.quantum.arrays.fold> das Muster $f (f (s \_ {\text{Initial}}, x \_ 0), x \_ 1), \dots) $, um eine Funktion über eine Liste zu reduzieren.
+Implementiert beispielsweise <xref:Microsoft.Quantum.Arrays.Fold> das Muster $f (f (s \_ {\text{Initial}}, x \_ 0), x \_ 1), \dots) $, um eine Funktion über eine Liste zu reduzieren.
 Dieses Muster kann verwendet werden, um Summen, Produkte, Minima, Maxima und andere Funktionen zu implementieren:
 
 ```qsharp
@@ -103,12 +103,12 @@ function Sum(xs : Int[]) {
 }
 ```
 
-Ebenso können Funktionen wie <xref:microsoft.quantum.arrays.mapped> und <xref:microsoft.quantum.arrays.mappedbyindex> verwendet werden, um funktionale Programmier Konzepte in auszudrücken Q# .
+Ebenso können Funktionen wie <xref:Microsoft.Quantum.Arrays.Mapped> und <xref:Microsoft.Quantum.Arrays.MappedByIndex> verwendet werden, um funktionale Programmier Konzepte in auszudrücken Q# .
 
 ## <a name="composing-operations-and-functions"></a>Verfassen von Vorgängen und Funktionen ##
 
 Die von der Canon angebotenen Ablaufsteuerungs-Konstrukte nehmen Vorgänge und Funktionen als Eingaben an, sodass es hilfreich ist, mehrere Vorgänge oder Funktionen in einem einzigen Aufruf baren zu verfassen.
-Beispielsweise ist das Muster $UVU ^ {\dagger} $ bei der Quantum-Programmierung äußerst häufig, sodass der Kanon den Vorgang <xref:microsoft.quantum.canon.applywith> als Abstraktion für dieses Muster bereitstellt.
+Beispielsweise ist das Muster $UVU ^ {\dagger} $ bei der Quantum-Programmierung äußerst häufig, sodass der Kanon den Vorgang <xref:Microsoft.Quantum.Canon.ApplyWith> als Abstraktion für dieses Muster bereitstellt.
 Diese Abstraktion ermöglicht auch ein effizienteres durcharbeiten in Verbindungen, da `Controlled` die Reihenfolge der Sequenz `U(qubit); V(qubit); Adjoint U(qubit);` nicht auf jede Weise agieren muss `U` .
 Um dies zu sehen, lassen Sie $c (U) $ die einheitliche Darstellung `Controlled U([control], target)` aus, und lassen Sie $c (V) $ auf die gleiche Weise definiert werden.
 Für einen beliebigen Status $ \ket{\psi} $, \begin{align} c (u) c (V) c (u) ^ \dagger \ket {1} \otimes \ket{\psi} & = \ket {1} \otimes (UVU ^ {\dagger} \ket{\psi}) \\ \\ & = (\boldone \otimes u) (c (V)) (\boldone \otimes u ^ \dagger) \ket {1} \otimes \ket{\psi}.
@@ -126,7 +126,7 @@ Da das Steuern von Vorgängen im allgemeinen teuer sein kann, kann die Verwendun
 >     ('T => Unit is Adj + Ctl), 'T) => Unit
 > ```
 
-Ebenso <xref:microsoft.quantum.canon.bound> erzeugt Vorgänge, die wiederum eine Sequenz anderer Vorgänge anwenden.
+Ebenso <xref:Microsoft.Quantum.Canon.Bound> erzeugt Vorgänge, die wiederum eine Sequenz anderer Vorgänge anwenden.
 Beispielsweise sind die folgenden Punkte äquivalent:
 
 ```qsharp
@@ -141,7 +141,7 @@ Das Kombinieren mit Iterations Mustern kann dies besonders nützlich machen:
 ApplyWith(ApplyToEach(Bound([H, X]), _), QFT, _);
 ```
 
-### <a name="time-ordered-composition"></a>Zeit geordnete Komposition ###
+### <a name="time-ordered-composition"></a>Time-Ordered Komposition ###
 
 Wir können noch weiter gehen, indem wir die Fluss Steuerung in Bezug auf partielle Anwendungs-und klassische Funktionen betrachten und auch ziemlich ausgereifte Quantum-Konzepte im Hinblick auf die klassische Fluss Steuerung modellieren.
 Diese Analogie wird durch die Erkennung präziser, dass einheitliche Operatoren genau den Nebeneffekten von aufrufenden Vorgängen entsprechen, sodass jede Zerlegung einheitlicher Operatoren in Bezug auf andere einheitliche Operatoren die Erstellung einer bestimmten Aufruf Sequenz für klassische Unterroutinen entspricht, die Anweisungen ausgeben, die als bestimmte einheitliche Operatoren fungieren.
@@ -162,9 +162,9 @@ U(1, time / Float(nSteps), target);
 // ...
 ```
 
-An diesem Punkt können wir nun die –-Erweiterung "Trotter" *ohne Verweis auf die Quantum-Mechanik*in Grund haben.
+An diesem Punkt können wir nun die –-Erweiterung "Trotter" *ohne Verweis auf die Quantum-Mechanik* in Grund haben.
 Die Erweiterung ist ein sehr spezielles Iterations Muster, das durch "$ \eqref {EQ: Trotter-Suzuki-0} $" motiviert ist.
-Dieses Iterations Muster wird implementiert von <xref:microsoft.quantum.canon.decomposeintotimestepsca> :
+Dieses Iterations Muster wird implementiert von <xref:Microsoft.Quantum.Canon.DecomposedIntoTimestepsCA> :
 
 ```qsharp
 // The 2 indicates how many terms we need to decompose,
@@ -180,7 +180,7 @@ Die Signatur von `DecomposeIntoTimeStepsCA` folgt einem allgemeinen Muster in Q#
 Schließlich baut der Kanon auf dem `Controlled` Funktor auf, indem er zusätzliche Möglichkeiten für die Bedingung von Quantum-Vorgängen bereitstellt.
 Es ist üblich, insbesondere bei der Quantum-Arithmetik, Vorgänge in anderen Compute-Zuständen als $ \ket{0\cdots 0} $ auszuführen.
 Mithilfe der oben eingeführten Steuerungs Vorgänge und-Funktionen können wir in einer einzelnen Anweisung allgemeinere Quantum-Bedingungen verwenden.
-<xref:microsoft.quantum.canon.controlledonbitstring>Sehen wir uns nun an, wie dies geschieht (Sans-Typparameter), und dann werden die Teile nacheinander unterbricht.
+<xref:Microsoft.Quantum.Canon.ControlledOnBitString>Sehen wir uns nun an, wie dies geschieht (Sans-Typparameter), und dann werden die Teile nacheinander unterbricht.
 Als erstes müssen wir einen Vorgang definieren, der tatsächlich den Schwerpunkt der Implementierung des Steuer Elements auf willkürlichen Berechnungsbasis Zuständen leistet.
 Dieser Vorgang wird jedoch nicht direkt aufgerufen. daher fügen wir `_` am Anfang des Namens ein, um anzugeben, dass es sich um eine Implementierung eines anderen Konstrukts an anderer Stelle handelt.
 
@@ -212,8 +212,8 @@ Diese Konstruktion ist genau `ApplyWith` , daher wird der Text des neuen Vorgang
 }
 ```
 
-Hier haben wir verwendet, <xref:microsoft.quantum.canon.applypaulifrombitstring> um $P $ anzuwenden, um das Ziel teilweise für die Verwendung mit anzuwenden `ApplyWith` .
-Beachten Sie jedoch, dass wir die *Steuer* Element Registrierung in das gewünschte Formular umwandeln müssen, sodass wir den inneren Vorgang `(Controlled oracle)` für das *Ziel*teilweise anwenden.
+Hier haben wir verwendet, <xref:Microsoft.Quantum.Canon.ApplyPauliFromBitString> um $P $ anzuwenden, um das Ziel teilweise für die Verwendung mit anzuwenden `ApplyWith` .
+Beachten Sie jedoch, dass wir die *Steuer* Element Registrierung in das gewünschte Formular umwandeln müssen, sodass wir den inneren Vorgang `(Controlled oracle)` für das *Ziel* teilweise anwenden.
 Dadurch `ApplyWith` wird das Steuerelement in der Klammer mit $P $, genau wie gewünscht, in eine eckige Klammer eingefügt.
 
 An diesem Punkt könnten wir zwar das tun, aber es ist nicht zu erwarten, dass unser neuer Vorgang nicht wie das Anwenden des `Controlled` funktors funktioniert.
