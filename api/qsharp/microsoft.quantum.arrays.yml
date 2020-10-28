@@ -1,0 +1,166 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Bei Angabe eines Arrays und eines Prädikats, das für die Elemente des Arrays definiert ist, und überprüft, ob alle Elemente des Arrays dem Prädikat entsprechen.
+  uid: Microsoft.Quantum.Arrays.All
+- summary: Bei Angabe eines Arrays und eines Prädikats, das für die Elemente des Arrays definiert ist, wird von überprüft, ob mindestens ein Element des Arrays dem Prädikat entspricht.
+  uid: Microsoft.Quantum.Arrays.Any
+- summary: Teilt ein Array in mehrere Teile der gleichen Länge.
+  uid: Microsoft.Quantum.Arrays.Chunks
+- summary: Extrahiert eine Spalte aus einer Matrix.
+  uid: Microsoft.Quantum.Arrays.ColumnAt
+- summary: Diese Funktion prüft nicht die Form "Matrix".
+  uid: Microsoft.Quantum.Arrays.ColumnAtUnchecked
+- summary: Erstellt ein Array mit der angegebenen Länge, wobei alle Elemente gleich dem angegebenen Wert sind.
+  uid: Microsoft.Quantum.Arrays.ConstantArray
+- summary: Gibt bei Angabe eines Arrays und eines Prädikats, das für die Elemente des Arrays definiert ist, die Anzahl der Elemente eines Arrays zurück, das aus den Elementen besteht, die das Prädikat erfüllen.
+  uid: Microsoft.Quantum.Arrays.Count
+- summary: Kombiniert zugeordnete und Fold in einer einzelnen Funktion
+  uid: Microsoft.Quantum.Arrays.CumulativeFolded
+- summary: Gibt ein Array von diagonalen Elementen eines zweidimensionalen Arrays zurück.
+  uid: Microsoft.Quantum.Arrays.Diagonal
+- summary: Gibt den am angegebenen Index eines Arrays zurück.
+  uid: Microsoft.Quantum.Arrays.ElementAt
+- summary: ''
+  uid: Microsoft.Quantum.Arrays.ElementAtDiagonal
+- summary: Gibt die Elemente des Arrays in einem angegebenen Bereich von Indizes zurück.
+  uid: Microsoft.Quantum.Arrays.ElementsAt
+- summary: Gibt das leere Array eines angegebenen Typs zurück.
+  uid: Microsoft.Quantum.Arrays.EmptyArray
+- summary: Gibt bei Angabe eines Arrays ein neues Array zurück, das die Elemente des ursprünglichen Arrays zusammen mit den Indizes der einzelnen Elemente enthält.
+  uid: Microsoft.Quantum.Arrays.Enumerated
+- summary: Überprüft zwei Arrays desselben Typs und ein Prädikat, das für Paare von Elementen der Arrays definiert ist, und überprüft, ob die Arrays gleich sind.
+  uid: Microsoft.Quantum.Arrays.EqualA
+- summary: Gibt ein Array mit den Elementen eines anderen Arrays zurück, wobei Elemente in einer angegebenen Liste von Indizes ausgeschlossen werden.
+  uid: Microsoft.Quantum.Arrays.Exclude
+- summary: Gibt ein Array mit den Elementen eines anderen Arrays zurück, wobei Elemente in einer angegebenen Liste von Indizes ausgeschlossen werden.
+  uid: Microsoft.Quantum.Arrays.Excluding
+- summary: Bei Angabe eines Arrays und eines Prädikats, das für die Elemente des Arrays definiert ist, wird ein Array zurückgegeben, das aus den Elementen besteht, die das Prädikat erfüllen.
+  uid: Microsoft.Quantum.Arrays.Filtered
+- summary: Gibt bei einem Array und einer Funktion, die ein Array Element einem Ausgabe Array zuordnet, die verketteten Ausgabe Arrays für jedes Array Element zurück.
+  uid: Microsoft.Quantum.Arrays.FlatMapped
+- summary: Gibt ein Array von Arrays zurück, das die Verkettung aller Arrays zurückgibt.
+  uid: Microsoft.Quantum.Arrays.Flattened
+- summary: Iteriert eine Funktion `f` durch ein Array `array` und gibt zurück `f(f(f(initialState, array[0]), array[1]), ...)` .
+  uid: Microsoft.Quantum.Arrays.Fold
+- summary: Gibt das erste Element des Arrays zurück.
+  uid: Microsoft.Quantum.Arrays.Head
+- summary: Gibt ein Tupel mit dem ersten und allen verbleibenden Elementen des Arrays zurück.
+  uid: Microsoft.Quantum.Arrays.HeadAndRest
+- summary: ''
+  uid: Microsoft.Quantum.Arrays.Identity
+- summary: Gibt den ersten Index des ersten Elements in einem Array zurück, das ein angegebenes Prädikat erfüllt. Wenn kein solches Element vorhanden ist, wird-1 zurückgegeben.
+  uid: Microsoft.Quantum.Arrays.IndexOf
+- summary: Gibt bei Angabe eines Arrays einen Bereich über die Indizes dieses Arrays zurück, der für die Verwendung in einer for-Schleife geeignet ist.
+  uid: Microsoft.Quantum.Arrays.IndexRange
+- summary: Interverlässt zwei Arrays von (fast) gleicher Größe.
+  uid: Microsoft.Quantum.Arrays.Interleaved
+- summary: Gibt nur dann true zurück, wenn ein Array leer ist.
+  uid: Microsoft.Quantum.Arrays.IsEmpty
+- summary: Gibt nur dann true aus, wenn ein bestimmtes Array eine Permutation darstellt.
+  uid: Microsoft.Quantum.Arrays.IsPermutation
+- summary: Gibt bei Angabe eines Arrays zurück, ob dieses Array entsprechend der Definition durch eine angegebene Vergleichsfunktion sortiert wird.
+  uid: Microsoft.Quantum.Arrays.IsSorted
+- summary: ''
+  uid: Microsoft.Quantum.Arrays.IsValuePresent
+- summary: Gibt bei Angabe eines Arrays eine Funktion zurück, die Elemente dieses Arrays zurückgibt.
+  uid: Microsoft.Quantum.Arrays.LookupFunction
+- summary: Bei Angabe eines Arrays und einer Funktion, die für die Elemente des Arrays definiert ist, wird ein neues Array zurückgegeben, das aus den Bildern des ursprünglichen Arrays unter der Funktion besteht.
+  uid: Microsoft.Quantum.Arrays.Mapped
+- summary: Gibt ein neues Array zurück, das aus den Bildern des ursprünglichen Arrays unter der Funktion besteht, wenn ein Array und eine Funktion für die indizierten Elemente des Arrays definiert sind.
+  uid: Microsoft.Quantum.Arrays.MappedByIndex
+- summary: Gibt ein neues Array zurück, das aus den Bildern der Bereichs Werte unter der Funktion besteht, wenn ein Bereich und eine Funktion eine ganze Zahl als Eingabe annimmt.
+  uid: Microsoft.Quantum.Arrays.MappedOverRange
+- summary: Bei zwei sortierten Arrays wird ein einzelnes Array mit den Elementen beider Elemente in sortierter Reihenfolge zurückgegeben. Wird intern von der Merge-Sortierung verwendet.
+  uid: Microsoft.Quantum.Arrays.Merged
+- summary: Erstellt ein Array, das gleich einem Eingabe Array ist, mit dem Unterschied, dass das letzte Array Element gelöscht wird.
+  uid: Microsoft.Quantum.Arrays.Most
+- summary: Gibt ein Tupel von allen bis auf ein und das letzte Element des Arrays zurück.
+  uid: Microsoft.Quantum.Arrays.MostAndTail
+- summary: Gibt ein Array zurück, das bei mit angegebenen Werten bis zu einer angegebenen Länge aufgefüllt wird.
+  uid: Microsoft.Quantum.Arrays.Padded
+- summary: Teilt ein Array in mehrere Teile auf.
+  uid: Microsoft.Quantum.Arrays.Partitioned
+- summary: ''
+  uid: Microsoft.Quantum.Arrays.Prefix
+- summary: Gibt bei Angabe eines Arrays alle zugehörigen Präfixe zurück.
+  uid: Microsoft.Quantum.Arrays.Prefixes
+- summary: Stellt eine Bedingung dar, dass ein zweidimensionales Array eine rechteckige Form aufweist.
+  uid: Microsoft.Quantum.Arrays.RectangularArrayFact
+- summary: Erstellt ein Array, das gleich einem Eingabe Array ist, außer dass das erste Array Element gelöscht wird.
+  uid: Microsoft.Quantum.Arrays.Rest
+- summary: Erstellen Sie ein Array, das dieselben Elemente wie ein Eingabe Array, jedoch in umgekehrter Reihenfolge enthält.
+  uid: Microsoft.Quantum.Arrays.Reversed
+- summary: Ein Array von ganzen Zahlen in einem angegebenen Intervall erhalten.
+  uid: Microsoft.Quantum.Arrays.SequenceI
+- summary: Ein Array von ganzen Zahlen in einem angegebenen Intervall erhalten.
+  uid: Microsoft.Quantum.Arrays.SequenceL
+- summary: Gibt bei Angabe eines Arrays die Elemente dieses Arrays nach einer angegebenen Vergleichsfunktion sortiert zurück.
+  uid: Microsoft.Quantum.Arrays.Sorted
+- summary: Stellt eine Bedingung dar, dass ein zweidimensionales Array über eine quadratische Form verfügt.
+  uid: Microsoft.Quantum.Arrays.SquareArrayFact
+- summary: Nimmt ein Array und eine Liste von Speicherorten an und erstellt ein neues Array, das aus den Elementen des ursprünglichen Arrays gebildet wird, die den angegebenen Speicherorten entsprechen.
+  uid: Microsoft.Quantum.Arrays.Subarray
+- summary: Wendet einen Austausch zweier Elemente in einem Array an.
+  uid: Microsoft.Quantum.Arrays.Swapped
+- summary: Gibt das letzte Element des Arrays zurück.
+  uid: Microsoft.Quantum.Arrays.Tail
+- summary: Gibt das umsetzen einer Matrix zurück, die als Array von Arrays dargestellt wird.
+  uid: Microsoft.Quantum.Arrays.Transposed
+- summary: Wandelt eine Liste von 2 Tupeln in ein Array um.
+  uid: Microsoft.Quantum.Arrays.TupleArrayAsNestedArray
+- summary: Gibt ein neues Array zurück, das keine gleich benachbarten Elemente aufweist.
+  uid: Microsoft.Quantum.Arrays.Unique
+- summary: Gibt bei einem Array von 2-Tupeln ein Tupel mit zwei Arrays zurück, die jeweils die Elemente der Tupel des Eingabe Arrays enthalten.
+  uid: Microsoft.Quantum.Arrays.Unzipped
+- summary: Gibt bei Angabe eines Prädikats und eines Arrays die Indizes dieses Arrays zurück, bei denen das Prädikat "true" ist.
+  uid: Microsoft.Quantum.Arrays.Where
+- summary: Gibt alle aufeinanderfolgenden Unterarrays der Länge zurück `size` .
+  uid: Microsoft.Quantum.Arrays.Windows
+- summary: >-
+    > [!WARNING]
+
+    > ZIP ist veraltet. Verwenden Sie stattdessen <xref:Microsoft.Quantum.Arrays.Zipped>.
+
+
+    Bei zwei Arrays wird ein neues Array von Paaren zurückgegeben, sodass jedes Paar ein Element aus jedem ursprünglichen Array enthält.
+  uid: Microsoft.Quantum.Arrays.Zip
+- summary: >-
+    > [!WARNING]
+
+    > Zip3 wurde als veraltet markiert. Verwenden Sie stattdessen <xref:Microsoft.Quantum.Arrays.Zipped3>.
+
+
+    Bei drei Arrays gibt ein neues Array von 3-Tupeln zurück, sodass jedes 3-Tupel ein Element aus jedem ursprünglichen Array enthält.
+  uid: Microsoft.Quantum.Arrays.Zip3
+- summary: >-
+    > [!WARNING]
+
+    > Zip4 wurde als veraltet markiert. Verwenden Sie stattdessen <xref:Microsoft.Quantum.Arrays.Zipped4>.
+
+
+    Bei Angabe von vier Arrays wird ein neues Array von 4-Tupeln zurückgegeben, sodass jedes 4-Tupel ein Element aus jedem ursprünglichen Array enthält.
+  uid: Microsoft.Quantum.Arrays.Zip4
+- summary: Bei zwei Arrays wird ein neues Array von Paaren zurückgegeben, sodass jedes Paar ein Element aus jedem ursprünglichen Array enthält.
+  uid: Microsoft.Quantum.Arrays.Zipped
+- summary: Bei drei Arrays gibt ein neues Array von 3-Tupeln zurück, sodass jedes 3-Tupel ein Element aus jedem ursprünglichen Array enthält.
+  uid: Microsoft.Quantum.Arrays.Zipped3
+- summary: Bei Angabe von vier Arrays wird ein neues Array von 4-Tupeln zurückgegeben, sodass jedes 4-Tupel ein Element aus jedem ursprünglichen Array enthält.
+  uid: Microsoft.Quantum.Arrays.Zipped4
+- summary: Gibt die Reihenfolge Elemente in einem Array zurück, die ausgetauscht werden müssen, um ein geordnetes Array zu erzielen. Setzt voraus, dass Austausch Vorgängen vorhanden sind.
+  uid: Microsoft.Quantum.Arrays._SwapOrderToPermuteArray
+name: Microsoft.Quantum.Arrays
+newtypes: []
+operations:
+- summary: Wiederholt einen Vorgang für eine bestimmte Anzahl von Samplings und sammelt die Ausgaben in einem Array.
+  uid: Microsoft.Quantum.Arrays.DrawMany
+- summary: Gibt ein neues Array zurück, das aus den Bildern des ursprünglichen Arrays unter dem Vorgang besteht, wenn ein Array und ein Vorgang angegeben sind, der für die Elemente des Arrays definiert ist.
+  uid: Microsoft.Quantum.Arrays.ForEach
+summary: Dieser Namespace enthält Funktionen zum Erstellen und Bearbeiten von Daten Arrays.
+uid: Microsoft.Quantum.Arrays
+metadata:
+  ms.openlocfilehash: aa551a5e9372bd63335a3a9ae3d817628722c09d
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92706114"
