@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7f5e25aa7b58277642783e03d03854cd75ff4ca3
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: 2e2d9f8494d8709fba34123793cecce4011b609a
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771289"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690827"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum Development Kit (QDK): Ablaufverfolgungssimulator für Quantencomputer
 
@@ -55,7 +55,7 @@ namespace Quantum.MyProgram
 
 Da vom Ablaufverfolgungssimulator für Quantencomputer der tatsächliche Quantenzustand nicht simuliert wird, kann die Wahrscheinlichkeit von Messergebnissen für eine Operation nicht berechnet werden. 
 
-Falls eine Operation Messungen enthält, müssen Sie diese Wahrscheinlichkeiten daher explizit angeben, indem Sie die Operation <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> aus dem Namespace <xref:microsoft.quantum.diagnostics> verwenden. Das folgende Beispiel veranschaulicht dies:
+Falls eine Operation Messungen enthält, müssen Sie diese Wahrscheinlichkeiten daher explizit angeben, indem Sie die Operation <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> aus dem Namespace <xref:Microsoft.Quantum.Diagnostics> verwenden. Das folgende Beispiel veranschaulicht dies:
 
 ```qsharp
 operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
