@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0fbbe127b9f4c6b98bdc2cf0e46098bf40a816e3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a8a527df59bd7ee038de71e04003cf456b094afb
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866858"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691770"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Mitwirken am Quantum Development Kit
 
@@ -41,9 +41,9 @@ In diesem Leitfaden werden die drei Optionen beschrieben, die für das Quantum D
 All diese Optionen sind wichtig für die Schaffung einer Quantencommunity, die den Benutzern weiterhilft und ihnen viele Möglichkeiten eröffnet.
 Die hier angegebene Liste deckt aber nicht alle Eventualitäten ab. Wir möchten Sie ermutigen, auch andere Möglichkeiten zu erkunden, wie Sie die Community in Bezug auf die Quantenprogrammierung voranbringen können!
 
-- **Melden von Fehlern**: Der erste Schritt beim Beheben von Fehlern und anderen Arten von Problemen ist deren Identifizierung. Wenn Sie im Quantum Development Kit einen Fehler finden und uns darüber informieren, können wir ihn beheben und die Tools für die Community zur Quantenprogrammierung verbessern.
-- **Verbessern der Dokumentation**: Jede Dokumentation kann verbessert, um neue Details erweitert und besser zugänglich gemacht werden.
-- **Mitwirken am Code**: Einer der direktesten Wege zum Leisten eines Beitrags ist natürlich das Hinzufügen von neuem Code zum Quantum Development Kit.
+- **Melden von Fehlern** : Der erste Schritt beim Beheben von Fehlern und anderen Arten von Problemen ist deren Identifizierung. Wenn Sie im Quantum Development Kit einen Fehler finden und uns darüber informieren, können wir ihn beheben und die Tools für die Community zur Quantenprogrammierung verbessern.
+- **Verbessern der Dokumentation** : Jede Dokumentation kann verbessert, um neue Details erweitert und besser zugänglich gemacht werden.
+- **Mitwirken am Code** : Einer der direktesten Wege zum Leisten eines Beitrags ist natürlich das Hinzufügen von neuem Code zum Quantum Development Kit.
 
 Diese unterschiedlichen Arten von Beiträgen sind äußerst wertvoll und werden von uns sehr geschätzt.
 Der restliche Teil des Leitfadens enthält Hinweise dazu, wie Sie beim Leisten von Beiträgen jeweils vorgehen.
@@ -59,6 +59,7 @@ Jeder dieser unterschiedlichen Bestandteile wird in einem eigenen Repository auf
 - [**microsoft/qsharp-compiler**](https://github.com/microsoft/qsharp-compiler): Q#-Compiler, Visual Studio-Erweiterung und Visual Studio Code-Erweiterung.
 - [**microsoft/qsharp-runtime**](https://github.com/microsoft/qsharp-runtime): Simulationsframework, Codegenerierung und Simulationszielcomputer für das Quantum Development Kit.
 - [**microsoft/iqsharp**](https://github.com/microsoft/iqsharp): Jupyter-Kernel- und Python-Hostfunktionen für Q# sowie Docker-Images zur Verwendung von IQ# in Cloudumgebungen.
+- [**microsoft/qsharp-language**](https://github.com/microsoft/qsharp-language): An dieser Stelle werden neue Q#-Features entwickelt und angegeben. Darüber hinaus können Sie hier Ideen und Vorschläge zur zukünftigen Entwicklung der Q#-Sprache und -Kernbibliotheken teilen.
 - [**MicrosoftDocs/quantum-docs-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr): Quellcode für die unter https://docs.microsoft.com/quantum veröffentlichte Dokumentation.
 
 > [!NOTE]
