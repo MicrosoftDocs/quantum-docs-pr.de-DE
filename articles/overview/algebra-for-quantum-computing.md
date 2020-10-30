@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.algebra
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bff1da475f87278bc9e769805b3fe0fe8704d47a
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 3e6700acc09adf9e2e771f6289c73ad51aa2cb90
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835127"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692250"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Lineare Algebra für Quantencomputing
 
@@ -41,7 +41,7 @@ In [Quantencomputer und -simulatoren](xref:microsoft.quantum.overview.simulators
 Hier sehen Sie die Darstellung zweier gängiger Quantenoperationen mit Matrizenmultiplikation:
 
 
-Die [`X`-Operation](xref:microsoft.quantum.intrinsic.x) wird durch die Pauli-Matrix $X$ dargestellt:
+Die [`X`-Operation](xref:Microsoft.Quantum.Intrinsic.X) wird durch die Pauli-Matrix $X$ dargestellt:
 
 $$X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}$$
     
@@ -49,7 +49,7 @@ Sie wird verwendet, um den Zustand eines Qubits von 0 in 1 zu ändern (oder umge
 
 $$\begin{bmatrix}0 &1\\\\ 1 &0\end{bmatrix}\begin{bmatrix} 1 \\\\  0 \end{bmatrix} = \begin{bmatrix} 0 \\\\  1 \end{bmatrix}$$
 
-Die [H-Operation](xref:microsoft.quantum.intrinsic.h) wird durch die Hadamard-Transformation $H$ dargestellt:
+Die [H-Operation](xref:Microsoft.Quantum.Intrinsic.H) wird durch die Hadamard-Transformation $H$ dargestellt:
 
 $$H = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix}$$
 
