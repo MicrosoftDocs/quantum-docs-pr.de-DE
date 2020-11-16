@@ -1,13 +1,13 @@
 ---
-title: 'Mathematik in den :::no-loc(Q#)::: Standardbibliotheken'
-description: 'Erfahren Sie mehr über die klassischen mathematischen Funktionen in den :::no-loc(Q#)::: Standardbibliotheken, die mit den integrierten Datentypen verwendet werden.'
+title: 'Mathematik in den Q# Standardbibliotheken'
+description: 'Erfahren Sie mehr über die klassischen mathematischen Funktionen in den Q# Standardbibliotheken, die mit den integrierten Datentypen verwendet werden.'
 author: cgranade
 uid: microsoft.quantum.libraries.math
 ms.author: chgranad
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 6de1574341d67c569cd2f040ec533e263fdd386e
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -17,7 +17,7 @@ ms.locfileid: "92692059"
 ---
 # <a name="classical-mathematical-functions"></a><span data-ttu-id="b5854-103">Klassische mathematische Funktionen</span><span class="sxs-lookup"><span data-stu-id="b5854-103">Classical Mathematical Functions</span></span> #
 
-<span data-ttu-id="b5854-104">Diese Funktionen werden hauptsächlich verwendet, um mit den :::no-loc(Q#)::: integrierten Datentypen, und zu arbeiten `Int` `Double` `Range` .</span><span class="sxs-lookup"><span data-stu-id="b5854-104">These functions are primarily used to work with the :::no-loc(Q#)::: built-in data types `Int`, `Double`, and `Range`.</span></span>
+<span data-ttu-id="b5854-104">Diese Funktionen werden hauptsächlich verwendet, um mit den Q# integrierten Datentypen, und zu arbeiten `Int` `Double` `Range` .</span><span class="sxs-lookup"><span data-stu-id="b5854-104">These functions are primarily used to work with the Q# built-in data types `Int`, `Double`, and `Range`.</span></span>
 
 <span data-ttu-id="b5854-105">Der <xref:Microsoft.Quantum.Intrinsic.Random> Vorgang hat eine Signatur `(Double[] => Int)` .</span><span class="sxs-lookup"><span data-stu-id="b5854-105">The <xref:Microsoft.Quantum.Intrinsic.Random> operation has signature `(Double[] => Int)`.</span></span>
 <span data-ttu-id="b5854-106">Er nimmt ein Array von Double-Eingaben als Eingabe und gibt einen zufällig ausgewählten Index als ein an das Array zurück `Int` .</span><span class="sxs-lookup"><span data-stu-id="b5854-106">It takes an array of doubles as input, and returns a randomly-selected index into the array as an `Int`.</span></span>

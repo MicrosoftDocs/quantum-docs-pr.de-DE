@@ -1,14 +1,14 @@
 ---
-title: 'Ausdrücke in :::no-loc(Q#):::'
-description: 'Erfahren Sie, wie Konstanten, Variablen, Operatoren, Vorgänge und Funktionen als Ausdrücke in angegeben, referenziert und kombiniert werden :::no-loc(Q#)::: .'
+title: 'Ausdrücke in Q#'
+description: 'Erfahren Sie, wie Konstanten, Variablen, Operatoren, Vorgänge und Funktionen als Ausdrücke in angegeben, referenziert und kombiniert werden Q# .'
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: e95a7cb9b74136ef9a6f51b4bbc32d1d93c43a0d
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,17 +16,17 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92691606"
 ---
-# <a name="expressions-in-no-locq"></a><span data-ttu-id="42ff7-103">Ausdrücke in :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="42ff7-103">Expressions in :::no-loc(Q#):::</span></span>
+# <a name="expressions-in-no-locq"></a><span data-ttu-id="42ff7-103">Ausdrücke in Q#</span><span class="sxs-lookup"><span data-stu-id="42ff7-103">Expressions in Q#</span></span>
 
 ## <a name="numeric-expressions"></a><span data-ttu-id="42ff7-104">Numerische Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="42ff7-104">Numeric Expressions</span></span>
 
 <span data-ttu-id="42ff7-105">Numerische Ausdrücke sind Ausdrücke vom Typ `Int` , `BigInt` oder `Double` .</span><span class="sxs-lookup"><span data-stu-id="42ff7-105">Numeric expressions are expressions of type `Int`, `BigInt`, or `Double`.</span></span>
 <span data-ttu-id="42ff7-106">Das heißt, Sie sind entweder ganzzahlige oder Gleit Komma Zahlen.</span><span class="sxs-lookup"><span data-stu-id="42ff7-106">That is, they are either integer or floating-point numbers.</span></span>
 
-<span data-ttu-id="42ff7-107">`Int` Literale in :::no-loc(Q#)::: werden als Sequenz von Ziffern geschrieben.</span><span class="sxs-lookup"><span data-stu-id="42ff7-107">`Int` literals in :::no-loc(Q#)::: are written as a sequence of digits.</span></span>
+<span data-ttu-id="42ff7-107">`Int` Literale in Q# werden als Sequenz von Ziffern geschrieben.</span><span class="sxs-lookup"><span data-stu-id="42ff7-107">`Int` literals in Q# are written as a sequence of digits.</span></span>
 <span data-ttu-id="42ff7-108">Hexadezimale und binäre ganzzahlige Werte werden unterstützt `0x` `0b` bzw. mit dem Präfix und geschrieben.</span><span class="sxs-lookup"><span data-stu-id="42ff7-108">Hexadecimal and binary integers are supported and written with a `0x` and `0b` prefix, respectively.</span></span>
 
-<span data-ttu-id="42ff7-109">`BigInt` Literale in :::no-loc(Q#)::: verfügen über ein nach gestelltes- `l` oder- `L` Suffix.</span><span class="sxs-lookup"><span data-stu-id="42ff7-109">`BigInt` literals in :::no-loc(Q#)::: have a trailing `l` or `L` suffix.</span></span>
+<span data-ttu-id="42ff7-109">`BigInt` Literale in Q# verfügen über ein nach gestelltes- `l` oder- `L` Suffix.</span><span class="sxs-lookup"><span data-stu-id="42ff7-109">`BigInt` literals in Q# have a trailing `l` or `L` suffix.</span></span>
 <span data-ttu-id="42ff7-110">Hexadezimale Big Integerwerte werden unterstützt und mit einem Präfix "0x" geschrieben.</span><span class="sxs-lookup"><span data-stu-id="42ff7-110">Hexadecimal big integers are supported and written with a "0x" prefix.</span></span>
 <span data-ttu-id="42ff7-111">Daher sind die folgenden alle gültigen Verwendungsmöglichkeiten von `BigInt` Literalen:</span><span class="sxs-lookup"><span data-stu-id="42ff7-111">Thus, the following are all valid uses of `BigInt` literals:</span></span>
 
@@ -36,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-<span data-ttu-id="42ff7-112">`Double` Literale in :::no-loc(Q#)::: sind Gleit Komma Zahlen, die mithilfe von Dezimalziffern geschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="42ff7-112">`Double` literals in :::no-loc(Q#)::: are floating-point numbers written using decimal digits.</span></span>
+<span data-ttu-id="42ff7-112">`Double` Literale in Q# sind Gleit Komma Zahlen, die mithilfe von Dezimalziffern geschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="42ff7-112">`Double` literals in Q# are floating-point numbers written using decimal digits.</span></span>
 <span data-ttu-id="42ff7-113">Sie können mit oder ohne Dezimaltrennzeichen, oder mit einem `.` exponentiellen Teil geschrieben werden, der mit "e" oder "e" angegeben wird (nach dem nur ein mögliches negatives Vorzeichen und Dezimalziffern gültig sind).</span><span class="sxs-lookup"><span data-stu-id="42ff7-113">They can be written with or without a decimal point, `.`, or an exponential part indicated with 'e' or 'E' (after which only a possible negative sign and decimal digits are valid).</span></span>
 <span data-ttu-id="42ff7-114">Die folgenden `Double` Literale sind gültig: `0.0` , `1.2e5` , `1e-5` .</span><span class="sxs-lookup"><span data-stu-id="42ff7-114">The following are valid `Double` literals: `0.0`, `1.2e5`, `1e-5`.</span></span>
 
@@ -87,7 +87,7 @@ let bigOne = bigZero + 1L;
 <span data-ttu-id="42ff7-157">Wenn zwei Ausdrücke desselben primitiven Typs vorhanden sind, können die `==` `!=` binären Operatoren und verwendet werden, um einen-Ausdruck zu erstellen `Bool` .</span><span class="sxs-lookup"><span data-stu-id="42ff7-157">Given any two expressions of the same primitive type, the `==` and `!=` binary operators may be used to construct a `Bool` expression.</span></span>
 <span data-ttu-id="42ff7-158">Der Ausdruck ist true, wenn die beiden Ausdrücke gleich sind, andernfalls false.</span><span class="sxs-lookup"><span data-stu-id="42ff7-158">The expression is true if the two expressions are equal and false if not.</span></span>
 
-<span data-ttu-id="42ff7-159">Werte von benutzerdefinierten Typen können nicht verglichen werden, sondern es können nur Ihre nicht umschließenden Werte verglichen werden.</span><span class="sxs-lookup"><span data-stu-id="42ff7-159">Values of user-defined types may not be compared, only their unwrapped values can be compared.</span></span> <span data-ttu-id="42ff7-160">Verwenden Sie z. b. den Operator "Unwrap" `!` (ausführlich unter [Typen in :::no-loc(Q#)::: ](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)erläutert).</span><span class="sxs-lookup"><span data-stu-id="42ff7-160">For example, using the "unwrap" operator `!` (explained in detail at [Types in :::no-loc(Q#):::](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),</span></span>
+<span data-ttu-id="42ff7-159">Werte von benutzerdefinierten Typen können nicht verglichen werden, sondern es können nur Ihre nicht umschließenden Werte verglichen werden.</span><span class="sxs-lookup"><span data-stu-id="42ff7-159">Values of user-defined types may not be compared, only their unwrapped values can be compared.</span></span> <span data-ttu-id="42ff7-160">Verwenden Sie z. b. den Operator "Unwrap" `!` (ausführlich unter [Typen in Q# ](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)erläutert).</span><span class="sxs-lookup"><span data-stu-id="42ff7-160">For example, using the "unwrap" operator `!` (explained in detail at [Types in Q#](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),</span></span>
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -111,9 +111,9 @@ let t = x == y;               // This will cause a compiler error.
 
 ## <a name="string-expressions"></a><span data-ttu-id="42ff7-169">Zeichenfolgenausdrücke</span><span class="sxs-lookup"><span data-stu-id="42ff7-169">String expressions</span></span>
 
-<span data-ttu-id="42ff7-170">:::no-loc(Q#)::: ermöglicht die Verwendung von Zeichen folgen in der `fail` Anweisung (in der [Ablauf Steuerung](xref:microsoft.quantum.guide.controlflow#fail-statement)erläutert) und in der [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) Standardfunktion.</span><span class="sxs-lookup"><span data-stu-id="42ff7-170">:::no-loc(Q#)::: allows strings to be used in the `fail` statement (explained in [Control Flow](xref:microsoft.quantum.guide.controlflow#fail-statement)) and in the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) standard function.</span></span> <span data-ttu-id="42ff7-171">Das spezifische Verhalten der letzteren hängt vom verwendeten Simulator ab, schreibt jedoch in der Regel eine Meldung in die Host Konsole, wenn Sie während eines Programms aufgerufen wird :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="42ff7-171">The specific behavior of the latter depends on the simulator used but typically writes a message to the host console when called during a :::no-loc(Q#)::: program.</span></span>
+<span data-ttu-id="42ff7-170">Q# ermöglicht die Verwendung von Zeichen folgen in der `fail` Anweisung (in der [Ablauf Steuerung](xref:microsoft.quantum.guide.controlflow#fail-statement)erläutert) und in der [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) Standardfunktion.</span><span class="sxs-lookup"><span data-stu-id="42ff7-170">Q# allows strings to be used in the `fail` statement (explained in [Control Flow](xref:microsoft.quantum.guide.controlflow#fail-statement)) and in the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) standard function.</span></span> <span data-ttu-id="42ff7-171">Das spezifische Verhalten der letzteren hängt vom verwendeten Simulator ab, schreibt jedoch in der Regel eine Meldung in die Host Konsole, wenn Sie während eines Programms aufgerufen wird Q# .</span><span class="sxs-lookup"><span data-stu-id="42ff7-171">The specific behavior of the latter depends on the simulator used but typically writes a message to the host console when called during a Q# program.</span></span>
 
-<span data-ttu-id="42ff7-172">Zeichen folgen in :::no-loc(Q#)::: sind entweder Literale oder interpoliert Zeichen folgen.</span><span class="sxs-lookup"><span data-stu-id="42ff7-172">Strings in :::no-loc(Q#)::: are either literals or interpolated strings.</span></span>
+<span data-ttu-id="42ff7-172">Zeichen folgen in Q# sind entweder Literale oder interpoliert Zeichen folgen.</span><span class="sxs-lookup"><span data-stu-id="42ff7-172">Strings in Q# are either literals or interpolated strings.</span></span>
 
 <span data-ttu-id="42ff7-173">Zeichenfolgenliterale ähneln in den meisten Sprachen einfachen Zeichenfolgenliteralen: eine Sequenz von Unicode-Zeichen, die in doppelten Anführungszeichen eingeschlossen sind `" "` .</span><span class="sxs-lookup"><span data-stu-id="42ff7-173">String literals are similar to simple string literals in most languages: a sequence of Unicode characters enclosed in double-quotes `" "`.</span></span>
 <span data-ttu-id="42ff7-174">Verwenden Sie innerhalb einer Zeichenfolge den umgekehrten Schrägstrich, `\` um ein doppeltes Anführungszeichen () mit Escapezeichen `\"` zu versehen, oder um eine neue Zeile ( `\n` ), ein Wagen Rücklauf Zeichen ( `\r` ) oder eine Registerkarte ( `\t` ) einzufügen.</span><span class="sxs-lookup"><span data-stu-id="42ff7-174">Inside of a string, use the backslash character `\` to escape a double-quote character (`\"`), or to insert a new-line ( `\n` ), a carriage return (`\r`), or a tab (`\t`).</span></span>
@@ -124,21 +124,21 @@ let t = x == y;               // This will cause a compiler error.
 ```
 ### <a name="interpolated-strings"></a><span data-ttu-id="42ff7-176">Interpolierte Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="42ff7-176">Interpolated strings</span></span>
 
-<span data-ttu-id="42ff7-177">Die :::no-loc(Q#)::: Syntax für Zeichen folgen Interpolationen ist eine Teilmenge der c#-Syntax.</span><span class="sxs-lookup"><span data-stu-id="42ff7-177">The :::no-loc(Q#)::: syntax for string interpolations is a subset of the C# syntax.</span></span> <span data-ttu-id="42ff7-178">Im folgenden finden Sie die wichtigsten Punkte, die Sie betreffen :::no-loc(Q#)::: :</span><span class="sxs-lookup"><span data-stu-id="42ff7-178">Following are the key points as they pertain to :::no-loc(Q#)::::</span></span>
+<span data-ttu-id="42ff7-177">Die Q# Syntax für Zeichen folgen Interpolationen ist eine Teilmenge der c#-Syntax.</span><span class="sxs-lookup"><span data-stu-id="42ff7-177">The Q# syntax for string interpolations is a subset of the C# syntax.</span></span> <span data-ttu-id="42ff7-178">Im folgenden finden Sie die wichtigsten Punkte, die Sie betreffen Q# :</span><span class="sxs-lookup"><span data-stu-id="42ff7-178">Following are the key points as they pertain to Q#:</span></span>
 
 * <span data-ttu-id="42ff7-179">Wenn Sie ein Zeichenfolgenliteral als interpolierte Zeichenfolge ermitteln möchten, stellen Sie ihm ein `$`-Symbol voran.</span><span class="sxs-lookup"><span data-stu-id="42ff7-179">To identify a string literal as an interpolated string, prepend it with the `$` symbol.</span></span> <span data-ttu-id="42ff7-180">Zwischen dem `$` und dem `"` , das einen zeichenfolgenliteralvorgang startet, darf kein Leerraum vorhanden sein.</span><span class="sxs-lookup"><span data-stu-id="42ff7-180">There can be no white space between the `$` and the `"` that starts a string literal.</span></span>
 
-* <span data-ttu-id="42ff7-181">Im folgenden finden Sie ein einfaches Beispiel, in dem die-Funktion verwendet wird [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) , um das Ergebnis einer Maßeinheit zusammen mit anderen Ausdrücken in die Konsole zu schreiben :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="42ff7-181">The following is a basic example using the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) function to write the result of a measurement to the console, alongside other :::no-loc(Q#)::: expressions.</span></span>
+* <span data-ttu-id="42ff7-181">Im folgenden finden Sie ein einfaches Beispiel, in dem die-Funktion verwendet wird [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) , um das Ergebnis einer Maßeinheit zusammen mit anderen Ausdrücken in die Konsole zu schreiben Q# .</span><span class="sxs-lookup"><span data-stu-id="42ff7-181">The following is a basic example using the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) function to write the result of a measurement to the console, alongside other Q# expressions.</span></span>
 
 ```qsharp
-    let num = 8;       // some :::no-loc(Q#)::: expression
+    let num = 8;       // some Q# expression
     let res = M(q);
     Message($"Number: {num}, Result: {res}");
 ```
 
-* <span data-ttu-id="42ff7-182">Jeder gültige :::no-loc(Q#)::: Ausdruck wird möglicherweise in einer interinterierten Zeichenfolge angezeigt.</span><span class="sxs-lookup"><span data-stu-id="42ff7-182">Any valid :::no-loc(Q#)::: expression may appear in an interpolated string.</span></span>
+* <span data-ttu-id="42ff7-182">Jeder gültige Q# Ausdruck wird möglicherweise in einer interinterierten Zeichenfolge angezeigt.</span><span class="sxs-lookup"><span data-stu-id="42ff7-182">Any valid Q# expression may appear in an interpolated string.</span></span>
 
-* <span data-ttu-id="42ff7-183">Ausdrücke in einer interinterierten Zeichenfolge Folgen der :::no-loc(Q#)::: Syntax, nicht der c#-Syntax.</span><span class="sxs-lookup"><span data-stu-id="42ff7-183">Expressions inside of an interpolated string follow :::no-loc(Q#)::: syntax, not C# syntax.</span></span> <span data-ttu-id="42ff7-184">Der wichtigste Unterschied besteht darin, dass :::no-loc(Q#)::: keine ausführlichen (mehrzeiligen) interpoliert-Zeichen folgen unterstützt.</span><span class="sxs-lookup"><span data-stu-id="42ff7-184">The most notable distinction is that :::no-loc(Q#)::: does not support verbatim (multi-line) interpolated strings.</span></span>
+* <span data-ttu-id="42ff7-183">Ausdrücke in einer interinterierten Zeichenfolge Folgen der Q# Syntax, nicht der c#-Syntax.</span><span class="sxs-lookup"><span data-stu-id="42ff7-183">Expressions inside of an interpolated string follow Q# syntax, not C# syntax.</span></span> <span data-ttu-id="42ff7-184">Der wichtigste Unterschied besteht darin, dass Q# keine ausführlichen (mehrzeiligen) interpoliert-Zeichen folgen unterstützt.</span><span class="sxs-lookup"><span data-stu-id="42ff7-184">The most notable distinction is that Q# does not support verbatim (multi-line) interpolated strings.</span></span>
 
 <span data-ttu-id="42ff7-185">Weitere Informationen zur c#-Syntax finden Sie unter [*interpoliert*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings).</span><span class="sxs-lookup"><span data-stu-id="42ff7-185">For more details about the C# syntax, see [*Interpolated Strings*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings).</span></span>
 
@@ -198,7 +198,7 @@ let t = x == y;               // This will cause a compiler error.
 
 ## <a name="unwrap-expressions"></a><span data-ttu-id="42ff7-221">Entpacken von Ausdrücken</span><span class="sxs-lookup"><span data-stu-id="42ff7-221">Unwrap Expressions</span></span>
 
-<span data-ttu-id="42ff7-222">In :::no-loc(Q#)::: handelt es sich bei dem Unwrap-Operator um ein nach gestelltes Ausrufezeichen `!` .</span><span class="sxs-lookup"><span data-stu-id="42ff7-222">In :::no-loc(Q#):::, the unwrap operator is a trailing exclamation mark `!`.</span></span>
+<span data-ttu-id="42ff7-222">In Q# handelt es sich bei dem Unwrap-Operator um ein nach gestelltes Ausrufezeichen `!` .</span><span class="sxs-lookup"><span data-stu-id="42ff7-222">In Q#, the unwrap operator is a trailing exclamation mark `!`.</span></span>
 <span data-ttu-id="42ff7-223">Wenn z. b `IntPair` . ein benutzerdefinierter Typ mit dem zugrunde liegenden Typ `(Int, Int)` und `s` eine Variable mit Wert ist `IntPair(2, 3)` , dann `s!` ist `(2, 3)` .</span><span class="sxs-lookup"><span data-stu-id="42ff7-223">For example, if `IntPair` is a user-defined type with the underlying type `(Int, Int)` and `s` is a variable with value `IntPair(2, 3)`, then `s!` is `(2, 3)`.</span></span>
 
 <span data-ttu-id="42ff7-224">Bei benutzerdefinierten Typen, die in Bezug auf andere benutzerdefinierte Typen definiert sind, können Sie den Unwrap-Operator wiederholen.</span><span class="sxs-lookup"><span data-stu-id="42ff7-224">For user-defined types defined in terms of other user-defined types, you can repeat the unwrap operator.</span></span> <span data-ttu-id="42ff7-225">`s!!`Gibt z. b. den doppelt entpackten Wert von an `s` .</span><span class="sxs-lookup"><span data-stu-id="42ff7-225">For example, `s!!` indicates the doubly-unwrapped value of `s`.</span></span>
@@ -271,7 +271,7 @@ let g = Foo(arg)!;      // Syntax error
 (a + b)[13]
 ```
 
-<span data-ttu-id="42ff7-261">Alle Arrays in :::no-loc(Q#)::: sind NULL basiert.</span><span class="sxs-lookup"><span data-stu-id="42ff7-261">All arrays in :::no-loc(Q#)::: are zero-based.</span></span>
+<span data-ttu-id="42ff7-261">Alle Arrays in Q# sind NULL basiert.</span><span class="sxs-lookup"><span data-stu-id="42ff7-261">All arrays in Q# are zero-based.</span></span>
 <span data-ttu-id="42ff7-262">Das heißt, das erste Element eines Arrays `a` ist immer `a[0]` .</span><span class="sxs-lookup"><span data-stu-id="42ff7-262">That is, the first element of an array `a` is always `a[0]`.</span></span>
 
 
@@ -319,7 +319,7 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### <a name="copy-and-update-expressions"></a><span data-ttu-id="42ff7-281">Copy-und Update-Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="42ff7-281">Copy-and-Update Expressions</span></span>
 
-<span data-ttu-id="42ff7-282">Da es :::no-loc(Q#)::: sich bei allen Typen um Werttypen handelt (wobei die Qubits eine etwas besondere Rolle einnehmen), wird formal eine "Copy"-Kopie erstellt, wenn ein Wert an ein Symbol gebunden ist oder wenn ein Symbol erneut hergestellt wird.</span><span class="sxs-lookup"><span data-stu-id="42ff7-282">Since all :::no-loc(Q#)::: types are value types (with the qubits taking a somewhat special role), formally a "copy" is created when a value is bound to a symbol or when a symbol is rebound.</span></span> <span data-ttu-id="42ff7-283">Dies heißt, dass das Verhalten von :::no-loc(Q#)::: mit dem identisch ist, wenn eine Kopie mithilfe eines Zuweisungs Operators erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="42ff7-283">That is to say, the behavior of :::no-loc(Q#)::: is the same as if a copy were created using an assignment operator.</span></span> 
+<span data-ttu-id="42ff7-282">Da es Q# sich bei allen Typen um Werttypen handelt (wobei die Qubits eine etwas besondere Rolle einnehmen), wird formal eine "Copy"-Kopie erstellt, wenn ein Wert an ein Symbol gebunden ist oder wenn ein Symbol erneut hergestellt wird.</span><span class="sxs-lookup"><span data-stu-id="42ff7-282">Since all Q# types are value types (with the qubits taking a somewhat special role), formally a "copy" is created when a value is bound to a symbol or when a symbol is rebound.</span></span> <span data-ttu-id="42ff7-283">Dies heißt, dass das Verhalten von Q# mit dem identisch ist, wenn eine Kopie mithilfe eines Zuweisungs Operators erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="42ff7-283">That is to say, the behavior of Q# is the same as if a copy were created using an assignment operator.</span></span> 
 
 <span data-ttu-id="42ff7-284">Natürlich werden in der Praxis nur die relevanten Teile nach Bedarf neu erstellt.</span><span class="sxs-lookup"><span data-stu-id="42ff7-284">Of course, in practice, only the relevant pieces are recreated as needed.</span></span> <span data-ttu-id="42ff7-285">Dies wirkt sich darauf aus, wie Arrays kopiert werden, da Array Elemente nicht aktualisiert werden können.</span><span class="sxs-lookup"><span data-stu-id="42ff7-285">This affects how you copy arrays because it is not possible to update array items.</span></span> <span data-ttu-id="42ff7-286">Zum Ändern eines vorhandenen Arrays muss ein *Kopier-und Aktualisierungs* Mechanismus genutzt werden.</span><span class="sxs-lookup"><span data-stu-id="42ff7-286">To modify an existing array requires leveraging a *copy-and-update* mechanism.</span></span>
 
@@ -382,7 +382,7 @@ for (i in 1..N) {
 
 <span data-ttu-id="42ff7-317">Beispielsweise gibt `[[Op1], [Op2]]` derzeit einen Fehler aus, da versucht wird, ein Array der beiden inkompatiblen Array Typen und zu erstellen `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` .</span><span class="sxs-lookup"><span data-stu-id="42ff7-317">For example, `[[Op1], [Op2]]` would currently raise an error because it attempts to create an array of the two incompatible array types `(Qubit[] => Unit is Adj)[]` and `(Qubit[] => Unit is Ctl)[]`.</span></span>
 
-<span data-ttu-id="42ff7-318">Weitere Informationen zu callables finden Sie unter [Aufruf Bare Ausdrücke](#callable-expressions) auf dieser Seite bzw. [in den Vorgängen und Funktionen in :::no-loc(Q#)::: ](xref:microsoft.quantum.guide.operationsfunctions).</span><span class="sxs-lookup"><span data-stu-id="42ff7-318">For more information on callables, see [Callable expressions](#callable-expressions)  on this page or [Operations and Functions in :::no-loc(Q#):::](xref:microsoft.quantum.guide.operationsfunctions).</span></span>
+<span data-ttu-id="42ff7-318">Weitere Informationen zu callables finden Sie unter [Aufruf Bare Ausdrücke](#callable-expressions) auf dieser Seite bzw. [in den Vorgängen und Funktionen in Q# ](xref:microsoft.quantum.guide.operationsfunctions).</span><span class="sxs-lookup"><span data-stu-id="42ff7-318">For more information on callables, see [Callable expressions](#callable-expressions)  on this page or [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions).</span></span>
 
 ## <a name="conditional-expressions"></a><span data-ttu-id="42ff7-319">Bedingte Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="42ff7-319">Conditional Expressions</span></span>
 
@@ -447,7 +447,7 @@ SomeOtherFun(Fun);           // This also causes a compilation error.
 ```
 
 <span data-ttu-id="42ff7-353">Wenn Sie einen [vom Typ parametrisierten](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) Aufruf baren aufrufen, können Sie die tatsächlichen Typparameter innerhalb von spitzen Klammern `< >` nach dem Aufruf baren Ausdruck angeben.</span><span class="sxs-lookup"><span data-stu-id="42ff7-353">When invoking a [type-parameterized](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) callable, you can specify the actual type parameters within angle brackets `< >` after the callable expression.</span></span>
-<span data-ttu-id="42ff7-354">Diese Aktion ist in der Regel unnötig, da der :::no-loc(Q#)::: Compiler die eigentlichen Typen leitet.</span><span class="sxs-lookup"><span data-stu-id="42ff7-354">This action is usually unnecessary as the :::no-loc(Q#)::: compiler infers the actual types.</span></span>
+<span data-ttu-id="42ff7-354">Diese Aktion ist in der Regel unnötig, da der Q# Compiler die eigentlichen Typen leitet.</span><span class="sxs-lookup"><span data-stu-id="42ff7-354">This action is usually unnecessary as the Q# compiler infers the actual types.</span></span>
 <span data-ttu-id="42ff7-355">Es *ist* jedoch für die [partielle Anwendung](xref:microsoft.quantum.guide.operationsfunctions#partial-application) erforderlich, wenn ein typparametrisiertes Argument nicht angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="42ff7-355">However, it *is* required for [partial application](xref:microsoft.quantum.guide.operationsfunctions#partial-application) if a type-parameterized argument is left unspecified.</span></span>
 <span data-ttu-id="42ff7-356">Dies ist auch nützlich, wenn die Übergabe von Vorgängen mit unterschiedlichen Funktoren unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="42ff7-356">It is also useful when passing operations with different functor supports to a callable.</span></span>
 
@@ -470,7 +470,7 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
 
 * <span data-ttu-id="42ff7-363">Klammern für Vorgangs-und Funktionsaufrufe werden auch vor jedem Operator gebunden, aber nach der Array Indizierung und den Funktoren.</span><span class="sxs-lookup"><span data-stu-id="42ff7-363">Parentheses for operation and function invocation also bind before any operator but after array indexing and functors.</span></span>
 
-<span data-ttu-id="42ff7-364">:::no-loc(Q#)::: Operatoren in Rangfolge, vom höchsten zum niedrigsten:</span><span class="sxs-lookup"><span data-stu-id="42ff7-364">:::no-loc(Q#)::: operators in order of precedence, from highest to lowest:</span></span>
+<span data-ttu-id="42ff7-364">Q# Operatoren in Rangfolge, vom höchsten zum niedrigsten:</span><span class="sxs-lookup"><span data-stu-id="42ff7-364">Q# operators in order of precedence, from highest to lowest:</span></span>
 
 <span data-ttu-id="42ff7-365">Betreiber</span><span class="sxs-lookup"><span data-stu-id="42ff7-365">Operator</span></span> | <span data-ttu-id="42ff7-366">Ständigkeit</span><span class="sxs-lookup"><span data-stu-id="42ff7-366">Arity</span></span> | <span data-ttu-id="42ff7-367">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="42ff7-367">Description</span></span> | <span data-ttu-id="42ff7-368">Operanden Typen</span><span class="sxs-lookup"><span data-stu-id="42ff7-368">Operand Types</span></span>
 ---------|----------|---------|---------------
@@ -493,4 +493,4 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
 
 ## <a name="next-steps"></a><span data-ttu-id="42ff7-423">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="42ff7-423">Next steps</span></span>
 
-<span data-ttu-id="42ff7-424">Nachdem Sie nun mit Ausdrücken in arbeiten können :::no-loc(Q#)::: , fahren Sie mit den [Vorgängen und :::no-loc(Q#)::: Funktionen in](xref:microsoft.quantum.guide.operationsfunctions) fort, um zu erfahren, wie Sie Vorgänge und Funktionen definieren und aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="42ff7-424">Now that you can work with expressions in :::no-loc(Q#):::, move on to [Operations and Functions in :::no-loc(Q#):::](xref:microsoft.quantum.guide.operationsfunctions) to learn how to define and call operations and functions.</span></span>
+<span data-ttu-id="42ff7-424">Nachdem Sie nun mit Ausdrücken in arbeiten können Q# , fahren Sie mit den [Vorgängen und Q# Funktionen in](xref:microsoft.quantum.guide.operationsfunctions) fort, um zu erfahren, wie Sie Vorgänge und Funktionen definieren und aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="42ff7-424">Now that you can work with expressions in Q#, move on to [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions) to learn how to define and call operations and functions.</span></span>
