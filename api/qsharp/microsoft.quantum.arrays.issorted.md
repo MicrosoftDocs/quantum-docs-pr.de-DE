@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.IsSorted
 title: IsSorted-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: IsSorted
 qsharp.summary: Given an array, returns whether that array is sorted as defined by a given comparison function.
-ms.openlocfilehash: 330c1f789585f64cf255bc74f8a9c1ccf81b009e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b2c5f11c0d92ddf9214de2d439c175319c569be0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705930"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220831"
 ---
 # <a name="issorted-function"></a>IsSorted-Funktion
 
 Namespace: [Microsoft. Quantum. Arrays](xref:Microsoft.Quantum.Arrays)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Gibt bei Angabe eines Arrays zurück, ob dieses Array entsprechend der Definition durch eine angegebene Vergleichsfunktion sortiert wird.
@@ -51,6 +51,6 @@ Das zu überprüfende Array.
 
 Der Typ der einzelnen Elemente von `array` .
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Es wird `comparison` davon ausgegangen, dass die Funktion transitiv ist, sodass, wenn `comparison(a, b)` und `comparison(b, c)` , `comparison(a, c)` angenommen wird. Wenn diese Eigenschaft nicht enthalten ist, ist die Ausgabe dieser Funktion möglicherweise falsch.

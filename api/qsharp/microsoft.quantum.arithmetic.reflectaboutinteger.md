@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ReflectAboutInteger
 title: Reflectaboutinteger-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ReflectAboutInteger
 qsharp.summary: Reflects a quantum register about a given classical integer.
-ms.openlocfilehash: e034f0a24d5c2f0465ebd1914b28cb8c695d978c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d4bae0cba5ee45e8d48070e36efab0159ade9137
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92706338"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96222370"
 ---
 # <a name="reflectaboutinteger-operation"></a>Reflectaboutinteger-Vorgang
 
 Namespace: [Microsoft. Quantum. Arithmetik](xref:Microsoft.Quantum.Arithmetic)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Reflektiert ein Quantum-Register über eine angegebene klassische Ganzzahl.
 
 ```qsharp
-operation ReflectAboutInteger (index : Int, reg : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation ReflectAboutInteger (index : Int, reg : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -49,6 +49,6 @@ Die klassische Ganzzahl, die den Basiszustand indiziert, der reflektiert werden 
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Dieser Vorgang wird direkt implementiert, ohne dass zusätzliche Qubits explizit zugeordnet werden müssen.

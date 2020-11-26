@@ -176,12 +176,12 @@ operations:
   uid: Microsoft.Quantum.Arithmetic.SquareSI
 - summary: Implementiert ein umkehrbares Summen Gate. `carryIn` `summand1` `summand2` Berechnet das bitweise XOR von `carryIn` `summand1` und `summand2` im Qubit, `summand2` Wenn ein in Qubit codiertes und zwei Summen in und codiert sind.
   uid: Microsoft.Quantum.Arithmetic.Sum
-summary: ''
+summary: Dieser Namespace enthält Funktionen und Vorgänge, die für die Konsistenz Berechnung von Arithmetik verwendet werden.
 uid: Microsoft.Quantum.Arithmetic
 metadata:
-  ms.openlocfilehash: 73e3ac964e19ce4613c9426bfc09a39aff4228cf
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: 687e23caf1e5844fcba3d8b6dbe09524903184a2
+  ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92706522"
+  ms.lasthandoff: 11/26/2020
+  ms.locfileid: "96221758"
