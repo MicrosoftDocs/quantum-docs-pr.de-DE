@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToHeadA
 title: Applydeheada-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToHeadA
 qsharp.summary: Applies an operation to the first element of an array.
-ms.openlocfilehash: ba060243cb01782fd8529e0b05ee7258a66314f5
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3397c059706c48ff8ca47dd2312cfa9565aacaba
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704791"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208634"
 ---
 # <a name="applytoheada-operation"></a>Applydeheada-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wendet einen Vorgang auf das erste Element eines Arrays an.
 
 ```qsharp
-operation ApplyToHeadA<'T> (op : ('T => Unit is Adj), targets : 'T[]) : Unit
+operation ApplyToHeadA<'T> (op : ('T => Unit is Adj), targets : 'T[]) : Unit is Adj
 ```
 
 
@@ -34,7 +34,7 @@ Bei einem Vorgang `op` und einem Array von Zielen `targets` gilt `op(Head(target
 
 ## <a name="input"></a>Eingabe
 
-### <a name="op--t--unit-adj"></a>OP: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="op--t--unit--is-adj"></a>OP: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ
 
 Ein anzuwendende Vorgang.
 

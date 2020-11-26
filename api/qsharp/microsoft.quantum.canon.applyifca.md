@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfCA
 title: Applyifca-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfCA
 qsharp.summary: Applies a unitary operation conditioned on a classical bit.
-ms.openlocfilehash: 9057c79622f15a082963d94fc261664e00322feb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b0ac469d6dea51951e0d9b2cfceb54253d4b4c5d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705351"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209620"
 ---
 # <a name="applyifca-operation"></a>Applyifca-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wendet einen einheitlichen Vorgang an, der auf einem klassischen Bit bedingt ist.
 
 ```qsharp
-operation ApplyIfCA<'T> (op : ('T => Unit is Ctl + Adj), bit : Bool, target : 'T) : Unit
+operation ApplyIfCA<'T> (op : ('T => Unit is Ctl + Adj), bit : Bool, target : 'T) : Unit is Adj + Ctl
 ```
 
 
@@ -35,7 +35,7 @@ Das-Suffix `CA` gibt an, dass der anzuwendende Vorgang einheitlich (steuerbar un
 
 ## <a name="input"></a>Eingabe
 
-### <a name="op--t--unit-ctl--adj"></a>OP: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) CTL + ADJ
+### <a name="op--t--unit--is-adj--ctl"></a>OP: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL
 
 Ein Vorgang, der bedingt angewendet werden soll.
 

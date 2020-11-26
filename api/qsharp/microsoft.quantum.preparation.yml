@@ -1,24 +1,60 @@
 ### YamlMime:QSharpNamespace
 functions:
+- summary: Implementierungs Schritt eines willkürlichen Zustands Vorbereitungs Verfahrens.
+  uid: Microsoft.Quantum.Preparation.ApproximatelyUnprepareArbitraryStatePlan
 - summary: >-
     Berechnet die Bloch-Kugel Koordinaten für einen Single-Qubit-Zustand.
 
     Wenn zwei komplexe Zahlen $a 0 sind, a1 $, die den Qubit-Status darstellen, berechnet Koordinaten auf der Bloch-Kugel, sodass $a 0 \ket {0} + a1 \ket {1} = r e ^ {IT} (e ^ {-i \phi/2}\cos{(\ der TA/2)} \ket {0} + e ^ {i \phi/2}\sin{(\-Ta/2)} \ket {1} ) $.
   uid: Microsoft.Quantum.Preparation.BlochSphereCoordinates
 - summary: >-
+    Gibt einen Vorgang zurück, der eine Reinigung eines gegebenen gemischten Zustands vorbereitet.
+
+    Ein "gereinigter gemischter Zustand" bezieht sich auf Zustände in der Form | ψ ⟩ =. i. PI | i ⟩ | garbagei ⟩ angegeben durch einen Vektor von Koeffizienten {Pi}. Zustände dieses Formulars können auf gemischte Zustände reduziert werden p ≔ Pi | i ⟩ ⟨ i | durch die Ablauf Verfolgung über das "Garbage Register" (d. h. ein gemischter Zustand, der in der Berechnungsbasis diagonal ist).
+
+
+    Weitere Erläuterungen finden Sie unter https://arxiv.org/pdf/1805.03662.pdf?page=15 .
+  uid: Microsoft.Quantum.Preparation.PurifiedMixedState
+- summary: Gibt die Gesamtzahl der Qubits zurück, die zugeordnet werden müssen, um den von zurückgegebenen Vorgang anzuwenden @"microsoft.quantum.preparation.purifiedmixedstate" .
+  uid: Microsoft.Quantum.Preparation.PurifiedMixedStateRequirements
+- summary: >-
+    Gibt einen Vorgang zurück, der eine Bereinigung eines gegebenen gemischten Zustands vorbereitet, der durch ein Register entkoppelt ist, das eine angegebene Auflistung von Daten darstellt.
+
+    Ein "gereinigter gemischter Zustand mit Daten" bezieht sich auf den Zustand "", "", "", "", "⟩" | "⟩" | "garbagei ⟩", wobei jede XI-Datei eine Bitzeichenfolge ist
+
+
+    Weitere Erläuterungen finden Sie unter https://arxiv.org/pdf/1805.03662.pdf?page=15 .
+  uid: Microsoft.Quantum.Preparation.PurifiedMixedStateWithData
+- summary: >-
+    > [!WARNING]
+
+    > Quantum Rom ist veraltet. Verwenden Sie stattdessen <xref:Microsoft.Quantum.Preparation.PurifiedMixedState>.
+
+
     Verwendet die Quantum-Rom-Technik, um eine angegebene Dichte Matrix darzustellen.
 
     Eine Liste mit $N $ Koeffizienten $ \ alpha_j $, dadurch wird ein einheitlicher $U $ zurückgegeben, der die Quantum-Rom-Technik verwendet, um eine Näherung von $ \tilde \rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ der Reinigung der Dichte Matrix $ \rho = \ sum_ {j = 0} ^ {n-1} \bruchteil {| alpha_j |} zu erstellen. {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. In dieser Näherung ist der Fehler $ \epsilon $, dass $ | p_j-\bruch{| alpha_j |} {\ sum_k | \ alpha_k |} | \le \epsilon/N $ und $ \| \tilde \rho-\rho \| \le \epsilon $. Anders ausgedrückt: $ $ \begin{align} u\ket {0} ^ {\lceil\ Log_2 n\rceil} \ Ket {0} ^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\text{Garbage} _J}. \end{align} $ $
   uid: Microsoft.Quantum.Preparation.QuantumROM
 - summary: ''
   uid: Microsoft.Quantum.Preparation.QuantumROMBitStringWriterByIndex
-- summary: Gibt die Gesamtanzahl der Qubits zurück, die dem von zurückgegebenen Vorgang zugeordnet werden müssen `QuantumROM` .
+- summary: >-
+    > [!WARNING]
+
+    > Quantum romqubitcount ist veraltet. Verwenden Sie stattdessen <xref:Microsoft.Quantum.Preparation.PurifiedMixedStateRequirements>.
+
+
+    Gibt die Gesamtanzahl der Qubits zurück, die dem von zurückgegebenen Vorgang zugeordnet werden müssen `QuantumROM` .
   uid: Microsoft.Quantum.Preparation.QuantumROMQubitCount
 - summary: ''
-  uid: Microsoft.Quantum.Preparation.RangeLength
-- summary: ''
   uid: Microsoft.Quantum.Preparation.RoundedDiscretizationCoefficients
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.SplitSign
 - summary: >-
+    > [!WARNING]
+
+    > Statepreparationcomplexkoefficients ist veraltet. Verwenden Sie stattdessen <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateCP>.
+
+
     Gibt einen Vorgang zurück, der einen bestimmten Quantum-Zustand vorbereitet.
 
     Der zurückgegebene Vorgang $U $ bereitet einen beliebigen Quantum-Status $ \ket{\psi} $ mit komplexen Koeffizienten $r _J e ^ {i t_j} $ aus dem $n $-Qubit-Berechnungsbasis Status $ \ket{0...0} $.
@@ -26,6 +62,11 @@ functions:
     Die Aktion "U" für ein neu zugeordneter Register wird durch "$ $ \begin{align} u\ket {0..." angegeben. 0} = \ket{\psi} = \bruchteil {\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}. \end{align} $ $
   uid: Microsoft.Quantum.Preparation.StatePreparationComplexCoefficients
 - summary: >-
+    > [!WARNING]
+
+    > Statepreparationpositivekoefficients ist veraltet. Verwenden Sie stattdessen <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateD>.
+
+
     Gibt einen Vorgang zurück, der den gegebenen Quantum-Zustand vorbereitet.
 
     Der zurückgegebene Vorgang $U $ bereitet einen beliebigen Quantum-Status $ \ket{\psi} $ mit positiven Koeffizienten $ \ alpha_j \ge $0 aus dem $n $-Qubit-Berechnungsbasis Status $ \ket{0...0} $ vor.
@@ -33,17 +74,17 @@ functions:
     Die Aktion "U" für ein neu zugeordneter Register wird durch "$ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \bruchteil {" angegeben. \ sum_ {j = 0} ^ {2 ^ n-1} \ alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ alpha_j | ^ 2}}. \end{align} $ $
   uid: Microsoft.Quantum.Preparation.StatePreparationPositiveCoefficients
 - summary: Implementierungs Schritt eines willkürlichen Zustands Vorbereitungs Verfahrens.
-  uid: Microsoft.Quantum.Preparation._ApproximatelyUnprepareArbitraryStatePlan
+  uid: Microsoft.Quantum.Preparation.StatePreparationSBMComputeCoefficients
 - summary: ''
   uid: Microsoft.Quantum.Preparation._CompileApproximateArbitraryStatePreparation
 - summary: ''
   uid: Microsoft.Quantum.Preparation._QuantumROMDiscretization
-- summary: ''
-  uid: Microsoft.Quantum.Preparation._QuantumROMQubitManager
-- summary: Implementierungs Schritt eines willkürlichen Zustands Vorbereitungs Verfahrens.
-  uid: Microsoft.Quantum.Preparation._StatePreparationSBMComputeCoefficients
 name: Microsoft.Quantum.Preparation
-newtypes: []
+newtypes:
+- summary: Stellt einen bestimmten gemischten Zustand dar, der für einen Index und ein Garbage Register vorbereitet werden kann.
+  uid: Microsoft.Quantum.Preparation.MixedStatePreparation
+- summary: Stellt die Anzahl der erforderlichen Qubits zum Vorbereiten eines gegebenen gemischten Zustands dar.
+  uid: Microsoft.Quantum.Preparation.MixedStatePreparationRequirements
 operations:
 - summary: ''
   uid: Microsoft.Quantum.Preparation.ApplyGlobalRotationStep
@@ -51,17 +92,39 @@ operations:
   uid: Microsoft.Quantum.Preparation.ApplyMultiplexStep
 - summary: Wendet einen Vorgang auf die zugrunde liegenden Qubits an, die ein Little-in-sdian-Register bilden. Dieser Vorgang wird als "intern" gekennzeichnet, da ein Little-te-Register als "nicht transparent" bezeichnet werden soll, sodass es sich hierbei nur um ein Implementierungsdetail handelt.
   uid: Microsoft.Quantum.Preparation.ApplyToLittleEndian
-- summary: Bereitet mithilfe eines Satzes von Koeffizienten und einem Little-Endian-codierten Quantum-Register einen Zustand für dieses Register vor, der durch die angegebenen Koeffizienten beschrieben wird, bis zu einer bestimmten Näherungs Toleranz.
+- summary: >-
+    > [!WARNING]
+
+    > "Näherypreparearbitrarystate" ist veraltet. Verwenden Sie stattdessen <xref:Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateCP>.
+
+
+    Bereitet mithilfe eines Satzes von Koeffizienten und einem Little-Endian-codierten Quantum-Register einen Zustand für dieses Register vor, der durch die angegebenen Koeffizienten beschrieben wird, bis zu einer bestimmten Näherungs Toleranz.
   uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryState
-- summary: Bereitet einen Satz von Koeffizienten und ein Little-Endian-codiertes Quantum-Register vor und bereitet einen Status für dieses Register vor, der von den gegebenen Koeffizienten beschrieben wird.
+- summary: Bereitet mithilfe eines Satzes von Koeffizienten und einem Little-Endian-codierten Quantum-Register einen Zustand für dieses Register vor, der durch die angegebenen Koeffizienten beschrieben wird, bis zu einer bestimmten Näherungs Toleranz.
+  uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateCP
+- summary: Bereitet mithilfe eines Satzes von Koeffizienten und einem Little-Endian-codierten Quantum-Register einen Zustand für dieses Register vor, der durch die angegebenen Koeffizienten beschrieben wird, bis zu einer bestimmten Näherungs Toleranz.
+  uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateD
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.IgnoreDataRegister
+- summary: >-
+    > [!WARNING]
+
+    > Preparearbitrarystate wurde als veraltet markiert. Verwenden Sie stattdessen <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateCP>.
+
+
+    Bereitet einen Satz von Koeffizienten und ein Little-Endian-codiertes Quantum-Register vor und bereitet einen Status für dieses Register vor, der von den gegebenen Koeffizienten beschrieben wird.
   uid: Microsoft.Quantum.Preparation.PrepareArbitraryState
-- summary: Bereitet den Status "Choi – jamiłkowski" für einen bestimmten Vorgang auf angegebene Verweis-und Ziel Register vor.
+- summary: Bereitet einen Satz von Koeffizienten und ein Little-Endian-codiertes Quantum-Register vor und bereitet einen Status für dieses Register vor, der von den gegebenen Koeffizienten beschrieben wird.
+  uid: Microsoft.Quantum.Preparation.PrepareArbitraryStateCP
+- summary: Bereitet einen Satz von Koeffizienten und ein Little-Endian-codiertes Quantum-Register vor und bereitet einen Status für dieses Register vor, der von den gegebenen Koeffizienten beschrieben wird.
+  uid: Microsoft.Quantum.Preparation.PrepareArbitraryStateD
+- summary: Bereitet den Status "Choi – jamiołkowski" für einen bestimmten Vorgang auf angegebene Verweis-und Ziel Register vor.
   uid: Microsoft.Quantum.Preparation.PrepareChoiState
-- summary: Bereitet den Status "Choi – jamiłkowski" für einen bestimmten Vorgang mit einer Adjoint-Variante auf angegebene Verweis-und Ziel Register vor.
+- summary: Bereitet den Status "Choi – jamiołkowski" für einen bestimmten Vorgang mit einer Adjoint-Variante auf bestimmte Verweis-und Ziel Register vor.
   uid: Microsoft.Quantum.Preparation.PrepareChoiStateA
-- summary: Bereitet den Status "Choi – jamiłkowski" für einen bestimmten Vorgang mit einer kontrollierten Variante auf angegebene Verweis-und Ziel Register vor.
+- summary: Bereitet den Status "Choi – jamiołkowski" für einen bestimmten Vorgang mit einer kontrollierten Variante auf angegebene Verweis-und Ziel Register vor.
   uid: Microsoft.Quantum.Preparation.PrepareChoiStateC
-- summary: Bereitet den Status "Choi – jamiłkowski" für einen bestimmten Vorgang mit sowohl kontrollierten als auch Adjoint-Varianten auf angegebene Verweis-und Ziel Register vor.
+- summary: Bereitet den Status "Choi – jamiołkowski" für einen bestimmten Vorgang mit sowohl kontrollierten als auch Adjoint-Varianten auf angegebene Verweis-und Ziel Register vor.
   uid: Microsoft.Quantum.Preparation.PrepareChoiStateCA
 - summary: >-
     Paar Weise entwinkel zwei Qubit-Register.
@@ -73,9 +136,16 @@ operations:
 
     Das Register wird im Zustand $ \boldone/2 ^ N $ vorbereitet, indem der gesamte depolarisierungschannel auf die einzelnen Qubits angewendet wird, wobei $N $ die Länge des Registers ist.
   uid: Microsoft.Quantum.Preparation.PrepareIdentity
+- summary: Bereitet ein Qubit im positiven eigen Zustand eines angegebenen Pauli-Operators vor. Wenn der Identity-Operator angegeben ist, wird das Qubit im Status "in maximalgemischter Form" vorbereitet.
+  uid: Microsoft.Quantum.Preparation.PreparePauliEigenstate
 - summary: ''
   uid: Microsoft.Quantum.Preparation.PrepareQuantumROMState
 - summary: >-
+    > [!WARNING]
+
+    > Preparequbit ist veraltet. Verwenden Sie stattdessen <xref:Microsoft.Quantum.Preparation.PreparePauliEigenstate>.
+
+
     Bereitet ein Qubit im + 1 ( `Zero` )-eigen Zustand des angegebenen Pauli-Operators vor. Wenn der Identity-Operator angegeben ist, wird das Qubit im Status "in maximalgemischter Form" vorbereitet.
 
     Wenn sich das Qubit anfänglich im $ \ket {0} $-Zustand befunden hat, bereitet dieser Vorgang das Qubit im $ + $1-eigen Zustand eines angegebenen Pauli-Operators bzw `PauliI` . für im Status "maximisch Mixed" (siehe <xref:microsoft.quantum.preparation.preparesinglequbitidentity> ) vor.
@@ -93,15 +163,17 @@ operations:
     Das heißt, dieser einheitliche $U $ erstellt eine einheitliche Superposition für alle Zahl Zustände $0 $ bis $M-$1, wenn ein Eingabe Status $ \ket{0\cdots 0} $ angegeben wird. Anders ausgedrückt: $ $ \begin{align} u\ket {0} = \frac {1} {\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}. \end{align} $ $.
   uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition
 - summary: Implementierungs Schritt von <xref:microsoft.quantum.canon.prepareuniformsuperposition>
-  uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition_
+  uid: Microsoft.Quantum.Preparation.PrepareUniformSuperpositionOracle
 - summary: ''
   uid: Microsoft.Quantum.Preparation.WriteQuantumROMBitString
+- summary: Wenn ein Satz von Koeffizienten und ein Little-Endian-codiertes Quantum-Register mit nicht entwinkeltem Qubits, die alle den Status NULL aufweisen, einen Status für das Register vorbereitet, das von den gegebenen Koeffizienten beschrieben wird. Verwendet die Zustands Emulation, wenn dies vom Ziel unterstützt wird.
+  uid: Microsoft.Quantum.Preparation._PrepareAmplitudesFromZeroState
 summary: Dieser Namespace enthält Funktionen und Vorgänge zum Vorbereiten von Qubits in beliebige anfängliche Zustände.
 uid: Microsoft.Quantum.Preparation
 metadata:
-  ms.openlocfilehash: f8dc07d5fe1073f626eea41e6291d8cc919d93b6
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: f08467fae166b83cbb71d86739b4cd1300259b8b
+  ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92723353"
+  ms.lasthandoff: 11/26/2020
+  ms.locfileid: "96210300"

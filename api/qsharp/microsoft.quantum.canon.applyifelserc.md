@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseRC
 title: Applyifelserc-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseRC
 qsharp.summary: Applies one of two controllable operations, depending on the value of a classical result.
-ms.openlocfilehash: 45bd0f46fb2e28c5c9aaa21cb7ec065baf279d2a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b2e4ade84b25b0100fe4b69814c760a672833f06
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705282"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209484"
 ---
 # <a name="applyifelserc-operation"></a>Applyifelserc-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wendet je nach dem Wert eines klassischen Ergebnisses einen von zwei kontrollierbaren Vorgängen an.
 
 ```qsharp
-operation ApplyIfElseRC<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit
+operation ApplyIfElseRC<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit is Ctl
 ```
 
 
@@ -39,7 +39,7 @@ Bei einem Ergebnis `result` wendet den Vorgang `zeroOp` mit `zeroInput` als Eing
 Das Messergebnis, mit dem bestimmt wird, ob `zeroOp` oder `oneOp` angewendet wird.
 
 
-### <a name="zeroop--t--unit-ctl"></a>zeroop: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) CTL
+### <a name="zeroop--t--unit--is-ctl"></a>zeroop: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist CTL
 
 Der zu verwendende kontrollierbare Vorgang, wenn `result == Zero` .
 
@@ -49,7 +49,7 @@ Der zu verwendende kontrollierbare Vorgang, wenn `result == Zero` .
 Die Eingabe, die für bereitgestellt werden soll `zeroOp` `result == Zero` .
 
 
-### <a name="oneop--u--unit-ctl"></a>oneop: "U => [Unit](xref:microsoft.quantum.lang-ref.unit) CTL
+### <a name="oneop--u--unit--is-ctl"></a>oneop: "U => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist CTL
 
 Der zu verwendende kontrollierbare Vorgang, wenn `result == One` .
 
