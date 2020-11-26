@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Oracles.DeterministicStateOracle
 title: Benutzerdefinierter deterministicstateoracle-Typ
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Oracles
@@ -12,18 +12,18 @@ qsharp.summary: >-
   The input to the oracle $O$ is:
 
   - The register that will store the desired quantum state $\ket{\psi}\_s$.
-ms.openlocfilehash: f02267d48cf42fb5b02782dc6b667ac7b60a05dc
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6f8f80aacd3386ba61675101acb87e09fff5afff
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92724292"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96193929"
 ---
 # <a name="deterministicstateoracle-user-defined-type"></a>Benutzerdefinierter deterministicstateoracle-Typ
 
 Namespace: [Microsoft. Quantum. Oracles](xref:Microsoft.Quantum.Oracles)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Stellt ein Oracle für die deterministische Zustands Vorbereitung dar.
@@ -39,7 +39,7 @@ newtype DeterministicStateOracle = ((Qubit[] => Unit is Adj + Ctl));
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Dieses durch $O \ket {0} = \ket{\psi} $ definierte Oracle agiert auf der Grundlage des Berechnungs Zustands $ \ket {0} $ zum Erstellen des Zustands $ \ket{\psi} $.
 Der erste Parameter ist das Qubit-Register von $ \ket{\psi} $.

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.Sin
 title: Sin-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: Sin
 qsharp.summary: Returns the sine of the specified angle.
-ms.openlocfilehash: e9aabc96247c6c702e22bf5b71a584ee8f930828
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ff8c623c8e9d59bf54424d635a9894582bf991a4
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92724740"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194473"
 ---
 # <a name="sin-function"></a>Sin-Funktion
 
 Namespace: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Gibt den Sinus des angegebenen Winkels zurück.
@@ -40,6 +40,6 @@ function Sin (theta : Double) : Double
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Weitere Informationen finden Sie unter [System. Math. Sin](https://docs.microsoft.com/dotnet/api/system.math.sin) .

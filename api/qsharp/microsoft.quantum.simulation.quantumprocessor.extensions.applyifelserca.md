@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyIfElseRCA
 title: Applyifelserca-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyIfElseRCA
 qsharp.summary: ''
-ms.openlocfilehash: fb2f7ded44708a93d97d7041bf15be2c8c48990a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6fbf186575775b3ae18a41727c225fb871f8dac0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92706458"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192620"
 ---
 # <a name="applyifelserca-operation"></a>Applyifelserca-Vorgang
 
 Namespace: [Microsoft. Quantum. Simulation. quantumprocessor. Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
 
 ```qsharp
-operation ApplyIfElseRCA<'T, 'U> (measurementResult : Result, (onResultZeroOp : ('T => Unit is Adj + Ctl), zeroArg : 'T), (onResultOneOp : ('U => Unit is Adj + Ctl), oneArg : 'U)) : Unit
+operation ApplyIfElseRCA<'T, 'U> (measurementResult : Result, (onResultZeroOp : ('T => Unit is Adj + Ctl), zeroArg : 'T), (onResultOneOp : ('U => Unit is Adj + Ctl), oneArg : 'U)) : Unit is Adj + Ctl
 ```
 
 
@@ -35,7 +35,7 @@ operation ApplyIfElseRCA<'T, 'U> (measurementResult : Result, (onResultZeroOp : 
 
 
 
-### <a name="onresultzeroop--t--unit-adj--ctl"></a>onresultzeroop: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="onresultzeroop--t--unit--is-adj--ctl"></a>onresultzeroop: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL
 
 
 
@@ -45,7 +45,7 @@ operation ApplyIfElseRCA<'T, 'U> (measurementResult : Result, (onResultZeroOp : 
 
 
 
-### <a name="onresultoneop--u--unit-adj--ctl"></a>onresultoneop: "U => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="onresultoneop--u--unit--is-adj--ctl"></a>onresultoneop: "U => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL
 
 
 
