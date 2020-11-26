@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.SignL
 title: Signl-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: SignL
 qsharp.summary: Returns an integer that indicates the sign of a number.
-ms.openlocfilehash: a88c6656e836ec0a05120cddbffb6c590124eb01
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 53c97b38c77dc1757be4c0a851c8c9a8710b326a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723045"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96227368"
 ---
 # <a name="signl-function"></a>Signl-Funktion
 
 Namespace: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Gibt eine ganze Zahl zurück, die das Vorzeichen einer Zahl angibt.
@@ -40,6 +40,6 @@ function SignL (a : BigInt) : Int
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Weitere Informationen finden Sie [unter System. Math. Sign](https://docs.microsoft.com/dotnet/api/system.math.sign) .

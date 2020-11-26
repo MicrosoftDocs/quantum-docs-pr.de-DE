@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.Cos
 title: COS-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: Cos
 qsharp.summary: Returns the cosine of the specified angle.
-ms.openlocfilehash: 57d9d657622194c90f2e4d324e2d529acf84f1e2
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3a4af6d0cf0332e34447e374fd45a81944daad94
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723816"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228592"
 ---
 # <a name="cos-function"></a>COS-Funktion
 
 Namespace: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Gibt den Kosinus des angegebenen Winkels zurück.
@@ -40,6 +40,6 @@ function Cos (theta : Double) : Double
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Weitere Informationen finden Sie unter [System. Math. Cos](https://docs.microsoft.com/dotnet/api/system.math.cos) .

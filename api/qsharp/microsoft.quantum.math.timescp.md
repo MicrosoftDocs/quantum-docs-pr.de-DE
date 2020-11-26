@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.TimesCP
 title: Timescp-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: TimesCP
 qsharp.summary: Returns the product of two inputs.
-ms.openlocfilehash: 35ea8975871caea0a144fb19b009976880de7d65
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: be8b6a444dcb504185e4b0610f419c2e49d9ac89
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92724334"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96227232"
 ---
 # <a name="timescp-function"></a>Timescp-Funktion
 
 Namespace: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Gibt das Produkt von zwei Eingaben zurück.
