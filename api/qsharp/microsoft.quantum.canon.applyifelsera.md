@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseRA
 title: Applyifelsera-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseRA
 qsharp.summary: Applies one of two adjointable operations, depending on the value of a classical result.
-ms.openlocfilehash: d0181d98a9867f71d8a8f8dea4331e5a13f9e59c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3ebd09b1e5876ff397f3524ba828ba26a271e91e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705298"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218596"
 ---
 # <a name="applyifelsera-operation"></a>Applyifelsera-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wendet abhängig vom Wert eines klassischen Ergebnisses einen von zwei adjointable-Vorgängen an.
 
 ```qsharp
-operation ApplyIfElseRA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U)) : Unit
+operation ApplyIfElseRA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U)) : Unit is Adj
 ```
 
 
@@ -39,7 +39,7 @@ Bei einem Ergebnis `result` wendet den Vorgang `zeroOp` mit `zeroInput` als Eing
 Das Messergebnis, mit dem bestimmt wird, ob `zeroOp` oder `oneOp` angewendet wird.
 
 
-### <a name="zeroop--t--unit-adj"></a>zeroop: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="zeroop--t--unit--is-adj"></a>zeroop: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ
 
 Der adjointable-Vorgang, der angewendet werden soll, wenn `result == Zero` .
 
@@ -49,7 +49,7 @@ Der adjointable-Vorgang, der angewendet werden soll, wenn `result == Zero` .
 Die Eingabe, die für bereitgestellt werden soll `zeroOp` `result == Zero` .
 
 
-### <a name="oneop--u--unit-adj"></a>oneop: "U => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="oneop--u--unit--is-adj"></a>oneop: "U => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ
 
 Der adjointable-Vorgang, der angewendet werden soll, wenn `result == One` .
 

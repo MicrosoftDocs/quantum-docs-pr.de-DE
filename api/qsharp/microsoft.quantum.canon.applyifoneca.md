@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfOneCA
 title: Applyifoneca-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfOneCA
 qsharp.summary: Applies a unitary operation conditioned on a classical result value being one.
-ms.openlocfilehash: 973dd3c5f9f3e9ad03c0626a38779f499b7ce657
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 29801ed0bec08d0ab818f237feb17c2a2a7af1e4
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705255"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218579"
 ---
 # <a name="applyifoneca-operation"></a>Applyifoneca-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wendet einen einheitlichen Vorgang an, der auf einen klassischen Ergebniswert zurückzuführen ist.
 
 ```qsharp
-operation ApplyIfOneCA<'T> (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit
+operation ApplyIfOneCA<'T> (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit is Adj + Ctl
 ```
 
 
@@ -40,7 +40,7 @@ Das-Suffix `CA` gibt an, dass der anzuwendende Vorgang einheitlich (steuerbar un
 Ein Messergebnis, das steuert, ob op angewendet wird.
 
 
-### <a name="op--t--unit-adj--ctl"></a>OP: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="op--t--unit--is-adj--ctl"></a>OP: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL
 
 Ein Vorgang, der bedingt angewendet werden soll.
 

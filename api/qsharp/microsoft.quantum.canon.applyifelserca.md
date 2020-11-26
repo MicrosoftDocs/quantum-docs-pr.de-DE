@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseRCA
 title: Applyifelserca-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseRCA
 qsharp.summary: Applies one of two unitary operations, depending on the value of a classical result.
-ms.openlocfilehash: c48d75323f036ebce1a316382a05cd2578db47a3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: dfd1c16a25a2da507024813a380386c8f4e49d30
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705279"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218749"
 ---
 # <a name="applyifelserca-operation"></a>Applyifelserca-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wendet abhängig vom Wert eines klassischen Ergebnisses einen von zwei einheitlichen Vorgängen an.
 
 ```qsharp
-operation ApplyIfElseRCA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U)) : Unit
+operation ApplyIfElseRCA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U)) : Unit is Adj + Ctl
 ```
 
 
@@ -39,7 +39,7 @@ Bei einem Ergebnis `result` wendet den Vorgang `zeroOp` mit `zeroInput` als Eing
 Das Messergebnis, mit dem bestimmt wird, ob `zeroOp` oder `oneOp` angewendet wird.
 
 
-### <a name="zeroop--t--unit-adj--ctl"></a>zeroop: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="zeroop--t--unit--is-adj--ctl"></a>zeroop: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL
 
 Der einheitliche Vorgang, der angewendet werden soll, wenn `result == Zero` .
 
@@ -49,7 +49,7 @@ Der einheitliche Vorgang, der angewendet werden soll, wenn `result == Zero` .
 Die Eingabe, die für bereitgestellt werden soll `zeroOp` `result == Zero` .
 
 
-### <a name="oneop--u--unit-adj--ctl"></a>oneop: "U => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="oneop--u--unit--is-adj--ctl"></a>oneop: "U => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL
 
 Der einheitliche Vorgang, der angewendet werden soll, wenn `result == One` .
 

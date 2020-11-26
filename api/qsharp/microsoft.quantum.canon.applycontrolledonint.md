@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyControlledOnInt
 title: Applycontrolledonint-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyControlledOnInt
 qsharp.summary: Applies a unitary operation on the target register if the control register state corresponds to a specified positive integer.
-ms.openlocfilehash: c8ea76946143967de4b6ac65986a1c4407ecb633
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3dd17e6bc913e84941a6b81f134e60536a4c4122
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705431"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219004"
 ---
 # <a name="applycontrolledonint-operation"></a>Applycontrolledonint-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wendet einen einheitlichen Vorgang auf das Ziel Register an, wenn der Steuerelement Registrierungs Zustand einer angegebenen positiven ganzen Zahl entspricht.
 
 ```qsharp
-operation ApplyControlledOnInt<'T> (numberState : Int, oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit
+operation ApplyControlledOnInt<'T> (numberState : Int, oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit is Adj + Ctl
 ```
 
 
@@ -35,7 +35,7 @@ operation ApplyControlledOnInt<'T> (numberState : Int, oracle : ('T => Unit is A
 Eine nicht negative ganze Zahl, für die der Vorgang `oracle` gesteuert werden soll.
 
 
-### <a name="oracle--t--unit-adj--ctl"></a>Oracle: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="oracle--t--unit--is-adj--ctl"></a>Oracle: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL
 
 Ein einheitlicher Vorgang, der gesteuert werden soll.
 
@@ -61,7 +61,7 @@ Ein Register, das angewendet werden soll `oracle` .
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Der Wert von `numberState` wird mithilfe einer Little-enumdian-Codierung interpretiert.
 

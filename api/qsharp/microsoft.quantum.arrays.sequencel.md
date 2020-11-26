@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.SequenceL
 title: Sequencel-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: SequenceL
 qsharp.summary: Get an array of integers in a given interval.
-ms.openlocfilehash: d5ce63575e703341fce42c0be393765c342bbd89
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3e5c7f64825f09d82792d3e46fe3f53f5814510b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705783"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220262"
 ---
 # <a name="sequencel-function"></a>Sequencel-Funktion
 
 Namespace: [Microsoft. Quantum. Arrays](xref:Microsoft.Quantum.Arrays)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Ein Array von ganzen Zahlen in einem angegebenen Intervall erhalten.
@@ -45,6 +45,6 @@ Ein inklusiver Endindex des Intervalls, das nicht kleiner als ist `from` .
 
 Ein Array, das die Reihenfolge der Zahlen `from` , `from + 1` ,..., enthält `to` .
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Der Unterschied zwischen `from` und `to` muss in einen- `Int` Wert passen.

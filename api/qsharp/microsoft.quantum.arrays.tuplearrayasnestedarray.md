@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.TupleArrayAsNestedArray
 title: Tuplearrayasnetstedarray-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: TupleArrayAsNestedArray
 qsharp.summary: Turns a list of 2-tuples into a nested array.
-ms.openlocfilehash: 917f35db949790ab3ae6e7a2184bcfcf5ed50be6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c898178b6385b27f753509f0748a8b666b5066bd
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705735"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220075"
 ---
 # <a name="tuplearrayasnestedarray-function"></a>Tuplearrayasnetstedarray-Funktion
 
 Namespace: [Microsoft. Quantum. Arrays](xref:Microsoft.Quantum.Arrays)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wandelt eine Liste von 2 Tupeln in ein Array um.

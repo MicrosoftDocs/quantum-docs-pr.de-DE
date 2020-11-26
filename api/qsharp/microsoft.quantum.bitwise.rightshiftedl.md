@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Bitwise.RightShiftedL
 title: Rightshif tedl-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: RightShiftedL
 qsharp.summary: Shifts the bitwise representation of a number right by a given number of bits.
-ms.openlocfilehash: 2929ba58b636847257391930e1019769fd2c2580
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3d941e1a0bcd96fe54ab01019293d883f11547a1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705578"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219514"
 ---
 # <a name="rightshiftedl-function"></a>Rightshif tedl-Funktion
 
 Namespace: [Microsoft. Quantum. bitse](xref:Microsoft.Quantum.Bitwise)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Verschiebt die bitweise Darstellung einer Zahl um eine angegebene Anzahl von Bits nach rechts.
@@ -45,7 +45,7 @@ Die Anzahl der Bits, um die `value` nach rechts verschoben werden soll.
 
 Der Wert von `value` , nach rechts nach `amount` Bits verschoben.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Die folgenden sind gleichwertig:
 

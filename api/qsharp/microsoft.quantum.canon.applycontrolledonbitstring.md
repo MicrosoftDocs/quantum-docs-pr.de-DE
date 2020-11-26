@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyControlledOnBitString
 title: Applycontrolledonbitstring-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyControlledOnBitString
 qsharp.summary: Applies a unitary operation on the target register, controlled on a a state specified by a given bit mask.
-ms.openlocfilehash: 7a054511bacff574e6f7e889ace048c78886cf91
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6947d2dbdec4cfbb592143024a7c8ccd53a32029
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705434"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219072"
 ---
 # <a name="applycontrolledonbitstring-operation"></a>Applycontrolledonbitstring-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wendet einen einheitlichen Vorgang für das Ziel Register an, der in einem durch eine bestimmte Bitmaske angegebenen Zustand gesteuert wird.
 
 ```qsharp
-operation ApplyControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit
+operation ApplyControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit is Adj + Ctl
 ```
 
 
@@ -35,7 +35,7 @@ operation ApplyControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is
 Die Bitzeichenfolge, für die der angegebene einheitliche Vorgang gesteuert werden soll.
 
 
-### <a name="oracle--t--unit-adj--ctl"></a>Oracle: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="oracle--t--unit--is-adj--ctl"></a>Oracle: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL
 
 Der auf das Ziel Register anzuwendende einheitliche Vorgang.
 
@@ -61,7 +61,7 @@ Das Ziel Register, das an als Eingabe an die übermittelt werden soll `oracle` .
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Das von angegebene Muster `bits` ist möglicherweise kürzer als `controlRegister` . in diesem Fall werden zusätzliche Steuerungs-Qubits ignoriert (d. h., Sie werden nicht für "$ \ket {0} $" und "$ \ket $" gesteuert {1} ).
 Wenn `bits` länger als ist `controlRegister` , wird ein Fehler ausgelöst.

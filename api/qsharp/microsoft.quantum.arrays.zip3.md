@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arrays.Zip3
 title: Zip3-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
@@ -13,18 +13,18 @@ qsharp.summary: >-
 
 
   Given three arrays, returns a new array of 3-tuples such that each 3-tuple contains an element from each original array.
-ms.openlocfilehash: f4b1a769614ee9434b2141b8fcb91f34cd071bdb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a6e7519755c4d473f6ba255ac5f877b2a3894d71
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705679"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219820"
 ---
 # <a name="zip3-function"></a>Zip3-Funktion
 
 Namespace: [Microsoft. Quantum. Arrays](xref:Microsoft.Quantum.Arrays)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 > [!WARNING]

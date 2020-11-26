@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyDiagonalUnitary
 title: Applydiagonaleinheitlicher-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyDiagonalUnitary
 qsharp.summary: Applies an array of complex phases to numeric basis states of a register of qubits.
-ms.openlocfilehash: 6ecacf6e4fe2c505036de208c8aeb5350e479e3c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8f17c3cb222bef00ead5e7fea5d29d296b9a428a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705386"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218851"
 ---
 # <a name="applydiagonalunitary-operation"></a>Applydiagonaleinheitlicher-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wendet ein Array komplexer Phasen auf numerische Basiszustände eines Register von Qubits an.
 
 ```qsharp
-operation ApplyDiagonalUnitary (coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation ApplyDiagonalUnitary (coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -53,7 +53,7 @@ $n $-Qubit-Steuerelement Register, das die Anzahl der Zustände $ \ket{j} $ im L
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 `coefficients` wird mit Elementen $ \ theta_j = $0,0 aufgefüllt, wenn weniger als $2 ^ n $ angegeben werden.
 
