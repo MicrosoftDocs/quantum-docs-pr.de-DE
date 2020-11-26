@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AllowAtMostNCallsCA
 title: Vorgang "zugswatmustncallsca"
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AllowAtMostNCallsCA
 qsharp.summary: Between a call to this operation and its adjoint, asserts that a given operation is called at most a certain number of times.
-ms.openlocfilehash: 1a9975d2d2026749238430b247cf47738de545cd
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 7caf33e33318bb74cb160436940eff9f0f2782cc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702792"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202565"
 ---
 # <a name="allowatmostncallsca-operation"></a>Vorgang "zugswatmustncallsca"
 
 Namespace: [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Bei einem Aufruf dieses Vorgangs und seines Adjoint-Vorgangs bestätigt, dass ein angegebener Vorgang höchstens eine bestimmte Anzahl von Vorkommen aufgerufen wird.
 
 ```qsharp
-operation AllowAtMostNCallsCA<'TInput, 'TOutput> (nTimes : Int, op : ('TInput => 'TOutput is Adj + Ctl), message : String) : Unit
+operation AllowAtMostNCallsCA<'TInput, 'TOutput> (nTimes : Int, op : ('TInput => 'TOutput is Adj + Ctl), message : String) : Unit is Adj
 ```
 
 
@@ -35,7 +35,7 @@ operation AllowAtMostNCallsCA<'TInput, 'TOutput> (nTimes : Int, op : ('TInput =>
 Die maximale Anzahl von aufrufen, die `op` aufgerufen werden können.
 
 
-### <a name="op--tinput--toutput-adj--ctl"></a>OP: ' TInput => ' TOutput ADJ + CTL
+### <a name="op--tinput--toutput--is-adj--ctl"></a>OP: ' TInput => ' TOutput ist ADJ + CTL
 
 Ein Vorgang, dessen Aufrufe eingeschränkt werden.
 
@@ -59,6 +59,6 @@ Eine Meldung, die bei einem Fehler angezeigt werden soll.
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Dieser Vorgang kann durch einen No-op-Vorgang für Ziele ersetzt werden, die ihn nicht unterstützen.
