@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.NearEqualityFactD
 title: Netarequalityfaktd-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: NearEqualityFactD
 qsharp.summary: Asserts that a classical floating point value has the expected value up to a small tolerance of 1e-10.
-ms.openlocfilehash: 5b55f515b27667071218a3f604ef703a6a15206d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5acfe5043342fd88276910a9fd0347f7d2f6960f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702617"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96201511"
 ---
 # <a name="nearequalityfactd-function"></a>Netarequalityfaktd-Funktion
 
 Namespace: [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Bestätigt, dass ein klassischer Gleit Komma Wert den erwarteten Wert bis zu einer kleinen Toleranz von 1E-10 aufweist.
@@ -45,6 +45,6 @@ Der erwartete Wert.
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Dies entspricht <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact> der hart codierten Toleranz von $10 ^ {-10} $.

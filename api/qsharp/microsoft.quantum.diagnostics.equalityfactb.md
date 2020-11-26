@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.EqualityFactB
 title: Equalityfaktb-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: EqualityFactB
 qsharp.summary: Asserts that a classical Bool variable has the expected value.
-ms.openlocfilehash: d3163281772bda392fbdd61ad58543e22022a600
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a87d6690e701eb1530be3134d24884a8c19357e9
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702671"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96201919"
 ---
 # <a name="equalityfactb-function"></a>Equalityfaktb-Funktion
 
 Namespace: [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Bestätigt, dass eine klassische boolesche Variable über den erwarteten Wert verfügt.

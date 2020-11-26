@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.Contradiction
 title: Widerspruch Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: Contradiction
 qsharp.summary: Declares that a classical condition is false.
-ms.openlocfilehash: a5f3f26c5ada2eea9206699a2cc77575a9b5eebd
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f9ad9a7d67bda8e50c76f679f535ad55ba07698e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702708"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202140"
 ---
 # <a name="contradiction-function"></a>Widerspruch Funktion
 
 Namespace: [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Deklariert, dass eine klassische Bedingung false ist.

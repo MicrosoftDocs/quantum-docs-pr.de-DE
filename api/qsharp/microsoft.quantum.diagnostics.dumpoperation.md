@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.DumpOperation
 title: Dumpoperation-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: DumpOperation
 qsharp.summary: Given an operation, displays diagnostics about the operation that are made available by the current execution target.
-ms.openlocfilehash: 444d42e2440b30b3bdf50d55a399568bed063222
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b0e07173ddbeb8a96d4a85928258b6e30deb394d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702707"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202055"
 ---
 # <a name="dumpoperation-operation"></a>Dumpoperation-Vorgang
 
 Namespace: [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Zeigt bei einem Vorgang Diagnoseinformationen zu dem Vorgang an, der vom aktuellen Ausführungs Ziel verfügbar gemacht wird.
@@ -35,7 +35,7 @@ operation DumpOperation (nQubits : Int, op : (Qubit[] => Unit is Adj)) : Unit
 Die Anzahl der Qubits, auf die der angegebene Vorgang angewendet wird.
 
 
-### <a name="op--qubit--unit-adj"></a>OP: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="op--qubit--unit--is-adj"></a>OP: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ
 
 Der Vorgang, der diagnostiziert werden soll.
 
@@ -45,7 +45,7 @@ Der Vorgang, der diagnostiziert werden soll.
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Das Aufrufen dieses Vorgangs hat keine Observable-Auswirkung in Q #. Die genaue Diagnose, die ggf. angezeigt wird, hängt vom aktuellen Ausführungs Ziel und der Editor Umgebung ab.
 Wenn z. b. für den vollständigen Quantum-Simulator verwendet wird, wird eine einheitliche Matrix, die zur Darstellung von verwendet wird, `op` angezeigt.

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.Fact
 title: Fact-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: Fact
 qsharp.summary: Declares that a classical condition is true.
-ms.openlocfilehash: 6a08703f68f9f38f2224fe4c6a4d255b00756908
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 74ec020d0437d885d7cbfc98a2c9c0c1867d5d39
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702630"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96201681"
 ---
 # <a name="fact-function"></a>Fact-Funktion
 
 Namespace: [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Deklariert, dass eine klassische Bedingung true ist.

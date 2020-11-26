@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.EqualityFactCP
 title: Equalityfaktcp-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: EqualityFactCP
 qsharp.summary: Asserts that a complex number has the expected value.
-ms.openlocfilehash: 1ea790debb5a9123fb8bee3a5f8a1fde0a050b37
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 39b55e17302f9d2e5049169e9c1a74e53a8b1115
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702666"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96201851"
 ---
 # <a name="equalityfactcp-function"></a>Equalityfaktcp-Funktion
 
 Namespace: [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Bestätigt, dass eine komplexe Zahl über den erwarteten Wert verfügt.

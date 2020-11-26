@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection._ExtractLogicalQubitFromSteaneCode
 title: _ExtractLogicalQubitFromSteaneCode Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Syndrome measurement and the inverse of embedding.
 
   $X$- and $Z$-stabilizers are not treated equally, which is due to the particular choice of the encoding circuit. This asymmetry leads to a different syndrome extraction routine. One could measure the syndrome by measuring multi-qubit Pauli operator directly on the code state, but for the distillation purpose the logical qubit is returned into a single qubit, in course of which the syndrome measurements can be done without further ancillas.
-ms.openlocfilehash: 71390feb84660cc9bf7bb12b64eac6d3ca512387
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 273692efa629cb8cc20069ef500c4e0902fbc3ff
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702576"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96201341"
 ---
 # <a name="_extractlogicalqubitfromsteanecode-operation"></a>_ExtractLogicalQubitFromSteaneCode Vorgang
 
 Namespace: [Microsoft. Quantum. errorcorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Die Messgeräte Messung und die Umkehrung der Einbettung.
@@ -48,7 +48,7 @@ operation _ExtractLogicalQubitFromSteaneCode (code : Microsoft.Quantum.ErrorCorr
 Das logische Qubit und ein paar von ganzen Zahlen für $X $--Syndrom und $Z $--Syndrom.
 Sie stellen den Index des Code-Qubit dar, auf dem ein einzelner $X $-oder $Z $-Error das gemessene Syndrom verursacht hätte.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Beachten Sie, dass dieser Vorgang nicht als gekennzeichnet ist `internal` , da Komponententests direkt von diesem Vorgang abhängig sind. Bei zukünftigen Verbesserungen sollten Komponententests umgestaltet werden, damit Sie nur direkt von öffentlichen callables abhängig sind.
 

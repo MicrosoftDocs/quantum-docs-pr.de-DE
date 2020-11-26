@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AllowAtMostNQubits
 title: Vorgang "Zuordnung"
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AllowAtMostNQubits
 qsharp.summary: Between a call to this operation and its adjoint, asserts that at most a given number of additional qubits are allocated with using statements.
-ms.openlocfilehash: ddbed96df0d95cfd78730c091a6a81ee6e49c349
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5376b6f39d12d664342fbf71e67442c6ef8a0827
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702791"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202548"
 ---
 # <a name="allowatmostnqubits-operation"></a>Vorgang "Zuordnung"
 
 Namespace: [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Bei einem Aufrufe dieses Vorgangs und seines Adjoint-Vorgangs wird von bestätigt, dass höchstens eine angegebene Anzahl zusätzlicher Qubits mit using-Anweisungen zugeordnet wird.
 
 ```qsharp
-operation AllowAtMostNQubits (nQubits : Int, message : String) : Unit
+operation AllowAtMostNQubits (nQubits : Int, message : String) : Unit is Adj
 ```
 
 
@@ -45,6 +45,6 @@ Eine Meldung, die bei einem Fehler angezeigt werden soll.
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Dieser Vorgang kann durch einen No-op-Vorgang für Ziele ersetzt werden, die ihn nicht unterstützen.

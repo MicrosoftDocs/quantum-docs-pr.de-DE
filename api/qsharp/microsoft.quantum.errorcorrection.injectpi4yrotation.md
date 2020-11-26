@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.InjectPi4YRotation
 title: InjectPi4YRotation-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: InjectPi4YRotation
 qsharp.summary: Rotates a single qubit by π/4 about the Y-axis.
-ms.openlocfilehash: 8558767050c317661dfb490143fa3c8f4ea009e2
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4ff0abe67a6d18204e417a45f8d8f1d092d02b88
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702474"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96200797"
 ---
 # <a name="injectpi4yrotation-operation"></a>InjectPi4YRotation-Vorgang
 
 Namespace: [Microsoft. Quantum. errorcorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Dreht ein einzelnes Qubit um die Y-Achse.
 
 ```qsharp
-operation InjectPi4YRotation (data : Qubit, magic : Qubit) : Unit
+operation InjectPi4YRotation (data : Qubit, magic : Qubit) : Unit is Adj
 ```
 
 
@@ -52,7 +52,7 @@ Ein Qubit, das sich anfänglich im Magic-Zustand befindet. Die folgende Anwendun
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Die folgenden sind gleichwertig:
 
@@ -60,7 +60,7 @@ Die folgenden sind gleichwertig:
 Ry(PI() / 4.0, data);
 ```
 
-und
+and
 
 ```qsharp
 using (magic = Qubit()) {
