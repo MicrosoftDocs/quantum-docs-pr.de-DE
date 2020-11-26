@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ConjugatedByCA
 title: Konkanable-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ConjugatedByCA
 qsharp.summary: Given outer and inner operations, returns a new operation that conjugates the inner operation by the outer operation.
-ms.openlocfilehash: df29bcf555026bceb13d6896db12e13671a49b9f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: acd5a9f796f751b9c9c374d841e80de9286fcd24
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704330"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207308"
 ---
 # <a name="conjugatedbyca-function"></a>Konkanable-Funktion
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Bei den äußeren und inneren Vorgängen wird ein neuer Vorgang zurückgegeben, der den inneren Vorgang durch den äußeren Vorgang konjugiert.
@@ -30,18 +30,18 @@ function ConjugatedByCA<'T> (outerOperation : ('T => Unit is Adj), innerOperatio
 
 ## <a name="input"></a>Eingabe
 
-### <a name="outeroperation--t--unit-adj"></a>outeroperation: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="outeroperation--t--unit--is-adj"></a>outeroperation: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ
 
 Der Vorgang $U $, der für die konjugierte $V $ verwendet werden soll. Beachten Sie, dass der äußere Vorgang $U $ adjointable sein muss, aber nicht steuerbar sein muss.
 
 
-### <a name="inneroperation--t--unit-adj--ctl"></a>inneroperation: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="inneroperation--t--unit--is-adj--ctl"></a>inneroperation: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL
 
 Der Vorgang $V $ konjugated.
 
 
 
-## <a name="output--t--unit-adj--ctl"></a>Ausgabe: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+## <a name="output--t--unit--is-adj--ctl"></a>Ausgabe: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL
 
 Ein neuer Vorgang, dessen Aktion durch die einheitliche $U ^ {\dagger} V U $ dargestellt wird.
 
@@ -51,7 +51,7 @@ Ein neuer Vorgang, dessen Aktion durch die einheitliche $U ^ {\dagger} V U $ dar
 
 Der Typ des Ziels, für das die einzelnen inneren und äußeren Operationen agieren.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Der äußere Vorgang wird immer als adjointable angenommen, er muss jedoch nicht steuerbar sein, damit der kombinierte Vorgang steuerbar ist.
 

@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApproximateQFT
 title: Näherer Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApproximateQFT
 qsharp.summary: Apply the Approximate Quantum Fourier Transform (AQFT) to a quantum register.
-ms.openlocfilehash: ffa3a3737a43fbe6acc57700ae122a13586482e7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 97a410133e80cc5bffc810e9d6455baaee32364b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704514"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207699"
 ---
 # <a name="approximateqft-operation"></a>Näherer Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wenden Sie die ungefähre quantfourier Transform (aqft) auf ein Quantum-Register an.
 
 ```qsharp
-operation ApproximateQFT (a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit
+operation ApproximateQFT (a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -47,7 +47,7 @@ das Quantum-Register von n Qubits, auf das die ungefähre Quantum Fourier-Transf
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Für aqft sind Z-Drehung-Gates im Format 2D/2K und Hadamard Gates erforderlich.
 
@@ -55,5 +55,5 @@ Es wird davon ausgegangen, dass die Eingabe und die Ausgabe in der Big-d-Codieru
 
 ## <a name="references"></a>Referenzen
 
-- [*M. roetteler, Th. Beth* , Appl. Algebra eng. Commun. Co. 19 (3): 177-193 (2008)](http://doi.org/10.1007/s00200-008-0072-2)
+- [*M. roetteler, Th. Beth*, Appl. Algebra eng. Commun. Co. 19 (3): 177-193 (2008)](http://doi.org/10.1007/s00200-008-0072-2)
 - [*D. kopierungsarxiv* : quant-ph/0201067v1](https://arxiv.org/abs/quant-ph/0201067)

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.IntegerIncrementPhaseLE
 title: Integerincrementphasele-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger".
-ms.openlocfilehash: cd1cfc1307fdefc5bf0a3a66654cfac47494a156
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 84306ba083b7e428c5e5a72a0b4fc31b7782c1f1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704098"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96206611"
 ---
 # <a name="integerincrementphasele-operation"></a>Integerincrementphasele-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 > [!WARNING]
@@ -36,7 +36,7 @@ Paketen [](https://nuget.org/packages/)
 
 
 ```qsharp
-operation IntegerIncrementPhaseLE (increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit
+operation IntegerIncrementPhaseLE (increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit is Adj + Ctl
 ```
 
 

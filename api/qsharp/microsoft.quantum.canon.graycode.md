@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.GrayCode
 title: Graycode-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: GrayCode
 qsharp.summary: Creates Gray code sequences
-ms.openlocfilehash: fc673ae21a952788b5beb74c1bad94ee9fe54480
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b15586c57180b00064721afc990436320824cba2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704167"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96206883"
 ---
 # <a name="graycode-function"></a>Graycode-Funktion
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Erstellt graue Codesequenzen.

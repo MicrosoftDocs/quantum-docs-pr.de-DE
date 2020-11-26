@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApproximatelyMultiplexPauli
 title: Ungefäatelymultiplexpauli-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApproximatelyMultiplexPauli
 qsharp.summary: Applies a Pauli rotation conditioned on an array of qubits, truncating small rotation angles according to a given tolerance.
-ms.openlocfilehash: c91937d9e82a2a1514d81529adb35a5f804a0e13
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8024df4608f14408bfcd46139e72454ff44b116f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704538"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207750"
 ---
 # <a name="approximatelymultiplexpauli-operation"></a>Ungefäatelymultiplexpauli-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wendet eine für ein Array von Qubits bedingte Pauli-Drehung an und verkürzt kleine Drehwinkel entsprechend einer gegebenen Toleranz.
 
 ```qsharp
-operation ApproximatelyMultiplexPauli (tolerance : Double, coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit
+operation ApproximatelyMultiplexPauli (tolerance : Double, coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -70,7 +70,7 @@ Einzelnes Qubit-Register, das durch $e ^ {i P \ theta_j} $ gedreht wird.
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 `coefficients` wird mit Elementen $ \ theta_j = $0,0 aufgefüllt, wenn weniger als $2 ^ n $ angegeben werden.
 

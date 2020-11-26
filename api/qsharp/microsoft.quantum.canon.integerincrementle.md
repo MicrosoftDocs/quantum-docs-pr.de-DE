@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.IntegerIncrementLE
 title: Integerincrementle-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"Microsoft.Quantum.Arithmetic.IncrementByInteger".
-ms.openlocfilehash: 7c7f86aa7f220f53fc079f505e7d41d7ca1039fc
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 7cc1362c3eb02274d2c1a8560c9a598192da2a21
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704111"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96206662"
 ---
 # <a name="integerincrementle-operation"></a>Integerincrementle-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 > [!WARNING]
@@ -36,7 +36,7 @@ Paketen [](https://nuget.org/packages/)
 
 
 ```qsharp
-operation IntegerIncrementLE (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation IntegerIncrementLE (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 

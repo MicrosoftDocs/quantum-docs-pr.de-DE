@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.DelayA
 title: Delaya-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DelayA
 qsharp.summary: Applies a given operation with a delay.
-ms.openlocfilehash: 77c40633824ccd9250252804b08d7400936515dd
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 7c3325fd98a85c7e9123f383cbdc0a68627222c8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704242"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207138"
 ---
 # <a name="delaya-operation"></a>Delaya-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wendet einen angegebenen Vorgang mit einer Verzögerung an.
 
 ```qsharp
-operation DelayA<'T> (op : ('T => Unit is Adj), arg : 'T, aux : Unit) : Unit
+operation DelayA<'T> (op : ('T => Unit is Adj), arg : 'T, aux : Unit) : Unit is Adj
 ```
 
 
@@ -36,7 +36,7 @@ Der-Ausdruck ist insbesondere `Delay(op, arg, _)` ein Vorgang, der `op` sich auf
 
 ## <a name="input"></a>Eingabe
 
-### <a name="op--t--unit-adj"></a>OP: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="op--t--unit--is-adj"></a>OP: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ
 
 Ein anzuwendende Vorgang.
 

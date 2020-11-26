@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.DelayedCA
 title: Delayedca-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DelayedCA
 qsharp.summary: Returns an operation that applies given operation with given argument.
-ms.openlocfilehash: 8ee55e2ca7ec2cff9618b5dc66e19d88779d39ce
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fe2babb87d716185286b0864745f7ff6e637f8a1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704199"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207008"
 ---
 # <a name="delayedca-function"></a>Delayedca-Funktion
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Gibt einen Vorgang zurück, der den angegebenen Vorgang mit dem angegebenen Argument anwendet.
@@ -30,7 +30,7 @@ function DelayedCA<'T> (op : ('T => Unit is Ctl + Adj), arg : 'T) : (Unit => Uni
 
 ## <a name="input"></a>Eingabe
 
-### <a name="op--t--unit-ctl--adj"></a>OP: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) CTL + ADJ
+### <a name="op--t--unit--is-adj--ctl"></a>OP: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL
 
 Ein Vorgang, der als Ergebnis der Anwendung eines Rückgabewerts angewendet werden soll.
 
@@ -41,7 +41,7 @@ Die Eingabe, auf die der Vorgang `op` angewendet wird.
 
 
 
-## <a name="output--unit--unit-ctl--adj"></a>Ausgabe: [Unit](xref:microsoft.quantum.lang-ref.unit) => [Unit](xref:microsoft.quantum.lang-ref.unit) CTL + ADJ
+## <a name="output--unit--unit--is-adj--ctl"></a>Ausgabe: [Einheiten](xref:microsoft.quantum.lang-ref.unit) => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL
 
 Ein neuer Vorgang, der `op` mit Input angewendet wird. `arg`
 

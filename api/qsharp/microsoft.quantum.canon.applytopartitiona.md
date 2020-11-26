@@ -1,37 +1,37 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToPartitionA
 title: Applytopartitiona-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToPartitionA
 qsharp.summary: Applies a pair of operations to a given partition of a register into two parts. The modifier `A` indicates that the operation is adjointable.
-ms.openlocfilehash: 6ff3bf8b5a4344ee5a7a054c6285a5492260068d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 79f8fbed1592670031b3348155cdd4000eadc1fb
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704719"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208345"
 ---
 # <a name="applytopartitiona-operation"></a>Applytopartitiona-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wendet ein paar von Vorgängen auf eine bestimmte Partition eines Registers in zwei Teilen an.
 Der-Modifizierer `A` gibt an, dass der Vorgang adjointable ist.
 
 ```qsharp
-operation ApplyToPartitionA (op : ((Qubit[], Qubit[]) => Unit is Adj), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : Unit
+operation ApplyToPartitionA (op : ((Qubit[], Qubit[]) => Unit is Adj), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : Unit is Adj
 ```
 
 
 ## <a name="input"></a>Eingabe
 
-### <a name="op--qubitqubit--unit-adj"></a>OP: ([Qubit](xref:microsoft.quantum.lang-ref.qubit)[],[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="op--qubitqubit--unit--is-adj"></a>OP: ([Qubit](xref:microsoft.quantum.lang-ref.qubit)[],[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ
 
 Das auf die angegebene Partition anzuwendende paar von Vorgängen.
 

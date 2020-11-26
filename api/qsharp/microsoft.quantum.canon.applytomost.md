@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToMost
 title: Applytomost-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToMost
 qsharp.summary: Applies an operation to all but the last element of an array.
-ms.openlocfilehash: 2c6c8873859439e71436f6beb0de40dfd1e21f43
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 7e7824b431ccff644cf5cc53145163327eb8ad36
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704775"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208532"
 ---
 # <a name="applytomost-operation"></a>Applytomost-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wendet einen Vorgang auf alle bis auf das letzte Element eines Arrays an.
