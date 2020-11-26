@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Optimization.Width
 title: Width-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Optimization
 qsharp.name: Width
 qsharp.summary: Returns the width of an interval.
-ms.openlocfilehash: 4dab7d95926ab0d0141172de0d62b32d4c0b1124
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6df7890032c8ab81c5c5d9a6ea2ca71b7ff39c41
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92706743"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96226892"
 ---
 # <a name="width-function"></a>Width-Funktion
 
 Namespace: [Microsoft. Quantum. Optimization](xref:Microsoft.Quantum.Optimization)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Gibt die Breite eines Intervalls zurück.
