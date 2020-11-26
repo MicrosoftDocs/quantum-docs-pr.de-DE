@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Characterization.EstimateImagOverlapBetweenStates
 title: Estimateimagoverlapbetweendstates-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: EstimateImagOverlapBetweenStates
 qsharp.summary: Given two operations which each prepare copies of a state, estimates the imaginary part of the overlap between the states prepared by each operation.
-ms.openlocfilehash: 8b73115c3243c594897ac4b309ec52d5e9863d26
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b192abc4ba37d126bf46f94c66cb87fe3bbec4c8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703643"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216199"
 ---
 # <a name="estimateimagoverlapbetweenstates-operation"></a>Estimateimagoverlapbetweendstates-Vorgang
 
 Namespace: [Microsoft. Quantum. Charakterisierung](xref:Microsoft.Quantum.Characterization)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Bei zwei Vorgängen, bei denen die Kopien eines Zustands vorbereitet werden, wird der Imaginärteil der Überschneidung zwischen den Zuständen, die von jedem Vorgang vorbereitet werden, geschätzt.
@@ -30,17 +30,17 @@ operation EstimateImagOverlapBetweenStates (commonPreparation : (Qubit[] => Unit
 
 ## <a name="input"></a>Eingabe
 
-### <a name="commonpreparation--qubit--unit-adj"></a>commonpreparation: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="commonpreparation--qubit--unit--is-adj"></a>commonpreparation: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ
 
 Ein Vorgang, der einen festgelegten Eingabe Zustand bereitet.
 
 
-### <a name="preparation1--qubit--unit-adj--ctl"></a>preparation1: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="preparation1--qubit--unit--is-adj--ctl"></a>preparation1: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL
 
 Der erste der beiden Zustands Vorbereitungs Vorgänge, die verglichen werden sollen.
 
 
-### <a name="preparation2--qubit--unit-adj--ctl"></a>preparation2: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="preparation2--qubit--unit--is-adj--ctl"></a>preparation2: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL
 
 Die zweite der beiden Zustands Vorbereitungs Vorgänge, die verglichen werden sollen.
 
@@ -60,7 +60,7 @@ Die Anzahl der Messungen, die beim Schätzen der Überlappung verwendet werden s
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Bei diesem Vorgang wird der Hadamard-Test verwendet, um den imaginären Teil von $ $ \begin{align} \braket{\psi zu suchen. V ^ {\dagger} U | \psi} \end{align} $ $, wobei $ \ket{\psi} $ der von vorbereitete Status ist `commonPreparation` , $U $ die einheitliche Darstellung der Aktion von `preparation1` und wobei $V $ entspricht `preparation2` .
 

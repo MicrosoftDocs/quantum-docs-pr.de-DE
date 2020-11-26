@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToElementC
 title: Applydeelementc-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToElementC
 qsharp.summary: Applies an operation to a given element of an array.
-ms.openlocfilehash: bd466ff59e6e962be9a7e58b6d298c60b0d1d90d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c8d7841e3846ab435671f7959c724f987d8ad5a0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704903"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217576"
 ---
 # <a name="applytoelementc-operation"></a>Applydeelementc-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wendet einen Vorgang auf ein angegebenes Element eines Arrays an.
 
 ```qsharp
-operation ApplyToElementC<'T> (op : ('T => Unit is Ctl), index : Int, targets : 'T[]) : Unit
+operation ApplyToElementC<'T> (op : ('T => Unit is Ctl), index : Int, targets : 'T[]) : Unit is Ctl
 ```
 
 
@@ -34,7 +34,7 @@ Wenn ein Vorgang `op` , ein Index `index` und ein Array von Zielen `targets` , g
 
 ## <a name="input"></a>Eingabe
 
-### <a name="op--t--unit-ctl"></a>OP: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) CTL
+### <a name="op--t--unit--is-ctl"></a>OP: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist CTL
 
 Ein anzuwendende Vorgang.
 

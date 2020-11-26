@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Characterization.MeasureIdentity
 title: Measureidentity-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: MeasureIdentity
 qsharp.summary: Measures the identity operator on a register of qubits.
-ms.openlocfilehash: 71a103fddb3a27703318975bea94bc7a22a9ce81
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4a169355d0669c67f0eb14c80e8554b2f24b035a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703608"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216114"
 ---
 # <a name="measureidentity-operation"></a>Measureidentity-Vorgang
 
 Namespace: [Microsoft. Quantum. Charakterisierung](xref:Microsoft.Quantum.Characterization)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Misst den Identitäts Operator für ein Register von Qubits.
@@ -40,7 +40,7 @@ Das zu messende Register.
 
 Der Ergebniswert `Zero` .
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Da $ \boldone $ nur den eigen Wert $1 $ und keinen negativen eigen Wert aufweist, gibt dieser Vorgang immer zurück `Zero` , was dem Eigen Wert $ + 1 = (-1) ^ 0 $ entspricht, und führt nicht zu einem zuklappen des Zustands von `register` .
 

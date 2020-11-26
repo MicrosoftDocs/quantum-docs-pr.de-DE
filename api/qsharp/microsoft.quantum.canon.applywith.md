@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyWith
 title: Applywith-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyWith
 qsharp.summary: Given two operations, applies one as conjugated with the other.
-ms.openlocfilehash: 61047ea2ea249e5a4d39b5747c542462c9632138
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fd46f84e30e72672967b90d92f507d2a5c438dba
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704615"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217304"
 ---
 # <a name="applywith-operation"></a>Applywith-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Bei zwei Vorgängen wird eine als konjugated mit dem anderen angewendet.
@@ -34,7 +34,7 @@ Bei zwei Vorgängen, die durch einheitliche Operatoren $U $ und $V $ beschrieben
 
 ## <a name="input"></a>Eingabe
 
-### <a name="outeroperation--t--unit-adj"></a>outeroperation: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="outeroperation--t--unit--is-adj"></a>outeroperation: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ
 
 Der Vorgang $U $, der für die konjugierte $V $ verwendet werden soll. Beachten Sie, dass der äußere Vorgang $U $ adjointable sein muss, aber nicht steuerbar sein muss.
 
@@ -60,7 +60,7 @@ Die Eingabe, die für den äußeren und inneren Vorgang bereitgestellt werden so
 
 Das Ziel, für das die einzelnen inneren und äußeren Operationen fungieren.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Der äußere Vorgang wird immer als adjointable angenommen, er muss jedoch nicht steuerbar sein, damit der kombinierte Vorgang steuerbar ist.
 

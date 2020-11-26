@@ -1,37 +1,37 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToEachC
 title: Applydeeachc-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToEachC
 qsharp.summary: Applies a single-qubit operation to each element in a register. The modifier `C` indicates that the single-qubit operation is controllable.
-ms.openlocfilehash: dfa18b6eb7a2c42fa2982994a2fc92170b52599c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 535f815503e20b5cee35f3f273a714203a4baf12
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704967"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217780"
 ---
 # <a name="applytoeachc-operation"></a>Applydeeachc-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wendet für jedes Element in einem Register einen Single-Qubit-Vorgang an.
 Der-Modifizierer `C` gibt an, dass der Single-Qubit-Vorgang steuerbar ist.
 
 ```qsharp
-operation ApplyToEachC<'T> (singleElementOperation : ('T => Unit is Ctl), register : 'T[]) : Unit
+operation ApplyToEachC<'T> (singleElementOperation : ('T => Unit is Ctl), register : 'T[]) : Unit is Ctl
 ```
 
 
 ## <a name="input"></a>Eingabe
 
-### <a name="singleelementoperation--t--unit-ctl"></a>singleelementoperation: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) CTL
+### <a name="singleelementoperation--t--unit--is-ctl"></a>singleelementoperation: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist CTL
 
 Der auf die einzelnen Qubits anzuwendende Vorgang.
 
