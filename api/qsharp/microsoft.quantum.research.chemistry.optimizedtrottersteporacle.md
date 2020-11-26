@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry.OptimizedTrotterStepOracle
 title: Optimizedtrottersteporacle-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
 qsharp.name: OptimizedTrotterStepOracle
 qsharp.summary: Returns optimized Trotter step operation and the parameters necessary to run it.
-ms.openlocfilehash: f78d80f7ab71f4fc759d8045c9a134d7178aaa15
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 04b1ea457277e0681596cb564fae3782a2d09db9
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701802"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229816"
 ---
 # <a name="optimizedtrottersteporacle-function"></a>Optimizedtrottersteporacle-Funktion
 
 Namespace: [Microsoft. Quantum. Research. Chemistry](xref:Microsoft.Quantum.Research.Chemistry)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Research. Chemistry](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)
 
 
 Gibt den optimierten Vorgang für den Schritt und die für die Ausführung erforderlichen Parameter zurück.
@@ -46,6 +46,6 @@ Reihenfolge des trockintegrator.
 
 
 
-## <a name="output--intdoublequbit--unit-adj--ctl"></a>Ausgabe: ([int](xref:microsoft.quantum.lang-ref.int), ([Double](xref:microsoft.quantum.lang-ref.double),[Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL))
+## <a name="output--intdoublequbit--unit--is-adj--ctl"></a>Ausgabe: ([int](xref:microsoft.quantum.lang-ref.int), ([Double](xref:microsoft.quantum.lang-ref.double),[Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL))
 
 Ein Tupel, wobei: `Int` die Anzahl der zugeordneten Qubits ist, `Double` `1.0/trotterStepSize` und der Vorgang ist der trockschritt.

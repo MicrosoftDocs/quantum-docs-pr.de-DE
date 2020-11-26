@@ -1,36 +1,36 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareChoiStateA
 title: Preparechoistatuea-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: PrepareChoiStateA
-qsharp.summary: Prepares the Choi–Jamiłkowski state for a given operation with an adjoint variant onto given reference and target registers.
-ms.openlocfilehash: c679f9a02aa15f9a582257770b8dc57d798d1b29
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+qsharp.summary: Prepares the Choi–Jamiołkowski state for a given operation with an adjoint variant onto given reference and target registers.
+ms.openlocfilehash: 59d47a549a6e2a208906b79504ea93bd9ebaabd7
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701903"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96230122"
 ---
 # <a name="preparechoistatea-operation"></a>Preparechoistatuea-Vorgang
 
 Namespace: [Microsoft. Quantum. Preparation](xref:Microsoft.Quantum.Preparation)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-Bereitet den Status "Choi – jamiłkowski" für einen bestimmten Vorgang mit einer Adjoint-Variante auf angegebene Verweis-und Ziel Register vor.
+Bereitet den Status "Choi – jamiołkowski" für einen bestimmten Vorgang mit einer Adjoint-Variante auf bestimmte Verweis-und Ziel Register vor.
 
 ```qsharp
-operation PrepareChoiStateA (op : (Qubit[] => Unit is Adj), reference : Qubit[], target : Qubit[]) : Unit
+operation PrepareChoiStateA (op : (Qubit[] => Unit is Adj), reference : Qubit[], target : Qubit[]) : Unit is Adj
 ```
 
 
 ## <a name="input"></a>Eingabe
 
-### <a name="op--qubit--unit-adj"></a>OP: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="op--qubit--unit--is-adj"></a>OP: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ
 
 
 

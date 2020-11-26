@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.BlockEncodingReflectionByLCU
 title: Blockencodingreflectionbylcu-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Encodes an operator of interest into a `BlockEncodingReflection`.
 
   This constructs a `BlockEncodingReflection` unitary $U=P\cdot V\cdot P^\dagger$ that encodes some operator $H=\sum_{j}|\alpha_j|U_j$ of interest that is a linear combination of unitaries. Typically, $P$ is a state preparation unitary such that $P\ket{0}\_a\sum_j\sqrt{\alpha_j/\|\vec\alpha\|\_2}\ket{j}\_a$, and $V=\sum_{j}\ket{j}\bra{j}\_a\otimes U_j$.
-ms.openlocfilehash: b8eff9d207752213ccdf42a9ad80fefb2da07216
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e1247d961a7ebce798106c24c46d924dd6e6d347
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723914"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229476"
 ---
 # <a name="blockencodingreflectionbylcu-function"></a>Blockencodingreflectionbylcu-Funktion
 
 Namespace: [Microsoft. Quantum. Simulation](xref:Microsoft.Quantum.Simulation)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Codiert einen relevanten Operator in eine `BlockEncodingReflection` .
@@ -35,12 +35,12 @@ function BlockEncodingReflectionByLCU (statePreparation : (Qubit[] => Unit is Ad
 
 ## <a name="input"></a>Eingabe
 
-### <a name="statepreparation--qubit--unit-adj--ctl"></a>statepreparation: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="statepreparation--qubit--unit--is-adj--ctl"></a>statepreparation: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL
 
 Ein einheitlicher $P $, der einen bestimmten Ziel Status vorbereitet.
 
 
-### <a name="selector--qubitqubit--unit-adj--ctl"></a>Selector: ([Qubit](xref:microsoft.quantum.lang-ref.qubit)[],[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="selector--qubitqubit--unit--is-adj--ctl"></a>Selector: ([Qubit](xref:microsoft.quantum.lang-ref.qubit)[],[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL
 
 Ein einheitlicher $V $, der die Komponenten unierungen von $H $ codiert.
 
@@ -50,7 +50,7 @@ Ein einheitlicher $V $, der die Komponenten unierungen von $H $ codiert.
 
 Ein einheitlicher $U $, der gemeinsam für Register agiert `a` und `s` $H $ codiert und $U "^ {-1} = U $" erfüllt.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Diese `BlockEncoding` Implementierung gibt Ihnen die Eigenschaften eines `BlockEncodingReflection` .
 

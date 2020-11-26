@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyIfZeroCA
 title: Applyif nuloca-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyIfZeroCA
 qsharp.summary: ''
-ms.openlocfilehash: 978964888a89ca46847ae7aa01a2c180ee322436
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: accc3ca9c0d99c48c713333ce1cc907054c2a860
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725677"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96230785"
 ---
 # <a name="applyifzeroca-operation"></a>Applyif nuloca-Vorgang
 
 Namespace: [Microsoft. Quantum. Simulation. quantumprocessor. Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
 
 ```qsharp
-operation ApplyIfZeroCA<'T> (measurementResult : Result, (onResultZeroOp : ('T => Unit is Ctl + Adj), zeroArg : 'T)) : Unit
+operation ApplyIfZeroCA<'T> (measurementResult : Result, (onResultZeroOp : ('T => Unit is Ctl + Adj), zeroArg : 'T)) : Unit is Adj + Ctl
 ```
 
 
@@ -35,7 +35,7 @@ operation ApplyIfZeroCA<'T> (measurementResult : Result, (onResultZeroOp : ('T =
 
 
 
-### <a name="onresultzeroop--t--unit-ctl--adj"></a>onresultzeroop: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) CTL + ADJ
+### <a name="onresultzeroop--t--unit--is-adj--ctl"></a>onresultzeroop: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL
 
 
 

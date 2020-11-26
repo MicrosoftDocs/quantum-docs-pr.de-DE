@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Targeting.RequiresCapability
 title: Benutzerdefinierter Typ "Requirements scapability"
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Targeting
 qsharp.name: RequiresCapability
 qsharp.summary: Compiler-recognized attribute used to mark a callable with the runtime capabilities it requires.
-ms.openlocfilehash: 63b1952d402f1bcb81a8f9d0afc3cdf7aa7e5ed8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 0d9e4eb294b3ce91058c204d5dba37ea29b4ac28
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725132"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231006"
 ---
 # <a name="requirescapability-user-defined-type"></a>Benutzerdefinierter Typ "Requirements scapability"
 
 Namespace: [Microsoft. Quantum. Targeting](xref:Microsoft.Quantum.Targeting)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Vom Compiler erkanntes Attribut, das verwendet wird, um eine Aufruf Bare mit den erforderlichen Lauf Zeitfunktionen zu markieren.
@@ -40,7 +40,7 @@ Der Name der Lauf Zeit Funktionsebene, die für die Aufruf Bare-Funktion erforde
 
 Eine Beschreibung, warum die Aufruf Bare Funktion diese Lauf Zeitfunktion erfordert.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Dieses Attribut wird automatisch aufrufen durch den Compiler hinzugefügt, es sei denn, es ist bereits eine Instanz dieses Attributs für die Aufruf Bare Instanz vorhanden. Es sollte nicht verwendet werden, außer in seltenen Fällen, in denen der Compiler die erforderliche Funktion nicht ordnungsgemäß ableiten kann.
 
