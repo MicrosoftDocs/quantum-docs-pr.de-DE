@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.AbsL
 title: Absl-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: AbsL
 qsharp.summary: Returns the absolute value of a big integer.
-ms.openlocfilehash: 0682bde6669a9a6254b6e8fc3ca0b8872a8b829d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 39e21c8578c91306dcefe909d80609babdaa8e14
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722387"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211320"
 ---
 # <a name="absl-function"></a>Absl-Funktion
 
 Namespace: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Gibt den absoluten Wert einer großen Ganzzahl zurück.
@@ -40,6 +40,6 @@ function AbsL (a : BigInt) : BigInt
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Weitere Informationen finden Sie unter [System. Numerics. BigInteger. Abs](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.abs) .

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.AccumulatedBitsizeL
 title: Akkumulatedbitsizel-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: AccumulatedBitsizeL
 qsharp.summary: Helper function used to recursively calculate the bitsize of a value.
-ms.openlocfilehash: bc73be727ff4a6f7babd77d7c30507e2c07b816c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d2a2ca7d309e1bdc002e9d727b2af549f1b59868
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701358"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211252"
 ---
 # <a name="accumulatedbitsizel-function"></a>Akkumulatedbitsizel-Funktion
 
 Namespace: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Hilfsfunktion, die verwendet wird, um die bitgröße eines Werts rekursiv zu berechnen.
