@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Research.Characterization.RandomWalkPhaseEstimation
 title: Randomwalkphaseschätzungsvorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Characterization
 qsharp.name: RandomWalkPhaseEstimation
 qsharp.summary: Performs iterative phase estimation using a random walk to approximate Bayesian inference on the classical measurement results from a given oracle and eigenstate.
-ms.openlocfilehash: 5e0c0871b916ff51b85dec8703111788b5204bc6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2c3afdd41da24a1f32f59f36f0f5c5ed29df1f0b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701856"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96226161"
 ---
 # <a name="randomwalkphaseestimation-operation"></a>Randomwalkphaseschätzungsvorgang
 
 Namespace: [Microsoft. Quantum. Research. Charakterisierung](xref:Microsoft.Quantum.Research.Characterization)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Research. Charakterisierung](https://nuget.org/packages/Microsoft.Quantum.Research.Characterization)
 
 
 Führt eine iterative Phasen Schätzung mithilfe eines zufälligen Durchlaufs aus, um einen ungefähren bayesschen Rückschluss auf die klassischen Messergebnisse eines bestimmten Oracle-und eigen Zustands festzustellen.
@@ -70,7 +70,7 @@ Ein Register, für das $U $ agiert.
 
 Die letzte Schätzung $ \hat{\phi} \mathrel{: =} \expect [\phi] $, bei der die Annahme über dem Posterior mit allen akzeptierten Daten liegt.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 ### <a name="iterative-phase-estimation-and-eigenstates"></a>Iterative Phasen Schätzung und eigen Zustände
 
@@ -80,7 +80,7 @@ Anschließend wird die iterative Phasen Schätzung letztendlich in einen einzeln
 
 ### <a name="experiment-design"></a>Experiment Entwurf
 
-Die Messzeiten $t $ und der inversionswinkel $ \an die an über gegebene Daten `oracle` werden gemäß der *Partikel Annahme Heuristik* , \begin{align} \Der Ta \sim \pr (\phi), \quad t \ca \frac {1} {\variance{\phi}}.
+Die Messzeiten $t $ und der inversionswinkel $ \an die an über gegebene Daten `oracle` werden gemäß der *Partikel Annahme Heuristik*, \begin{align} \Der Ta \sim \pr (\phi), \quad t \ca \frac {1} {\variance{\phi}}.
 \end{align} diese Heuristik eignet sich optimal, um die erwartete nachträgliche Abweichung in der iterativen Phasen Schätzung unter der Annahme eines normalen vorherigen zu verringern.
 
 ### <a name="optimality"></a>Mindestgrößeneinheit
@@ -93,4 +93,4 @@ Weitere Informationen zu den Statistiken der iterativen Phasen Schätzung finden
 
 - Ferrie *et al.* 2011 [doi: 10/TFX](https://doi.org/10.1007/s11128-012-0407-6), [arXiv: 1110.3067](https://arxiv.org/abs/1110.3067).
 - Wiebe *et al.* 2013 [doi: 10/TF3](https://doi.org/10.1103/PhysRevLett.112.190501), [arXiv: 1309.0876](https://arxiv.org/abs/1309.0876)
-- Wiebe und Granade 2018 *(in Vorbereitung)* .
+- Wiebe und Granade 2018 *(in Vorbereitung)*.

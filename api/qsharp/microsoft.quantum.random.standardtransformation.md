@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Random.StandardTransformation
 title: Standardtransformation-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: StandardTransformation
 qsharp.summary: ''
-ms.openlocfilehash: 5972ab4bca46b375711ebbae6ba81ab484174b43
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 23bcc6000821ac6816736bf993c36c81c5feef7f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701879"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96226314"
 ---
 # <a name="standardtransformation-function"></a>Standardtransformation-Funktion
 
 Namespace: [Microsoft. Quantum. Random](xref:Microsoft.Quantum.Random)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Random.TransformedContinuousDistribution
 title: Transformedcontinuousdistribution-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: TransformedContinuousDistribution
 qsharp.summary: Given a continuous distribution, returns a new distribution that transforms the original by a given function.
-ms.openlocfilehash: 6a6e0c26bd650fd4c05208197ff23f951d1c3b5c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b317eaaa0ff0180ea5d240464c96d1c6b59c9c70
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701885"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96226263"
 ---
 # <a name="transformedcontinuousdistribution-function"></a>Transformedcontinuousdistribution-Funktion
 
 Namespace: [Microsoft. Quantum. Random](xref:Microsoft.Quantum.Random)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Gibt bei einer kontinuierlichen Verteilung eine neue Verteilung zurück, die den ursprünglichen durch eine angegebene Funktion transformiert.

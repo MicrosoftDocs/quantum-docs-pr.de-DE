@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.BlockEncodingReflection
 title: Benutzerdefinierter blockencodingreflection-Typ
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: BlockEncodingReflection
 qsharp.summary: Represents a `BlockEncoding` that is also a reflection.
-ms.openlocfilehash: 2395037634d54222c10ee1a9ab0bed2bd500a719
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 24ad4a992bbec82eb8e8cd32e70650818f606ddc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723956"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96225396"
 ---
 # <a name="blockencodingreflection-user-defined-type"></a>Benutzerdefinierter blockencodingreflection-Typ
 
 Namespace: [Microsoft. Quantum. Simulation](xref:Microsoft.Quantum.Simulation)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Stellt einen dar `BlockEncoding` , der auch eine Reflektion ist.
