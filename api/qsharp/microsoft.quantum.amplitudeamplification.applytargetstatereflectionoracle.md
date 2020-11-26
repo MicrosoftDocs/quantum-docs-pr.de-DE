@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.ApplyTargetStateReflectionOracle
 title: Applytargetstatuereflectionoracle-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: ApplyTargetStateReflectionOracle
 qsharp.summary: Implementation of <xref:microsoft.quantum.canon.targetstatereflectionoracle>.
-ms.openlocfilehash: 8d9582c5d7bf954d66f154b27fd61a9104c23b63
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ae3ae68f1ca05625daba48616716418b1b64bcf4
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721870"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191464"
 ---
 # <a name="applytargetstatereflectionoracle-operation"></a>Applytargetstatuereflectionoracle-Vorgang
 
 Namespace: [Microsoft. Quantum. Verstärkungs Verstärkung](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Implementierung von <xref:microsoft.quantum.canon.targetstatereflectionoracle>.
 
 ```qsharp
-operation ApplyTargetStateReflectionOracle (phase : Double, idxFlagQubit : Int, qubits : Qubit[]) : Unit
+operation ApplyTargetStateReflectionOracle (phase : Double, idxFlagQubit : Int, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
