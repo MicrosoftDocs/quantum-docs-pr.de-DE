@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 93ece8cbaa2ac8e6e0c9bb417e8f40130cb8a3fa
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 1c3c502b6487482f06820e07425b8516f259fb0d
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192093"
+ms.locfileid: "96231790"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Versionshinweise für das Microsoft Quantum Development Kit
 
@@ -173,7 +173,7 @@ Dieses Release enthält kleinere Fehlerbehebungen für die Version 0.11.2003.250
 
 Dieses Release enthält Folgendes:
 
-- Neue Unterstützung für Zugriffsmodifizierer in Q# , weitere Informationen finden Sie unter [Dateistrukturen](xref:microsoft.quantum.guide.filestructure)
+- Neue Unterstützung für Zugriffsmodifizierer in. Q# Weitere Informationen finden Sie unter [Access Modifizierer](xref:microsoft.quantum.qsharp.accessmodifiers)
 - Aktualisiert auf .NET Core SDK 3.1
 
 Hier finden Sie die vollständige Liste geschlossener Pull Requests für [Bibliotheken](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [Compiler](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [Runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [Beispiele](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) und [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
@@ -258,7 +258,7 @@ Hier finden Sie die vollständige Liste geschlossener Pull Requests für [Biblio
 
 Dieses Release enthält Folgendes:
 
-- Neue Unterstützung für [Konjugations Anweisungen](xref:microsoft.quantum.guide.operationsfunctions#conjugations) in Q#
+- Neue Unterstützung für [Konjugations Anweisungen](xref:microsoft.quantum.qsharp.conjugations#conjugations) in Q#
 - neue Codeaktionen im Compiler wie beispielsweise „Ersetzen durch“, „Add documentation“ (Dokumentation hinzufügen) und Updates für einfache Arrayelemente
 - Installationsvorlagen und neue Projektbefehle für die Visual Studio Code-Erweiterung
 - neue Varianten des ApplyIf-Kombinators wie beispielsweise [Microsoft.Quantum.Canon.ApplyIfOne](xref:Microsoft.Quantum.Canon.ApplyIfOne)
@@ -275,7 +275,7 @@ Hier werden die Änderungen sowie Anweisungen zum Aktualisieren vorhandener Prog
 
 Dieses Release enthält Folgendes:
 
-- neue Indizierungsspeicherorte für das Aufteilen von Arrays (weitere Informationen in der [Sprachreferenz](xref:microsoft.quantum.guide.expressions#array-slices))
+- Neue Indizierung für das Aufteilen von Arrays finden Sie in [der Sprachreferenz](xref:microsoft.quantum.qsharp.contextualexpressions#contextual-and-omitted-expressions) , um weitere Informationen zu erhalten.
 - Hinzu [ Q# gefügter](https://github.com/microsoft/iqsharp/blob/main/README.md) dockerfile-Datei, die auf dem [Microsoft-Container Registry](https://github.com/microsoft/ContainerRegistry)gehostet wird, finden Sie im I-Repository
 - wichtige Änderungen für den [Ablaufverfolgungssimulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), Updates für Konfigurationseinstellungen und Namensänderungen (siehe [.NET-API-Browser für die aktualisierten Namen](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration))
 
@@ -296,10 +296,10 @@ Hier werden die Änderungen sowie Anweisungen zum Aktualisieren vorhandener Prog
 
 ### <a name="no-locq-language-syntax"></a>Q# Sprachsyntax
 Mit dieser Version wird eine neue Q# Sprachsyntax hinzugefügt:
-* benannte Elemente für [benutzerdefinierte Typen](xref:microsoft.quantum.guide.types#user-defined-types)  
+* Fügen Sie benannte Elemente für [benutzerdefinierte Typen] Microsoft. Quantum. qsharp. typedeklarationen # Type-Deklarationen hinzu.  
 * benutzerdefinierte Typkonstruktoren für die Verwendung als Funktionen
-* Unterstützung für [copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) und [apply-and-reassign](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) in benutzerdefinierten Typen
-* optionales Blockieren von Fehlerbehebungen im Zusammenhang mit [repeat-until-success](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop)-Schleifen
+* Unterstützung für [copy-and-update](xref:microsoft.quantum.qsharp.copyandupdateexpressions#copy-and-update-expressions) und [apply-and-reassign](xref:microsoft.quantum.qsharp.variabledeclarationsandreassignments#evaluate-and-reassign-statements) in benutzerdefinierten Typen
+* optionales Blockieren von Fehlerbehebungen im Zusammenhang mit [repeat-until-success](xref:microsoft.quantum.qsharp.conditionalloops#repeat-statement)-Schleifen
 * Unterstützung für while-Schleifen in Funktionen (nicht in Vorgängen)
 
 ### <a name="library"></a>Bibliothek 
@@ -327,10 +327,10 @@ Hier werden die Änderungen sowie Anweisungen zum Aktualisieren vorhandener Prog
 
 ### <a name="no-locq-language-syntax"></a>Q# Sprachsyntax
 Mit dieser Version wird eine neue Q# Sprachsyntax hinzugefügt:
-* Fügen Sie eine [schnelle Methode zum Ausdrücken von Spezialisierungen von Quantenvorgängen](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations) (Steuerelement und Adjunkte) mit `+`-Operatoren hinzu.  Die frühere Syntax ist veraltet.  Programme, die die alte Syntax verwenden (z. B. `: adjoint`), funktionieren auch weiterhin, es wird jedoch eine Warnung zur Kompilierzeit generiert.  
-* Fügen Sie einen neuen Operator für [copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) hinzu. `w/` kann zum Ausdrücken von Arrayerstellungen als Änderung eines vorhandenen Arrays verwendet werden.
-* Fügen Sie die allgemeine Anweisung [apply-and-update](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) hinzu (z. B. `+=`, `w/=`).
-* Fügen Sie eine Methode zum Angeben eines kurzen Namens für Namespaces in [offenen Direktiven](xref:microsoft.quantum.guide.filestructure#open-directives) hinzu.
+* Fügen Sie eine [schnelle Methode zum Ausdrücken von Spezialisierungen von Quantenvorgängen](xref:microsoft.quantum.qsharp.specializationdeclarations) (Steuerelement und Adjunkte) mit `+`-Operatoren hinzu.  Die frühere Syntax ist veraltet.  Programme, die die alte Syntax verwenden (z. B. `: adjoint`), funktionieren auch weiterhin, es wird jedoch eine Warnung zur Kompilierzeit generiert.  
+* Durch Hinzufügen eines neuen ternären Operators für [Copy-and-Update](xref:microsoft.quantum.qsharp.copyandupdateexpressions#copy-and-update-expressions), `w/` `<-` kann die Array Erstellung als Änderung eines vorhandenen Arrays ausgedrückt werden.
+* Fügen Sie die Common [Apply-and-REASSIGN-Anweisung](xref:microsoft.quantum.qsharp.variabledeclarationsandreassignments#evaluate-and-reassign-statements)hinzu, z. b., `+=` , `w/=` .
+* Fügen Sie eine Methode zum Angeben eines kurzen Namens für Namespaces in [offenen Direktiven](xref:microsoft.quantum.qsharp.namespaces#open-directives) hinzu.
 
 Mit diesem Release ist es nicht mehr möglich, ein Arrayelement auf der linken Seite einer set-Anweisung anzugeben.  Dies liegt daran, dass diese Syntax impliziert, dass Arrays veränderbar sind, wenn das Ergebnis des Vorgangs tatsächlich immer das Erstellen eines neuen Arrays mit der Änderung war.  Stattdessen wird ein Compilerfehler mit dem Vorschlag generiert, den neuen copy-and-update-Operator (`w/`) zu verwenden, um das gleiche Ergebnis zu erzielen.  
 
@@ -405,7 +405,7 @@ Dieses Release enthält Folgendes:
 
 - Problembehebung für das von der Community gemeldete DumpRegister-Issue ([#148](https://github.com/Microsoft/Quantum/issues/148))
 
-- Möglichkeit, innerhalb einer [using-Anweisung](xref:microsoft.quantum.guide.qubits#allocating-qubits) zurückzukehren
+- Die Möglichkeit zum Zurückgeben von innerhalb einer [using-und-Kredit Anweisung](xref:microsoft.quantum.qsharp.quantummemorymanagement#quantum-memory-management)wurde hinzugefügt.
 
 - überarbeiteter [Leitfaden zu den ersten Schritten](xref:microsoft.quantum.install)
 
@@ -428,7 +428,7 @@ Dieses Release enthält Folgendes:
 
 Dieses Release enthält Folgendes:
 
-- Unterstützung für den neuen primitiven Typ „BigInt“, der eine ganze Zahl mit Vorzeichen beliebiger Größe darstellt.  Weitere Informationen zum [BigInt-Typ](xref:microsoft.quantum.guide.types) finden Sie hier.
+- Unterstützung für den neuen primitiven Typ „BigInt“, der eine ganze Zahl mit Vorzeichen beliebiger Größe darstellt.  Weitere Informationen finden Sie unter [bigint](xref:microsoft.quantum.qsharp.valueliterals#bigint-literals).
 - neuer spezieller und schneller Toffoli-Simulator, mit dem X-, CNOT- und mehrfach gesteuerte X-Quantenvorgänge mit einer großen Anzahl von Qubits simuliert werden können.  Weitere Informationen zum [Toffoli-Simulator](xref:microsoft.quantum.machines.toffoli-simulator) finden Sie hier.
 - Fügt eine einfache Ressourcenschätzung hinzu, die die Ressourcen schätzt, die zum Ausführen einer bestimmten emulatorinstanz eines Q# Vorgangs auf einem Quantum-Computer erforderlich sind.  Weitere Informationen zur [Ressourcenschätzung](xref:microsoft.quantum.machines.resources-estimator) finden Sie hier.
 

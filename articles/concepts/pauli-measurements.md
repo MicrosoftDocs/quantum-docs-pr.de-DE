@@ -87,8 +87,8 @@ Autor: bradben UID: Microsoft. Quantum. Concepts. Pauli ms. Author: v-benbra ms.
 
 In den vorherigen Diskussionen haben wir uns auf Berechnungsbasis Messungen konzentriert.
 Tatsächlich gibt es weitere allgemeine Messungen, die bei der Quantum-Berechnung auftreten, die aus Sicht der Sicht bequem in Bezug auf Berechnungsbasis Messungen ausgedrückt werden können.
-Wenn Sie mit Arbeiten Q# , sind die gängigsten Arten von Messungen wahrscheinlich *Pauli-Messungen* , die Berechnungsbasis Messungen verallgemeinern, um Messungen in anderen Basen und die Parität zwischen verschiedenen Qubits zu berücksichtigen.
-In solchen Fällen ist es üblich, das Messen eines Pauli-Operators zu erörtern, im Allgemeinen ein Operator wie $ x, Y, z $ oder $ z \otimes z, x \otimes x, x \otimes Y $ usw.
+Wenn Sie mit Arbeiten Q# , sind die gängigsten Arten von Messungen wahrscheinlich *Pauli-Messungen*, die Berechnungsbasis Messungen verallgemeinern, um Messungen in anderen Basen und die Parität zwischen verschiedenen Qubits zu berücksichtigen.
+In solchen Fällen ist es üblich, das Messen eines Pauli-Operators zu erörtern, im Allgemeinen ein Operator wie $ x, Y, z $ oder $ z \otimes z, x \otimes x, x \otimes Y $ usw. 
 
 > [!TIP]
 > In Q# werden multiqubit-Pauli-Operatoren in der Regel durch Arrays des Typs dargestellt `Pauli[]` .
@@ -168,7 +168,7 @@ $$
 Daher bilden die tensorflow-Produkte zweier Pauli- $ Z- $ Operatoren eine Matrix, die aus zwei Leerzeichen besteht, die aus $ + 1 $ und $ -1 $ eigen Werten bestehen.
 Wie bei einem Single-Qubit-Fall bilden beide einen halben Leerraum, was bedeutet, dass die Hälfte des zugänglichen Vektor Raums zum $ + 1 $ -eigen Raum und die verbleibende Hälfte des $ eigen Raums-1 gehört $ .
 Im Allgemeinen ist es einfach, aus der Definition des tensorflow-Produkts zu erkennen, dass ein beliebiges tensorflow-Produkt von Pauli- $ Z- $ Operatoren und die Identität auch dies unterliegt.
-Ein auf ein Objekt angewendeter
+Beispiel:
 
 $$
 \begin{align}
@@ -252,7 +252,7 @@ Eine solche Einschränkung wird durch das *No-Klon-Theorem* angegeben.
 Der No-Cloning Theorem hat einen passenden Namen.
 Sie lässt das Klonen generischer Quantenzustände durch einen Quantum-Computer nicht zu.
 Der Beweis für das Theorem ist erstaunlich einfach.
-Obwohl ein vollständiger Nachweis für das No-Klon-Theorem für unsere Erörterung etwas zu technisch ist, liegt der Nachweis im Fall von zusätzlichen Qubits in unserem Bereich. (zusätzliche Qubits sind für den temporären Speicherplatz während einer Berechnung verwendeter Qubits und können problemlos verwendet und verwaltet werden ( Q# Siehe [geliehene Qubits](xref:microsoft.quantum.guide.qubits#borrowed-qubits)).
+Obwohl ein vollständiger Nachweis für das No-Klon-Theorem für unsere Erörterung etwas zu technisch ist, liegt der Nachweis im Fall von zusätzlichen Qubits in unserem Bereich.
 
 Bei solch einem Quantum-Computer muss der Klon Vorgang durch eine einheitliche Matrix beschrieben werden.
 Die Messung wird nicht zugelassen, da der Quantum-Zustand beschädigt wird, den wir klonen wollen.

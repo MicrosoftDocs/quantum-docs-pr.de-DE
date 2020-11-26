@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6b196cf1be584a3157c7a9eb8cf497fe1121dd7a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b8623ba7e876c4ccda42d0ddaa07c0012a763292
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691813"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231773"
 ---
 # <a name="no-locq-api-design-principles"></a>Q# API-Entwurfs Prinzipien
 
@@ -215,7 +215,7 @@ In diesem Artikel werden diese Grundsätze aufgeführt, und es werden Beispiele 
   *Beispiele:*
   - "Amplitude-Verstärkungs Iterationen" zu "Grover-Iterationen" bevorzugen.
 
-- ✅**Wählen Sie** Vorgänge und Funktionsnamen aus, die die beabsichtigte Auswirkung einer Aufruf baren und nicht deren Implementierung eindeutig vermitteln. Beachten Sie, dass die Implementierung in [API-Dokumentations Kommentaren](xref:microsoft.quantum.guide.filestructure#documentation-comments)und dokumentiert werden kann.
+- ✅**Wählen Sie** Vorgänge und Funktionsnamen aus, die die beabsichtigte Auswirkung einer Aufruf baren und nicht deren Implementierung eindeutig vermitteln. Beachten Sie, dass die Implementierung in [API-Dokumentations Kommentaren](xref:microsoft.quantum.qsharp.comments#documentation-comments)und dokumentiert werden kann.
 
   *Beispiele:*
   - "Schätzung überlappen" mit "Hadamard Test" bevorzugen, da letztere kommuniziert, wie die erste implementiert ist.
@@ -224,32 +224,32 @@ In diesem Artikel werden diese Grundsätze aufgeführt, und es werden Beispiele 
 
   - **Verbund**
 
-    - **Assert** : Überprüfen Sie, ob eine Annahme über den Status eines Ziel Computers und seiner Qubits (möglicherweise durch Verwendung nicht physischer Ressourcen) gilt. Vorgänge mit diesem Verb sollten immer sicher entfernt werden, ohne dass sich dies auf die Funktionalität von Bibliotheken und ausführbaren Programmen auswirkt. Beachten Sie, dass im Gegensatz zu Fakten Assertionen im Allgemeinen vom externen Status abhängen, wie z. b. dem Status eines Qubit-Registers, der Lauf Umgebung oder so weiter. Da die Abhängigkeit von externem Status eine Art von Nebeneffekt ist, müssen Assertionen als Vorgänge und nicht als Funktionen verfügbar gemacht werden.
+    - **Assert**: Überprüfen Sie, ob eine Annahme über den Status eines Ziel Computers und seiner Qubits (möglicherweise durch Verwendung nicht physischer Ressourcen) gilt. Vorgänge mit diesem Verb sollten immer sicher entfernt werden, ohne dass sich dies auf die Funktionalität von Bibliotheken und ausführbaren Programmen auswirkt. Beachten Sie, dass im Gegensatz zu Fakten Assertionen im Allgemeinen vom externen Status abhängen, wie z. b. dem Status eines Qubit-Registers, der Lauf Umgebung oder so weiter. Da die Abhängigkeit von externem Status eine Art von Nebeneffekt ist, müssen Assertionen als Vorgänge und nicht als Funktionen verfügbar gemacht werden.
 
-    - **Schätzung** : bei Verwendung eines oder mehrerer möglicherweise wiederholter Messungen wird eine klassische Menge von Messergebnissen geschätzt.
+    - **Schätzung**: bei Verwendung eines oder mehrerer möglicherweise wiederholter Messungen wird eine klassische Menge von Messergebnissen geschätzt.
 
       *Beispiele:*
       - @"microsoft.quantum.characterization.estimatefrequency"
       - @"microsoft.quantum.characterization.estimateoverlapbetweenstates"
 
-    - **Prepare** : wenden Sie einen Quantum-Vorgang oder eine Sequenz von Vorgängen auf ein oder mehrere Qubits an, die in einem bestimmten Anfangszustand (in der Regel $ \ket{00\cdots 0} $) gestartet werden, sodass der Status dieser Qubits in den gewünschten Endzustand weiterentwickelt wird. Im allgemeinen **kann** das agieren in anderen Zuständen als dem angegebenen Startstatus zu einer nicht definierten einheitlichen Transformation führen, **sollte** aber trotzdem einen Vorgang und seinen Adjoint "Abbrechen" und einen No-op-Vorgang anwenden.
+    - **Prepare**: wenden Sie einen Quantum-Vorgang oder eine Sequenz von Vorgängen auf ein oder mehrere Qubits an, die in einem bestimmten Anfangszustand (in der Regel $ \ket{00\cdots 0} $) gestartet werden, sodass der Status dieser Qubits in den gewünschten Endzustand weiterentwickelt wird. Im allgemeinen **kann** das agieren in anderen Zuständen als dem angegebenen Startstatus zu einer nicht definierten einheitlichen Transformation führen, **sollte** aber trotzdem einen Vorgang und seinen Adjoint "Abbrechen" und einen No-op-Vorgang anwenden.
 
       *Beispiele:*
       - @"microsoft.quantum.preparation.preparearbitrarystate"
       - @"microsoft.quantum.preparation.prepareuniformsuperposition"
 
-    - **Measure** : wenden Sie einen Quantum-Vorgang oder eine Sequenz von Vorgängen auf ein oder mehrere Qubits an, und lesen Sie die klassischen Daten zurück.
+    - **Measure**: wenden Sie einen Quantum-Vorgang oder eine Sequenz von Vorgängen auf ein oder mehrere Qubits an, und lesen Sie die klassischen Daten zurück.
 
       *Beispiele:*
       - @"Microsoft.Quantum.Intrinsic.Measure"
       - @"microsoft.quantum.arithmetic.measurefxp"
       - @"microsoft.quantum.arithmetic.measureinteger"
 
-    - **Apply** : wenden Sie einen Quantum-Vorgang oder eine Sequenz von Vorgängen auf ein oder mehrere Qubits an, sodass sich der Status dieser Qubits in kohärenter Weise ändert. Dieses Verb ist das allgemeinste Verb in der Q \# -Nomenklatur und **sollte nicht verwendet werden** , wenn ein spezifischere Verb eher direkt relevant ist.
+    - **Apply**: wenden Sie einen Quantum-Vorgang oder eine Sequenz von Vorgängen auf ein oder mehrere Qubits an, sodass sich der Status dieser Qubits in kohärenter Weise ändert. Dieses Verb ist das allgemeinste Verb in der Q \# -Nomenklatur und **sollte nicht verwendet werden** , wenn ein spezifischere Verb eher direkt relevant ist.
 
-  - **Nomen** :
+  - **Nomen**:
 
-    - **Fakt** : eine boolesche Bedingung, die nur von Ihren Eingaben abhängt, nicht vom Status eines Ziel Computers, der Umgebung oder des Zustands der Qubits des Computers. Im Gegensatz zu einer-Assertion ist ein Fakt nur für die *Werte* , die für diese Tatsache bereitgestellt werden, empfindlich. Beispiel:
+    - **Fakt**: eine boolesche Bedingung, die nur von Ihren Eingaben abhängt, nicht vom Status eines Ziel Computers, der Umgebung oder des Zustands der Qubits des Computers. Im Gegensatz zu einer-Assertion ist ein Fakt nur für die *Werte* , die für diese Tatsache bereitgestellt werden, empfindlich. Beispiel:
 
       *Beispiele:*
       - @"microsoft.quantum.diagnostics.equalityfacti": stellt einen Gleichheits Fakt über zwei ganzzahlige Eingaben dar. entweder sind die als Eingabe bereitgestellten Ganzzahlen gleich zueinander, oder Sie sind nicht unabhängig von einem anderen Programmzustand.
@@ -259,9 +259,9 @@ In diesem Artikel werden diese Grundsätze aufgeführt, und es werden Beispiele 
       *Beispiele:*
       - Der @"microsoft.quantum.machinelearning.trainingoptions" UDT umfasst benannte Elemente für Lernrate, Mini Batch-Größe und andere konfigurierbare Parameter für ml-Schulungen.
 
-  - **Adjektive** :
+  - **Adjektive**:
 
-    - ⛔️ **New** : dieses Adjektiv **sollte nicht** verwendet werden, um Verwirrung mit der Verwendung als Verb in vielen Programmiersprachen zu vermeiden (z. b. C++, c#, Java, typescript, PowerShell).
+    - ⛔️ **New**: dieses Adjektiv **sollte nicht** verwendet werden, um Verwirrung mit der Verwendung als Verb in vielen Programmiersprachen zu vermeiden (z. b. C++, c#, Java, typescript, PowerShell).
 
   - **Präpositionen:** In einigen Fällen können Präpositionen verwendet werden, um die Rollen von Substantiven und Verben in Funktions-und Vorgangs Namen genauer zu unterscheiden oder zu verdeutlichen. Es sollte jedoch sorgfältig und konsistent vorgegangen werden.
 

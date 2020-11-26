@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7666974e255d537c8d611d0077b7f9b37a61f918
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cfc201a16b1b42c82314220f77ae120076291759
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691736"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231654"
 ---
 # <a name="no-locq-style-guide"></a>Q# Styleguide #
 ## <a name="general-conventions"></a>Allgemeine Konventionen ##
@@ -390,7 +390,7 @@ Entsprechend verwendet der Sprachserver, der mit dem Quantum Development Kit ber
 Durch die Verwendung von Dokumentations Kommentaren können Benutzer den Code sinnvoll machen, indem Sie einen nützlichen Verweis auf Details bereitstellen, die nicht ohne weiteres mit den anderen Konventionen in diesem Dokument ausgedrückt werden.
 
 > [!div class="nextstepaction"]
-> [Syntax Referenz für Dokumentations Kommentare](xref:microsoft.quantum.guide.filestructure#documentation-comments).
+> [Syntax Referenz für Dokumentations Kommentare](xref:microsoft.quantum.qsharp.comments#documentation-comments).
 
 Um diese Funktionalität für Benutzer effektiv nutzen zu können, empfiehlt es sich, beim Schreiben von Dokumentations Kommentaren einige Punkte zu berücksichtigen.
 

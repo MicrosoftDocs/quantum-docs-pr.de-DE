@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f1a4ef0616a8a3f1548b7a7207cf8cbb9dcc7260
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2c5bdebc826bb85f6d7e0ade6232e15e29e8fb19
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691708"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231688"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Möglichkeiten zum Ausführen eines Q# Programms
 
@@ -26,7 +26,7 @@ Ein primärer Unterschied besteht darin, dass Q# ausgeführt werden kann:
 - als eigenständige Anwendung, bei Q# der die einzige beteiligte Sprache ist und das Programm direkt aufgerufen wird. Zwei Methoden fallen tatsächlich in diese Kategorie:
   - die Befehlszeilenschnittstelle
   - Q# Jupyter-Notebooks
-- mit einem zusätzlichen *Host Programm* , das in Python oder einer .NET-Sprache (z. b. c# oder F #) geschrieben ist, die dann das Programm aufruft und die zurückgegebenen Ergebnisse weiterverarbeiten kann.
+- mit einem zusätzlichen *Host Programm*, das in Python oder einer .NET-Sprache (z. b. c# oder F #) geschrieben ist, die dann das Programm aufruft und die zurückgegebenen Ergebnisse weiterverarbeiten kann.
 
 Um diese Prozesse und deren Unterschiede zu verstehen, wird ein einfaches Q# Programm angenommen, und es wird erläutert, wie es ausgeführt werden kann.
 
@@ -45,7 +45,7 @@ In wird Q# dies durch den folgenden Code ausgeführt:
 ```
 
 Dieser Code allein kann jedoch nicht von ausgeführt werden Q# .
-Dafür muss der Text eines [Vorgangs](xref:microsoft.quantum.guide.basics#q-operations-and-functions)ausgeführt werden, der dann ausgeführt wird, wenn er---entweder direkt oder durch einen anderen Vorgang aufgerufen wird. Daher können Sie einen Vorgang der folgenden Form schreiben:
+Dafür muss der Text eines [Vorgangs](xref:microsoft.quantum.qsharp.operationsandfunctions)ausgeführt werden, der dann ausgeführt wird, wenn er---entweder direkt oder durch einen anderen Vorgang aufgerufen wird. Daher können Sie einen Vorgang der folgenden Form schreiben:
 ```qsharp
     operation MeasureSuperposition() : Result {
         using (q = Qubit()) {
@@ -54,9 +54,9 @@ Dafür muss der Text eines [Vorgangs](xref:microsoft.quantum.guide.basics#q-oper
         }
     }
 ```
-Sie haben einen Vorgang definiert, `MeasureSuperposition` der keine Eingaben annimmt und einen Wert vom Typ [Result](xref:microsoft.quantum.guide.types)zurückgibt.
+Sie haben einen Vorgang definiert, `MeasureSuperposition` der keine Eingaben annimmt und einen Wert vom Typ [Result](xref:microsoft.quantum.qsharp.typesystem-index#available-types)zurückgibt.
 
-Obwohl die Beispiele auf dieser Seite nur aus Q# *Vorgängen* bestehen, werden alle Konzepte, die wir erörtern werden, gleichermaßen für Q# *Funktionen* verwendet. daher bezeichnen wir Sie zusammen als *callables* . Die Unterschiede werden in den [ Q# Grundlagen erläutert: Vorgänge und Funktionen](xref:microsoft.quantum.guide.basics#q-operations-and-functions)und weitere Details zur Definition finden Sie unter [Vorgänge und Funktionen](xref:microsoft.quantum.guide.operationsfunctions).
+Zusätzlich zu den Vorgängen Q# ermöglicht auch das Kapseln deterministischer Berechnungen in Funktionen. Abgesehen von der Determinismus Garantie, die impliziert, dass Berechnungen, die auf Qubits reagieren, in Vorgänge und nicht in Funktionen gekapselt werden müssen, gibt es kaum Unterschiede zwischen den Vorgängen und der Funktion. Diese werden zusammen als *callables* bezeichnet.
 
 ### <a name="callable-defined-in-a-no-locq-file"></a>In einer Datei definierte Aufruf Bare Q# Datei
 
@@ -65,7 +65,7 @@ Allerdings sind einige weitere Ergänzungen erforderlich, um eine vollständige 
 
 Alle Q# Typen und callables (sowohl die, die Sie definieren, als auch die in der Sprache intrinsisch) werden innerhalb von *Namespaces* definiert, die jeweils einen vollständigen Namen bereitstellen, auf den dann verwiesen werden kann.
 
-Beispielsweise werden die [`H`](xref:Microsoft.Quantum.Intrinsic.H) [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) Vorgänge und in den [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) Namespaces und (Teil der [ Q# Standard Bibliotheken](xref:microsoft.quantum.qsharplibintro)) gefunden.
+Beispielsweise werden die [`H`](xref:Microsoft.Quantum.Intrinsic.H) [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) Vorgänge und in den [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) Namespaces und (Teil der [ Q# Standard Bibliotheken](xref:microsoft.quantum.libraries.standard.intro)) gefunden.
 Daher können Sie immer über die *vollständigen* Namen und aufgerufen werden `Microsoft.Quantum.Intrinsic.H(<qubit>)` `Microsoft.Quantum.Measurement.MResetZ(<qubit>)` . Dies führt jedoch zu einem sehr überlasteten Code.
 
 Stattdessen `open` ermöglichen-Anweisungen, dass auf Aufruf Bare Elemente mit präziseren Kurzform verwiesen wird, wie dies im obigen Vorgangs Text geschehen ist.
@@ -164,7 +164,7 @@ Nun `dotnet run` führt ein-Befehl von der Eingabeaufforderung aus `MeasureSuper
 Daher wird entweder `One` oder `Zero` gedruckt angezeigt. 
 
 Beachten Sie, dass es keine Rolle spielt, ob weitere Aufruf Bare aufruben definiert sind, sondern nur `MeasureSuperposition` ausgeführt wird.
-Außerdem ist es kein Problem, wenn die Aufruf Bare-Datei vor der Deklaration [Dokumentations Kommentare](xref:microsoft.quantum.guide.filestructure#documentation-comments) enthält `@EntryPoint()` .
+Außerdem ist es kein Problem, wenn die Aufruf Bare-Datei vor der Deklaration [Dokumentations Kommentare](xref:microsoft.quantum.qsharp.comments#documentation-comments) enthält `@EntryPoint()` .
 
 ### <a name="callable-arguments"></a>Aufruf Bare Argumente
 
@@ -589,7 +589,7 @@ Hier wird ausführlich erläutert, wie die Q# oben definierten Vorgänge ausgef�
 
 In einem Q# Jupyter Notebook geben Sie den Q# Code genau so ein, wie er im Namespace einer Q# Datei gespeichert wird.
 
-Daher können wir den Zugriff auf callables aus den [ Q# Standardbibliotheken](xref:microsoft.quantum.qsharplibintro) mit `open` Anweisungen für die jeweiligen Namespaces aktivieren.
+Daher können wir den Zugriff auf callables aus den [ Q# Standardbibliotheken](xref:microsoft.quantum.libraries.standard.intro) mit `open` Anweisungen für die jeweiligen Namespaces aktivieren.
 Wenn eine Zelle mit einer solchen Anweisung ausgeführt wird, sind die Definitionen aus diesen Namespaces im gesamten Arbeitsbereich verfügbar.
 
 > [!NOTE]
