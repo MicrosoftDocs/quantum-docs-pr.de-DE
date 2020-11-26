@@ -1,55 +1,55 @@
 ---
 uid: Microsoft.Quantum.Arrays.FlatMapped
 title: Flatmapping-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: FlatMapped
 qsharp.summary: Given an array and a function that maps an array element to some output array, returns the concatenated output arrays for each array element.
-ms.openlocfilehash: 3e75c7703471a2986812df660c2f9328f1536d22
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e851e8503b3afcb4572f09fe39079247518c22c4
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92706031"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221248"
 ---
-# <a name="flatmapped-function"></a><span data-ttu-id="5b42f-102">Flatmapping-Funktion</span><span class="sxs-lookup"><span data-stu-id="5b42f-102">FlatMapped function</span></span>
+# <a name="flatmapped-function"></a><span data-ttu-id="027b1-102">Flatmapping-Funktion</span><span class="sxs-lookup"><span data-stu-id="027b1-102">FlatMapped function</span></span>
 
-<span data-ttu-id="5b42f-103">Namespace: [Microsoft. Quantum. Arrays](xref:Microsoft.Quantum.Arrays)</span><span class="sxs-lookup"><span data-stu-id="5b42f-103">Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)</span></span>
+<span data-ttu-id="027b1-103">Namespace: [Microsoft. Quantum. Arrays](xref:Microsoft.Quantum.Arrays)</span><span class="sxs-lookup"><span data-stu-id="027b1-103">Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)</span></span>
 
-<span data-ttu-id="5b42f-104">Paketen [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="5b42f-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="027b1-104">Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="027b1-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="5b42f-105">Gibt bei einem Array und einer Funktion, die ein Array Element einem Ausgabe Array zuordnet, die verketteten Ausgabe Arrays für jedes Array Element zurück.</span><span class="sxs-lookup"><span data-stu-id="5b42f-105">Given an array and a function that maps an array element to some output array, returns the concatenated output arrays for each array element.</span></span>
+<span data-ttu-id="027b1-105">Gibt bei einem Array und einer Funktion, die ein Array Element einem Ausgabe Array zuordnet, die verketteten Ausgabe Arrays für jedes Array Element zurück.</span><span class="sxs-lookup"><span data-stu-id="027b1-105">Given an array and a function that maps an array element to some output array, returns the concatenated output arrays for each array element.</span></span>
 
 ```qsharp
 function FlatMapped<'TInput, 'TOutput> (mapper : ('TInput -> 'TOutput[]), array : 'TInput[]) : 'TOutput[]
 ```
 
 
-## <a name="input"></a><span data-ttu-id="5b42f-106">Eingabe</span><span class="sxs-lookup"><span data-stu-id="5b42f-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="027b1-106">Eingabe</span><span class="sxs-lookup"><span data-stu-id="027b1-106">Input</span></span>
 
-### <a name="mapper--tinput---toutput"></a><span data-ttu-id="5b42f-107">Mapper: ' TInput-> ' TOutput []</span><span class="sxs-lookup"><span data-stu-id="5b42f-107">mapper : 'TInput -> 'TOutput[]</span></span>
+### <a name="mapper--tinput---toutput"></a><span data-ttu-id="027b1-107">Mapper: ' TInput-> ' TOutput []</span><span class="sxs-lookup"><span data-stu-id="027b1-107">mapper : 'TInput -> 'TOutput[]</span></span>
 
-<span data-ttu-id="5b42f-108">Eine Funktion von `'TInput` zu `'TOutput[]` , die zum Zuordnen von Array Elementen verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="5b42f-108">A function from `'TInput` to `'TOutput[]` that is used to map array elements.</span></span>
-
-
-### <a name="array--tinput"></a><span data-ttu-id="5b42f-109">Array: ' TInput []</span><span class="sxs-lookup"><span data-stu-id="5b42f-109">array : 'TInput[]</span></span>
-
-<span data-ttu-id="5b42f-110">Ein Array von-Elementen.</span><span class="sxs-lookup"><span data-stu-id="5b42f-110">An array of elements.</span></span>
+<span data-ttu-id="027b1-108">Eine Funktion von `'TInput` zu `'TOutput[]` , die zum Zuordnen von Array Elementen verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="027b1-108">A function from `'TInput` to `'TOutput[]` that is used to map array elements.</span></span>
 
 
+### <a name="array--tinput"></a><span data-ttu-id="027b1-109">Array: ' TInput []</span><span class="sxs-lookup"><span data-stu-id="027b1-109">array : 'TInput[]</span></span>
 
-## <a name="output--toutput"></a><span data-ttu-id="5b42f-111">Ausgabe: ' TOutput []</span><span class="sxs-lookup"><span data-stu-id="5b42f-111">Output : 'TOutput[]</span></span>
+<span data-ttu-id="027b1-110">Ein Array von-Elementen.</span><span class="sxs-lookup"><span data-stu-id="027b1-110">An array of elements.</span></span>
 
-<span data-ttu-id="5b42f-112">Ein Array von `'TOutput[]` , bei dem es sich um die Verkettung aller von der Zuordnungs Funktion generierten Arrays handelt.</span><span class="sxs-lookup"><span data-stu-id="5b42f-112">An array of `'TOutput[]` which is the concatenation of all arrays generated by the mapping function.</span></span>
 
-## <a name="type-parameters"></a><span data-ttu-id="5b42f-113">Typparameter</span><span class="sxs-lookup"><span data-stu-id="5b42f-113">Type Parameters</span></span>
 
-### <a name="tinput"></a><span data-ttu-id="5b42f-114">' TInput</span><span class="sxs-lookup"><span data-stu-id="5b42f-114">'TInput</span></span>
+## <a name="output--toutput"></a><span data-ttu-id="027b1-111">Ausgabe: ' TOutput []</span><span class="sxs-lookup"><span data-stu-id="027b1-111">Output : 'TOutput[]</span></span>
 
-<span data-ttu-id="5b42f-115">Der Typ der `array` Elemente.</span><span class="sxs-lookup"><span data-stu-id="5b42f-115">The type of `array` elements.</span></span>
-### <a name="toutput"></a><span data-ttu-id="5b42f-116">"TOutput"</span><span class="sxs-lookup"><span data-stu-id="5b42f-116">'TOutput</span></span>
+<span data-ttu-id="027b1-112">Ein Array von `'TOutput[]` , bei dem es sich um die Verkettung aller von der Zuordnungs Funktion generierten Arrays handelt.</span><span class="sxs-lookup"><span data-stu-id="027b1-112">An array of `'TOutput[]` which is the concatenation of all arrays generated by the mapping function.</span></span>
 
-<span data-ttu-id="5b42f-117">Die- `mapper` Funktion gibt Arrays dieses Typs zurück.</span><span class="sxs-lookup"><span data-stu-id="5b42f-117">The `mapper` function returns arrays of this type.</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="027b1-113">Typparameter</span><span class="sxs-lookup"><span data-stu-id="027b1-113">Type Parameters</span></span>
+
+### <a name="tinput"></a><span data-ttu-id="027b1-114">' TInput</span><span class="sxs-lookup"><span data-stu-id="027b1-114">'TInput</span></span>
+
+<span data-ttu-id="027b1-115">Der Typ der `array` Elemente.</span><span class="sxs-lookup"><span data-stu-id="027b1-115">The type of `array` elements.</span></span>
+### <a name="toutput"></a><span data-ttu-id="027b1-116">"TOutput"</span><span class="sxs-lookup"><span data-stu-id="027b1-116">'TOutput</span></span>
+
+<span data-ttu-id="027b1-117">Die- `mapper` Funktion gibt Arrays dieses Typs zurück.</span><span class="sxs-lookup"><span data-stu-id="027b1-117">The `mapper` function returns arrays of this type.</span></span>
