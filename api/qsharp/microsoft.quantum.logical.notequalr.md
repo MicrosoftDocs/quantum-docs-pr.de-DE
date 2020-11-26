@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.NotEqualR
 title: Notequalr-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: NotEqualR
 qsharp.summary: Returns true if and only if two inputs are not equal.
-ms.openlocfilehash: 06615c7ffb6aafc296077990dfca0ce25e1e00fa
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4ac6cf4b220fa42c8eb946d6fbcad4cdb191afcd
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701393"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197193"
 ---
 # <a name="notequalr-function"></a>Notequalr-Funktion
 
 Namespace: [Microsoft. Quantum. Logical](xref:Microsoft.Quantum.Logical)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Gibt nur dann true zurück, wenn zwei Eingaben nicht gleich sind.
@@ -45,7 +45,7 @@ Der zweite zu vergleichende Wert.
 
 `true``a`, wenn nicht gleich ist `b` .
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Die folgenden sind gleichwertig:
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.X
 title: X-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Applies the Pauli $X$ gate.
 
   \begin{align} \sigma_x \mathrel{:=} \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}. \end{align}
-ms.openlocfilehash: 30e5473f86078860e53a157356bab10f766213f2
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: df338ce0892a75f2885e26dba10030768d99040f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92707090"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96198502"
 ---
 # <a name="x-operation"></a>X-Vorgang
 
 Namespace: [Microsoft. Quantum. intrinsisch](xref:Microsoft.Quantum.Intrinsic)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Wendet die Pauli-$X $ Gate an.
@@ -30,7 +30,7 @@ Wendet die Pauli-$X $ Gate an.
 \end{align}
 
 ```qsharp
-operation X (qubit : Qubit) : Unit
+operation X (qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 

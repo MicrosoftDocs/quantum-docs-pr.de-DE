@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.LessThanOrEqualD
 title: Lessthanorequald-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: LessThanOrEqualD
 qsharp.summary: Returns true if and only if a number is less than or equal to another number.
-ms.openlocfilehash: 7b0e9da379bd67eb78a80e7a535a15dcb8ba85c7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3f4ccb0888e7df7c43ff73be8a3140e3fa84d4dc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701459"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197635"
 ---
 # <a name="lessthanorequald-function"></a>Lessthanorequald-Funktion
 
 Namespace: [Microsoft. Quantum. Logical](xref:Microsoft.Quantum.Logical)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Gibt nur dann true zurück, wenn eine Zahl kleiner oder gleich einer anderen Zahl ist.
@@ -45,7 +45,7 @@ Der zweite zu vergleichende Wert.
 
 `true``a`, wenn kleiner oder gleich ist `b` .
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Die folgenden sind gleichwertig:
 

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._TailMeasurement
 title: _TailMeasurement-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: _TailMeasurement
 qsharp.summary: ''
-ms.openlocfilehash: 5fba344dd0af4b13d6755d1c298cd213572c79ae
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: caf58a5a1ae1568cb4f84f5e59814d31d49fdb77
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92706935"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196666"
 ---
 # <a name="_tailmeasurement-function"></a>_TailMeasurement-Funktion
 
 Namespace: [Microsoft. Quantum. machinelearning](xref:Microsoft.Quantum.MachineLearning)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. machinelearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 

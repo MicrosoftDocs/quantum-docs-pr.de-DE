@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.EqualR
 title: Equalr-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: EqualR
 qsharp.summary: Returns true if and only if two inputs are equal.
-ms.openlocfilehash: 5aaa17303d75b27c3ac82cbe7d739a60016fdcb1
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d68b2f1a26bf318400d3c88b37d9aabcc38cbdfe
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701495"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96198005"
 ---
 # <a name="equalr-function"></a>Equalr-Funktion
 
 Namespace: [Microsoft. Quantum. Logical](xref:Microsoft.Quantum.Logical)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Gibt nur dann true zurück, wenn zwei Eingaben gleich sind.
@@ -45,7 +45,7 @@ Der zweite zu vergleichende Wert.
 
 `true``a`, wenn gleich ist `b` .
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Die folgenden sind gleichwertig:
 

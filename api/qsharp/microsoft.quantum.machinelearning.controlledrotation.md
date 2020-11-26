@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.ControlledRotation
 title: Benutzerdefinierter controlledrotation-Typ
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: ControlledRotation
 qsharp.summary: Describes a controlled rotation in terms of its target and control indices, rotation axis, and index into a model parameter vector.
-ms.openlocfilehash: afc425c16ab550fd414e656484c9ff6f0f8f3ef4
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1e664b470caeba656ea4a73f70bbc0ef5fe76f7e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702065"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196564"
 ---
 # <a name="controlledrotation-user-defined-type"></a>Benutzerdefinierter controlledrotation-Typ
 
 Namespace: [Microsoft. Quantum. machinelearning](xref:Microsoft.Quantum.MachineLearning)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. machinelearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Beschreibt eine gesteuerte Drehung in Bezug auf die Ziel-und Steuerelement Indizes, die Drehungs Achse und den Index in einen Modellparameter Vektor.
@@ -45,6 +45,6 @@ Die Achse für diese Drehung.
 
 Ein Index in einem Modellparameter Vektor, der den Winkel für diese Drehung beschreibt.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Eine unkontrollierte Drehung kann dargestellt werden, indem `ControlIndices` auf ein leeres Array von Indizes festgelegt wird `new Int[0]` .
