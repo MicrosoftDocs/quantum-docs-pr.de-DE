@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger
 title: Incrementphasebymodularinteger-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: IncrementPhaseByModularInteger
 qsharp.summary: Performs a modular increment of a qubit register by an integer constant.
-ms.openlocfilehash: 52309c056a3eae25ffdfbfa848f94bf744c71132
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6a39ce49dfa28c1f1cbe6b29e526144c3ac19e53
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92707234"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96222880"
 ---
 # <a name="incrementphasebymodularinteger-operation"></a>Incrementphasebymodularinteger-Vorgang
 
 Namespace: [Microsoft. Quantum. Arithmetik](xref:Microsoft.Quantum.Arithmetic)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Führt ein modulares Inkrement für ein Qubit-Register durch eine ganzzahlige Konstante aus.
 
 ```qsharp
-operation IncrementPhaseByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit
+operation IncrementPhaseByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -55,7 +55,7 @@ Ganzzahliger $y $ in Phasen codiertem Little-Endian-Format, dem `increment` $a $
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Geht davon aus, dass `target` das höchste Bit auf 0 festgelegt ist.
 Außerdem wird davon ausgegangen, dass der Wert von Target kleiner als $N $ ist.

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.MaybeBigIntAsInt
 title: Maybebigintasint-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: MaybeBigIntAsInt
 qsharp.summary: Converts a given big integer to an equivalent integer, if possible. The function returns a pair of the resulting integer and a Boolean flag which is true, if and only if the conversion was possible.
-ms.openlocfilehash: b91912f6f669afad888e71174fef6e2e6f8e7156
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d0a598497e8a8f019bbd8da7db1c6cc4d7bde017
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702953"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224274"
 ---
 # <a name="maybebigintasint-function"></a>Maybebigintasint-Funktion
 
 Namespace: [Microsoft. Quantum. Convert](xref:Microsoft.Quantum.Convert)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Konvertiert eine angegebene große Ganzzahl, sofern möglich, in eine entsprechende Ganzzahl.
@@ -41,6 +41,6 @@ function MaybeBigIntAsInt (a : BigInt) : (Int, Bool)
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Weitere Informationen finden Sie unter [c# BigInteger-Konstruktor](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_) .

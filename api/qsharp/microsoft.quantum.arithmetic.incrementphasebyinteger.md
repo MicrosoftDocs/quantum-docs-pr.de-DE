@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger
 title: Incrementphasebyinteger-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: IncrementPhaseByInteger
 qsharp.summary: Increments an unsigned quantum register by a classical integer, using phase rotations.
-ms.openlocfilehash: fb67455dadbc7a2f38880581f0e413a747faa8ef
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 54b83b3d4460c05478543c51f8f9c0b0e7f5b1fa
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92707247"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96222914"
 ---
 # <a name="incrementphasebyinteger-operation"></a>Incrementphasebyinteger-Vorgang
 
 Namespace: [Microsoft. Quantum. Arithmetik](xref:Microsoft.Quantum.Arithmetic)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Erhöht mithilfe von Phasen Drehungen ein unsigniertes Quantum-Register durch eine klassische Ganzzahl.
 
 ```qsharp
-operation IncrementPhaseByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit
+operation IncrementPhaseByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -50,7 +50,7 @@ Ein Quantum-Register codiert eine Ganzzahl ohne Vorzeichen unter Verwendung der 
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Beachten Sie, dass wir die Verbindung vereinfacht haben, da das Inkrement eine klassische Konstante und kein Quantum-Register ist.
 
@@ -58,7 +58,7 @@ Ein Leitungs Diagramm und eine Erläuterung finden Sie in der Abbildung auf der 
 
 ## <a name="references"></a>Referenzen
 
-- [*Thomas G. Draper* , arXiv: quant-ph/0008033](https://arxiv.org/pdf/quant-ph/0008033v1.pdf)
+- [*Thomas G. Draper*, arXiv: quant-ph/0008033](https://arxiv.org/pdf/quant-ph/0008033v1.pdf)
 
 ## <a name="see-also"></a>Weitere Informationen
 

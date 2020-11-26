@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.PauliArrayAsInt
 title: Pauliarrayasint-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: PauliArrayAsInt
 qsharp.summary: Encodes a multi-qubit Pauli operator represented as an array of single-qubit Pauli operators into an integer.
-ms.openlocfilehash: f8ec468dd0f0cfd0d868dfc79ff715b3b4fc2f4a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6077110cc07c8626b22eb404c1de096ed43efcc3
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702924"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224240"
 ---
 # <a name="pauliarrayasint-function"></a>Pauliarrayasint-Funktion
 
 Namespace: [Microsoft. Quantum. Convert](xref:Microsoft.Quantum.Convert)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Codiert einen multiqubit-Pauli-Operator, der als Array von Single-Qubit-Pauli-Operatoren dargestellt wird, in eine ganze Zahl.
@@ -40,7 +40,7 @@ Ein Array mit höchstens 31 Single-Qubit-Pauli-Operatoren.
 
 Eine Ganzzahl, die eindeutig identifiziert `paulis` , wie unten beschrieben.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Jeder Pauli-Operator kann mit zwei Bits codiert werden: $ $ \begin{align} \boldone \mapsto 00, \quad X \mapsto 01, \quad Y \mapsto 11, \quad Z \mapsto 10.
 \end{align} $ $
