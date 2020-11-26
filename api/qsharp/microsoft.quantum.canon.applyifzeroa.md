@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfZeroA
 title: Applyif zeroa-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfZeroA
 qsharp.summary: Applies an adjointable operation conditioned on a classical result value being zero.
-ms.openlocfilehash: d324cd970e8df49ceb51b6bf5c9f3c9c3ff142f9
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ab5b05791213da7c8bee5915764c342cb0bed851
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705247"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218494"
 ---
 # <a name="applyifzeroa-operation"></a>Applyif zeroa-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wendet einen adjointable-Vorgang an, der von einem klassischen Ergebniswert von 0 (null) abhängt.
 
 ```qsharp
-operation ApplyIfZeroA<'T> (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit
+operation ApplyIfZeroA<'T> (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit is Adj
 ```
 
 
@@ -40,7 +40,7 @@ Das-Suffix `A` gibt an, dass der anzuwendende Vorgang adjointable ist.
 Ein Messergebnis, das steuert, ob op angewendet wird.
 
 
-### <a name="op--t--unit-adj"></a>OP: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="op--t--unit--is-adj"></a>OP: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ
 
 Ein Vorgang, der bedingt angewendet werden soll.
 

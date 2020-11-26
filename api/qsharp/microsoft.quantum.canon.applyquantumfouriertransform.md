@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyQuantumFourierTransform
 title: Applyquantumfouriertransform-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyQuantumFourierTransform
 qsharp.summary: Performs the Quantum Fourier Transform on a quantum register containing an integer in the little-endian representation.
-ms.openlocfilehash: fa8d135c0665f0a576229797d208b321ba0329a6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6d3ad9ca2e0d10c264f8020e1f34687f6cbc9f94
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92705098"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218188"
 ---
 # <a name="applyquantumfouriertransform-operation"></a>Applyquantumfouriertransform-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Führt die Quantum Fourier-Transformation für ein Quantum-Register durch, das eine ganze Zahl in der Little-Endian-Darstellung enthält.
 
 ```qsharp
-operation ApplyQuantumFourierTransform (qs : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation ApplyQuantumFourierTransform (qs : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -40,7 +40,7 @@ Das Quantum-Register, auf das die Quantum Fourier-Transformation angewendet wird
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Es wird davon ausgegangen, dass die Eingabe und die Ausgabe in Little-ercodierungscodierung vorliegen.
 
