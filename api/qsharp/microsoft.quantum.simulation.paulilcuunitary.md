@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.PauliLCUUnitary
 title: Paulilcueinheitliche-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: PauliLCUUnitary
 qsharp.summary: Used in implementation of `PauliBlockEncoding`
-ms.openlocfilehash: d88bb01e7b3d75113f66719b292ddd99f642d1c7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 39ace64019ed6b46688f24709352750e5c45ab3a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701717"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229102"
 ---
 # <a name="paulilcuunitary-function"></a>Paulilcueinheitliche-Funktion
 
 Namespace: [Microsoft. Quantum. Simulation](xref:Microsoft.Quantum.Simulation)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wird in der Implementierung von `PauliBlockEncoding`
@@ -36,7 +36,7 @@ function PauliLCUUnitary (generatorIndex : Microsoft.Quantum.Simulation.Generato
 
 
 
-## <a name="output--qubit--unit-adj--ctl"></a>Ausgabe: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+## <a name="output--qubit--unit--is-adj--ctl"></a>Ausgabe: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL
 
 
 

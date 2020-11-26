@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.MultiplyGeneratorSystem
 title: Multiplygeneratorsystem-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: MultiplyGeneratorSystem
 qsharp.summary: Multiplies the coefficient of all terms in a `GeneratorSystem`.
-ms.openlocfilehash: 1d28de99dab3f7aca4bf3706fe98f5ef7c5286a7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: effb9e3ca754f77bbe1ea0fb6ca30ae49e92d531
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92706687"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229153"
 ---
 # <a name="multiplygeneratorsystem-function"></a>Multiplygeneratorsystem-Funktion
 
 Namespace: [Microsoft. Quantum. Simulation](xref:Microsoft.Quantum.Simulation)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Multipliziert den Koeffizient aller Begriffe in einem `GeneratorSystem` .

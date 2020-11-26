@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyConditionally
 title: Applybedingt-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyConditionally
 qsharp.summary: ''
-ms.openlocfilehash: fe623b240e35ee88f673b6e90db6307ef701d049
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 24d52576d2fb3e83f294874be4b0d1cd6a80f188
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701711"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229068"
 ---
 # <a name="applyconditionally-operation"></a>Applybedingt-Vorgang
 
 Namespace: [Microsoft. Quantum. Simulation. quantumprocessor. Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
@@ -30,12 +30,12 @@ operation ApplyConditionally<'T, 'U> (measurementResults : Result[], resultsValu
 
 ## <a name="input"></a>Eingabe
 
-### <a name="measurementresults--__invalidresult__"></a>"messrementresults": __ungültig <Result>__ []
+### <a name="measurementresults--__invalidresult__"></a>"messrementresults": __ungültig <Result>__[]
 
 
 
 
-### <a name="resultsvalues--__invalidresult__"></a>result values: __ungültig <Result>__ []
+### <a name="resultsvalues--__invalidresult__"></a>result values: __ungültig <Result>__[]
 
 
 
