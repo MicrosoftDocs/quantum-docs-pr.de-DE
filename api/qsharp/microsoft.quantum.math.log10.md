@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.Log10
 title: LOG10-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: Log10
 qsharp.summary: Returns the base 10 logarithm of a specified number.
-ms.openlocfilehash: 6ffdc19ac74e132ade80e2754a7060816b044c2a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: af996ea87948f852adf48bc9da1bcaafe08ad743
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702024"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96195272"
 ---
 # <a name="log10-function"></a>LOG10-Funktion
 
 Namespace: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Gibt den Logarithmus einer angegebenen Zahl zur Basis 10 zurück.
@@ -40,6 +40,6 @@ function Log10 (input : Double) : Double
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Weitere Informationen finden Sie unter " [System. Math. Log10](https://docs.microsoft.com/dotnet/api/system.math.log10) ".

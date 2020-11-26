@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.FeatureRegisterSize
 title: Featureregistersize-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: FeatureRegisterSize
 qsharp.summary: Returns the number of qubits required to encode a particular feature vector.
-ms.openlocfilehash: 8f7c47c7547e7a0ac1672f308de445c1b46461e1
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: bc5d5a23cfb431f9506b15bc404ab6955d1c2a35
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723284"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196411"
 ---
 # <a name="featureregistersize-function"></a>Featureregistersize-Funktion
 
 Namespace: [Microsoft. Quantum. machinelearning](xref:Microsoft.Quantum.MachineLearning)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. machinelearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Gibt die Anzahl von Qubits zurück, die erforderlich sind, um einen bestimmten featurevektor zu codieren.

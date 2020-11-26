@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.TrainingOptions
 title: Trainingoptions-benutzerdefinierter Typ
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: TrainingOptions
 qsharp.summary: A collection of options to be used in training quantum classifiers.
-ms.openlocfilehash: 5ecc2b5175a4e8db78f72311ac1d5ff964bae811
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 280a3857aa7bc42f636a33f893d4f450e79b6a6a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722374"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196122"
 ---
 # <a name="trainingoptions-user-defined-type"></a>Trainingoptions-benutzerdefinierter Typ
 
 Namespace: [Microsoft. Quantum. machinelearning](xref:Microsoft.Quantum.MachineLearning)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. machinelearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Eine Auflistung von Optionen, die beim Trainieren von Quantum Classifiers verwendet werden sollen.
@@ -61,7 +61,7 @@ Legen Sie für optimale Genauigkeit den Wert 1 fest.
 
 Eine Funktion, die verwendet werden kann, um ausführliche Rückmeldungen bereitzustellen.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Dieser UDT sollte nicht direkt erstellt werden, sondern sollte stattdessen durch Aufrufen von angegeben werden @"microsoft.quantum.machinelearning.defaulttrainingoptions" . Anschließend wird der- `w/` Operator verwendet, um andere Standardwerte zu überschreiben.
 

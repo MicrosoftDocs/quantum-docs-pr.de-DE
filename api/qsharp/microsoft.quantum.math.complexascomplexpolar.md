@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.ComplexAsComplexPolar
 title: Complexascomplexpolar-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: ComplexAsComplexPolar
 qsharp.summary: Converts a complex number of type `Complex` to a complex number of type `ComplexPolar`.
-ms.openlocfilehash: b66ed56e2c7229d7b86a71a43e6672cfde97fb59
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5155583291e69a78df66f3b77d758fc1708d9146
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701333"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96195629"
 ---
 # <a name="complexascomplexpolar-function"></a>Complexascomplexpolar-Funktion
 
 Namespace: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Konvertiert eine komplexe Zahl vom Typ `Complex` in eine komplexe Zahl vom Typ `ComplexPolar` .

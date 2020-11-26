@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.PartialRotationsLayer
 title: Partialrotationslayer-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: PartialRotationsLayer
 qsharp.summary: Returns an array of single-qubit rotations along a given axis, parameterized by distinct model parameters.
-ms.openlocfilehash: ab964d2c43a13a5daf64aefdeccd1c26cd371ff4
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ade0640b07f633982e98d5d02239fa205909bcce
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722430"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196241"
 ---
 # <a name="partialrotationslayer-function"></a>Partialrotationslayer-Funktion
 
 Namespace: [Microsoft. Quantum. machinelearning](xref:Microsoft.Quantum.MachineLearning)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. machinelearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Gibt ein Array von Single-Qubit-Drehungen entlang einer angegebenen Achse zurück, die durch unterschiedliche Modellparameter parametrisiert werden.
