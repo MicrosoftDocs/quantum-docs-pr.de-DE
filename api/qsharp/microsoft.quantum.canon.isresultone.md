@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.IsResultOne
 title: Isresultone-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: IsResultOne
 qsharp.summary: Tests if a given Result value is equal to `One`.
-ms.openlocfilehash: fa8845fd92e5c16b4ff15436caf42df4f1e151cf
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eb4116b60bb415465375e374ad84e990135c231c
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92704103"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96206543"
 ---
 # <a name="isresultone-function"></a>Isresultone-Funktion
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Testet, ob ein angegebener Ergebniswert gleich ist `One` .

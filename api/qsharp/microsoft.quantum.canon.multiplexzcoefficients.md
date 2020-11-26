@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.MultiplexZCoefficients
 title: Multiplexzcoefficients-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: MultiplexZCoefficients
 qsharp.summary: Implementation step of multiply-controlled Z rotations.
-ms.openlocfilehash: 33ab537d5e2b2953bbd4abfc36c85678c4e5e796
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 71bf85aeb4025a8c2a7fb56f29482ef74ae098f8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703944"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96206016"
 ---
 # <a name="multiplexzcoefficients-function"></a>Multiplexzcoefficients-Funktion
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Implementierungs Schritt von mehrfach gesteuerten Z-Drehungen.

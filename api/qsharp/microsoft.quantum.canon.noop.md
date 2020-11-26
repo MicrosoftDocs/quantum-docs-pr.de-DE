@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.NoOp
 title: NOOP-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: NoOp
 qsharp.summary: Performs the identity operation (no-op) on an argument.
-ms.openlocfilehash: 987e39577c3b736418234431ed7a915ae461f763
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 35b6b62cab35f941f04b150dcca763457ddaa084
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703949"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96205965"
 ---
 # <a name="noop-operation"></a>NOOP-Vorgang
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Führt den Identitäts Vorgang (No-OP) für ein Argument aus.
 
 ```qsharp
-operation NoOp<'T> (input : 'T) : Unit
+operation NoOp<'T> (input : 'T) : Unit is Adj + Ctl
 ```
 
 
@@ -53,7 +53,7 @@ Ein Wert, der ignoriert werden soll.
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 In fast allen Fällen muss der Typparameter für `NoOp` explizit angegeben werden. Beispielsweise `NoOp<Qubit>` ist identisch mit <xref:microsoft.quantum.intrinsic.i> .
 

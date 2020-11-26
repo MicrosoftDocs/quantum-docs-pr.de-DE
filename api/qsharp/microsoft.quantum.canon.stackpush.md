@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.StackPush
 title: Stackpush-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -10,18 +10,18 @@ qsharp.summary: >-
   > [!WARNING]
 
   > StackPush has been deprecated.
-ms.openlocfilehash: 552e8419e42b2de5cde05d36121aba534ffc39f7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9d8bb0ac1162b8540c26adc748d8a9d66e6d32ff
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703799"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204996"
 ---
 # <a name="stackpush-function"></a>Stackpush-Funktion
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 > [!WARNING]

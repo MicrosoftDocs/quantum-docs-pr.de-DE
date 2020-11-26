@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.TrotterArbitraryImplCA
 title: Vorgang "trotterarbiaryimplca"
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: TrotterArbitraryImplCA
 qsharp.summary: Recursive implementation of even-order Trotter–Suzuki integrator.
-ms.openlocfilehash: 1c094d09ac8bdd71a59ef57d8715a6f90f18efc6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2abfbb9d51a98d8ede1b0835875a3771ffda0691
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703746"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204724"
 ---
 # <a name="trotterarbitraryimplca-operation"></a>Vorgang "trotterarbiaryimplca"
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Rekursive Implementierung des Trotters der geraden Ordnung – Suzuki Integrator.
 
 ```qsharp
-operation TrotterArbitraryImplCA<'T> (order : Int, (nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), stepSize : Double, target : 'T) : Unit
+operation TrotterArbitraryImplCA<'T> (order : Int, (nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), stepSize : Double, target : 'T) : Unit is Adj + Ctl
 ```
 
 
@@ -40,7 +40,7 @@ Reihenfolge von Trotter-Suzuki Integrator.
 Die Anzahl der Vorgänge, die in Zeitschritten zerlegt werden sollen.
 
 
-### <a name="op--intdoublet--unit-adj--ctl"></a>OP: ([int](xref:microsoft.quantum.lang-ref.int),[Double](xref:microsoft.quantum.lang-ref.double), t) => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ + CTL
+### <a name="op--intdoublet--unit--is-adj--ctl"></a>OP: ([int](xref:microsoft.quantum.lang-ref.int),[Double](xref:microsoft.quantum.lang-ref.double), 't) => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL
 
 Ein Vorgang, bei dem eine Index Eingabe (Type `Int` ) und eine Zeiteingabe (Typ) `Double` und ein Quantum-Register (Typ `'T` ) für die Zerlegung akzeptiert werden.
 

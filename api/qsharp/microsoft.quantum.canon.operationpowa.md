@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.OperationPowA
 title: Operationpowa-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Raises an operation to a power. The modifier `A` indicates that the operation is adjointable.
 
   That is, given an operation representing a gate $U$, returns a new operation $U^m$ for a power $m$.
-ms.openlocfilehash: 66df354c6de7e48624712276882759043b78466c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 35dc76a06fd4e8c819b785fd4c588f108c918326
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92703931"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96205778"
 ---
 # <a name="operationpowa-function"></a>Operationpowa-Funktion
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Löst einen Vorgang für eine Stromversorgung aus.
@@ -36,7 +36,7 @@ function OperationPowA<'T> (op : ('T => Unit is Adj), power : Int) : ('T => Unit
 
 ## <a name="input"></a>Eingabe
 
-### <a name="op--t--unit-adj"></a>OP: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="op--t--unit--is-adj"></a>OP: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ
 
 Ein Vorgang $U $, der das Gate darstellt, das wiederholt werden soll.
 
@@ -47,7 +47,7 @@ Gibt an, wie oft $U $ wiederholt werden soll.
 
 
 
-## <a name="output--t--unit-adj"></a>Ausgabe: 't => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+## <a name="output--t--unit--is-adj"></a>Ausgabe: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ
 
 Ein neuer Vorgang, der $U ^ m $ darstellt, wobei $m = \texttt{Power} $ ist.
 
