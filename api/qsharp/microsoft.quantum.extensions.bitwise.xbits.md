@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Bitwise.XBits
 title: Xbits-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Bitwise
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.bitwise.xbits".
-ms.openlocfilehash: 2ac47e34ad774b1e01abb925d283e5554f61b45b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3972fba6794173ea8a1245c2f6f154bb30d7aafd
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702318"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96213530"
 ---
 # <a name="xbits-function"></a>Xbits-Funktion
 
 Namespace: [Microsoft. Quantum. Extensions. bitweise](xref:Microsoft.Quantum.Extensions.Bitwise)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]

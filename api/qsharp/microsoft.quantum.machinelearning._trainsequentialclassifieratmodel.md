@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._TrainSequentialClassifierAtModel
 title: _TrainSequentialClassifierAtModel Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: _TrainSequentialClassifierAtModel
 qsharp.summary: ''
-ms.openlocfilehash: 9e0cef52911c24a176da14bcac8db6b887c1a2c7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ad2c4ad19efa8aafd40838a671b5a0d1efe5c16c
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92706930"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96212068"
 ---
 # <a name="_trainsequentialclassifieratmodel-operation"></a>_TrainSequentialClassifierAtModel Vorgang
 
 Namespace: [Microsoft. Quantum. machinelearning](xref:Microsoft.Quantum.MachineLearning)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. machinelearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 

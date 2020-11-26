@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Math.ArcSin
 title: ARCSIN-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Math
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.math.arcsin".
-ms.openlocfilehash: 6ba115acf88bb76b861684ed37ea2d7b327dc8f3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 49bea943852d8980fe91bc90adf8a3e6d7086f3f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92701670"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96213173"
 ---
 # <a name="arcsin-function"></a>ARCSIN-Funktion
 
 Namespace: [Microsoft. Quantum. Extensions. Math](xref:Microsoft.Quantum.Extensions.Math)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]

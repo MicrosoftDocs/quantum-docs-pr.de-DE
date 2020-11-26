@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Diagnostics.DumpMachine
 title: Dumpmachine-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Diagnostics
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.diagnostics.dumpmachine".
-ms.openlocfilehash: e1da49a322aecab09f2f25faf9ae6caf241ab6b7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 0c933294c1c57d690c0df338aa2ccd8824b33c24
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702233"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96213309"
 ---
 # <a name="dumpmachine-function"></a>Dumpmachine-Funktion
 
 Namespace: [Microsoft. Quantum. Extensions. Diagnostics](xref:Microsoft.Quantum.Extensions.Diagnostics)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]

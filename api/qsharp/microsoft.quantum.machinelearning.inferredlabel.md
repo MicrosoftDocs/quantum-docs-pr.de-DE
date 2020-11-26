@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.InferredLabel
 title: Inferredlabel-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: InferredLabel
 qsharp.summary: Given a of classification probability and a bias, returns the label inferred from that probability.
-ms.openlocfilehash: 1d6edec94f731fe96da797f0c3d77e6eba565149
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b64bb1ec52d2456ee1b627b920890223d173533b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722514"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211779"
 ---
 # <a name="inferredlabel-function"></a>Inferredlabel-Funktion
 
 Namespace: [Microsoft. Quantum. machinelearning](xref:Microsoft.Quantum.MachineLearning)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. machinelearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Gibt bei einer Klassifizierungs Wahrscheinlichkeit und einem Bias die Bezeichnung zurück, die von dieser Wahrscheinlichkeit abgeleitet wurde.
