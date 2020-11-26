@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.I
 title: I-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
 qsharp.name: I
 qsharp.summary: Performs the identity operation (no-op) on a single qubit.
-ms.openlocfilehash: 555f714047a38f49ccd94a77dc14a46d6f4988ac
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5aae7a5e3b5b441829de8f10f4df539ffc374954
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92706546"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96198944"
 ---
 # <a name="i-operation"></a>I-Vorgang
 
 Namespace: [Microsoft. Quantum. intrinsisch](xref:Microsoft.Quantum.Intrinsic)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Führt den Identitäts Vorgang (No-OP) für ein einzelnes Qubit aus.
 
 ```qsharp
-operation I (target : Qubit) : Unit
+operation I (target : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -40,6 +40,6 @@ operation I (target : Qubit) : Unit
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Dabei handelt es sich um einen No-op-Vorgang. Sie wird aus Gründen der Vollständigkeit bereitgestellt. manchmal ist es hilfreich, die Identität in einem Algorithmus aufzurufen oder Sie als Parameter zu übergeben.

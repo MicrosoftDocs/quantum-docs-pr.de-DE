@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Bitwise.Xor
 title: XOR-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Bitwise
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.bitwise.xor".
-ms.openlocfilehash: 67b7cdbd14d38a8b7a47fba7f3de8e9e68f2635e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6f2083458a8dc65255df71fbad9193a77265c233
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702317"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96200134"
 ---
 # <a name="xor-function"></a>XOR-Funktion
 
 Namespace: [Microsoft. Quantum. Extensions. bitweise](xref:Microsoft.Quantum.Extensions.Bitwise)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.Rx
 title: RX-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Applies a rotation about the $x$-axis by a given angle.
 
   \begin{align} R_x(\theta) \mathrel{:=} e^{-i \theta \sigma_x / 2} = \begin{bmatrix} \cos \frac{\theta}{2} & -i\sin \frac{\theta}{2}  \\\\ -i\sin \frac{\theta}{2} & \cos \frac{\theta}{2} \end{bmatrix}. \end{align}
-ms.openlocfilehash: 6d11c8fa3c3fb2c07a88fdf2cba0ff2a7f51bf6b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 49638c00967ff2f47dad41acfed05868d65a24a0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723507"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96198587"
 ---
 # <a name="rx-operation"></a>RX-Vorgang
 
 Namespace: [Microsoft. Quantum. intrinsisch](xref:Microsoft.Quantum.Intrinsic)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Wendet eine Drehung zum $x $-Achse um einen angegebenen Winkel an.
@@ -30,7 +30,7 @@ Wendet eine Drehung zum $x $-Achse um einen angegebenen Winkel an.
 \end{align}
 
 ```qsharp
-operation Rx (theta : Double, qubit : Qubit) : Unit
+operation Rx (theta : Double, qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -51,7 +51,7 @@ Das Qubit, auf das das Gate angewendet werden soll.
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Äquivalent zu:
 

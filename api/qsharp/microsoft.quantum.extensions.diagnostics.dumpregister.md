@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Diagnostics.DumpRegister
 title: Dumpregiester-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Diagnostics
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.diagnostics.dumpregister".
-ms.openlocfilehash: 6deaf5b32b7f5dc458040f8307c952c9c4e6d3da
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ff5231477906e742ecd3f0b74e1776bc936674f3
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702228"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96199913"
 ---
 # <a name="dumpregister-function"></a>Dumpregiester-Funktion
 
 Namespace: [Microsoft. Quantum. Extensions. Diagnostics](xref:Microsoft.Quantum.Extensions.Diagnostics)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]

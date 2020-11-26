@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp
 title: Benutzerdefinierter Typ "Syndrome-measop"
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: SyndromeMeasOp
 qsharp.summary: Represents an operation that is used to measure the syndrome of an error-correcting code block.
-ms.openlocfilehash: 1314e16d26c7310bab21caa91cb398d4b6f09b29
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 65e47d82546b1df0beec2c00f435d3e7a28e6ae6
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702389"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96200253"
 ---
 # <a name="syndromemeasop-user-defined-type"></a>Benutzerdefinierter Typ "Syndrome-measop"
 
 Namespace: [Microsoft. Quantum. errorcorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Stellt einen Vorgang dar, der verwendet wird, um das-Syndrom eines Code Blocks mit Fehlerbehebung zu messen.
@@ -30,7 +30,7 @@ newtype SyndromeMeasOp = ((Microsoft.Quantum.ErrorCorrection.LogicalRegister => 
 
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Die Signatur `(LogicalRegister => Syndrome)` stellt einen Vorgang dar, der gemeinsam mit den Qubits in `LogicalRegister` und einigen zusätzlichen Qubits gefolgt von einem Maß an zusätzlichen Qubits, um einen Wert zu extrahieren, `Syndrome` der die `Result[]` dieser Messungen darstellt.
 

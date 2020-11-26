@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualInPlaceCompBasis
 title: Assertoperationsequalinplacecompbasis-Vorgang
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Extensions.Testing
@@ -16,18 +16,18 @@ qsharp.summary: >-
   > Please use @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis".
 
   > Note that the order of the arguments to this operation has changed.
-ms.openlocfilehash: 35816ecd14cdd87a905c5e3b6ce5ff32edadaca5
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: de630384058df51b5de4ee77226804cb9ae08187
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702180"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96199216"
 ---
 # <a name="assertoperationsequalinplacecompbasis-operation"></a>Assertoperationsequalinplacecompbasis-Vorgang
 
 Namespace: [Microsoft. Quantum. Extensions. testing](xref:Microsoft.Quantum.Extensions.Testing)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. qsharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]
@@ -50,7 +50,7 @@ operation AssertOperationsEqualInPlaceCompBasis (actual : (Qubit[] => Unit), exp
 
 
 
-### <a name="expected--qubit--unit-adj"></a>erwartet: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) ADJ
+### <a name="expected--qubit--unit--is-adj"></a>erwartet: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ
 
 
 
