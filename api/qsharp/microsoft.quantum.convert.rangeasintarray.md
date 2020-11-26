@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.RangeAsIntArray
 title: Rangeasintarray-Funktion
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: RangeAsIntArray
 qsharp.summary: Creates an array `arr` of integers enumerated by start..step..end.
-ms.openlocfilehash: bd3ac51d2925d7a4450b2bc5e6f7899fcab18f2c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f756e42aef7dc600e1fc6943a02513ac791f2320
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92702923"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96214006"
 ---
 # <a name="rangeasintarray-function"></a>Rangeasintarray-Funktion
 
 Namespace: [Microsoft. Quantum. Convert](xref:Microsoft.Quantum.Convert)
 
-Paketen [](https://nuget.org/packages/)
+Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Erstellt ein Array von ganzen Zahlen, die `arr` nach Start. aufgelistet sind. Schritt. Schließlich.
