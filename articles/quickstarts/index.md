@@ -10,12 +10,12 @@ uid: microsoft.quantum.install
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f0c3df1998f9b64ff6544867b83a7afe52b6f46d
-ms.sourcegitcommit: fd57a845d013ae4578715d04b1ed1edc1c8ff6b4
+ms.openlocfilehash: c6e128ea8b3845336fb692d2bceefda998b935d9
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870820"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228827"
 ---
 # <a name="setting-up-the-microsoft-quantum-development-kit-qdk"></a>Einrichten des Microsoft Quantum Development Kit (QDK)
 
@@ -45,7 +45,7 @@ Sie können Q#-Code in den meisten gängigen IDEs entwickeln und Q# in andere Sp
         <th width=10%>&nbsp;</th>
         <th>&nbsp;</th>
         <th align="center" width=18%><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS-Code<br>(2019 oder höher)</b></th>
-        <th align="center" width=18%><img src="~/media/vs_studio.png" alt="VS Studio" width="50"/><br><b>VS Studio<br>(2019 oder höher)</b></th>
+        <th align="center" width=18%><img src="~/media/vs_studio.png" alt="Visual Studio" width="50"/><br><b>Visual Studio<br>(2019 oder höher)</b></th>
         <th align="center" width=18%><img src="~/media/jupyter-wht.png" alt="jupyter install" width="65"/><br><b>Jupyter-Notebooks</b></th>
         <th align="center" width=18%><img src="~/media/blank.png" alt="blank spacer" width="65"/><br><b>Befehlszeile</b></th>
     </tr>
@@ -70,7 +70,7 @@ Sie können Q#-Code in den meisten gängigen IDEs entwickeln und Q# in andere Sp
         <td align="left"><b>Q# und Python</b></td>
         <td align="center"><a href="xref:microsoft.quantum.install.python">Installieren</a></td>
         <td align="center"><a href="xref:microsoft.quantum.install.python">Installieren</a></td>
-        <td align="center"><a href="xref:microsoft.quantum.install.jupyter">Installieren</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.python">Installieren</a></td>
         <td align="center"><a href="xref:microsoft.quantum.install.python">Installieren</a></td>
     </tr>
     <tr>
