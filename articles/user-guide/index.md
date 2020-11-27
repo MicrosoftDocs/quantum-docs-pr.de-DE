@@ -9,44 +9,26 @@ uid: microsoft.quantum.guide
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 81f31a531a1b50ead332bb578ccf392ddced9e8d
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: 979e468cc743bd9125eaba0b71f794977c914447
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771370"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231756"
 ---
 # <a name="the-no-locq-user-guide"></a>Q#-Benutzerhandbuch
 
 Willkommen beim Q#-Benutzerhandbuch. 
 
-In den verschiedenen Themen dieses Handbuchs finden Sie eine Beschreibung der grundlegenden Konzepte der Sprache Q# sowie alle Informationen, die Sie zum Schreiben von Quantenprogrammen benötigen.
+In den verschiedenen Themen dieses Handbuchs werden einige Grundlagen für die Entwicklung von Quantum-Programmen mithilfe von Q# vorgestellt.
+
+Im [Q#-Sprachführer ](xref:microsoft.quantum.qsharp.index) finden Sie eine vollständige Spezifikation und Dokumentation der Quantum-Programmiersprache Q#. 
 
 ## <a name="user-guide-contents"></a>Inhalt des Benutzerhandbuchs
 
-- [Q#-Grundlagen:](xref:microsoft.quantum.guide.basics) Ein erster Überblick über den Zweck und die Funktionen der Programmiersprache Q#. 
+- [Q#-Programme](xref:microsoft.quantum.guide.programs): Eine kurze Einführung in Quantum-Programme in Q# 
 
 - [Möglichkeiten zum Ausführen eines Q#-Programms:](xref:microsoft.quantum.guide.host-programs) Beschreibt, wie ein Q#-Programm ausgeführt wird, und bietet eine Übersicht über die verschiedenen Möglichkeiten, wie Sie das Programm aufrufen können: über die Befehlszeile, in Q#-Jupyter Notebook-Instanzen oder über ein klassisches Hostprogramm, das in Python oder in einer .NET-Sprache geschrieben ist.
-
-### <a name="no-locq-language"></a>Sprache Q#
-
-- [Typen in Q#:](xref:microsoft.quantum.guide.types) Hier finden Sie Informationen zum Typmodell von Q# sowie zur Syntax für die Angabe und Verwendung von Typen.
-
-- [Typausdrücke in Q#:](xref:microsoft.quantum.guide.expressions) Hier erfahren Sie, wie Sie Werte für die einzelnen Typen in Q# angeben, auf sie verweisen, sie kombinieren und mit ihnen arbeiten können. 
-
-### <a name="using-no-locq"></a>Verwenden von Q#
-
-- [Q#-Dateistruktur:](xref:microsoft.quantum.guide.filestructure) Hier werden Struktur und Syntax einer Q#-Datei (`*.qs`) beschrieben.
-
-- [Vorgänge und Funktionen in Q#:](xref:microsoft.quantum.guide.operationsfunctions) Hier werden die beiden aufrufbaren Typen der Sprache Q# beschrieben: *Vorgänge* (einschließlich Aktionen für Qubit-Register) und *Funktionen* (nur für klassische Informationen verwendbar). 
-    Hier erfahren Sie, wie Sie sie definieren und aufrufen – einschließlich Adjoint- und Controlled-Versionen von Quantenvorgängen.
-
-- [Variablen:](xref:microsoft.quantum.guide.variables) In diesem Thema werden die Rolle von Variablen in Q#-Programmen sowie deren effektive Nutzung beschrieben. 
-    Dort finden Sie beispielsweise Informationen zu Bindungsbereichen, zum Unterschied zwischen unveränderlichen und veränderlichen Variablen sowie zu deren Zuweisung bzw. erneuter Zuweisung.
-
-- [Arbeiten mit Qubits:](xref:microsoft.quantum.guide.qubits) Hier werden die Features von Q# beschrieben, die Sie für die Nutzung einzelner Qubits und Qubit-Systeme verwenden können, insbesondere für ihre Zuordnung, die Durchführung von Vorgängen und ihre Messung. 
-
-- [Ablaufsteuerung in Q#:](xref:microsoft.quantum.guide.controlflow) Hier wird die Programmierung von in Q# verfügbaren Ablaufsteuerungsmustern beschrieben. Dazu zählt neben zahlreichen Standardverfahren (etwa bedingte Verarbeitung, *for*-Schleifen, *while-Schleifen*) auch das quantenspezifische Muster der Wiederholung bis zum Erfolg (*repeat-until-success*).
 
 - [Testen und Debuggen:](xref:microsoft.quantum.guide.testingdebugging) Hier werden einige Verfahren beschrieben, mit denen sichergestellt werden kann, dass sich Ihr Code wie gewünscht verhält. 
     Aufgrund der allgemeinen Opazität von Quanteninformationen sind zum Debuggen eines Quantenprogramms ggf. spezielle Verfahren erforderlich. 

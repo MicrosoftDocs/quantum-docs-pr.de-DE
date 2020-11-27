@@ -1,0 +1,32 @@
+- name: Ausdrücke in Q#
+  href: index.md
+- name: Rangfolge und Assoziativität
+  href: precedenceandassociativity.md
+- name: Operatoren
+  items:
+    - name: copy-and-update-Ausdrücke
+      href: copyandupdateexpressions.md
+    - name: Bedingte Ausdrücke
+      href: conditionalexpressions.md
+    - name: Vergleichende Ausdrücke
+      href: comparativeexpressions.md
+    - name: Logische Ausdrücke
+      href: logicalexpressions.md
+    - name: Bitweise Ausdrücke
+      href: bitwiseexpressions.md
+    - name: Arithmetische Ausdrücke
+      href: arithmeticexpressions.md
+    - name: Verkettungen
+      href: concatenation.md
+- name: Modifizierer und Kombinatoren
+  items:
+    - name: Teilweise Anwendung
+      href: partialapplication.md
+    - name: Funktionselementanwendung
+      href: functorapplication.md
+    - name: Elementzugriffsausdrücke
+      href: itemaccessexpressions.md
+- name: Kontextbezogene Ausdrücke
+  href: contextualexpressions.md
+- name: Wertliterale und Standardwerte
+  href: valueliterals.md

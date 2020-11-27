@@ -1,0 +1,20 @@
+- name: Anweisungen in Q#
+  href: index.md
+- name: Bindungsbereiche
+  href: bindingscopes.md
+- name: CALL-Anweisungen
+  href: callstatements.md
+- name: Rückgaben und Beendigung
+  href: returnsandtermination.md
+- name: Variablendeklaration und Neuzuweisung
+  href: variabledeclarationsandreassignments.md
+- name: Iterationen
+  href: iterations.md
+- name: Bedingte Schleifen
+  href: conditionalloops.md
+- name: Bedingungsverzweigung
+  href: conditionalbranching.md
+- name: Konjugationen
+  href: conjugations.md
+- name: Quantum-Arbeitsspeicherverwaltung
+  href: quantummemorymanagement.md

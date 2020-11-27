@@ -10,12 +10,12 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a6823888dcbe8cf79f0045d2615fe8b889dcc7c3
-ms.sourcegitcommit: a13c7c86fd52a05cbf129b8dd713d6586ca1cc2c
+ms.openlocfilehash: eeb567dedc1b8123b32faf7ed3a42bb51f16a7d2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93376421"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228728"
 ---
 # <a name="develop-with-no-locq-applications-in-an-ide"></a>Entwickeln mit Q#-Anwendungen in einer IDE
 
@@ -61,9 +61,9 @@ Folgen Sie den Anweisungen auf der Registerkarte, die Ihrer Entwicklungsumgebung
 
 Erstellen Sie wie folgt ein neues Projekt:
 
-1. Klicken Sie auf **Ansicht** -> **Befehlspalette** , und wählen Sie **Q#: Neues Projekt erstellen** aus.
+1. Klicken Sie auf **Ansicht** -> **Befehlspalette**, und wählen Sie **Q#: Neues Projekt erstellen** aus.
 2. Klicken Sie auf **Standalone console application** (Eigenständige Konsolenanwendung).
-3. Navigieren Sie zum Speicherort für die Speicherung des Projekts, und klicken Sie auf **Projekt erstellen**.
+3. Navigieren Sie zum Speicherort, an dem das Dokument gespeichert werden soll. Geben Sie den Projektnamen ein, und klicken Sie auf **Projekt erstellen**.
 4. Klicken Sie nach der erfolgreichen Erstellung des Projekts unten rechts auf **Open new project...** (Neues Projekt öffnen...).
 
 Untersuchen Sie das Projekt. Es sollte eine Quelldatei mit dem Namen `Program.qs` angezeigt werden. Hierbei handelt es sich um ein Q#-Programm, mit dem ein einfacher Vorgang zum Ausgeben einer Meldung in der Konsole definiert wird.
