@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e1ec01d85a141b9c8a7a5ba5589663a0773520e7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 57f6602effd25fff353a8fee7f27acc529ce82af
+ms.sourcegitcommit: c3c892ef35eae6926d0c4339d9d26bfd8be77e9a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691874"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96318489"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Ressourcenschätzung für das Quantum Development Kit (QDK)
 
@@ -131,7 +131,7 @@ Die Ressourcenschätzung verfolgt die folgenden Metriken:
 |__R__    |Die Anzahl der Testlauf mit einzelnen Qubit-Drehungen, ausgenommen `T` , Clifford-und Pauli-Vorgänge.  |
 |__T__    |Die Anzahl der `T` Vorgänge und ihre konjutoren, einschließlich der `T` Vorgänge, T_x = h. T. h und T_y = HY. T. HY.  |
 |__Tiefe__|Die Tiefe der vom Vorgang durchgeführten Quantum-Verbindung Q# (siehe [unten](#depth-width-and-qubitcount)). Standardmäßig zählt die Tiefe Metrik nur `T` Gates. Weitere Informationen finden Sie unter [tiefen Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
-|__Width__|Breite der vom Vorgang durchgeführten quantumleitung Q# (siehe [unten](#depth-width-and-qubitcount)). Standardmäßig zählt die Tiefe Metrik nur `T` Gates. Weitere Informationen finden Sie unter [tiefen Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__Width__|Breite der vom Vorgang durchgeführten quantumleitung Q# (siehe [unten](#depth-width-and-qubitcount)). Standardmäßig zählt die Tiefe Metrik nur `T` Gates. Weitere Informationen finden Sie unter [Width Counter](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter).   |
 |__Qubitcount__    |Die untere Grenze für die maximale Anzahl von Qubits, die während der Ausführung des Q# Vorgangs zugeordnet wurden. Diese Metrik ist möglicherweise nicht mit der __Tiefe__ kompatibel (siehe unten).  |
 |__Borrowedwidth__    |Die maximale Anzahl der im Vorgang geliehenen Qubits Q# .  |
 
@@ -165,7 +165,7 @@ __Optimizetiefe = false:__ Qubitmanager wird empfohlen, Qubits wiederzuverwenden
 
 Sie können <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> aus dem- <xref:Microsoft.Quantum.Diagnostics> Namespace verwenden, um Informationen über die erwartete Wahrscheinlichkeit eines Messvorgangs bereitzustellen. Weitere Informationen finden Sie unter [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Quantum-Ablauf Verfolgungs Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 - [Toffoli-Simulator für Quantencomputer](xref:microsoft.quantum.machines.toffoli-simulator)
