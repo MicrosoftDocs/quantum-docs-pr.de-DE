@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 57f6602effd25fff353a8fee7f27acc529ce82af
-ms.sourcegitcommit: c3c892ef35eae6926d0c4339d9d26bfd8be77e9a
+ms.openlocfilehash: de425c2d91c6528b13c3bedd81acb4b4273ed711
+ms.sourcegitcommit: 7c687495a79d75ae9e029e5a41baec84d9e07bb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96318489"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96604642"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Ressourcenschätzung für das Quantum Development Kit (QDK)
 
@@ -28,9 +28,9 @@ Sie können den Ressourcen Schätz verwenden, um jeden Q# Vorgang auszuführen. 
 
 ### <a name="invoking-the-resources-estimator-from-c"></a>Aufrufen der Ressourcenschätzung von C # 
 
-Wie bei anderen Zielcomputern auch, erstellen Sie zuerst eine Instanz der Klasse `ResourceEstimator` und übergeben sie anschließend als ersten Parameter der `Run`-Methode einer Operation.
+Wie bei anderen Zielcomputern auch, erstellen Sie zuerst eine Instanz der Klasse `ResourcesEstimator` und übergeben sie anschließend als ersten Parameter der `Run`-Methode einer Operation.
 
-Beachten Sie hierbei Folgendes: Im Gegensatz zur Klasse `QuantumSimulator` wird mit der Klasse `ResourceEstimator` nicht die <xref:System.IDisposable>-Schnittstelle implementiert, sodass Sie sie nicht in eine `using`-Anweisung einschließen müssen.
+Beachten Sie hierbei Folgendes: Im Gegensatz zur Klasse `QuantumSimulator` wird mit der Klasse `ResourcesEstimator` nicht die <xref:System.IDisposable>-Schnittstelle implementiert, sodass Sie sie nicht in eine `using`-Anweisung einschließen müssen.
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -165,7 +165,7 @@ __Optimizetiefe = false:__ Qubitmanager wird empfohlen, Qubits wiederzuverwenden
 
 Sie können <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> aus dem- <xref:Microsoft.Quantum.Diagnostics> Namespace verwenden, um Informationen über die erwartete Wahrscheinlichkeit eines Messvorgangs bereitzustellen. Weitere Informationen finden Sie unter [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Quantum-Ablauf Verfolgungs Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 - [Toffoli-Simulator für Quantencomputer](xref:microsoft.quantum.machines.toffoli-simulator)
