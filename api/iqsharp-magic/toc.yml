@@ -1,3 +1,5 @@
+- href: index.md
+  name: IQ#-Magic-Befehle
 - href: azure.connect.md
   name: Magic-Befehl „%azure.connect“
 - href: azure.execute.md
