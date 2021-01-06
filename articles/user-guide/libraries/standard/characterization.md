@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 72af3f5517b272d6d8159b158103b5af91d266b5
+ms.sourcegitcommit: c48cdafccb3487bf93d67fa80cdc64768445b691
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692144"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940885"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum-Charakterisierung und-Statistiken #
 
@@ -22,7 +22,7 @@ Es ist wichtig, dass Sie die Auswirkungen von Vorgängen charakterisieren könne
 Dies ist eine Herausforderung, da jede Messung eines Quantum-Systems höchstens ein Bit von Informationen ergibt.
 Zum Erlernen eines Eigenwerts müssen die Ergebnisse von vielen Messungen zusammengefasst werden, damit der Benutzer die vielen Informationen, die für die Darstellung dieser Konzepte erforderlich sind, ggf. in die Lage versetzt.
 Quantum-Zustände sind besonders ärgerlich, da das [No-Klon-Theorem](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem) besagt, dass es keine Möglichkeit gibt, einen beliebigen Quantum-Zustand von einer einzelnen Kopie des Zustands zu erlernen, da Sie dadurch Kopien des Zustands erstellen können.
-Diese Verschleierung des Quantum-Zustands des Benutzers wird in der Tatsache widergespiegelt, dass den Q# Zustand für Quantum-Programme weder verfügbar macht noch definiert *is* .
+Diese Verschleierung des Quantum-Zustands des Benutzers wird in der Tatsache widergespiegelt, dass den Q# Zustand für Quantum-Programme weder verfügbar macht noch definiert  .
 Wir nähern uns daher der Quantum-Charakterisierung, indem wir Vorgänge und Zustände als Blackbox behandeln. Dieser Ansatz ist gemeinsam mit der experimentellen Praxis von Quantum-Charakterisierung, Verifizierung und Validierung (qcvv) gemeinsam.
 
 Die Charakterisierung unterscheidet sich von vielen der anderen Bibliotheken, die bereits erläutert wurden.
@@ -56,7 +56,7 @@ Wir betonen dies, indem wir die iterative Phasen Schätzung auf einer theoretisc
 
 Wenn ein Eingabe Status angegeben wird, der kein eigen Status ist, was heißt, dass bei $U (m) \ket{\phi \_ j} = e ^ {im\phi \_ j} $ der Prozess der Phasen Schätzung nicht deterministisch zu einem einzelnen Energiezustand führt.  Der eigenständige Zustand, mit dem er letztendlich konvergiert, ist der Eigen Zustand, der höchstwahrscheinlich den beobachteten Wert erzeugt `Result` .
 
-Der einzige Schritt von PE führt die folgende nicht einheitliche Transformation auf dem Status "\begin{align} \ sum_j \sqrt{\pr (\phi \_ j)} \ket{\phi \_ j} \mapsto \sum \_ j\frac {\ sqrt {\ PR (\phi)" aus. \_ j)} \sqrt{\pr (\text{result} | \phi \_ j)} \ket{\phi \_ j}} {\sqrt{\pr (\phi \_ j) \sum \_ j \pr (\text{result} | \phi \_ j)}}.
+Der einzige Schritt von PE führt die folgende nicht einheitliche Transformation auf dem Status "\begin{align} \ sum_j \sqrt{\pr (\phi \_ j)} \ket{\phi \_ j} \mapsto \sum \_ j\frac {\ sqrt {\ PR (\phi)" aus. \_ j)} \sqrt{\pr (\text{result} | \phi \_ j)} \ket{\phi \_ j}} {\sqrt{\pr (\phi \_ j) \sum \_ k \pr (\text{result} | \phi \_ k)}}.
 \end{align} wenn dieser Prozess über mehrere `Result` Werte durchlaufen wird, werden eigen Zustände, die keine maximalen Werte von $ \ prod_k \pr (\text{Result} \_ k | \phi \_ j) $ aufweisen, exponentiell unterdrückt.
 Folglich wird der Rückschluss Prozess in der Regel mit einem einzelnen eigen Wert zusammengeführt, wenn die Experimente ordnungsgemäß ausgewählt werden.
 
