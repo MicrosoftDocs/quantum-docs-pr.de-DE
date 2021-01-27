@@ -4,17 +4,17 @@ description: Erfahren Sie mehr über den Microsoft QDK-tiefen Zähler, der den Q
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 89d8a2c9f2ecd5c5332215cd4307bcf4a6422036
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9c3a772861582e5c49fe5ad27519c25a59d617b1
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692093"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98859045"
 ---
 # <a name="quantum-trace-simulator-depth-counter"></a>Quantum-Ablauf Verfolgungs Simulator: tiefen Counter
 
@@ -23,7 +23,7 @@ Sie können es zum Erfassen von Anzahlen verwenden, die die untere Grenze der Ti
 
 ## <a name="depth-values"></a>Tiefen Werte
 
-Standardmäßig haben alle Vorgänge eine Tiefe von **0** (null), mit Ausnahme des `T` Vorgangs mit einer Tiefe von **1** . Dies bedeutet, dass standardmäßig nur die `T` Tiefe der Vorgänge berechnet wird (was häufig wünschenswert ist). Der tiefen Counter aggregiert und sammelt Statistiken über alle Ränder des [Aufruf Diagramms](https://en.wikipedia.org/wiki/Call_graph)des Vorgangs.
+Standardmäßig haben alle Vorgänge eine Tiefe von **0** (null), mit Ausnahme des `T` Vorgangs mit einer Tiefe von **1**. Dies bedeutet, dass standardmäßig nur die `T` Tiefe der Vorgänge berechnet wird (was häufig wünschenswert ist). Der tiefen Counter aggregiert und sammelt Statistiken über alle Ränder des [Aufruf Diagramms](https://en.wikipedia.org/wiki/Call_graph)des Vorgangs.
 
 Alle <xref:Microsoft.Quantum.Intrinsic> Vorgänge werden in Form von Single-Qubit-Drehungen, <xref:Microsoft.Quantum.Intrinsic.T> Vorgängen, einzelqubit-Clifford-Vorgängen, <xref:Microsoft.Quantum.Intrinsic.CNOT> Vorgängen und Messungen von Multi-Qubit-,-Observables ausgedrückt. Benutzer können die Tiefe für jeden der primitiven Vorgänge über das- `gateTimes` Feld von festlegen <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .
 
@@ -73,7 +73,7 @@ Zum Schluss können Sie mithilfe der folgenden Informationen alle vom tiefen Lei
 string csvSummary = sim.ToCSV()[MetricsCountersNames.depthCounter];
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - Übersicht über den Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .
 - Die <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API-Referenz.

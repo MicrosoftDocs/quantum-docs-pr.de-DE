@@ -1,6 +1,6 @@
 ---
 Title: Pauli Messungen Description: erfahren Sie, wie Sie mit Einzel-und multiqubit-Pauli-Mess Vorgängen arbeiten.
-Autor: bradben UID: Microsoft. Quantum. Concepts. Pauli ms. Author: v-benbra ms. Date: 12/11/2017 ms. Topic: article NO-LOC:
+Autor: bradben UID: Microsoft. Quantum. Concepts. Pauli ms. Author: v-benbra ms. Date: 12/11/2017 ms. Topic: konzeptionelle NO-LOC:
 - "Q#"
 - "$$v"
 - "$$"
@@ -139,7 +139,7 @@ $$
 
 Dies entspricht auch dem Anwenden von $ HS ^ \dagger $ auf den Quanten Zustands Vektor und dem anschließenden Messen von $ Z $ , sodass der folgende Vorgang folgendem entspricht `Measure([PauliY], [q])` :
 
-```Q#
+```qsharp
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {

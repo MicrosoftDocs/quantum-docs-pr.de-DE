@@ -4,17 +4,17 @@ description: Erfahren Sie mehr über den zweiten quantifisierungsansatz zum Mode
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.secondquantization
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6becd348f7b3957cb60b16bbd5a28228527e1d4c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: a08e20d5b53aa97cb12ead0dc3a36069d0ec5df8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835807"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858836"
 ---
 # <a name="second-quantization"></a>Zweite Quantifizierung
 
@@ -84,7 +84,7 @@ Die Berufs Zustände für die $2N $ Spin-Orbitals können auf ähnliche Weise in
 Beispiel: Wenn $N = $2, dann lautet der Status $ $ \ket {0} \ket {1} \ket {1} \ket {0} , $ $
 
 entspricht den Dreh Orbitals $1 $ und $2 $, die mit dem Restwert "Empty" belegt werden.
-Ebenso lautet der Status "$ $ \ket {0} \equiv \ket {0} _ {0} \cdots \ket {0} _{N-1}", "$ $".
+Ebenso lautet der Status "$ $ \ket {0} \equiv \ket {0} _{0} \cdots \ket {0}_{N-1}", "$ $".
 
 hat keine Elektronen und wird als "Vakuumzustand" bezeichnet.
 
@@ -211,12 +211,12 @@ Alle werden `FermionTerm` automatisch wie folgt in kanonische Reihenfolge eingef
     var signEqual = sign0 == sign1;
 ```
 
-## <a name="second-quantized-fermionic-hamiltonian"></a>Zweite quantifizierte fermionische hamiltonan
+## <a name="second-quantized-fermionic-hamiltonian"></a>Second-Quantized fermionic hamiltonan
 
 Vielleicht ist es nicht verwunderlich, dass die hamiltonan in [Quantum-Modellen für elektronische Systeme](xref:microsoft.quantum.chemistry.concepts.quantummodels) in Form von Erstellungs-und Vernichtungs Operatoren geschrieben werden kann.
 Insbesondere, wenn "$ \psi \_ j $" die Dreh-und Ausgangs Typen sind, die die Grundlage bilden,
 
-\begin{Equation} \hat{h} = \sum \_ {PQ} H \_ {PQ} a ^ \dagger \_ p a \_ q + \frac {1} {2} \sum \_ {pqrs} h \_ {pqrs} a ^ \dagger \_ p a ^ \dagger \_ q a \_ RA \_ s + H \_ {\textrm NUC}, \label{EQ: totalham} \end{Equation}, wobei $h \_ {\textrm NUC} $ die atomare Strom Energie (eine Konstante unter der "Born-Oppenheimer"-Näherung) und
+\begin{Equation} \hat{h} = \sum \_ {PQ} H \_ {PQ} a ^ \dagger \_ p a \_ q + \frac {1} {2} \sum \_ {pqrs} h \_ {pqrs} a ^ \dagger \_ p a ^ \dagger \_ q a \_ RA \_ s + H \_ {\textrm NUC}, \label{EQ: totalham} \end{Equation}, wobei $h \_ {\textrm NUC} $ die atomare Energie (eine Konstante unter der Born-Oppenheimer Näherung) und
 
 \begin{align} h \_ {PQ} &= \int \_ {-\infty} ^ \infty \psi ^ \* \_ p (x \_ 1) \left (-\bruchteil {\nabla ^ 2} {2} + V (x \_ 1) \right) \psi \_ q (x \_ 1) \mathrm{d} ^ 3X \_ 1, \end{align}
 

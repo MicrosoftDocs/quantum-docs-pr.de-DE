@@ -1,6 +1,6 @@
 ---
 Title: Quantum Oracles Description: Hier erfahren Sie, wie Sie mit Quantum-Oracles, Black Box-Vorgängen, die als Eingabe für einen anderen Algorithmus verwendet werden, arbeiten und definieren.
-Autor: cgranade UID: Microsoft. Quantum. Concepts. Oracles ms. Author: chgranad ms. Date: 07/11/2018 ms. Topic: article NO-LOC:
+Autor: cgranade UID: Microsoft. Quantum. Concepts. Oracles ms. Author: chgranad ms. Date: 07/11/2018 ms. Topic: konzeptionelle NO-LOC:
 - "Q#"
 - "$$v"
 - "$$"
@@ -134,7 +134,7 @@ wobei $ \alpha : \\ { 0, 1 \\ } ^ n \times \\ { 0, 1 \\ } ^ m \to \mathbb { C } 
 
 $$
 \begin{align}
-O \ket { \psi } & = o \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & , = 1 ^ n, y 0, 1 ^ m (x, y) O \sum _ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
+O \ket { \psi } & = o \sum _{ x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & , = 1 ^ n, y 0, 1 ^ m (x, y) O \sum_ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
              &= \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y \oplus f (x) } .
 \end{align}
 $$
@@ -157,6 +157,9 @@ Seitdem $$
         &=(-1) ^ { f (0) } Z ^ { f (0)-f (1) } \ket { + } .
 \end{align}
 $$
+
+> [!NOTE]
+>Beachten Sie, dass $ z ^ { -1 } = Z ^ { \dagger } = Z $ und somit $ z ^ { f (0)-f (1) } = Z ^ { f (1)-f (0) ist } .$
 
 Im Allgemeinen können beide Sichten von Oracles erweitert werden, um klassische Funktionen darzustellen, die anstelle eines einzelnen Bits reelle Zahlen zurückgeben.
 

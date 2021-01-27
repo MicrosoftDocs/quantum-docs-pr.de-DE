@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecompositionWithVariableOrder
 title: Applypermutationusingdecompositionwithvariableorder-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyPermutationUsingDecompositionWithVariableOrder
 qsharp.summary: Permutes the amplitudes in a quantum state given a permutation using decomposition-based synthesis.
-ms.openlocfilehash: a5ca9b366f7ff477070e21fea047ff04b425439c
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: f33d2980ff1775b1ae8d2e2e7a4fa1e5cbe7d5ba
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96203432"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858880"
 ---
 # <a name="applypermutationusingdecompositionwithvariableorder-operation"></a>Applypermutationusingdecompositionwithvariableorder-Vorgang
 
@@ -28,7 +28,7 @@ operation ApplyPermutationUsingDecompositionWithVariableOrder (perm : Int[], var
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Bei diesem Vorgang handelt es sich um eine allgemeinere Version von @"microsoft.quantum.synthesis.applypermutationusingdecomposition" , in der die Reihenfolge der Variablen angegeben werden kann. Eine andere Variablen Reihenfolge ändert die Zerlegungs Sequenz und die Wahrheitstabellen, die für die kontrollierten Gates verwendet werden @"microsoft.quantum.intrinsic.x" .  Wenn Sie die Reihenfolge der Variablen ändern, wird daher die Gesamtzahl der Gates geändert, die zur Umsetzung der Permutation verwendet werden.
 
@@ -53,6 +53,16 @@ Eine Liste von $n $ Qubits, auf die die permutations angewendet wird.
 ## <a name="output--unit"></a>Ausgabe: [Einheit](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## <a name="example"></a>Beispiel
+
+So können Sie einen `SWAP` Vorgang synthetisieren:
+
+```qsharp
+using (qubits = Qubit[2]) {
+  ApplyPermutationUsingDecompositionWithVariableOrder([0, 2, 1, 3], [1, 0], LittleEndian(qubits));
+}
+```
 
 ## <a name="see-also"></a>Weitere Informationen
 

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation
 title: Applypermutationusingtransformation-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyPermutationUsingTransformation
 qsharp.summary: Permutes the amplitudes in a quantum state given a permutation using transformation-based synthesis.
-ms.openlocfilehash: a05b433eae2612bbf5c87522c4ef251976184aa8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 79913bec44514d477b7ee0668b43396b297b9ab8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192059"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858997"
 ---
 # <a name="applypermutationusingtransformation-operation"></a>Applypermutationusingtransformation-Vorgang
 
@@ -28,7 +28,7 @@ operation ApplyPermutationUsingTransformation (perm : Int[], qubits : Microsoft.
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Diese Prozedur implementiert den unidirektionalen Transformations basierten Synthese Ansatz.  Input ist eine permutations $ \pi $ over $2 ^ n $ Elements $ \{ 0, \dots, 2 ^ n-1 \} $, was eine $n $-Variable umkehrbare boolesche Funktion darstellt.
 Der Algorithmus führt iterativ die folgenden Schritte aus:
@@ -53,7 +53,17 @@ Eine Liste von $n $ Qubits, auf die die permutations angewendet wird.
 
 
 
-## <a name="references"></a>Referenzen
+## <a name="example"></a>Beispiel
+
+So können Sie einen `SWAP` Vorgang synthetisieren:
+
+```qsharp
+using (qubits = Qubit[2]) {
+  ApplyPermutationUsingTransformation([0, 2, 1, 3], LittleEndian(qubits));
+}
+```
+
+## <a name="references"></a>References
 
 - [*D. Michael Miller*, *Dmitri Maslov*, *Gerhard W. Dueck*, proc. DAC 2003, IEEE, pp. 318-323, 2003](https://doi.org/10.1145/775832.775915)
 - [*Mathias soeken*, *Gerhard W. Dueck*, *D. Michael Miller*, proc. RC 2016, Springer, pp. 307-321, 2016](https://doi.org/10.1007/978-3-319-40578-0_22)

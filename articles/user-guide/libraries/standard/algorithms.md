@@ -4,17 +4,17 @@ description: Erfahren Sie mehr über grundlegende Quantum Computing-Algorithmen,
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.algorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 982103876b00718aa3b42c6bc3a07d242cde7594
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d4d8c35b3196ffb9915c6da06116b3c7dfd0562a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692212"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98859010"
 ---
 # <a name="quantum-algorithms"></a>Quantum-Algorithmen #
 
@@ -49,7 +49,7 @@ Für den Hintergrund könnten Sie von der [Standard mäßigen Amplitude-Verstär
 Die Fourier-Transformation ist ein grundlegendes Tool der klassischen Analyse und ist ebenso wichtig für Quantum-Berechnungen.
 Darüber hinaus überschreitet die Effizienz von *Quantum Fourier Transform* (QFT) weit mehr, was auf einem klassischen Computer möglich ist, sodass es zu einem der ersten Tools der Wahl ist, wenn ein Quantum-Algorithmus entworfen wird.
 
-Als ungefähre Generalisierung der QFT stellen wir den Vorgang bereit, der <xref:Microsoft.Quantum.Canon.ApproximateQft> Weitere Optimierungen ermöglicht, indem Rotationen bereinigt werden, die für die gewünschte algorithmische Genauigkeit nicht unbedingt notwendig sind.
+Als ungefähre Generalisierung der QFT stellen wir den Vorgang bereit, der <xref:Microsoft.Quantum.Canon.ApproximateQFT> Weitere Optimierungen ermöglicht, indem Rotationen bereinigt werden, die für die gewünschte algorithmische Genauigkeit nicht unbedingt notwendig sind.
 Der ungefähre QFT erfordert die dyadic-$Z $-Rotation-Vorgang <xref:Microsoft.Quantum.Intrinsic.RFrac> und den- <xref:Microsoft.Quantum.Intrinsic.H> Vorgang.
 Es wird davon ausgegangen, dass die Eingabe und die Ausgabe in Big Endian-Codierung codiert werden---d. h., das Qubit mit Index `0` wird im äußersten äußersten (höchsten) Bit der binären ganzzahligen Darstellung codiert.
 Dies richtet sich nach der [Ket-Notation](xref:microsoft.quantum.concepts.dirac), da das Registrieren von drei Qubits im Status $ \ket {100} $ $q _0 $ im Status $ \ket $ entspricht, {1} während sich die $q _1 $ und $q _2 $ im Status $ \ket {0} $ befinden.
