@@ -4,7 +4,7 @@ functions:
   uid: Microsoft.Quantum.Convert.BigIntAsBoolArray
 - summary: Konvertiert ein angegebenes Array von booleschen Werten in eine entsprechende große Ganzzahl. Das 0-Element des Arrays ist das am wenigsten bedeutende Bit der großen Ganzzahl.
   uid: Microsoft.Quantum.Convert.BoolArrayAsBigInt
-- summary: Erzeugt eine positive ganze Zahl aus einer Bits-Zeichenfolge in Little-Endian-Format.
+- summary: Erzeugt eine nicht negative ganze Zahl aus einer Bits-Zeichenfolge in Little-Endian-Format.
   uid: Microsoft.Quantum.Convert.BoolArrayAsInt
 - summary: Gibt bei Angabe einer Bitzeichenfolge einen multiqubit-Pauli-Operator zurück, der als Array von Single-Qubit-Pauli-Operatoren dargestellt wird.
   uid: Microsoft.Quantum.Convert.BoolArrayAsPauli
@@ -22,7 +22,7 @@ functions:
   uid: Microsoft.Quantum.Convert.FunctionAsOperation
 - summary: Konvertiert eine angegebene Ganzzahl in eine entsprechende große ganze Zahl.
   uid: Microsoft.Quantum.Convert.IntAsBigInt
-- summary: Erzeugt eine binäre Darstellung einer positiven ganzen Zahl unter Verwendung der Little-dendian-Darstellung für das zurückgegebene Array.
+- summary: Erzeugt eine binäre Darstellung einer nicht negativen ganzen Zahl unter Verwendung der Little-dendian-Darstellung für das zurückgegebene Array.
   uid: Microsoft.Quantum.Convert.IntAsBoolArray
 - summary: Konvertiert eine angegebene Ganzzahl in eine entsprechende Gleit Komma Zahl mit doppelter Genauigkeit.
   uid: Microsoft.Quantum.Convert.IntAsDouble
@@ -38,7 +38,7 @@ functions:
   uid: Microsoft.Quantum.Convert.RangeAsIntArray
 - summary: Konvertiert einen `Result[]` Typ in einen `Bool[]` -Typ, wobei `One` zugeordnet ist `true` und `Zero` zugeordnet ist `false` .
   uid: Microsoft.Quantum.Convert.ResultArrayAsBoolArray
-- summary: Erzeugt eine positive ganze Zahl aus einer Zeichenfolge, die im Little-Endian-Format vorliegt.
+- summary: Erzeugt eine nicht negative ganze Zahl aus einer Zeichenfolge, die im Little-Endian-Format vorliegt.
   uid: Microsoft.Quantum.Convert.ResultArrayAsInt
 - summary: Konvertiert einen `Result` Typ in einen `Bool` -Typ, wobei `One` zugeordnet ist `true` und `Zero` zugeordnet ist `false` .
   uid: Microsoft.Quantum.Convert.ResultAsBool
@@ -50,9 +50,9 @@ operations:
 summary: 'Dieser Namespace enthält Funktionen für die Konvertierung zwischen verschiedenen Q #-Datentypen.'
 uid: Microsoft.Quantum.Convert
 metadata:
-  ms.openlocfilehash: d22f0735b800d2e9a34f8c7ce58353850a4cdded
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: 18cef8a797a4657f1b846a5b2d2ba2a673378f9a
+  ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92703116"
+  ms.lasthandoff: 01/26/2021
+  ms.locfileid: "98850069"
