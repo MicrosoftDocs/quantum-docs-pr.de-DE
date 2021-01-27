@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApproximatelyMultiplexPauli
 title: Ungefäatelymultiplexpauli-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApproximatelyMultiplexPauli
 qsharp.summary: Applies a Pauli rotation conditioned on an array of qubits, truncating small rotation angles according to a given tolerance.
-ms.openlocfilehash: 8024df4608f14408bfcd46139e72454ff44b116f
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 1fc8a8857b6b37d4c3e812a3c4cb2941b9238800
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96207750"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844568"
 ---
 # <a name="approximatelymultiplexpauli-operation"></a>Ungefäatelymultiplexpauli-Vorgang
 
@@ -28,7 +28,7 @@ operation ApproximatelyMultiplexPauli (tolerance : Double, coefficients : Double
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Dadurch wird ein mehrfach gesteuerter einheitlicher Vorgang angewendet, bei dem die Drehung um den Winkel $ \ theta_j $ um einen Single-Qubit-Pauli-Operator $P $ durchführt, wenn er vom $n $-Qubit-Zahlen Status $ \ket{j} $ gesteuert wird.
 Insbesondere wird die Aktion dieses Vorgangs durch die einheitliche

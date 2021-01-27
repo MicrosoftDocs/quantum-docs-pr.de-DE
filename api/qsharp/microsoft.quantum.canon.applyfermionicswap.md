@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyFermionicSWAP
 title: Applyfermionicswap-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyFermionicSWAP
 qsharp.summary: Applies the Fermionic SWAP.
-ms.openlocfilehash: 0c470705843a6360df0a72374570d86571397e41
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 334f407a32dabc8f4e0a1a29c8f06a1b9f40dc59
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96218800"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845055"
 ---
 # <a name="applyfermionicswap-operation"></a>Applyfermionicswap-Vorgang
 
@@ -28,7 +28,7 @@ operation ApplyFermionicSWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit is Adj + Ct
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Dies vertauscht die Qubits im Wesentlichen beim Anwenden einer globalen Phase von-1, wenn beide Qubits 1 s sind. Behält die antisymmetrisierung von orbitalen bei.
 Weitere Informationen finden Sie unter .
@@ -53,7 +53,7 @@ Das zweite Qubit, das ausgetauscht werden soll.
 
 
 
-## <a name="references"></a>Referenzen
+## <a name="references"></a>References
 
 - [*Ryan babbush, Nathan Wiebe, Jarrod McClean, James McClain, Hartmut netven, Garnet Kin-Lic Chan*, arXiv: 1706.00023](https://arxiv.org/pdf/1706.00023.pdf)
 

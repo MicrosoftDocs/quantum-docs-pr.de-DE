@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyMultiControlledC
 title: Applymulticontrolledc-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyMultiControlledC
 qsharp.summary: Applies a multiply controlled version of a singly controlled operation. The modifier `C` indicates that the single-qubit operation is controllable.
-ms.openlocfilehash: 2d5703eed3a3b6e611ae7c993febf018fcb148b3
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: bf6b78cd18a827a9a4fd9d61dfd4d240de3503e9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96218409"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844866"
 ---
 # <a name="applymulticontrolledc-operation"></a>Applymulticontrolledc-Vorgang
 
@@ -65,7 +65,7 @@ Bei diesem Vorgang werden nur saubere Ancilla-Qubits verwendet.
 
 Eine Erläuterung und ein Leitungs Diagramm finden Sie in Abbildung 4,10, Abschnitt 4,3 in Nielsen & Chuang.
 
-## <a name="references"></a>Referenzen
+## <a name="references"></a>References
 
 - [*Michael A. Nielsen, ISAL. Chuang*, Quantum-Berechnung und Quantum-Informationen](http://doi.org/10.1017/CBO9780511976667)
 

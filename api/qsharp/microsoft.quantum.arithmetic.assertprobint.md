@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.AssertProbInt
 title: Assertprobint-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: AssertProbInt
 qsharp.summary: Asserts that the probability of a specific state of a quantum register has the expected value.
-ms.openlocfilehash: b95c2c6294dd5a95b7215c22bd6c50a41635f432
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 85ff04bbad9dc2ed0f803db65508fdfbb0d22c56
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96223696"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843404"
 ---
 # <a name="assertprobint-operation"></a>Assertprobint-Vorgang
 
@@ -28,7 +28,7 @@ operation AssertProbInt (stateIndex : Int, expected : Double, qubits : Microsoft
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Bestätigt bei einem $n $-Qubit-Quantum-Status $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \ alpha_j \ket{j} $, dass die Wahrscheinlichkeit $ | \ alpha_j | ^ 2 $ des durch $j $ indizierten Zustands $ \ket{j} $ den erwarteten Wert hat.
 
@@ -57,3 +57,14 @@ Absolute Toleranz für den Unterschied zwischen tatsächlichem und erwartetem Ve
 
 ## <a name="output--unit"></a>Ausgabe: [Einheit](xref:microsoft.quantum.lang-ref.unit)
 
+
+
+## <a name="example"></a>Beispiel
+
+Angenommen, das `qubits` Register codiert einen 3-Qubit-Quantum-Status $ \ket{\psi} = \ sqrt {1/8} \ Ket {0} + \ sqrt {7/8} \ Ket {6} $ im Little-Endian-Format.
+Dies bedeutet, dass die Zahl "$ \ket {0} \equiv\ket {0} \ket {0} \ket {0} $" und "$ \ket {6} \equiv\ket {0} \ket {1} \ket {1} $" lautet. Die folgenden Bestätigungen werden erfolgreich ausgeführt:
+
+```qsharp
+AssertProbInt(0, 0.125, qubits, 10e-10);
+AssertProbInt(6, 0.875, qubits, 10e-10);
+```

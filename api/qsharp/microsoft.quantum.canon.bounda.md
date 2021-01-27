@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.BoundA
 title: Bounda-Funktion
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: BoundA
 qsharp.summary: Given an array of operations acting on a single input, produces a new operation that performs each given operation in sequence. The modifier `A` indicates that all operations in the array are adjointable.
-ms.openlocfilehash: 3132bf198e98dd1a2b433f36b000060e7e721865
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 3d0a5ba5d3d9c76289ed29e59a9c226358b83797
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96216947"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844540"
 ---
 # <a name="bounda-function"></a>Bounda-Funktion
 
@@ -46,6 +46,21 @@ Ein neuer Vorgang, der jeden gegebenen Vorgang nacheinander für seine Eingabe a
 ### <a name="t"></a>GIF
 
 Das Ziel, auf dem die einzelnen Vorgänge im Array agieren.
+
+## <a name="example"></a>Beispiel
+
+Die folgenden sind gleichwertig:
+
+```qsharp
+let bound = BoundA([U, V]);
+bound(x);
+```
+
+and
+
+```qsharp
+U(x); V(x);
+```
 
 ## <a name="see-also"></a>Weitere Informationen
 

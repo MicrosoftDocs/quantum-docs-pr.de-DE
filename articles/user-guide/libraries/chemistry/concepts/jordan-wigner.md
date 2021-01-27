@@ -1,30 +1,30 @@
 ---
-title: Darstellung von Jordanien-Wigner
-description: Erfahren Sie mehr über die Darstellung von Jordanien-Wigner, bei der hamiltona-Operatoren einheitlichen Matrizen zugeordnet werden, die auf einem Quantum-Computer leichter implementiert werden können.
+title: Jordan-Wigner Darstellung
+description: Erfahren Sie mehr über die Jordan-Wigner Darstellung, die hamiltonan-Operatoren einheitlichen Matrizen zuordnet, die auf einem Quantum-Computer leichter implementiert werden können.
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 29abb4d2ef11239a58af45bc4eee3bd60d20a6c7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 738c8262ea66b8a02ea7541e402953237dc2ea48
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833847"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844138"
 ---
-# <a name="jordan-wigner-representation"></a>Darstellung von Jordanien-Wigner
+# <a name="jordan-wigner-representation"></a>Jordan-Wigner Darstellung
 
 Während zweite quantifizierte hamiltonane in Bezug auf $a ^ \dagger $ (Creation) und $a $ (Vernichtung) praktisch dargestellt werden, sind diese Vorgänge keine grundlegenden Vorgänge in Quantum-Computern.
 Daher müssen wir die Operatoren den einheitlichen Matrizen zuordnen, die auf einem Quantum-Computer implementiert werden können, wenn Sie auf einem Quantum-Computer implementiert werden sollen.
 Die Darstellung von Jordan – Wigner bietet eine solche Zuordnung.
 Andere, wie z. b. die "Bravyi – Kitaev"-Darstellung, sind jedoch auch vorhanden und haben ihre eigenen relativen vor-und Nachteile.
-Der Hauptvorteil der Darstellung von Jordanien-Wigner ist die Einfachheit.
+Der Hauptvorteil der Jordan-Wigner Darstellung ist die Einfachheit.
 
-Die Darstellung von Jordanien-Wigner ist direkt zu ableiten.
+Die Jordan-Wigner Darstellung ist direkt weiterleiten.
 Beachten Sie, dass der Status $ \ket {0} _J $ impliziert, dass Spin-Orbital $j $ leer ist, und $ \ket {1} _J $ impliziert, dass es belegt ist.
 Dies bedeutet, dass Qubits die Besetzung einer bestimmten Drehfeld-Orbital-Methode auf natürliche Weise speichern kann.
 Diese $a ^ \ dagger_j \ket {0} _J = \ket {1} _J $ und $a ^ \ dagger_j \ket {1} _J = $0.
@@ -51,14 +51,14 @@ Die vollständige Erstellung lautet wie folgt:
 \begin{align} a ^ \ dagger_1 &= \left (\bruchteil {x-iy} {2} \right) \otimes 1 \otimes 1 \otimes 1 \otimes \cdots \otimes 1, \\ \\ a ^ \ dagger_2 &= z\otimes\left (\bruchteil {x-iy} {2} \right) \otimes 1 \ otimes 1 \otimes \cdots \otimes 1, \\ \\ a ^ \ dagger_3 &= z\otimes z\otimes \left (\bruchteil {x-iy} {2} \right) \otimes 1 \otimes \cdots \otimes 1, \\ \\ & \vdots \\ \\ a ^ \ dagger_N &= z\otimes z\otimes z\otimes Z \otimes \cdots \otimes z\otimes \left (\bruchteil {x-iy} {2} \right). \label{EQ: JW} \end{align}
 
 Es ist auch praktisch, die Zahlen Operatoren, $n _J $, in Bezug auf die Pauli-Operatoren auszudrücken.
-Glücklicherweise brechen die Zeichen folgen von $Z $-Operatoren (als "Jordan-Wigner Strings" bezeichnet) ab, indem Sie diese Ersetzung durchführt.
+Glücklicherweise werden die Zeichen folgen $Z $-Operatoren (als Jordan-Wigner Zeichenfolgen bezeichnet) nach einer solchen Ersetzung abgebrochen.
 Nach dem Ausführen dieser Aktion (und der $X _jY_j = iZ_j $) ist "\begin{Equation} n_j = a ^ \ dagger_j a_j = \bruchteil {(1-Z_j)}" vorhanden {2} .
 \end{equation}
 
 
-## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Erstellen von hamiltonane in der Darstellung von Jordanien-Wigner
+## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Erstellen von hamiltonane in Jordan-Wigner Darstellung
 
-Nachdem wir die Jordanien-Wigner-Darstellung aufgerufen haben, ist die Übersetzung der hamiltonan in eine Summe von Pauli-Operatoren gerade vorwärts.
+Nachdem wir die Jordan-Wigner Darstellung des Übersetzens der hamiltonan in eine Summe von Pauli-Operatoren aufgerufen haben, ist es einfach weiter.
 Sie müssen lediglich jeden der $a ^ \dagger $ und $a $-Operatoren in der fermionic hamiltonan durch die oben angegebenen Zeichen folgen der Pauli-Operatoren ersetzen.
 Wenn eine solche Ersetzung durchführt, gibt es nur fünf Klassen von Begriffen innerhalb der hamiltonan.
 Diese fünf Klassen entsprechen den verschiedenen Methoden, mit denen wir die $p, q $ und $p, q, r, s $ im Textkörper und die zwei Text Begriffe in der hamiltonan auswählen können.

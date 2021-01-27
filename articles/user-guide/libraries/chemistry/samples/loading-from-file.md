@@ -4,17 +4,17 @@ description: Erfahren Sie, wie Sie mithilfe des broombridge-Schemas automatisch 
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
-ms.topic: article-type-from-white-list
+ms.topic: sample
 uid: microsoft.quantum.chemistry.examples.loadhamiltonian
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 57e25bf55009797b01695cef0f3d29b94662ccc0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 4bd663ade7649be05058f07bee1acf541ec3e487
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869238"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844115"
 ---
 # <a name="loading-a-hamiltonian-from-file"></a>Laden eines Hamiltonoperators aus einer Datei
 Zuvor haben wir hamiltonane erstellt, indem wir Ihr einzelne Begriffe hinzugefügt haben. Obwohl dies für kleine Beispiele in Ordnung ist, erfordert die Skalierung von Quantum-Chemie eine hamiltonation mit Millionen oder Milliarden von Begriffen. Solche, die von Chemie Paketen wie nwchem generiert werden, sind zu groß, um von Hand zu importieren. In diesem Beispiel wird veranschaulicht, wie eine- `FermionHamiltonian` Instanz automatisch aus einem durch das [broombridge-Schema](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)dargestellten Molekül generiert werden kann. Zu Referenzzwecken können Sie das bereitgestellte `LithiumHydrideGUI` Beispiel oder das Beispiel überprüfen `RunSimulation` . Eingeschränkte Unterstützung ist auch zum Importieren aus dem Format verfügbar, das von " [Liqui |>](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/)" verwendet wird.

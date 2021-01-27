@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfZeroCA
 title: Applyif nuloca-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfZeroCA
 qsharp.summary: Applies a unitary operation conditioned on a classical result value being zero.
-ms.openlocfilehash: 4baae1fe7d615cbbf01935b4eca05fe947ff296e
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 4ed0660e2fe3623d0a8e4e4f3bd0bddb536b7b5c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96218460"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844874"
 ---
 # <a name="applyifzeroca-operation"></a>Applyif nuloca-Vorgang
 
@@ -28,7 +28,7 @@ operation ApplyIfZeroCA<'T> (result : Result, (op : ('T => Unit is Adj + Ctl), t
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Bei einem Vorgang `op` und einem Ergebniswert `result` gilt `op` für, `target` wenn gleich `result` ist `Zero` . Gibt `One` an, dass nichts passiert `target` .
 Das-Suffix `CA` gibt an, dass der anzuwendende Vorgang einheitlich (steuerbar und adjointable) ist.
