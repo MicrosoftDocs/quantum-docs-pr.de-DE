@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Preparation.RoundedDiscretizationCoefficients
 title: Rounabddiscretizationcoefficients-Funktion
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: RoundedDiscretizationCoefficients
 qsharp.summary: ''
-ms.openlocfilehash: 98dfd41f46b7a7d29491b1e2b1a3f50a8194eecc
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c6f40b344eb9587c41e1ac6a2427d9f23dd01aa2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96193538"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854254"
 ---
-# <a name="roundeddiscretizationcoefficients-function"></a><span data-ttu-id="d751f-102">Rounabddiscretizationcoefficients-Funktion</span><span class="sxs-lookup"><span data-stu-id="d751f-102">RoundedDiscretizationCoefficients function</span></span>
+# <a name="roundeddiscretizationcoefficients-function"></a><span data-ttu-id="8cd69-102">Rounabddiscretizationcoefficients-Funktion</span><span class="sxs-lookup"><span data-stu-id="8cd69-102">RoundedDiscretizationCoefficients function</span></span>
 
-<span data-ttu-id="d751f-103">Namespace: [Microsoft. Quantum. Preparation](xref:Microsoft.Quantum.Preparation)</span><span class="sxs-lookup"><span data-stu-id="d751f-103">Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)</span></span>
+<span data-ttu-id="8cd69-103">Namespace: [Microsoft. Quantum. Preparation](xref:Microsoft.Quantum.Preparation)</span><span class="sxs-lookup"><span data-stu-id="8cd69-103">Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)</span></span>
 
-<span data-ttu-id="d751f-104">Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="d751f-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="8cd69-104">Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="8cd69-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 
@@ -28,28 +28,28 @@ function RoundedDiscretizationCoefficients (coefficient : Double, oneNorm : Doub
 ```
 
 
-## <a name="input"></a><span data-ttu-id="d751f-105">Eingabe</span><span class="sxs-lookup"><span data-stu-id="d751f-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="8cd69-105">Eingabe</span><span class="sxs-lookup"><span data-stu-id="8cd69-105">Input</span></span>
 
-### <a name="coefficient--double"></a><span data-ttu-id="d751f-106">Koeffizient: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="d751f-106">coefficient : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
-
-
-
-
-### <a name="onenorm--double"></a><span data-ttu-id="d751f-107">ongewaltig: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="d751f-107">oneNorm : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+### <a name="coefficient--double"></a><span data-ttu-id="8cd69-106">Koeffizient: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="8cd69-106">coefficient : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
 
 
 
-### <a name="ncoefficients--int"></a><span data-ttu-id="d751f-108">nkoeffizienten: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="d751f-108">nCoefficients : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="onenorm--double"></a><span data-ttu-id="8cd69-107">ongewaltig: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="8cd69-107">oneNorm : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
 
 
 
-### <a name="barheight--int"></a><span data-ttu-id="d751f-109">barheight: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="d751f-109">barHeight : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="ncoefficients--int"></a><span data-ttu-id="8cd69-108">nkoeffizienten: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="8cd69-108">nCoefficients : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+
+
+
+
+### <a name="barheight--int"></a><span data-ttu-id="8cd69-109">barheight: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="8cd69-109">barHeight : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
 
 
-## <a name="output--int"></a><span data-ttu-id="d751f-110">Ausgabe: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="d751f-110">Output : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+## <a name="output--int"></a><span data-ttu-id="8cd69-110">Ausgabe: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="8cd69-110">Output : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
