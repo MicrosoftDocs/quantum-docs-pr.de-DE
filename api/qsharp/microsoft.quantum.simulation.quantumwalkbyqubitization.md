@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumWalkByQubitization
 title: Quantenwalkbyqubitisierung-Funktion
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: QuantumWalkByQubitization
 qsharp.summary: Converts a block-encoding reflection into a quantum walk.
-ms.openlocfilehash: ccef1bbf400e01800053777d0010acb7addaef53
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 8ffb6eb77a3f910d3064c4a3c90215d5d9a694aa
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192484"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98851053"
 ---
 # <a name="quantumwalkbyqubitization-function"></a>Quantenwalkbyqubitisierung-Funktion
 
@@ -28,7 +28,7 @@ function QuantumWalkByQubitization (blockEncoding : Microsoft.Quantum.Simulation
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Wenn ein `BlockEncodingReflection` von einem einheitlichen $U $ repräsentiert wird, der einen Operator $H $ of Interest codiert, konvertiert ihn in einen Quantum Walk $W $, der das Spektrum von $ \pm e ^ {\pm i\sin ^ {-1} (H)} $ enthält.
 
@@ -44,7 +44,7 @@ Ein `BlockEncodingReflection` einheitlicher $U $, der in einen Quantum Walk konv
 
 Ein Quantum Walk $W $, das sich zusammen in Registern verhält `a` und `s` $H $ codiert und das Spektrum von $ \pm e ^ {\pm i\sin ^ {-1} (H)} $ enthält.
 
-## <a name="references"></a>Referenzen
+## <a name="references"></a>References
 
 - Hamiltona Simulation by qubitisierung Guang Hao Low, ISAL. Chuang https://arxiv.org/abs/1610.06546
 

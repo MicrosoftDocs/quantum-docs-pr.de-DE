@@ -1,6 +1,6 @@
 ---
 Title: Multiple Qubits Description: erfahren Sie, wie Sie Vorgänge für zwei oder mehr Qubits ausführen.
-Autor: bradben UID: Microsoft. Quantum. Concepts. Multiple-Qubits ms. Author: v-benbra ms. Date: 12/11/2017 ms. Topic: article NO-LOC:
+Autor: bradben UID: Microsoft. Quantum. Concepts. Multiple-Qubits ms. Author: v-benbra ms. Date: 12/11/2017 ms. Topic: konzeptionelle NO-LOC:
 - "Q#"
 - "$$v"
 - "$$"
@@ -105,10 +105,10 @@ Dies liegt daran, dass die Berechnungsbasis für zwei-Qubit-Zustände durch die 
 Es ist leicht zu erkennen, dass der quantale Zustand von $ n $ Qubits in der Regel durch einen Einheits Vektor der Dimension $ 2 ^ n dargestellt wird, $ indem diese Konstruktion verwendet wird.  Der Vektor
 
 $$
-\begin{bmatrix}\alpha _ { 00 } 01 \\\\ 10 \alpha   _ { } \\\\ \alpha _ { 11 } \\\\ \alpha   _ { }  \end{bmatrix}
+\begin{bmatrix}\alpha _{ 00 } 01 \\\\ 10 \alpha_ { } \\\\ \alpha _{ 11 } \\\\ \alpha_ { }  \end{bmatrix}
 $$
 
-stellt einen Quantum-Zustand auf zwei Qubits dar, wenn $ | \alpha _ { 00 } | ^ 2 + | \alpha _ { 01 } | ^ 2 + | \alpha _ { 10 } | ^ 2 + | \alpha _ { 11 } | ^ 2 = 1 $ . Ebenso wie bei einzelnen Qubits enthält der Quantum-Status Vektor mehrerer Qubits alle Informationen, die zum Beschreiben des Systemverhaltens erforderlich sind.
+stellt einen Quantum-Zustand auf zwei Qubits dar, wenn $ | \alpha _{ 00 } | ^ 2 + | \alpha_ { 01 } | ^ 2 + | \alpha _{ 10 } | ^ 2 + | \alpha_ { 11 } | ^ 2 = 1 $ . Ebenso wie bei einzelnen Qubits enthält der Quantum-Status Vektor mehrerer Qubits alle Informationen, die zum Beschreiben des Systemverhaltens erforderlich sind.
 
 Wenn zwei separate Qubits angegeben werden, eine im $ \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} $ -Zustand und ein zweites Qubit im-Zustand $ \begin{bmatrix} \gamma \\\\ \delta \end{bmatrix} $ , ist der entsprechende zwei-Qubit-Zustand.    
 
@@ -124,17 +124,17 @@ $$\psi\otimes\phi = \begin{bmatrix} 1/ \sqrt { 2 } \\\\ 0 \\\\ 0 \\\\ 1/ \sqrt {
 
 Ein solch ein zwei-Qubit-Zustand, der nicht als tensorflow-Produkt von Single-Qubit-Zuständen geschrieben werden kann, wird als "entwinkelter Zustand" bezeichnet. die beiden Qubits werden als [*entkoppelt*](https://en.wikipedia.org/wiki/Quantum_entanglement)bezeichnet.  Da der Quantum-Zustand nicht als tensorflow-Produkt eines einzelnen Qubit-Zustands angesehen werden kann, werden die Informationen, die der Zustand enthält, nicht einzeln auf eine der Qubits beschränkt.  Stattdessen werden die Informationen nicht lokal in den Korrelationen zwischen den beiden Zuständen gespeichert.  Diese nicht Lokalität von Informationen ist eines der wichtigsten Merkmale von Quantum Computing gegenüber klassischem Computing und ist für eine Reihe von Quantum-Protokollen, einschließlich [Quantum-Teleportation](https://github.com/microsoft/Quantum/tree/main/samples/getting-started/teleportation) und [Quantum-Fehlerkorrektur](xref:microsoft.quantum.libraries.error-correction), von entscheidender Bedeutung.
 
-## <a name="measuring-two-qubit-states"></a>Messen von zwei-Qubit-Zuständen ##
+## <a name="measuring-two-qubit-states"></a>Messen von Two-Qubit Zuständen ##
 Das Messen von zwei-Qubit-Zuständen ähnelt den einzelnen Qubit-Messungen. Messen des Zustands
 
 $$
     \begin{bmatrix}
-        \alpha_ { 00 } 01 \\\\ \alpha _ { }\\\\ 
-        \alpha_ { 10 } 11 \\\\ \alpha _ {}
+        \alpha_{ 00 } 01 \\\\ \alpha_ { }\\\\ 
+        \alpha_{ 10 } 11 \\\\ \alpha_ {}
     \end{bmatrix}
 $$
 
-ergibt $ 00 $ mit der Wahrscheinlichkeit $ | \alpha _ { 00 } | ^ 2 $ , $ 01 mit der $ $ | Wahrscheinlichkeit \alpha _ { 01 } | ^ 2 $ , $ 10 $ mit der Wahrscheinlichkeit $ | \alpha _ { 10 } | ^ 2 $ und $ 11 mit der $ Wahrscheinlichkeit $ 11 | ^ 2 \alpha _ { } | $ . Die Variablen $ \alpha _ { 00 } , \alpha _ { 01 } , \alpha _ { 10 } $ und $ 11 \alpha _ { } $ wurden absichtlich benannt, um diese Verbindung klar zu machen. Wenn nach der Messung das Ergebnis 00 ist $ , $ wurde der Quantum-Status des Two-Qubit-Systems reduziert und ist jetzt
+ergibt $ 00 $ mit der Wahrscheinlichkeit $ | \alpha _{ 00 } | ^ 2 $ , $ 01 mit der $ $ | Wahrscheinlichkeit \alpha_ { 01 } | ^ 2 $ , $ 10 $ mit der Wahrscheinlichkeit $ | \alpha _{ 10 } | ^ 2 $ und $ 11 mit der $ Wahrscheinlichkeit $ 11 | ^ 2 \alpha_ { } | $ . Die Variablen $ \alpha _{ 00 } , \alpha_ { 01 } , \alpha _{ 10 } $ und $ 11 \alpha_ { } $ wurden absichtlich benannt, um diese Verbindung klar zu machen. Wenn nach der Messung das Ergebnis 00 ist $ , $ wurde der Quantum-Status des Two-Qubit-Systems reduziert und ist jetzt
 
 $$
     4,00 \equiv
@@ -193,7 +193,7 @@ $$
 
 auch in Übereinstimmung mit unserer Intuition.
 
-## <a name="two-qubit-operations"></a>Zwei-Qubit-Vorgänge
+## <a name="two-qubit-operations"></a>Two-Qubit Vorgänge
 Wie bei einem Single-Qubit-Fall ist jede einheitliche Transformation ein gültiger Vorgang für Qubits. Im Allgemeinen ist eine einheitliche Transformation für $ n- $ Qubits eine Matrix $ u $ der Größe $ 2 ^ n \times 2 ^ n $ (sodass Sie auf Vektoren der Größe $ 2 ^ n basiert $ ), z. b $ . u ^ { -1 } = U ^ \dagger $ .
 Beispielsweise ist das CNOT-Gate (kontrollierter not) ein häufig verwendetes zwei-Qubit-Gate und wird durch die folgende einheitliche Matrix dargestellt:
 
@@ -208,7 +208,7 @@ $$
 a \ b \\\\ c \ d \end{bmatrix}
 $$
 
-und
+and
 
 $$\begin{bmatrix}
 e \ f \\\\ \ h \end{bmatrix}
@@ -240,7 +240,7 @@ Gates können auch mit klassischen Informationen gesteuert werden.  Ein klassisc
 Wie bei einem Single-Qubit-Fall ist ein zwei-Qubit-Gate-Satz universell, wenn eine beliebige $ 4 \times 4 $ einheitliche Matrix durch ein Produkt von Gates von diesem Satz auf willkürliche Genauigkeit angeglichen werden kann.
 Ein Beispiel für einen universellen Gate-Satz sind das Hadamard-Gate, das T-Gate und das CNOT-Gate. Durch die Übernahme von Produkten dieser Gates können wir jede einheitliche Matrix auf zwei Qubits angleichen.
 
-## <a name="many-qubit-systems"></a>Viele-Qubit-Systeme
+## <a name="many-qubit-systems"></a>Many-Qubit Systeme
 Wir befolgen genau dieselben Muster, die im zwei-Qubit-Fall untersucht werden, um viele-Qubit-Quantenzustände aus kleineren Systemen zu erstellen.  Solche Zustände werden erstellt, indem tensorflow-Produkte mit kleineren Zuständen gebildet werden.  Beispielsweise können Sie die Bitzeichenfolge $ 1011001 $ in einem Quantum-Computer codieren.  Diese Codierung kann als
 
 $$

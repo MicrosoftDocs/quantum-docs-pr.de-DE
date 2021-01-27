@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.SimulationAlgorithm
 title: Benutzerdefinierter simulationalgorithmustyp
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -10,12 +10,12 @@ qsharp.summary: >-
   Represents a time-independent simulation algorithm.
 
   A time-independent simulation technique converts an <xref:microsoft.quantum.simulation.evolutiongenerator> to unitary time evolution for some time-interval.
-ms.openlocfilehash: 2f340492b51c97e353cc071d6d563a30a1db86d1
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: d7b233ee76d79072f59ecfd001245848cb780eec
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192433"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98851042"
 ---
 # <a name="simulationalgorithm-user-defined-type"></a>Benutzerdefinierter simulationalgorithmustyp
 

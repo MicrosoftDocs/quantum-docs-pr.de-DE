@@ -4,17 +4,17 @@ description: Erfahren Sie mehr über die Äquivalenz von Singleton Tupeln in der
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.singletontupleequivalence
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c615afd682f5bfae2534983ca7775f1849a26f48
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 2099d453ad979c71218874c6487e412467756db2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96233286"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847547"
 ---
 <!---
 # Types in Q#

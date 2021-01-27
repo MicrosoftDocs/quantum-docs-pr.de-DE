@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Characterization.EstimateImagOverlapBetweenStates
 title: Estimateimagoverlapbetweendstates-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: EstimateImagOverlapBetweenStates
 qsharp.summary: Given two operations which each prepare copies of a state, estimates the imaginary part of the overlap between the states prepared by each operation.
-ms.openlocfilehash: b192abc4ba37d126bf46f94c66cb87fe3bbec4c8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: f18ce43f9e5ebada4c5cc0aeff1538ac640c7390
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96216199"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98851864"
 ---
 # <a name="estimateimagoverlapbetweenstates-operation"></a>Estimateimagoverlapbetweendstates-Vorgang
 
@@ -64,7 +64,7 @@ Die Anzahl der Messungen, die beim Schätzen der Überlappung verwendet werden s
 
 Bei diesem Vorgang wird der Hadamard-Test verwendet, um den imaginären Teil von $ $ \begin{align} \braket{\psi zu suchen. V ^ {\dagger} U | \psi} \end{align} $ $, wobei $ \ket{\psi} $ der von vorbereitete Status ist `commonPreparation` , $U $ die einheitliche Darstellung der Aktion von `preparation1` und wobei $V $ entspricht `preparation2` .
 
-## <a name="references"></a>Referenzen
+## <a name="references"></a>References
 
 - Aharonov *et al.* [quant-ph/0511096](https://arxiv.org/abs/quant-ph/0511096).
 

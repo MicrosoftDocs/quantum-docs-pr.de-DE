@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecomposition
 title: Applypermutationusingzerlegungs-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyPermutationUsingDecomposition
 qsharp.summary: Permutes the amplitudes in a quantum state given a permutation using decomposition-based synthesis.
-ms.openlocfilehash: 5b25ef3327bbca2dfdbe8fa876f3f797dddf77e8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 765b6d301363021f5b57a22f90e2ada38c9c09ec
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192127"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857392"
 ---
 # <a name="applypermutationusingdecomposition-operation"></a>Applypermutationusingzerlegungs-Vorgang
 
@@ -28,7 +28,7 @@ operation ApplyPermutationUsingDecomposition (perm : Int[], qubits : Microsoft.Q
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Mit dieser Prozedur wird der Ansatz der Zerlegungs basierten Synthese implementiert.  Die Eingabe ist eine permutations $ \pi $ over $2 ^ n $ Elements $ \{ 0, \dots, 2 ^ n-1 \} $, was eine $n $-Variable umkehrbare boolesche Funktion darstellt.
 Der Algorithmus führt iterativ die folgenden Schritte für jeden Variablen Index aus $i $:
@@ -57,7 +57,17 @@ Eine Liste von $n $ Qubits, auf die die permutations angewendet wird.
 
 
 
-## <a name="references"></a>Referenzen
+## <a name="example"></a>Beispiel
+
+So können Sie einen `SWAP` Vorgang synthetisieren:
+
+```qsharp
+using (qubits = Qubit[2]) {
+  ApplyPermutationUsingDecomposition([0, 2, 1, 3], LittleEndian(qubits));
+}
+```
+
+## <a name="references"></a>References
 
 - [*Alexis de Vos*, *Yvan Van Rentergem*, ADV. in Math. of comm. 2 (2), 2008, pp. 183--200](http://www.aimsciences.org/article/doi/10.3934/amc.2008.2.183)
 - [*Mathias soeken*, *Laura tague*, *Gerhard W. Dueck*, *Rolf Drechsler*, Journal der symbolischen Berechnung 73 (2016), pp. 1--26](https://www.sciencedirect.com/science/article/pii/S0747717115000188?via%3Dihub)

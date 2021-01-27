@@ -4,17 +4,17 @@ description: Erfahren Sie, wie Sie konzeptionelle oder API-Inhalte zum Microsoft
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2debef858c38b9a8f11264858130ed7cb41543ae
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8602705d2dd071e822e2ff58a9a44cd0684f77f1
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691790"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857362"
 ---
 # <a name="improving-documentation"></a>Verbessern der Dokumentation
 
@@ -42,7 +42,7 @@ Im folgenden werden weitere Informationen zu Pull Requests beschrieben. es gibt 
 - Einige Leser finden abstrakte Anweisungen und Definitionen am hilfreichsten, während andere Leser am besten funktionieren, indem Sie aus konkreten Beispielen extrapolieren. Wenn sowohl der allgemeine Fall als auch bestimmte Beispiele bereitgestellt werden, können beide Leser die Quantum-Programmierung optimal nutzen.
 - Vor allem, wenn Sie auch den Code geschrieben haben, der dokumentiert wird, können Sie für Sie offensichtlich sein, dass Sie für Ihre Leser nicht offensichtlich sind. Es gibt keine einzigartige Möglichkeit, um Programmieren zu können. unabhängig davon, wie clever oder erfahrener Leser sein könnte, können Sie sich nicht vorstellen, welche Entwurfsmuster Sie am hilfreichsten, um Ihre Ideen im Code auszudrücken. Wenn Sie sich darüber im klaren sein, wie ein Reader die Verwendung des Codes erwarten kann, kann dieser Kontext bereitgestellt werden.
 - Viele Mitglieder der Quantum-Programmier Community sind akademische Forscher und werden hauptsächlich durch citate für Ihre Beiträge zur Community erkannt. Zusätzlich zur Unterstützung von Lesern bei der Suche nach zusätzlichen Materialien können Academic-Ausgaben, wie z. b. Zeitungen, Gespräche, Blogbeiträge und Software Tools, den akademischen Mitwirkenden dabei helfen, Ihre bestmögliche Arbeit zu verbessern, um die Community zu verbessern.
-- Die Quantum-Programmier Community ist eine Breite und wunderbare Community. Die Verwendung von genten Pronomen in Beispielen für Dritte (z. b. "Wenn ein Benutzer..., er wird...") ausschließen und nicht einschließen. Das Erkennen von Personennamen in citationen und Verknüpfungen und die richtige Einbeziehung von nicht-ASCII-Zeichen können die Vielfalt der Community erfüllen, indem die entsprechenden Elemente berücksichtigt werden. Auf ähnliche Weise werden viele Wörter in englischer Sprache häufig als Hass verwendet, sodass ihre Verwendung in der technischen Dokumentation sowohl für einzelne Leser als auch für die Community in großem Umfang Schaden anrichten kann.
+- Die Quantum-Programmier Community ist eine Breite und wunderbare Community. Die Verwendung von genten Pronomen in Beispielen für Dritte (z. b. "Wenn ein Benutzer..., und...") ausgeschlossen werden kann, anstatt einzuschließen. Das Erkennen von Personennamen in citationen und Verknüpfungen und die richtige Einbeziehung von nicht-ASCII-Zeichen können die Vielfalt der Community erfüllen, indem die entsprechenden Elemente berücksichtigt werden. Auf ähnliche Weise werden viele Wörter in englischer Sprache häufig als Hass verwendet, sodass ihre Verwendung in der technischen Dokumentation sowohl für einzelne Leser als auch für die Community in großem Umfang Schaden anrichten kann.
 
 ### <a name="referencing-sample-code-from-conceptual-articles"></a>Verweisen auf Beispiel Code aus konzeptionellen Artikeln
 
@@ -54,6 +54,19 @@ Wenn Sie Code aus dem [beispielrepository](https://github.com/Microsoft/Quantum)
 
 Mit diesem Befehl werden die Zeilen 4 in 8 der [ `Game.qs` Datei aus dem `chsh-game` Beispiel](https://github.com/microsoft/Quantum/blob/main/samples/algorithms/chsh-game/Game.qs)importiert und als Q# Code für die Syntax Hervorhebung gekennzeichnet.
 Mit diesem Befehl können Sie das Duplizieren von Code zwischen konzeptionellen Artikeln und dem beispielrepository vermeiden, sodass der Beispielcode in der Dokumentation immer so aktuell wie möglich ist.
+
+### <a name="contributing-image-files"></a>Mitwirken von Bilddateien
+
+**Wichtig**: damit die Bilder ordnungsgemäß im dunklen Modus gerendert werden, müssen Sie Transparenz vermeiden.
+
+- Für JPG-Dateien. Sie müssen nichts tun, da das. jpg-Format keine transparenten Elemente unterstützt.
+- Bei PNG-Dateien müssen Sie einen weißen Hintergrund hinzufügen oder den Wert des Alphakanals in **100** ändern. Die einfachste Möglichkeit, dies in Windows zu erreichen, besteht darin, die Datei in **Paint** zu öffnen und zu speichern, wobei die ursprüngliche Datei überschrieben wird.
+- Bei SVG-Dateien müssen Sie ein weißes Rechteck in der untersten Ebene hinzufügen. Dies kann mit **Inkscape** durchzuführen sein:
+  1. Öffnen Sie die SVG-Datei.
+  1. Wählen Sie das Tool Square Maker aus, und zeichnen Sie ein weißes Rechteck oberhalb der ursprünglichen Abbildung.
+  1. Wählen Sie das Tool aus, um **Objekte auszuwählen und zu transformieren** , indem Sie auf den dunklen Pfeil klicken oder **F1** drücken.
+  1. Wenn Sie das Rechteck ausgewählt haben, klicken Sie auf das Symbolleisten Element **Unterauswahl unten (Ende)**.
+  1. Passen Sie das Rechteck mit der Maus oder den Pfeiltasten an.
 
 ## <a name="contributing-to-the-api-references"></a>Beitrag zu den API-verweisen
 

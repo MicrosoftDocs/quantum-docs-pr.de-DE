@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.ControlledRotation
 title: Benutzerdefinierter controlledrotation-Typ
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: ControlledRotation
 qsharp.summary: Describes a controlled rotation in terms of its target and control indices, rotation axis, and index into a model parameter vector.
-ms.openlocfilehash: 1e664b470caeba656ea4a73f70bbc0ef5fe76f7e
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 231afe65da3640218cbc97b9d49eae21bf6e1786
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96196564"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847391"
 ---
 # <a name="controlledrotation-user-defined-type"></a>Benutzerdefinierter controlledrotation-Typ
 
@@ -44,6 +44,18 @@ Die Achse für diese Drehung.
 ### <a name="parameterindex--int"></a>Parameterindex: [int](xref:microsoft.quantum.lang-ref.int)
 
 Ein Index in einem Modellparameter Vektor, der den Winkel für diese Drehung beschreibt.
+
+## <a name="example"></a>Beispiel
+
+Folgendes stellt eine Drehung zum $X $-Achse des ersten Qubit in einem Register dar, gesteuert auf das zweite Qubit und mit einem Winkel, der durch den vierten Parameter in einem sequenziellen Modell angegeben wird:
+
+```qsharp
+let controlledRotation = ControlledRotation(
+    (0, [1]),
+    PauliX,
+    3
+)
+```
 
 ## <a name="remarks"></a>Bemerkungen
 
