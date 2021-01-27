@@ -1,6 +1,6 @@
 ---
 Title: Quantum-Verbindungs Beschreibung: erfahren Sie, wie Sie einfache und komplexe Quantum-Vorgänge mithilfe von Quantum-Verbindungs Diagrammen visuell darstellen.
-Autor: quantumwriter UID: Microsoft. Quantum. Concepts. Circuits ms. Author: v-benbra ms. Date: 12/11/2017 ms. Topic: article NO-LOC:
+Autor: quantumwriter UID: Microsoft. Quantum. Concepts. Circuits ms. Author: v-benbra ms. Date: 12/11/2017 ms. Topic: konzeptionelle NO-LOC:
 - "Q#"
 - "$$v"
 - "$$"
@@ -89,7 +89,7 @@ Diese Gate-Sequenz ist von grundlegender Bedeutung für das Quantum Computing, d
 
 $$\mathrm{CNOT } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } } \left ( \ket { 00 }  +  \ket { 11 } \right ),$$
 
-Vorgänge mit dieser oder einer größeren Komplexität sind bei Quantum-Algorithmen und der Quantum-Fehlerkorrektur universell. Daher sollte Sie als eine einfache Methode für die Visualisierung bezeichnet werden, die als *Quantum* -Verbindungs Diagramm bezeichnet wird.
+Vorgänge mit dieser oder einer größeren Komplexität sind bei Quantum-Algorithmen und der Quantum-Fehlerkorrektur universell. Daher sollte Sie als eine einfache Methode für die Visualisierung bezeichnet werden, die als *Quantum*-Verbindungs Diagramm bezeichnet wird.
 Das Verbindungs Diagramm zum Vorbereiten dieses maximale entkoppelt Quantum-Zustands lautet wie folgt:
 
 <!--- ![](.\media\1.svg) --->

@@ -4,17 +4,17 @@ description: Erläutert die Spezifikationen für das broombridge-Quantum-Schema 
 author: guanghaolow
 ms.author: gulow
 ms.date: 05/28/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 851d10c0137deecf8e861aad30b5e08a9ae61754
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 8d26b56d88f365144510692466bfffc7feb71d88
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833763"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854061"
 ---
 # <a name="broombridge-specification-v02"></a>Broombridge-Spezifikation v 0,2 #
 
@@ -171,7 +171,7 @@ Jedes Problem Beschreibungs Objekt muss über eine Eigenschaft verfügen, `coulo
 Jedes Problem Beschreibungs Objekt muss über eine Eigenschaft verfügen, `energy_offet` deren Wert ein einfaches Mengen Objekt ist.
 > Nebenbei Die Werte von und, die addiert werden, `coulomb_repulsion` `energy_offet` erfassen den Identitätsbegriff der hamiltonan.
 
-##### <a name="one-electron-integrals-object"></a>Integrale Objekt mit einem-Elektronen #####
+##### <a name="one-electron-integrals-object"></a>One-Electron inteals-Objekt #####
 
 Dieser Abschnitt ist normativ.
 
@@ -201,7 +201,7 @@ one_electron_integrals:     # required
 > Broombridge verwendet die 1-basierte Indizierung.
 
 
-##### <a name="two-electron-integrals-object"></a>2-Elektronen-inteals-Objekt #####
+##### <a name="two-electron-integrals-object"></a>Two-Electron inteals-Objekt #####
 
 Dieser Abschnitt ist normativ.
 

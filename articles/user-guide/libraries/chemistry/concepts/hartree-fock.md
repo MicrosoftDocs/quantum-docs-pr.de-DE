@@ -1,20 +1,20 @@
 ---
-title: Hartree-Fock-Theorie
+title: Hartree-Fock Theorie
 description: Erfahren Sie mehr über die Hartree – Fock-Theorie, eine einfache Möglichkeit, den Anfangszustand für Quantum-Systeme zu erstellen.
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.hartreefock
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 53d6e4342e5b58886528e89871591e57d8e70c82
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 48d6bc4face90046271dd8705188a92daafad98a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835348"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854092"
 ---
 # <a name="hartreefock-theory"></a>Hartree – Fock-Theorie
 
@@ -54,7 +54,7 @@ var wavefunctionInt = wavefunctionSpinOrbital.ToIndexing(IndexConvention.UpDown)
 Das auffälligste Feature von Hartree – Fock theoretisch ist, dass es einen Quantum-Zustand ergibt, der keine entangslänge zwischen den Elektronen aufweist.
 Dies bedeutet, dass häufig eine geeignete qualitative Beschreibung der Eigenschaften von molekularen Systemen zur Verfügung steht. 
 
-Der Zustand "Hartree-Fock" kann auch wie folgt von einem rekonstruiert werden `FermionHamiltonian`  .
+Der Hartree-Fock Status kann auch wie folgt aus einem rekonstruiert werden `FermionHamiltonian`  .
 ```csharp
 // We initialize a fermion Hamiltonian.
 var fermionHamiltonian = new FermionHamiltonian();

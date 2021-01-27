@@ -1,6 +1,6 @@
 ---
 Title: Erweiterte Matrix Konzepte Description: erfahren Sie mehr über Eigenvektoren, Eigenwerte und Matrix exponentiale, die grundlegenden Tools, die zum beschreiben und Simulieren von Quantum-Algorithmen verwendet werden.
-Autor: quantumwriter UID: Microsoft. Quantum. Concepts. Matrix-Advanced ms. Author: v-benbra ms. Date: 12/11/2017 ms. Topic: article NO-LOC:
+Autor: quantumwriter UID: Microsoft. Quantum. Concepts. Matrix-Advanced ms. Author: v-benbra ms. Date: 12/11/2017 ms. Topic: konzeptionelle NO-LOC:
 - "Q#"
 - "$$v"
 - "$$"

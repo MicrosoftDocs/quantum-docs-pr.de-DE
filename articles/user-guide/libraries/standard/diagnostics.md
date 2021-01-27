@@ -4,16 +4,16 @@ description: Erfahren Sie mehr über die Diagnosefunktionen und Vorgänge in den
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1ab9b77c7536a1860064110810371d3a68e95b40
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d13122187a24893d297cfdbb3ad4db03eb22ded0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690855"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858685"
 ---
 # <a name="diagnostics"></a>Diagnose #
 
@@ -27,7 +27,7 @@ Die Diagnose von klassischen Werten kann mithilfe der-Funktion abgerufen werden 
 Standardmäßig wird die Zeichenfolge in die Konsole geschrieben.
 Wird in Verbindung mit interinterpolierten Zeichen folgen verwendet und <xref:Microsoft.Quantum.Intrinsic.Message> erleichtert das Melden von Diagnoseinformationen über klassische Werte:
 
-```Q#
+```qsharp
 let angle = Microsoft.Quantum.Math.PI() * 2.0 / 3.0;
 Message($"About to rotate by an angle of {angle}...");
 ```

@@ -4,17 +4,17 @@ description: Erfahren Sie, wie Machine Learning auf Quantum-Systemen verwendet w
 author: alexeib2
 ms.author: alexeib
 ms.date: 11/22/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9f7f892fb2b76432942c86163497c22f0c73d51f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e2f4a4a63eef40474856426b3b29652b5d3053b2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833808"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854031"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>Einführung in Quantum Machine Learning
 
@@ -41,7 +41,7 @@ Folglich ist die Lösung eine Quantum-Analog eines Unterstützungs Vektor Comput
 
 Ein einfacher Quantum Klassifizierungs-Entwurf kann mit einer herkömmlichen SVM-Lösung (Support Vector Machine) verglichen werden. Der Rückschluss für ein Daten Beispiel $x $ im Fall von SVM erfolgt mithilfe der optimalen Kernel Form $ \sum \ alpha_j k (x_j, x) $, wobei $k $ eine bestimmte Kernel Funktion ist.
 
-Im Gegensatz dazu verwendet ein Quantum Klassifizierungs den präktor $p (y │ x, U (\orta)) = 〈 U (\erta) x | M | U (\urta) x 〉 $, das in Spirit ähnlich ist, aber technisch genau anders ist. Wenn also eine einfache Amplitude-Codierung verwendet wird, ist $p (y │ x, U (\theta)) $ ein quadratisches Formular in den verstärken $x $, aber die Koeffizienten dieses Formulars werden nicht mehr unabhängig erlernt. Sie werden stattdessen aus den Matrixelementen der Verbindungs $U (\orta) $ aggregiert, die in der Regel deutlich weniger learnable-Parameter $ \orta $ als die Dimension des Vektors $x $. Der polynomale Grad des $p (y │ x, U (\urta)) $ in den ursprünglichen Funktionen kann auf $2 ^ l $ erweitert werden, indem eine Quantum-Produktcodierung in $l $-Kopien von $x $ verwendet wird.
+Im Gegensatz dazu verwendet ein Quantum-Klassifizierer den Prätor $p (y │ x, U (\urta)) = 〈 U (\urta) x | M | U (\urta) x 〉 $, der in Spirit ähnlich ist, aber technisch genau anders ist. Wenn also eine einfache Amplitude-Codierung verwendet wird, ist $p (y │ x, U (\theta)) $ ein quadratisches Formular in den verstärken $x $, aber die Koeffizienten dieses Formulars werden nicht mehr unabhängig erlernt. Sie werden stattdessen aus den Matrixelementen der Verbindungs $U (\orta) $ aggregiert, die in der Regel deutlich weniger learnable-Parameter $ \orta $ als die Dimension des Vektors $x $. Der polynomale Grad des $p (y │ x, U (\urta)) $ in den ursprünglichen Funktionen kann auf $2 ^ l $ erweitert werden, indem eine Quantum-Produktcodierung in $l $-Kopien von $x $ verwendet wird.
 
 Unsere Architektur untersucht relativ flache Verbindungen, die daher *schnell entfangen* müssen, um alle Korrelationen zwischen den Daten Features in allen Bereichen aufzuzeichnen. In der folgenden Abbildung ist ein Beispiel für die sehr nützliche schnell Verlaufs-Leitungs Komponente dargestellt. Obwohl eine Verbindung mit dieser Geometrie nur aus $3 n + 1 $ Gates besteht, gewährleistet die einheitliche Gewichtungs Matrix, die Sie berechnet, eine bedeutende Kreuz Diskussion zwischen den $2 ^ n $-Features.
 

@@ -4,17 +4,17 @@ description: Erfahren Sie, wie Sie Q# mithilfe der Quantum-Machine Learning Bibl
 author: geduardo
 ms.author: v-edsanc
 ms.date: 02/16/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5dc4614b9992e2c6b9f8ff4b839c0929ec8cab7c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 4fe686a87fbdc610badc0bbcbc0bf7b065e0bce9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833713"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854041"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Basic-Klassifizierung: klassifizieren von Daten mit dem QDK
 

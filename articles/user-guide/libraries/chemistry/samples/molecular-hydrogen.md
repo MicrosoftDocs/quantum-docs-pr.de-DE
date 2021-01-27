@@ -4,17 +4,17 @@ description: Exemplarische Vorgehensweise Q# für ein Beispielprogramm, mit dem 
 author: guanghaolow
 ms.author: gulow
 ms.date: 07/02/2020
-ms.topic: article-type-from-white-list
+ms.topic: sample
 uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 81fba0c52c854d61f9143659795fb4d3c3cee8b9
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 60935e7c1e8c674fab3a546c1f110f589d2e6b77
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691538"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855052"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Abrufen von Energiestandschätzungen
 Das Einschätzen der Werte von Energie Stufen ist eine der Hauptanwendungen der Quantum-Chemie. In diesem Artikel wird beschrieben, wie Sie dies für das kanonische Beispiel für den molekularen Wasserstoff durchführen können. Das in diesem Abschnitt referenzierte Beispiel befindet sich [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) im Repository "Chemistry Samples". Ein visuelles Beispiel, in dem die Ausgabe dargestellt wird, ist die [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) Demo.

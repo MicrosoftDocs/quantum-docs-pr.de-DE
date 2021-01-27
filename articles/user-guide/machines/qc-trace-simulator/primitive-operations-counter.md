@@ -4,17 +4,17 @@ description: Erfahren Sie mehr über den "Microsoft QDK primitive Operation"-Vor
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bf75eb94696a489a587316928bc3f33baa4a1785
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 19ea3c1f5a91c00de4d3e435318bf4cf8cdd83be
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690960"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858599"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>Quantum-Ablauf Verfolgungs Simulator: primitiver Vorgangs Counter
 
@@ -34,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>Verwendung des primitiven Vorgangs Zählers in einem c#-Host Programm
 
-Das c#-Beispiel, das in diesem Abschnitt folgt, zählt, wie viele <xref:Microsoft.Quantum.Intrinsic.T> Vorgänge erforderlich sind, um den <xref:Microsoft.Quantum.Intrinsic.ccnot> Vorgang basierend auf dem folgenden Q# Beispielcode zu implementieren:
+Das c#-Beispiel, das in diesem Abschnitt folgt, zählt, wie viele <xref:Microsoft.Quantum.Intrinsic.T> Vorgänge erforderlich sind, um den <xref:Microsoft.Quantum.Intrinsic.CCNOT> Vorgang basierend auf dem folgenden Q# Beispielcode zu implementieren:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -75,7 +75,7 @@ Zum Schluss können Sie mithilfe der folgenden Daten alle vom primitiven Betrieb
 string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter];
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - Übersicht über den Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .
 - Die <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API-Referenz.
