@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.IncrementByInteger
 title: Incrementbyinteger-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: IncrementByInteger
 qsharp.summary: Increments an unsigned quantum register by a classical integer, using phase rotations.
-ms.openlocfilehash: fa5e75e91206aa5f33233c8a54d6e9e7ac2950e3
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 9c7ff6947964a4dbe07106d1def9be46f631f5cc
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96222965"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843170"
 ---
 # <a name="incrementbyinteger-operation"></a>Incrementbyinteger-Vorgang
 
@@ -28,7 +28,7 @@ operation IncrementByInteger (increment : Int, target : Microsoft.Quantum.Arithm
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Angenommen, das `target` codiert eine Ganzzahl ohne Vorzeichen $x $ in einer Little-in-codiercodierung und `increment` ist gleich $a $.
 Anschließend implementiert dieser Vorgang die einheitliche $ \ket{x} \mapsto \ket{x + a} $, wobei die Addition Modulo $2 ^ n $ ist, wobei $n = \texttt{length (Target!)} $.
