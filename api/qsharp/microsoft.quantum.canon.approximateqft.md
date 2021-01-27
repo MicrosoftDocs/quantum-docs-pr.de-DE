@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApproximateQFT
 title: Näherer Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApproximateQFT
 qsharp.summary: Apply the Approximate Quantum Fourier Transform (AQFT) to a quantum register.
-ms.openlocfilehash: 97a410133e80cc5bffc810e9d6455baaee32364b
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 31fd87c0f61292142c7493cc29cad1082a9a2d67
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96207699"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850323"
 ---
 # <a name="approximateqft-operation"></a>Näherer Vorgang
 
@@ -53,7 +53,7 @@ Für aqft sind Z-Drehung-Gates im Format 2D/2K und Hadamard Gates erforderlich.
 
 Es wird davon ausgegangen, dass die Eingabe und die Ausgabe in der Big-d-Codierung codiert werden.
 
-## <a name="references"></a>Referenzen
+## <a name="references"></a>References
 
 - [*M. roetteler, Th. Beth*, Appl. Algebra eng. Commun. Co. 19 (3): 177-193 (2008)](http://doi.org/10.1007/s00200-008-0072-2)
 - [*D. kopierungsarxiv* : quant-ph/0201067v1](https://arxiv.org/abs/quant-ph/0201067)

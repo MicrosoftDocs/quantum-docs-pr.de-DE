@@ -4,17 +4,17 @@ description: Erstellen Sie ein Q# Projekt, das grundlegende Quantum-Konzepte wie
 author: bromeg
 ms.author: megbrow
 ms.date: 10/25/2019
-ms.topic: article
+ms.topic: tutorial
 uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: cefe35a10dd89c14d2f1abc3080d52ab125236d1
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: f36db426a8f0479580117cce44a67ad3a053d5de
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771269"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856362"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Tutorial: Implementieren eines Quanten-Zufallszahlengenerators in Q\#
 

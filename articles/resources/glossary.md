@@ -1,6 +1,6 @@
 ---
 Title: Beschreibung von Quantum Computing Glossar: ein Glossar allgemeiner Begriffe, Aktionen und Objekte, die bei der Quantenberechnung verwendet werden.
-Autor: bradben ms. Author: v-benbra ms. Date: 9/1/2020 ms. Topic: article UID: Microsoft. Quantum. Glossar NO-LOC:
+Autor: bradben ms. Author: v-benbra ms. Date: 9/1/2020 ms. Topic: Reference UID: Microsoft. Quantum. Glossar NO-LOC:
 - "Q#"
 - "$$v"
 - "$$"
@@ -177,7 +177,7 @@ Die grundlegende Einheit der Quantum-Berechnung in Q# . Dies entspricht ungefäh
 
 Eine Unterroutine, die zur Laufzeit Daten abhängige Informationen für einen Quantum-Algorithmus bereitstellt. In der Regel besteht das Ziel darin, eine [Superposition](xref:microsoft.quantum.glossary#superposition) der Ausgaben bereitzustellen, die den Eingaben in der superposition entsprechen. Weitere Informationen finden Sie unter [Oracles](xref:microsoft.quantum.libraries.data-structures#oracles).
 
-## <a name="partial-application"></a>Partielle Anwendung
+## <a name="partial-application"></a>Teilweise Anwendung
 
 Aufrufen einer [Funktion](xref:microsoft.quantum.glossary#function) oder eines [Vorgangs](xref:microsoft.quantum.glossary#operation) ohne alle erforderlichen Eingaben. Dadurch wird eine neue [Aufruf Bare](xref:microsoft.quantum.glossary#callable) zurückgegeben, bei der nur die fehlenden Parameter (die durch einen Unterstrich angegeben werden) während einer zukünftigen Anwendung bereitgestellt werden müssen. Weitere Informationen finden Sie unter [partielle Anwendung](xref:microsoft.quantum.qsharp.partialapplication).
 

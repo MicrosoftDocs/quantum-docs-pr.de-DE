@@ -4,17 +4,17 @@ description: Erstellen Sie ein Q# Projekt, das den Algorithmus von Grover verans
 author: cgranade
 ms.author: chgranad
 ms.date: 10/19/2019
-ms.topic: article
+ms.topic: tutorial
 uid: microsoft.quantum.quickstarts.search
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 86c6a651a117b788eb4c8fdd805ead7ab8f54dd7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 5e0398338ff710decc0f3038c07c9b7d39514195
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834804"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856634"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>Tutorial: Implementierung des Grover-Suchalgorithmus in Q\#
 

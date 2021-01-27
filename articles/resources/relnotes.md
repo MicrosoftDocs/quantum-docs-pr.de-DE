@@ -4,17 +4,17 @@ description: Enthält Informationen zu den neuesten Aktualisierungen für das Mi
 author: bradben
 ms.author: v-benbra
 ms.date: 8/30/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1c3c502b6487482f06820e07425b8516f259fb0d
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 8aa6072e9b495db6e127cac350d5bfaec1b090ce
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231790"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856661"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Versionshinweise für das Microsoft Quantum Development Kit
 
@@ -24,6 +24,16 @@ Installationsanweisungen finden Sie im [Installationshandbuch](xref:microsoft.qu
 
 Updateanweisungen finden Sie im [Updatehandbuch](xref:microsoft.quantum.update).
 
+## <a name="version-0152101125897"></a>Version 0.15.2101125897
+
+*Veröffentlichungsdatum: 26. Januar, 2021*
+
+- Vereinfachte Qubit-Zuordnung, die eine einfachere Syntax zum Zuordnen von Qubits bietet, [finden Sie unter Details im Q# sprachrepository](https://github.com/microsoft/qsharp-language/blob/main/Approved/1-implicitly-scoped-qubit-allocation.md).
+- Es wurde QDK-Python Repository erstellt, das `azure-quantum` , den Python-Client zum Übermitteln von Quantum-inspirierten Optimierungs Aufträgen an den Azure-Quantum-Dienst und, `qdk` einschließlich `qdk.chemistry` , eine Python-basierte Hilfsschicht für die Chemie Bibliothek umfasst, die eine Q# Molekulare Visualisierung und Funktionalität zum Generieren von Eingabedateien für verschiedene Chemie Pakete wie nwchem, Psi4 und openmolcas enthält.
+- Klammern sind nun optional für Vorgangs-und Funktionstypen und- `if` , `elif` `while` -und- `until` Anweisungen. Klammern für `for` `use` die Anweisungen, und wurden als `borrow` veraltet markiert.
+- Verbesserte breiten Schätzungen für optimale Tiefe finden Sie unter [Details](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159).
+- Anwenden eines als explizite Matrix bereitgestellten einheitlichen Vorgangs mithilfe `ApplyUnitary` von ([quantenlibraries # 391](https://github.com/microsoft/QuantumLibraries/pull/391), externer Beitrag von Dmytro fedoriaka)
+- Korrigiert, https://github.com/microsoft/iqsharp/issues/387 indem die Auswirkungen auf die Leistung beim Q# Kernel Start beeinträchtigt werden.
 ## <a name="version-0142011120240"></a>Version 0.14.2011120240
 
 *Veröffentlichungsdatum: 25. November, 2020*
@@ -211,7 +221,7 @@ Hier finden Sie die vollständige Liste geschlossener Pull Requests für [Biblio
 
 Dieses Release enthält Folgendes:
 
-- Neues Test Attribut für Komponenten Q# Tests finden Sie [hier](xref:microsoft.quantum.guide.testingdebugging) in der [here](xref:Microsoft.Quantum.Diagnostics.Test) aktualisierten API-Dokumentation und im Thema aktualisierte Tests & Debuggen.
+- Neues Test Attribut für Komponenten Q# Tests finden Sie [hier](xref:microsoft.quantum.guide.testingdebugging) in der [](xref:Microsoft.Quantum.Diagnostics.Test) aktualisierten API-Dokumentation und im Thema aktualisierte Tests & Debuggen.
 - Im Fall eines Q# Programmlauf Fehlers wurde eine Stapel Überwachung hinzugefügt.
 - Unterstützung für Breakpoints in Visual Studio Code aufgrund einer Aktualisierung der [OmniSharp-C#-Erweiterung für Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 
@@ -486,14 +496,7 @@ Hier erhalten Sie weitere Informationen zur [Quantum Development Kit-Chemiebibli
 
 Mit der neuen Chemiebibliothek verschieben wir die Bibliotheken in das neue GitHub-Repository [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries).  Die Beispiele befinden sich im Repository [Microsoft/Quantum](https://github.com/Microsoft/Quantum).  Wir freuen uns über Beiträge zu beiden Repositorys.
 
-Dieses Release enthält Fehlerbehebungen und Features zu Problemen, die von der Community gemeldet wurden:
-
-* IntelliSense für Q# ? ([UserVoice](https://quantum.uservoice.com/forums/906943/suggestions/32656918))
-* QS-Dateien ([UserVoice](https://quantum.uservoice.com/forums/906097/suggestions/32593049))
-* Verbesserung der Fehlermeldung bei abgekürzten geschweiften Klammern in if-Anweisungen ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/34718518))
-* Unterstützung der Tupeldekonstruktion bei veränderlicher (nochmaliger) Bindung ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/35020444))
-* Fehler bei Ausführung des bereitgestellten Beispiels „BitFlipCode“ ([UserVoice](https://quantum.uservoice.com/forums/906940/suggestions/35008546))
-* H2SimulationGUI zeigt manchmal große Spitzen an ([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34668370)).
+Diese Version enthält Fehlerbehebungen und Features für Probleme, die von der Community gemeldet wurden.
 
 ### <a name="community-contributions"></a>Beiträge der Community
 
@@ -509,15 +512,7 @@ Außerdem danken wir Rohit Gupta ([@guptarohit](https://github.com/guptarohit),[
 
 *Veröffentlichungsdatum: 10. September 2018*
 
-Dieses Release enthält Fehlerbehebungen zu Problemen, die von der Community gemeldet wurden. Zu diesen Problemen gehören:
-
-* Schiebeoperator kann nicht verwendet werden ([GitHub](https://github.com/Microsoft/Quantum/issues/75)).
-* `DumpMachine` / `DumpRegister` schlägt bei der Ausgabe in der Konsole für `QCTraceSimulator` fehl ([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34709680)).
-* Zulassen der Zuweisung von 0 Qubits ([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34768069-allow-allocating-0-qubits)).
-* `AssertQubitState` erfordert expliziten Aufruf von „Complex()“ ([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34713733-assertqubitstate-requires-explicit-complex-call)).
-* `Measure`-Vorgang gibt unter macOS immer `One` zurück ([UserVoice](https://quantum.uservoice.com/forums/906940/suggestions/35008546)).
-
-Vielen Dank! 
+Dieses Release enthält Fehlerbehebungen zu Problemen, die von der Community gemeldet wurden.
 
 ## <a name="version-0218063001"></a>Version 0.2.1806.3001
 

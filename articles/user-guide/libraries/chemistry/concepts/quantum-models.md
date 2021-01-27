@@ -4,24 +4,24 @@ description: Erfahren Sie, wie Molekulare elektronische Systeme mithilfe von Qua
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.quantummodels
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4ff3d11bfd4dae5489fc4b7efe4da4ccda00882f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c12ab277f06bed61991a26af96953ccdbf72b642
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833920"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856218"
 ---
 # <a name="quantum-models-for-electronic-systems"></a>Quantum-Modelle für elektronische Systeme
 
 Zum simulieren elektronischer Systeme müssen Sie zunächst den hamiltonan angeben, der durch die oben beschriebene kanonische quantifizierungsprozedur gefunden werden kann.
 Insbesondere für $N _E $-Elektronen mit momenta $p _I $ (in drei Dimensionen) und Massen $m _E $ und Positions Vektoren $x _I $ zusammen mit Kernen mit Gebühren $Z _K e $ an Positionen $y _K $, der hamiltonan-Operator liest \begin{Equation} \hat{h} = \sum \_ {i = 1} ^ {N \_ e} \bruchteil {\hat{p} \_ i ^ 2} {2M \_ e} + \frac {1} {2} \sum \_ {i\ne j} \bruchteil {e ^ 2} {| \hat{x} \_ i-\hat{x} \_ j |}-\sum \_ {i, k} \bruchteil {z \_ KE ^ 2} {| \hat{x} \_ i-{y} \_ k |} + \frac {1} {2} \ sum_ {k\ne k '} \bruchteil {z \_ KZ \_ {k '} e ^ 2} {| y \_ k-y \_ ' |}. \label{EQ: Ham} \end{Equation} die momenta-Operatoren $ \hat{p} \_ i ^ 2 $ können im echten Raum als laplacian-Operatoren angezeigt werden, d. h. $ \hat{p} \_ i ^ 2 =-\partielle \_ {x \_ i} ^ 2-\partial { \_ y \_ i} ^ 2-\partiell \_ {z \_ i}
 Hier haben wir die vereinfachte Annahme gemacht, dass die Kerne für das Molekül im Ruhezustand sind.
-Dies wird als "Born-Oppenheimer Näherung" bezeichnet und ist in der Regel für das Energieverbrauchs Spektrum von $ \hat{h} $ gültig, da die Elektronenmasse ungefähr $1/1836 $ der Masse eines Proton entspricht.
+Dies wird als Born-Oppenheimer Näherung bezeichnet und ist in der Regel für das Energieverbrauchs Spektrum von $ \hat{h} $ gültig, da die Elektronenmasse ungefähr $1/1836 $ der Masse eines Proton ist.
 Dieser hamiltonaloperator kann problemlos gefunden werden, indem die Energie für ein System mit $N \_ e $-Elektronen geschrieben und der in [Quantum Dynamics](xref:microsoft.quantum.chemistry.concepts.quantumdynamics)beschriebene kanonische quantifizierungsprozess angewendet wird.
 
 Um die einheitliche Matrix Darstellung für $e ^ {-i\hat {H} t} $ zu erstellen, muss der Operator $ \hat{h} $ als Matrix dargestellt werden.
@@ -36,7 +36,7 @@ Aus diesem Grund ist es wichtig, eine Grundlage für die Lösung des Problems mi
 
 Es gibt viele geeignete Grundlagen, die verwendet werden können, und die Wahl einer guten Grundlage für das Problem ist ein Großteil der Kunst der Quantum-Chemie.
 Die einfachsten diese Basissätze sind Slater-Type-Orbitals (STO), bei denen es sich um (orthogonalisierte) Lösungen für die Schrödinger-Gleichung (d. h. Eigenfunktionen von $ \hat{h} $) für Wasserstoff ähnliche Atome handelt.
-Andere Basissätze, wie z. b. "Plane-Wellen" oder "Real-Space Orbitals", können verwendet werden, und für detailliertere Informationen wird der neugierige Reader auf den standardmäßigen Text ["Molekulare elektronischer Struktur Theorie"](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572) von helgaker verwiesen.
+Andere Basissätze, wie z. b. "Plane-Wellen" oder "Real-Space Orbitals", können verwendet werden. um weitere Details zu erhalten, wird der neugierige Reader von helgaker auf den standardmäßigen Text [' Molecular Electronic-Structure Theory '](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572) verwiesen.
 
 Obwohl die im obigen Modell verwendeten Zustände willkürlich erscheinen können, werden von Quantum-Mechanismen Einschränkungen hinsichtlich der Zustände festgestellt, die sich in der Art befinden.
 Insbesondere müssen alle gültigen elektronischen Quantum-Zustände unter austauschen von Elektronen Bezeichnungen antisymmetrisch sein.

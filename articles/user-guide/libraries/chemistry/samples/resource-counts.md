@@ -4,17 +4,17 @@ description: Erfahren Sie, wie Sie Ressourcenschätzungen mithilfe eines Quantum
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
-ms.topic: article-type-from-white-list
+ms.topic: sample
 uid: microsoft.quantum.chemistry.examples.resourcecounts
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 35c16e622a390b730ad7385efcc365c212e981fe
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b8974114a5629fa1928b5774e79aba93fa3d1f7d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869323"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856239"
 ---
 # <a name="obtaining-resource-counts"></a>Abrufen der Ressourcenanzahl
 

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._UncontrolledSpanSequence
 title: _UncontrolledSpanSequence-Funktion
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: _UncontrolledSpanSequence
 qsharp.summary: ''
-ms.openlocfilehash: 461c7312e11227490728640c82d52a7f826d6990
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: d0deb7844e251881c30eb983b65c75c8e09534aa
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96196683"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856425"
 ---
 # <a name="_uncontrolledspansequence-function"></a>_UncontrolledSpanSequence-Funktion
 

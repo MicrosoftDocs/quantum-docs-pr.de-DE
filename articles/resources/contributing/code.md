@@ -4,17 +4,17 @@ description: Erfahren Sie, wie Sie Beispiel-und Bibliotheks Code zum Microsoft Q
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 47845c4f3520e8c50cf8aefd9bf9e8f086c42842
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 54ef15db2b850e6a3bff38945c57129361517bfe
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691797"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856677"
 ---
 # <a name="contributing-code"></a>Mitwirken am Code
 
@@ -59,7 +59,7 @@ function PairTest () : Unit {
 Kompliziertere Bedingungen können mithilfe der Techniken im [Abschnitt "Tests](xref:microsoft.quantum.libraries.diagnostics) " des Handbuchs "Standardbibliotheken" überprüft werden.
 Der folgende Test überprüft beispielsweise, ob `H(q); X(q); H(q);` wie von aufgerufen wird, <xref:Microsoft.Quantum.Canon.ApplyWith> das gleiche wie `Z(q)` .
 
-```Q#
+```qsharp
 @Test("QuantumSimulator")
 operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);

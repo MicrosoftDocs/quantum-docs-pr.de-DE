@@ -4,17 +4,17 @@ description: Erfahren Sie mehr über die Typen und Vorgänge, die in der Microso
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.numerics.usage
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dfcb8e9e5a15d0881750d67cf58d7ad47cbecd3a
-ms.sourcegitcommit: 897ace8b506adb2331e911ee5633dceced566174
+ms.openlocfilehash: 92efd3b8677d2f27bc59f986ce6c9e915cd23652
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91764127"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856440"
 ---
 # <a name="using-the-numerics-library"></a>Verwenden der Numerics-Bibliothek
 
@@ -39,7 +39,7 @@ Die Numerics-Bibliothek unterstützt die folgenden Typen:
 1. **`SignedLittleEndian`**: Identisch `LittleEndian` mit, mit der Ausnahme, dass es sich um eine ganze Zahl mit Vorzeichen handelt, die in zwei-
 1. **`FixedPoint`**: Stellt eine reelle Zahl dar, die aus einem Qubit `qArr2 : Qubit[]` -Array und einer binären Punktposition besteht `pos` , die die Anzahl der binären Ziffern links vom binären Punkt zählt. `qArr2` wird auf die gleiche Weise wie gespeichert `SignedLittleEndian` .
 
-## <a name="operations"></a>Operations
+## <a name="operations"></a>Operationen (Operations)
 
 Für jeden der drei oben genannten Typen stehen eine Vielzahl von Vorgängen zur Verfügung:
 
@@ -95,7 +95,7 @@ operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
 
 Zum Auswerten von Smooth-Funktionen wie z. b. $ \sin (x) $ auf einem Quantum-Computer, bei dem $x $ eine Quantum- `FixedPoint` Zahl ist, stellt die-Numerics-Bibliothek des Quantum Development Kits die Vorgänge `EvaluatePolynomialFxP` und bereit `Evaluate[Even/Odd]PolynomialFxP` .
 
-Mit dem ersten, `EvaluatePolynomialFxP` , kann ein Polynoms der Form $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $ ausgewertet werden, wobei $d $ den *Grad*angibt. Dazu benötigen Sie lediglich die Polynomen `[a_0,..., a_d]` (vom Typ `Double[]` ), die Eingabe `x : FixedPoint` und die Ausgabe `y : FixedPoint` (anfänglich NULL):
+Mit dem ersten, `EvaluatePolynomialFxP` , kann ein Polynoms der Form $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $ ausgewertet werden, wobei $d $ den *Grad* angibt. Dazu benötigen Sie lediglich die Polynomen `[a_0,..., a_d]` (vom Typ `Double[]` ), die Eingabe `x : FixedPoint` und die Ausgabe `y : FixedPoint` (anfänglich NULL):
 ```qsharp
 EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```

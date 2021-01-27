@@ -4,17 +4,17 @@ description: Übersicht über das broombridge-Quantum-Chemie Schema, das verwend
 author: martinro
 ms.author: martinro
 ms.date: 10/17/2018
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.broombridge
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e580fd8267cc7ba30533d557eceb486f8c205be6
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e83d2d52fcdb2a30179ca6994d2c90f41cef7dbb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835773"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856200"
 ---
 # <a name="broombridge-quantum-chemistry-schema"></a>Broombridge-Quantum-Chemie Schema # 
 
