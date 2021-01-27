@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertMeasurementProbability
 title: Assertmessrementwahrscheinlichkeits-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AssertMeasurementProbability
 qsharp.summary: Asserts that measuring the given qubits in the given Pauli basis will have the given result with the given probability, within some tolerance.
-ms.openlocfilehash: 032b9224ad728f0637596668c2928a889deeba55
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 2fd89121516ef6994dedb75b214589b4e360ff8b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96202361"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98830821"
 ---
 # <a name="assertmeasurementprobability-operation"></a>Assertmessrementwahrscheinlichkeits-Vorgang
 
@@ -64,6 +64,16 @@ Eine Meldung, die gemeldet werden soll, wenn die Übersetzung fehlschlägt.
 ## <a name="output--unit"></a>Ausgabe: [Einheit](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## <a name="example"></a>Beispiel
+
+```qsharp
+using (register = Qubit()) {
+    H(register);
+    AssertProb([PauliZ], [register], One, 0.5,
+        "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
+}
+```
 
 ## <a name="remarks"></a>Bemerkungen
 
