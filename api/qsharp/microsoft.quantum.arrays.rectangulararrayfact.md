@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.RectangularArrayFact
 title: Rechgulararrayfact-Funktion
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: RectangularArrayFact
 qsharp.summary: Represents a condition that a 2-dimensional array has a rectangular shape
-ms.openlocfilehash: b8ef7d52f7f815ca3e21ded1236e775a381646cb
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 8cf6b85da6e8fee7fc255a173753a6468d8134b9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96220415"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845487"
 ---
 # <a name="rectangulararrayfact-function"></a>Rechgulararrayfact-Funktion
 
@@ -28,7 +28,7 @@ function RectangularArrayFact<'T> (array : 'T[][], message : String) : Unit
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Diese Funktion bestätigt, dass jede Zeile in einem Array die gleiche Länge aufweist.
 
@@ -54,6 +54,14 @@ Eine Meldung, die gedruckt werden soll, wenn das Array kein rechteckiges Array i
 ### <a name="t"></a>GIF
 
 Der Typ der einzelnen Elemente von `array` .
+
+## <a name="example"></a>Beispiel
+
+```qsharp
+RectangularArrayFact([[1, 2], [3, 4]], "Array is not rectangular");       // okay
+RectangularArrayFact([[1, 2, 3], [4, 5, 6]], "Array is not rectangular"); // okay
+RectangularArrayFact([[1, 2], [3, 4, 5]], "Array is not rectangular");    // will fail
+```
 
 ## <a name="see-also"></a>Weitere Informationen
 

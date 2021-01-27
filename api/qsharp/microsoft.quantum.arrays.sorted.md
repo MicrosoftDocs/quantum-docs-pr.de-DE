@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.Sorted
 title: Sortierte Funktion
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Sorted
 qsharp.summary: Given an array, returns the elements of that array sorted by a given comparison function.
-ms.openlocfilehash: bd8b869e03c7f4687c456a944e07a811ae0d2ce2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: cb8a1ef438d798c8201ed9f52677e253770df1d3
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96220228"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845447"
 ---
 # <a name="sorted-function"></a>Sortierte Funktion
 
@@ -51,6 +51,14 @@ Das Array, das sortiert werden soll.
 
 Der Typ der einzelnen Elemente von `array` .
 
+## <a name="example"></a>Beispiel
+
+Im folgenden Code Ausschnitt wird ein Array aus ganzen Zahlen sortiert, das in aufsteigender Reihenfolge auftreten soll:
+
+```qsharp
+let sortedArray = Sorted(LessThanOrEqualI, [3, 17, 11, -201, -11]);
+```
+
 ## <a name="remarks"></a>Bemerkungen
 
 Es wird `comparison` davon ausgegangen, dass die Funktion transitiv ist, sodass, wenn `comparison(a, b)` und `comparison(b, c)` , `comparison(a, c)` angenommen wird. Wenn diese Eigenschaft nicht enthalten ist, ist die Ausgabe dieser Funktion möglicherweise falsch.
@@ -60,7 +68,7 @@ Insbesondere wird sichergestellt, dass die von dieser Funktion ausgeführte Sort
 
 Beispiel:
 
-```Q#
+```qsharp
 function LastDigitLessThanOrEqual(left : Int, right : Int) : Bool {
     return LessThanOrEqualI(
         left % 10, right % 10

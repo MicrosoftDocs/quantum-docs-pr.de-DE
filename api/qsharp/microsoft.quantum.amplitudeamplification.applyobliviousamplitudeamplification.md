@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.ApplyObliviousAmplitudeAmplification
 title: Applyobliviousamplitudeverstärkungsvorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: ApplyObliviousAmplitudeAmplification
 qsharp.summary: Oblivious amplitude amplification by specifying partial reflections.
-ms.openlocfilehash: 9b0060201bcdae02a207362a753a0a403cdbb896
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c171021272076cc3960307523e25c4493bb49c5a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191515"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845872"
 ---
 # <a name="applyobliviousamplitudeamplification-operation"></a>Applyobliviousamplitudeverstärkungsvorgang
 
@@ -72,7 +72,7 @@ Durch eine Sequenz von Reflektionen zu den Start-und Ziel Zuständen im Zusatz R
 
 In den meisten Fällen `auxiliaryRegister` wird im Status $ \ket{\text{Start}} \_ a $ initialisiert.
 
-## <a name="references"></a>Referenzen
+## <a name="references"></a>References
 
 Siehe
 

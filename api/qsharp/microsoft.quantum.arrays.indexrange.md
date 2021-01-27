@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.IndexRange
 title: Indexrange-Funktion
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: IndexRange
 qsharp.summary: Given an array, returns a range over the indices of that array, suitable for use in a for loop.
-ms.openlocfilehash: 5afd4cc260ac3e384d2736bf7b43d941afd9ef73
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 043b56a1ac3cbe5cd59cdd45d3725f301d81a6ee
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96220942"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845780"
 ---
 # <a name="indexrange-function"></a>Indexrange-Funktion
 
@@ -45,3 +45,12 @@ Ein Bereich über alle Indizes des Arrays.
 ### <a name="telement"></a>' Telements '
 
 Der Typ der Elemente des Arrays.
+
+## <a name="example"></a>Beispiel
+
+Die folgenden `for` Schleifen sind äquivalent:
+
+```qsharp
+for (idx in IndexRange(array)) { ... }
+for (idx in IndexRange(array)) { ... }
+```
