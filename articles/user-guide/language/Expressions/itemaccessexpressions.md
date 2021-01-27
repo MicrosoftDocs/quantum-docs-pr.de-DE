@@ -4,17 +4,17 @@ description: Erfahren Sie mehr über den Zugriff auf Array Elemente und das Auft
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.itemaccessexpression
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3abda43a8166bc55713f2c7db12b8d058225f5ce
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 78284def8bd76c5a051c47d56429d6d7399813ed
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96233690"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844217"
 ---
 <!---
 # Item access operator in Q#
