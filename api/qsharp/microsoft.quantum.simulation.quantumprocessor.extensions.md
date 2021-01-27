@@ -1,19 +1,19 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 title: Microsoft. Quantum. Simulation. quantumprocessor. Extensions-Namespace
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/23/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.summary: ''
-ms.openlocfilehash: ea91be17522136a80542a367d1e20c37fef0ae0c
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c8f5846d94242d4feff43b4dc97cedc7cb952989
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192416"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854737"
 ---
-# <a name="microsoftquantumsimulationquantumprocessorextensions-namespace"></a><span data-ttu-id="f21f3-102">Microsoft. Quantum. Simulation. quantumprocessor. Extensions-Namespace</span><span class="sxs-lookup"><span data-stu-id="f21f3-102">Microsoft.Quantum.Simulation.QuantumProcessor.Extensions namespace</span></span>
+# <a name="microsoftquantumsimulationquantumprocessorextensions-namespace"></a><span data-ttu-id="f6846-102">Microsoft. Quantum. Simulation. quantumprocessor. Extensions-Namespace</span><span class="sxs-lookup"><span data-stu-id="f6846-102">Microsoft.Quantum.Simulation.QuantumProcessor.Extensions namespace</span></span>
 
 
 
