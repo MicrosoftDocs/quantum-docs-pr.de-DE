@@ -4,17 +4,17 @@ description: Es wird beschrieben, wie Sie zum Microsoft Quantum Development Kit 
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a8a527df59bd7ee038de71e04003cf456b094afb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5079353f4feb5387e4958939b3f5bf7407056c9c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691770"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858043"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Mitwirken am Quantum Development Kit
 
@@ -41,9 +41,9 @@ In diesem Leitfaden werden die drei Optionen beschrieben, die für das Quantum D
 All diese Optionen sind wichtig für die Schaffung einer Quantencommunity, die den Benutzern weiterhilft und ihnen viele Möglichkeiten eröffnet.
 Die hier angegebene Liste deckt aber nicht alle Eventualitäten ab. Wir möchten Sie ermutigen, auch andere Möglichkeiten zu erkunden, wie Sie die Community in Bezug auf die Quantenprogrammierung voranbringen können!
 
-- **Melden von Fehlern** : Der erste Schritt beim Beheben von Fehlern und anderen Arten von Problemen ist deren Identifizierung. Wenn Sie im Quantum Development Kit einen Fehler finden und uns darüber informieren, können wir ihn beheben und die Tools für die Community zur Quantenprogrammierung verbessern.
-- **Verbessern der Dokumentation** : Jede Dokumentation kann verbessert, um neue Details erweitert und besser zugänglich gemacht werden.
-- **Mitwirken am Code** : Einer der direktesten Wege zum Leisten eines Beitrags ist natürlich das Hinzufügen von neuem Code zum Quantum Development Kit.
+- **Melden von Fehlern**: Der erste Schritt beim Beheben von Fehlern und anderen Arten von Problemen ist deren Identifizierung. Wenn Sie im Quantum Development Kit einen Fehler finden und uns darüber informieren, können wir ihn beheben und die Tools für die Community zur Quantenprogrammierung verbessern.
+- **Verbessern der Dokumentation**: Jede Dokumentation kann verbessert, um neue Details erweitert und besser zugänglich gemacht werden.
+- **Mitwirken am Code**: Einer der direktesten Wege zum Leisten eines Beitrags ist natürlich das Hinzufügen von neuem Code zum Quantum Development Kit.
 
 Diese unterschiedlichen Arten von Beiträgen sind äußerst wertvoll und werden von uns sehr geschätzt.
 Der restliche Teil des Leitfadens enthält Hinweise dazu, wie Sie beim Leisten von Beiträgen jeweils vorgehen.

@@ -4,18 +4,17 @@ description: Hier erfahren Sie, wie Sie das Microsoft Quantum Development Kit (Q
 author: bradben
 ms.author: v-benbra
 ms.date: 5/8/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c6e128ea8b3845336fb692d2bceefda998b935d9
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 15067f1762f4468345beee38c98e1b943081fc1b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96228827"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98859023"
 ---
 # <a name="setting-up-the-microsoft-quantum-development-kit-qdk"></a>Einrichten des Microsoft Quantum Development Kit (QDK)
 

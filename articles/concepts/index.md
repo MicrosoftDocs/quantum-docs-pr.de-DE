@@ -5,16 +5,16 @@ author: QuantumWriter
 ms.author: v-benbra
 uid: microsoft.quantum.concepts.intro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1523bfdfec08fd093f1c7ea999e23e85fc3cfc14
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 8833c398ae312c6da96eb4711ade5e5e975459f4
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91478935"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98848711"
 ---
 # <a name="quantum-computing-history-and-background"></a>Quantencomputing: Geschichte und Hintergrund
 

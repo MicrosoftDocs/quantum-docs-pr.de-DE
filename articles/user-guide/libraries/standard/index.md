@@ -4,17 +4,17 @@ description: Hier finden Sie Informationen zu den Q#-Standardbibliotheken von Mi
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 63709015a12a7f972a676018970143ca163e92d0
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 58e271fefba84e45c5558eeee066bc37c22bf63b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90836011"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858317"
 ---
 # <a name="introduction-to-the-no-locq-standard-libraries"></a>Einführung in die Q#-Standardbibliotheken
 
