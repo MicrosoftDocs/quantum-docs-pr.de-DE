@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.DumpRegister
 title: Dumpregiester-Funktion
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: DumpRegister
 qsharp.summary: Dumps the current target machine's status associated with the given qubits.
-ms.openlocfilehash: 9623d6d881f1f0ec048c3a951fe259bdfac84766
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 835c7a9edb22b4be630ebfc04587c12b3ff668b2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96202021"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98829231"
 ---
 # <a name="dumpregister-function"></a>Dumpregiester-Funktion
 
@@ -43,7 +43,7 @@ Die Liste der zu berichtenden Qubits.
 
 ## <a name="output--unit"></a>Ausgabe: [Einheit](xref:microsoft.quantum.lang-ref.unit)
 
-Keine
+Keine.
 
 ## <a name="type-parameters"></a>Typparameter
 
