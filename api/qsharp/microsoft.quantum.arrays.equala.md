@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.EqualA
 title: Equala-Funktion
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: EqualA
 qsharp.summary: Given two arrays of the same type and a predicate that is defined for pairs of elements of the arrays, checks whether the arrays are equal.
-ms.openlocfilehash: 176e15139a27d375fb047c07fa1ee778dc8cc2ce
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: fe22e208f67d2c289b0b2d99f19ff26fc5abc3d8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96221367"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98848688"
 ---
 # <a name="equala-function"></a>Equala-Funktion
 
@@ -56,6 +56,24 @@ Das heißt, wenn beide Arrays die gleiche Länge aufweisen und alle Elemente gle
 ### <a name="t"></a>GIF
 
 Der Typ der Elemente des Arrays.
+
+## <a name="example"></a>Beispiel
+
+Der folgende Code überprüft, ob verschiedene Paare von Arrays gleich sind:
+
+```qsharp
+open Microsoft.Quantum.Arrays;
+open Microsoft.Quantum.Logical;
+
+function EqualADemo() : Unit {
+    let equalArrays = EqualA(EqualI, [2, 3, 4], [2, 3, 4]);
+    let differentLength = EqualA(EqualD, [2.0, 3.0, 4.0], [2.0, 3.0]);
+    let differentElements = EqualA(EqualR, [One, Zero], [One, One]);
+    Message($"Equal arrays are {equalArrays ? "equal" | "not equal"}");
+    Message($"Arrays of different length are {differentLength ? "equal" | "not equal"}");
+    Message($"Arrays of the same length with different elements are {differentElements ? "equal" | "not equal"}");
+}
+```
 
 ## <a name="remarks"></a>Bemerkungen
 

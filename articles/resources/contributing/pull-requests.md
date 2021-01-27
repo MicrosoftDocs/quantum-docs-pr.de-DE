@@ -4,17 +4,17 @@ description: Erfahren Sie, wie Sie eine GitHub-Pull Request übermitteln, wenn S
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.pulls
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8e04e6502e0a6005dfdf0f93450bf3ffd5aaa672
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a936283f3e51da9b97b8145bad3ab765b6423458
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866926"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858470"
 ---
 # <a name="opening-pull-requests"></a>Öffnen von Pull Requests #
 

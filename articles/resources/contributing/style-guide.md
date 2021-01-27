@@ -4,24 +4,24 @@ description: Erlernen Sie die Benennungs-, Eingabe-, Dokumentations-und Formatie
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: cfc201a16b1b42c82314220f77ae120076291759
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 2edd6baf7375415e395d15bac422168216bcff9a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231654"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852760"
 ---
 # <a name="no-locq-style-guide"></a>Q# Styleguide #
 ## <a name="general-conventions"></a>Allgemeine Konventionen ##
 
 Die in diesem Handbuch empfohlenen Konventionen sollen Ihnen helfen, Programme und Bibliotheken Q# leichter zu lesen und zu verstehen.
 
-## <a name="guidance"></a>Leitfaden
+## <a name="guidance"></a>Anleitungen
 
 Wir empfehlen Folgendes:
 
@@ -68,7 +68,7 @@ Andere Verben können auch in diesem Fall nützlich sein, wie in `IterateThrough
 | Anwenden | Ein als Eingabe bereitgestellter Vorgang wird aufgerufen. |
 | Assert | Eine Hypothese über das Ergebnis einer möglichen Quantum-Messung wird von einem Simulator geprüft. |
 | Schätzung | Ein klassischer Wert wird zurückgegeben, der eine Schätzung darstellt, die aus einer oder mehreren Messungen gezeichnet wird. |
-| "Measure" | Eine Quantum-Messung wird ausgeführt, und das Ergebnis wird an den Benutzer zurückgegeben. |
+| Measure | Eine Quantum-Messung wird ausgeführt, und das Ergebnis wird an den Benutzer zurückgegeben. |
 | Vorbereiten | Ein bestimmtes Register von Qubits wird in einem bestimmten Zustand initialisiert. |
 | Beispiel | Ein klassischer Wert wird nach dem Zufallsprinzip aus einer Verteilung zurückgegeben. |
 
@@ -96,7 +96,7 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-| &nbsp;  | Name | BESCHREIBUNG |
+| &nbsp;  | Name | Beschreibung |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | Löschen Sie die Verwendung eines Verbs ("reflektieren"), um die Auswirkung des Vorgangs anzuzeigen. |
 | ☒ | <s>`operation XRotation`</s> | Die Verwendung von Substantiv Phrase schlägt eine Funktion anstelle von Operation vor. |
@@ -129,7 +129,7 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-| &nbsp;  | Name | BESCHREIBUNG |
+| &nbsp;  | Name | Beschreibung |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | Kommuniziert den Zweck des Einstiegs Punkts über den Vorgangs Namen eindeutig. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | Die Verwendung von `Main` kommuniziert nicht eindeutig mit dem Zweck des Einstiegs Punkts und ist mit dem- `@EntryPoint()` Attribut redundant. |
@@ -171,7 +171,7 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-| &nbsp;   | Name | BESCHREIBUNG |
+| &nbsp;   | Name | Beschreibung |
 |---|------|-------------|
 | ☑ | `X` | Wohl verständliche Kurzformen für "Apply a $X $ Transformation" |
 | ☑ | `CNOT` | Wohl verständliche Kurzformen für "kontrolliert-not" |
@@ -228,7 +228,7 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-| &nbsp;   | Name | BESCHREIBUNG |
+| &nbsp;   | Name | Beschreibung |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | Die Vorposition "to" führt zu einem Verb Ausdruck, der einen Vorgang und keine Funktion angibt. |
 | ☒ | <s>`AsDouble`</s> | Der Eingabetyp ist aus dem Funktionsnamen nicht eindeutig. |
@@ -251,7 +251,7 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-| &nbsp;  | Name | BESCHREIBUNG |
+| &nbsp;  | Name | Beschreibung |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | Verwenden Sie keinen Unterstrich `_` , um anzugeben, dass dieser Vorgang nur für die interne Verwendung vorgesehen ist. |
 | ☑ | `internal operation ApplyDecomposedOperation` | Das `internal` Schlüsselwort am Anfang weist eindeutig darauf hin, dass dieser Vorgang nur für die interne Verwendung vorgesehen ist. |
@@ -323,7 +323,7 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-| &nbsp;  | Codeausschnitt | BESCHREIBUNG |
+| &nbsp;  | Codeausschnitt | Beschreibung |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | Der Name `Apply` ist ein `CamelCase` -formatierter Verb Ausdruck, der darauf hinweist, dass das benannte Element ein Vorgang ist. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Benannte Elemente sollten mit einem ersten Großbuchstaben beginnen. |
@@ -479,7 +479,7 @@ Wir empfehlen Folgendes:
 
 # <a name="examples"></a>[Beispiele](#tab/examples)
 
-| &nbsp; | Codeausschnitt | BESCHREIBUNG |
+| &nbsp; | Codeausschnitt | Beschreibung |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | Verwenden Sie Leerzeichen um binäre Operatoren. |
 | ☒ | <s>`target:Qubit`</s> | Verwenden Sie Leerzeichen um Doppelpunkte der Typanmerkung. |
