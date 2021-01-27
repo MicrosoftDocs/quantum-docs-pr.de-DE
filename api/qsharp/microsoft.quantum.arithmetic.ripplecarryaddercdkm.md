@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderCDKM
 title: Ripplecarryaddercdkm-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: RippleCarryAdderCDKM
 qsharp.summary: Reversible, in-place ripple-carry addition of two integers.
-ms.openlocfilehash: b08d8823fd539263205aca1ee15ee69adcb163b7
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: df9b62b649af532a4202aacc3e8dd4613eb8665d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96222098"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846360"
 ---
 # <a name="ripplecarryaddercdkm-operation"></a>Ripplecarryaddercdkm-Vorgang
 
@@ -28,7 +28,7 @@ operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, 
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Bei zwei $n ganzen Zahlen mit ganzen Zahlen, die in den littleEndian `xs` -Registern und `ys` , und einem Qubit-Wert codiert sind, berechnet der-Vorgang die Summe der beiden ganzen Zahlen, bei denen die $n $ geringsten signifikanten Bits des Ergebnisses in gespeichert sind `ys` und der Wert für das Ausführen von XoReD zum Qubit ist `carry` .
 
@@ -58,7 +58,7 @@ Carry Qubit, ist XoReD mit dem signifikantesten Bit der Summe.
 
 Dieser Vorgang verfügt über die gleiche Funktionalität wie ripplecarryadderd, verwendet jedoch nur ein zusätzliches Qubit anstelle von $n $.
 
-## <a name="references"></a>Referenzen
+## <a name="references"></a>References
 
 - Steven a. Cuccaro, Thomas G. Draper, Samuel A. KUTIN, David Petrie Moulton: "A New Quantum Ripple-Carry Additions Circuit", 2004.
   https://arxiv.org/abs/quant-ph/0410184v1

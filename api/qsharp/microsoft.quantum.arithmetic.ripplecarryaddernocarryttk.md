@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderNoCarryTTK
 title: Ripplecarryaddernocarryttk-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: RippleCarryAdderNoCarryTTK
 qsharp.summary: Reversible, in-place ripple-carry addition of two integers without carry out.
-ms.openlocfilehash: a539d85a4800c2f4452a1c6fe2c4f88a6296c3e1
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 0e131204d3eaff7f99aa9ff7c3c1ae93a1bf611b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96221996"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846347"
 ---
 # <a name="ripplecarryaddernocarryttk-operation"></a>Ripplecarryaddernocarryttk-Vorgang
 
@@ -28,7 +28,7 @@ operation RippleCarryAdderNoCarryTTK (xs : Microsoft.Quantum.Arithmetic.LittleEn
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Bei zwei $n in den littleEndian-Registern und in den littleEndian-Registern codierten $-Bit-Ganzzahlen `xs` `ys` berechnet der Vorgang die Summe der beiden integger Modulo $2 ^ n $, wobei $n $ die bitgröße der Eingaben `xs` und ist `ys` . Das Bit wird nicht berechnet.
 
@@ -53,7 +53,7 @@ Der littleEndian-Qubit-Registrierungs Codierungs Wert für die zweite Ganzzahl s
 
 Dieser Vorgang verfügt über die gleiche Funktionalität wie ripplecarryadderttk, gibt jedoch nicht das "Carry"-Bit zurück.
 
-## <a name="references"></a>Referenzen
+## <a name="references"></a>References
 
 - Yasuhiro Takahashi, Seiichiro Tani, Noboru Kunihiro: "Quantum Additions-und ungebundene Fan-Out", Quantum-Informationen und-Berechnung, Vol. 10, 2010.
   https://arxiv.org/abs/0910.2530

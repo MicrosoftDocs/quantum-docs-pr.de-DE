@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 214d584840f235868c66a1fb3ee24d0acab49630
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692170"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857240"
 ---
 # <a name="applications"></a>Anwendungen #
 
@@ -27,7 +27,7 @@ Wenn diese Darstellung exponentiell mit der Anzahl von $n $ Qubits $N = 2 ^ n $ 
 Allerdings kann die Situation auf der Quantum-Hardware sehr unterschiedlich sein. Die häufigste Variation der Quantum-Simulation ist das zeitunabhängige hamiltona-Simulations Problem. Dort wird eine Beschreibung der System-hamiltonan $H $, eine hermitian-Matrix und ein anfänglicher Quantum-Status $ \ket{\psi (0)} $ bereitgestellt, der in gewisser Weise auf $n $ Qubits auf einem Quantum-Computer codiert wird. Die Quantum-Zustände in geschlossenen Systemen werden unter der Schrödinger-Gleichung $ $ \begin{align} i\frac {d \ket{\psi (t)}} {d t} & = H \ket{\psi (t)} weiterentwickelt, \end{align} $ $ das Ziel ist die Implementierung des einheitlichen Time-Evolution-Operators $U (t) = e ^ {-IHT} $ zu einer festgelegten Zeit $t $, wobei $ \ket{\psi (t)} = U (t) \ket{\psi (0)} $ die Schrödinger-Gleichung löst.
 Analog dazu löst das zeitabhängige hamiltona-Simulations Problem dieselbe Gleichung, aber mit $H (t) $ Now-Funktion.
 
-Die hamiltona-Simulation ist eine wesentliche Komponente vieler anderer Probleme bei der Quantum-Simulation, und Lösungen für hamiltonein Simulations Problem sind Algorithmen, die eine Sequenz primitiver Quantum-Gates für die Zusammenstellung eines Näherungs Einheits-"$ \tilde{u} $" mit dem Fehler "$ \\ | \tilde{u}-U \\ [spectral norm](xref:microsoft.quantum.concepts.matrix-advanced) Die Komplexität dieser Algorithmen hängt stark davon ab, wie eine Beschreibung der hamiltona von Interesse für einen Quantum-Computer zugänglich gemacht wird. Wenn beispielsweise im ungünstigsten Fall $H $-$n $ Qubits als Liste von $2 ^ n \times 2 ^ n $-Nummern bereitgestellt werden soll, eine für jedes Matrixelement, ist das einfache Lesen der Daten bereits exponentiell Zeit erforderlich. Im besten Fall könnte der Zugriff auf eine Blackbox-einheitlich angenommen werden, die $O \ket{t}\ket{\psi (0)} = \ket{t}U (t) \ket{\psi (0)} $ triviale das Problem löst. Keines dieser Eingabe Modelle ist besonders interessant: das erste ist nicht besser als klassisches Verfahren, und das zweite als das schwarze Feld verbirgt die primitive Gate-Komplexität der Implementierung, die in der Anzahl der Qubits exponentiell sein könnte.
+Die hamiltona-Simulation ist eine wesentliche Komponente vieler anderer Probleme bei der Quantum-Simulation, und Lösungen für hamiltonein Simulations Problem sind Algorithmen, die eine Sequenz primitiver Quantum-Gates für die Zusammenstellung eines Näherungs Einheits-"$ \tilde{u} $" mit dem Fehler "$ \\ | \tilde{u}-U \\ [](xref:microsoft.quantum.concepts.matrix-advanced) Die Komplexität dieser Algorithmen hängt stark davon ab, wie eine Beschreibung der hamiltona von Interesse für einen Quantum-Computer zugänglich gemacht wird. Wenn beispielsweise im ungünstigsten Fall $H $-$n $ Qubits als Liste von $2 ^ n \times 2 ^ n $-Nummern bereitgestellt werden soll, eine für jedes Matrixelement, ist das einfache Lesen der Daten bereits exponentiell Zeit erforderlich. Im besten Fall könnte der Zugriff auf eine Blackbox-einheitlich angenommen werden, die $O \ket{t}\ket{\psi (0)} = \ket{t}U (t) \ket{\psi (0)} $ triviale das Problem löst. Keines dieser Eingabe Modelle ist besonders interessant: das erste ist nicht besser als klassisches Verfahren, und das zweite als das schwarze Feld verbirgt die primitive Gate-Komplexität der Implementierung, die in der Anzahl der Qubits exponentiell sein könnte.
 
 ### <a name="descriptions-of-hamiltonians"></a>Beschreibungen der hamiltonane ###
 
@@ -151,7 +151,7 @@ Wir überprüfen diese beiden Schritte unten.
 
 ### <a name="period-finding"></a>Suche nach Zeitraum ###
 
-Nachdem Sie gesehen haben, wie die Quantum Fourier-Transformation und-Phasen Schätzung funktionieren (siehe [Quantum-Algorithmen](xref:microsoft.quantum.libraries.standard.algorithms)), können wir diese Tools verwenden, um ein klassisches, schwer wiesendes Problem mit dem Namen " *Zeit Suche* "  Im nächsten Abschnitt erfahren Sie, wie Sie die Zeitspanne für das Factoring anwenden.
+Nachdem Sie gesehen haben, wie die Quantum Fourier-Transformation und-Phasen Schätzung funktionieren (siehe [Quantum-Algorithmen](xref:microsoft.quantum.libraries.standard.algorithms)), können wir diese Tools verwenden, um ein klassisches, schwer wiesendes Problem mit dem Namen " *Zeit Suche*"  Im nächsten Abschnitt erfahren Sie, wie Sie die Zeitspanne für das Factoring anwenden.
 
 Bei zwei Ganzzahlen $a $ und $N $, bei denen $a<N $, das Ziel der Zeit Steuerungs Suche (auch als Bestellsuche bezeichnet) ist, die _Reihenfolge_ $r $ of $a $ modulo $N $ zu finden, wobei $r $ als die geringste positive Ganzzahl definiert ist, die $a ^ r \equiv 1 \text{mod} N $.  
 
@@ -178,7 +178,7 @@ Der gesteuerte $U _A $ Gate ordnet $ \ket{x} $ zu $ \ket{(AX) \text{mod} N} $ zu
 Um $ (a ^ NX) \text{mod} n $ zu erreichen, können wir einfach "gesteuerte-$U _ {a ^ n} $" anwenden, wobei wir $a ^ N \text{mod} n $ klassisch berechnen, um in die Quantum-Leitung zu gelangen.  
 Die Verbindungen, um eine solche Modulare Arithmetik zu erzielen, wurden in der Dokumentation für die [Quantum-Arithmetik](./algorithms.md#arithmetic)beschrieben. insbesondere benötigen wir eine modulare exponentiations Verbindung, um die kontrollierten $U \_ {a ^ i} $-Vorgänge zu implementieren.
 
-Die obige Verbindung entspricht der [Quantum-Phasen-Schätzung](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) und ermöglicht das explizite Sortieren der Reihenfolge. die Anzahl der benötigten Qubits kann reduziert werden. Wir können die-Methode von Beauregard für die Bestellsuche befolgen, wie [auf Seite 8 von arXiv: quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)beschrieben, oder Sie können eine der Phasen Schätz Routinen verwenden, die in Microsoft. Quantum. Charakterisierung verfügbar sind. Beispielsweise wird bei der [robusten Phasen Schätzung](xref:microsoft.quantum.characterization.robustphaseestimation) auch ein zusätzliches Qubit verwendet.
+Die obige Verbindung entspricht der [Quantum-Phasen-Schätzung](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) und ermöglicht das explizite Sortieren der Reihenfolge. die Anzahl der benötigten Qubits kann reduziert werden. Wir können die-Methode von Beauregard für die Bestellsuche befolgen, wie [auf Seite 8 von arXiv: quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)beschrieben, oder Sie können eine der Phasen Schätz Routinen verwenden, die in Microsoft. Quantum. Charakterisierung verfügbar sind. Beispielsweise wird bei der [robusten Phasen Schätzung](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation) auch ein zusätzliches Qubit verwendet.
 
 ### <a name="factoring"></a>Berücksichtigung ###
 Das Ziel der Factoring besteht darin, die beiden Hauptfaktoren der ganzzahligen $N $ zu ermitteln, wobei $N $ eine $n $-Bit-Zahl ist.  

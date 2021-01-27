@@ -1,6 +1,6 @@
 ---
 Title: "Iterationen und Schleifen in Q# " Beschreibung: erfahren Sie mehr über die Verwendung von "for"-Schleifen in der Q# Programmiersprache.
-Autor: betinaheim ms. Author: beheimer ms. Date: 10/07/2020 ms. Topic: Artikel UID: Microsoft. Quantum. qsharp. Iterations NO-LOC:
+Autor: betinaheim ms. Author: beheimer ms. Date: 10/07/2020 ms. Topic: Referenz-UID: Microsoft. Quantum. qsharp. Iterations NO-LOC:
 - "Q#"
 - "$$v"
 

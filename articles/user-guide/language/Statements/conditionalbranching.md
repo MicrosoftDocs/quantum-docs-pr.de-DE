@@ -1,6 +1,6 @@
 ---
 Title: "bedingte Verzweigung in Q# " Beschreibung: Informationen zur bedingten Verzweigung und der if-Anweisung in der Q# Programmiersprache.
-Autor: betinaheim ms. Author: beheimer ms. Date: 10/07/2020 ms. Topic: Artikel UID: Microsoft. Quantum. qsharp. conditionalbranching NO-LOC:
+Autor: betinaheim ms. Author: beheimer ms. Date: 10/07/2020 ms. Topic: Referenz-UID: Microsoft. Quantum. qsharp. conditionalbranching NO-LOC:
 - "Q#"
 - "$$v"
 

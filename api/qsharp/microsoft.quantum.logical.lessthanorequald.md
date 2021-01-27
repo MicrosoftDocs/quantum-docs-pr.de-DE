@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Logical.LessThanOrEqualD
 title: Lessthanorequald-Funktion
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: LessThanOrEqualD
 qsharp.summary: Returns true if and only if a number is less than or equal to another number.
-ms.openlocfilehash: 3f4ccb0888e7df7c43ff73be8a3140e3fa84d4dc
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 703b782efe9daccd4f6a339481d49ae9232123f3
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96197635"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98849139"
 ---
 # <a name="lessthanorequald-function"></a>Lessthanorequald-Funktion
 
@@ -49,7 +49,7 @@ Der zweite zu vergleichende Wert.
 
 Die folgenden sind gleichwertig:
 
-```Q#
+```qsharp
 let cond = a <= b;
 let cond = LessThanOrEqualD(a, b);
 ```

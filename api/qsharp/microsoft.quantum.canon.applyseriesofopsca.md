@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplySeriesOfOpsCA
 title: Applyseriesofopsca-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplySeriesOfOpsCA
 qsharp.summary: Applies a list of ops and their targets sequentially on an array. (Adjoint + Controlled)
-ms.openlocfilehash: 9dd1343b3ebcc75592441f150eee822cfe83f9a1
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 9a1f6189428b086c38b1d0f289afb18c2cf1be40
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96217882"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850871"
 ---
 # <a name="applyseriesofopsca-operation"></a>Applyseriesofopsca-Vorgang
 
@@ -56,6 +56,10 @@ Das Qubit-Register, das bearbeitet werden soll.
 ### <a name="t"></a>GIF
 
 
+
+## <a name="example"></a>Beispiel
+
+Folgendes gilt für Exp ([Paulix, pauliy], 0,5) für Qubits 0, 1//dann X bis Qubit 2 Let OPS = [Exp ([Paulix, pauliy], 0,5, _), applyjefirstqubitca (X, _)]; Let-Indizes = [[0, 1], [2]]; Applyseriesofopsca (OPS, Indizes, qubitarray);
 
 ## <a name="see-also"></a>Weitere Informationen
 

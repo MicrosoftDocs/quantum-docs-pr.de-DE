@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger
 title: Multiplyandaddbymodularinteger-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: MultiplyAndAddByModularInteger
 qsharp.summary: Performs a modular multiply-and-add by integer constants on a qubit register.
-ms.openlocfilehash: 169326879919b5b72d600c33d624776b720cc6bc
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: e4de934a5776e80dbf5f0d8334bf806e6a84b743
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96222591"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846514"
 ---
 # <a name="multiplyandaddbymodularinteger-operation"></a>Multiplyandaddbymodularinteger-Vorgang
 
@@ -28,7 +28,7 @@ operation MultiplyAndAddByModularInteger (constMultiplier : Int, modulus : Int, 
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Implementiert die Zuordnung $ $ \begin{align} \ket{x} \ket{b} \mapsto \ket{x} \ket{(b + a \cdot x) \operatschmue{mod} N} \end{align} $ $ für einen angegebenen Modulo $N $, Konstanten Multiplikator $a $ und sumand $y $.
 

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.GreaterThan
 title: GreaterThan-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: GreaterThan
 qsharp.summary: Applies a greater-than comparison between two integers encoded into qubit registers, flipping a target qubit based on the result of the comparison.
-ms.openlocfilehash: 644d68affbdb508938f76de5025a1a463e7284e2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 553efb0fc83f24235cb4a77933bd1d547bbd1fed
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96223084"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846632"
 ---
 # <a name="greaterthan-operation"></a>GreaterThan-Vorgang
 
@@ -28,7 +28,7 @@ operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Micr
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Führt einen streng größeren Vergleich von zwei Ganzzahlen $x $ und $y $ aus, codiert in Qubit-Register XS und YS. Wenn $x > y $, wird das Ergebnis-Qubit gekippt, andernfalls behält das Qubit-Ergebnis den Zustand bei.
 
@@ -58,7 +58,7 @@ Einzelnes Qubit, das beim $x > y $ gekippt wird.
 
 Verwendet den Trick, bei dem $x-y = (x ' + y) ' $, WHERE ' das Einerkomplement bezeichnet.
 
-## <a name="references"></a>Referenzen
+## <a name="references"></a>References
 
 - Steven a. Cuccaro, Thomas G. Draper, Samuel A. KUTIN, David Petrie Moulton: "A New Quantum Ripple-Carry Additions Circuit", 2004.
   https://arxiv.org/abs/quant-ph/0410184v1
