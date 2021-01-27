@@ -4,16 +4,16 @@ description: Erfahren Sie mehr über gängige und benutzerdefinierte Typkonverti
 author: cgranade
 uid: microsoft.quantum.libraries.convert
 ms.author: chgranad
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9ec3a2ecd2aa59a10a7033e7b3067eb147ce4035
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 67f47339363a52097f342c8ae4e43a8a93d606a8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691102"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858018"
 ---
 # <a name="type-conversions"></a>Typkonvertierungen #
 
@@ -45,7 +45,7 @@ Der- <xref:Microsoft.Quantum.Convert> Namespace bietet auch einige exotischere K
 Schließlich bietet die Q# Standardbibliothek eine Reihe von benutzerdefinierten Typen, z. b <xref:Microsoft.Quantum.Math.Complex> <xref:Microsoft.Quantum.Arithmetic.LittleEndian> . und.
 Zusammen mit diesen Typen bietet die Standardbibliothek Funktionen wie z. b. <xref:Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian> :
 
-```Q#
+```qsharp
 open Microsoft.Quantum.Arithmetic as Arithmetic;
 
 let register = Arithmetic.BigEndian(qubits);

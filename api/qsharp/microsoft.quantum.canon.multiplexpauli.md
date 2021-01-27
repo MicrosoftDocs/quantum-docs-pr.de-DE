@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.MultiplexPauli
 title: Multiplexpauli-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: MultiplexPauli
 qsharp.summary: Applies a Pauli rotation conditioned on an array of qubits.
-ms.openlocfilehash: c29f7efa6b10835ce41ca4c535ec1371ac38ab63
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 656b510cb19af69a9a3f0d537d54b0abfe76de4b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96206032"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852448"
 ---
 # <a name="multiplexpauli-operation"></a>Multiplexpauli-Vorgang
 
@@ -28,7 +28,7 @@ operation MultiplexPauli (coefficients : Double[], pauli : Pauli, control : Micr
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Dadurch wird ein mehrfach gesteuerter einheitlicher Vorgang angewendet, bei dem die Drehung um den Winkel $ \ theta_j $ um einen Single-Qubit-Pauli-Operator $P $ durchführt, wenn er vom $n $-Qubit-Zahlen Status $ \ket{j} $ gesteuert wird.
 Insbesondere wird die Aktion dieses Vorgangs durch die einheitliche

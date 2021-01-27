@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.MultiplexZ
 title: Multiplexz-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: MultiplexZ
 qsharp.summary: Applies a Pauli Z rotation conditioned on an array of qubits.
-ms.openlocfilehash: 364d23a0e57a2510f069b6db66b085368f20162e
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: dccfe86104263e23794bce33279e8748f11f5a54
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96206067"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852426"
 ---
 # <a name="multiplexz-operation"></a>Multiplexz-Vorgang
 
@@ -28,7 +28,7 @@ operation MultiplexZ (coefficients : Double[], control : Microsoft.Quantum.Arith
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Dadurch wird der Multiplikations gesteuerte einheitliche Vorgang angewendet, der die Drehung durch den Winkel $ \ theta_j $ um einen Single-Qubit-Pauli-Operator $Z $ durchführt, wenn er vom $n $-Qubit-Zahlen Status $ \ket{j} $ gesteuert wird.
 Insbesondere kann dieser Vorgang durch die einheitliche
@@ -62,7 +62,7 @@ Einzelnes Qubit-Register, das durch $e ^ {i P \ theta_j} $ gedreht wird.
 
 `coefficients` wird mit Elementen $ \ theta_j = $0,0 aufgefüllt, wenn weniger als $2 ^ n $ angegeben werden.
 
-## <a name="references"></a>Referenzen
+## <a name="references"></a>References
 
 - Synthese von Quantum Logic-Leitungen Vivek V. Shende, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176
 

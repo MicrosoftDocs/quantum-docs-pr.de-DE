@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Logical.Or
 title: Or-Funktion
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: Or
 qsharp.summary: Returns the Boolean disjunction of two values.
-ms.openlocfilehash: 7093d908696a8cfda6b5ef648f9dfafcfac97144
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 4a29b7684b28b904b43ccceb8e63280999690349
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96197125"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98848465"
 ---
 # <a name="or-function"></a>Or-Funktion
 
@@ -51,7 +51,7 @@ Im Gegensatz zum- `or` Operator ist diese Funktion nicht kurz, sodass beide Eing
 
 Bis zu einem kurzen Schluss Verhalten sind die folgenden äquivalent:
 
-```Q#
+```qsharp
 let x = a or b;
 let x = Or(a, b);
 ```

@@ -4,17 +4,17 @@ description: Erläutert die Spezifikationen für das broombridge-Quantum-Schema 
 author: cgranade
 ms.author: chgranad
 ms.date: 10/17/2018
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_1
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b99c90c434958f7b04712580789b203766cd084d
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 0a306f59a823e76ba0518d023a41f1f9d5670e7a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835739"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858195"
 ---
 # <a name="broombridge-specification-v01"></a>Broombridge-Spezifikation v 0,1 #
 
@@ -169,7 +169,7 @@ Der Wert der- `hamiltonian` Eigenschaft wird als "hamiltonan"-Objekt bezeichnet 
 Ein hamiltonan-Objekt kann auch über eine-Eigenschaft verfügen `particle_hole_representation` .
 Falls vorhanden, muss der Wert von `particle_hole_representation` dem im restlichen Teil dieses Abschnitts beschriebenen Format entsprechen.
 
-##### <a name="one-electron-integrals-object"></a>Integrale Objekt mit einem-Elektronen #####
+##### <a name="one-electron-integrals-object"></a>One-Electron inteals-Objekt #####
 
 Dieser Abschnitt ist normativ.
 
@@ -199,7 +199,7 @@ one_electron_integrals:     # required
 > Broombridge verwendet die 1-basierte Indizierung.
 
 
-##### <a name="two-electron-integrals-object"></a>2-Elektronen-inteals-Objekt #####
+##### <a name="two-electron-integrals-object"></a>Two-Electron inteals-Objekt #####
 
 Dieser Abschnitt ist normativ.
 

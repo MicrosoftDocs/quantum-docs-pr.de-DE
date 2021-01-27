@@ -1,6 +1,6 @@
 ---
 Title: Vektoren und Matrizen in Quantum Computing Description: Erlernen Sie die Grundlagen der Arbeit mit Vektoren und Matrizen.
-Autor: quantumwriter UID: Microsoft. Quantum. Concepts. Vectors ms. Author: v-benbra ms. Date: 12/11/2017 ms. Topic: article NO-LOC:
+Autor: quantumwriter UID: Microsoft. Quantum. Concepts. Vectors ms. Author: v-benbra ms. Date: 12/11/2017 ms. Topic: konzeptionelle NO-LOC:
 - "Q#"
 - "$$v"
 - "$$"
@@ -172,9 +172,9 @@ $$\boldone=\begin{bmatrix}
 ~~ \ddots\\\\
 0 ~~ 0 ~~ \cdots ~~ 1 \end{bmatrix} .$$
 
-Für eine quadratische Matrix $ a $ sagen wir, dass $ die Matrix B $ bei [*inverse*](https://en.wikipedia.org/wiki/Invertible_matrix) $ ab BA umgekehrt = ist = \boldone $ . Die Umkehrung einer Matrix muss nicht vorhanden sein. Wenn Sie jedoch vorhanden ist, ist sie eindeutig, und wir bezeichnen Sie $ als ^ { -1 } $ . 
+Für eine quadratische Matrix $ a $ sagen wir, dass $ die Matrix B $ bei [](https://en.wikipedia.org/wiki/Invertible_matrix) $ ab BA umgekehrt = ist = \boldone $ . Die Umkehrung einer Matrix muss nicht vorhanden sein. Wenn Sie jedoch vorhanden ist, ist sie eindeutig, und wir bezeichnen Sie $ als ^ { -1 } $ . 
 
-Bei allen Matrizen $ m $ ist die Adjoint-oder konjugierte-/konjugierte-Datei $ $ eine Matrix $ N, $ sodass $ N_ { IJ } = m_ { JI ist } ^ \* $ . Das Adjoint von $ M $ wird normalerweise als $ M ^ bezeichnet \dagger $ . Wir sagen, eine $ Matrix $ u [*unitary*](https://en.wikipedia.org/wiki/Unitary_matrix) ist einheitlich $ , wenn UU ^ \dagger = u ^ \dagger u = \boldone $ oder gleichwertig, $ u ^ { -1 } = u ^ \dagger $ .  Die wichtigste Eigenschaft der einheitlichen Matrizen ist, dass Sie die Norm eines Vektors erhalten.  Dies liegt daran, dass 
+Bei allen Matrizen $ m $ ist die Adjoint-oder konjugierte-/konjugierte-Datei $ $ eine Matrix $ N, $ sodass $ N_ { IJ } = m_ { JI ist } ^ \* $ . Das Adjoint von $ M $ wird normalerweise als $ M ^ bezeichnet \dagger $ . Wir sagen, eine $ Matrix $ u [](https://en.wikipedia.org/wiki/Unitary_matrix) ist einheitlich $ , wenn UU ^ \dagger = u ^ \dagger u = \boldone $ oder gleichwertig, $ u ^ { -1 } = u ^ \dagger $ .  Die wichtigste Eigenschaft der einheitlichen Matrizen ist, dass Sie die Norm eines Vektors erhalten.  Dies liegt daran, dass 
 
 $$\langlev, v \rangle = v ^ \dagger v = v ^ \dagger u ^ { -1 } U v = v ^ \dagger u ^ \dagger u v = \langle u v, u v \rangle .$$  
 
@@ -217,7 +217,7 @@ $$
     =\begin{bmatrix}a c \\\\ a d \\\\ a e \\\\ b c \\\\ b d \\\\\end{bmatrix}
 $$
 
-und
+and
 
 $$
     \begin{bmatrix}
@@ -244,7 +244,7 @@ $$
     CG \ ch \ DG \ dh \end{bmatrix} .
 $$
 
-Eine abschließende, nützliche, in Bezug auf das tensorflow-Produkt verwendete Anmerkung ist, dass für alle Vektor- $ v $ -oder Matrix- $ m $ , $ v ^ { \otimes n } $ oder $ M ^ { \otimes n } $ für ein $ n $ -Fold wiederholtes tensorflow-Produkt kurz Hand ist.  Zum Beispiel:
+Eine abschließende, nützliche, in Bezug auf das tensorflow-Produkt verwendete Anmerkung ist, dass für alle Vektor- $ v $ -oder Matrix- $ m $ , $ v ^ { \otimes n } $ oder $ M ^ { \otimes n } $ für ein $ n $ -Fold wiederholtes tensorflow-Produkt kurz Hand ist.  Beispiel:
 
 \begin{align}
 &\begin{bmatrix}1 \\\\ 0 1 \end{bmatrix} ^ { \otimes } = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} , \qquad \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} ^ { \otimes 2 } = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} , \qquad \begin{bmatrix} 1 \\\\ -1 \end{bmatrix} ^ { \otimes 2 } = \begin{bmatrix} 1 \\\\ -1 \\\\ -1 \\\\ 1 \end{bmatrix} ,\\\\

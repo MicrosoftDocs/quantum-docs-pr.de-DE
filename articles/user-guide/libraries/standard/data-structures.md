@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e9b593ba69ed41a9fb3c1298b5b945a4cbe43d5d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692231"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858332"
 ---
 # <a name="data-structures-and-modeling"></a>Datenstrukturen und Modellierung #
 
@@ -72,7 +72,7 @@ ApplyToEach(
 ## <a name="oracles"></a>Oracles ##
 
 In der Literatur der [Phasen Schätzung](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm) und der [Amplitude-Verstärkung](https://en.wikipedia.org/wiki/Amplitude_amplification) erscheint das Konzept eines Oracle häufig.
-Hier bezieht sich der Begriff Oracle auf eine blackboxtests-Quantum-Unterroutine, die auf einen Satz von Qubits anwendet und die Antwort als Phase zurückgibt.
+Hier bezieht sich der Begriff Oracle auf eine Quantum-Unterroutine, die auf einen Satz von Qubits folgt und die Antwort als Phase zurückgibt.
 Diese Unterroutine kann sich oft als Eingabe für einen Quantum-Algorithmus vorstellen, der das Oracle zusätzlich zu einigen anderen Parametern annimmt, und eine Reihe von Quantum-Vorgängen anwendet und einen aufzurufenden aufrufungs Vorgang als grundlegende Gate behandelt.
 Um den größeren Algorithmus tatsächlich zu implementieren, muss eine konkrete Zerlegung des Oracle in grundlegende Gates bereitgestellt werden, aber eine solche Zerlegung ist nicht erforderlich, um den Algorithmus zu verstehen, der das Oracle aufruft.
 In Q# wird diese Abstraktion durch Verwendung von dargestellt, wobei es sich bei den Vorgängen um erstklassige Werte handelt, sodass Vorgänge in einer Blackbox-Weise an Implementierungen von Quantum-Algorithmen übermittelt werden können.
