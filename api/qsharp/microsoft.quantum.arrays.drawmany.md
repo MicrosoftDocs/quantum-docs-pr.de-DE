@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.DrawMany
 title: Drawmany-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: DrawMany
 qsharp.summary: Repeats an operation for a given number of samples, collecting its outputs in an array.
-ms.openlocfilehash: 3185f2ec01a2b9d01cff82a0c4667f12483801a7
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: bf63ce308679cef97c776d3383ff732ed4d4e500
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96209994"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846202"
 ---
 # <a name="drawmany-operation"></a>Drawmany-Vorgang
 
@@ -58,6 +58,14 @@ Die an zu über gebenden Eingaben `op` .
 ### <a name="toutput"></a>"TOutput"
 
 
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird eine ganze Zahl bei einem Vorgang, der ein einzelnes Bit Abtastungen, als Stichprobe betrachtet.
+
+```qsharp
+let randomInteger = BoolArrayAsInt(DrawMany(SampleRandomBit, 16, ()));
+```
 
 ## <a name="see-also"></a>Weitere Informationen
 

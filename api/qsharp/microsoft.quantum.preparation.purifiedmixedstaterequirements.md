@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Preparation.PurifiedMixedStateRequirements
 title: Purifedmixedstatuerequirequirements-Funktion
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: PurifiedMixedStateRequirements
 qsharp.summary: Returns the total number of qubits that must be allocated in order to apply the operation returned by @"microsoft.quantum.preparation.purifiedmixedstate".
-ms.openlocfilehash: 9b8861a4112c4e6c9db994339353c771a3de81a6
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 6ddb48ba66eea87a07d515ff791bfb34f2d98b76
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96229986"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856829"
 ---
 # <a name="purifiedmixedstaterequirements-function"></a>Purifedmixedstatuerequirequirements-Funktion
 

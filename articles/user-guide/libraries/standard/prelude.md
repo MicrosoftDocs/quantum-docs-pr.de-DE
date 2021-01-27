@@ -4,17 +4,17 @@ description: Erfahren Sie mehr über die intrinsischen Vorgänge und Funktionen 
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4d15226fe46be79b7d3e6f414f33f1debd691f40
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6ed5b1677a204b9425f229a3ea0855bb789f3f75
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692118"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857186"
 ---
 # <a name="the-prelude"></a>Der Auftakt #
 
@@ -109,13 +109,13 @@ Wir erinnern uns zunächst daran, dass wir jeden einzelnen Qubit-Vorgang mithilf
 Die $T $ Gate wird wiederum durch den <xref:Microsoft.Quantum.Intrinsic.T> -Vorgang implementiert und verfügt über `(Qubit => Unit is Adj + Ctl)` eine Signatur, die angibt, dass es sich um einen einheitlichen Vorgang auf einem Single-Qubit handelt.
 
 Obwohl dies das Prinzip genug ist, um einen beliebigen Single-Qubit-Vorgang zu beschreiben, können unterschiedliche Zielcomputer eine effizientere Darstellung von Rotationen von Pauli-Operatoren aufweisen, sodass die Zusammenführung eine Vielzahl von Möglichkeiten bietet, solche Rotationen zu veranschaulichen.
-Die grundlegendste dieser Vorgänge ist der- <xref:Microsoft.Quantum.Intrinsic.r> Vorgang, der eine Drehung um eine angegebene Pauli-Achse implementiert. \begin{Equation} R (\sigma, \phi) \mathrel{: =} \exp (-i \phi \sigma/2), \end{Equation}, wobei $ \sigma $ ein Pauli-Operator ist, $ \phi $ ein Winkel ist und $ \exp $ den exponentiellen Wert der Matrix darstellt.
+Die grundlegendste dieser Vorgänge ist der- <xref:Microsoft.Quantum.Intrinsic.R> Vorgang, der eine Drehung um eine angegebene Pauli-Achse implementiert. \begin{Equation} R (\sigma, \phi) \mathrel{: =} \exp (-i \phi \sigma/2), \end{Equation}, wobei $ \sigma $ ein Pauli-Operator ist, $ \phi $ ein Winkel ist und $ \exp $ den exponentiellen Wert der Matrix darstellt.
 Sie verfügt über eine Signatur `((Pauli, Double, Qubit) => Unit is Adj + Ctl)` , bei der die ersten beiden Teile der Eingabe die klassischen Argumente $ \sigma $ und $ \phi $ zum Angeben des einheitlichen Operators $R (\sigma, \phi) $ darstellen.
 Wir können $ \sigma $ und $ \phi $ teilweise anwenden, um einen Vorgang zu erhalten, dessen Typ mit einer Single-Qubit-einheitlich ist.
 Beispielsweise `R(PauliZ, PI() / 4, _)` weist den Typ auf `(Qubit => Unit is Adj + Ctl)` .
 
 > [!NOTE]
-> Der <xref:Microsoft.Quantum.Intrinsic.r> -Vorgang dividiert den Eingabe Winkel um 2 und multipliziert ihn mit-1.
+> Der <xref:Microsoft.Quantum.Intrinsic.R> -Vorgang dividiert den Eingabe Winkel um 2 und multipliziert ihn mit-1.
 > Bei $Z $-Drehungen bedeutet dies, dass der $ \ket {0} $ eigen Status durch "$-\phi/$2" gedreht wird und der $ \ket {1} $ eigen State durch "$ \phi/$2" gedreht wird, sodass der "$ \ket {1} $ eigen"-Zustand durch "$ \phi $" in Relation zum $ \ket {0} $ eigen State gedreht wird.
 >
 > Dies bedeutet insbesondere, dass sich `T` und `R(PauliZ, PI() / 8, _)` nur durch eine irrelevante [globale Phase](xref:microsoft.quantum.glossary#global-phase)unterscheiden.
@@ -217,7 +217,7 @@ Da das Ausführen von Single-Qubit-Messungen recht häufig ist, definiert das pr
 Der <xref:Microsoft.Quantum.Intrinsic.M> -Vorgang misst den Pauli-$Z $-Operator für ein einzelnes Qubit und verfügt über eine Signatur `(Qubit => Result)` .
 `M(q)` entspricht `Measure([PauliZ], [q])`.
 
-Der <xref:microsoft.quantum.measurement.MultiM> misst den Pauli-$Z $-Operator *separat* für jedes Array von Qubits und gibt das *Array* von Werten zurück, die `Result` für jedes Qubit abgerufen werden.
+Der <xref:Microsoft.Quantum.Measurement.MultiM> misst den Pauli-$Z $-Operator *separat* für jedes Array von Qubits und gibt das *Array* von Werten zurück, die `Result` für jedes Qubit abgerufen werden.
 In einigen Fällen kann dies optimiert werden. Sie verfügt über die Signatur ( `Qubit[] => Result[])` .
 `MultiM(qs)` entspricht:
 
