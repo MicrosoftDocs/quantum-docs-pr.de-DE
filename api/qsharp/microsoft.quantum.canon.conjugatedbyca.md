@@ -1,63 +1,63 @@
 ---
 uid: Microsoft.Quantum.Canon.ConjugatedByCA
 title: Konkanable-Funktion
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ConjugatedByCA
 qsharp.summary: Given outer and inner operations, returns a new operation that conjugates the inner operation by the outer operation.
-ms.openlocfilehash: acd5a9f796f751b9c9c374d841e80de9286fcd24
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 54301f991d3bda14e2d2a0a6837ee89d299f2e04
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96207308"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840815"
 ---
-# <a name="conjugatedbyca-function"></a><span data-ttu-id="84e10-102">Konkanable-Funktion</span><span class="sxs-lookup"><span data-stu-id="84e10-102">ConjugatedByCA function</span></span>
+# <a name="conjugatedbyca-function"></a><span data-ttu-id="cddf7-102">Konkanable-Funktion</span><span class="sxs-lookup"><span data-stu-id="cddf7-102">ConjugatedByCA function</span></span>
 
-<span data-ttu-id="84e10-103">Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="84e10-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+<span data-ttu-id="cddf7-103">Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="cddf7-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
 
-<span data-ttu-id="84e10-104">Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="84e10-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="cddf7-104">Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="cddf7-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="84e10-105">Bei den äußeren und inneren Vorgängen wird ein neuer Vorgang zurückgegeben, der den inneren Vorgang durch den äußeren Vorgang konjugiert.</span><span class="sxs-lookup"><span data-stu-id="84e10-105">Given outer and inner operations, returns a new operation that conjugates the inner operation by the outer operation.</span></span>
+<span data-ttu-id="cddf7-105">Bei den äußeren und inneren Vorgängen wird ein neuer Vorgang zurückgegeben, der den inneren Vorgang durch den äußeren Vorgang konjugiert.</span><span class="sxs-lookup"><span data-stu-id="cddf7-105">Given outer and inner operations, returns a new operation that conjugates the inner operation by the outer operation.</span></span>
 
 ```qsharp
 function ConjugatedByCA<'T> (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl)) : ('T => Unit is Adj + Ctl)
 ```
 
 
-## <a name="input"></a><span data-ttu-id="84e10-106">Eingabe</span><span class="sxs-lookup"><span data-stu-id="84e10-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="cddf7-106">Eingabe</span><span class="sxs-lookup"><span data-stu-id="cddf7-106">Input</span></span>
 
-### <a name="outeroperation--t--unit--is-adj"></a><span data-ttu-id="84e10-107">outeroperation: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ</span><span class="sxs-lookup"><span data-stu-id="84e10-107">outerOperation : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj</span></span>
+### <a name="outeroperation--t--unit--is-adj"></a><span data-ttu-id="cddf7-107">outeroperation: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ</span><span class="sxs-lookup"><span data-stu-id="cddf7-107">outerOperation : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj</span></span>
 
-<span data-ttu-id="84e10-108">Der Vorgang $U $, der für die konjugierte $V $ verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="84e10-108">The operation $U$ that should be used to conjugate $V$.</span></span> <span data-ttu-id="84e10-109">Beachten Sie, dass der äußere Vorgang $U $ adjointable sein muss, aber nicht steuerbar sein muss.</span><span class="sxs-lookup"><span data-stu-id="84e10-109">Note that the outer operation $U$ needs to be adjointable, but does not need to be controllable.</span></span>
-
-
-### <a name="inneroperation--t--unit--is-adj--ctl"></a><span data-ttu-id="84e10-110">inneroperation: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL</span><span class="sxs-lookup"><span data-stu-id="84e10-110">innerOperation : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
-
-<span data-ttu-id="84e10-111">Der Vorgang $V $ konjugated.</span><span class="sxs-lookup"><span data-stu-id="84e10-111">The operation $V$ being conjugated.</span></span>
+<span data-ttu-id="cddf7-108">Der Vorgang $U $, der für die konjugierte $V $ verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="cddf7-108">The operation $U$ that should be used to conjugate $V$.</span></span> <span data-ttu-id="cddf7-109">Beachten Sie, dass der äußere Vorgang $U $ adjointable sein muss, aber nicht steuerbar sein muss.</span><span class="sxs-lookup"><span data-stu-id="cddf7-109">Note that the outer operation $U$ needs to be adjointable, but does not need to be controllable.</span></span>
 
 
+### <a name="inneroperation--t--unit--is-adj--ctl"></a><span data-ttu-id="cddf7-110">inneroperation: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL</span><span class="sxs-lookup"><span data-stu-id="cddf7-110">innerOperation : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
 
-## <a name="output--t--unit--is-adj--ctl"></a><span data-ttu-id="84e10-112">Ausgabe: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL</span><span class="sxs-lookup"><span data-stu-id="84e10-112">Output : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
+<span data-ttu-id="cddf7-111">Der Vorgang $V $ konjugated.</span><span class="sxs-lookup"><span data-stu-id="cddf7-111">The operation $V$ being conjugated.</span></span>
 
-<span data-ttu-id="84e10-113">Ein neuer Vorgang, dessen Aktion durch die einheitliche $U ^ {\dagger} V U $ dargestellt wird.</span><span class="sxs-lookup"><span data-stu-id="84e10-113">A new operation whose action is represented by the unitary $U^{\dagger} V U$.</span></span>
 
-## <a name="type-parameters"></a><span data-ttu-id="84e10-114">Typparameter</span><span class="sxs-lookup"><span data-stu-id="84e10-114">Type Parameters</span></span>
 
-### <a name="t"></a><span data-ttu-id="84e10-115">GIF</span><span class="sxs-lookup"><span data-stu-id="84e10-115">'T</span></span>
+## <a name="output--t--unit--is-adj--ctl"></a><span data-ttu-id="cddf7-112">Ausgabe: 't => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL</span><span class="sxs-lookup"><span data-stu-id="cddf7-112">Output : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
 
-<span data-ttu-id="84e10-116">Der Typ des Ziels, für das die einzelnen inneren und äußeren Operationen agieren.</span><span class="sxs-lookup"><span data-stu-id="84e10-116">The type of the target on which each of the inner and outer operations act.</span></span>
+<span data-ttu-id="cddf7-113">Ein neuer Vorgang, dessen Aktion durch die einheitliche $U ^ {\dagger} V U $ dargestellt wird.</span><span class="sxs-lookup"><span data-stu-id="cddf7-113">A new operation whose action is represented by the unitary $U^{\dagger} V U$.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="84e10-117">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="84e10-117">Remarks</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="cddf7-114">Typparameter</span><span class="sxs-lookup"><span data-stu-id="cddf7-114">Type Parameters</span></span>
 
-<span data-ttu-id="84e10-118">Der äußere Vorgang wird immer als adjointable angenommen, er muss jedoch nicht steuerbar sein, damit der kombinierte Vorgang steuerbar ist.</span><span class="sxs-lookup"><span data-stu-id="84e10-118">The outer operation is always assumed to be adjointable, but does not need to be controllable in order for the combined operation to be controllable.</span></span>
+### <a name="t"></a><span data-ttu-id="cddf7-115">GIF</span><span class="sxs-lookup"><span data-stu-id="cddf7-115">'T</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="84e10-119">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="84e10-119">See Also</span></span>
+<span data-ttu-id="cddf7-116">Der Typ des Ziels, für das die einzelnen inneren und äußeren Operationen agieren.</span><span class="sxs-lookup"><span data-stu-id="cddf7-116">The type of the target on which each of the inner and outer operations act.</span></span>
 
-- [<span data-ttu-id="84e10-120">Microsoft. Quantum. Canon. Kon.</span><span class="sxs-lookup"><span data-stu-id="84e10-120">Microsoft.Quantum.Canon.ConjugatedByA</span></span>](xref:Microsoft.Quantum.Canon.ConjugatedByA)
-- [<span data-ttu-id="84e10-121">Microsoft. Quantum.......</span><span class="sxs-lookup"><span data-stu-id="84e10-121">Microsoft.Quantum.Canon.ConjugatedByC</span></span>](xref:Microsoft.Quantum.Canon.ConjugatedByC)
-- [<span data-ttu-id="84e10-122">Microsoft. Quantum. Canon. konkanonische byca</span><span class="sxs-lookup"><span data-stu-id="84e10-122">Microsoft.Quantum.Canon.ConjugatedByCA</span></span>](xref:Microsoft.Quantum.Canon.ConjugatedByCA)
-- [<span data-ttu-id="84e10-123">Microsoft. Quantum. Canon. applywith</span><span class="sxs-lookup"><span data-stu-id="84e10-123">Microsoft.Quantum.Canon.ApplyWith</span></span>](xref:Microsoft.Quantum.Canon.ApplyWith)
+## <a name="remarks"></a><span data-ttu-id="cddf7-117">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="cddf7-117">Remarks</span></span>
+
+<span data-ttu-id="cddf7-118">Der äußere Vorgang wird immer als adjointable angenommen, er muss jedoch nicht steuerbar sein, damit der kombinierte Vorgang steuerbar ist.</span><span class="sxs-lookup"><span data-stu-id="cddf7-118">The outer operation is always assumed to be adjointable, but does not need to be controllable in order for the combined operation to be controllable.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="cddf7-119">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="cddf7-119">See Also</span></span>
+
+- [<span data-ttu-id="cddf7-120">Microsoft. Quantum. Canon. Kon.</span><span class="sxs-lookup"><span data-stu-id="cddf7-120">Microsoft.Quantum.Canon.ConjugatedByA</span></span>](xref:Microsoft.Quantum.Canon.ConjugatedByA)
+- [<span data-ttu-id="cddf7-121">Microsoft. Quantum.......</span><span class="sxs-lookup"><span data-stu-id="cddf7-121">Microsoft.Quantum.Canon.ConjugatedByC</span></span>](xref:Microsoft.Quantum.Canon.ConjugatedByC)
+- [<span data-ttu-id="cddf7-122">Microsoft. Quantum. Canon. konkanonische byca</span><span class="sxs-lookup"><span data-stu-id="cddf7-122">Microsoft.Quantum.Canon.ConjugatedByCA</span></span>](xref:Microsoft.Quantum.Canon.ConjugatedByCA)
+- [<span data-ttu-id="cddf7-123">Microsoft. Quantum. Canon. applywith</span><span class="sxs-lookup"><span data-stu-id="cddf7-123">Microsoft.Quantum.Canon.ApplyWith</span></span>](xref:Microsoft.Quantum.Canon.ApplyWith)

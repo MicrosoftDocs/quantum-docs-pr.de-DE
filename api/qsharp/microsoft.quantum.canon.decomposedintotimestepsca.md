@@ -1,71 +1,71 @@
 ---
 uid: Microsoft.Quantum.Canon.DecomposedIntoTimeStepsCA
 title: Debug-Funktion (Funktion)
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DecomposedIntoTimeStepsCA
 qsharp.summary: Returns an operation implementing the Trotter–Suzuki integrator for a given operation.
-ms.openlocfilehash: aa5f09f2e1fde878b523b4efc20b86c26ac738ff
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: e82df36d2e4f3767a152d5c92d7b1897c744a2ca
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96216539"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840685"
 ---
-# <a name="decomposedintotimestepsca-function"></a><span data-ttu-id="7c124-102">Debug-Funktion (Funktion)</span><span class="sxs-lookup"><span data-stu-id="7c124-102">DecomposedIntoTimeStepsCA function</span></span>
+# <a name="decomposedintotimestepsca-function"></a><span data-ttu-id="5342c-102">Debug-Funktion (Funktion)</span><span class="sxs-lookup"><span data-stu-id="5342c-102">DecomposedIntoTimeStepsCA function</span></span>
 
-<span data-ttu-id="7c124-103">Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="7c124-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+<span data-ttu-id="5342c-103">Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="5342c-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
 
-<span data-ttu-id="7c124-104">Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="7c124-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="5342c-104">Paket: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="5342c-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="7c124-105">Gibt einen Vorgang zurück, der den Trotter – Suzuki Integrator für einen angegebenen Vorgang implementiert.</span><span class="sxs-lookup"><span data-stu-id="7c124-105">Returns an operation implementing the Trotter–Suzuki integrator for a given operation.</span></span>
+<span data-ttu-id="5342c-105">Gibt einen Vorgang zurück, der den Trotter – Suzuki Integrator für einen angegebenen Vorgang implementiert.</span><span class="sxs-lookup"><span data-stu-id="5342c-105">Returns an operation implementing the Trotter–Suzuki integrator for a given operation.</span></span>
 
 ```qsharp
 function DecomposedIntoTimeStepsCA<'T> ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)
 ```
 
 
-## <a name="input"></a><span data-ttu-id="7c124-106">Eingabe</span><span class="sxs-lookup"><span data-stu-id="7c124-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="5342c-106">Eingabe</span><span class="sxs-lookup"><span data-stu-id="5342c-106">Input</span></span>
 
-### <a name="nsteps--int"></a><span data-ttu-id="7c124-107">nsteps: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="7c124-107">nSteps : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="nsteps--int"></a><span data-ttu-id="5342c-107">nsteps: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="5342c-107">nSteps : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
-<span data-ttu-id="7c124-108">Die Anzahl der Vorgänge, die in Zeitschritten zerlegt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="7c124-108">The number of operations to be decomposed into time steps.</span></span>
-
-
-### <a name="op--intdoublet--unit--is-adj--ctl"></a><span data-ttu-id="7c124-109">OP: ([int](xref:microsoft.quantum.lang-ref.int),[Double](xref:microsoft.quantum.lang-ref.double), 't) => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL</span><span class="sxs-lookup"><span data-stu-id="7c124-109">op : ([Int](xref:microsoft.quantum.lang-ref.int),[Double](xref:microsoft.quantum.lang-ref.double),'T) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
-
-<span data-ttu-id="7c124-110">Ein Vorgang, bei dem eine Index Eingabe (Type `Int` ) und eine Zeiteingabe (Typ `Double` ) für die Zerlegung akzeptiert werden.</span><span class="sxs-lookup"><span data-stu-id="7c124-110">An operation which accepts an index input (type `Int`) and a time input (type `Double`) for decomposition.</span></span>
+<span data-ttu-id="5342c-108">Die Anzahl der Vorgänge, die in Zeitschritten zerlegt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="5342c-108">The number of operations to be decomposed into time steps.</span></span>
 
 
-### <a name="trotterorder--int"></a><span data-ttu-id="7c124-111">trotterorder: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="7c124-111">trotterOrder : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="op--intdoublet--unit--is-adj--ctl"></a><span data-ttu-id="5342c-109">OP: ([int](xref:microsoft.quantum.lang-ref.int),[Double](xref:microsoft.quantum.lang-ref.double), 't) => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL</span><span class="sxs-lookup"><span data-stu-id="5342c-109">op : ([Int](xref:microsoft.quantum.lang-ref.int),[Double](xref:microsoft.quantum.lang-ref.double),'T) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
 
-<span data-ttu-id="7c124-112">Wählt die Reihenfolge des zu verwendenden Trotter – Suzuki Integrator aus.</span><span class="sxs-lookup"><span data-stu-id="7c124-112">Selects the order of the Trotter–Suzuki integrator to be used.</span></span>
-<span data-ttu-id="7c124-113">Bestellung 1 und sogar Orders 2, 4, 6,... werden zurzeit unterstützt.</span><span class="sxs-lookup"><span data-stu-id="7c124-113">Order 1 and even orders 2, 4, 6,... are currently supported.</span></span>
-
+<span data-ttu-id="5342c-110">Ein Vorgang, bei dem eine Index Eingabe (Type `Int` ) und eine Zeiteingabe (Typ `Double` ) für die Zerlegung akzeptiert werden.</span><span class="sxs-lookup"><span data-stu-id="5342c-110">An operation which accepts an index input (type `Int`) and a time input (type `Double`) for decomposition.</span></span>
 
 
-## <a name="output--doublet--unit--is-adj--ctl"></a><span data-ttu-id="7c124-114">Ausgabe: ([Double](xref:microsoft.quantum.lang-ref.double), t) => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL</span><span class="sxs-lookup"><span data-stu-id="7c124-114">Output : ([Double](xref:microsoft.quantum.lang-ref.double),'T) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
+### <a name="trotterorder--int"></a><span data-ttu-id="5342c-111">trotterorder: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="5342c-111">trotterOrder : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
-<span data-ttu-id="7c124-115">Gibt eine einheitliche-Klasse zurück, die den Trotter – Suzuki Integrator implementiert, wobei der erste Parameter `Double` die Größe des Integrations Schritts ist und der zweite Parameter das Ziel ist.</span><span class="sxs-lookup"><span data-stu-id="7c124-115">Returns a unitary implementing the Trotter–Suzuki integrator, where the first parameter `Double` is the integration step size, and the second parameter is the target acted upon.</span></span>
+<span data-ttu-id="5342c-112">Wählt die Reihenfolge des zu verwendenden Trotter – Suzuki Integrator aus.</span><span class="sxs-lookup"><span data-stu-id="5342c-112">Selects the order of the Trotter–Suzuki integrator to be used.</span></span>
+<span data-ttu-id="5342c-113">Bestellung 1 und sogar Orders 2, 4, 6,... werden zurzeit unterstützt.</span><span class="sxs-lookup"><span data-stu-id="5342c-113">Order 1 and even orders 2, 4, 6,... are currently supported.</span></span>
 
-## <a name="type-parameters"></a><span data-ttu-id="7c124-116">Typparameter</span><span class="sxs-lookup"><span data-stu-id="7c124-116">Type Parameters</span></span>
 
-### <a name="t"></a><span data-ttu-id="7c124-117">GIF</span><span class="sxs-lookup"><span data-stu-id="7c124-117">'T</span></span>
 
-<span data-ttu-id="7c124-118">Der Typ, auf den jeder Zeit Schritt reagieren soll. in der Regel entweder `Qubit[]` oder `Qubit` .</span><span class="sxs-lookup"><span data-stu-id="7c124-118">The type which each time step should act upon; typically, either `Qubit[]` or `Qubit`.</span></span>
+## <a name="output--doublet--unit--is-adj--ctl"></a><span data-ttu-id="5342c-114">Ausgabe: ([Double](xref:microsoft.quantum.lang-ref.double), t) => [Einheit](xref:microsoft.quantum.lang-ref.unit)  ist ADJ + CTL</span><span class="sxs-lookup"><span data-stu-id="5342c-114">Output : ([Double](xref:microsoft.quantum.lang-ref.double),'T) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="7c124-119">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="7c124-119">Remarks</span></span>
+<span data-ttu-id="5342c-115">Gibt eine einheitliche-Klasse zurück, die den Trotter – Suzuki Integrator implementiert, wobei der erste Parameter `Double` die Größe des Integrations Schritts ist und der zweite Parameter das Ziel ist.</span><span class="sxs-lookup"><span data-stu-id="5342c-115">Returns a unitary implementing the Trotter–Suzuki integrator, where the first parameter `Double` is the integration step size, and the second parameter is the target acted upon.</span></span>
 
-<span data-ttu-id="7c124-120">Wenn `order` Diese Funktion mit gleich `1` ist, gibt diese Funktion einen Vorgang zurück, der durch die niedrigste Reihenfolge (Trotter – Suzuki Integrator $ $ \begin{align} S_1 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda}) simuliert werden kann. \end{align} $ $, wobei die Notation von [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139) befolgt wurde und $ \lambda $ die Entwicklungszeit (dargestellt durch die erste Eingabe der zurückgegebenen Operation) ist. und lassen Sie $ \{ H_j \} _ {j = 1} ^ {m} $ den Satz der (Schiefe-hermitian) Dynamical-Generatoren aufweisen, die integriert werden, sodass `op(j, lambda, _)` vom einheitlichen Operator $e ^ {H_j \lambda} $ simuliert wird.</span><span class="sxs-lookup"><span data-stu-id="7c124-120">When called with `order` equal to `1`, this function returns an operation that can be simulated by the lowest-order Trotter–Suzuki integrator $$ \begin{align} S_1(\lambda) = \prod_{j = 1}^{m} e^{H_j \lambda}, \end{align} $$ where we have followed the notation of [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139) and let $\lambda$ be the evolution time (represented by the first input of the returned operation), and have let $\{H_j\}_{j = 1}^{m}$ be the set of (skew-Hermitian) dynamical generators being integrated such that `op(j, lambda, _)` is simulated by the unitary operator $e^{H_j \lambda}$.</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="5342c-116">Typparameter</span><span class="sxs-lookup"><span data-stu-id="5342c-116">Type Parameters</span></span>
 
-<span data-ttu-id="7c124-121">Ebenso gibt ein `order` von `2` den symmetrischen Trotter der zweiten Ordnung zurück – Suzuki Integrator $ $ \begin{align} S_2 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda/2} \ prod_ {j ' = m} ^ {1} e ^ {H_ {j '} \lambda/2}.</span><span class="sxs-lookup"><span data-stu-id="7c124-121">Similarly, an `order` of `2` returns the second-order symmetric Trotter–Suzuki integrator $$ \begin{align} S_2(\lambda) = \prod_{j = 1}^{m} e^{H_k \lambda / 2} \prod_{j' = m}^{1} e^{H_{j'} \lambda / 2}.</span></span>
-<span data-ttu-id="7c124-122">\end{align} $ $</span><span class="sxs-lookup"><span data-stu-id="7c124-122">\end{align} $$</span></span>
+### <a name="t"></a><span data-ttu-id="5342c-117">GIF</span><span class="sxs-lookup"><span data-stu-id="5342c-117">'T</span></span>
 
-<span data-ttu-id="7c124-123">Höhere gerade Werte von `order` werden mithilfe der rekursiven Konstruktion von [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139)implementiert.</span><span class="sxs-lookup"><span data-stu-id="7c124-123">Higher even values of `order` are implemented using the recursive construction of [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139).</span></span>
+<span data-ttu-id="5342c-118">Der Typ, auf den jeder Zeit Schritt reagieren soll. in der Regel entweder `Qubit[]` oder `Qubit` .</span><span class="sxs-lookup"><span data-stu-id="5342c-118">The type which each time step should act upon; typically, either `Qubit[]` or `Qubit`.</span></span>
 
-## <a name="references"></a><span data-ttu-id="7c124-124">Referenzen</span><span class="sxs-lookup"><span data-stu-id="7c124-124">References</span></span>
+## <a name="remarks"></a><span data-ttu-id="5342c-119">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="5342c-119">Remarks</span></span>
 
-- [<span data-ttu-id="7c124-125">*D. W. Beeren, G. ahukas, R. Cleve, B. C. Sanders*</span><span class="sxs-lookup"><span data-stu-id="7c124-125"> *D. W. Berry, G. Ahokas, R. Cleve, B. C. Sanders* </span></span>](https://arxiv.org/abs/quant-ph/0508139)
+<span data-ttu-id="5342c-120">Wenn `order` Diese Funktion mit gleich `1` ist, gibt diese Funktion einen Vorgang zurück, der durch die niedrigste Reihenfolge (Trotter – Suzuki Integrator $ $ \begin{align} S_1 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda}) simuliert werden kann. \end{align} $ $, wobei die Notation von [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139) befolgt wurde und $ \lambda $ die Entwicklungszeit (dargestellt durch die erste Eingabe der zurückgegebenen Operation) ist. und lassen Sie $ \{ H_j \} _ {j = 1} ^ {m} $ den Satz der (Schiefe-hermitian) Dynamical-Generatoren aufweisen, die integriert werden, sodass `op(j, lambda, _)` vom einheitlichen Operator $e ^ {H_j \lambda} $ simuliert wird.</span><span class="sxs-lookup"><span data-stu-id="5342c-120">When called with `order` equal to `1`, this function returns an operation that can be simulated by the lowest-order Trotter–Suzuki integrator $$ \begin{align} S_1(\lambda) = \prod_{j = 1}^{m} e^{H_j \lambda}, \end{align} $$ where we have followed the notation of [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139) and let $\lambda$ be the evolution time (represented by the first input of the returned operation), and have let $\{H_j\}_{j = 1}^{m}$ be the set of (skew-Hermitian) dynamical generators being integrated such that `op(j, lambda, _)` is simulated by the unitary operator $e^{H_j \lambda}$.</span></span>
+
+<span data-ttu-id="5342c-121">Ebenso gibt ein `order` von `2` den symmetrischen Trotter der zweiten Ordnung zurück – Suzuki Integrator $ $ \begin{align} S_2 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda/2} \ prod_ {j ' = m} ^ {1} e ^ {H_ {j '} \lambda/2}.</span><span class="sxs-lookup"><span data-stu-id="5342c-121">Similarly, an `order` of `2` returns the second-order symmetric Trotter–Suzuki integrator $$ \begin{align} S_2(\lambda) = \prod_{j = 1}^{m} e^{H_k \lambda / 2} \prod_{j' = m}^{1} e^{H_{j'} \lambda / 2}.</span></span>
+<span data-ttu-id="5342c-122">\end{align} $ $</span><span class="sxs-lookup"><span data-stu-id="5342c-122">\end{align} $$</span></span>
+
+<span data-ttu-id="5342c-123">Höhere gerade Werte von `order` werden mithilfe der rekursiven Konstruktion von [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139)implementiert.</span><span class="sxs-lookup"><span data-stu-id="5342c-123">Higher even values of `order` are implemented using the recursive construction of [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139).</span></span>
+
+## <a name="references"></a><span data-ttu-id="5342c-124">References</span><span class="sxs-lookup"><span data-stu-id="5342c-124">References</span></span>
+
+- [<span data-ttu-id="5342c-125">*D. W. Beeren, G. ahukas, R. Cleve, B. C. Sanders*</span><span class="sxs-lookup"><span data-stu-id="5342c-125"> *D. W. Berry, G. Ahokas, R. Cleve, B. C. Sanders* </span></span>](https://arxiv.org/abs/quant-ph/0508139)
