@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.DecomposedIntoTimeStepsCA
 title: Debug-Funktion (Funktion)
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DecomposedIntoTimeStepsCA
 qsharp.summary: Returns an operation implementing the Trotter–Suzuki integrator for a given operation.
-ms.openlocfilehash: aa5f09f2e1fde878b523b4efc20b86c26ac738ff
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: e82df36d2e4f3767a152d5c92d7b1897c744a2ca
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96216539"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840685"
 ---
 # <a name="decomposedintotimestepsca-function"></a>Debug-Funktion (Funktion)
 
@@ -66,6 +66,6 @@ Ebenso gibt ein `order` von `2` den symmetrischen Trotter der zweiten Ordnung zu
 
 Höhere gerade Werte von `order` werden mithilfe der rekursiven Konstruktion von [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139)implementiert.
 
-## <a name="references"></a>Referenzen
+## <a name="references"></a>References
 
 - [*D. W. Beeren, G. ahukas, R. Cleve, B. C. Sanders*](https://arxiv.org/abs/quant-ph/0508139)

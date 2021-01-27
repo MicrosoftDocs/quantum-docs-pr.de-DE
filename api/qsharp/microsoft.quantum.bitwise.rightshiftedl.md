@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Bitwise.RightShiftedL
 title: Rightshif tedl-Funktion
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: RightShiftedL
 qsharp.summary: Shifts the bitwise representation of a number right by a given number of bits.
-ms.openlocfilehash: 3d941e1a0bcd96fe54ab01019293d883f11547a1
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 03ed69c7151e62b91c4a036e301f99b45ce5ab62
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96219514"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842096"
 ---
 # <a name="rightshiftedl-function"></a>Rightshif tedl-Funktion
 
@@ -49,7 +49,7 @@ Der Wert von `value` , nach rechts nach `amount` Bits verschoben.
 
 Die folgenden sind gleichwertig:
 
-```Q#
+```qsharp
 let c = a >>> b;
 let c = RightShiftedL(a, b);
 ```

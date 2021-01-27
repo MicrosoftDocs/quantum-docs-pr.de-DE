@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfZero
 title: Applyif Zero-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfZero
 qsharp.summary: Applies an operation conditioned on a classical result value being zero.
-ms.openlocfilehash: 3b14ef8a1aa736fe096a21fe51be5a7c5bb1d09d
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 215b71a8d2e4f8a22df05b210824bc40a969b6f6
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96209432"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841742"
 ---
 # <a name="applyifzero-operation"></a>Applyif Zero-Vorgang
 
@@ -28,7 +28,7 @@ operation ApplyIfZero<'T> (result : Result, (op : ('T => Unit), target : 'T)) : 
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Bei einem Vorgang `op` und einem Ergebniswert `result` gilt `op` für, `target` wenn gleich `result` ist `Zero` . Gibt `One` an, dass nichts passiert `target` .
 

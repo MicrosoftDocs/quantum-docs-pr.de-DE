@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.Bound
 title: Gebundene Funktion
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: Bound
 qsharp.summary: Given an array of operations acting on a single input, produces a new operation that performs each given operation in sequence.
-ms.openlocfilehash: c12ce37054ddde1b98778888e90916c6e4725814
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 041f654c14f6e926d60038fee698b2b829fab8b3
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96207597"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841067"
 ---
 # <a name="bound-function"></a>Gebundene Funktion
 
@@ -45,6 +45,21 @@ Ein neuer Vorgang, der jeden gegebenen Vorgang nacheinander für seine Eingabe a
 ### <a name="t"></a>GIF
 
 Das Ziel, auf dem die einzelnen Vorgänge im Array agieren.
+
+## <a name="example"></a>Beispiel
+
+Die folgenden sind gleichwertig:
+
+```qsharp
+let bound = Bound([U, V]);
+bound(x);
+```
+
+and
+
+```qsharp
+U(x); V(x);
+```
 
 ## <a name="see-also"></a>Weitere Informationen
 

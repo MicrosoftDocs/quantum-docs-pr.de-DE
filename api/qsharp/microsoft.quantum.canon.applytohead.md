@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToHead
 title: Applydehead-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToHead
 qsharp.summary: Applies an operation to the first element of an array.
-ms.openlocfilehash: 35f19cbb1090e974e18f338239764c9c8b854116
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 4e627b467e9354e774c2ead8b89ddd3ff3a42ef7
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96217338"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841336"
 ---
 # <a name="applytohead-operation"></a>Applydehead-Vorgang
 
@@ -28,7 +28,7 @@ operation ApplyToHead<'T> (op : ('T => Unit), targets : 'T[]) : Unit
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Bei einem Vorgang `op` und einem Array von Zielen `targets` gilt `op(Head(targets))` .
 
@@ -54,6 +54,15 @@ Ein Array von Zielen, von dem die erste angewendet wird `op` .
 ### <a name="t"></a>GIF
 
 Der Eingabetyp des Vorgangs, der angewendet werden soll.
+
+## <a name="example"></a>Beispiel
+
+Die folgenden Q #-Code Ausschnitte sind gleichwertig:
+
+```qsharp
+ApplyToHead(H, register);
+H(Head(register));
+```
 
 ## <a name="see-also"></a>Weitere Informationen
 

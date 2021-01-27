@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToRestCA
 title: Applyorestca-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToRestCA
 qsharp.summary: Applies an operation to all but the first element of an array.
-ms.openlocfilehash: 3123c7f7b5e5c7f5cb17a34eedc81b3912109883
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: e64eeaae2151a28c289e3e71e47f897d6c378b36
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96208158"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841242"
 ---
 # <a name="applytorestca-operation"></a>Applyorestca-Vorgang
 
@@ -28,7 +28,7 @@ operation ApplyToRestCA<'T> (op : ('T[] => Unit is Adj + Ctl), targets : 'T[]) :
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Bei einem Vorgang `op` und einem Array von Zielen `targets` gilt `op(Rest(targets))` .
 

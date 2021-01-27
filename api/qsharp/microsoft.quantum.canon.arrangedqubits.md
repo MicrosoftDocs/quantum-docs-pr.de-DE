@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ArrangedQubits
 title: Arrangedqubits-Funktion
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ArrangedQubits
 qsharp.summary: Arrange control, target, and helper qubits according to an index
-ms.openlocfilehash: 7f3bc4dff73d5ad6393294fc3770b8d36e6094fb
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 07a4ed5fe99dedb333246f7161d157dcd01a01da
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96217066"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841079"
 ---
 # <a name="arrangedqubits-function"></a>Arrangedqubits-Funktion
 
@@ -28,7 +28,7 @@ function ArrangedQubits (controls : Qubit[], target : Qubit, helper : Qubit[]) :
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Gibt ein Qubit-Array mit dem Ziel am Index 0 und Control i am Index 2 ^ i zurück.  Die hilfsqubits werden an alle anderen Positionen im Array eingefügt.
 
