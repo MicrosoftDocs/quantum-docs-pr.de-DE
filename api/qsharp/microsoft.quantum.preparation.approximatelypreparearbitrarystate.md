@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryState
 title: Ungefäatelypreparearbitrarystate-Vorgang
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
@@ -13,12 +13,12 @@ qsharp.summary: >-
 
 
   Given a set of coefficients and a little-endian encoded quantum register, prepares an state on that register described by the given coefficients, up to a given approximation tolerance.
-ms.openlocfilehash: 9e1b172258acd0cb09b824a773e7e79d44fec20c
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: dab7647ab6e6a8592ab49ad7b7d398cb43b4f486
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96193708"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854421"
 ---
 # <a name="approximatelypreparearbitrarystate-operation"></a>Ungefäatelypreparearbitrarystate-Vorgang
 
@@ -37,7 +37,7 @@ operation ApproximatelyPrepareArbitraryState (tolerance : Double, coefficients :
 ```
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Mit diesem Vorgang wird ein beliebiger Quantum-Status "$ \ket{\psi} $" mit komplexen Koeffizienten $r _J e ^ {i t_j} $ aus dem $n $-Qubit-Berechnungsbasis Status $ \ket{0\cdots 0} $ vorbereitet.
 Insbesondere kann die Aktion dieses Vorgangs durch eine einheitliche Transformation $U $ simuliert werden, die den Zustand "alle Nullen" als
@@ -71,7 +71,7 @@ Der Qubit-Registrierungsstatus wird im Little-Endian-Format registriert. Diese I
 
 Negative Eingabe Koeffizienten $r _J < $0 werden als positiv mit dem Wert $ | r_j | $ behandelt. `coefficients` wird mit den Elementen $ (r_j, t_j) = (0,0, 0,0) $ aufgefüllt, wenn weniger als $2 ^ n $ angegeben werden.
 
-## <a name="references"></a>Referenzen
+## <a name="references"></a>References
 
 - Synthese von Quantum Logic-Leitungen Vivek V. Shende, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176
 

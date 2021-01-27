@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AllowAtMostNCallsCA
 title: Vorgang "zugswatmustncallsca"
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AllowAtMostNCallsCA
 qsharp.summary: Between a call to this operation and its adjoint, asserts that a given operation is called at most a certain number of times.
-ms.openlocfilehash: 7caf33e33318bb74cb160436940eff9f0f2782cc
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: bb6ba2615b571b0d9d056b93f8e36d2dec0c4a21
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96202565"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98853533"
 ---
 # <a name="allowatmostncallsca-operation"></a>Vorgang "zugswatmustncallsca"
 
@@ -58,6 +58,22 @@ Eine Meldung, die bei einem Fehler angezeigt werden soll.
 ### <a name="toutput"></a>"TOutput"
 
 
+
+## <a name="example"></a>Beispiel
+
+Der folgende Code Ausschnitt schlägt fehl, wenn er auf Computern ausgeführt wird, die diese Diagnose unterstützen:
+
+```qsharp
+using (register = Qubit[4]) {
+    within {
+        AllowAtMostNCallsCA(3, H, "Too many calls to H.");
+    } apply {
+        // Fails since this calls H four times, rather than the
+        // allowed maximum of three.
+        ApplyToEach(H, register);
+    }
+}
+```
 
 ## <a name="remarks"></a>Bemerkungen
 
