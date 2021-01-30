@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8aa6072e9b495db6e127cac350d5bfaec1b090ce
-ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.openlocfilehash: dd37581dff2a512a29eb7729ecbf81412917b8f8
+ms.sourcegitcommit: e915baf3b84ee3a562004c5b31d157d21533d450
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98856661"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99101457"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Versionshinweise für das Microsoft Quantum Development Kit
 
@@ -23,6 +23,15 @@ Dieser Artikel enthält Informationen zu den einzelnen Releases des Microsoft Qu
 Installationsanweisungen finden Sie im [Installationshandbuch](xref:microsoft.quantum.install).
 
 Updateanweisungen finden Sie im [Updatehandbuch](xref:microsoft.quantum.update).
+
+## <a name="version-0152101126807"></a>Version 0.15.2101.126807
+
+*Veröffentlichungsdatum: 29. Januar, 2021*
+
+- Dem Compiler wurden Projektvorlagen für ausführbare Dateien hinzugefügt, die auf die Q# Anbieter "ionq" und "Honey
+- Aktualisieren Q# der kernelsyntax für I-Kernel zum Einschließen von Änderungen an Q# der in Version [0.15.2101125897](#version-0152101125897) eingeführten Syntax
+- Bugfix zur Unterstützung der Übergabe von Arrays als Eingabeargumente an Q# Programme #401, die an Azure Quantum über übermittelt `%azure.execute` werden [](https://github.com/microsoft/iqsharp/issues/401)
+- Beheben Sie den Fehler "Berechtigung verweigert" `az` in `iqsharp-base` docker- [#404](https://github.com/microsoft/iqsharp/issues/404) Images
 
 ## <a name="version-0152101125897"></a>Version 0.15.2101125897
 
@@ -34,6 +43,7 @@ Updateanweisungen finden Sie im [Updatehandbuch](xref:microsoft.quantum.update).
 - Verbesserte breiten Schätzungen für optimale Tiefe finden Sie unter [Details](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159).
 - Anwenden eines als explizite Matrix bereitgestellten einheitlichen Vorgangs mithilfe `ApplyUnitary` von ([quantenlibraries # 391](https://github.com/microsoft/QuantumLibraries/pull/391), externer Beitrag von Dmytro fedoriaka)
 - Korrigiert, https://github.com/microsoft/iqsharp/issues/387 indem die Auswirkungen auf die Leistung beim Q# Kernel Start beeinträchtigt werden.
+
 ## <a name="version-0142011120240"></a>Version 0.14.2011120240
 
 *Veröffentlichungsdatum: 25. November, 2020*
