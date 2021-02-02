@@ -4,20 +4,19 @@ description: Hier erfahren Sie, wie Sie mithilfe von Python eine Anwendung vom T
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.python
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f6a2a7d1888cfe458fa3989a27d71fcdeed0f01f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 1ec40b6f1b7a8d9144860e3b8cfd554eb51bae81
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834158"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844270"
 ---
-# <a name="develop-with-no-locq-and-python"></a>Entwickeln mit Q# und Python
+# <a name="develop-with-q-and-python"></a>Entwickeln mit Q# und Python
 
 Installieren Sie das QDK, um Python-Hostprogramme zum Aufrufen von Q#-Vorgängen zu entwickeln.
 
@@ -72,7 +71,7 @@ Installieren Sie das QDK, um Python-Hostprogramme zum Aufrufen von Q#-Vorgängen
     > Ersetzen Sie hierbei `/path/to/dotnet-iqsharp` durch den absoluten Pfad zum Tool `dotnet-iqsharp` in Ihrem Dateisystem.
     > Normalerweise finden Sie dies unter `.dotnet/tools` in Ihrem Benutzerprofilordner.
     
-***
+**_
 
 Das ist alles! Sie verfügen nun sowohl über das `qsharp`-Python-Paket als auch über den IQ#-Kernel für Jupyter, der die Kernfunktionen für das Kompilieren und Ausführen von Q#-Vorgängen in Python bereitstellt und die Verwendung von Q#-Jupyter Notebook-Instanzen ermöglicht.
 
@@ -87,7 +86,7 @@ Wenn Sie VS Code verwenden möchten, gehen Sie wie folgt vor:
 
 Wenn Sie einen anderen Editor verwenden möchten, sind Sie nach Ausführung der obigen Anweisungen dafür bereit.
 
-## <a name="write-your-first-no-locq-program"></a>Schreiben Ihres ersten Q#-Programms
+## <a name="write-your-first-q-program"></a>Schreiben Ihres ersten Q#-Programms
 
 Nun können Sie Ihre Installation des `qsharp`-Python-Pakets überprüfen, indem Sie ein einfaches Q#-Programm schreiben und ausführen.
 
@@ -113,7 +112,7 @@ Nun können Sie Ihre Installation des `qsharp`-Python-Pakets überprüfen, indem
 1. Das Ergebnis des von Ihnen aufgerufenen Vorgangs sollte angezeigt werden. Da in diesem Fall ein zufälliges Ergebnis durch den Vorgang generiert wird, wird entweder `0` oder `1` auf dem Bildschirm angezeigt. Wenn Sie das Programm wiederholt ausführen, sollte jedes Ergebnis ungefähr die Hälfte der Zeit angezeigt werden.
 
 > [!NOTE]
-> * Beim Python-Code handelt es sich nur um ein normales Python-Programm. Sie können eine beliebige Python-Umgebung verwenden, einschließlich Python-basierter Jupyter Notebook-Instanzen, um das Python-Programm zu schreiben und Q#-Vorgänge aufzurufen. Das Python-Programm kann Q#-Vorgänge aus allen QS-Dateien importieren, die sich im gleichen Ordner befinden wie der Python-Code.
+> _ Beim Python-Code handelt es sich nur um ein normales Python-Programm. Sie können eine beliebige Python-Umgebung verwenden, einschließlich Python-basierter Jupyter Notebook-Instanzen, um das Python-Programm zu schreiben und Q#-Vorgänge aufzurufen. Das Python-Programm kann Q#-Vorgänge aus allen QS-Dateien importieren, die sich im gleichen Ordner befinden wie der Python-Code.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

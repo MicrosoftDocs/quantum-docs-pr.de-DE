@@ -9,16 +9,16 @@ uid: microsoft.quantum.overview.understanding
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 332afb4ea7de01da5d8f22fee6517032ed4f9fc1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c6c6249fd56c6fb65550c81ffee902eca555b0cd
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834991"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855107"
 ---
 # <a name="understanding-quantum-computing"></a>Grundlegendes zu Quantencomputing
 
-Beim Quantencomputing werden die Prinzipien der Quantenmechanik genutzt, um Informationen zu verarbeiten. Daher muss beim Quantencomputing ein anderer Ansatz verfolgt werden als beim klassischen Computing. Ein Beispiel für diesen Unterschied ist der Prozessor, der in Quantencomputern zum Einsatz kommt. Bei klassischen Computern werden bekanntlich Silizium-basierte Chips verwendet. Quantencomputer nutzen dagegen Quantensysteme wie Atome, Ionen, Photonen oder Elektronen. Mithilfe ihrer Quanteneigenschaften können sie Bits darstellen, die in unterschiedlichen Quantenüberlagerungen von 1 und 0 vorbereitet werden können.  
+Beim Quantencomputing werden die Prinzipien der Quantenmechanik genutzt, um Informationen zu verarbeiten. Daher muss beim Quantencomputing ein anderer Ansatz verfolgt werden als beim klassischen Computing. Ein Beispiel für diesen Unterschied ist der Prozessor, der in Quantencomputern zum Einsatz kommt. Bei klassischen Computern werden bekannte Silizium-basierte Chips verwendet. Quantencomputer nutzen dagegen Quantensysteme wie Atome, Ionen, Photonen oder Elektronen. In diesen Systemen können die eindeutigen Eigenschaften und Verhaltensweisen der Quantenmechanik gesteuert werden. Während klassische Computer auf Binärlogik basierende Hochs und Tiefs, d. h. 1 bzw. 0, nutzen, verwenden Quantencomputer ihre Quanteneigenschaften für die Darstellung von Bits, die in unterschiedlichen Quantenüberlagerungen von 1 und 0 vorbereitet werden können.  
 
 Für das Verhalten des Quantenmaterials gelten die Gesetze der Quantenmechanik. Dabei werden Konzepte wie probabilistische Berechnung, Superposition und Verschränkung genutzt. Diese Konzepte bilden die Grundlage für Quantenalgorithmen, die sich die Leistungsfähigkeit des Quantencomputings zunutze machen, um komplexe Probleme zu lösen. In diesem Artikel werden einige der grundlegenden Konzepte der Quantenmechanik beschrieben, auf denen das Quantencomputing basiert.
 
@@ -52,7 +52,7 @@ Zusätzlich zu der gegenseitigen Abhängigkeit können Teilchen diese Verbindung
 
 ### <a name="qubits-and-probability"></a>Qubits und Wahrscheinlichkeit
 
-Bei klassischen Computern werden Informationen in Bits gespeichert und verarbeitet. Bits können entweder den Zustand 1 oder den Zustand 0 haben, aber niemals beide. Das Äquivalent beim Quantencomputing ist das **Qubit**. Dieses stellt den Zustand eines Quantenteilchens dar. Dank Superposition können Qubits entweder 1 oder 0 oder alles dazwischen sein. Abhängig von der Konfiguration des Qubits kollabiert es mit einer gewissen *Wahrscheinlichkeit* zu 1 oder zu 0. Die Wahrscheinlichkeit, dass das Qubit nach dem Kollaps den einen oder den anderen Zustand aufweist, wird durch die **Quanteninterferenz** bestimmt. 
+Bei klassischen Computern werden Informationen in Bits gespeichert und verarbeitet. Bits können entweder den Zustand 1 oder den Zustand 0 haben, aber niemals beide. Das Äquivalent beim Quantencomputing ist das **Qubit**. Dieses stellt den Zustand eines Quantenteilchens dar. Dank Superposition können Qubits entweder 1 oder 0 oder alles dazwischen sein. Abhängig von der Konfiguration des Qubits kollabiert es mit einer gewissen *Wahrscheinlichkeit* zu 1 oder zu 0. Die Wahrscheinlichkeit, dass das Qubit nach dem Kollaps den einen oder den anderen Zustand aufweist, wird durch die **Quanteninterferenz** bestimmt.
 
 Erinnern Sie sich noch an Ihren Freund, der Sie fotografiert hat? Angenommen, dessen Kamera verfügt über spezielle *Interferenzfilter*. Wenn er bei seinen Aufnahmen den *70/30*-Filter verwendet, sind Sie auf 70 Prozent der Bilder nach links und auf 30 Prozent der Bilder nach rechts gedreht. Der Filter hat den regulären Zustand der Kamera beeinflusst, um die Wahrscheinlichkeit des Verhaltens zu beeinflussen.
 
