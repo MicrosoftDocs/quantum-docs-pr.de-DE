@@ -162,7 +162,7 @@ P_ { M1 } ~~ P_ { m2 } ~~ \cdots ~~ P_ { MP}
 \end{bmatrix}
 \end{align}
 
-Dabei sind die Einträge $ von $ P $ P_ { IK } = \sum _j M_ { IJ } N_ { JK } $ . Der Eintrag $ P_ { 11 ist beispielsweise } $ das innere Produkt der ersten Zeile von $ M $ mit der ersten Spalte von $ N $ . Beachten Sie, dass sich diese Definition auf die Matrix Vektor Multiplikation erstreckt, da ein Vektor einfach ein Sonderfall einer Matrix ist. 
+Dabei sind die Einträge $ von $ P $ P_ { IK } = \sum _j M_ { IJ } N_ { JK } $ . Der Eintrag $ P_ { 11 } $ ist beispielsweise das innere Produkt der ersten Zeile von $ M $ mit der ersten Spalte von $ N $ . Beachten Sie, dass sich diese Definition auf die Matrix Vektor Multiplikation erstreckt, da ein Vektor einfach ein Sonderfall einer Matrix ist. 
 
 Alle Matrizen, die wir in Erwägung haben, sind entweder quadratische Matrizen, bei denen die Anzahl der Zeilen und Spalten gleich ist, oder Vektoren, die nur $ einer $ Spalte entsprechen. Eine spezielle quadratische Matrix ist die [*Identitätsmatrix*](https://en.wikipedia.org/wiki/Identity_matrix), die als bezeichnet wird $ \boldone $ und deren diagonale Elemente gleich $ 1 $ und die übrigen Elemente gleich $ 0 sind $ :
 
