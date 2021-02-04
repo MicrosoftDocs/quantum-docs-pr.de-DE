@@ -1,9 +1,0 @@
-- name: Installation und Überprüfung
-  href: installation.md
-- name: Konzepte der Quantenchemie
-  href: concepts/toc.yml
-- name: Aufrufen der Chemiebibliothek
-  topicHref: samples/index.md
-  href: samples/toc.yml
-- name: Schema
-  href: schema/toc.yml
